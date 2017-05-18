@@ -1,0 +1,227 @@
+/*遮罩样式*/
+.mask {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .3);
+    height: 100%;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.popup {
+    width: 576px;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*margin-left: -288px;*/
+    /*top: 50%;*/
+    /*margin-top: -202px;*/
+    /*height: 404px;*/
+    background-color: #FFFFFF;
+    border-radius: 1px;
+}
+
+.popup_head {
+    width: 100%;
+    height: 55px;
+    background-color: #5f636e;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 55px;
+    text-align: center;
+    position: relative
+}
+
+.closeBtn {
+    background: url("../../../../img/page/ax_insurance/closeBtn.png") no-repeat center;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -12px;
+    cursor: pointer;
+}
+
+.select_conf {
+    font-size: 0;
+    width: 556px;
+    margin: 10px auto;
+    height: 349px;
+}
+
+.select_conf .div {
+    margin-bottom: 5px;
+}
+
+.search {
+    font-size: 12px;
+    width: 189px;
+    height: 37px;
+    border: #c9c9c9 1px solid;
+    border-radius: 3px 0 0 3px;
+    padding-left: 9px;
+    box-sizing: border-box;
+}
+
+.search-button {
+    width: 30px;
+    height: 35px;
+    vertical-align: middle;
+    border-top: #c9c9c9 1px solid;
+    border-right: #c9c9c9 1px solid;
+    border-bottom: #c9c9c9 1px solid;
+    border-radius: 0 3px 3px 0;
+    background: url("../../../../img/page/ax_insurance/sP.png") no-repeat -462px -45px;
+    cursor: pointer;
+}
+
+.div .tips {
+    font-size: 12px;
+    width: 320px;
+    color: #666666;
+}
+
+.div .tips em {
+    font-style: normal;
+    color: #f55d5e;
+}
+
+.query .queryDiv {
+    cursor: pointer;
+    border: solid 1px #c9c9c9;
+    border-radius: 3px;
+    width: 134px;
+    height: 37px;
+    line-height: 37px;
+}
+
+.ipt {
+    font-size: 12px;
+    width: 103px;
+    height: 37px;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: center;
+    color: #999999;
+}
+
+.s_btn {
+    cursor: pointer;
+    height: 37px;
+}
+
+.s_up {
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px;
+}
+
+.s_down {
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px;
+}
+
+.m-left5 {
+    margin-left: 2px;
+}
+
+.div.query {
+    position: relative;
+}
+
+.div input {
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.query ul {
+    font-size: 12px;
+    position: absolute;
+    top: 35px;
+    border: #c9c9c9 1px solid;
+    width: 134px;
+    background-color: #FFFFFF;
+    max-height: 117px;
+    overflow: auto;
+    border-radius: 0 0 3px 3px;
+}
+
+.query ul li {
+    height: 35px;
+    line-height: 35px;
+    color: #666666;
+    padding-left: 7px;
+}
+
+.query ul li:hover {
+    background-color: #80a61e;
+    color: #ffffff;
+}
+
+.ul1 {
+    left: 0;
+}
+
+.ul2 {
+    left: 138px;
+}
+
+.ul3 {
+    left: 276px;
+}
+
+.ul4 {
+    left: 415px;
+}
+
+body .dis {
+    display: none;
+}
+
+/*table的样式*/
+.queryList {
+    border-top: #d6d6d6 1px solid;
+    border-bottom: #d6d6d6 1px solid;
+    width: 100%;
+    color: #666666;
+    height: 242px;
+    overflow-y: auto;
+}
+
+.queryList table {
+    font-size: 12px;
+    width: 100%;
+}
+
+.queryList table tr {
+    height: 29px;
+    line-height: 29px;
+    border-bottom: #eeeeee 1px solid;
+}
+
+.queryList table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.queryList table tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+.queryList table tr:hover {
+    background-color: #ebf2c9;
+    border-bottom: #eeeeee 1px solid;
+    cursor: pointer;
+}
+
+.tdText {
+    display: inline-block;
+}
+
+.choose_btn {
+    height: 35px;
+    display: inline-block;
+    width: 30px;
+    border-left: solid 1px #c9c9c9;
+    background-color: #ffffff;
+    cursor: pointer;
+}

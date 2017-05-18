@@ -1,0 +1,135 @@
+/*
+ * create by zmx 2016/11/14
+ * 新建油漆盘点单
+*/
+.content{
+    background: #fff;
+    border:1px solid #acacac;
+    padding: 0 10px;
+}
+.title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.title i{
+    display: inline-block;
+    margin-right:10px;
+    vertical-align: middle;
+    width: 2px;
+    height: 14px;
+    background: #999;
+}
+.form-box{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cacaca;
+}
+.form-box .form-label{
+    width: 70px;
+}
+.form-box .form-item{
+    width: 290px;
+}
+.form-box .show-grid:first-child{
+    margin-top: 0;
+}
+.table-con{
+    margin-bottom: 10px;
+    border-top:1px solid #cacaca;
+}
+.yqx-table {
+    width: 100%;
+    table-layout: auto;
+}
+.table-con .yqx-table>tbody>tr.has-border{
+    border:1px solid #cacaca;
+}
+.table-con .yqx-table>tbody>tr>td{
+    border-left:1px solid #cacaca;
+    background: #fff;
+}
+
+.max-name-width{
+    max-width: 225px;
+    max-height: 36px;
+    line-height: 18px;
+    white-space: normal;
+}
+.max-num-width{
+    max-width: 225px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    line-height: 18px;
+}
+.w-100{
+    width: 100px;
+}
+.w-40{
+    width: 40px;
+}
+.w-55 {
+    width: 55px;
+}
+.yqx-table>tbody>tr>td.no-border{
+    border-left: none;
+}
+.delete{
+    color: #f35f62;
+    text-decoration: underline;
+}
+.delete:hover{
+    color: #f35f62;
+    text-decoration: underline;
+}
+.remarks{
+    padding: 10px 0;
+    border-bottom: 1px solid #acacac;
+}
+.remarks textarea{
+    width: 756px;
+}
+.btn-box{
+    padding-top: 10px;
+}
+.btn-box p{
+    line-height: 25px;
+}
+.show-tips{
+    position: relative;
+}
+.show-tips:hover .tips-show{
+    display: inline;
+}
+.tips-show{
+    display: none;
+}
+.tips{
+    display: inline-block;
+    vertical-align: middle;
+}
+.tips-box{
+    display: inline;
+    background: #607b0a;
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    top:-30px;
+    left: -8px;
+    border-radius: 3px;
+}
+.arrow-down{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #607b0a;
+    font-size: 0;
+    position: absolute;
+    top: -8px;
+    left: 2px;
+}
+.show-grid{
+    margin: 20px 0;
+}

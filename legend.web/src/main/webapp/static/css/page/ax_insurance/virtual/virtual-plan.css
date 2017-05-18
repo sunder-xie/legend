@@ -1,0 +1,503 @@
+
+/*虚拟保单模式*/
+
+.clearfix{
+    overflow: hidden;
+}
+.clearfix :after{
+    clear: both;
+}
+.wrapper{
+    width: 100%;
+    background-color: #eeeeee;
+}
+.content{
+    width: 980px;
+    margin:0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+.left{
+    float: left;
+    width: 138px;
+    height: 135px;
+    border: 1px solid #dddddd;
+}
+li{
+    list-style: none;
+}
+.right{
+    float: right;
+    width: 825px;
+}
+.right p.choose{
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.all_choose,.all-pack{
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+}
+.all_choose input{
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.detail_w,.choose_w{
+    height: 46px;
+    line-height: 46px;
+    padding-left: 9px;
+    font-size: 14px;
+    color: #535353;
+    box-sizing: border-box;
+    width: 805px;
+    margin: 10px auto 0 auto;
+}
+.span_w{
+    display: inline-block;
+    width: 105px;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+}
+.car,.brand,.car_price{
+    display: inline-block;
+    color: #666666;
+    height: 100%;
+}
+
+.scheme{
+
+    width: 700px;
+    margin: 10px auto 0 auto;
+}
+.scheme_con{
+    width: 763px;
+    margin: auto;
+}
+.force,.business{
+    font-size: 12px;
+    padding: 20px 0 10px 10px;
+    box-sizing: border-box;
+    color: #535353;
+
+}
+table{
+    width: 100%;
+    border: #d1d1d1 1px solid;
+}
+table th{
+    background-color: #f3f3f3;
+    height: 35px;
+    line-height: 35px;
+    color: #333333;
+}
+table td.check{
+    text-align: center;
+}
+table td.touB{
+    width: 170px;
+}
+table td{
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+}
+table td,table th{
+    border-bottom: #d1d1d1 1px solid;
+}
+table td:first-child,table th:first-child{
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.time{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.time span{
+    vertical-align: middle;
+    display: inline-block;
+}
+.businessEndT,.forceEndT,.forceStartT,.businessStartT{
+    width: 165px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.endW{
+    margin-left: 25px;
+}
+.startW{
+    margin-left: 10px;
+}
+.two{
+    margin-left: 130px;
+}
+.same,.same_carD{
+    display: inline-block;
+    float: right;
+    height: 46px;
+    line-height: 46px;
+    margin-right: 9px;
+}
+.same_carD{
+    margin-right: 23px;
+}
+.Insured{
+
+}
+.Insure_d{
+
+}
+.all_inf1,.all_inf2{
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.all_inf_w{
+    display: inline-block;
+    width: 107px;
+    height: 37px;
+    text-align: right;
+    line-height: 37px;
+    vertical-align: middle;
+}
+.all_input{
+    width: 205px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: #c9c9c9 1px solid;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.zj_l{
+    display: inline-block;
+    width: 174px;
+    height: 35px;
+    border: 1px solid #c9c9c9;
+    vertical-align: middle;
+    border-radius: 3px 0 0 3px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+}
+.zj_btn{
+    display: inline-block;
+    width: 30px;
+    height: 35px;
+    border-bottom: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+    border-top: 1px solid #c9c9c9;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+.margin{
+    margin-top: 10px;
+}
+.s_up{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px #FFFFFF;
+}
+.s_down{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px #FFFFFF;
+}
+.sendCode,.VCode{
+    display: inline-block;
+}
+.VCode{
+    width: 205px;
+    height: 35px;
+    border: 1px solid #c9c9c9;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 3px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+}
+.VCode_num{
+    width: 120px;
+    height: 100%;
+    padding-left: 6px;
+    box-sizing: border-box;
+}
+.sendCode {
+    width: 77px;
+    height: 22px;
+    background-color: #9fc527;
+    border: #7fa700 1px solid;
+    border-radius: 3px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+.detail_addr{
+    width: 401px;
+    height: 37px;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    padding-left: 9px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+}
+.prev,.area,.city,.warrantyT{
+    display: inline-block;
+    width: 105px;
+    height: 35px;
+    border: 1px solid #c9c9c9;
+    vertical-align: middle;
+    border-radius: 3px 0 0 3px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+}
+.imp_tips{
+    height: 54px;
+}
+.imp_tips_in{
+    width: 805px;
+    height: 100%;
+    background-color: #f9f9f9;
+    margin: auto;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.imp_tips_in input{
+    margin-left: 10px;
+}
+.imp_tips_in span em{
+    font-style: normal;
+    padding-left: 22px;
+    color: #2c8cfa;
+}
+.protocol-box {
+    margin-left: 70px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.protocol-box a {
+    font-style: normal;
+    color: #2c8cfa;
+}
+.total_P{
+    width: 805px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    margin: auto;
+    border-bottom: 1px solid #c9c9c9;
+}
+.total_Price{
+    color: #ff7800;
+    display: inline-block;
+}
+.total_P .incentive{
+    float: left;
+    color: #fa7b7c
+}
+.total_P .incomeTotal{
+    float: right;
+    color: #ff7800;
+    margin-right: 500px;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: #333333 15px solid;
+    border-bottom: transparent 10px solid;
+    border-top: transparent 10px solid;
+    float: left;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+.btn{
+    width: 805px;
+    margin: 15px auto;
+}
+.submit{
+    width: 88px;
+    height: 33px;
+    background-color: #fa7b7c;
+    border: #f55d5e 1px solid;
+    border-radius: 3px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    float: left;
+    cursor: pointer;
+}
+.back{
+    width: 88px;
+    height: 33px;
+    background-color: #f9f9f9;
+    border: #d2d2d2 1px solid;
+    border-radius: 3px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    float: right;
+    cursor: pointer;
+}
+.bonusGold{
+    width: 100%;
+    height: 77px;
+    line-height: 77px;
+}
+.color{
+    color: #ff7800;
+    margin-left: 185px;
+}
+.bonusGold_p{
+    font-style: normal;
+    color: #ff7800;
+    margin-left: 5px;
+}
+.all_inf_w_btn{
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+.all_inf_w_btn ul{
+    position: absolute;
+    width: 205px;
+    max-height: 105px;
+    left: 0;
+    background-color: #ffffff;
+    top: 35px;
+    border: 1px solid #c9c9c9;
+}
+.all_inf_w_btn ul li{
+    height: 35px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 35px;
+}
+.all_inf_w_btn ul li:hover,.warranty ul li:hover,.prevUl li:hover,.cityUl li:hover,.areaUl li:hover,.warrantyTypeUl li:hover{
+    background-color: #80a61e;
+    color: #ffffff;
+}
+.dis{
+    display: none;
+}
+.dis-inB{
+    display: inline-block;
+    width: 345px;
+    padding: 12px 0 3px 0;
+}
+.car_detail{
+    width: 700px;
+    margin: auto;
+}
+.dis-inS{
+    display: inline-block;
+    width: 229px;
+    height: 37px;
+    line-height: 37px;
+    vertical-align: middle;
+}
+.warranty{
+    display: inline-block;
+    position: relative;
+}
+.warranty .warrantyTypeUl{
+    left: 10px;
+}
+.prevK,.cityK,.areaK,.warrantyT{
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+.prevUl,.cityUl,.areaUl,.warrantyTypeUl{
+    border: 1px solid #c9c9c9;
+    width: 136px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    max-height: 150px;
+    background-color: #FFFFFF;
+    overflow: auto;
+    z-index: 999;
+}
+.prevUl li,.cityUl li,.areaUl li,.warrantyTypeUl li{
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+}
+body .red_c{
+    border: #f50f14 1px solid;
+}
+body .flotation{
+    line-height: 50px;
+    text-align: center;
+}
+.frontInfo div{
+    margin-top: 10px;
+    position: relative;
+}
+.dataInput{
+    width: 205px;
+    border-radius: 3px;
+    border: #c9c9c9 1px solid;
+    height: 35px;
+    background-color: #FFFFFF;
+    margin-left: 9px;
+}
+.timeChoose{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -9px;
+    margin-left: -100px;
+}
+.icon-calendar {
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: none;
+}
+.kind-interp{
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    margin-right: 10px;
+    color: #fa7b7c;
+}
+.info{
+    width: 805px;
+    background-color:#f9f9f9;
+}
+.frontInfo{
+    padding: 10px 0;
+}
+body .dis-car{
+    width: 700px;
+}
+
+.label-must:before {
+    content: "*";
+    display: inline;
+    font-size: 12px;
+    color: #f00;
+}
+/*电子邮箱*/
+.email-receive{
+    width: 400px;
+    height: 37px;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+}

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.setting.ShopPrintConfigDao">
+
+    <resultMap id = "BaseResultMap" type = "ShopPrintConfig" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "config_field" property = "configField" />
+        <result column = "print_type" property = "printType" />
+        <result column = "print_template" property = "printTemplate" />
+        <result column = "open_status" property = "openStatus" />
+        <result column = "font_style" property = "fontStyle" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            config_field as configField,
+            print_type as printType,
+            print_template as printTemplate,
+            open_status as openStatus,
+            font_style as fontStyle
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "configField != null">
+                    and config_field = #{configField}
+                </if>
+                <if test = "printType != null">
+                    and print_type = #{printType}
+                </if>
+                <if test = "printTemplate != null">
+                    and print_template = #{printTemplate}
+                </if>
+                <if test = "openStatus != null">
+                    and open_status = #{openStatus}
+                </if>
+                <if test = "fontStyle != null">
+                    and font_style = #{fontStyle}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "configField != null">
+                    config_field = #{configField},
+                </if>
+                <if test = "printType != null">
+                    print_type = #{printType},
+                </if>
+                <if test = "printTemplate != null">
+                    print_template = #{printTemplate},
+                </if>
+                <if test = "openStatus != null">
+                    open_status = #{openStatus},
+                </if>
+                <if test = "fontStyle != null">
+                    font_style = #{fontStyle},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_shop_print_config
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_print_config
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_print_config
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_print_config
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_shop_print_config
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_shop_print_config
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_shop_print_config
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_shop_print_config (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "configField != null">
+                config_field,
+            </if>
+            <if test = "printType != null">
+                print_type,
+            </if>
+            <if test = "printTemplate != null">
+                print_template,
+            </if>
+            <if test = "openStatus != null">
+                open_status,
+            </if>
+            <if test = "fontStyle != null">
+                font_style
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "configField != null">
+                #{configField},
+            </if>
+            <if test = "printType != null">
+                #{printType},
+            </if>
+            <if test = "printTemplate != null">
+                #{printTemplate},
+            </if>
+            <if test = "openStatus != null">
+                #{openStatus},
+            </if>
+            <if test = "fontStyle != null">
+                #{fontStyle},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_shop_print_config
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop_print_config (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            config_field,
+            print_type,
+            print_template,
+            open_status,
+            font_style,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.configField != null">
+                    #{item.configField},
+                </if>
+                <if test="item.configField == null">
+                    '',
+                </if>
+                <if test="item.printType != null">
+                    #{item.printType},
+                </if>
+                <if test="item.printType == null">
+                    0 ,
+                </if>
+                <if test="item.printTemplate != null">
+                    #{item.printTemplate},
+                </if>
+                <if test="item.printTemplate == null">
+                    0 ,
+                </if>
+                <if test="item.openStatus != null">
+                    #{item.openStatus},
+                </if>
+                <if test="item.openStatus == null">
+                    0 ,
+                </if>
+                <if test="item.fontStyle != null">
+                    #{item.fontStyle},
+                </if>
+                <if test="item.fontStyle == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="getConfigByPrintTemplate" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList" />
+        from legend_shop_print_config
+        where
+        shop_id = #{shopId} and print_template = #{printTemplate}
+        <if test = "printType != null">
+            and print_type = #{printType}
+        </if>
+    </select>
+
+</mapper>

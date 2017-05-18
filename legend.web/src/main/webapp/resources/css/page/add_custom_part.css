@@ -1,0 +1,117 @@
+.service-set li{
+    width: 50%;
+}
+.service-set .full-row{
+    width: 100%;
+    height:auto;
+}
+.full-row label{
+    vertical-align: top;
+    width:75px;
+}
+.full-row button{
+    margin-left: 0;
+}
+.data-set>li{
+    float: left;
+    height:40px;
+}
+.data-set1 li {
+    height: 40px;
+}
+input.form-control{
+    width: 370px;
+}
+select.form-control {
+    width:372px;
+}
+.data-set input.service-fee{
+    width: 257px;
+}
+.data-set input.service-fee-unit{
+    width: 95px;
+    margin-left: 10px;
+}
+.part-code{
+    width: 98px;
+}
+.part-name{
+    width: 286px;
+}
+.part-number{
+    width: 98px;
+}
+.part-price{
+    width: 155px;
+}
+.part-amount{
+    width: 68px;
+}
+.part-money{
+    width: 154px;
+}
+.part-set{
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.part-set li{
+    margin-right: 10px;
+}
+.part-set .form-group label{
+    line-height: 1;
+    height: 20px;
+}
+.add-icon{
+    background: url('../../images/sz1.png');
+    width: 29px;
+    height: 29px;
+    display: inline-block;
+    vertical-align : middle;
+}
+.delete-icon{
+    background: url('../../images/sz.png');
+    width: 29px;
+    height: 29px;
+    display: inline-block;
+    vertical-align : middle;
+}
+.full-row .carModel {
+    background: url("../../images/55.png") no-repeat center center;
+    width: 139px;
+    height: 45px;
+    display: inline-block;
+}
+.goods_car_div {
+    padding-left: 83px;
+    margin-bottom: 10px;
+}
+.goods_car_div select {
+    margin-right: 10px;
+    width: 256px!important;
+}
+.goods_car_div input.car_param {
+    width:248px;
+    margin-right:10px;
+}
+.full-row .cprop {
+    width:65px;
+    margin-right: 5px;
+    padding:0 5px;
+}
+.full-row .content {
+    width:326px;
+    margin-right: 10px;
+}
+.full-row select.content {
+    width:348px;
+}
+.full-row label.is_common_part {
+    width:80px;
+}
+.goods_group li {
+    padding:0;
+    margin:0 0 10px 0;
+}
+.goods_group li .goods_attr_name {
+    text-indent:0;
+}

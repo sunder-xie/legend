@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.MemberCardInfoDao">
+    <resultMap id="BaseResultMap" type="MemberCardInfo" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="type_name" property="typeName"/>
+        <result column="card_info_explain" property="cardInfoExplain"/>
+        <result column="service_discount_type" property="serviceDiscountType"/>
+        <result column="service_discount" property="serviceDiscount"/>
+        <result column="good_discount_type" property="goodDiscountType"/>
+        <result column="good_discount" property="goodDiscount"/>
+        <result column="effective_period_days" property="effectivePeriodDays"/>
+        <result column="compatible_with_coupon" property="compatibleWithCoupon"/>
+        <result column="general_use" property="generalUse"/>
+        <result column="init_balance" property="initBalance"/>
+        <result column="sale_price" property="salePrice"/>
+        <result column="discount_type" property="discountType"/>
+        <result column="order_discount" property="orderDiscount"/>
+        <result column="card_info_status" property="cardInfoStatus"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            type_name as typeName,
+            card_info_explain as cardInfoExplain,
+            service_discount_type as serviceDiscountType,
+            service_discount as serviceDiscount,
+            good_discount_type as goodDiscountType,
+            good_discount as goodDiscount,
+            effective_period_days as effectivePeriodDays,
+            compatible_with_coupon as compatibleWithCoupon,
+            general_use as generalUse,
+            init_balance as initBalance,
+            sale_price as salePrice,
+            discount_type as discountType,
+            order_discount as orderDiscount,
+            card_info_status as cardInfoStatus,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="typeName != null">
+                    and type_name = #{typeName}
+                </if>
+                <if test="cardInfoExplain != null">
+                    and card_info_explain = #{cardInfoExplain}
+                </if>
+                <if test="serviceDiscountType != null">
+                    and service_discount_type = #{serviceDiscountType}
+                </if>
+                <if test="serviceDiscount != null">
+                    and service_discount = #{serviceDiscount}
+                </if>
+                <if test="goodDiscountType != null">
+                    and good_discount_type = #{goodDiscountType}
+                </if>
+                <if test="goodDiscount != null">
+                    and good_discount = #{goodDiscount}
+                </if>
+                <if test="effectivePeriodDays != null">
+                    and effective_period_days = #{effectivePeriodDays}
+                </if>
+                <if test="compatibleWithCoupon != null">
+                    and compatible_with_coupon = #{compatibleWithCoupon}
+                </if>
+                <if test="generalUse != null">
+                    and general_use = #{generalUse}
+                </if>
+                <if test="initBalance != null">
+                    and init_balance = #{initBalance}
+                </if>
+                <if test="salePrice != null">
+                    and sale_price = #{salePrice}
+                </if>
+                <if test="discountType != null">
+                    and discount_type = #{discountType}
+                </if>
+                <if test="orderDiscount != null">
+                     and order_discount = #{orderDiscount}
+                </if>
+                <if test="cardInfoStatus != null">
+                    and card_info_status = #{cardInfoStatus}
+                </if>
+                <if test="cardInfoIds != null">
+                    and id in
+                    <foreach collection="cardInfoIds" open="(" close=")" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                </if>
+                <if test="cardInfoId != null">
+                    and id = #{cardInfoId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="typeName != null">
+                    type_name = #{typeName},
+                </if>
+                <if test="cardInfoExplain != null">
+                    card_info_explain = #{cardInfoExplain},
+                </if>
+                <if test="serviceDiscountType != null">
+                    service_discount_type = #{serviceDiscountType},
+                </if>
+                <if test="serviceDiscount != null">
+                    service_discount = #{serviceDiscount},
+                </if>
+                <if test="goodDiscountType != null">
+                    good_discount_type = #{goodDiscountType},
+                </if>
+                <if test="goodDiscount != null">
+                    good_discount = #{goodDiscount},
+                </if>
+                <if test="effectivePeriodDays != null">
+                    effective_period_days = #{effectivePeriodDays},
+                </if>
+                <if test="compatibleWithCoupon != null">
+                    compatible_with_coupon = #{compatibleWithCoupon},
+                </if>
+                <if test="generalUse != null">
+                    general_use = #{generalUse},
+                </if>
+                <if test="initBalance != null">
+                    init_balance = #{initBalance},
+                </if>
+                <if test="salePrice != null">
+                    sale_price = #{salePrice},
+                </if>
+                <if test="discountType != null">
+                    discount_type = #{discountType},
+                </if>
+                <if test="orderDiscount != null">
+                    order_discount = #{orderDiscount},
+                </if>
+                <if test="cardInfoStatus != null">
+                    card_info_status = #{cardInfoStatus},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_member_card_info
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_member_card_info
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_member_card_info
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_member_card_info
+        where id in
+        (
+        <foreach collection="ids" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        <if test="shopId != null">
+        and shop_id = #{shopId}
+        </if>
+    </select>
+
+    <select id="selectByNames" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_member_card_info
+        where shop_id = #{shopId}
+        and type_name in
+        (
+        <foreach collection="names" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_member_card_info
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_member_card_info
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_member_card_info
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_member_card_info (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="typeName != null">
+                type_name,
+            </if>
+            <if test="cardInfoExplain != null">
+                card_info_explain,
+            </if>
+            <if test="serviceDiscountType != null">
+                service_discount_type,
+            </if>
+            <if test="serviceDiscount != null">
+                service_discount,
+            </if>
+            <if test="goodDiscountType != null">
+                good_discount_type,
+            </if>
+            <if test="goodDiscount != null">
+                good_discount,
+            </if>
+            <if test="effectivePeriodDays != null">
+                effective_period_days,
+            </if>
+            <if test="compatibleWithCoupon != null">
+                compatible_with_coupon,
+            </if>
+            <if test="generalUse != null">
+                general_use,
+            </if>
+            <if test="initBalance != null">
+                init_balance,
+            </if>
+            <if test="salePrice != null">
+                sale_price,
+            </if>
+            <if test="discountType != null">
+                discount_type,
+            </if>
+            <if test="orderDiscount != null">
+                order_discount,
+            </if>
+            <if test="cardInfoStatus != null">
+                card_info_status,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="typeName != null">
+                #{typeName},
+            </if>
+            <if test="cardInfoExplain != null">
+                #{cardInfoExplain},
+            </if>
+            <if test="serviceDiscountType != null">
+                #{serviceDiscountType},
+            </if>
+            <if test="serviceDiscount != null">
+                #{serviceDiscount},
+            </if>
+            <if test="goodDiscountType != null">
+                #{goodDiscountType},
+            </if>
+            <if test="goodDiscount != null">
+                #{goodDiscount},
+            </if>
+            <if test="effectivePeriodDays != null">
+                #{effectivePeriodDays},
+            </if>
+            <if test="compatibleWithCoupon != null">
+                #{compatibleWithCoupon},
+            </if>
+            <if test="generalUse != null">
+                #{generalUse},
+            </if>
+            <if test="initBalance != null">
+                #{initBalance},
+            </if>
+            <if test="salePrice != null">
+                #{salePrice},
+            </if>
+            <if test="discountType != null">
+                #{discountType},
+            </if>
+            <if test="orderDiscount != null">
+                #{orderDiscount},
+            </if>
+            <if test="cardInfoStatus != null">
+                #{cardInfoStatus},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_member_card_info
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_member_card_info (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            type_name,
+            card_info_explain,
+            service_discount_type,
+            service_discount,
+            good_discount_type,
+            good_discount,
+            effective_period_days,
+            compatible_with_coupon,
+            general_use,
+            init_balance,
+            sale_price,
+            discount_type,
+            order_discount,
+            card_info_status,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.typeName != null">
+                    #{item.typeName},
+                </if>
+                <if test="item.typeName == null">
+                    '',
+                </if>
+                <if test="item.cardInfoExplain != null">
+                    #{item.cardInfoExplain},
+                </if>
+                <if test="item.cardInfoExplain == null">
+                    '',
+                </if>
+                <if test="item.serviceDiscountType != null">
+                    #{item.serviceDiscountType},
+                </if>
+                <if test="item.serviceDiscountType == null">
+                    0 ,
+                </if>
+                <if test="item.serviceDiscount != null">
+                    #{item.serviceDiscount},
+                </if>
+                <if test="item.serviceDiscount == null">
+                    0.00,
+                </if>
+                <if test="item.goodDiscountType != null">
+                    #{item.goodDiscountType},
+                </if>
+                <if test="item.goodDiscountType == null">
+                    0 ,
+                </if>
+                <if test="item.goodDiscount != null">
+                    #{item.goodDiscount},
+                </if>
+                <if test="item.goodDiscount == null">
+                    0.00,
+                </if>
+                <if test="item.effectivePeriodDays != null">
+                    #{item.effectivePeriodDays},
+                </if>
+                <if test="item.effectivePeriodDays == null">
+                    0 ,
+                </if>
+                <if test="item.compatibleWithCoupon != null">
+                    #{item.compatibleWithCoupon},
+                </if>
+                <if test="item.compatibleWithCoupon == null">
+                    0 ,
+                </if>
+                <if test="item.generalUse != null">
+                    #{item.generalUse},
+                </if>
+                <if test="item.generalUse == null">
+                    0 ,
+                </if>
+                <if test="item.initBalance != null">
+                    #{item.initBalance},
+                </if>
+                <if test="item.initBalance == null">
+                    0.00,
+                </if>
+                <if test="item.salePrice != null">
+                    #{item.salePrice},
+                </if>
+                <if test="item.salePrice == null">
+                    0.00,
+                </if>
+                <if test="item.discountType != null">
+                     #{discountType},
+                </if>
+                <if test="item.orderDiscount != null">
+                     #{orderDiscount}
+                </if>
+                <if test="item.discountType == null">
+                    0 ,
+                </if>
+                <if test="item.orderDiscount == null">
+                    0.00,
+                </if>
+                <if test="item.cardInfoStatus != null">
+                    #{cardInfoStatus},
+                </if>
+                <if test="item.cardInfoStatus == null">
+                    1,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <update id="update">
+        update legend_member_card_info
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="typeName != null">
+                    type_name = #{typeName},
+                </if>
+                <if test="cardInfoExplain != null">
+                    card_info_explain = #{cardInfoExplain},
+                </if>
+                service_discount_type = #{serviceDiscountType},
+                service_discount = #{serviceDiscount},
+                good_discount_type = #{goodDiscountType},
+                good_discount = #{goodDiscount},
+                <if test="effectivePeriodDays != null">
+                    effective_period_days = #{effectivePeriodDays},
+                </if>
+                <if test="compatibleWithCoupon != null">
+                    compatible_with_coupon = #{compatibleWithCoupon},
+                </if>
+                <if test="generalUse != null">
+                    general_use = #{generalUse},
+                </if>
+                <if test="initBalance != null">
+                    init_balance = #{initBalance},
+                </if>
+                <if test="salePrice != null">
+                    sale_price = #{salePrice},
+                </if>
+                <if test="discountType != null">
+                    discount_type = #{discountType},
+                </if>
+                order_discount = #{orderDiscount},
+                <if test="cardInfoStatus != null">
+                    card_info_status = #{cardInfoStatus},
+                </if>
+            </trim>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="getTypeNameById" resultType="java.lang.String">
+        SELECT type_name
+        FROM legend_member_card_info
+        WHERE shop_id = #{shopId}
+          AND id = #{id}
+    </select>
+
+    <select id="getInfoById" resultMap="BaseResultMap">
+        SELECT <include refid="BaseColumnList"/>
+        FROM legend_member_card_info
+        WHERE id = #{id}
+    </select>
+</mapper>

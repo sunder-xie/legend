@@ -1,0 +1,139 @@
+/*
+ * create by zmx 2016/11/14
+ * 油漆盘点单详情
+*/
+.content{
+    background: #fff;
+    border:1px solid #acacac;
+}
+.title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.title i{
+    display: inline-block;
+    margin-right:10px;
+    vertical-align: middle;
+    width: 2px;
+    height: 14px;
+    background: #999;
+}
+.wrap-one{
+    padding: 0 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #cacaca;
+}
+.form-box{
+    padding-bottom: 10px;
+}
+.form-box .form-label{
+    width: 70px;
+}
+.form-box .form-item{
+    width: 110px;
+}
+.wrap-two{
+    padding: 0 10px;
+}
+.table-con{
+    margin-bottom: 10px;
+    border-top:1px solid #cacaca;
+}
+.yqx-table {
+    width: 100%;
+    table-layout: auto;
+}
+.yqx-table>tbody>tr.has-border{
+    border:1px solid #cacaca;
+}
+.yqx-table>tbody>tr>td{
+    border-left:1px solid #cacaca;
+    background: #fff;
+}
+div.p-right{
+    padding-right: 10px;
+}
+.yqx-table td span{
+    width: 40px;
+    text-align: left;
+    display: block;
+    float: left;
+    line-height: 10px;
+    padding-left: 5px;
+}
+
+.max-name-width{
+    max-width: 225px;
+    max-height: 36px;
+    line-height: 18px;
+    white-space: normal;
+}
+.max-num-width{
+    max-width: 225px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    line-height: 18px;
+}
+.w-100{
+    width: 100px;
+}
+.w-35{
+    width: 35px;
+}
+.w-55 {
+    width: 55px;
+}
+.yqx-table>tbody>tr>td.no-border{
+    border-left: none;
+}
+.remarks{
+    padding: 10px 0;
+    border-bottom: 1px solid #acacac;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.show-grid{
+    margin: 20px 0;
+}
+.show-tips{
+    position: relative;
+}
+.show-tips:hover .tips-show{
+    display: inline;
+}
+.tips-show{
+    display: none;
+}
+.tips{
+    display: inline-block;
+    vertical-align: middle;
+}
+.tips-box{
+    display: inline;
+    background: #607b0a;
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    top:-30px;
+    left: -8px;
+    border-radius: 3px;
+}
+.arrow-down{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #607b0a;
+    font-size: 0;
+    position: absolute;
+    top: -8px;
+    left: 2px;
+}
+
+.tc-3 {
+    width: 100px;
+}

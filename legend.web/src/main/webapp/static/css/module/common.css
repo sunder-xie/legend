@@ -1,0 +1,362 @@
+/**
+ * ch 2016-03-21
+ * 全局类库，如添加一个全局类样式，必须要有对应的文字说明
+ */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    text-align: left;
+    font-family: Simsun, Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    font-size: 12px;
+    color: #333;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* 滚动条出现时页面跳动bug */
+.headline {
+    font-family: "Microsoft YaHei", "Hiragino Sans GB", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.headline > small {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+/**
+ * 快速浮动 start
+ */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 快速浮动 end */
+/**
+ * 清除浮动 start
+ */
+.clearfix {
+    zoom: 1;
+    _height: 1px;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+    visibility: hidden;
+}
+
+/* 清除浮动 end */
+
+/**
+ * 显示 & 隐藏 start
+ */
+.show {
+    display: block
+}
+
+.hide {
+    display: none
+}
+
+/* 显示 & 隐藏 end */
+
+/**
+ * 页面容器样式 start
+ */
+.yqx-wrapper {
+    box-sizing: border-box;
+    width: 980px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 90px 0 200px 0;
+}
+
+.yqx-wrapper * {
+    box-sizing: border-box;
+}
+
+.yqx-foot {
+    margin-top: -160px;
+}
+
+/* 页面容器样式 end */
+
+/* 全局链接样式 end */
+
+/**
+ * 内联元素左中右布局 start
+ */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-middle {
+    vertical-align: middle;
+}
+
+/* 内联元素左中右布局 end */
+
+/*
+ * 仿bootstrap 栅栏式布局 start
+ */
+.show-grid {
+    margin: 10px 0;
+    zoom: 1;
+    _height: 1px;
+}
+
+.show-grid:last-child {
+    margin-bottom: 0;
+}
+
+.show-grid:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.show-gap-grid {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.show-grid [class*="col-"] {
+    float: left;
+}
+
+.show-gap-grid [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.col-1 {
+    width: 8.33333333%
+}
+
+.col-2 {
+    width: 16.6666667%
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333%
+}
+
+.col-5 {
+    width: 41.66666667%
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333333%
+}
+
+.col-8 {
+    width: 66.66666667%
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333%
+}
+
+.col-11 {
+    width: 91.66666667%
+}
+
+.col-12 {
+    width: 100%
+}
+
+/* 仿bootstrap 栅栏式布局 end */
+
+/*
+ * 单行省略 start
+ */
+.ellipsis-1 {
+    line-height: 14px;
+    height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 单行省略 end */
+
+/*
+ * 两行省略 start
+ */
+.ellipsis-2 {
+    word-break: break-all;
+    line-height: 14px;
+    max-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
+
+/* 两行省略 end */
+
+/*
+ * tab 样式 start
+ */
+.tab-item {
+    border: 1px solid #ddd;
+    line-height: 36px;
+    text-align: center;
+    width: 100px;
+    color: #333;
+    background: #f0f0f0;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    vertical-align: top;
+}
+
+.tab-item:first-child {
+    border-left: 0;
+}
+
+.tab-item + .tab-item {
+    margin-left: 3px;
+}
+
+.tab-item:hover, .tab-item.current-item {
+    background: #fff;
+    border-bottom: 0;
+    margin-bottom: -1px;
+    line-height: 37px;
+    color: #333;
+}
+
+/* tab 样式 end */
+
+.layui-layer-tips .layui-layer-content {
+    color: #333;
+    word-break: break-all;
+}
+
+/* 金钱 */
+.money-highlight,
+.money-font, .money-small-font {
+    color: #fa482c;
+    font-style: normal;
+}
+
+.money-font, .money-small-font {
+    font-weight: 700;
+}
+
+.money-font {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fa7b7c;
+    font-style: normal;
+}
+
+/*新旧打印按钮*/
+/*TODO: 旧版打印下线时删除下面的样式*/
+.old-print-tips.hide,
+.new-print-tips.hide,
+.new-print-btn.hide,
+.old-print-btn.hide {
+    display: none !important;
+}
+.text-bold {
+    font-weight: bold !important;
+}
+
+.text-important {
+    color: #000 !important;
+}
+
+.text-primary {
+    color: #333 !important;
+}
+
+.text-minor {
+    color: #666 !important;
+}
+
+.blue-highlight {
+    color: #115599 !important;
+}
+
+.old-print-tips i,
+.new-print-tips i {
+    font-style: normal;
+}
+
+.old-print-tips {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.new-print-tips {
+    margin-top: 10px;
+}
+
+.old-print-tips .money-font a,
+.new-print-tips .money-font a {
+    color: #fa7b7c
+}
+
+.old-print-tips p:last-child {
+    margin-top: 10px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.old-print-tips .money-font,
+.new-print-tips .money-font {
+    font-size: 12px;
+    color: #fa7b7c;
+}
+
+.c-question-gray-i,
+.c-question-h-i,
+.c-question-i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../../img/common/base/question-icon-circle.png") no-repeat #fff;
+    vertical-align: middle;
+    border-radius: 18px;
+}
+
+.c-question-h-i:hover,
+.c-question-gray-i {
+    background-position: -22px 0;
+}

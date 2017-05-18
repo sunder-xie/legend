@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.subsidy.ShopOrderSubsidyDao">
+
+    <resultMap id="BaseResultMap" type="ShopOrderSubsidy" extends="COMMON.BASE_RESULT_MAP">
+        <result column="order_sn" property="orderSn"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="goods_id" property="goodsId"/>
+        <result column="goods_name" property="goodsName"/>
+        <result column="buy_count" property="buyCount"/>
+        <result column="wait_active_count" property="waitActiveCount"/>
+        <result column="finance_confirm_time" property="financeConfirmTime"/>
+        <result column="give_count_time" property="giveCountTime"/>
+        <result column="return_time" property="returnTime"/>
+        <result column="return_sn" property="returnSn"/>
+        <result column="return_count" property="returnCount"/>
+        <result column="has_return_count" property="hasReturnCount"/>
+        <result column="has_receive_count" property="hasReceiveCount"/>
+        <result column="has_active_count" property="hasActiveCount"/>
+        <result column="subsidy_act_id" property="subsidyActId"/>
+        <result column="subsidy_act_name" property="subsidyActName"/>
+        <result column="freeze_status" property="freezeStatus"/>
+        <result column="subsidy_price" property="subsidyPrice"/>
+        <result column="subsidy_goods_id" property="subsidyGoodsId"/>
+        <result column="least_unit" property="leastUnit"/>
+        <result column="has_used_count" property="hasUsedCount"/>
+        <result column="user_global_id" property="userGlobalId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            order_sn as orderSn,
+            shop_id as shopId,
+            goods_id as goodsId,
+            goods_name as goodsName,
+            buy_count as buyCount,
+            wait_active_count as waitActiveCount,
+            finance_confirm_time as financeConfirmTime,
+            give_count_time as giveCountTime,
+            return_time as returnTime,
+            return_sn as returnSn,
+            return_count as returnCount,
+            has_return_count as hasReturnCount,
+            has_receive_count as hasReceiveCount,
+            has_active_count as hasActiveCount,
+            subsidy_act_id as subsidyActId,
+            subsidy_act_name as subsidyActName,
+            freeze_status as freezeStatus,
+            subsidy_price as subsidyPrice,
+            subsidy_goods_id as subsidyGoodsId,
+            least_unit as leastUnit,
+            has_used_count as hasUsedCount,
+            user_global_id as userGlobalId,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="orderSn != null">
+                    and order_sn = #{orderSn}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="goodsId != null">
+                    and goods_id = #{goodsId}
+                </if>
+                <if test="goodsName != null">
+                    and goods_name = #{goodsName}
+                </if>
+                <if test="buyCount != null">
+                    and buy_count = #{buyCount}
+                </if>
+                <if test="waitActiveCount != null">
+                    and wait_active_count = #{waitActiveCount}
+                </if>
+                <if test="financeConfirmTime != null">
+                    and finance_confirm_time = #{financeConfirmTime}
+                </if>
+                <if test="giveCountTime != null">
+                    and give_count_time = #{giveCountTime}
+                </if>
+                <if test="returnTime != null">
+                    and return_time = #{returnTime}
+                </if>
+                <if test="returnSn != null">
+                    and return_sn = #{returnSn}
+                </if>
+                <if test="returnCount != null">
+                    and return_count = #{returnCount}
+                </if>
+                <if test="hasReturnCount != null">
+                    and has_return_count = #{hasReturnCount}
+                </if>
+                <if test="hasReceiveCount != null">
+                    and has_receive_count = #{hasReceiveCount}
+                </if>
+                <if test="hasActiveCount != null">
+                    and has_active_count = #{hasActiveCount}
+                </if>
+                <if test="subsidyActId != null">
+                    and subsidy_act_id = #{subsidyActId}
+                </if>
+                <if test="subsidyActName != null">
+                    and subsidy_act_name = #{subsidyActName}
+                </if>
+                <if test="freezeStatus != null">
+                    and freeze_status = #{freezeStatus}
+                </if>
+                <if test="subsidyPrice != null">
+                    and subsidy_price = #{subsidyPrice}
+                </if>
+                <if test="subsidyGoodsId != null">
+                    and subsidy_goods_id = #{subsidyGoodsId}
+                </if>
+                <if test="leastUnit != null">
+                    and least_unit = #{leastUnit}
+                </if>
+                <if test="hasUsedCount != null">
+                    and has_used_count = #{hasUsedCount}
+                </if>
+                <if test="userGlobalId != null">
+                    and user_global_id = #{userGlobalId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="orderSn != null">
+                    order_sn = #{orderSn},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="goodsId != null">
+                    goods_id = #{goodsId},
+                </if>
+                <if test="goodsName != null">
+                    goods_name = #{goodsName},
+                </if>
+                <if test="buyCount != null">
+                    buy_count = #{buyCount},
+                </if>
+                <if test="waitActiveCount != null">
+                    wait_active_count = #{waitActiveCount},
+                </if>
+                <if test="financeConfirmTime != null">
+                    finance_confirm_time = #{financeConfirmTime},
+                </if>
+                <if test="giveCountTime != null">
+                    give_count_time = #{giveCountTime},
+                </if>
+                <if test="returnTime != null">
+                    return_time = #{returnTime},
+                </if>
+                <if test="returnSn != null">
+                    return_sn = #{returnSn},
+                </if>
+                <if test="returnCount != null">
+                    return_count = #{returnCount},
+                </if>
+                <if test="hasReturnCount != null">
+                    has_return_count = #{hasReturnCount},
+                </if>
+                <if test="hasReceiveCount != null">
+                    has_receive_count = #{hasReceiveCount},
+                </if>
+                <if test="hasActiveCount != null">
+                    has_active_count = #{hasActiveCount},
+                </if>
+                <if test="subsidyActId != null">
+                    subsidy_act_id = #{subsidyActId},
+                </if>
+                <if test="subsidyActName != null">
+                    subsidy_act_name = #{subsidyActName},
+                </if>
+                <if test="freezeStatus != null">
+                    freeze_status = #{freezeStatus},
+                </if>
+                <if test="subsidyPrice != null">
+                    subsidy_price = #{subsidyPrice},
+                </if>
+                <if test="subsidyGoodsId != null">
+                    subsidy_goods_id = #{subsidyGoodsId},
+                </if>
+                <if test="leastUnit != null">
+                    least_unit = #{leastUnit},
+                </if>
+                <if test="hasUsedCount != null">
+                    has_used_count = #{hasUsedCount},
+                </if>
+                <if test="userGlobalId != null">
+                    user_global_id = #{userGlobalId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop_order_subsidy
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_order_subsidy
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_order_subsidy
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_order_subsidy
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_shop_order_subsidy
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_shop_order_subsidy
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_shop_order_subsidy
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_shop_order_subsidy (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="goodsId != null">
+                goods_id,
+            </if>
+            <if test="goodsName != null">
+                goods_name,
+            </if>
+            <if test="buyCount != null">
+                buy_count,
+            </if>
+            <if test="waitActiveCount != null">
+                wait_active_count,
+            </if>
+            <if test="financeConfirmTime != null">
+                finance_confirm_time,
+            </if>
+            <if test="giveCountTime != null">
+                give_count_time,
+            </if>
+            <if test="returnTime != null">
+                return_time,
+            </if>
+            <if test="returnSn != null">
+                return_sn,
+            </if>
+            <if test="returnCount != null">
+                return_count,
+            </if>
+            <if test="hasReturnCount != null">
+                has_return_count,
+            </if>
+            <if test="hasReceiveCount != null">
+                has_receive_count,
+            </if>
+            <if test="hasActiveCount != null">
+                has_active_count,
+            </if>
+            <if test="subsidyActId != null">
+                subsidy_act_id,
+            </if>
+            <if test="subsidyActName != null">
+                subsidy_act_name,
+            </if>
+            <if test="freezeStatus != null">
+                freeze_status,
+            </if>
+            <if test="subsidyPrice != null">
+                subsidy_price,
+            </if>
+            <if test="subsidyGoodsId != null">
+                subsidy_goods_id,
+            </if>
+            <if test="leastUnit != null">
+                least_unit,
+            </if>
+            <if test="hasUsedCount != null">
+                has_used_count,
+            </if>
+            <if test="userGlobalId != null">
+                user_global_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="orderSn != null">
+                #{orderSn},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="goodsId != null">
+                #{goodsId},
+            </if>
+            <if test="goodsName != null">
+                #{goodsName},
+            </if>
+            <if test="buyCount != null">
+                #{buyCount},
+            </if>
+            <if test="waitActiveCount != null">
+                #{waitActiveCount},
+            </if>
+            <if test="financeConfirmTime != null">
+                #{financeConfirmTime},
+            </if>
+            <if test="giveCountTime != null">
+                #{giveCountTime},
+            </if>
+            <if test="returnTime != null">
+                #{returnTime},
+            </if>
+            <if test="returnSn != null">
+                #{returnSn},
+            </if>
+            <if test="returnCount != null">
+                #{returnCount},
+            </if>
+            <if test="hasReturnCount != null">
+                #{hasReturnCount},
+            </if>
+            <if test="hasReceiveCount != null">
+                #{hasReceiveCount},
+            </if>
+            <if test="hasActiveCount != null">
+                #{hasActiveCount},
+            </if>
+            <if test="subsidyActId != null">
+                #{subsidyActId},
+            </if>
+            <if test="subsidyActName != null">
+                #{subsidyActName},
+            </if>
+            <if test="freezeStatus != null">
+                #{freezeStatus},
+            </if>
+            <if test="subsidyPrice != null">
+                #{subsidyPrice},
+            </if>
+            <if test="subsidyGoodsId != null">
+                #{subsidyGoodsId},
+            </if>
+            <if test="leastUnit != null">
+                #{leastUnit},
+            </if>
+            <if test="hasUsedCount != null">
+                #{hasUsedCount},
+            </if>
+            <if test="userGlobalId != null">
+                #{userGlobalId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_shop_order_subsidy
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop_order_subsidy (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            order_sn,
+            shop_id,
+            goods_id,
+            goods_name,
+            buy_count,
+            wait_active_count,
+            finance_confirm_time,
+            give_count_time,
+            return_time,
+            return_sn,
+            return_count,
+            has_return_count,
+            has_receive_count,
+            has_active_count,
+            subsidy_act_id,
+            subsidy_act_name,
+            freeze_status,
+            subsidy_price,
+            subsidy_goods_id,
+            least_unit,
+            has_used_count,
+            user_global_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.orderSn != null">
+                    #{item.orderSn},
+                </if>
+                <if test="item.orderSn == null">
+                    '',
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.goodsId != null">
+                    #{item.goodsId},
+                </if>
+                <if test="item.goodsId == null">
+                    0 ,
+                </if>
+                <if test="item.goodsName != null">
+                    #{item.goodsName},
+                </if>
+                <if test="item.goodsName == null">
+                    '',
+                </if>
+                <if test="item.buyCount != null">
+                    #{item.buyCount},
+                </if>
+                <if test="item.buyCount == null">
+                    0 ,
+                </if>
+                <if test="item.waitActiveCount != null">
+                    #{item.waitActiveCount},
+                </if>
+                <if test="item.waitActiveCount == null">
+                    0 ,
+                </if>
+                <if test="item.financeConfirmTime != null">
+                    #{item.financeConfirmTime},
+                </if>
+                <if test="item.financeConfirmTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.giveCountTime != null">
+                    #{item.giveCountTime},
+                </if>
+                <if test="item.giveCountTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.returnTime != null">
+                    #{item.returnTime},
+                </if>
+                <if test="item.returnTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.returnSn != null">
+                    #{item.returnSn},
+                </if>
+                <if test="item.returnSn == null">
+                    '',
+                </if>
+                <if test="item.returnCount != null">
+                    #{item.returnCount},
+                </if>
+                <if test="item.returnCount == null">
+                    0 ,
+                </if>
+                <if test="item.hasReturnCount != null">
+                    #{item.hasReturnCount},
+                </if>
+                <if test="item.hasReturnCount == null">
+                    0 ,
+                </if>
+                <if test="item.hasReceiveCount != null">
+                    #{item.hasReceiveCount},
+                </if>
+                <if test="item.hasReceiveCount == null">
+                    0 ,
+                </if>
+                <if test="item.hasActiveCount != null">
+                    #{item.hasActiveCount},
+                </if>
+                <if test="item.hasActiveCount == null">
+                    0 ,
+                </if>
+                <if test="item.subsidyActId != null">
+                    #{item.subsidyActId},
+                </if>
+                <if test="item.subsidyActId == null">
+                    0 ,
+                </if>
+                <if test="item.subsidyActName != null">
+                    #{item.subsidyActName},
+                </if>
+                <if test="item.subsidyActName == null">
+                    '',
+                </if>
+                <if test="item.freezeStatus != null">
+                    #{item.freezeStatus},
+                </if>
+                <if test="item.freezeStatus == null">
+                    0 ,
+                </if>
+                <if test="item.subsidyPrice != null">
+                    #{item.subsidyPrice},
+                </if>
+                <if test="item.subsidyPrice == null">
+                    0.00,
+                </if>
+                <if test="item.subsidyGoodsId != null">
+                    #{item.subsidyGoodsId},
+                </if>
+                <if test="item.subsidyGoodsId == null">
+                    0 ,
+                </if>
+                <if test="item.leastUnit != null">
+                    #{item.leastUnit},
+                </if>
+                <if test="item.leastUnit == null">
+                    0 ,
+                </if>
+                <if test="item.hasUsedCount != null">
+                    #{item.hasUsedCount},
+                </if>
+                <if test="item.hasUsedCount == null">
+                    0 ,
+                </if>
+                <if test="item.userGlobalId != null">
+                    #{item.userGlobalId},
+                </if>
+                <if test="item.userGlobalId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

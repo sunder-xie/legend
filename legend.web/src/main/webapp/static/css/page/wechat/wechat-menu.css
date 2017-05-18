@@ -1,0 +1,233 @@
+h3{
+    font-family: Tahoma,Arial,Helvetica Neue,Hiragino Sans GB,sans-serif,"Microsoft YaHei";
+    font-weight: bold;
+    color: #000;
+}
+.menu-edit .yqx-input{
+    width: 180px;
+    height: 35px;
+}
+.menu-manage .yqx-btn-3{
+    line-height: 28px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+.delete-style{
+    text-decoration: underline;
+    color: #999;
+    cursor: pointer;
+}
+.modify-style {
+    text-decoration: underline;
+    color: #7fa700;
+    cursor: pointer;
+    margin: 0 14px;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+}
+.order-body{
+    padding: 0 20px 20px;
+}
+
+.order-head .headline {
+    line-height: initial;
+}
+.order-head {
+    position: static;
+    margin-bottom: 10px;
+}
+
+.order-right {
+    margin: 0;
+}
+
+.tips {
+    font-size: 12px;
+    padding: 10px;
+}
+.menu-box {
+    display: inline-block;
+    vertical-align: top;
+}
+.menu-header {
+    background: #fafafa;
+    height: 290px;
+    width: 393px;
+    position: relative;
+    border: 1px solid #d2d2d2;
+    padding: 20px 0 0 10px;
+    margin-bottom: 20px;
+}
+.menu-header .yqx-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.angle-box {
+    position: absolute;
+    bottom: 0;
+    left: 65px;
+}
+
+.angle-box .angle {
+    position: absolute;
+    top: 0;
+    border: 10px solid #d2d2d2;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.angle-box .angle-back {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    border: 9px solid #fafafa;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.menu-selector{
+    margin-bottom:  20px;
+}
+
+.menu-selector h4{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.menu-body {
+    margin-bottom: 20px;
+}
+
+.menu-body h3 {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 33px;
+    width: 131px;
+    background: #e5e5e5;
+    border: 1px solid #d2d2d2;
+    text-align: center;
+    line-height: 33px;
+    cursor: pointer;
+    color: #666;
+}
+
+.menu-body h3.active {
+    background: #fafafa;
+    color: #333;
+}
+
+.menu-footer {
+    text-align: center;
+}
+
+h3.fl + h3.fl {
+    border-left: 0;
+}
+
+.question-icon {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    vertical-align: text-bottom;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width:  15px;
+}
+.menu-edit{
+    margin-bottom: 12px;
+}
+.menu-edit>span{
+    display: inline-block;
+    vertical-align: middle;
+    width:20px;
+}
+
+.move-icons{
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    margin:1px;
+    background: url("../../../img/page/wechat/menu-move.png") #90af34;
+    vertical-align: -4px;
+    cursor: pointer;
+}
+.move-icons.disable{
+    background-color: #d2d2d2;
+}
+.down-icon{
+    background-position: -16px 0;
+}
+.left-icon{
+    background-position: -32px 0;
+}
+
+.menu-manage{
+    display: inline-block;
+    margin-left: 20px;
+    color: #000;
+}
+.menu-manage p{
+    line-height: 40px;
+    color: #666;
+}
+.menu-manage ul>li{
+    padding-bottom: 14px;
+}
+.menu-manage i{
+    margin-right: 10px;
+}
+.custom-menu>button{
+    margin: 14px 0;
+}
+.custom-menu-list{
+    max-height: 160px;
+    width: 330px;
+    overflow: auto;
+}
+.custom-menu-item>span{  
+    display: inline-block;
+    width: 134px;
+}
+.official-menu{
+    margin-bottom: 12px;
+}
+/*弹窗样式 start*/
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.bounce-content{
+    padding: 10px 20px;
+}
+.bounce-foot{
+    text-align: center;
+    margin: 10px 0;
+}
+.bounce-content .input-middle{
+    width: 110px;
+}
+.bounce-content .input-long{
+    width: 260px;
+}
+.bounce-content p{
+    padding: 10px;
+    text-align: center;
+}
+.bounce-content fieldset{
+    padding: 10px 0;
+}
+/*弹窗样式 end*/
+

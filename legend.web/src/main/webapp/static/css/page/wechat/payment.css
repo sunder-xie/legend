@@ -1,0 +1,50 @@
+.title {
+    font-size: 12px;
+}
+.join-box{
+    background: #f9f9f9;
+}
+.join-common{
+    height: 40px;
+    line-height: 40px;
+}
+.float-left{
+    float: left;
+}
+.join-word-des{
+    display: inline-block;
+    width: 142px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    color: #535353;
+    font-size: 14px;
+}
+.btn-img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+}
+.on{
+    background-image: url('../../../../static/img/page/magic/join.png');
+    background-position: -78px -28px;
+}
+.off{
+    background-image: url('../../../../static/img/page/magic/join.png');
+    background-position: -115px -28px;
+}
+.ul-common-style li{
+    cursor: pointer;
+    margin-right: 40px;
+}
+.wechat-logo{
+    background-image: url('../../../../static/img/page/magic/join.png');
+    background-position: -16px -64px;
+}
+.payment-img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+}

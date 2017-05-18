@@ -1,0 +1,136 @@
+/**
+ * Created by hyx on 16/6/7.
+ * 新增会员卡类型
+ */
+
+.width-full {
+    width: 100%;
+}
+.width-full .yqx-input {
+    width: 100% !important;
+}
+/* panel样式 start */
+.order-panel{padding: 0 10px;background: #fff;border: 1px solid #e8e8e8;border-radius: 2px;margin-top:10px;}
+.order-panel .order-panel-foot{padding: 15px 0;}
+.order-panel .order-panel-head {margin: 0 -10px;border-bottom: 1px solid #ddd;height: 38px;}
+.order-panel .tabs-control{ position: relative;}
+.info{
+    margin-top:10px;
+    border-bottom:1px solid #e8e8e8;
+    padding-bottom:15px;
+}
+.info .form-item input{
+    width:200px;
+    margin-left:5px;
+}
+
+.single-tag .table-box .yqx-input,
+.single-tag .card-discount .yqx-input,
+.single-tag li .yqx-input{
+    width: 50px;
+}
+.info .info-head{
+    font-weight: bolder;
+    border-left: 2px solid #999;
+    padding-left: 4px;
+}
+
+/*使用范围*/
+
+/*表格*/
+.yqx-table>thead>tr>th, .yqx-table>tr>th{
+    background: #f9f9f9;
+}
+.yqx-table .form-item>.fa{
+    border-left:none;
+}
+.yqx-table td>a{
+    color:#eb411c;
+    cursor:pointer;
+}
+button.return{
+    float:right;
+}
+.selected_btn{
+    background: #eaf8be;
+}
+.selected_btn:hover{
+    background: #eaf8be;
+}
+input{
+    text-align:center;
+}
+.info h2{
+    font-size:12px;
+    color:#333;
+}
+.add-btn{
+    width:35px;
+    height:20px;
+    font-size:12px;
+    line-height:20px;
+    padding:0;
+    text-align:center;
+    margin-top:15px;
+}
+.info-base li:last-child{
+    margin-top:10px;
+}
+.info-base li .form-label,.info-expire .form-label{
+    text-align:right;
+    width:100px;
+}
+.info-base .describe input{
+    width:400px;
+}
+.item>button{
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:12px;
+    height:25px;
+    line-height:25px;
+}
+.item input.yqx-input-small{
+    font-size:12px;
+    height:25px;
+    line-height:25px;
+    width:35px;
+    text-align:left;
+    margin-right:3px;
+}
+.info-set .form-label{
+    width:100px;
+    text-align:center;
+    padding-left: 32px;
+}
+.hidden{
+    display: none;
+}
+
+.info ul{
+    margin-top: 15px;
+}
+.single-tag .w165{
+    width: 165px;
+    margin-right: 18px;
+}
+.info-expire .col-6{
+    margin-top: 15px;
+}
+.font-red {
+    color: red;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

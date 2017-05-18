@@ -1,0 +1,167 @@
+
+/*------公共form样式 start------*/
+.qxy_form .form_row {
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.qxy_form .form_item {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.qxy_form .form_item .label_box {
+	float: left;
+	width: 100px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	text-align: left;
+	font-weight: normal;
+	position: relative;
+	text-indent: 5px;
+	overflow: hidden;
+}
+/*text 标签增加红星号样式*/
+.qxy_form .required{
+    position: relative;
+}
+.qxy_form .required:after{position: absolute; content: "*"; color: red; width: 10px; height: 10px; right:0; top:0;font-size: 16px; }
+
+.qxy_form .form_item .label_box span {font-size: 14px; font-weight: bold; margin-left: 5px; position: absolute; right: 5px; top: 0px; }
+
+.qxy_form .form_item .field_box {
+	float: left;
+	width: 100%;
+	line-height: 38px;
+}
+
+.qxy_form .form_item .field_box input {
+	margin-right: 0;
+}
+
+.row_title_center .form_item{
+     margin-bottom:0 !important ;
+ }
+
+.row_title_center .field_box{
+     line-height:20px !important ;
+     text-align:center;
+ }
+
+.qxy_form .form_item .field_text {
+	height: 38px;
+	line-height: 38px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.qxy_form .form_item .qxy_unit {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 50px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	margin-left: 7px;
+}
+
+.qxy_form .form_item .qxy_unit_input {
+	width: 78px;
+	display: inline-block;
+	margin-left: 7px;
+}
+
+.qxy_form .form_item .qxy_attr_input_name {
+	margin-right: 0px;
+	width: 70px;
+	text-indent: 3px;
+}
+/*------公共form样式 end------*/
+
+/*-----公共查询form样式 start-------*/
+.qxy_search_form {
+	width: 100%;
+}
+.qxy_search_form form{
+	position: relative;
+}
+.qxy_search_form .form_row {
+	margin-bottom: 10px;
+}
+
+.qxy_search_form .form_row input, .qxy_search_form .form_row select {
+	margin-right: 0;
+}
+
+.qxy_form .form_row .form_item {
+}
+
+.qxy_search_form .search_left {
+	float: left;
+}
+
+.qxy_search_form .search_left .form_row {
+	margin-bottom: 0;
+}
+
+.qxy_search_form .search_right {
+	float: right;
+}
+
+.qxy_search_form .search_right .search_btn {
+	width: 84px;
+	height: 84px;
+	background: url("../img/common/an.jpg") no-repeat;
+	cursor: pointer;
+}
+
+.qxy_search_form .search_right .search_btn:hover {
+	background: url("../img/common/an_1.jpg") no-repeat;
+}
+
+/*form表单高级搜索样式*/
+.qxy_search_form .search_form_slide_btn{
+	/*position: absolute;*/
+	/*right: 0;*/
+	/*bottom: -30px;*/
+	/*margin-left: -50px;*/
+	float: right;
+	margin-top: -12px;
+	width: 85px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	background: #eeeeee;
+	cursor: pointer;
+}
+.qxy_search_form .search_form_slide_btn i{
+	padding: 4px 5px;
+	margin-left:5px;
+}
+.qxy_search_form .advanced_search:before{
+	content:"";
+	width:100%;
+	border-top:1px solid #cdcdcd;
+	border-bottom:1px solid #fbfbfb;
+	position:absolute;
+	top:-10px;
+	left:0;
+}
+.qxy_search_form .search_bottom_line{
+	float: left;
+	width:100%;
+	border-top:1px solid #cdcdcd;
+	border-bottom:1px solid #fbfbfb;
+	/*position:absolute;*/
+	/*bottom:-20px;*/
+	/*left:0;*/
+}
+.qxy_search_form .downward i{
+	background: url(../img/common/xj.gif) no-repeat center;
+}
+.qxy_search_form .upward i{
+	background: url(../img/common/xj1.gif) no-repeat center;
+}
+/*------公共查询form样式 end-------*/

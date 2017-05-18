@@ -1,0 +1,24 @@
+/*
+ * zmx 2016/06/03
+ * 收款单详情 页面样式
+*/
+
+.pay-form{height: auto; background: #fff; border: 1px solid #ddd; padding: 10px;}
+.form-label-width{ width: 75px; text-align: right;}
+.remarks-width{ width: 435px;}
+.btn-box{ background: #fff; padding: 15px 10px;border: 1px solid #ddd; border-top: none;}
+.red{color: #f25e61;}
+.overflow-width {
+    max-width: 135px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.form-item{ height: 36px;}
+.overflow-remark{
+    max-width: 320px;
+}
+
+.yqx-btn + .yqx-btn {
+    margin-right: 5px;
+}

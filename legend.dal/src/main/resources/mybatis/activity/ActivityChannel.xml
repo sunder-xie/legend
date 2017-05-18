@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.activity.ActivityChannelDao">
+
+    <resultMap id = "BaseResultMap" type = "ActivityChannel" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "channel_name" property = "channelName" />
+        <result column = "sort" property = "sort" />
+        <result column = "channel_source" property = "channelSource" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            channel_name as channelName,
+            sort as sort,
+            channel_source as channelSource,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "channelName != null">
+                    and channel_name = #{channelName}
+                </if>
+                <if test = "sort != null">
+                    and sort = #{sort}
+                </if>
+                <if test = "channelSource != null">
+                    and channel_source = #{channelSource}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "channelName != null">
+                    channel_name = #{channelName},
+                </if>
+                <if test = "sort != null">
+                    sort = #{sort},
+                </if>
+                <if test = "channelSource != null">
+                    channel_source = #{channelSource},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_activity_channel
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_activity_channel
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_activity_channel
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_activity_channel
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_activity_channel
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_activity_channel
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_activity_channel
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_activity_channel (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "channelName != null">
+                channel_name,
+            </if>
+            <if test = "sort != null">
+                sort,
+            </if>
+            <if test = "channelSource != null">
+                channel_source,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "channelName != null">
+                #{channelName},
+            </if>
+            <if test = "sort != null">
+                #{sort},
+            </if>
+            <if test = "channelSource != null">
+                #{channelSource},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_activity_channel
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_activity_channel (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            channel_name,
+            sort,
+            channel_source,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.channelName != null">
+                    #{item.channelName},
+                </if>
+                <if test="item.channelName == null">
+                    '',
+                </if>
+                <if test="item.sort != null">
+                    #{item.sort},
+                </if>
+                <if test="item.sort == null">
+                    0 ,
+                </if>
+                <if test="item.channelSource != null">
+                    #{item.channelSource},
+                </if>
+                <if test="item.channelSource == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

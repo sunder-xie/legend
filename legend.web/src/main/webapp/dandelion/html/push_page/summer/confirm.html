@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link type="text/css" rel="stylesheet" href="../../../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../../../css/summer/index.css" />
+    <link type="text/css" rel="stylesheet" href="../../../css/summer/mobiscroll.custom-2.6.2.min.css" />
+    <title>预约超值套餐</title>
+</head>
+
+<script type="text/html" id="shopTpl">
+    <%if (success) {%>
+        <div class="conL"><img src="<%=data.imgUrl || '../../../images/summer/logo.jpg'%>" /></div>
+        <div class="conR">
+            <h2><%=data.name%></h2>
+            <p class="mar5"><i class="ico_location"></i><%=data.address%></p>
+            <p><i class="ico_phone"></i><%if(data.tel){%><%= data.tel%><%}else{%><%= data.mobile%><%}%></p>
+        </div>
+        <ul class="stars">
+            <li class="full"></li>
+            <li class="full"></li>
+            <li class="full"></li>
+            <li class="full"></li>
+            <li class="full"></li>
+        </ul>
+    <% } %>
+</script>
+
+<script type="text/html" id="serviceTpl">
+    <%if (success) {%>
+        <%for (var i = 0; i < data.length; i++) {%>
+            <li class="clearfix" data-serviceid="<%=data[i].id%>">
+                <span class="choose <%= i == 0 ? 'on' : ''%>"><em>√</em></span>
+                <div class="service_detail">
+                    <h4 class="title"><%=data[i].name%></h4>
+                    <div class="inner clearfix">
+                        <div class="imgL"><img src="<%=data[i].imgUrl%>"></div>
+                        <div class="txtR">
+                            <h4>套餐内容：</h4>
+                            <p><%=data[i].serviceNote%></p>
+                        </div>
+                    </div>
+                    <p class="price">云修价：
+                        <%var type = data[i].priceType%>
+                        <%if (type == 1) {%>
+                            <em><%=data[i].servicePrice%></em>元
+                        <%} else if (type == 2) {%>
+                            <em>到店洽谈</em>
+                        <% } else if (type == 3) {%>
+                            <em>免费</em>
+                        <% } %>
+                    </p>
+                </div>
+            </li>
+        <% } %>
+    <% } %>
+</script>
+
+<body class="ce">
+    <div class="jiazai"><img src="../../../images/load.png"></div>
+
+    <div class="wrapper" id="JQWrap">
+
+        <div class="con clearfix" id="shop">
+
+        </div>
+
+        <!--门店有服务-->
+        <div class="hasService">
+            <div class="service">
+                <h3>请选择以下服务</h3>
+                <ul class="service_list" id="service">
+
+                </ul>
+            </div>
+
+            <!--选择时间-->
+            <div class="time-container">
+                <div class="time_box">
+                    <span class="calendar"><i class="ico_calendar"></i>预约时间</span>
+                    <span class="choose_time" id="scroller" data-placeholder="请选择抵店时间">请选择抵店时间<i class="ico_triangle"></i></span>
+                </div>
+                <ul id="treelist" class="treelist">
+                    <li data-hh="8">08:00 ~ 09:00</li>
+                    <li data-hh="9">09:00 ~ 10:00</li>
+                    <li data-hh="10">10:00 ~ 11:00</li>
+                    <li data-hh="11">11:00 ~ 12:00</li>
+                    <li data-hh="12">12:00 ~ 13:00</li>
+                    <li data-hh="13">13:00 ~ 14:00</li>
+                    <li data-hh="14">14:00 ~ 15:00</li>
+                    <li data-hh="15">15:00 ~ 16:00</li>
+                    <li data-hh="16">16:00 ~ 17:00</li>
+                    <li data-hh="17">17:00 ~ 18:00</li>
+                </ul>
+            </div>
+            <div class="btn_apply btn_service">立即预约</div>
+        </div>
+
+        <!--门店无服务-->
+        <div class="noService">
+            <section class="conty">
+                <p><img src="../../../images/summer/gt.gif"></p>
+                <h2>该门店还未参加活动！</h2>
+                <p>您可以关注“淘汽云修”公众号<br>查看其他服务门店</p>
+            </section>
+            <div class="downdiv"></div>
+        </div>
+
+        <!--门店服务已过期-->
+        <div class="overDate">
+            <div class="updiv"></div>
+            <section class="conty">
+                <p><img src="../../../images/summer/b.gif"></p>
+                <h2>活动已过期</h2>
+                <p>请关注“淘汽云修”公众号<br>查看更多其他服务</p>
+            </section>
+            <div class="downdiv"></div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="../../../js/Dao.js"></script>
+<script type="text/javascript" src="../../../js/lib/zepto/zepto.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/template.js"></script>
+<script type="text/javascript" src="../../../js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/mobiscroll.custom-2.6.2.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/crypto/sha.js"></script>
+<script type="text/javascript" src="../../../js/summer/confirm.js"></script>
+
+</html>

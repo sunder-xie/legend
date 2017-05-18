@@ -1,0 +1,192 @@
+.order-form{
+    margin-bottom: 10px;
+    padding: 15px 0;
+    background: #f7f7f7;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+}
+
+.order-form .form-data-width, .order-form .yqx-downlist-wrap {
+    width: 322px;
+}
+
+.show-btn{
+    height: 18px;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+    color: #717171;
+}
+.show-btn:hover{
+    color: #8eb210;
+    border:1px solid #8eb210;
+    background: #fff;
+}
+.hide-box{
+    padding: 10px 0;
+    display: none;
+}
+
+
+/*车况登记*/
+.register-title{
+    height: 43px;
+    line-height: 43px;
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    font-size: 14px;
+    color:#333;
+    padding-left: 10px;
+    font-family: "Microsoft Yahei", "微软雅黑";
+}
+.register{
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-top:none;
+    padding: 10px;
+}
+.group-pre{
+    overflow: hidden;
+    clear: both;
+}
+.appearance-sel{
+    width: 50%;
+    height: 45px;
+    float: left;
+}
+.apper-label-width{
+    width: 80px;
+    line-height: 45px;
+}
+.apper-item-width{
+    width: 105px;
+    margin-right: 10px;
+}
+.item-select{
+    line-height: 34px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    background: #fff;
+    width: 103px;
+    text-align: right;
+    margin-right: 10px;
+}
+.item-select select{
+    width: 100%;
+}
+.pre-input{
+    width: 223px;
+}
+.group-initialization{
+    display: none;
+}
+.personal{
+    line-height: 40px;
+}
+.personal input{
+    margin: 5px;
+    vertical-align: inherit;
+}
+.personal span{ margin:0 10px;}
+.btn-box{
+    height: 53px;
+    margin-top: 15px;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 15px;
+}
+
+
+.addlist-btn{
+    padding: 0 4px;
+    height: 22px;
+    line-height: 22px;
+    margin:0 auto;
+    font-size: 12px;
+}
+
+.dellist-btn{
+    font-size: 12px;
+    color: #ee3f02;
+    
+    text-decoration: underline;
+}
+.dellist-btn:hover{
+    text-decoration: underline;
+}
+.interior-width{
+    width: 215px;
+}
+.mileage-label-width{
+    width: 92px;
+}
+.mileage-width{
+    width: 255px;
+}
+.ring-box{
+    width: 100%;
+}
+.ring-select{
+    line-height: 34px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    background: #fff;
+    width: 153px;
+    text-align: right;
+    margin-right: 10px;
+}
+.tire-left{
+    width: 530px;
+    height: auto;
+}
+.tire-width{
+    width: 150px;
+}
+.tire-width input{
+    text-align: center;
+}
+.request-detail{
+    margin-bottom: 15px;
+}
+.request-detail table{
+    width: 100%;
+}
+.request-detail td,.request-detail th{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+.request-detail input{
+    width: 360px;
+}
+.other-area{
+    width: 220px;
+    height: 220px;
+    font-size: 12px;
+}
+.pre-num{
+    text-align: right;
+    line-height: 30px;
+    font-size: 12px;
+}
+.btn-org{
+    background: rgb(242, 149, 48);
+}
+.nav-btn {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* hack start */
+.order-form .show-grid {
+    margin-left: -10px;
+    margin-right: 10px;
+}
+/* hack end */
+.wg-bk{
+    background: #fff;
+}
+

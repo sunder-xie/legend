@@ -1,0 +1,95 @@
+/*
+* create by zmx 2017/1/5
+* 配件资料_淘汽采购
+*/
+
+.form-box {
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+    padding-top: 0;
+}
+.form-box .form-item {
+    width: 190px;
+}
+.form-box .w-387{
+    width: 387px;
+}
+.table-con {
+    margin-top: 10px;
+    border: 1px solid #cacaca;
+}
+
+.yqx-table .p-20 {
+    padding-left: 20px;
+}
+
+.yqx-table tr td h3 {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.w-480 {
+    width: 480px;
+}
+
+.w-280 {
+    width: 340px;
+}
+
+.accessories-photo {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    margin: 0 20px;
+}
+.accessories-photo img{
+    width: 80px;
+    height: 80px;
+}
+
+.accessories-text {
+    display: inline-block;
+}
+
+.accessories-text p {
+    line-height: 25px;
+}
+
+.p-10 {
+    padding-top: 10px;
+}
+
+.accessories-text p span {
+    display: inline-block;
+    width: 50%;
+}
+.btn-padding p {
+    padding-bottom: 10px;
+}
+.yqx-table tr td.p-right, .yqx-table tr th.p-right {
+    padding-right: 20px;
+}
+.dialog-content .form-label {
+    width: 120px;
+    text-align: right;
+}
+
+.dialog-content .form-item {
+    width: 200px;
+}
+.dialog-btn {
+    border-top: 1px solid #cacaca;
+    padding: 10px;
+    text-align: center;
+}
+.tip {
+    color: red;
+    margin-bottom: 12px;
+    text-align: center;
+}
+#allBrand {
+    width: 190px;
+}
+

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.customer.CustomerContactDao">
+
+    <resultMap id = "BaseResultMap" type = "CustomerContact" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "contact" property = "contact" />
+        <result column = "contact_mobile" property = "contactMobile" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "ver" property="ver"/>
+        <result column = "refer" property="refer"/>
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            contact as contact,
+            contact_mobile as contactMobile,
+            customer_id as customerId,
+            customer_car_id as customerCarId,
+            ver as ver,
+            refer as refer,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "contact != null">
+                    and contact = #{contact}
+                </if>
+                <if test = "contactMobile != null">
+                    and contact_mobile = #{contactMobile}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "contact != null">
+                    contact = #{contact},
+                </if>
+                <if test = "contactMobile != null">
+                    contact_mobile = #{contactMobile},
+                </if>
+                <if test = "customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test = "customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test="ver != null">
+                    ver = #{ver},
+                </if>
+                <if test="refer != null">
+                    refer = #{refer},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_customer_contact
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_contact
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_contact
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_contact
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_customer_contact
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_customer_contact
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_customer_contact
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_customer_contact (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "contact != null">
+                contact,
+            </if>
+            <if test = "contactMobile != null">
+                contact_mobile,
+            </if>
+            <if test = "customerId != null">
+                customer_id,
+            </if>
+            <if test = "customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test="ver != null">
+                ver,
+            </if>
+            <if test="refer != null">
+                refer,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "contact != null">
+                #{contact},
+            </if>
+            <if test = "contactMobile != null">
+                #{contactMobile},
+            </if>
+            <if test = "customerId != null">
+                #{customerId},
+            </if>
+            <if test = "customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test="ver != null">
+                #{ver},
+            </if>
+            <if test="refer != null">
+                #{refer},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_customer_contact
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,284 @@
+.item a {
+    left:0;
+    top:0;
+}
+
+.s_box {
+    height:105px;
+}
+
+.s_ul {
+    width:894px;
+    display:block;
+    float:left;
+}
+.s_ul>li {
+    margin-bottom: 10px;
+    float:left;
+}
+
+.s_right {
+    float: right;
+    width:84px;
+    height:84px;
+    background-image: url("../../images/an.jpg");
+}
+
+.s_right:hover {
+    float: right;
+    width:84px;
+    height:84px;
+    background-image: url("../../images/an_1.jpg");
+}
+
+.selcont {
+    width:229px;
+    height: 39px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right:10px;
+}
+
+.sel_date {
+    width:284px;
+    height:16px;
+    padding:11px 0 11px 10px;
+}
+
+.ck_box1 {
+    height:55px;
+}
+
+.ck_box1 .add_other {
+    font-size:14px;
+    float:left;
+    display:block;
+    width:97px;
+    height:29px;
+    padding:16px 0 0 42px;
+    color:#fff;
+    background-image: url("../../images/add_1.png");
+}
+
+.ck_box1 .ck_right {
+    float:right;
+    padding-top:10px;
+}
+
+.exportExc {
+    border:1px solid #c1c1c1;
+    width:100px;
+    height:28px;
+    line-height:28px;
+    margin-left:10px;
+    text-align:center;
+    display:inline-block;
+    background-color:#f7f7f7;
+    border-radius:5px;
+}
+
+.ck_tit {
+    border: 1px solid #cdcdcd;
+    height:25px;
+    padding:10px 20px 0 20px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.ck_tit span.company {
+    margin-right:50px;
+    width: 516px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+span.carModelId, span.license, span.company {
+    font-size:14px;
+    font-weight: bold;
+}
+.carModelId {
+    width:535px;
+    padding-right: 30px;
+    display:inline-block;
+    overflow: hidden;
+}
+
+.ck_tit .list {
+    font-size:14px;
+    display:inline-block;
+}
+
+.returnPur {
+    float:right;
+    display:inline;
+    color:#e30e0e;
+}
+
+.ck_info {
+    border: 1px solid #cdcdcd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.ck_cot {
+    height:60px;
+    margin:0 20px;
+    border-bottom: 1px dotted #cdcdcd;
+}
+
+.ck_order .last_cot {
+    border:none;
+}
+
+.ck_cot li {
+    display: block;
+    margin:10px 0;
+    float:left;
+    height:40px;
+    padding-right: 30px;
+}
+
+.ck_cot .cot_li {
+    padding-right:30px;
+    height:25px;
+}
+
+.ck_cot li.cot_li1 {
+    width:120px;
+}
+
+ul.ck_cot li.part_name {
+    height:30px;
+}
+
+.ck_cot li.cot_li2 {
+    width:212px;
+}
+
+.ck_cot li.cot_li span.data {
+    height: 40px;
+    line-height: 20px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ck_cot li.cot_li3 {
+    width:144px;
+}
+
+.ck_cot li.cot_li4 {
+    width:90px;
+
+}
+.ck_cot li.cot_li5 {
+    width:110px;
+}
+.ck_cot li.cot_li6 {
+    padding-right:0;
+    width:110px;
+}
+
+.order {
+    position:relative;
+    width:980px;
+}
+
+.return_order * {
+    color:#e30e0e;
+}
+
+.voided_order * {
+    color:#b7b7b7;
+}
+
+.returnImg {
+    background: url("../../images/return.png");
+    position:absolute;
+    bottom:10px;
+    right:0;
+    z-index:23;
+    width:99px;
+    height:80px;
+ }
+
+.voidedImg {
+    background: url("../../images/voided.png");
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:23;
+    width:99px;
+    height:80px;
+}
+
+.return_order .returnPur, .voided_order .returnPur {
+    display: none;
+}
+
+.selcontT {
+    width: 147px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    margin-left: 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+.search_goodsReceiver {
+    width:168px;
+}
+.w_ge {
+    width: 137px;
+    *height:35px;
+    padding-left: 10px;
+    margin: 0 10px;
+}
+.txt {
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    padding-left: 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+.findLicense {
+    width:290px;
+}
+input.findCode {
+    width:288px;
+}
+select.selAll {
+    width:287px;
+}
+._other {
+    width:394px;
+    *width: 395px;
+    margin-right: 10px;
+    min-height: 16px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid #dadada;
+    display: block;
+    float:left;
+    border-radius: 5px;
+}
+.models {
+    width:453px;
+    min-height: 16px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid #dadada;
+    display: block;
+    float:left;
+    border-radius: 5px;
+}
+.threeElems {
+    width:275px;
+    float: left;
+    margin-right:10px;
+    min-height: 16px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid #dadada;
+    display: block;
+    border-radius: 5px;
+}

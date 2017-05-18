@@ -1,0 +1,63 @@
+.sidebar {
+    margin:0px 0px 0px 1px;
+    width: 149px;
+    height: 100%;
+    float: left;
+    background-color: #30415A;
+    border: 1px solid #e8e8e8;
+}
+
+.sidebar .qxy_marketing_menu {
+    margin: 1px 1px;
+    padding: 5px 0 0 0;
+}
+.sidebar > .qxy_marketing_menu > li{
+    margin-right: 2px;
+    line-height:30px;
+    text-align: right;
+    border-bottom: 1px solid #797979;
+}
+.qxy_marketing_menu>.qxy_mk_title:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width:10px 10px 10px 0;
+    border-style:solid;
+    border-color:transparent #CCCCCC transparent transparent;
+    line-height:30px;
+}
+
+.sidebar span, .sidebar a {
+    margin-right: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.body_block{
+    margin-top: 70px;
+    overflow:hidden;zoom:1;
+}
+
+.wrapper_block{
+    width:980px;
+    float:left;
+    padding:10px 0px 150px 10px;
+}
+
+.qxy_wrapper{
+    margin-top: 0px;
+}
+.wrapper{
+    margin-top: 0px;
+}
+
+.sidebar li:hover, .sidebar .tabSel {
+    background-color: #fff;
+}
+.sidebar li:hover a, .sidebar .tabSel a{
+    color: #000;
+}
+.sidebar > .qxy_marketing_menu > .qxy_mk_title:hover {
+    background-color:#30415A;
+}

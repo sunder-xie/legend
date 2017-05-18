@@ -1,0 +1,178 @@
+/*选择服务 start*/
+.service-hide{
+    display: none;
+}
+.service-choose-title{
+    vertical-align: top;
+    margin-top: 8px;
+    display: inline-block;
+}
+.service-scroll-wrapper{
+    width: 340px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.service-choose-service{
+    width: 316px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.service-item{
+    height: 168px;
+    border: 1px solid #ddd;
+    position: relative;
+    box-sizing: content-box;
+}
+.service-item.service-selected{
+    border: 2px solid #8eb210;
+}
+.service-item.service-selected:after{
+    content: url('../../../../img/page/wechat/activity_chose.png');
+    width: 50px;
+    height: 50px ;
+    position: absolute;
+    left:-1px;
+    top: -1px;
+    z-index: 9;
+}
+.service-item + .service-item{
+    margin-top: 10px;
+}
+.service-item-content{
+    height: 118px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+.service-img{
+    width: 68px;
+    height: 68px;
+    margin-right: 10px;
+    background-image: url('../../../../img/page/wechat/default-service-img.jpg');
+    background-size: 68px 68px;
+}
+.service-img-transparent{
+    background-image: none;
+}
+.service-item-text>h3, .bounce-service-item>h3{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Microsoft YaHei","Hiragino Sans GB",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+.service-item-text>h3{
+    width: 200px;
+}
+.service-content-title{
+    line-height: 26px;
+    color: #777;
+}
+.service-item-content .service-content-li{
+    overflow: hidden;
+    white-space: pre-wrap;
+    width: 202px;
+    line-height: 17px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+}
+.service-item-footer{
+    height: 50px;
+    padding: 10px 10px 0 10px;
+    background-color: #e8ebde;
+}
+.service-item-footer a{
+    text-decoration: underline;
+    color: #666;
+}
+.service-item-footer p{
+    line-height: 14px;
+    margin-bottom: 5px;
+}
+.service-item-text strong, .bounce-service-item strong{
+    color: #f55d5e;
+    font-size: 20px;
+    font-weight: 900;
+    vertical-align: -2px;
+    margin-left: 4px;
+}
+.service-agree-wrapper{
+    padding: 10px 20px;
+}
+.service-agree-footer{
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+.js-service-agree{
+    margin: 20px 0;
+}
+.service-red-price{
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+}
+.service-item-footer span{
+    margin-left: 4px;
+}
+.service-item-footer .yqx-btn{
+    padding: 0;
+    width: 80px;
+}
+.js-service-no-join{
+    border: 1px solid #d2d2d2;
+    background: #f9f9f9;
+    color: #666;
+}
+.js-service-join{
+    border: 1px solid #f55d5e;
+    background: #fa7b7c;
+    color: #fff;
+}
+/*选择服务 end*/
+
+/*模块弹窗样式 start*/
+.service-bounce-input{
+    margin-left: 5px;
+    border: #c6c6c6 1px solid;
+    color: #333;
+    height: 30px;
+    border-radius: 1px;
+    padding-right: 36px;
+    width: 88px;
+}
+.service-yuan{
+    position: absolute;
+    height: 100%;
+    width: 36px;
+    border-left: 1px solid #dadada;
+    right: 0;
+    top: 0;
+    line-height: 30px;
+    text-align: center;
+    color: #a3a3a3;
+}
+/*模块弹窗样式 end*/
+
+
+/*服务详情弹窗样式 start*/
+.bounce-content-wrapper .service-content-li{
+    width: auto;
+    white-space: pre-wrap;
+}
+.bounce-service-item{
+    width: 270px;
+}
+.bounce-service-item>h3{
+    width: 270px;
+    margin-bottom: 8px;
+}
+.bounce-service-item>p{
+    line-height: 20px;
+    color: #777;
+}
+/*服务详情弹窗样式 end*/

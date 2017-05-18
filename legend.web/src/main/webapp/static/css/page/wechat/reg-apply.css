@@ -1,0 +1,245 @@
+h2, h3, strong {
+    font-family: "Microsoft YaHei",Tahoma,Arial,Helvetica Neue,Hiragino Sans GB,sans-serif;
+    line-height: initial;
+}
+
+.order-body {
+    width: 826px;
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    background: url('../../../img/page/wechat/apply/apply-back.png') no-repeat, #f2f2f2;
+}
+
+.order-head {
+    margin: 0;
+}
+.view-box {
+    position: absolute;
+    left: 0;
+    top : 0;
+    z-index: 3;
+    width: 4956px;
+    height: 500px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 1;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+.container {
+    float: left;
+    position: relative;
+    width: 826px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.to-apply {
+    position: absolute;
+    z-index: 4;
+    bottom: 70px;
+    right: 78px;
+}
+
+.to-apply .text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 18px;
+    margin-left: 12px;
+    color: #999;
+}
+
+.pointer-box {
+    position: absolute;
+    z-index: 4;
+    bottom: 135px;
+    right: 334px;
+}
+
+.pointer {
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    border: 1px solid #cdcdcd;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.pointer + .pointer {
+    margin-left: 9px;
+}
+
+.pointer.pointer-current {
+    border: 0;
+    height: 8px;
+    width: 8px;
+    background: #8fb027;
+}
+.container {
+    height: 100%;
+    display: inline-block;
+}
+
+/** 左边图片 **/
+.pic-container {
+    width: 430px;
+    position: relative;
+    padding-top: 83px;
+    display: inline-block;
+    height: 100%;
+}
+.pic-back {
+    height: 340px;
+    width: 340px;
+    border-radius: 340px;
+    margin: 0 auto;
+}
+
+.back-first {
+    background: #a2ce66;
+}
+
+.back-second {
+    background: #fae9a5;
+}
+
+.back-third {
+    background: #a6dff1;
+}
+
+.back-fourth {
+    background: #d7daa1;
+}
+
+.pic {
+    width: 204px;
+    height: 398px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.pic-first {
+    background: url('../../../img/page/wechat/apply/apply-first.png') no-repeat;
+}
+
+.pic-second {
+    background: url('../../../img/page/wechat/apply/apply-second.png') no-repeat;
+}
+
+.pic-third {
+    background: url('../../../img/page/wechat/apply/apply-third.png') no-repeat;
+}
+
+.pic-fourth {
+    background: url('../../../img/page/wechat/apply/apply-fourth.png') no-repeat;
+}
+
+/** 左边图片 end **/
+
+/** 右边文字 start **/
+.text-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 45px;
+}
+
+.text-container strong {
+    font-weight: bolder;
+    color: #333;
+    font-size: 14px;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    color: #111;
+    background: transparent;
+    height: initial;
+    line-height: 24px;
+    padding: 0;
+}
+
+.text-container h3 {
+    color: #333;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bolder;
+}
+
+.text-container p {
+    color: #666;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 16px;
+}
+
+.text-1 p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+
+h3.p-font {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
+.text-1, .text-3 {
+    margin-top: 104px;
+}
+/** 右边文字 end **/
+
+.margin-bt-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bt-12 {
+    margin-bottom: 12px;
+}
+
+.margin-bt-30 {
+    margin-bottom: 30px;
+}
+
+.margin-bt-16 {
+    margin-bottom: 16px;
+}
+
+.angle-box {
+    position: absolute;
+    z-index: 4;
+    height: 86px;
+    width: 40px;
+    line-height: 86px;
+    font-size: 84px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.angle-box:hover {
+    background: rgba(0, 0, 0, .1);
+}
+.angle-right-box {
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.angle-left-box {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.angle-right-box i {
+    margin-left: 5px;
+}

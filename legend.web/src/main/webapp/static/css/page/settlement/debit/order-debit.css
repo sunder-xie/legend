@@ -1,0 +1,209 @@
+/*
+ * zmx 2016/06/03
+ * 确认收款 页面样式
+*/
+
+/*付款明细表格 start*/
+.pay-box {
+    height: 42px;
+    background: #fff;
+    position: relative;
+    border: 1px solid #d2d2d2;
+    line-height: 42px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.table-btn {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+.table-btn i {
+    font-size: 14px;
+    line-height: 42px;
+}
+
+/*付款明细表格 end*/
+
+/*工单确认账单信息 start*/
+.pay-inforbox {
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.pay-title {
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+.pay-con {
+    padding: 0 10px;
+}
+
+.method-title {
+    margin: 15px 0;
+    border-left: 2px solid #999;
+    color: #333;
+    padding-left: 5px;
+}
+
+.method-box {
+    margin-bottom: 10px;
+}
+
+.remarks {
+    margin: 15px 0;
+    border-top: 1px solid #d2d2d2;
+    padding-top: 15px;
+}
+
+.total-box {
+    position: relative;
+}
+
+.total-box .payee {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    line-height: 30px;
+}
+
+.total-box .payee span {
+    margin-left: 10px;
+}
+
+.total-box p {
+    color: #535353;
+    line-height: 20px;
+}
+
+.total-box p span {
+    color: #fa7b7c;
+}
+
+.btn-box {
+    padding: 15px 10px;
+    margin-top: 10px;
+    border-top: 1px solid #d2d2d2;
+}
+
+/*工单确认账单信息 end*/
+
+/*隐藏表格 start*/
+.box-margin {
+    margin-top: 10px;
+}
+
+.show-table {
+    width: 100%;
+    background: #fff;
+    height: auto;
+    border: 1px solid #d2d2d2;
+    border-top: none;
+    padding: 10px;
+    display: none;
+}
+
+.yqx-table > thead > tr > th, .yqx-table > tr > th {
+    background: #f9f9f9;
+}
+
+.table-margin {
+    margin-top: 20px;
+}
+
+.table-total {
+    height: 44px;
+    margin-top: 20px;
+    line-height: 44px;
+}
+
+.table-total span {
+    color: #fa7b7c;
+}
+
+.show-table li {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.show-table li:hover {
+    background: #f9f9f9;
+}
+
+.show-table li div {
+    display: inline-block;
+    line-height: 30px;
+    width: 200px;
+}
+
+/*隐藏表格 end*/
+
+.delete-btn {
+    color: #fa7b7c;
+    padding: 0 10px;
+}
+
+.dialog-text {
+    line-height: 30px;
+    text-align: center;
+}
+
+.form-text-width {
+    width: 290px;
+}
+
+.debit-mothod-width {
+    width: 110px;
+}
+
+.debit-width {
+    width: 150px;
+}
+
+.label-margin {
+    margin-left: 20px;
+}
+
+.text-area-width {
+    width: 750px;
+}
+
+.input-width {
+    width: 100px;
+}
+
+.label-margin {
+    margin-left: 60px;
+}
+
+.method-box .form-label {
+    width: 60px;
+    text-align: right;
+}
+
+.bad-debit .debit-info {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bad-debit .debit-info .money-font {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.sett-member-card-box {
+    margin: 10px 0 0 60px;
+}

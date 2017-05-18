@@ -1,0 +1,162 @@
+/**
+ * 库存管理公共样式
+ * zmx 2016-08-08
+ */
+.order-right {
+    width: 823px;
+}
+
+/*
+ * 表单主内容区 start
+ */
+.order-head {
+    margin-bottom: 10px;
+}
+
+.order-head .headline {
+    line-height: 45px;
+}
+
+.order-row {
+    margin: 0 -15px;
+}
+
+.order-group {
+    padding: 15px 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.order-group:last-child {
+    border-bottom: none;
+}
+
+/* 表单主内容区 end */
+
+.yqx-table td {
+    line-height: 20px;
+}
+
+.yqx-table th.text-r {
+    text-align: right;
+}
+
+.yqx-table th.text-l {
+    text-align: left;
+}
+
+.yqx-table th.text-c {
+    text-align: center;
+}
+
+.green {
+    color: #607b0a;
+}
+
+.red {
+    color: #fa482c;
+}
+
+.grey {
+    color: #666;
+}
+
+.blue {
+    color: #232e49;
+}
+
+/*弹窗样式 start*/
+.dialog {
+    background: #fff;
+}
+
+.dialog-title {
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    background: #232e49;
+    font-size: 16px;
+    color: #fff;
+}
+
+.dialog-con {
+    text-align: center;
+    padding: 10px;
+}
+
+.link-btn {
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #607b0a;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #333;
+    margin: 10px auto;
+}
+
+/*弹窗样式 end*/
+
+.weight {
+    font-weight: bold;
+}
+
+.black {
+    color: #000;
+}
+
+.yqx-table > tbody > tr > td.text-r, .yqx-table > thead > tr > th.text-r {
+    text-align: right;
+}
+
+.yqx-table > tbody > tr > td.text-l, .yqx-table > thead > tr > th.text-l {
+    text-align: left;
+}
+
+.yqx-table > tbody > tr > td.text-c, .yqx-table > thead > tr > th.text-c {
+    text-align: center;
+}
+
+.yqx-table .ellipsis-1 {
+    height: 20px;
+    line-height: 20px;
+}
+
+.yqx-table .ellipsis-2 {
+    max-height: 40px;
+    line-height: 20px;
+    white-space: normal;
+}
+
+/* 表格列公共样式 */
+.tc-checkbox {
+    width: 32px;
+}
+
+.tc-price {
+    width: 80px;
+}
+
+.tc-date {
+    width: 90px;
+}
+
+.tc-datetime {
+    width: 102px;
+}
+
+.tc-seq {
+    width: 60px;
+}
+
+/* form 单位 */
+.has-unit {
+    padding-right: 50px;
+}
+
+.has-unit .fa {
+    width: 50px;
+    border-left: none;
+}

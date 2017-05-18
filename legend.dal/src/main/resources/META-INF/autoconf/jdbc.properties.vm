@@ -1,0 +1,9 @@
+jdbc.driverClassName=${legend_jdbc_driverClassName}
+jdbc.url=${legend_jdbc_url}
+jdbc.username=${legend_jdbc_username}
+jdbc.password=${legend_jdbc_password}
+
+bi.jdbc.driverClassName=${legend_bi_jdbc_driverClassName}
+bi.jdbc.url=${legend_bi_jdbc_url}
+bi.jdbc.username=${legend_bi_jdbc_username}
+bi.jdbc.password=${legend_bi_jdbc_password}

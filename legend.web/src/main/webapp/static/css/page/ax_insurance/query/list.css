@@ -1,0 +1,134 @@
+/*保单查询列表页样式开始*/
+.on{
+    background: #eee !important;
+    color: #333;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #9fc527;
+    line-height: 37px !important;
+}
+.hidden{
+    display: none !important;
+}
+/*右侧部分样式开始*/
+.Z-right{
+    width: 830px;
+    float: left;
+    background: #eee;
+    /*font-family: "宋体";*/
+}
+.Z-title{
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+    font-family: MircosoftYahei;
+    font-weight: bold;
+    margin:0 0 10px 0;
+}
+/*列表tab样式开始*/
+.Z-tab{
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ddd;
+}
+.Z-tab-item{
+    display: inline-block;
+    width: 105px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: sub;
+    background: #ddd;
+    color: #666;
+    font-size: 14px;
+    font-family: 宋体;
+}
+.Z-tab-item:hover{
+    background: #eee;
+    color: #333;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #9fc527;
+    line-height: 37px;
+}
+/*列表tab样式结束*/
+
+/*选择搜索框样式开始*/
+.Z-select{
+    background: #fff;
+    font-size: 0;
+    padding: 10px 0 10px 25px;
+}
+.Z-select .Z-select-item{
+    display: inline-block;
+    width: 496px;
+}
+.Z-select .Z-vin{
+    margin:0 25px;
+}
+.Z-select .Z-insureName, .Z-select .Z-carOwner, .Z-select .Z-vin, .Z-select .Z-status,.Z-select .Z-status-fictitious{
+    width: 138px;
+}
+.Z-select .Z-status,.Z-select .Z-status-fictitious,.Z-select .Z-time{
+    font-size: 12px;
+}
+.Z-select .Z-time{
+    display: inline-block;
+    margin-top: 10px;
+}
+.Z-select .Z-search{
+    margin-left: 200px;
+}
+/*选择搜索框样式结束*/
+
+/*表格样式开始*/
+.Z-orderSn{
+    width: 180px;
+}
+.Z-expire-time{
+    width: 130px;
+}
+tbody tr td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Z-check-detail{
+    text-decoration: underline;
+    color: #666;
+    cursor: pointer;
+}
+.Z-delete{
+    text-decoration: underline;
+    color: #666;
+    cursor: pointer;
+}
+.no-data{
+    display: inline-block;
+    width: 830px;
+    height: 180px;
+    background: #F5F5F5;
+    line-height: 164px;
+    border-bottom: none !important;
+}
+.yqx-table tr>td.text-align{
+    text-align: inherit;
+}
+.rendImg,.goPay{
+    text-decoration: underline;
+    color: #fd3746;
+    cursor: pointer;
+}
+.layui-layer-content{
+    min-height: 36px;
+}
+.color-word{
+    color: #f87c7e;
+}
+/*表格样式结束*/
+
+/*保单查询列表页样式结束*/
+
+/*右侧部分样式结束*/

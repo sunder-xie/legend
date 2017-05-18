@@ -1,0 +1,267 @@
+/*第三步样式开始*/
+.right p.choose{
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.all_choose{
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+}
+.detail_w,.choose_w{
+    height: 46px;
+    line-height: 46px;
+    padding-left: 9px;
+    font-size: 14px;
+    color: #535353;
+    box-sizing: border-box;
+}
+.car_detail{
+    width: 100%;
+    height: 80px;
+}
+.span_w{
+    display: inline-block;
+    width: 105px;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+}
+.car,.brand,.car_price{
+    display: inline-block;
+    color: #666666;
+}
+.car_price{
+    color: #ff7800;
+}
+.re_choose{
+    display: inline-block;
+    width: 93px;
+    height: 22px;
+    background-color: #9fc527;
+    border: #7fa700 1px solid;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.scheme{
+    width: 805px;
+    margin: auto;
+    background-color: #f9f9f9;
+}
+.scheme_con{
+    width: 763px;
+    margin: auto;
+}
+.scheme .scheme_con .force,.business{
+    font-size: 14px;
+    padding: 20px 0 10px 0;
+    box-sizing: border-box;
+    color: #535353;
+}
+table{
+    width: 100%;
+}
+table th{
+    background-color: #f3f3f3;
+    height: 35px;
+    line-height: 35px;
+    color: #333333;
+}
+table td.check{
+    text-align: center;
+}
+table td.touB{
+    width: 170px;
+}
+.business_table td,.force_table td{
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+}
+table td,table th{
+    border-bottom: #d1d1d1 1px solid;
+}
+.times{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.times span{
+    vertical-align: middle;
+    display: inline-block;
+}
+.startT,.endT{
+    width: 167px;
+    height: 37px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 37px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.startT{
+    border: 1px solid #c9c9c9;
+}
+.endT{
+    background-color: #eeeeee;
+}
+.endW{
+    margin-left: 25px;
+}
+.startW{
+    margin-left: 10px;
+}
+.bPrice,.btn{
+    display: inline-block;
+}
+.bPrice{
+    font-size: 12px;
+    min-width: 80px;
+    height: 21px;
+    border: #c9c9c9 1px solid;
+    border-radius: 3px 0 0 3px;
+    line-height: 21px;
+    vertical-align: top;
+    text-align: center;
+}
+.btn{
+    width: 21px;
+    height: 21px;
+    border-top: #c9c9c9 1px solid;
+    border-right: #c9c9c9 1px solid;
+    border-bottom: #c9c9c9 1px solid;
+    border-radius: 0 3px 3px 0;
+    vertical-align: top;
+}
+.touB_jp{
+    font-size: 0;
+    min-width: 68px;
+    height: 23px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+.touB_ul{
+    font-size: 12px;
+    min-width: 102px;
+    max-height: 105px;
+    overflow: auto;
+    border: #c9c9c9 1px solid;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 29px;
+    z-index: 99;
+    left: 0;
+}
+.touB_jp .touB_ul li{
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.touB_jp .touB_ul li:hover{
+    background-color: #80a61e;
+    color: #ffffff;
+}
+.s_up2{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 7px 9px;
+}
+.s_down2{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -18px 8px;
+}
+.main,.additional{
+    text-align: center;
+    vertical-align: middle;
+}
+.business_th4{
+    width: 120px;
+}
+.business_th5{
+    width: 80px;
+}
+.next_btn,.next-Step{
+    width: 88px;
+    height: 33px;
+    background-color: #fa7b7c;
+    border: #f55d5e 1px solid;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 15px 0 20px 9px;
+    float: left;
+    cursor: pointer;
+}
+.back{
+    width: 88px;
+    height: 33px;
+    background-color: #f9f9f9;
+    border: #d6d6d6 1px solid;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    color:#666666;
+    margin: 15px 9px 20px 0;
+    float: right;
+    cursor: pointer;
+}
+.Cbtn{
+    background-color:#a0c338;
+    border: #80a61e 1px solid;
+    width: 90px;
+    height: 35px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 1px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 75px;
+}
+#tipsA{
+    display: none;
+    margin: 0 20px;
+}
+.p{
+    width: 250px;
+    margin: 30px auto 0 auto;
+}
+
+.label-must:before {
+    content: "*";
+    display: inline;
+    font-size: 12px;
+    color: #f00;
+}
+
+.vehicleList td,
+.vehicleList th {
+    width: 15%;
+    text-align: center;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.vehicleList td:last-child,
+.vehicleList th:last-child {
+    width: 25%;
+}
+
+.insurance-query-style{
+    font-size: 12px;
+    margin: 8px 0;
+}

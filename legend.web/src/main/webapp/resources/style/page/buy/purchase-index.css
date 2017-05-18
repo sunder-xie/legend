@@ -1,0 +1,128 @@
+/*--- 隐藏预约浮窗 start ----*/
+.sideTips{display: none;}
+/*--- 隐藏预约浮窗 end ----*/
+
+/*左侧浮动快捷菜单*/
+.left_nav {
+    width: 128px;
+    position: absolute;
+    top: 10px;
+    left:50%;
+    margin-left: -640px;
+    min-height: 73px;
+    display: none;
+}
+.left_nav .nav_bg_top {
+    height: 73px;
+    background: url("../../img/page/buy/caigou-left-nav-t.png") no-repeat center ;
+}
+.left_nav .nav_bg_content {
+    width: 97%;
+    border-left: 2px solid #00285c;
+    border-right: 2px solid #00285c;
+    border-bottom: 2px solid #00285c;
+}
+.left_nav .nav_bg_content ul {
+    width: 100%;
+}
+.left_nav .nav_bg_content ul li {
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    text-align: left;
+    padding-left: 42px;
+    border-bottom: 1px solid #00377e;
+    background: #07489d url("../../img/page/buy/caigou-left-ico.png") no-repeat left;
+    cursor: pointer;
+}
+
+.left_nav .nav_bg_content ul .sel{
+    color: #ffdd68;
+    background: #00377e url("../../img/page/buy/caigou-left-ico-2.png") no-repeat left;
+}
+.fixed{position:fixed;top:90px;left:50%;margin-left: -640px;}
+
+/*--- 大banner start ----*/
+.banner{margin-top:70px;height:280px;background: #0e1526 url(../../img/page/buy/purchase_index_banner.jpg) no-repeat center;}
+.banner .hot_box{width: 1000px;height:100%;position: relative;margin:0 auto;overflow:hidden;}
+.banner .btn_box{float:left;min-width: 221px;height:50px;background: #162038;margin-top: 163px;margin-left: 15px;border-radius: 5px;color: #d5e1ff;font-size: 16px;padding: 12px 0px 13px 15px;}
+.btn_box_t{margin-bottom: 6px;text-indent: 4px;}
+.btn_box_b span{display: inline-block;height:20px;line-height: 30px;vertical-align: middle;font-weight: 900;margin-left: 5px;}
+.btn_box_b b{display:inline-block;font-weight: 900;color: #ffdd68;font-size: 20px;vertical-align: middle;line-height: 30px;height:20px;}
+.btn_box_b a{float:right; color: #29c613;display: block;border-radius: 5px;background: url(../../img/page/buy/banner-btn.jpg) no-repeat center; width: 66px;height:30px;line-height: 30px;text-align: center;vertical-align: middle;margin-right: 10px;}
+/*--- 大banner end ----*/
+
+
+/*--- 商品列表 start ----*/
+.goods_wrap{position:relative;width: 100%;margin-top: 20px;margin-bottom: 50px;}
+.goods_box{width: 1000px;margin:0 auto;}
+.goods_box ul{width: 1011px;}
+.goods_header {
+    height: 42px;
+    margin-bottom: 10px;
+    line-height: 42px;
+    font-size: 20px;
+    color: #FFF;;
+    text-align: center;
+    background: url(../../img/page/buy/caigou-title-bg.png) repeat-x;
+    clear: both;
+}
+.goods_item{width: 326px;height:400px;background: #fff;float: left;margin-right: 11px;margin-bottom: 11px;transition: all 0.8s cubic-bezier(.175,.885,.32,1);}
+.goods_item:hover {box-shadow: 0 0 15px #ccc;}
+.goods_item .img_box{text-align: center;position: relative;}
+.goods_item .img_box .can_buy_icon{position: absolute;background: url(../../img/page/buy/canBuy-icon.png) no-repeat; width: 104px;height:103px;}
+.goods_item .img_box .can_buy_icon span{color: #fff;font-size: 14px;width: 120px;display: block; transform: rotate(-45deg);height: 40px;margin-top: 28px;margin-left: -10px;}
+.goods_item .img_box .all_pay_icon{position: absolute;background: url(../../img/page/buy/allPay-icon.png) no-repeat; width: 104px;height:103px;margin: 180px 0px 0px 200px;}
+
+.goods_item_price span{font-weight: 900;vertical-align: middle;display: inline-block;line-height: 30px;height:30px;}
+.goods_info{padding: 10px;}
+.goods_item_price .col1,
+.goods_item_price .col3{font-size: 18px;color: #da2a2f;}
+.goods_item_price .col2{font-size: 20px;margin:0 5px;}
+.goods_item_price .col4{color: #da2a2f;}
+.goods_item_price .col5{text-decoration: line-through;color: #959595;float: right;}
+
+.goods_item_price{margin-bottom: 10px;}
+
+.goods_item_name{line-height: 17px;margin-bottom: 10px;height: 34px;}
+.goods_buy{line-height: 30px;}
+.buy_btn{float: right;}
+
+.buy_btn .btn{height: 29px;width: 29px;display: inline-block;cursor: pointer;text-align: center;font-size: 20px;color: #fff;vertical-align: middle;box-sizing: border-box;padding-bottom: 4px;}
+.buy_btn .btn{font-style: normal;transition: transform .4s ease-out;}
+.buy_btn .btn:hover {transform: rotate(360deg);}
+.buy_btn .btn.del_btn{border:1px solid #d7d7d7;background: #d7d7d7;}
+.buy_btn .btn.add_btn{border:1px solid #da2a2f;background: #da2a2f;}
+.buy_btn input{height:27px;border-top:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7;width: 53px;vertical-align: middle;text-align: center;font-size: 14px;line-height: 29px;}
+
+.goods_item .img_box a{display: block;width: 100%;}
+.sell_out_layer{width: 100%;height:260px;background: #000;opacity: 0.6;position: absolute;left:0;top:0;}
+.sell_out_txt{width: 151px;height:151px;border-radius: 50%;border: 3px solid #fff;font-size: 40px;text-align: center;line-height: 154px;position: absolute;left:50%;margin-left: -77px;top:50%;margin-top: -77px;color: #fff;font-weight: 900;}
+/*--- 商品列表 end ----*/
+
+
+/*---- 购物车 start ----*/
+.shop_car_box{position: fixed;height: 60px;width: 420px;background: url(../../img/page/buy/car_bg.jpg) repeat-x;border: 4px solid #929292;border-right:none;border-radius: 35px 0 0 35px;right:0;bottom:200px;display: none;}
+.shop_car_box .col{float: left;height: 100%;}
+.shop_car_box .col1{width: 85px;background: url(../../img/page/buy/shop-car-icon.png) no-repeat center;position: relative;}
+.shop_car_box .col1 span{position: absolute;background: #e6171d;color: #fff;border: 1px solid #e6171d;height:16px;width: auto;line-height: 18px;border-radius: 10px;padding: 0 4px;left:46px;top:5px;}
+.shop_car_box .col2{font-size: 16px;font-weight: 900;padding: 6px 0;}
+.shop_car_box .col2 p{line-height: 24px;}
+.shop_car_box .col2 p span{color: #da2a2f;}
+.shop_car_box .col3{width: 135px;margin-left: 20px;padding-top:8px;}
+.shop_car_box .col3 a{display: block;background: url(../../img/page/buy/sett-btn.png) no-repeat center;width: 130px;height:48px;line-height: 48px;text-align: center;color: #fff;font-size: 18px;}
+/*---- 购物车 end ----*/
+
+
+/*---- 未加盟云修弹框样式 start -----*/
+.popbox{ width: 260px; height: 100px; padding: 30px 50px; background: #fff; border-radius: 5px; }
+.tipTxt{font-size: 14px; line-height: 20px; text-align: center; }
+.btn_join{display: block; width: 130px; height: 36px; border-radius: 5px; background: #1795d2; line-height: 36px; text-align: center; font-size: 14px; color: #fff; margin: 30px auto 12px auto; cursor: pointer; }
+.redTxt{font-size: 18px; color: #ef0913; text-align: center; }
+/*---- 未加盟云修弹框样式 end -----*/
+
+
+
+
+
+

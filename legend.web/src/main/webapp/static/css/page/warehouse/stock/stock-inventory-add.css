@@ -1,0 +1,88 @@
+/**
+ * 添加库存盘点
+ * zmx 2016-08-08
+ */
+.form-item i {
+    font-style: normal;
+}
+
+.form-item > .fa {
+    line-height: 32px;
+}
+
+.form-box {
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0 10px 15px 10px;
+}
+
+.form-box .form-label {
+    width: 80px;
+}
+
+.form-box .form-item {
+    width: 170px;
+}
+
+.accessories-box {
+    background: #fff;
+    border: 1px solid #cacaca;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.accessories-title {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    line-height: 45px;
+}
+
+.accessories-table {
+    border-top: 1px solid #cacaca;
+    overflow: auto;
+    max-height: 290px;
+    overflow-y: scroll;
+}
+
+.materials-btn {
+    padding: 10px 0;
+}
+
+.yqx-textarea {
+    width: 760px;
+}
+
+.btn-group {
+    margin-top: 15px;
+    border-top: 1px solid #cacaca;
+    padding: 15px 0;
+}
+
+.tc-1 {
+    width: 140px;
+}
+
+.tc-2 {
+    width: 65px;
+}
+
+.tc-3 {
+    width: 110px;
+}
+
+.tc-4 {
+    width: 81px;
+}
+
+.tc-6 {
+    width: 55px;
+}
+
+.tc-8 {
+    width: 50px;
+}
+
+.tc-9 {
+    width: 65px;
+}

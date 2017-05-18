@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--搜索-->
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.account.service.LegendAccountService"
+                     id="legendAccountService"
+                     version="${dubbo.search.version}" owner="th"/>
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.warehousein.service.LegendWarehouseInService"
+                     id="legendWarehouseInService"
+                     version="${dubbo.search.version}" owner="dehuang.zhang"/>
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.warehouseout.service.LegendWarehouseOutService"
+                     id="legendWarehouseOutService"
+                     version="${dubbo.search.version}" owner="dehuang.zhang"/>
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.goods.service.LegendGoodsService"
+                     id="legendGoodsService"
+                     version="${dubbo.search.version}" owner="dehuang.zhang"/>
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.warehouseout.LegendWarehouseOutDetailService"
+                     id="legendWarehouseOutDetailService"
+                     version="${dubbo.search.version}" owner="search_team"/>
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.goods.category.service.CategoryService"
+                     id="categoryService"
+                     version="${dubbo.search.version}" owner="search_team"/>
+    <!--服务资料-->
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.shopservice.service.LegendShopServiceService"
+                     id="legendShopServiceService"
+                     version="${dubbo.search.version}" owner="twg"/>
+    <!--客户车辆信息搜索-->
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.cubecustomerinfo.service.CubeCustomerInfoService"
+                     id="cubeCustomerInfoService"
+                     version="${dubbo.search.version}" owner="shenyang.zhou"/>
+
+    <!--客户搜索-->
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.customercar.service.LegendCustomerCarSerivce"
+                     id="legendCustomerCarSerivce"
+                     version="${dubbo.search.version}" owner="twg"/>
+    <!--工单相关搜索-->
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.order.service.LegendOrderService"
+                     id="legendOrderService"
+                     version="${dubbo.search.version}" owner="twg"/>
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.legend.orderhistory.service.LegendOrderHistoryService"
+                     id="legendOrderHistoryService"
+                     version="${dubbo.search.version}" owner="lilige"/>
+    <!--车型相关-->
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.goods.car.service.CarCategoryService"
+                     id="rpcCarCategoryService"
+                     version="${dubbo.search.version}" owner="lilige"/>
+
+    <!--门店的对账分页数据-搜索 -->
+    <dubbo:reference interface="com.tqmall.search.dubbo.client.mana.service.SettleCheckDetailService" id="settleCheckDetailService"
+                     version="${dubbo.search.version}" owner="zxg"/>
+
+</beans>

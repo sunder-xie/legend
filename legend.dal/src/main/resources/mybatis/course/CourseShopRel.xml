@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.course.CourseShopRelDao">
+
+    <resultMap id = "BaseResultMap" type = "CourseShopRel" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "manager_login_id" property = "managerLoginId" />
+        <result column = "join_count" property = "joinCount" />
+        <result column = "course_id" property = "courseId" />
+        <result column = "course_detail_id" property = "courseDetailId" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            manager_login_id as managerLoginId,
+            join_count as joinCount,
+            course_id as courseId,
+            course_detail_id as courseDetailId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "managerLoginId != null">
+                    and manager_login_id = #{managerLoginId}
+                </if>
+                <if test = "joinCount != null">
+                    and join_count = #{joinCount}
+                </if>
+                <if test = "courseId != null">
+                    and course_id = #{courseId}
+                </if>
+                <if test = "courseDetailId != null">
+                    and course_detail_id = #{courseDetailId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "managerLoginId != null">
+                    manager_login_id = #{managerLoginId},
+                </if>
+                <if test = "joinCount != null">
+                    join_count = #{joinCount},
+                </if>
+                <if test = "courseId != null">
+                    course_id = #{courseId},
+                </if>
+                <if test = "courseDetailId != null">
+                    course_detail_id = #{courseDetailId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_course_shop_rel
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_course_shop_rel
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_course_shop_rel
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_course_shop_rel
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_course_shop_rel
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_course_shop_rel
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_course_shop_rel
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_course_shop_rel (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "managerLoginId != null">
+                manager_login_id,
+            </if>
+            <if test = "joinCount != null">
+                join_count,
+            </if>
+            <if test = "courseId != null">
+                course_id,
+            </if>
+            <if test = "courseDetailId != null">
+                course_detail_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "managerLoginId != null">
+                #{managerLoginId},
+            </if>
+            <if test = "joinCount != null">
+                #{joinCount},
+            </if>
+            <if test = "courseId != null">
+                #{courseId},
+            </if>
+            <if test = "courseDetailId != null">
+                #{courseDetailId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_course_shop_rel
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_course_shop_rel (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            manager_login_id,
+            join_count,
+            course_id,
+            course_detail_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.managerLoginId != null">
+                    #{item.managerLoginId},
+                </if>
+                <if test="item.managerLoginId == null">
+                    0 ,
+                </if>
+                <if test="item.joinCount != null">
+                    #{item.joinCount},
+                </if>
+                <if test="item.joinCount == null">
+                    0 ,
+                </if>
+                <if test="item.courseId != null">
+                    #{item.courseId},
+                </if>
+                <if test="item.courseId == null">
+                    0 ,
+                </if>
+                <if test="item.courseDetailId != null">
+                    #{item.courseDetailId},
+                </if>
+                <if test="item.courseDetailId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <!-- 查询总数 -->
+    <select id = "selectShopRelCount" resultType = "java.lang.Integer">
+        select count(distinct(shop_id))
+        from legend_course_shop_rel
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询信息 -->
+    <select id = "selectShopRel" resultMap = "BaseResultMap">
+        select shop_id,sum(join_count) as totalJoinCount
+        from legend_course_shop_rel
+        <include refid = "BaseWhereClause" />
+        group by shop_id
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+</mapper>

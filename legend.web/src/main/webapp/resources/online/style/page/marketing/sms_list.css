@@ -1,0 +1,49 @@
+
+.bx_cont {
+    padding: 5px 0 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.bx_cont table {
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.bx_cont table th, .bx_cont table td {
+    padding: 10px 14px;
+    text-align: center;
+    color: #333333;
+    border: 1px solid #cdcdcd;
+}
+.bx_cont table td.content{
+    width: 390px;
+}
+.bx_cont table td.show_dtl a{
+    text-decoration: underline;
+    color: #f2942e;
+    cursor: pointer;
+}
+.bx_cont table th {
+    font-size: 14px;
+}
+.account_msg{
+    float: right;
+    line-height: 54px;
+}
+.account_msg b{
+    color: #f2942e;
+    font-size: 22px;
+    vertical-align: middle;
+}
+.qxy_orange_btn{
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+.content_title_box{float: left; }
+.content_title p{font-size:24px; font-family:"黑体";}
+.content_title p.word_en{font-size:9px; color:#aeaeae; font-family:Arial; margin-top: 5px;}
+.content_title .qxy_red_btn{float:right;}

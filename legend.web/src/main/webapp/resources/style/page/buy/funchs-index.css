@@ -1,0 +1,269 @@
+.banner {
+    margin-top: 70px;
+    height: 505px;
+    background: #0e1526 url(../../img/page/buy/funchs-index-banner.jpg) no-repeat center;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    height: 0;
+    display: block;
+    content: '';
+    overflow: hidden;
+    clear: both;
+}
+.funchs-wrapper{
+    width: 1200px;
+    margin: 20px auto 10px auto;
+    background-color: #f0f0f0;
+}
+.title{
+    width: 100%;
+    height: 80px;
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    background-color: #c51a05;
+    line-height: 80px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+}
+.icon,.send-tip,.icon_yx,.buy,.bought,.more{
+    background: url("../../img/page/buy/sprit.png") no-repeat;
+}
+.icon{
+    position: absolute;
+    background-position: -5px -10px;
+    width: 32px;
+    height: 55px;
+    top: -32px;
+    z-index: 999;
+}
+.icon1{
+    left: 60px;
+}
+.icon2{
+    right: 60px;
+}
+.goods_list li{
+    width: 100%;
+    padding: 0;
+    height: 308px;
+    margin-bottom: 10px;
+    float: left;
+    position: relative;
+}
+.bg{
+    background: #efefef;
+}
+.goods_list li .goods{
+    width: 100%;
+    height: 308px;
+    border: 1px solid #ededed;
+    background: #fff;
+    cursor: pointer;
+}
+.goods_l{
+    position: relative;
+    width: 470px;
+    height: 308px;
+    overflow: hidden;
+    float: left;
+}
+.goods_l img{
+    width: 470px;
+    height: 308px;
+}
+.goods_r{
+    width: 700px;
+    margin: 0 15px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.good_name{
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 10px 10px 0 10px;
+    border-bottom: 1px dashed #d2d2d2;
+}
+.name{
+    font-size: 36px;
+    color: #00479d;
+    line-height: 60px;
+}
+.scale{
+    font-size: 18px;
+    color: #00479d;
+    line-height: 30px;
+}
+.description{
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 20px;
+}
+.goods_descript{
+    width: 400px;
+    padding: 10px;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.limit{
+    color: #eb5c4e;
+    font-size: 18px;
+    padding: 10px;
+}
+.send-tip{
+    float: right;
+    width: 160px;
+    height: 80px;
+    background-position: -46px 8px;
+}
+.price{
+    margin: 0 0 0 10px;
+    display: inline-block;
+    width: 100%;
+}
+.price span{
+    font-size: 18px;
+    color: #dc2727;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+}
+.price span em{
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.price del{
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    height: 12px;
+    line-height: 30px;
+    float: left;
+    font-style: normal;
+    color: #9d9d9d;
+}
+.price em{
+    font-style: normal;
+}
+.good_op{
+    padding: 0 20px;
+}
+.icon_yx{
+    background-position: -4px -166px;
+    width: 258px;
+    height: 40px;
+}
+.bill{
+    font-size: 12px;
+    color: #9d9d9d;
+    line-height: 50px;
+    margin: 0 20px;
+}
+.buy{
+    background-position: -111px -124px;
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+}
+.bought{
+    background-position: -3px -78px;
+    width: 150px;
+    height: 40px;
+    cursor: default;
+}
+.more{
+    background-position: -3px -119px;
+    width: 109px;
+    height: 41px;
+}
+.btn{
+    width: 14px;
+    height: 27px;
+    border: 1px solid #dcdcdc;
+    float: left;
+}
+.disabled{
+    background: #d7d7d7;
+    cursor: default;
+}
+.btn_l{
+    width: 100%;
+    height: 42px;
+    text-indent: 10px;
+    line-height: 42px;
+    font-size: 16px;
+    background: #f8f8f8;
+    display: block;
+    margin-top: 4px;
+}
+.btn_l i{
+    width: 6px;
+    height: 11px;
+    background-position: -245px -4px;
+    float: right;
+    margin: 15px 20px 0 0;
+}
+.btn_l:hover{
+    background: #dc2727;
+    color: #fff;
+}
+.btn_l:hover i{
+    background-position: -245px -24px;
+}
+.nav_l li.on{
+    background-color: #0b418c;
+}
+.t_send{
+    background: url("../../img/page/buy/t_send.jpg") no-repeat 0 0;
+    width: 1200px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+.send{
+    background: url("../../img/page/buy/send.png") no-repeat 0 0;
+    width: 1200px;
+    height: 150px;
+}
+.rule{
+    margin-top: 30px;
+}
+.rules{
+    margin-top: 10px;
+}
+.rules li{
+    margin-bottom: 15px;
+    line-height: 10px;
+}
+.fb{
+    font-weight: bold;
+}
+.f16{
+    font-size: 16px;
+}
+.f12{
+    font-size: 12px;
+}
+.f13{
+    font-size: 13px;
+}
+.c3{
+    color: #333;
+}
+.c6{
+    color: #666;
+}
+.c9{
+    color: #999;
+}

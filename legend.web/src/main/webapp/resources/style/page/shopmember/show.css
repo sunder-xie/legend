@@ -1,0 +1,15 @@
+.chain_log .table_info {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.chain_log .table_info th,
+.chain_log .table_info td
+{
+    padding: 10px 8px;
+    word-break: break-all;
+    vertical-align: middle;
+}
+.center {
+    text-align: center!important;
+}

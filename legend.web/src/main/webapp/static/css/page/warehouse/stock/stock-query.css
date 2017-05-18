@@ -1,0 +1,161 @@
+/**
+ * 库存盘点
+ * zmx 2016-08-08
+ */
+
+.form-box {
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0 10px 10px 10px;
+}
+
+.form-box .form-item {
+    width: 175px;
+}
+
+.btn-group {
+    height: 55px;
+    padding: 10px 0;
+}
+
+.export-excel {
+    line-height: 35px;
+}
+
+.stock-money {
+    background: #fff;
+    border: 1px dashed #cacaca;
+    padding: 5px 10px;
+}
+
+.stock-icon {
+    display: block;
+    float: left;
+    width: 22px;
+    height: 22px;
+    background: url("../../../../img/page/warehouse/stock/stock-money-ico.png") no-repeat;
+    margin-top: 8px;
+}
+
+.stock-text {
+    float: left;
+    margin-left: 15px;
+}
+
+.stock-text h3 {
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.stock-text p {
+    color: #333;
+    font-family: arial, verdana, sans-serif;
+    font-weight: bold;
+}
+
+.stock-text p span {
+    font-size: 16px;
+}
+
+.dialog-max-width {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dialog-combine-btn {
+    height: 40px;
+    text-align: left;
+    padding-top: 16px;
+}
+
+.tips {
+    line-height: 30px;
+    padding-left: 10px;
+    color: #fa7b7c;
+}
+
+.new-goods {
+    border: 1px solid #cacaca;
+    height: 30px;
+}
+
+.layui-layer-content.layui-layer-padding {
+    line-height: initial;
+}
+
+.dialog .yqx-table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.new-goods {
+    width: 300px;
+}
+
+.dialog-con {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.dialog-combine-btn {
+    padding: 0 10px;
+}
+
+.money-font-size {
+    font-size: 14px;
+}
+
+.p-right {
+    padding-right: 10px;
+}
+
+.table-con {
+    overflow-x: auto;
+}
+
+.tc-2 {
+    width: 100px;
+}
+
+.tc-3 {
+    width: 210px;
+}
+
+.tc-4 {
+    width: 70px;
+}
+
+.yqx-table .detail-list th, .yqx-table .detail-list td {
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.yqx-table .detail-list input[type="checkbox"] {
+    vertical-align: text-top;
+}
+
+.show-grid .form-item + .form-item {
+    margin-left: 10px;
+}
+
+/*金额统计*/
+.search-result{
+    line-height: 55px;
+    border: 1px solid #cacaca;
+    border-top: 0px;
+    padding-left: 10px;
+    color: #333;
+    background: #fff;
+}
+.search-result span{
+    color: #666;
+    margin-left: 10px;
+}
+
+.yqx-table .ellipsis-2 {
+    max-height: 36px;
+}

@@ -1,0 +1,260 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    table-layout:fixed
+}
+
+.order-infor table .th-right, .order-infor table .td-right{
+    text-align: right;
+}
+
+.order-infor table th, .order-infor table td {
+    text-align: left;
+}
+.order-infor table th.th-boundary, .order-infor table td.td-boundary{
+    padding-right: 15px;
+}
+.right-box{
+    width: 827px;
+    overflow: hidden;
+    float: right;
+    margin-top: 20px;
+}
+.order-message{
+    padding: 10px 20px;
+    position: relative;
+}
+.order-bold{
+    font-weight: bold;
+    color: #333;
+}
+.detail-row{
+    clear:both;
+}
+.detail-title{
+    width: 95px;
+    line-height: 30px;
+}
+.detail-width{
+    width: 255px;
+}
+.detail-message{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.bz-content{
+    width: 720px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+.detail-content{
+    width: 620px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 30px;
+}
+.seal-box{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top:-6px;
+    right:-6px;
+    background: url("../../../img/page/appoint/seal.png") no-repeat;
+}
+.Ledger{
+    background-position: 0 0;
+}
+.settlement{
+    background-position: -137px 0;
+}
+.void{
+    background-position: 0 -130px;
+}
+.been-deleted{
+    background-position: -140px -130px;
+}
+.no-confirm{
+    background-position: 0px -260px;
+}
+.has-confirm{
+    background-position: -148px -260px;
+}
+.has-chanel{
+    background-position: 0 -400px;
+}
+.has-complate{
+    background-position: -162px -400px;
+}
+.has-order{
+    background-position: 0 -517px;
+}
+
+/*预约单信息 start*/
+.order-message{
+    overflow: hidden;
+    background: #f7f7f7;
+    border:1px solid #ddd;
+}
+.order-message td{
+    line-height: 35px;
+    
+    font-size: 12px;
+    color: #333;
+    word-break:break-all;
+    padding-left: 10px;
+}
+/*预约单信息 end*/
+
+/*预约单列表 start*/
+.order-infor{
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+.order-infor-tab{
+    height: 43px;
+    line-height: 43px;
+    
+    font-size: 14px;
+    color: #333;
+    padding: 0 12px;
+}
+.serves-list{
+    padding: 0 10px;
+}
+.serves-list table{
+    width: 100%;
+}
+.serves-list th{
+    height: 35px;
+    line-height: 35px;
+    background: #f9f9f9;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    color: #333;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.serves-list td{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #d6d6d6;
+    color: #333;
+    font-size: 12px;
+}
+.comment-title{
+    width: 60px;
+    line-height: 25px;
+}
+.comment,.total{
+    margin-top: 12px;
+    padding-left: 15px;
+}
+.comment{
+    border-bottom:1px solid #dcdcdc;
+    font-size: 12px;
+    color: #535353;
+}
+.total p{
+    line-height: 34px;
+    
+    font-size: 12px;
+    color: #535353;
+}
+.total p span{
+    color: #ff7800;
+}
+.save-btn-box{
+    height: 66px;
+    border-top: 1px solid #dcdcdc;
+    padding: 20px 20px 0 20px;
+
+}
+.yqx-btn-1{
+    margin-left: 5px;
+}
+.nav-btn {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.btn-org {
+    background: rgb(242, 149, 48);
+}
+.btn-blue {
+    background: rgb(63, 178, 222);
+}
+
+/*弹窗样式*/
+.tank{
+    background: #fff;
+}
+.btn_group{
+    height:55px;
+    line-height:55px;
+    text-align:center;
+    background:#232e49;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+}
+.t_middle{
+    text-align: center;
+    padding-top: 20px;
+}
+.link-btn{
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #9fc527;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #333;
+    margin: 10px auto;
+}
+.link-chanel-btn{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #9fc527;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #333;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.t_middle .hover{
+    border: 1px solid red;
+}
+.t-bottom{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.btn-width{
+    padding: 0 10px;
+    line-height: 25px;
+}
+
+.servers-name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.hidden{
+    display: none;
+}

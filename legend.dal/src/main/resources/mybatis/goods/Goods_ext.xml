@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.goods.GoodsDao">
+
+
+    <!-- 更新商品库存-->
+    <update id="updateStock">
+        UPDATE legend_goods
+        SET
+            stock = #{stock},
+            gmt_modified =now(),
+            modifier =#{optUserId}
+        WHERE
+            id = #{id}
+    </update>
+
+    <!-- 批量下架配件 -->
+    <update id="batchDownShelf">
+        update legend_goods
+        set onsale_status=0, stock = 0,inventory_price =0
+        where
+        shop_id = #{shopId} and id in
+        (
+        <foreach collection="goodsIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+</mapper>

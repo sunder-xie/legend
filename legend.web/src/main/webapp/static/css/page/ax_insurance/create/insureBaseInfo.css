@@ -1,0 +1,69 @@
+/*页面公用开始*/
+body .flotation{
+    line-height: 50px;
+    text-align: center;
+}
+.carInfo,.chooseScheme,.bInfo{
+    display: none;
+}
+.redC{
+    border: #f50f14 1px solid;
+}
+.wrapper{
+    width: 100%;
+    background-color: #eeeeee;
+}
+.content{
+    width: 980px;
+    margin:0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+.right{
+    float: right;
+    width: 825px;
+}
+.right p.big-title{
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+/*公用结束*/
+
+/*第一步的样式开始*/
+.enter{
+    width: 823px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+.n-button{
+    width: 88px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #fa7b7c;
+    color: #ffffff;
+    border: 1px solid #f55d5e;
+    border-radius: 2px;
+    margin:5px 0 20px 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.n-button:hover{
+    background-color: #ff8d8e;
+}
+.n-button:active{
+    background-color: #f35f62;
+}
+.s_up{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px;
+}
+.s_down{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px;
+}
+/*第一步的样式结束*/

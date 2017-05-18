@@ -1,0 +1,116 @@
+/*公用样式 开始*/
+.dis {
+    display: none;
+}
+
+.process-nav-true .nav_process {
+    height: 40px;
+}
+
+.right {
+    float: right;
+    width: 825px;
+}
+
+.right p.big-title {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.enter_info {
+    width: 803px;
+    background-color: #f9f9f9;
+    margin: 10px auto;
+}
+
+/*公用样式 结束*/
+
+
+/*选择支付方式样式  开始*/
+.pay-way {
+    margin-left: 9px;
+    padding-bottom: 20px;
+    font-size: 0;
+}
+
+.enter {
+    width: 823px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333333;
+}
+
+.small-title {
+    padding: 15px 0 0 9px;
+}
+
+.pay-way img {
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.payWay-name {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.must-pay {
+    width: 803px;
+    margin: 0 auto 10px auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.must-pay-color {
+    color: #ff7800;
+}
+
+.must-pay-money {
+    font-style: normal;
+}
+.pay-method{
+    margin-bottom: 15px;
+}
+
+
+.go-pay, .back-recharge {
+    width: 88px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.go-pay {
+    float: left;
+    margin: 5px 0 15px 10px;
+    background-color: #fa7b7c;
+    color: #ffffff;
+    border: 1px solid #f55d5e;
+}
+
+.go-pay:hover {
+    background-color: #ff8d8e;
+}
+
+.go-pay:active {
+    background-color: #f35f62;
+}
+
+.back-recharge {
+    margin: 5px 10px 15px 0;
+    border: 1px solid #d2d2d2;
+    float: right;
+    background-color: #f9f9f9;
+    color: #666666;
+}
+/*选择支付方式样式  结束*/

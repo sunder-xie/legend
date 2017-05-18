@@ -1,0 +1,80 @@
+.yqx-group {
+    margin-bottom: 10px;
+}
+
+.yqx-group .yqx-group-head {
+    background: #fff;
+}
+
+.yqx-group .yqx-table > thead > tr > th,
+.yqx-group .yqx-table > tr > th {
+    background: #f9f9f9;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.search-result .yqx-group-content {
+    padding: 0;
+}
+
+.yqx-table > tbody > tr > td a,
+.yqx-table > thead > tr > th a {
+    color: #0470f5;
+}
+
+.yqx-table > tbody > tr > td {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.search-form .yqx-input {
+    width: 130px;
+}
+
+.headline {
+    margin-bottom: 10px;
+}
+
+.list {
+    width: 130px;
+    height: 30px;
+}
+
+.yqx-table {
+    font-size: 12px;
+}
+
+.card-balance .text-right {
+    margin-right: 27px;
+}
+
+.w150 {
+    max-width: 150px;
+}
+
+.yqx-table > tbody > tr .a-disabled {
+    cursor: not-allowed;
+    color: #808080;
+}
+
+.search-result .row-text {
+    height: 18px;
+    line-height: 18px;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+.yqx-table td a{
+    display: inline-block;
+    padding: 10px 8px;
+    margin: -8px 0;
+
+}

@@ -1,0 +1,44 @@
+.title_1{
+    font-weight:800;
+    width:300px;
+    margin: 0 auto;
+    font-size:14px;
+    color:black;
+}
+
+.info_1{
+    margin: 0 auto;
+    margin-top:5px;
+    width:500px;
+    color:blue;
+    font-size:12px;
+}
+
+.wid{
+    width:70px;
+    height:30px;
+}
+
+.info_2{
+    padding:0px 10px 0px 0px;
+    color:black;
+}
+.info_3{
+    padding:0px 10px 0px 10px;
+    color:black;
+}
+.info_4{
+    padding:0px 10px 0px 5px;
+    color:black;
+}
+
+.export_2{
+    background: orangered;
+    height:33px;
+    margin-left: 15px;
+    display: block;
+    line-height: 33px;
+    text-align: center;
+
+}
+

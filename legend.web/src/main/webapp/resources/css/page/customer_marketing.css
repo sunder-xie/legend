@@ -1,0 +1,154 @@
+.d_top {
+    height: 52px;
+    padding-top: 30px;
+}
+.d_top li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #FFF;
+    background: #F77C7E;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+.kh_boxbc {
+    border-top: 1px solid #FBFBFB;
+    padding-top: 20px;
+}
+.kh_tap {
+    padding-left: 64px;
+}
+.kh_tap span {
+    display: inline-block;
+    width: 86px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+}
+.kh_tap span.current {
+    color: #FFF;
+    background: #434343;
+}
+.kh_cha span {
+     line-height: 40px;
+     width: 64px;
+     text-align: right;
+     display: inline-block;
+     color: #111;
+     vertical-align: middle;
+ }
+.khcha {
+    width: 785px;
+    height: 18px;
+    background: #FFF;
+    border: 1px solid #8A8A8A;
+    padding: 10px 0 10px 10px;
+    margin-right: 10px;
+}
+.kh_ani {
+    width: 103px;
+    height: 40px;
+    color: #FFF;
+    font-size: 14px;
+    background: #32CD32;
+}
+.kh_list {
+    width: 990px;
+    position: relative;
+}
+.cont {
+    display: block;
+    width: 990px;
+    position: relative;
+}
+.cont li {
+    width: 235px;
+    height: 306px;
+    background: #F9F9F9;
+    float: left;
+    border: 1px solid #CDCDCD;
+    margin: 0 10px 10px 0;
+}
+.ltop_1 {
+    height: 90px;
+    cursor: pointer;
+    padding: 15px 15px 0 15px;
+    border-bottom: 1px dotted #AEBDC7;
+}
+.ltop_1 div {
+    width: 202px;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.carCode {
+    font-weight: bold;
+}
+.midc_1 {
+    padding: 7px 0;
+    border-bottom: 1px dotted #EEBDC7;
+    height: 95px;
+}
+.ptxt {
+    width: 100%;
+    padding: 3px 0;
+    line-height: 20px;
+}
+.pleft {
+    float: left;
+    padding-left: 15px;
+}
+.pright_1 {
+    float: right;
+    width: 168px;
+    padding-right: 15px;
+}
+.midc {
+    padding: 7px 0;
+    border-bottom: 1px dotted #AEBDC7;
+    height: 125px;
+}
+.bing {
+    padding: 15px;
+    height: 10px;
+}
+.bing span {
+    font-weight: bold;
+    margin: 0 5px;
+    color: #FA4837;
+}
+.bing .remark {
+    display: inline-block;
+    width: 126px;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.but_right {
+    width: 100px;
+    height: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #C1C1C1;
+    margin-top: 12px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+.return_visit_btn {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.appoint_info {
+    padding: 15px;
+}

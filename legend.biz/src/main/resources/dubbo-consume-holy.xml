@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!-- 寄售活动CRM接口-->
+    <dubbo:reference interface="com.tqmall.holy.provider.service.crm.RpcCustomerCommonService"
+                     id="rpcCustomerCommonService"
+                     version="${dubbo.holy.version}" owner="dehuang.zhang"/>
+
+
+    <dubbo:reference interface="com.tqmall.holy.provider.service.RpcCustomerService" id="rpcCustomerService"
+                     version="${dubbo.holy.version}" owner="yan.luo"/>
+
+    <!-- 云修系统在线售卖 门店开通 -->
+    <dubbo:reference interface="com.tqmall.holy.provider.service.legend.RpcLegendSystemSalesService" id="rpcLegendSystemSalesService"
+                     version="${dubbo.holy.version}" owner="xiangdong.qu"/>
+
+    <!-- 云修系统在线售卖 获取订单折扣 -->
+    <dubbo:reference interface="com.tqmall.holy.provider.service.legend.RpcLegendSystemDiscountService" id="rpcLegendSystemDiscountService"
+                     version="${dubbo.holy.version}" owner="xiangdong.qu"/>
+</beans>

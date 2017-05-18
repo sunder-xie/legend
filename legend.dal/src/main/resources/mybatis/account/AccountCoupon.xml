@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.AccountCouponDao">
+
+    <resultMap id="BaseResultMap" type="AccountCoupon" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="coupon_code" property="couponCode"/>
+        <result column="coupon_source" property="couponSource"/>
+        <result column="effective_date" property="effectiveDate"/>
+        <result column="expire_date" property="expireDate"/>
+        <result column="used_status" property="usedStatus"/>
+        <result column="account_id" property="accountId"/>
+        <result column="coupon_info_id" property="couponInfoId"/>
+        <result column="coupon_type" property="couponType"/>
+        <result column="coupon_name" property="couponName"/>
+        <result column="suite_id" property="suiteId"/>
+        <result column="flow_id" property="flowId"/>
+        <result column="flow_sn" property="flowSn"/>
+        <result column="operator_name" property="operatorName"/>
+    </resultMap>
+
+    <resultMap id="commonLI" type="com.tqmall.legend.bi.entity.CommonPair">
+        <result column="data_f" property="dataF" javaType="java.lang.Long"/>
+        <result column="data_s" property="dataS" javaType="java.lang.Integer"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            coupon_code as couponCode,
+            coupon_source as couponSource,
+            effective_date as effectiveDate,
+            expire_date as expireDate,
+            used_status as usedStatus,
+            account_id as accountId,
+            coupon_info_id as couponInfoId,
+            coupon_type as couponType,
+            coupon_name as couponName,
+            suite_id as suiteId,
+            flow_id as flowId,
+            flow_sn as flowSn,
+            operator_name as operatorName,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="couponCode != null">
+                    and coupon_code = #{couponCode}
+                </if>
+                <if test="couponSource != null">
+                    and coupon_source = #{couponSource}
+                </if>
+                <if test="effectiveDate != null">
+                    and effective_date = #{effectiveDate}
+                </if>
+                <if test="expireDate != null">
+                    and expire_date = #{expireDate}
+                </if>
+                <if test="usedStatus != null">
+                    and used_status = #{usedStatus}
+                </if>
+                <if test="accountId != null">
+                    and account_id = #{accountId}
+                </if>
+                <if test="couponInfoId != null">
+                    and coupon_info_id = #{couponInfoId}
+                </if>
+                <if test="couponType != null">
+                    and coupon_type = #{couponType}
+                </if>
+                <if test="couponName != null">
+                    and coupon_name = #{couponName}
+                </if>
+                <if test="suiteId != null">
+                    and suite_id = #{suiteId}
+                </if>
+                <if test="flowId != null">
+                    and flow_id = #{flowId}
+                </if>
+                <if test="flowSn != null">
+                    and flow_sn = #{flowSn}
+                </if>
+                <if test="couponCodes !=null">
+                    and coupon_code in
+                    (
+                    <foreach collection="couponCodes" index="index" item="couponCode" separator=",">
+                        #{couponCode}
+                    </foreach>
+                    )
+                </if>
+                <if test="ids !=null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="id" separator=",">
+                        #{id}
+                    </foreach>
+                    )
+                </if>
+                <if test="accountIds !=null">
+                    and account_id in
+                    (
+                    <foreach collection="accountIds" index="index" item="id" separator=",">
+                        #{id}
+                    </foreach>
+                    )
+                </if>
+                <if test="operatorName != null">
+                    and operator_name = #{operatorName}
+                </if>
+                <if test="infoIds !=null">
+                    and coupon_info_id in
+                    (
+                    <foreach collection="infoIds" index="index" item="id" separator=",">
+                        #{id}
+                    </foreach>
+                    )
+                </if>
+                <if test="gtExpireDate != null">
+                    <![CDATA[
+                    and expire_date > #{gtExpireDate}
+                    ]]>
+                </if>
+                <if test="ltEffectiveDate != null">
+                    <![CDATA[
+                    and effective_date < #{ltEffectiveDate}
+                    ]]>
+                </if>
+                <if test="ltExpireDate != null">
+                    <![CDATA[
+                    and (expire_date < #{ltExpireDate} or effective_date > #{gtEffectiveDate})
+                    ]]>
+                </if>
+                <if test="gmtModifiedGt != null">
+                    <![CDATA[
+                    and gmt_modified >= #{gmtModifiedGt}
+                    ]]>
+                </if>
+                <if test="gmtModifiedLt != null">
+                    <![CDATA[
+                    and gmt_modified <= #{gmtModifiedLt}
+                    ]]>
+                </if>
+                <if test="expireDateGt != null">
+                    <![CDATA[
+                    and expire_date >= #{expireDateGt}
+                    ]]>
+                </if>
+                <if test="expireDateLt != null">
+                    <![CDATA[
+                    and expire_date < #{expireDateLt}
+                    ]]>
+                </if>
+                <if test="flowIds != null">
+                    and flow_id in
+                    <foreach collection="flowIds" open="(" close=")" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="couponCode != null">
+                    coupon_code = #{couponCode},
+                </if>
+                <if test="couponSource != null">
+                    coupon_source = #{couponSource},
+                </if>
+                <if test="effectiveDate != null">
+                    effective_date = #{effectiveDate},
+                </if>
+                <if test="expireDate != null">
+                    expire_date = #{expireDate},
+                </if>
+                <if test="usedStatus != null">
+                    used_status = #{usedStatus},
+                </if>
+                <if test="accountId != null">
+                    account_id = #{accountId},
+                </if>
+                <if test="couponInfoId != null">
+                    coupon_info_id = #{couponInfoId},
+                </if>
+                <if test="couponType != null">
+                    coupon_type = #{couponType},
+                </if>
+                <if test="couponName != null">
+                    coupon_name = #{couponName},
+                </if>
+                <if test="suiteId != null">
+                    suite_id = #{suiteId},
+                </if>
+                <if test="flowId != null">
+                    flow_id = #{flowId},
+                </if>
+                <if test="flowSn != null">
+                    flow_sn = #{flowSn},
+                </if>
+                <if test="operatorName != null">
+                    operator_name = #{operatorName},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_account_coupon
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_coupon
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_coupon
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_coupon
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_account_coupon
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_account_coupon
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_account_coupon
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_account_coupon (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="couponCode != null">
+                coupon_code,
+            </if>
+            <if test="couponSource != null">
+                coupon_source,
+            </if>
+            <if test="effectiveDate != null">
+                effective_date,
+            </if>
+            <if test="expireDate != null">
+                expire_date,
+            </if>
+            <if test="usedStatus != null">
+                used_status,
+            </if>
+            <if test="accountId != null">
+                account_id,
+            </if>
+            <if test="couponInfoId != null">
+                coupon_info_id,
+            </if>
+            <if test="couponType != null">
+                coupon_type,
+            </if>
+            <if test="couponName != null">
+                coupon_name,
+            </if>
+            <if test="suiteId != null">
+                suite_id,
+            </if>
+            <if test="flowId != null">
+                flow_id,
+            </if>
+            <if test="flowSn != null">
+                flow_sn,
+            </if>
+            <if test="operatorName != null">
+                operator_name,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="couponCode != null">
+                #{couponCode},
+            </if>
+            <if test="couponSource != null">
+                #{couponSource},
+            </if>
+            <if test="effectiveDate != null">
+                #{effectiveDate},
+            </if>
+            <if test="expireDate != null">
+                #{expireDate},
+            </if>
+            <if test="usedStatus != null">
+                #{usedStatus},
+            </if>
+            <if test="accountId != null">
+                #{accountId},
+            </if>
+            <if test="couponInfoId != null">
+                #{couponInfoId},
+            </if>
+            <if test="couponType != null">
+                #{couponType},
+            </if>
+            <if test="couponName != null">
+                #{couponName},
+            </if>
+            <if test="suiteId != null">
+                #{suiteId},
+            </if>
+            <if test="flowId != null">
+                #{flowId},
+            </if>
+            <if test="flowSn != null">
+                #{flowSn},
+            </if>
+            <if test="operatorName != null">
+                #{operatorName},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_account_coupon
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_account_coupon (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            coupon_code,
+            coupon_source,
+            effective_date,
+            expire_date,
+            used_status,
+            account_id,
+            coupon_info_id,
+            coupon_type,
+            coupon_name,
+            suite_id,
+            flow_id,
+            flow_sn,
+            operator_name,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.couponCode != null">
+                    #{item.couponCode},
+                </if>
+                <if test="item.couponCode == null">
+                    '',
+                </if>
+                <if test="item.couponSource != null">
+                    #{item.couponSource},
+                </if>
+                <if test="item.couponSource == null">
+                    0 ,
+                </if>
+                <if test="item.effectiveDate != null">
+                    #{item.effectiveDate},
+                </if>
+                <if test="item.effectiveDate == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.expireDate != null">
+                    #{item.expireDate},
+                </if>
+                <if test="item.expireDate == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.usedStatus != null">
+                    #{item.usedStatus},
+                </if>
+                <if test="item.usedStatus == null">
+                    0 ,
+                </if>
+                <if test="item.accountId != null">
+                    #{item.accountId},
+                </if>
+                <if test="item.accountId == null">
+                    0 ,
+                </if>
+                <if test="item.couponInfoId != null">
+                    #{item.couponInfoId},
+                </if>
+                <if test="item.couponInfoId == null">
+                    0 ,
+                </if>
+                <if test="item.couponType != null">
+                    #{item.couponType},
+                </if>
+                <if test="item.couponType == null">
+                    0 ,
+                </if>
+                <if test="item.couponName != null">
+                    #{item.couponName},
+                </if>
+                <if test="item.couponName == null">
+                    '',
+                </if>
+                <if test="item.suiteId != null">
+                    #{item.suiteId},
+                </if>
+                <if test="item.suiteId == null">
+                    0 ,
+                </if>
+                <if test="item.flowId != null">
+                    #{item.flowId},
+                </if>
+                <if test="item.flowId == null">
+                    0 ,
+                </if>
+                <if test="item.flowSn != null">
+                    #{item.flowSn},
+                </if>
+                <if test="item.flowSn == null">
+                    '',
+                </if>
+                <if test="item.operatorName != null">
+                    #{item.operatorName},
+                </if>
+                <if test="item.operatorName == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="isExist" resultType="com.tqmall.legend.entity.account.AccountCoupon">
+        SELECT id
+        FROM legend_account_coupon
+        WHERE is_deleted = 'N'
+        and shop_id = #{shopId}
+        and account_id = #{accountId}
+        limit 1
+    </select>
+
+
+    <select id="selectUsedCount" resultMap="commonLI">
+        select
+            count(id) as data_s,
+            coupon_info_id as data_f
+        from legend_account_coupon
+        where is_deleted = 'N'
+            <if test="shopId != null">
+                and shop_id = #{shopId}
+            </if>
+            <if test="ids !=null">
+                and coupon_info_id in
+                (
+                <foreach collection="ids" index="index" item="id" separator=",">
+                    #{id}
+                </foreach>
+                )
+            </if>
+         group by coupon_info_id
+    </select>
+    <select id="selectExistsSn" resultType="string">
+        SELECT
+            coupon_code
+        FROM
+            legend_account_coupon
+        WHERE
+            is_deleted = 'N'
+        <if test="snList != null">
+          and coupon_code in
+            <foreach collection="snList" index="index" item="sn" separator="," open="(" close=")">
+                #{sn}
+            </foreach>
+        </if>
+    </select>
+
+    <select id="countOwnedCouponByTypeId" resultType="java.lang.Integer">
+        SELECT COUNT(id)
+        FROM legend_account_coupon
+        WHERE is_deleted='N'
+          AND shop_id=#{shopId}
+          AND account_id=#{accountId}
+          AND coupon_info_id=#{couponTypeId}
+    </select>
+
+    <select id="findAccountCouponByFlowIds" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        FROM legend_account_coupon
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and flow_id in
+        <foreach collection="flowIds" item="tag" index="index" separator="," open="(" close=")">
+            #{tag}
+        </foreach>
+
+    </select>
+
+    <select id="getUnExpireCouponNum" resultType="com.tqmall.legend.bi.entity.CommonPair">
+        SELECT account_id dataF,
+               COUNT(1) dataS
+        FROM legend_account_coupon
+        WHERE shop_id = #{shopId}
+        AND account_id in
+        <foreach collection="accountIds" item="tag" index="index" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+        AND used_status = 0
+        AND expire_date > now()
+        AND is_deleted = 'N'
+        GROUP BY account_id
+    </select>
+
+    <select id="getUnExpireCouponList" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        FROM legend_account_coupon
+        WHERE shop_id = #{shopId}
+        AND account_id in
+        <foreach collection="accountIds" item="tag" index="index" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+        AND used_status = 0
+        AND expire_date > now()
+        AND is_deleted = 'N'
+    </select>
+</mapper> 

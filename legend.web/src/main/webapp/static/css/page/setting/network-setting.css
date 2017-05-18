@@ -1,0 +1,111 @@
+/*
+* create by zmx 2017/1/6
+* 环境控制设置
+*/
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0 10px;
+}
+.network-title{
+    height: 47px;
+    line-height: 47px;
+    font-size: 14px;
+}
+.network-title:before{
+    content:"";
+    display: inline-block;
+    width: 2px;
+    height: 14px;
+    background: #999;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.process-box{
+    height: 190px;
+}
+.process{
+    position: relative;
+    width: 138px;
+    height: 163px;
+    border: 1px solid #999;
+    margin: 13px 10px;
+}
+.process .number{
+    width: 40px;
+    height: 22px;
+    line-height: 22px;
+    background: #fff;
+    font-size: 24px;
+    font-family: "\9ED1\4F53", "Microsoft YaHei",sans-serif, Verdana, Arial, Helvetica, Tahoma;
+    font-weight: bold;
+    position: absolute;
+    top:-13px;
+    left: 49px;
+    text-align: center;
+}
+.process .line{
+    width: 12px;
+    height: 2px;
+    margin: 32px auto 0 auto;
+    background: #999;
+}
+.process .step{
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.process .step-text{
+    height: 50px;
+    text-align: center;
+}
+.process .step-text p{
+    line-height: 25px;
+}
+.process .wifi-ico{
+    width: 44px;
+    height: 36px;
+    margin: 0 auto;
+    background: url("../../../img/page/setting/wifi-ico.png") no-repeat;
+}
+.process .ico1{
+    background-position: 0px 0px;
+}
+.process .ico2{
+    background-position: 2px -40px;
+}
+.process .ico3{
+    background-position: 3px -89px;
+}
+.process .ico4{
+    background-position: 3px -137px;
+}
+.process .ico5{
+    background-position: 3px -175px;
+}
+.b-bot{
+    border-bottom: 1px dashed #cacaca;
+}
+.environment{
+    line-height: 88px;
+    border-bottom: 1px solid #cacaca;
+}
+.shop-wifi{
+    display: inline-block;
+    width: 270px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.shop-info{
+    display: inline-block;
+    width: 280px;
+}
+.shop-text{
+    display: inline-block;
+    width: 230px;
+}
+.btn-box{
+    padding: 10px;
+}

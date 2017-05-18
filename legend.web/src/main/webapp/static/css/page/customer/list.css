@@ -1,0 +1,165 @@
+/**
+ * jjl 2016-04-10
+ * 客户列表样式
+ */
+
+/**
+ * 顶部导航按钮组 start
+ */
+.customer-list-title{}
+.customer-list-title h3{font-weight: 900;color:#222;line-height: 36px;}
+.customer-list-title .tools-btn{}
+.customer-list-title .tools-btn a{color:#fff;margin-left: 10px;}
+.customer-list-title .tools-btn a span{margin-right:6px;font-weight: 900;}
+.customer-list-title .tools-btn a.btn-1{background: #3fb2de;border:1px solid #18a1d5;}
+.customer-list-title .tools-btn a.btn-1:hover{background: #18a1d5;}
+.customer-list-title .tools-btn a.btn-2{background: #f29530;border:1px solid #de811c;}
+.customer-list-title .tools-btn a.btn-2:hover{background: #de811c;}
+/**
+ * 顶部导航按钮组 end
+ */
+
+
+/**
+ * 查询条件 start
+ */
+.condition-box{border: 1px solid #ddd;padding:10px 10px 0 10px;background: #fff;margin-top: 10px;border-radius: 4px;}
+.condition-box .row-spaces{height:10px;}
+.condition-box .row-line{border-bottom: 1px solid #d2d2d2;}
+.condition-box .tools-bar{line-height: 35px;}
+.condition-box .tools-bar span{margin:0 6px;}
+.condition-box .senior-search{color: #666; vertical-align: bottom;}
+
+.senior-width{
+    width: 145px;
+}
+
+.senior-width input,.senior-time-width input{
+    width: 100%;
+}
+
+.condition-box {
+    position: relative;
+}
+
+.senior-box, .search-btns {
+    display: inline-block;
+}
+
+.senior-width-2 {
+    width: 207px;
+}
+
+.search-absolute-btns {
+    right: 20px;
+    position: absolute;
+}
+
+.senior-width-3 {
+    width: 255px;
+}
+
+.senior-width + .senior-width {
+    margin-left: 10px;
+}
+
+.hide {
+    display: none;
+}
+/**
+ * 查询条件 end
+ */
+
+.tools-bar.select-btns-right {
+    float: right;
+    margin: 10px;
+}
+
+.tools-bar.select-btns {
+    float: left;
+    margin: 10px;
+    font-size: 12px;
+    z-index: 10;
+    position: relative;
+}
+
+.tools-bar.select-btns-right .btn-setting{
+    display: none;
+}
+
+/**
+ * 数据列表表格 start
+ */
+.customer-list-table{}
+.table-scroll-box{overflow-x: scroll;}
+.customer-list-table .yqx-table{width:auto;min-width: 100%;}
+.customer-list-table .yqx-table td {text-overflow: ellipsis; overflow: hidden; white-space: nowrap}
+.customer-list-table-inner{border:1px solid #ddd;border-top:none;background: #fff;}
+.customer-list-table .tools-bar{display: none; height: 35px;position: relative;}
+.customer-list-table .tools-bar > a{position: absolute;right:5px;top:10px;}
+.customer-list-table .tools-bar > a >i{margin-left: 6px;}
+.customer-list-table .setting-box{padding: 0 70px 0 6px;background: #fff;border-left:1px solid #ddd;border-right:1px solid #ddd;line-height: 35px;}
+.customer-list-table .setting-box label{float: left;margin-right: 20px;}
+.customer-list-table .setting-box label>input{margin-right: 8px;}
+/**
+ * 数据列表表格 end
+ */
+
+/**
+ * 数据列表卡片 start
+ */
+.customer-list-card .tools-bar {
+    line-height: 35px;
+    padding-left: 8px;
+    height: 10px;
+}
+
+.customer-list-card .tools-bar input {
+    margin-right: 6px;
+}
+
+.customer-list-card i {
+    font-style: normal;
+}
+
+.card-box .card-time {
+    color: #f55d5e;
+}
+
+.customer-list-card .car-check-body {
+    height: 125px;
+}
+/**
+ * 数据列表卡片 end
+ */
+/*颜色 start*/
+.blue {color: #4bc8f4;}
+.orange {color: #fea23f;}
+.green {color: #8db117;}
+/*颜色 end*/
+
+
+
+.pointer{
+    cursor: pointer;
+}
+.tools-bar a.hover{
+    color: #8db117;
+}
+
+.search-input {
+    width: 635px;
+    margin-right: 10px
+}
+.yqx-table>tbody>tr>td, .yqx-table>thead>tr>th, .yqx-table>tr>td, .yqx-table>tr>th{
+    text-align: left;
+}
+.yqx-table>tbody>tr>td.td-center, .yqx-table>thead>tr>th.td-center, .yqx-table>tr>td.td-center, .yqx-table>tr>th.td-center{
+    text-align: center;
+}
+.max-text{
+    max-width: 65px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

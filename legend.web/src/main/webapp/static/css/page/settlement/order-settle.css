@@ -1,0 +1,200 @@
+
+/*------公共group样式 start------*/
+.qxy_group {border: 1px solid #cdcdcd; margin-bottom: 20px; background: #f9f9f9; }
+.group_space{margin-bottom: 30px;}
+.qxy_group_bottom{margin-bottom:35px; }
+.qxy_group .group_head {background: #efefef; height: 38px; border-bottom: 1px solid #cdcdcd; }
+
+.qxy_group .group_head h3 {float: left; height: 38px; line-height: 38px; text-align: center; padding: 0 15px; font-weight: bold; border-right: 1px solid #cdcdcd; margin: 0px; }
+
+/* group标题在中间的样式 */
+.qxy_group .group_head h3.group_title_center{border-right:none; float:none; text-align:center; }
+
+/* 可伸缩group箭头触发样式 */
+.qxy_group_slider .group_head{position: relative; cursor:pointer; }
+.qxy_group_slider .group_head i{display: block; width:20px; height:20px; margin-top:8px; margin-right:10px;float: right; }
+.qxy_group_slider .group_head i.arrow_down{background:url(../../../img/page/settlement/arrow_down.png) no-repeat center; }
+.qxy_group_slider .group_head i.arrow_up{background:url(../../../img/page/settlement/arrow_up.png) no-repeat center; }
+
+/* group标题栏的按钮 */
+.qxy_group .group_head a {float: right; border: 1px solid #CCC; height: 28px; line-height:28px;padding: 0 10px; margin: 5px 10px 0px 0px; font-size: 11px; display: inline-block; color: #666666; cursor: pointer; background: #f7f7f7; border-radius: 3px;/*box-shadow: 0px 0px 2px #ccc;*/}
+.qxy_group .group_head a:hover{color: #000;/*box-shadow: 0px 0px 2px #ccc inset;*/}
+
+.qxy_group .group_head .btn_house {padding-left: 25px; background: #f7f7f7 url("../../../img/page/settlement/bj_house.gif") no-repeat 1px 5px; }
+
+.qxy_group .group_head .btn_man {padding-left: 25px; background: #f7f7f7 url("../../../img/page/settlement/bj_man.gif") no-repeat 1px 5px; }
+
+.qxy_group .group_content {padding: 20px 20px; position: relative; }
+.qxy_group .group_content .group_slide_btn{position: absolute; left: 50%; bottom: -25px; margin-left: -50px; width: 100px; height: 23px; line-height: 23px; text-align: center; border: 1px solid #cdcdcd; border-top-color: #f9f9f9; background: #f9f9f9; color: #cdcdcd; border-radius: 0 0 5px 5px; }
+.qxy_group .group_content .group_slide_btn i{padding: 4px 5px; }
+.qxy_group .group_content .downward i{background: url(../../../img/page/settlement/mj.gif) no-repeat center; }
+.qxy_group .group_content .upward i{background: url(../../../img/page/settlement/mj1.gif) no-repeat center; }
+.qxy_group .group_content_inner{width:100%; }
+/*------公共group样式 end------*/
+.qxy_input {width: 100%; padding-left: 10px; line-height: 38px; height: 38px; border: 1px solid #dadada; border-radius: 5px; background: #fff; box-sizing: border-box; +padding:0;vertical-align: top; }
+.qxy_select{width:100%;height:35px;border:1px solid #dadada;border-radius:5px;background:#fff;margin-right:10px;text-indent:2px;vertical-align:top}
+
+.qxy_form .form_row{opacity: 1;}
+.qxy_form .form_item .field_box{width:auto;}
+.qxy_group .group_head h3{border-right:none;}
+.qxy_form .form_item .w330{width:330px;}
+.qxy_form .form_item .w364{width:364px;}
+.qxy_form .form_item .w235{width:235px;}
+.qxy_form .form_item .w268{width: 268px;}
+.qxy_form .form_item .w838{width:838px;}
+.qxy_form .form_item .w100{width:100px!important;}
+.qxy_form .form_item .w125{width:125px!important;}
+.btn_center{text-align: center;}
+.qxy_form .qxy_line{border-bottom:1px solid #dfdfdf;margin-bottom: 20px;}
+.qxy_form .form_item .label_box {width:85px;}
+.padding85{padding-left: 85px;}
+.margin-left40{margin-left: 40px;}
+.margin-left80{margin-left: 80px;}
+td .qxy_input_downlist{left:-1px;top:38px;}
+
+/*表格公共样式 start*/
+table th.border_left_none,
+table td.border_left_none{border-left:none !important;}
+table th.border_bottom_none,
+table td.border_bottom_none{border-bottom:none !important;}
+table th.border_left_none,
+table td.border_left_none{border-left:none !important;}
+table th.background_none,
+table td.background_none{background:none !important;}
+table th.padding_none,
+table td.padding_none{padding: 0 !important;}
+table th.text_align_center,
+table td.text_align_center{text-align: center !important;}
+/*表格公共样式 end*/
+
+/* div被选中公共样式 start */
+.check_box{}
+.check_box p{float: left;margin-right: 10px;border-radius: 3px;cursor: pointer;background: #eeeeee;border:1px solid #cecece;margin-bottom: 10px;position: relative;}
+.check_box .checked{border:1px solid #89b11a;background-color: #fff;color: #111;}
+.check_box .checked:after{content: "";position: absolute;width: 19px;height:17px;background: url(../../../img/page/settlement/selected.png) no-repeat;right:0;bottom:0;}
+/* div被选中公共样式 end */
+
+/*带单位的input start*/
+.unit_input{float: left;}
+.unit_input input{height:35px;width: 80px;line-height:35px;vertical-align: top;background: #fff;border-radius: 3px 0 0 3px;border:1px solid #c9c9c9;padding: 0 8px;}
+.unit_input input[disabled]{background: #eee;}
+.unit_input span{display: inline-block; height:35px;width:35px;border-radius: 0 3px 3px 0; border:1px solid #c9c9c9;border-left:none;vertical-align: top;background: #fff;line-height: 35px;text-align: center;}
+/*带单位的input end*/
+
+/*弹框公共样式 start*/
+.dialog_title{background: #f5f2e6;text-align: center;height:40px;font-size: 18px;font-weight: 900;line-height: 40px;padding-top: 10px;}
+.dialog_btn .qxy_btn{margin: 30px 10px auto 10px;padding: 10px 60px;}
+/*弹框公共样式 end*/
+
+/*选择车型 start*/
+.qxy_form .car_type_btn{margin:0;margin-left: 10px;}
+
+/*必填字段*/
+.must{font-size: 16px;float: right;margin-right: 5px;color: red;vertical-align: middle;}
+th .must{float: none;height:11px;line-height: 11px;display: inline-block;}
+
+/*面包nav*/
+.mianbao_nav{font-size: 14px;font-weight: 900;padding-left: 15px;}
+.mianbao_nav a{font-weight: 900;}
+
+
+/*工单价目明细表格 start*/
+.qxy_group .group_head{position: relative;}
+.arrow_down{background: url(../../../img/page/settlement/arrow_down.png) center no-repeat;display: block; width: 20px; height: 20px; margin-top: 8px; margin-right: 20px; float: right;}
+.arrow_up{background: url(../../../img/page/settlement/arrow_up.png) center no-repeat;display: block; width: 20px; height: 20px; margin-top: 8px; margin-right: 20px; float: right;}
+.group_line{background: #cdcdcd;height:1px;position: absolute;top:50%;width: 780px;left:145px;border-bottom: 1px solid #fbfbfb;}
+table{width: 100%;}
+table td,table th{vertical-align: middle;text-align: center;}
+table th{height:30px;border-bottom:1px solid #c5c9b8;}
+table td{height:36px;border-left:1px solid #c5c9b8;border-bottom:1px solid #c5c9b8;background: #fff;color: #333;}
+table th.border_right_show,
+table td.border_right_show{border-right:1px solid #c5c9b8;}
+.money_number{font-size: 16px;color: #fc464d;}
+
+.list_money_count{margin-top: 20px;}
+/*工单价目明细表格 end**/
+
+/*工单收款信息 start*/
+.order_pay_info{}
+.order_pay_info .row_label{float: left;width: 70px; margin-right: 25px;height:25px;line-height: 25px;}
+.order_money_count{float: left;height:37px;line-height: 37px;}
+.order_pay_info .row_label{height:37px;line-height: 37px;}
+.coupon_box{float: left;line-height: 37px;}
+.coupon_box .coupon-item{margin-bottom: 10px;}
+.coupon_box .coupon-item:last-child{margin-bottom: 0;}
+.coupon_option .service_name{float: left;display: block;margin: 12px 20px auto 10px;color: #999999;width: 80px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.coupon_option .unit_input{margin:12px 20px auto auto;}
+.coupon_option .unit_input input{width: 90px;}
+.coupon_option .unit_input span{background: #eee;cursor: not-allowed;color: #999;}
+.row_label.zhekou_box,
+.row_label.card_box,
+.row_label.youhui_box{cursor: pointer;}
+.row_label .checkbox{background: url(../../../img/page/settlement/checkbox1.png) no-repeat left center;display: inline-block;width:17px;height:13px;vertical-align: middle;cursor: pointer;}
+.row_label .checkboxed{background: url(../../../img/page/settlement/checkbox2.png) no-repeat left center;display: inline-block;width:17px;height:13px;vertical-align: middle;cursor: pointer;}
+.card_youhui{padding-bottom: 20px;}
+/*--会员卡 start---*/
+.card_info{line-height: 37px;height: 37px;}
+.card_info span{margin-right: 10px;vertical-align:middle;}
+.card_info label{margin-right: 10px;}
+.card_info .fl{float: left;line-height: 37px;height: 37px;margin-right: 6px;}
+/*.card_info input{height:35px;line-height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 80px;padding-left: 0 5px;}*/
+/*--会员卡 end---*/
+/*优惠券选中影响后面数量和金额的样式*/
+.pre_checked .service_name{color: #333;}
+.pre_checked .unit_input span{background: #fff;cursor: default;color: #333;}
+/*实际应收金额*/
+.receive_money{padding-bottom: 10px;}
+.receive_money span{margin-right: 15px;}
+/*付款方式*/
+/*.settle_method .row_label{width: 60px;}*/
+.settle_method{padding-bottom: 20px;}
+.settle_method .method_list{float: left;}
+.settle_method .method_list li{margin-bottom: 10px;}
+.settle_method .method{margin-right: 10px;float: left;}
+.settle_method .method input{ width: 150px;}
+.settle_method .method_option{float: left;}
+/*工单收款信息 end */
+/*隐藏下拉chosen搜索框*/
+.chosen-container-single .chosen-search {display:none;}
+
+.qxy_row {
+    margin-bottom: 10px;
+}
+.mianbao_nav {
+    font-size: 14px;
+    font-weight: 900;
+    padding-left: 15px;
+}
+a.qxy_link {
+    color: #666;
+    text-decoration: none;
+}
+
+/* 优惠卡选择 */
+.coupon-parent.checked {
+    position: relative;
+    line-height: 32px;
+    background: #fff;
+}
+
+.coupon-parent.checked .coupon {
+    border-color: #8eb110;
+}
+
+.coupon-parent.checked:after {
+    display: inline;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 18px;
+    background: url("../../../img/common/order/order-sprite.png") 0 0 no-repeat;
+
+}
+/* 优惠卡选择 end */
+
+.row-text{
+    width: 400px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,146 @@
+.wechat-icons {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat;
+    vertical-align: text-bottom;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+h1.headline , .headline-detail {
+    display: inline-block;
+}
+
+.headline-detail .number {
+    color: #f97a7b;
+    font-weight: bold;
+}
+
+.order-head .help {
+    cursor: pointer;
+    float: right;
+    padding: 0 14px;
+}
+
+.icon-voice {
+    height: 12px;
+    width: 12px;
+    background-position: 0 0;
+}
+
+.wechat-icons.question {
+    height: 15px;
+    width:  15px;
+    background-position: -14px 0;
+}
+
+.search-form .yqx-input {
+    width: 208px;
+    height: 28px;
+    border-color: #bfbfbf;
+}
+.single-tag {
+    display: inline-block;
+}
+
+.single-tag .tag-control.selected {
+    background: #eaf8be;
+}
+
+.img-detail {
+    display: inline-block;
+    width: 85%;
+}
+
+.yqx-table .img-detail h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 38px;
+    padding: 0;
+    line-height: initial;
+    height: initial;
+    background: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.img-detail p {
+    font-size: 12px;
+    color: #666;
+    line-height: 24px;
+}
+
+.img-detail p:last-child {
+    line-height: initial;
+}
+
+i.detail + i.detail {
+    margin-left: 16px;
+}
+
+.btn-del {
+    display: inline;
+    text-decoration: underline;
+    color: #666;
+}
+
+.article-img {
+    height: 70px;
+    width: 70px;
+    border-radius: 1px;
+    vertical-align: text-bottom;
+}
+
+.yqx-table .col-xs-6 {
+    width: 50%;
+    float: none;
+    text-align: left;
+}
+
+.yqx-table tr td:first-child {
+    text-align: left;
+}
+
+.yqx-table .yqx-btn {
+    display: block;
+}
+
+.yqx-table td{
+    overflow: hidden;
+}
+
+.search-form {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    padding: 10px;
+}
+
+#articleForm.search-form .yqx-btn-xs {
+    height: 28px;
+    width: 58px;
+    padding: 0;
+    line-height: 28px;
+    font-size: 12px;
+}
+
+.yqx-btn-xs + .yqx-btn-xs {
+    margin-left: 5px;
+}
+
+.search-btn {
+    margin-left: 10px;
+}
+
+.single-tag .tag-control.selected {
+    border-width: 1px;
+}
+
+.single-tag .tag-control {
+    border-radius: 1px;
+}
+.no-data {
+    font-size: 14px;
+    font-weight: 600;
+    color: #a94442;
+    text-align: center;
+}

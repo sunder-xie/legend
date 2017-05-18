@@ -1,0 +1,126 @@
+.quick-nav {
+    margin-bottom: 10px;
+}
+
+.quick-heading {
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 16px;
+    color: #000;
+}
+
+.car-info {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px 110px 10px 10px;
+}
+
+.info-td {
+    display: table-cell;
+}
+
+.info-text {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.info-text:last-child {
+    margin-bottom: 0;
+}
+/* 表格样式 start */
+.car-consume {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: 0 10px;
+}
+
+table.yqx-table thead tr th {
+    background: #f9f9f9;
+}
+
+.yqx-table caption {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+/* 表格样式 end */
+
+
+/* 备注及按钮 */
+.input-mark {
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.input-mark .form-label {
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.input-mark .form-item {
+    width: 708px;
+    height: 68px;
+}
+
+.input-mark input {
+    height: 100%;
+}
+
+.money-sum {
+    color: #ff7800;
+}
+
+p.pay-line {
+    margin-bottom: 20px;
+}
+
+.form-last-btns {
+    padding-bottom: 20px;
+}
+
+.form-last-btns button {
+    margin-right: 10px;
+}
+
+i {
+    font-style: normal;
+}
+
+#addNew {
+    float: right;
+}
+/* 备注及按钮 end */
+
+/*打印dialog start*/
+.btn_group {
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    background: #232e49;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+}
+.t_middle {
+    text-align: center;
+    padding-top: 20px;
+}
+.link-btn {
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #9fc527;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #333;
+    margin: 10px auto;
+}
+/*打印dialog end*/

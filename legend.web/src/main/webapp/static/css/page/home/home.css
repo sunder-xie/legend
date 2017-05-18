@@ -1,0 +1,872 @@
+i {
+    font-style: normal;
+}
+
+.main .entry > h1 {
+    font-size: 24px;
+    top: -76px;
+}
+
+.main .entry > h3 {
+    font-size: 14px;
+    top: -45px;
+}
+
+.main .entry > h3, .main .entry > h1 {
+    color: #fff;
+    text-align: left;
+    position: absolute;
+}
+
+.new-item > a h3 > i, .product-item > a h3 > i {
+    margin-right: 2px;
+}
+
+.yqx-wrapper {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 160px;
+    background: #f6f7fc;
+}
+
+.main {
+    height: 502px;
+    background: url("../../../img/page/home/home-back.png");
+    text-align: center;
+}
+
+.circle-1 {
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    border: 2px solid #dcead1;
+    position: relative;
+}
+
+.circle-2 {
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    border: 3px solid #cfe1f0;
+    position: relative;
+}
+
+h3.ellipsis-1, p.ellipsis-1 {
+    height: initial;
+    line-height: initial;
+}
+
+.entry, .info-container {
+    width: 1004px;
+    margin: 0 auto;
+}
+
+.entry {
+    margin: 107px 0 67px 0;
+    position: relative;
+}
+
+.entry > div, .circle-1, .circle-2, .entry, .entry-item {
+    display: inline-block;
+}
+
+.entry .entry-item .entry-enter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.entry .entry-item .entry-enter:after {
+    content: '—';
+    display: block;
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #86b4d9;
+}
+
+.entry .entry-item {
+    opacity: .9;
+    height: 158px;
+    width: 159px;
+    border-radius: 1px;
+    vertical-align: top;
+    padding: 25px 0 22px 0;
+    float: left;
+    margin: 0 0 10px 10px;
+    -webkit-transition: all;
+    transition: all;
+    -webkit-transition-duration: .6s;
+    transition-duration: .6s;
+    cursor: pointer;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.see-more-wrapper .entry-item {
+    background: transparent;
+    opacity: 1;
+    margin: 0 10px 10px 0;
+}
+
+.entry > .entry-item:hover {
+    opacity: 1;
+}
+
+.entry-item.app:hover .app-qrcode, .tq-entry .qrcode-wrapper:hover .app-qrcode,
+.entry-item.subscription:hover .app-qrcode, .entry-item:hover .app-qrcode {
+    display: block;
+}
+
+.entry-item.subscription {
+    position: relative;
+    z-index: 1;
+}
+
+/* 入口背景  start */
+.shop-manage {
+    background: #0f6bb4;
+}
+
+.main-item:hover .circle-2 .icon, .entry-item:hover > .circle-1 > .transform-box > .icon {
+    -webkit-animation: turn 1s;
+    animation: turn 1s;
+}
+
+.entry-item:hover .circle-2, .entry-item:hover > .circle-1 {
+    -webkit-animation: border 1s;
+    animation: border 1s;
+}
+
+.wechat {
+    background: #4e9216;
+}
+
+.marketing {
+    background: #70468d;
+}
+
+.service {
+    background: #d8a033;
+}
+
+.app {
+    position: relative;
+}
+
+.subscription {
+    background: #d59c2f;
+}
+
+.app, .activity-1 {
+    background: #ce7c46;
+}
+
+.report {
+    background: #a43957;
+}
+
+.tech, .epc {
+    background: #258e96;
+}
+
+.tqmall, .activity, .app-1, .insurance {
+    background: #d69d30;
+}
+
+.help-center {
+    background: #086cb9;
+}
+
+.setting, .subscription-1 {
+    background: #266b95;
+}
+
+.see-more {
+    background: #086cb9;
+    z-index: 1;
+}
+
+.see-more-wrapper {
+    background: #039ce4;
+    opacity: .9;
+}
+
+.see-more-wrapper:hover {
+    opacity: 1;
+}
+
+/* 入口背景  end */
+.see-more-wrapper {
+    position: absolute;
+    width: 1004px;
+    top: 338px;
+    right: 0;
+    z-index: 1;
+}
+
+.tq-entry .shop-manage {
+    position: relative;
+    z-index: 1;
+}
+
+.entry-item.main-item {
+    height: 328px;
+    width: 328px;
+    padding: 30px 0 16px 0;
+    border-radius: 1px;
+    margin: 0;
+}
+
+/* 入口字体设置 start */
+.entry h2 {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    margin: 16px 0 9px 0;
+}
+
+.entry h3, .entry p {
+    font-size: 12px;
+}
+
+.entry h2, .entry h3, .entry p {
+    text-align: center;
+    color: #fff;
+}
+
+/* 入口字体设置 end */
+
+/* 入口图标 start*/
+.entry .icon {
+    background: url("../../../img/page/home/entry/entry-icons.png") no-repeat;
+}
+
+.entry .transform-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.entry .shop-manage .transform-box {
+    margin-left: 1px;
+}
+
+.main-item.shop-manage .icon {
+    width: 80px;
+    height: 68px;
+    background-position: -76px 0;
+}
+
+.main-item.wechat .icon {
+    width: 74px;
+    height: 62px;
+    background-position: 0 0;
+}
+
+.shop-manage .icon {
+    width: 42.5px;
+    height: 34px;
+    background-position: 0 -62px;
+}
+
+.tqmall .icon {
+    width: 49px;
+    height: 20px;
+    background-position: 0 -98px;
+}
+
+.report .icon {
+    width: 38px;
+    height: 25px;
+    background-position: 0 -118px;
+}
+
+.wechat .icon {
+    width: 39px;
+    height: 34px;
+    margin-left: 2px;
+    background-position: -50px -62px;
+}
+
+.setting .icon {
+    width: 32px;
+    height: 32px;
+    background-position: 0 -236px;
+}
+
+.marketing .icon {
+    height: 26px;
+    width: 33px;
+    background-position: 0 -145px;
+}
+
+.activity .icon, .activity-1 .icon {
+    height: 36px;
+    width: 34px;
+    background-position: 0 -202px;
+    margin-right: 2px;
+}
+
+.tech .icon {
+    height: 31px;
+    width: 33px;
+    background-position: 0 -170px;
+}
+
+.service .icon {
+    margin-top: 5px;
+    height: 32px;
+    width: 37px;
+    background-position: -49px -98px;
+}
+
+.app .icon, .app-1 .icon {
+    height: 36px;
+    width: 24.5px;
+    background-position: -49px -131px;
+}
+
+.insurance .icon {
+    height: 30px;
+    width: 42px;
+    background-position: -98px -69px;
+}
+
+.subscription .icon, .subscription-1 .icon, .yx-center .icon {
+    height: 32px;
+    width: 33px;
+    background-position: -48px -166px;
+}
+
+.help-center .icon {
+    height: 32px;
+    width: 33px;
+    background-position: 0 -268px;
+}
+
+.see-more .icon {
+    width: 36px;
+    height: 8px;
+    background-position: -50px -201px;
+}
+
+.epc .icon {
+    width: 33px;
+    height: 34px;
+    background-position: -50px -213px;
+}
+
+/* 入口图标 end*/
+
+.main-item h2 {
+    font-size: 16px;
+    margin: 24px 0 20px 0;
+}
+
+.main-item h3 {
+    margin-bottom: 8px;
+}
+
+.entry-data-box {
+    text-align: center;
+    margin-top: 34px;
+}
+
+.entry-data-box > div {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+}
+
+.entry-data-box p {
+    opacity: .8;
+}
+
+.entry-data-box .has-line:after {
+    height: 15px;
+    border-color: #81ad64;
+    right: -31px;
+}
+
+.entry-data-box div + div {
+    margin-left: 70px;
+}
+
+.entry-data-box h4 {
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.wechat.main-item h2 {
+    margin-bottom: 10px;
+}
+
+/* app 二维码 */
+.tq-entry .shop-manage .app-qrcode {
+    padding: 0;
+    top: 33px;
+    background: transparent;
+}
+
+.tq-entry .shop-manage .app-qrcode .angle-bottom {
+    border-width: 7px;
+    top: -14px;
+}
+
+.app-qrcode {
+    display: none;
+    top: 97%;
+    padding: 2px;
+    border-radius: 1px;
+    background: #fff;
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app-qrcode img {
+    width: 118px;
+    height: 118px;
+}
+
+.app-qrcode, .angle {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.angle-bottom {
+    top: -28px;
+    border: 14px solid transparent;
+    border-bottom-color: #fff;
+}
+
+/* app 二维码 end */
+.info-container .news, .info-container .products {
+    height: 323px;
+    position: relative;
+}
+
+.info-container a.more {
+    color: #00a0ea;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    left: 15px;
+    bottom: -12px;
+}
+
+.info-container h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.info-container a {
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.info-container .new-item a {
+    margin-bottom: 14px;
+}
+
+.info-container a:before {
+    background: #c9c9c9;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    position: absolute;
+    left: -14px;
+    display: block;
+    content: '';
+}
+
+.new-item a:before {
+    top: 7.5px;
+}
+
+.product-item a:before {
+    top: 9.3px;
+}
+
+a.more:before, .product-main > a:before {
+    content: none;
+}
+
+.info-container h3 {
+    font-size: 14px;
+    color: #333;
+    width: 293px;
+}
+
+.info-container h3:hover, .info-container h3:hover i, a.more:hover {
+    color: #0084ea
+}
+
+.info-container h3 i {
+    color: #666;
+}
+
+.info-container > div, .new-item {
+    display: inline-block;
+}
+
+.info-container p {
+    margin-bottom: 13px;
+    line-height: 23px;
+}
+
+.news-group {
+    padding-left: 15px;
+    width: 665px;
+}
+
+.new-item {
+    margin-bottom: 16px;
+    margin-right: 27px;
+    width: 293px;
+    vertical-align: top;
+}
+
+.new-item p {
+    height: 67px;
+    overflow: hidden;
+}
+
+.info-container .products {
+    width: 328px;
+}
+
+.product-main {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.product-main .main-img {
+    height: 100px;
+    width: 328px;
+}
+
+.product-main h3 {
+    color: #fff;
+    font-size: 16px;
+    font-family: "Microsoft YaHei", Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.product-text {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff;
+    left: 15px;
+}
+
+.product-main p {
+    line-height: initial;
+    margin: 0;
+}
+
+.product-item {
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
+/* banner start */
+.banner-view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3008px;
+    height: 154px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 1;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+
+.banner-view a {
+    display: inline-block;
+    float: left;
+}
+
+.banner {
+    width: 1004px;
+    margin: 0 auto;
+    height: 154px;
+    overflow: hidden;
+    margin-top: 52px;
+    margin-bottom: 102px;
+    position: relative;
+}
+
+.pointer-box {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.pointer {
+    height: 6px;
+    width: 20px;
+    float: left;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    background: #8099a8;
+}
+
+.pointer + .pointer {
+    margin-left: 8px;
+}
+
+.pointer.pointer-current {
+    background: #fff;
+}
+
+/* banner end */
+
+/* 亮点 start */
+.advantage-container {
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    background: #ffffff;
+    margin-top: 62px;
+}
+
+.advantage-container h2, h3 {
+    color: #333;
+}
+
+.advantage-container > h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.advantage-container > h3 {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.advantage-container p {
+    color: #666;
+}
+
+.advantages-group, .advantage-item {
+    display: inline-block;
+}
+
+.advantage-item + .advantage-item {
+    margin-left: 96px;
+}
+
+.advantage-item.reward-1 {
+    margin-left: 110px;
+}
+
+.advantage-item h2 {
+    font-size: 16px;
+    font-family: "Microsoft YaHei", Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    font-size: 12px;
+}
+
+.advantage-item .icon {
+    height: 50px;
+    background: url("../../../img/page/home/advantage-icons.png") no-repeat;
+    margin: 0 auto;
+}
+
+.advantage-item.tech-1 .icon {
+    width: 53px;
+    background-position: 0 0;
+}
+
+.advantage-item.marketing-1 .icon {
+    width: 47px;
+    background-position: -54px 0;
+}
+
+.advantage-item.reward-1 .icon {
+    width: 51px;
+    background-position: -103px 0;
+}
+
+.advantage-item.crm-1 .icon {
+    width: 50px;
+    background-position: -157px 0;
+}
+
+.advantage-item.wechat-1 .icon {
+    width: 51px;
+    background-position: -209px 0;
+}
+
+/* 亮点 end */
+
+/* 动画 */
+@-webkit-keyframes turn {
+    to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes turn {
+    to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes border {
+    0% {
+        border-color: #cfe1f0;
+    }
+    50% {
+        opacity: .2;
+    }
+    100% {
+        border-color: #cfe1f0;
+    }
+}
+
+@keyframes border {
+    0% {
+        border-color: #cfe1f0;
+    }
+    50% {
+        opacity: .2;
+    }
+    100% {
+        border-color: #cfe1f0;
+    }
+}
+
+/* 动画 end */
+.hide {
+    display: none !important;
+}
+
+.guide-back {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    background: #000;
+    z-index: 2;
+}
+
+.home-guide-1 {
+    position: absolute;
+    top: -15px;
+    left: -12px;
+    z-index: 3;
+}
+
+.guide-confirm {
+    position: absolute;
+    right: 95px;
+    bottom: 110px;
+    width: 130px;
+    height: 40px;
+    z-index: 3;
+}
+
+/* 门店管理 二维码 悬浮 start */
+.qrcode-wrapper {
+    position: absolute;
+    padding: 5px;
+    border-radius: 1px;
+    background: #086cb9;
+    top: -3px;
+    right: 11px;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.qrcode-wrapper .icon {
+    width: 15px;
+    height: 15px;
+    background-position: -138px -274px;
+}
+
+/* 门店管理 二维码 悬浮 end */
+.has-line:after {
+    border: 1px solid #86d2f5;
+    position: absolute;
+    height: 20px;
+    right: -6px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    content: ''
+}
+
+.has-line {
+    position: relative;
+}
+
+.see-more-wrapper .angle-bottom {
+    border-bottom-color: #019ae2;
+    border-width: 6px;
+    top: -12px;
+    right: 75px;
+    position: absolute;
+}
+
+.see-more-wrapper .yx-center .angle-bottom {
+    top: -28px;
+    border: 14px solid transparent;
+    border-bottom-color: #fff;
+}
+
+.hover-item:hover {
+    opacity: .6;
+}
+
+.yqx-header .business-entry li:hover .be-circle {
+    background: #00a0ea;
+}
+
+.yqx-header .business-entry li:hover > a {
+    color: #00a0ea;
+}
+
+/* 热门推荐 */
+.hot-tag {
+    position: relative;
+}
+
+.hot-tag:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -30px;
+    z-index: 3;
+    width: 49px;
+    height: 23px;
+    background: url(../../../img/page/home/entry/entry-icons.png) -87px -273px no-repeat;
+}

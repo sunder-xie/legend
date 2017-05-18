@@ -1,0 +1,84 @@
+/*渐隐*/
+
+/*.luara-{position:relative;padding:0;overflow: hidden;}
+.luara- ul{padding: inherit;margin: 0;}
+.luara- ul li{display: none;padding: inherit;margin: inherit;list-style: none;}
+.luara- ul li:first-child{display:block;}
+.luara- ul li img{width: inherit;height: inherit;}
+/*左滑*/
+/*.luara-left{position:relative;padding:0;overflow: hidden;}
+.luara-left ul{position: relative;padding: inherit;margin: 0;}
+.luara-left ul li{float: left;padding: inherit;margin: inherit;list-style: none;}
+.luara-left ul li img{width: inherit;height: inherit;}
+/*上滑*/
+/*.luara-top{position:relative;padding:0;overflow: hidden;}
+.luara-top ul{position: relative;padding: inherit;margin: 0;}
+.luara-top ul li{padding: inherit;margin: inherit;list-style: none;}
+.luara-top ul li img{width: inherit;height: inherit;}
+
+*/
+
+
+.banner{height: 150px;position: relative;}
+.banner .img_hide{display: none;}
+.banner ul li{position: absolute;}
+
+.banner ol{position:absolute;height: 20px;bottom:5px;right:10px;}
+.banner ol li{float:left;width: 10px;height: 10px;margin: 5px;background: #fff;border-radius: 10px;cursor: pointer;}
+.banner ol li.point_current{background: #1AA4CA;}
+
+
+.gd_tab {
+    height: 45px;
+    margin: 0 0 20px 0;
+    background-color: #d7d7d7;
+}
+
+.gd_tab li.item {
+    float: left;
+    position: relative;
+    width: 125px;
+    height: 45px;
+    text-align: center;
+}
+
+.gd_tab li.item a {
+    position: absolute;
+    display: block;
+    width: 125px;
+    height: 45px;
+    line-height: 45px;
+    color: #535353;
+    left: 0;
+    top: 0;
+}
+
+.gd_tab li.item a:hover, .gd_tab li.item .current{
+    color: #ffffff;
+    background: url("../../images/t1.gif") no-repeat;
+    height: 49px;
+}
+
+.gd_tab li.statisticsItem {
+    float: left;
+    position: relative;
+    width: 98px;
+    height: 45px;
+    text-align: center;
+}
+
+.gd_tab li.statisticsItem a {
+    position: absolute;
+    display: block;
+    width: 98px;
+    height: 49px;
+    line-height: 45px;
+    color: #535353;
+    left: 0;
+    top: 0;
+}
+
+.gd_tab li.statisticsItem a:hover, .gd_tab li.statisticsItem .current {
+    color: #ffffff;
+    background: url("../../images/t1.gif") no-repeat;
+}

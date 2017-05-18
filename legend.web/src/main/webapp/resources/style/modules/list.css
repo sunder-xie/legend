@@ -1,0 +1,228 @@
+
+/*-----公共卡片样式 start-------*/
+.qxy_data_card {
+	margin: 0 auto;
+}
+
+.qxy_data_card .card_box {
+	position: relative;
+	float: left;
+	margin: 10px 5px;
+	width: 316px;
+	height: 155px;
+}
+.qxy_data_card .card_tuijian:after{
+	content: "";
+	position: absolute;
+	top: 0; 
+	right:-2px;
+	width: 39px;
+	height: 39px;
+	background: url(img/common/tuijian.png) no-repeat center;
+	z-index: 11;
+}
+
+.qxy_data_card .card_box .card_inner {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+}
+
+.qxy_data_card .card_box .card_inner_box {
+	position: relative;
+	background: #f9f9f9;
+	border: 1px solid #cdcdcd;
+	width: 100%;
+}
+
+.qxy_data_card .card_box .card_inner_box:hover {
+	border: 1px solid red;
+}
+
+.qxy_data_card .card_box .data_del {
+	position: absolute;
+	bottom: 10px;
+	right: 5px;
+	display: none;
+	color: #e50206;
+}
+
+.qxy_data_card .card_box:hover .data_del {
+	display: block;
+}
+
+.qxy_data_card .card_box .card_item1 {
+	border-bottom: 1px dotted #aebdc8;
+	padding: 15px 0;
+	cursor: pointer;
+}
+
+.qxy_data_card .card_box .card_item1 div.img_box {
+	float: left;
+	width: 40%;
+}
+
+.qxy_data_card .card_box .card_item1 div.img_box * {
+	margin-left: 15px;
+	height: 80px;
+}
+
+.qxy_data_card .card_box .card_item1 dl {
+	float: left;
+	width: 60%;
+}
+
+.qxy_data_card .card_box .card_item1 dl dd, .qxy_data_card .card_box .card_item1 dl dt{
+	padding-right: 10px;
+	/* white-space: nowrap; *//* 暂时注释配件资料列表是需要换行的150416 */
+	overflow:hidden;
+}
+
+.qxy_data_card .card_box .card_item1 dl dt {
+	height: 42px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.qxy_data_card .card_box .card_item1 dl dt a {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.qxy_data_card .card_box .card_item1 dl dd {
+	line-height: 20px;
+	font-family: "宋体";
+}
+
+.qxy_data_card .card_box .card_item2 {
+	height: 32px;
+	padding: 10px 15px 0 15px;
+	white-space: nowrap;
+	font-size: 12px;
+	color: #e50206;
+	font-weight: bold;
+}
+
+.qxy_data_card .card_box .card_item2 .text2 {
+	font-size: 16px;
+	color: #e50206;
+}
+
+.qxy_data_card .card_box .card_item_append {
+	border-bottom: 1px dotted #aebdc8;
+	padding: 10px 0;
+	background: #fff;
+}
+
+.qxy_data_card .card_box .card_item_append div.img_box {
+	float: left;
+	width: 40%;
+}
+
+.qxy_data_card .card_box .card_item_append div.img_box img {
+	width: 80px;
+	height: 80px;
+	margin-left: 15px;
+}
+
+.qxy_data_card .card_box .card_item_append dl {
+	float: left;
+	width: 60%;
+	margin-top: 10px;
+}
+
+.qxy_data_card .card_box .card_item_append dd {
+	line-height: 20px;
+	font-family: "宋体";
+}
+
+/*卡片结构：一行两列内容 */
+.qxy_data_card2 .card_box .card_item1 {
+	padding: 15px 0;
+	height: 125px;
+	border-bottom: none;
+}
+
+.qxy_data_card2 .card_box .card_item1 dl dt {
+	height: 19px;
+}
+
+/*卡片结构：两行两列内容，第二行通列（删除在右下角，价格字体24px）默认卡片父容器980px*/
+.qxy_data_card3 .card_box .card_item2 .text2 {
+	font-size: 24px;
+	color: #e50206;
+}
+
+.qxy_data_card3 .card_box .card_item2 .text3 {
+	font-size: 12px;
+	color: #666;
+	font-weight: normal;
+}
+
+.qxy_data_card3 .card_box .data_del {
+	/*top: auto;*/
+	bottom: 10px;
+}
+
+/*整行卡片结构 */
+
+/* 服务资料右上角类别图标 start*/
+.tag-rt {
+    position: absolute;
+    top: -9px;
+    right: 4px;
+    padding: 7px 10px;
+    font-size: 12px;
+    color: #fff;
+    background: #ff6000;
+}
+
+.tag-rt i { 
+    position: absolute;
+    right: -5px;
+    top: 0;
+    display: block;
+    width: 5px;
+    height: 9px;
+    background: url(../img/common/tag_part.png) no-repeat;
+}
+
+.tag-rt-bzfw {
+	position: absolute;
+	top: -9px;
+	right: 4px;
+	padding: 7px 10px;
+	font-size: 12px;
+	color: #fff;
+	background: #3b9712;
+}
+.tag-rt-bzfw i {
+	position: absolute;
+	right: -5px;
+	top: 0;
+	display: block;
+	width: 5px;
+	height: 9px;
+	background: url(../img/common/tag_part_bzfw.png) no-repeat;
+}
+.tag-rt-czfw {
+	position: absolute;
+	top: -9px;
+	right: 4px;
+	padding: 7px 10px;
+	font-size: 12px;
+	color: #fff;
+	background: #33a9fb;
+}
+.tag-rt-czfw i {
+	position: absolute;
+	right: -5px;
+	top: 0;
+	display: block;
+	width: 5px;
+	height: 9px;
+	background: url(../img/common/tag_part_czfw.png) no-repeat;
+}
+/* 服务资料右上角类别图标 end*/
+/*------公共卡片样式 end-------*/
+

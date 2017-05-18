@@ -1,0 +1,129 @@
+/**
+ * hyx 2016-04-20
+ * 洗车单详情页
+ */
+body{
+    overflow:scroll;
+}
+.quick-heading{
+    color: #333;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.quick-heading span{
+    font-weight:bold;
+}
+.order-content{
+    position: relative;
+    overflow: hidden;
+    background:#f9f9f9;
+    border:1px solid #cdcdcd;
+    padding:18px 10px 15px;
+    margin-top: 15px;
+}
+
+.info-list .info-list-2 {
+    width: 48%;
+    display: inline-block;
+}
+
+.info-list .info-list-3 {
+    width: 33.3%;
+    display: inline-block;
+}
+
+.info-list .info-list-6 {
+    width: 66.6%;
+    display: inline-block;
+}
+
+/*车辆信息*/
+.car-info{
+    border-bottom: 1px solid #dcdcdc;
+    position:relative;
+}
+.info-list{
+    color: #333;
+    font-size:12px;
+}
+.info-list .ellipsis-1 {
+    height: 36px;
+    line-height: 36px;
+}
+/*第一行字体变粗*/
+.num>.form-label,.num>.form-item>.yqx-text>span{
+    font-weight: 800;
+}
+
+.info-list .margin-left-2 {
+    margin-left: 23px;
+}
+
+.info-list .margin-left-3 {
+    margin-left: 10px;
+}
+
+
+.info-list>li{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 6px 0;
+    width: 100%;
+}
+
+.info-list li.postscript .yqx-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*图片样式*/
+.car-img{
+    width: 120px;
+    height: 120px;
+    margin:5px 0 15px;
+}
+.form-btns{
+    padding: 15px 0 5px;
+}
+.form-btns>button{
+    margin-right: 10px;
+}
+/*继续开单button*/
+#addNew{
+    float:right;
+    margin-right:0;
+
+}
+/*状态图片转换*/
+/*button样式*/
+.btn-left{
+    float:left;
+}
+.btn-right{
+    float:right;
+}
+
+.form-item .detail-company{
+    max-width: 380px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.postscript .detail-content{
+    width: 650px;
+}
+.info-list .car-text-width{
+    width: 140px;
+}
+.order-bold{
+    font-weight: bold;
+}
+
+.money-sum {
+    color: #ff7800;
+    font-style: normal;
+}
+.max-width{ max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.bz-maxwidth{ max-width: 650px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}

@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.warehousein.WarehouseInDao">
+
+    <resultMap id="BaseResultMap" type="WarehouseIn" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="supplier_id" property="supplierId"/>
+        <result column="supplier_name" property="supplierName"/>
+        <result column="warehouse_in_sn" property="warehouseInSn"/>
+        <result column="purchase_sn" property="purchaseSn"/>
+        <result column="purchase_agent" property="purchaseAgent"/>
+        <result column="purchase_agent_name" property="purchaseAgentName"/>
+        <result column="in_time" property="inTime"/>
+        <result column="goods_amount" property="goodsAmount"/>
+        <result column="tax" property="tax"/>
+        <result column="freight" property="freight"/>
+        <result column="total_amount" property="totalAmount"/>
+        <result column="invoice_type" property="invoiceType"/>
+        <result column="invoice_type_name" property="invoiceTypeName"/>
+        <result column="status" property="status"/>
+        <result column="comment" property="comment"/>
+        <result column="amount_payable" property="amountPayable"/>
+        <result column="amount_paid" property="amountPaid"/>
+        <result column="depot" property="depot"/>
+        <result column="payment_status" property="paymentStatus"/>
+        <result column="payment_comment" property="paymentComment"/>
+        <result column="payment_mode" property="paymentMode"/>
+        <result column="first_pay_time" property="firstPayTime"/>
+        <result column="latest_pay_time" property="latestPayTime"/>
+        <result column="contact" property="contact"/>
+        <result column="contact_mobile" property="contactMobile"/>
+        <result column="rel_id" property="relId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        supplier_id as supplierId,
+        supplier_name as supplierName,
+        warehouse_in_sn as warehouseInSn,
+        rel_id as relId,
+        purchase_sn as purchaseSn,
+        purchase_agent as purchaseAgent,
+        purchase_agent_name as purchaseAgentName,
+        in_time as inTime,
+        goods_amount as goodsAmount,
+        tax as tax,
+        freight as freight,
+        total_amount as totalAmount,
+        invoice_type as invoiceType,
+        invoice_type_name as invoiceTypeName,
+        comment as comment,
+        depot as depot,
+        status as status,
+        amount_paid as amountPaid,
+        amount_payable as amountPayable,
+        depot as depot,
+        payment_status as paymentStatus,
+        payment_comment as paymentComment,
+        payment_mode as paymentMode,
+        first_pay_time as firstPayTime,
+        latest_pay_time as latestPayTime,
+        contact as contact,
+        contact_mobile as contactMobile
+    </sql>
+
+    <sql id="excelList">
+        a.gmt_create as gmtCreate,
+        a.supplier_id as supplierId,
+        a.supplier_name as supplierName,
+        a.warehouse_in_sn as warehouseInSn,
+        a.total_amount as totalAmount,
+        a.amount_paid as amountPaid,
+        a.amount_payable as amountPayable,
+        a.comment as comment
+    </sql>
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="id != null">
+                    and id = #{id}
+                </if>
+                <if test="ids !=null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="isDeleted != null">
+                    and is_deleted = #{isDeleted}
+                </if>
+                <if test="isDeleted == null">
+                    and is_deleted = 'N'
+                </if>
+                <if test="gmtCreate != null">
+                    <![CDATA[
+                      and gmt_create >= #{createStart}
+                      and gmt_create < #{createEnd}
+                    ]]>
+                </if>
+                <if test="creator != null">
+                    and creator = #{creator}
+                </if>
+                <if test="gmtModified != null">
+                    and gmt_modified = #{gmtModified}
+                </if>
+                <if test="modifier != null">
+                    and modifier = #{modifier}
+                </if>
+                <if test="supplierId != null">
+                    and supplier_id = #{supplierId}
+                </if>
+                <if test="supplierName != null">
+                    and supplier_name = #{supplierName}
+                </if>
+                <if test="warehouseInSn != null">
+                    and warehouse_in_sn = #{warehouseInSn}
+                </if>
+                <if test="relId != null">
+                    and rel_id = #{relId}
+                </if>
+                <if test="warehouseInSnList !=null">
+                    and warehouse_in_sn in
+                    (
+                    <foreach collection="warehouseInSnList" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="purchaseSn != null">
+                    and purchase_sn = #{purchaseSn}
+                </if>
+                <if test="purchaseAgent != null">
+                    and purchase_agent = #{purchaseAgent}
+                </if>
+                <if test="purchaseAgentName != null">
+                    and purchase_agent_name = #{purchaseAgentName}
+                </if>
+                <if test="inTime != null">
+                    and in_time = #{inTime}
+                </if>
+                <if test="goodsAmount != null">
+                    and goods_amount = #{goodsAmount}
+                </if>
+                <if test="tax != null">
+                    and tax = #{tax}
+                </if>
+                <if test="freight != null">
+                    and freight = #{freight}
+                </if>
+                <if test="totalAmount != null">
+                    and total_amount = #{totalAmount}
+                </if>
+                <if test="invoiceType != null">
+                    and invoice_type = #{invoiceType}
+                </if>
+                <if test="invoiceTypeName != null">
+                    and invoice_type_name = #{invoiceTypeName}
+                </if>
+                <if test="status != null">
+                    and status = #{status}
+                </if>
+                <if test="statusList !=null">
+                    and status in
+                    (
+                    <foreach collection="statusList" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="paymentStatus != null">
+                    and payment_status = #{paymentStatus}
+                </if>
+                <if test="paymentStatusList !=null">
+                    and payment_status in
+                    (
+                    <foreach collection="paymentStatusList" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="orderTag != null">
+                    and order_tag = #{orderTag}
+                </if>
+                <if test="paymentComment != null">
+                    and payment_comment = #{paymentComment}
+                </if>
+                <if test="firstPayTime != null">
+                    and first_pay_time = #{firstPayTime}
+                </if>
+                <if test="latestPayTime != null">
+                    and latest_pay_time = #{latestPayTime}
+                </if>
+                <if test="contact != null">
+                    and contact = #{contact}
+                </if>
+                <if test="contactMobile != null">
+                    and contact_mobile = #{contactMobile}
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+              and gmt_create > #{startTime}
+            ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+              and gmt_create < #{endTime}
+            ]]>
+                </if>
+                <if test="supplierIds != null">
+                    and supplier_id in (
+                    <foreach collection="supplierIds" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="warehouseInSns != null">
+                    and warehouse_in_sn in (
+                    <foreach collection="warehouseInSns" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="startInTime != null">
+                    <![CDATA[
+                      and in_time >= #{startInTime}
+                    ]]>
+                </if>
+                <if test="endInTime != null">
+                    <![CDATA[
+                      and in_time <= #{endInTime}
+                    ]]>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim prefixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="status != null">
+                    status = #{status},
+                </if>
+                <if test="supplierId != null">
+                    supplier_id = #{supplierId},
+                </if>
+                <if test="supplierName != null">
+                    supplier_name = #{supplierName},
+                </if>
+                <if test="warehouseInSn != null">
+                    warehouse_in_sn = #{warehouseInSn},
+                </if>
+                <if test="relId != null">
+                    rel_id = #{relId}
+                </if>
+                <if test="purchaseSn != null">
+                    purchase_sn = #{purchaseSn},
+                </if>
+                <if test="purchaseAgent != null">
+                    purchase_agent = #{purchaseAgent},
+                </if>
+                <if test="purchaseAgentName != null">
+                    purchase_agent_name = #{purchaseAgentName},
+                </if>
+                <if test="inTime != null">
+                    in_time = #{inTime},
+                </if>
+                <if test="goodsAmount != null">
+                    goods_amount = #{goodsAmount},
+                </if>
+                <if test="tax != null">
+                    tax = #{tax},
+                </if>
+                <if test="freight != null">
+                    freight = #{freight},
+                </if>
+                <if test="totalAmount != null">
+                    total_amount = #{totalAmount},
+                </if>
+                <if test="amountPaid != null">
+                    amount_paid = #{amountPaid},
+                </if>
+                <if test="amountPayable != null">
+                    amount_payable = #{amountPayable},
+                </if>
+                <if test="invoiceType != null">
+                    invoice_type = #{invoiceType},
+                </if>
+                <if test="invoiceTypeName != null">
+                    invoice_type_name = #{invoiceTypeName},
+                </if>
+                <if test="paymentStatus != null">
+                    payment_status = #{paymentStatus},
+                </if>
+                <if test="paymentComment != null">
+                    payment_comment = #{paymentComment},
+                </if>
+                <if test="comment != null">
+                    comment = #{comment},
+                </if>
+                <if test="firstPayTime != null">
+                    first_pay_time = #{firstPayTime},
+                </if>
+                <if test="latestPayTime != null">
+                    latest_pay_time = #{latestPayTime},
+                </if>
+                <if test="contact != null">
+                    contact = #{contact},
+                </if>
+                <if test="contactMobile != null">
+                    contact_mobile = #{contactMobile},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_warehouse_in
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_in
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_in
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_in
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_warehouse_in
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_warehouse_in
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_warehouse_in
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_warehouse_in (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="supplierId != null">
+                supplier_id,
+            </if>
+            <if test="supplierName != null">
+                supplier_name,
+            </if>
+            <if test="warehouseInSn != null">
+                warehouse_in_sn,
+            </if>
+            <if test="relId != null">
+                rel_id,
+            </if>
+            <if test="purchaseSn != null">
+                purchase_sn,
+            </if>
+            <if test="purchaseAgent != null">
+                purchase_agent,
+            </if>
+            <if test="purchaseAgentName != null">
+                purchase_agent_name,
+            </if>
+            <if test="inTime != null">
+                in_time,
+            </if>
+            <if test="goodsAmount != null">
+                goods_amount,
+            </if>
+            <if test="tax != null">
+                tax,
+            </if>
+            <if test="freight != null">
+                freight,
+            </if>
+            <if test="totalAmount != null">
+                total_amount,
+            </if>
+            <if test="invoiceType != null">
+                invoice_type,
+            </if>
+            <if test="invoiceTypeName != null">
+                invoice_type_name,
+            </if>
+            <if test="comment != null">
+                comment,
+            </if>
+            <if test="depot != null">
+                depot,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="paymentStatus != null">
+                payment_status,
+            </if>
+            <if test="paymentMode != null">
+                payment_mode,
+            </if>
+            <if test="amountPaid != null">
+                amount_paid,
+            </if>
+            <if test="amountPayable != null">
+                amount_payable,
+            </if>
+            <if test="paymentComment != null">
+                payment_comment,
+            </if>
+            <if test="firstPayTime != null">
+                first_pay_time,
+            </if>
+            <if test="latestPayTime != null">
+                latest_pay_time,
+            </if>
+            <if test="contact != null">
+                contact,
+            </if>
+            <if test="contactMobile != null">
+                contact_mobile,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="supplierId != null">
+                #{supplierId},
+            </if>
+            <if test="supplierName != null">
+                #{supplierName},
+            </if>
+            <if test="warehouseInSn != null">
+                #{warehouseInSn},
+            </if>
+            <if test="relId != null">
+                #{relId},
+            </if>
+            <if test="purchaseSn != null">
+                #{purchaseSn},
+            </if>
+            <if test="purchaseAgent != null">
+                #{purchaseAgent},
+            </if>
+            <if test="purchaseAgentName != null">
+                #{purchaseAgentName},
+            </if>
+            <if test="inTime != null">
+                #{inTime},
+            </if>
+            <if test="goodsAmount != null">
+                #{goodsAmount},
+            </if>
+            <if test="tax != null">
+                #{tax},
+            </if>
+            <if test="freight != null">
+                #{freight},
+            </if>
+            <if test="totalAmount != null">
+                #{totalAmount},
+            </if>
+            <if test="invoiceType != null">
+                #{invoiceType},
+            </if>
+            <if test="invoiceTypeName != null">
+                #{invoiceTypeName},
+            </if>
+            <if test="comment != null">
+                #{comment},
+            </if>
+            <if test="depot != null">
+                #{depot},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="paymentStatus != null">
+                #{paymentStatus},
+            </if>
+            <if test="paymentMode != null">
+                #{paymentMode},
+            </if>
+            <if test="amountPaid != null">
+                #{amountPaid},
+            </if>
+            <if test="amountPayable != null">
+                #{amountPayable},
+            </if>
+            <if test="paymentComment != null">
+                #{paymentComment},
+            </if>
+            <if test="firstPayTime != null">
+                #{firstPayTime},
+            </if>
+            <if test="latestPayTime != null">
+                #{latestPayTime},
+            </if>
+            <if test="contact != null">
+                #{contact},
+            </if>
+            <if test="contactMobile != null">
+                #{contactMobile},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 批量添加   -->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_warehouse_in (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            supplier_id,
+            supplier_name,
+            warehouse_in_sn,
+            rel_id,
+            purchase_sn,
+            purchase_agent,
+            purchase_agent_name,
+            in_time,
+            goods_amount,
+            tax,
+            freight,
+            total_amount,
+            invoice_type,
+            invoice_type_name,
+            comment,
+            depot,
+            status,
+            payment_status,
+            payment_mode,
+            amount_paid,
+            amount_payable,
+            payment_comment,
+            first_pay_time,
+            latest_pay_time,
+            contact,
+            contact_mobile,
+        </trim>
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.supplierId != null">
+                    #{item.supplierId},
+                </if>
+                <if test="item.supplierId == null">
+                    0 ,
+                </if>
+                <if test="item.supplierName != null">
+                    #{item.supplierName},
+                </if>
+                <if test="item.supplierName == null">
+                    '',
+                </if>
+                <if test="item.warehouseInSn != null">
+                    #{item.warehouseInSn},
+                </if>
+                <if test="item.warehouseInSn == null">
+                    '',
+                </if>
+                <if test="item.relId != null">
+                    #{item.relId},
+                </if>
+                <if test="item.relId == null">
+                    0,
+                </if>
+                <if test="item.purchaseSn != null">
+                    #{item.purchaseSn},
+                </if>
+                <if test="item.purchaseSn == null">
+                    '',
+                </if>
+                <if test="item.purchaseAgent != null">
+                    #{item.purchaseAgent},
+                </if>
+                <if test="item.purchaseAgent == null">
+                    0 ,
+                </if>
+                <if test="item.purchaseAgentName != null">
+                    #{item.purchaseAgentName},
+                </if>
+                <if test="item.purchaseAgentName == null">
+                    '',
+                </if>
+                <if test="item.inTime != null">
+                    #{item.inTime},
+                </if>
+                <if test="item.inTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.goodsAmount != null">
+                    #{item.goodsAmount},
+                </if>
+                <if test="item.goodsAmount == null">
+                    0.00,
+                </if>
+                <if test="item.tax != null">
+                    #{item.tax},
+                </if>
+                <if test="item.tax == null">
+                    0.00,
+                </if>
+                <if test="item.freight != null">
+                    #{item.freight},
+                </if>
+                <if test="item.freight == null">
+                    0.00,
+                </if>
+                <if test="item.totalAmount != null">
+                    #{item.totalAmount},
+                </if>
+                <if test="item.totalAmount == null">
+                    0.00,
+                </if>
+                <if test="item.invoiceType != null">
+                    #{item.invoiceType},
+                </if>
+                <if test="item.invoiceType == null">
+                    0 ,
+                </if>
+                <if test="item.invoiceTypeName != null">
+                    #{item.invoiceTypeName},
+                </if>
+                <if test="item.invoiceTypeName == null">
+                    '',
+                </if>
+                <if test="item.comment != null">
+                    #{item.comment},
+                </if>
+                <if test="item.comment == null">
+                    '',
+                </if>
+                <if test="item.depot != null">
+                    #{item.depot},
+                </if>
+                <if test="item.depot == null">
+                    '',
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    '',
+                </if>
+                <if test="item.paymentStatus != null">
+                    #{item.paymentStatus},
+                </if>
+                <if test="item.paymentStatus == null">
+                    '',
+                </if>
+                <if test="item.paymentMode != null">
+                    #{item.paymentMode},
+                </if>
+                <if test="item.paymentMode == null">
+                    '',
+                </if>
+                <if test="item.amountPaid != null">
+                    #{item.amountPaid},
+                </if>
+                <if test="item.amountPaid == null">
+                    0.00,
+                </if>
+                <if test="item.amountPayable != null">
+                    #{item.amountPayable},
+                </if>
+                <if test="item.amountPayable == null">
+                    0.00,
+                </if>
+                <if test="item.paymentComment != null">
+                    #{item.paymentComment},
+                </if>
+                <if test="item.paymentComment == null">
+                    '',
+                </if>
+                <if test="item.firstPayTime != null">
+                    #{item.firstPayTime},
+                </if>
+                <if test="item.firstPayTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.latestPayTime != null">
+                    #{item.latestPayTime},
+                </if>
+                <if test="item.latestPayTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.contact != null">
+                    #{item.contact},
+                </if>
+                <if test="item.contact == null">
+                    '',
+                </if>
+                <if test="item.contactMobile != null">
+                    #{item.contactMobile},
+                </if>
+                <if test="item.contactMobile == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_warehouse_in
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!-- 通过ID更新指定数据 -->
+    <update id="update">
+        update legend_warehouse_in
+        <include refid="BaseUpdateSet"/>
+        where id = #{id} and shop_id = #{shopId}
+    </update>
+
+
+    <select id="statsSuppliersAmount" resultType="com.tqmall.legend.entity.shop.SupplierSettlementVO">
+        select
+        supplier_id as supplierId, supplier_name as supplierName,
+        sum(total_amount) as totalAmount,
+        sum(amount_paid) as amountPaid,
+        IFNULL(sum(goods_amount),0) as goodsAmount,
+        IFNULL(sum(tax),0) as taxAmount,
+        IFNULL(sum(freight),0) as freightAmount,
+        sum(amount_payable) as amountPayable,max(in_time) as inTime
+        from legend_warehouse_in
+        <include refid="BaseWhereClause"/>
+        group by supplier_id, supplier_name
+        order by in_time DESC
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <select id="getSupplierCountWarehouseIn" resultType="java.lang.Integer">
+        select count(DISTINCT supplier_id,supplier_name)
+        from legend_warehouse_in
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <update id="updateSupplier">
+        update legend_warehouse_in SET supplier_id=#{supplierId},
+        supplier_name=#{supplierName},gmt_modified= now() ,modifier=#{modifier} WHERE
+        supplier_id=#{reqSupplierId} AND shop_id=#{shopId}
+    </update>
+
+    <select id="selectByPurchaseSnList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM legend_warehouse_in
+        WHERE is_deleted='N'
+          AND shop_id=#{shopId}
+          <foreach collection="PurchaseSnList" separator="," open="AND purchase_sn in(" close=")" item="purchaseSn">
+              #{purchaseSn}
+          </foreach>
+    </select>
+
+</mapper>

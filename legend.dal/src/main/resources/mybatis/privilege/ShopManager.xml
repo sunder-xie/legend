@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.privilege.ShopManagerDao">
+
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.privilege.ShopManager"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="name" property="name"/>
+        <result column="mobile" property="mobile"/>
+        <result column="role_id" property="roleId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="status" property="status"/>
+        <result column="is_admin" property="isAdmin"/>
+        <result column="identifying_code" property="identifyingCode"/>
+        <result column="send_code_time" property="sendCodeTime"/>
+        <result column="gender" property="gender"/>
+        <result column="nick_name" property="nickName"/>
+        <result column="user_photo_url" property="userPhotoUrl"/>
+        <result column="focus_car" property="focusCar"/>
+        <result column="identity_card" property="identityCard"/>
+        <result column="education" property="education"/>
+        <result column="graduate_school" property="graduateSchool"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapNew" type="com.tqmall.legend.entity.privilege.ShopManager">
+
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="mobile" property="mobile"/>
+        <result column="role_id" property="roleId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="status" property="status"/>
+        <result column="is_admin" property="isAdmin"/>
+        <result column="identifying_code" property="identifyingCode"/>
+        <result column="send_code_time" property="sendCodeTime"/>
+        <result column="gender" property="gender"/>
+        <result column="nick_name" property="nickName"/>
+        <result column="user_photo_url" property="userPhotoUrl"/>
+        <result column="focus_car" property="focusCar"/>
+        <result column="identity_card" property="identityCard"/>
+        <result column="education" property="education"/>
+        <result column="graduate_school" property="graduateSchool"/>
+    </resultMap>
+
+    <resultMap id="UserInfoResultMap" type="com.tqmall.legend.pojo.ShopManagerCom">
+        <result column="account" property="accountReg"/>
+        <result column="password" property="passwordReg"/>
+        <result column="name" property="nameReg"/>
+        <result column="mobile" property="mobileReg"/>
+        <result column="role_id" property="rolesReg"/>
+        <result column="shop_id" property="shopReg"/>
+        <result column="status" property="statusReg"/>
+        <result column="manager_id" property="accountIdReg"/>
+        <result column="is_admin" property="isAdminReg"/>
+        <result column="roles_name" property="rolesNameReg"/>
+        <result column="identifying_code" property="identifyingCode"/>
+        <result column="send_code_time" property="sendCodeTime"/>
+        <result column="identity_card" property="identityCard"/>
+    </resultMap>
+
+    <!-- ShopManagerResp -->
+    <resultMap id="ShopManagerRespMap" type="com.tqmall.legend.api.entity.ShopManagerResp">
+        <result column="name" property="name"/>
+        <result column="mobile" property="mobile"/>
+        <result column="role_id" property="roleId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="status" property="status"/>
+        <result column="shop_status" property="shopStatus"/>
+        <result column="is_admin" property="isAdmin"/>
+        <result column="identifying_code" property="identifyingCode"/>
+        <result column="send_code_time" property="sendCodeTime"/>
+        <result column="identity_card" property="identityCard"/>
+        <result column="post_name" property="postName"/>
+        <result column="shop_name" property="shopName"/>
+        <result column="shop_address" property="shopAddress"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            name as name, mobile as mobile, role_id as roleId, shop_id as shopId, status as
+            status,is_admin as isAdmin, identifying_code as identifyingCode, send_code_time as sendCodeTime,
+            identity_card as identityCard,education as education,gender as gender,graduate_school as graduateSchool,
+            nick_name as nickName,focus_car as focusCar,user_photo_url as userPhotoUrl
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="name != null">
+                    and name = #{name}
+                </if>
+                <if test="nickName != null">
+                    and nick_name = #{nickName}
+                </if>
+                <if test="mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test="roleId != null">
+                    and role_id = #{roleId}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="status != null">
+                    and status = #{status}
+                </if>
+                <if test="isAdmin != null">
+                    and is_admin = #{isAdmin}
+                </if>
+                <if test="identifyingCode != null">
+                    and identifying_code = #{identifyingCode}
+                </if>
+                <if test="sendCodeTime != null">
+                    and send_code_time = #{sendCodeTime}
+                </if>
+                <if test="identityCard != null">
+                    and identity_card = #{identityCard}
+                </if>
+                <if test="education != null">
+                    and education = #{education}
+                </if>
+                <if test="graduateSchool != null">
+                    and graduate_school = #{graduateSchool}
+                </if>
+                <if test="focusCar != null">
+                    and focus_car = #{focusCar}
+                </if>
+                <if test="userPhotoUrl != null">
+                    and user_photo_url = #{userPhotoUrl}
+                </if>
+                <if test="gender != null">
+                    and gender = #{gender}
+                </if>
+                <if test="ids != null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="keywords != null">
+                    and (name LIKE CONCAT('%',#{keywords},'%')
+                      or mobile LIKE CONCAT('%',#{keywords},'%')
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="name != null">
+                    name = #{name},
+                </if>
+                <if test="nickName != null">
+                    nick_name = #{nickName},
+                </if>
+                <if test="mobile != null">
+                    mobile = #{mobile},
+                </if>
+                <if test="roleId != null">
+                    role_id = #{roleId},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="status != null">
+                    status = #{status},
+                </if>
+                <if test="isAdmin != null">
+                    is_admin = #{isAdmin},
+                </if>
+                <if test="identifyingCode != null">
+                    identifying_code = #{identifyingCode},
+                </if>
+                <if test="sendCodeTime != null">
+                    send_code_time = #{sendCodeTime},
+                </if>
+                <if test="identityCard != null">
+                    identity_card = #{identityCard},
+                </if>
+                <if test="gender != null">
+                    gender = #{gender},
+                </if>
+                <if test="education != null">
+                    education = #{education},
+                </if>
+                <if test="graduateSchool != null">
+                    graduate_school = #{graduateSchool},
+                </if>
+                <if test="focusCar != null">
+                    focus_car = #{focusCar},
+                </if>
+                <if test="userPhotoUrl != null">
+                    user_photo_url = #{userPhotoUrl},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop_manager
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!--查询所有数据-->
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager
+        where is_deleted='N'
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager
+        where id = #{id} limit 1
+    </select>
+
+    <!-- 根据shopId和managerId查询 -->
+    <select id="selectByShopIdAndManagerId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager
+        where id = #{managerId} and shop_id = #{shopId} and is_deleted='N' limit 1
+    </select>
+
+
+    <!-- 根据shopId和managerId查询 -->
+    <select id="selectUserInfoByShopIdAndManagerId" resultMap="UserInfoResultMap">
+        select
+        a.name as nameReg,
+        a.mobile as mobileReg,
+        a.role_id as rolesReg,
+        a.shop_id as shopReg,
+        a.status as statusReg,
+        a.identity_card as identityCard,
+        b.manager_id as accountIdReg,
+        b.account as accountReg,
+        a.is_admin as isAdminReg,
+        b.password as passwordReg,
+        b.id as accountLoginIdReg,
+        c.name as rolesNameReg
+
+        from legend_shop_manager a,legend_shop_manager_login b,legend_roles c
+        where a.id = #{managerId} and a.shop_id = #{shopId} and a.id = b.manager_id and
+        a.is_deleted='N' and c.shop_id = a.shop_id and a.role_id = c.id limit 1
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        from
+        legend_shop_manager
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted='N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_shop_manager
+        set is_deleted='Y',gmt_modified = now()
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据shopId获取员工 -->
+    <select id="selectShopManagerByShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager
+        where shop_id = #{shopId} and is_deleted='N' order by id
+    </select>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_shop_manager
+        set is_deleted='Y',gmt_modified = now()
+        where id=#{id} limit 1
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_shop_manager
+        set is_deleted='Y',gmt_modified = now()
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_shop_manager (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="mobile != null">
+                mobile,
+            </if>
+            <if test="roleId != null">
+                role_id,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="isAdmin != null">
+                is_admin,
+            </if>
+            <if test="identifyingCode != null">
+                identifying_code,
+            </if>
+            <if test="sendCodeTime != null">
+                send_code_time,
+            </if>
+            <if test="gender != null">
+                gender,
+            </if>
+            <if test="nickName != null">
+                nick_name,
+            </if>
+            <if test="userPhotoUrl != null">
+                user_photo_url,
+            </if>
+            <if test="focusCar != null">
+                focus_car,
+            </if>
+            <if test="identityCard != null">
+                identity_card,
+            </if>
+            <if test="education != null">
+                education,
+            </if>
+            <if test="graduateSchool != null">
+                graduate_school,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="name != null">
+                #{name},
+            </if>
+            <if test="mobile != null">
+                #{mobile},
+            </if>
+            <if test="roleId != null">
+                #{roleId},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="isAdmin != null">
+                #{isAdmin},
+            </if>
+            <if test="identifyingCode != null">
+                #{identifyingCode},
+            </if>
+            <if test="sendCodeTime != null">
+                #{sendCodeTime},
+            </if>
+            <if test="gender != null">
+                #{gender},
+            </if>
+            <if test="nickName != null">
+                #{nickName},
+            </if>
+            <if test="userPhotoUrl != null">
+                #{userPhotoUrl},
+            </if>
+            <if test="focusCar != null">
+                #{focusCar},
+            </if>
+            <if test="identityCard != null">
+                #{identityCard},
+            </if>
+            <if test="education != null">
+                #{education},
+            </if>
+            <if test="graduateSchool != null">
+                #{graduateSchool},
+            </if>
+        </trim>
+        )
+    </insert>
+
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_shop_manager
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+        and is_deleted = 'N' limit 1
+    </update>
+
+
+    <select id="selectAdminByShopIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager
+        where is_deleted = 'N'
+        AND is_admin='1'
+        and shop_id IN (
+        <foreach collection="shopIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+
+    </select>
+
+    <sql id="BaseWhereClauseExt" >
+        <include refid="BaseWhereClause"/>
+        <if test="keyword != null">
+            and (
+            name like CONCAT('%',#{keyword},'%')
+            or mobile like CONCAT('%',#{keyword},'%')
+            )
+        </if>
+    </sql>
+
+    <select id="selectByNameOrMobile" resultMap="BaseResultMap">
+        select id FROM
+        legend_shop_manager
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        <if test="keyword != null">
+            and (
+            name like CONCAT('%',#{keyword},'%')
+            or mobile like CONCAT('%',#{keyword},'%')
+            )
+        </if>
+    </select>
+
+    <select id="selectByIdsWithDeleted" resultMap="BaseResultMap">
+        select   <include refid="BaseColumnList"/>
+        FROM  legend_shop_manager
+          where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+</mapper>

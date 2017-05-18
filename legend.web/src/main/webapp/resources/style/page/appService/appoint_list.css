@@ -1,0 +1,99 @@
+/*-----  新增客户弹出框，私有样式  start ------*/
+#customer_create_dialog .form_row{margin-bottom:0; }
+#customer_create_dialog {padding: 0px; }
+#customer_create_dialog form{padding: 0 10px; }
+#customer_create_dialog .btn_group{height: 56px; background: #f5f2e6; border-bottom: 1px solid #dadada; position: relative; text-align: center; }
+#customer_create_dialog .btn_group a{position: absolute; width: 72px; height: 24px; line-height: 24px; font-size: 13px; border: 1px solid #c1c1c1; border-radius: 2px; cursor: pointer; }
+#customer_create_dialog .btn_group a.cancel{left: 15px; top: 15px; color: #666666; background: #f8f8f8; }
+#customer_create_dialog .btn_group a.save{right: 15px; top: 15px; color: #ffffff; background: #8fb027; }
+#customer_create_dialog .btn_group span{line-height: 56px; font-size: 18px; color: #535353; font-weight: bold; }
+
+/*-----  新增客户弹出框，私有样式  end ------*/
+
+
+/*--- 客户预约卡片样式 start ---*/
+.cont {display: block; width: 990px; position: relative; } 
+.cont .current{border:1px solid #fa4837; }
+.cont li {width: 235px; /*height: 306px;*/ background: #fff; float: left; border: 1px solid #cdcdcd; margin: 0 10px 10px 0; }
+.ltop {height:74px;padding: 10px; border-bottom: 1px dotted #aebdc7; }
+.customer_info .info_item {height: 20px; line-height: 20px; font-size: 14px; font-weight: bolder; color: #111;margin-top: 5px;}
+.service_info{border-top: 1px solid #fff; background: #f0f0f0;  }
+.midc {padding: 7px 0; border-bottom: 1px solid #cdcdcd; height:120px; }
+.ptxt {width: 100%; padding: 3px 0; line-height: 20px; overflow: hidden; }
+.pleft {float: left; padding-left: 10px; }
+.pright {float: left; padding-right: 15px; }
+.service_packs{width:auto;color:#f69934;padding-left: 10px;padding-right: 10px;word-wrap:break-word;word-break:break-all;}
+.appoint_time{height: 38px; display: block;float: left;border-right: 1px solid #cdcdcd;width: 66px;line-height: 14px;padding-left: 10px;color: #111;padding-top:10px;word-break:break-all;}
+.order_create_btn { height: 48px; display: block;float: left;text-align: center;line-height: 48px;width: 78px;color: #2cadde;cursor: pointer;}
+.order_create_btn i{font-style: normal;font-size: 16px;vertical-align: middle;}
+.order_created{height: 48px; display: block;float: left;text-align: center;line-height: 48px;width: 158px;color: green;}
+.but_right {width: 100px; height: 24px; font-weight: bold; line-height: 24px; text-align: center; font-size: 13px; border: 1px solid #c1c1c1; margin-top: 12px; margin-right: 10px; float: right; cursor: pointer; }
+.but_left:hover, .but_right:hover {background-color: #ececec; }
+.order_item{position:relative;box-shadow: 1px 2px 2px #ccc;}
+.order_item:hover {border:1px solid #fa4837; } 
+.order_item .data_del{position: absolute; visibility: hidden; bottom:12px; right:8px; color:red; }
+.order_item:hover .data_del{visibility: visible; }
+.info_item_car_type{margin-top: 10px;}
+.appoint_cancel_btn{ height: 48px;display: block;float: left;text-align: center;line-height: 48px;width: 78px;color: #de6261;cursor: pointer;}
+.appoint_confirm_btn{  height: 48px;display: block;float: left;text-align: center;line-height: 48px;width: 78px;color: #2cadde;cursor: pointer;}
+.appoint_order_create_btn{  height: 48px;display: block;float: left;text-align: center;line-height: 48px;width: 78px;color: green;cursor: pointer;}
+.urlBtn{cursor: pointer;}
+/*--- 客户预约卡片样式 end ---*/
+
+
+#appoint_search{margin-bottom: 20px;}
+
+/*取消预约弹窗样式  开始*/
+.btn_group{
+    height: 56px;
+    background: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    text-align: center;
+}
+a.cancel{
+    left: 15px;
+    top: 15px;
+    color: #666666;
+    background: #f8f8f8;
+}
+.btn_group a{
+    position: absolute;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.cz_abc{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 56px;
+}
+.tj_abc{
+    color: ghostwhite;
+    top: 15px;
+    right: 15px;
+    font-weight: normal;
+    background:#789c19;
+    background: -webkit-gradient(linear,left top,left bottom,from(#8fb027),to(#789c19));
+}
+#appoint_cancel_dialog{
+    padding:0;
+}
+.t_middle ul li{
+    width:200px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid #DFB2B9;
+    margin:20px auto;
+    border-radius:3px;
+}
+.f_li{
+    background:#FFE4E0;
+    color:#ECABAA;
+}

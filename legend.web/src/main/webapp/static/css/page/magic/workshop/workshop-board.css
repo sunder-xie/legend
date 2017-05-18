@@ -1,0 +1,18 @@
+/*
+ * by zmx 2016/07/04
+ * 看板页面
+*/
+
+.content{ background: #fff; border: 1px solid #ddd;}
+.title{ height: 46px; line-height: 46px; text-align: center;}
+.explain{ height: 60px; line-height: 60px;}
+.box{ display: inline-block; width:15px; height: 15px; vertical-align: middle;}
+.blue{ background: #2797ff;}
+.green{ background: #1dce32;}
+.grey{ background: #ddd;}
+.red{ background: #ff2740;}
+.yellow{ background: #fdd01c;}
+.explain{ padding-left: 17px;}
+.explain-box{ margin-right: 10px;}
+.time{ width: 160px;}
+.yqx-table{table-layout: auto;}

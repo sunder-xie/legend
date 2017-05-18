@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.tqmall.legend.dao.sys.UserDao">
+	<resultMap id="BaseResultMap" type="com.tqmall.legend.entity.sys.User">
+		<result column="username" property="username" />
+		<result column="password" property="password" />
+		<result column="enabled" property="enabled" />
+	</resultMap>
+
+	<sql id="BaseColumnList">
+        username as username,
+		password as password,
+		enabled as enabled
+	</sql>
+
+	<sql id="BaseWhereClause">
+		<where>
+			<trim prefixOverrides="and">
+				<if test="password != null"> and password = #{password}</if>
+				<if test="enabled != null"> and enabled = #{enabled}</if>
+			</trim>
+		</where>
+		<include refid="COMMON.ORDER_BY" />
+		<include refid="COMMON.LIMIT" />
+	</sql>
+
+	<sql id="BaseUpdateSet">
+		<set>
+			password=#{password},
+			enabled=#{enabled}
+		</set>
+	</sql>
+
+	<!-- 查询总数 -->
+	<select id="selectCount" resultType="java.lang.Integer">
+		select count(username)
+		from testname
+		<include refid="BaseWhereClause" />
+	</select>
+
+	<!-- 查询 -->
+	<select id="select" resultMap="BaseResultMap">
+		select
+		<include refid="BaseColumnList" />
+		from testname
+		<include refid="BaseWhereClause" />
+	</select>
+
+	<!-- 根据ID查询 -->
+	<select id="selectById" resultMap="BaseResultMap">
+		select
+		<include refid="BaseColumnList" />
+		from testname
+		where username = #{username}
+	</select>
+    <select id="selectByName" resultType="java.lang.String">
+        select password
+        from testname
+        where username = #{username}
+    </select>
+    <!-- 测试连接
+    <select id="selectByName" resultType="java.lang.String">
+        select password
+        from testname
+        where username = "test"
+    </select>-->
+	<!-- 根据ID删除 -->
+	<update id="deleteById">
+		update testname
+		set enabled=0
+		where username=#{username}
+	</update>
+
+	<!-- 根据IDS批量删除 -->
+	<update id="deleteByIds">
+		update users
+		set enabled='Y'
+		where username in 
+		(
+		<foreach collection="array" index="index" item="tag" separator=",">
+				#{tag}
+		</foreach>
+		)
+	</update>
+	
+	<!-- 删除 -->
+	<delete id="delete">
+		update testname
+		set enabled=0
+		<include refid="BaseWhereClause" />
+	</delete>
+
+	<!-- 添加 -->
+	<insert id="insert" useGeneratedKeys="true" keyProperty="username">
+		insert
+		into testname (
+		username,
+		password,
+		enabled
+		)
+		values (
+		#{username},
+		#{password},
+		#{enabled}
+		)
+	</insert>
+
+	<!-- 通过ID更新 -->
+	<update id="updateById">
+		update testname
+		<include refid="BaseUpdateSet" />
+		where username = #{username}
+	</update>
+
+</mapper> 

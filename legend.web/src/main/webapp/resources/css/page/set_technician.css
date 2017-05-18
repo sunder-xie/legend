@@ -1,0 +1,63 @@
+.action-btn a{
+    margin-right: 10px;
+    float: left;
+}
+.action-btn{
+    margin-bottom: 10px;
+}
+
+/*--- 可以选中的div 类似于checkbox start ----*/
+/*money 钱的单选*/
+.money_check_box {line-height: 35px;}
+.money_check_box p{width:140px;color: #a0a0a0;position: relative;margin-bottom: 40px;}
+.money_check_box p span{display: inline-block;text-align: center;height:100%;vertical-align: top;font-size: 14px;font-weight: 700;}
+.money_check_box p span.money{width: 100px;}
+.money_check_box p span.unit{width:36px;border-left: 1px solid #cecece;}
+.money_check_box p b.name{position: absolute;width: 100%;height:30px;text-align: center;line-height: 30px;}.money_check_box p.checked span.unit{border-left:1px solid #89b11a;}
+.money_check_box p input{height:100%;text-align: center;width: 100px;background: #fff;line-height: 35px;border-radius: 3px 0 0 3px;}
+/* 优惠券样式 */
+.coupon_check_box{margin-bottom: 10px;}
+/*支付方式的单选 */
+.pay_check_box {line-height: 35px;}
+.pay_check_box .payment,
+.other_box .payment{width:140px;color: #a0a0a0;text-align: center;font-size: 14px;}
+.pay_check_box .payment.checked,
+.other_box .payment.checked{color: #111;}
+
+/*会员卡余额样式*/
+.member_card {margin-bottom:20px;vertical-align: middle;}
+.member_card span{font-size: 14px;}
+.member_card span.card_level{font-size: 16px;font-weight: 700;margin-right: 20px;}
+.card_amount{color: #ff434a;font-weight: 900;margin-left: 5px;}
+/*--- 可以选中的div 类似于checkbox end ----*/
+
+/*--- 专修品牌 start --- */
+.majorCarBrand_item{display: inline-block;background: #fff;line-height: 36px; border: 1px solid #ccc;border-radius: 4px;margin-left:10px;padding: 0 10px;position: relative;height:36px;}
+.majorCarBrand_item i{position: absolute; width: 20px; height: 20px; background: url(../../img/page/member/img_del_btn.png) no-repeat center; top: -10px; right: -10px;cursor: pointer;} /*--- 专修品牌 end --- */
+
+/*--- 银行卡 start --- */
+.pop_btn {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: 10px;
+    padding: 0 10px;
+    line-height: 37px;
+    font-size: 12px;
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.pop_btn:last-child {
+    margin-left: 10px;
+}
+.pop_btn_primary {
+    background: #8fb027;
+}
+.pop_red_tips{
+    color: #f00;
+    font-size: 12px !important;
+    padding-top: 5px;
+    display: inline-block;
+}

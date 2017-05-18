@@ -1,0 +1,125 @@
+.search-box{
+    margin-bottom: 10px;
+}
+.search-box{
+    float: left;
+    width: 895px;
+}
+/*.search-icon{
+    float: left;
+    background: url("../../images/search_icon.png");
+    width: 84px;
+    height: 84px;
+    cursor: pointer;
+}*/
+.s_right {
+    float: right;
+    width:84px;
+    height:84px;
+    /*position:relative;*/
+    background-image: url("../../images/an.jpg");
+}
+
+.s_right:hover {
+    float: right;
+    width:84px;
+    height:84px;
+    /*position:relative;*/
+    background-image: url("../../images/an_1.jpg");
+}
+
+.search-box .form-control{
+    margin-right: 10px;
+    width: 212px;
+}
+.search-box .large-input{
+    width: 853px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.btn-container{
+    height: 40px;
+    margin-bottom: 10px ;
+}
+.btn-container .add-not-tqmall-part{
+    background: url("../../images/add_not_tqmall_part.png");
+    width: 139px;
+    height: 40px;
+    float: right;
+    cursor: pointer;
+}
+
+.btn-container .add-not-tqmall-part:hover {
+    background: url("../../images/add_not_tqmall_part.png");
+    width: 139px;
+    height: 40px;
+    float: right;
+    cursor: pointer;
+}
+
+.part-info{
+    margin: 0;
+    float: left;
+    width: 718px;
+    height: 98px;
+}
+.li-right-container{
+    width: 199px;
+    height: 138px;
+    background: #efefef;
+    float: left;
+    border: 1px solid #dadada;
+    border-left: none;
+}
+.add-btn{
+    width: 100px;
+    height: 30px;
+    background: #f7f7f7;
+    border: 1px solid #c1c1c1;
+    text-align: center;
+    display: block;
+    margin: 52px auto;
+    cursor: pointer;
+}
+.list-container li{
+    margin-bottom: 10px;
+}
+.li-right-save ul{
+    margin: 20px 22px 0 25px;
+}
+.li-right-save ul li label{
+    width: 42px;
+    display: inline-block;
+}
+.li-right-save ul li .form-control{
+    width: 100px;
+    height: 30px;
+}
+.li-right-save ul li .red-star{
+    line-height: 20px;
+}
+.li-btn-container{
+    text-align: center;
+}
+.li-btn-container button{
+    height: 25px;
+    width: 70px;
+    margin: 0 5px;
+    border: 1px solid #c1c1c1;
+}
+.price{
+    color: #e50206;
+    margin: 36px 22px 0 25px;
+}
+.large-price{
+    font-size: 24px;
+}
+.part-no{
+    margin: 10px 22px 15px 25px;
+}
+.choose_page{
+    margin: 15px 10px;
+}
+#search_keyword{
+    line-height: 38px;
+}

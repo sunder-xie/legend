@@ -1,0 +1,75 @@
+/*
+ * hyx 2016-05-12
+ * 对账单汇总页面
+ */
+body{
+    color:#333;
+    font-size:12px;
+}
+.yqx-wrapper .yqx-group-content{
+    background: #fff;
+}
+.yqx-wrapper .yqx-table{
+    background: #fff;
+    margin-top:20px;
+    font-size:0;
+}
+/*表单信息*/
+
+.formInfo .form-label{
+    color:#535353;
+    font-size:12px;
+    line-height:30px;
+    width: 80px;
+}
+.yqx-group-content .show-grid{ padding: 0;}
+.formInfo .form-item{
+    width:138px;
+}
+.yqx-downlist-panel{
+    max-width: 138px !important;
+}
+.formInfo>button.yqx-btn{
+    float:right;
+    width:80px;
+    line-height:35px;
+    height:35px;
+    padding:0;
+    margin-right:5px;
+    font-size:12px;
+}
+/*表格*/
+
+#detail-dialog .yqx-table {
+    table-layout: auto;
+}
+.yqx-table>thead>tr>th{
+    background:#f9f9f9;
+    font-size:12px;
+    color:#333;
+    border-top:none;
+    white-space:normal;
+    vertical-align:top;
+}
+.yqx-table>tbody>tr>td{
+    font-size:12px;
+    color:#333;
+}
+.yqx-table>tbody>tr>td.check-detail{
+    color:#9fc527;
+    cursor:pointer;
+}
+/*明细弹框*/
+#detail-dialog{
+    width:739px;
+    height: auto;
+    background: #fff;
+}
+#detail-dialog h1{
+    background: #232e49;
+    line-height:55px;
+    font-size:16px;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+}

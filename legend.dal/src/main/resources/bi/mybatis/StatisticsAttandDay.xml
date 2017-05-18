@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.bi.dao.StatisticsAttandDayDao">
+
+    <resultMap id="BaseResultMap" type="AttendanceStatis">
+        <result column = "user_id" property = "userId" />
+        <result column = "user_name" property = "userName" />
+        <result column = "shop_id" property = "shopId" />
+        <result column = "sign_in_time" property = "signInTime" />
+        <result column = "sign_in_location_is_valid" property = "signInLocationIsValid" />
+        <result column = "sign_out_time" property = "signOutTime" />
+        <result column = "sign_out_location_is_valid" property = "signOutLocationIsValid" />
+        <result column = "sign_in_status" property = "signInStatus" />
+        <result column = "sign_out_status" property = "signOutStatus" />
+        <result column = "sign_date" property = "signDate" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            user_id as userId,
+            user_name as userName,
+            shop_id as shopId,
+            sign_in_time as signInTime,
+            sign_in_location_is_valid as signInLocationIsValid,
+            sign_out_time as signOutTime,
+            sign_out_location_is_valid as signOutLocationIsValid,
+            sign_in_status as signInStatus,
+            sign_out_status as signOutStatus,
+            sign_date as signDate,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test = "userName != null">
+                    and user_name = #{userName}
+                </if>
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "signInTime != null">
+                    and sign_in_time = #{signInTime}
+                </if>
+                <if test = "signInLocationIsValid != null">
+                    and sign_in_location_is_valid = #{signInLocationIsValid}
+                </if>
+                <if test = "signOutTime != null">
+                    and sign_out_time = #{signOutTime}
+                </if>
+                <if test = "signOutLocationIsValid != null">
+                    and sign_out_location_is_valid = #{signOutLocationIsValid}
+                </if>
+                <if test = "signInStatus != null">
+                    and sign_in_status = #{signInStatus}
+                </if>
+                <if test = "signOutStatus != null">
+                    and sign_out_status = #{signOutStatus}
+                </if>
+                <if test = "signDate != null">
+                    and sign_date = #{signDate}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <select id="getAttandInfoListByDays" resultMap="BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from cube_app_attendance_statis
+        WHERE shop_id = #{shopId}
+        AND sign_date BETWEEN #{startTime} and #{endTime}
+        <if test = "userId != null">
+            and user_id = #{userId}
+        </if>
+        AND is_deleted = 'N'
+        <include refid = "COMMON.ORDER_BY" />
+    </select>
+
+    <select id="getDateList" resultMap="BaseResultMap">
+        select
+        sign_date as signDate
+        from cube_app_attendance_statis
+        where sign_date BETWEEN #{startTime} and #{endTime} and  shop_id = #{shopId}
+        <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+        <if test = "userId != null">
+            and user_id = #{userId}
+        </if>
+        group by signDate
+        order by sign_date desc
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <select id="getAttendInfoCount" resultType="Long">
+        select COUNT(DISTINCT(sign_date))
+        from cube_app_attendance_statis
+        WHERE shop_id = #{shopId}
+        AND sign_date BETWEEN #{startTime} and #{endTime}
+        <if test = "userId != null">
+            and user_id = #{userId}
+        </if>
+        AND is_deleted = 'N'
+    </select>
+
+
+    <select id="getQueryDate" resultMap="BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from cube_app_attendance_statis
+        <include refid = "BaseWhereClause" />
+         and sign_date BETWEEN #{startTime} and #{endTime}
+        <include refid = "COMMON.ORDER_BY" />
+
+    </select>
+
+    <select id="getMinMaxSignDate" resultType="com.tqmall.legend.bi.entity.CommonPair">
+        select min(sign_date) dataF,
+               max(sign_date) dataS
+        from (
+            select sign_date
+            from cube_app_attendance_statis
+            where shop_id = #{shopId}
+            and sign_date BETWEEN #{startTime} and #{endTime}
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            and is_deleted = 'N'
+            group by sign_date
+            order by sign_date desc
+            <include refid = "COMMON.LIMIT" />
+        ) temp
+    </select>
+
+
+</mapper>

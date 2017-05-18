@@ -1,0 +1,133 @@
+.card-box {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+}
+.card-box .card-item {
+    width: 198px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.card-box .card-item:nth-child(4n) {
+    margin-right: 0;
+}
+.card-box .card-item:hover {
+    border: 1px solid #9fc527;
+    box-shadow: 0 0 2px #9fc527;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+
+.card-box a {
+    color: #000;
+}
+.card-box .card-info {
+    cursor: pointer
+}
+.card-box .card-check-box {
+    padding: 8px;
+    height: 52px;
+    background: #f9f9f9;
+}
+.card-box .card-check-box * {
+    vertical-align: middle;
+}
+
+.card-box .card-licence {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-box .card-tag {
+    padding: 0 2px;
+    line-height: 17px;
+    height: 17px;
+    display: inline-block;
+    border-radius: 1px;
+}
+
+.card-box .card-tag {
+    border: 1px solid #bfbfbf;
+    border-radius: 7px;
+    color: #666666;
+}
+
+.card-box .card-status {
+    float: right;
+    color: #7fa700;
+}
+.card-box .car-check-body {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 12px 10px;
+}
+.card-box .car-check-body p {
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-box .card-car-type {
+    margin: 10px 0 0 0;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-box .card-money {
+    padding: 0 8px;
+    background: #f9f9f9;
+}
+
+.card-box .card-price {
+    line-height: 40px;
+}
+
+.card-box .card-type {
+    float: right;
+    color: rgba(40, 27, 43, 0.65);
+}
+
+.card-box .card-price-1 {
+    color: #f25e61
+}
+.card-box .card-price .card-btn:hover {
+    opacity: .8;
+}
+
+.card-box .card-price {
+    height: 42px;
+}
+
+.card-box .card-price .card-btn ,
+.card-box .card-price .card-confirm{
+    float: right;
+    font-size: 12px;
+    display: inline-block;
+    height: 24px;
+    width: 38px;
+    text-align: center;
+    line-height: 24px;
+    background: #9fc527;
+    color: #fff;
+    border:1px solid #7fa700;
+    margin-top: 8px;
+    border-radius: 1px;
+}
+
+.card-box .card-price .card-confirm{
+    width: 52px;
+    background: #fa7b7c;
+    border:1px solid #f55d5e;
+}

@@ -1,0 +1,17 @@
+.main h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.main h4.time {
+    font-size: 12px;
+    font-family: Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    margin-bottom: 28px;
+    color: #666;
+}
+
+.detail-content {
+    overflow: hidden;
+    width: 704px;
+}

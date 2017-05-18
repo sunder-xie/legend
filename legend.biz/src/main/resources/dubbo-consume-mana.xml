@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--保险的字典数据-->
+    <dubbo:reference interface="com.tqmall.mana.client.service.insurance.InsuranceDicService" id="insuranceDicService"
+                     version="${dubbo.mana.version}" />
+    <!--门店的对账基础数据-->
+    <dubbo:reference interface="com.tqmall.mana.client.service.settle.RpcSettleShopService" id="rpcSettleShopService"
+                     version="${dubbo.mana.version}" />
+    <!--服务包对账-->
+    <dubbo:reference interface="com.tqmall.mana.client.service.settle.RpcSettleServicePackageService" id="rpcSettleServicePackageService"
+                     version="${dubbo.mana.version}" />
+    <!--门店规则说明-->
+    <dubbo:reference interface="com.tqmall.mana.client.service.settle.RpcSettleShopRuleIntroductionService" id="rpcSettleShopRuleIntroductionService"
+                     version="${dubbo.mana.version}" />
+
+    <!--现金券规则-->
+    <dubbo:reference interface="com.tqmall.mana.client.service.cashcoupon.RpcCashCouponRuleConfigService" id="rpcCashCouponRuleConfigService"
+                     version="${dubbo.mana.version}" />
+</beans>

@@ -1,0 +1,19 @@
+/**
+ * zmx 2016-10-14
+ * 中断车辆详情
+ */
+.btn-box{
+    height: 55px;
+    padding: 15px 10px;
+    background: #fff;
+}
+.content .form-label{
+    width: 100px;
+}
+.content .form-item{
+    width: 160px;
+}
+.order-num{
+    color: #9fc524;
+    text-decoration: underline;
+}

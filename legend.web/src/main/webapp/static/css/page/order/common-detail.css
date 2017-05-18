@@ -1,0 +1,240 @@
+.quick-nav {
+    margin-bottom: 10px;
+}
+
+.quick-heading {
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 16px;
+    color: #000;
+}
+
+.car-info {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px 70px 10px 10px;
+    display: table;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-td strong {
+    font-weight: 800;
+    color: #000;
+}
+
+.info-text {
+    display: table-row;
+    font-size: 12px;
+}
+
+.info-text:last-child {
+    margin-bottom: 0;
+}
+/* 表格样式 start */
+.car-consume {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: 0 10px;
+}
+
+table.yqx-table thead tr th {
+    background: #f9f9f9;
+}
+
+table.yqx-table thead tr th, table.yqx-table tbody tr td {
+    text-align: left;
+}
+table.yqx-table thead tr th.th-right, table.yqx-table tr td.td-right {
+    text-align: right;
+}
+
+table.yqx-table .table-boundary {
+    padding-right: 20px;
+}
+
+.yqx-table caption {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.yqx-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.yqx-td-2 {
+    width: 40px;
+}
+
+.yqx-td-3 {
+    width: 60px;
+}
+
+.yqx-td-4 {
+    width: 80px;
+}
+
+.td-i-6 {
+    width: 80px;
+}
+
+.td-i-4 {
+    width: 55px;
+    text-align: right;
+}
+
+.info-td i {
+    margin-right: 10px;
+    display: inline-block;
+}
+/* 表格样式 end */
+
+.order-content .form-label, .order-content .form-item {
+    padding: 0;
+}
+.order-content .yqx-text {
+    line-height: 30px;
+}
+
+/* 备注及按钮 */
+.input-mark .form-label {
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.input-mark .form-item {
+    width: 708px;
+    height: 48px;
+    overflow: auto;
+}
+
+.input-mark{
+    margin: 10px 0;
+}
+
+.money-sum {
+    color: #ff7800;
+}
+
+p.pay-line {
+    margin-bottom: 20px;
+}
+
+.form-last-btns {
+    padding-bottom: 20px;
+}
+
+.form-last-btns button {
+    margin-right: 10px;
+}
+
+i {
+    font-style: normal;
+}
+
+#addNew {
+    float: right;
+}
+/* 备注及按钮 end */
+
+.padding-top20{
+    padding-top: 20px;
+}
+
+.layui-layer-page .layui-layer-content {
+    overflow: initial;
+}
+
+
+.service-head{
+    height:55px;
+    line-height:55px;
+    text-align:center;
+    background:#232e49;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+}
+.service-head h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.mwhbox{
+    padding: 20px 0;
+}
+.mwhbox table{
+    width: 100%;
+}
+.mwhbox td,.mwhbox th{
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+.new-order{
+    color: #7fa700;
+    line-height: 42px;
+}
+
+.order-bold{
+    font-weight: 800;
+    color: #333;
+}
+
+.detail-row{
+    clear:both;
+}
+.detail-title{
+    width: 90px;
+    line-height: 30px;
+}
+
+.detail-message {
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.car-text-width{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info-td {
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.info-td-2 {
+    width: 49%;
+}
+
+.info-td-3 {
+    line-height: 14px;
+    width: 33.3%;
+}
+
+.red{
+    color:red;
+}
+.proxy-with{
+    width: 300px;
+}
+
+.yqx-wrapper .yqx-btn {
+    padding: 0 12px;
+}

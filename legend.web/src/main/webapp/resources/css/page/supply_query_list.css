@@ -1,0 +1,308 @@
+.item a {
+    left:0;
+    top:0;
+}
+
+.s_box {
+    height:105px;
+}
+
+.s_ul {
+    width:894px;
+    display:block;
+    float:left;
+}
+.s_ul li {
+    width:296px;
+    margin-bottom: 12px;
+    float:left;
+    position: relative;
+}
+
+.s_right {
+    float: right;
+    width:84px;
+    height:84px;
+    position:relative;
+    background-image: url("../../images/an.jpg");
+}
+
+.s_right:hover {
+    float: right;
+    width:84px;
+    height:84px;
+    position:relative;
+    background-image: url("../../images/an_1.jpg");
+}
+
+.selcont {
+    width: 277px;
+    height: 38px;
+    background: #fff;
+    /*color: #c9c9c9;*/
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    /*font-weight:bold;*/
+}
+
+._other {
+    width:870px;
+    min-height:16px;
+    padding:10px 0 10px 10px;
+    /*font-weight:bold;*/
+    /*color:#c9c9c9;*/
+    border: 1px solid #dadada;
+    display:block;
+    border-radius:5px;
+}
+
+.ck_box1 {
+    height:55px;
+    line-height:55px;
+}
+
+.ck_box1 .btn {
+    font-size:14px;
+    float:left;
+    display:block;
+    width:100px;
+    height:45px;
+    line-height:45px;
+    text-align: center;
+    color:#fff;
+    border-radius:3px;
+    margin-right:10px;
+}
+
+.stock {
+    background-color:#f69935;
+}
+
+.merge {
+    background-color:#555555;
+}
+
+.pick {
+    background-color:#57b6cf;
+}
+
+.ck_box1 .ck_right {
+    float:right;
+}
+
+.exportExc {
+    border:1px solid #c1c1c1;
+    width:100px;
+    height:28px;
+    line-height:28px;
+    margin-left:10px;
+    text-align:center;
+    display:inline-block;
+    background-color:#f7f7f7;
+    border-radius:3px;
+}
+
+.ck_order {
+    border:1px solid #cdcdcd;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+.ck_tit {
+    border-bottom: 1px solid #cdcdcd;
+    height:35px;
+    line-height:35px;
+    padding:0 20px;
+    background-color: #efefef;
+}
+
+.ck_tit li {
+    font-weight:bold;
+    height:30px;
+    float:left;
+}
+.ck_tit li.w90 {
+    width:90px;
+}
+
+.ck_tit .w290 {
+    width:270px;
+}
+.ck_tit li.w208 {
+    width:200px;
+}
+
+.ck_tit li.w130 {
+    width:130px;
+}
+
+.ck_tit li.w80 {
+    width:80px;
+}
+
+.ck_cot {
+    height:80px;
+    padding-top:10px;
+    margin:0 20px;
+    position:relative;
+}
+
+.ck_cot li {
+    height:47px;
+    padding-top:10px;
+    padding-right:10px;
+    float:left;
+}
+/*.ck_cot li .info, .ck_cot li .infoCard {
+    padding-left: 16px;
+}*/
+
+.ck_cot li.w90 {
+    width:77px;
+}
+
+.ck_cot .w208 {
+    width:200px;
+    text-align: left;
+}
+
+.ck_cot .w130 {
+    width:130px;
+}
+
+.ck_cot .w80 {
+    width:80px;
+    height:80px;
+    padding-top:0;
+}
+
+.ck_cot li.w30, .ck_tit li.w30 {
+    width:40px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+.ck_cot li.w30 {
+    padding-right:0;
+}
+
+.ck_cot li.w40, .ck_tit li.w40 {
+    width:40px;
+}
+
+.ck_cot li.w40 {
+    padding-right:0;
+}
+
+.ck_order .last_cot {
+    border:none;
+}
+
+.info {
+    line-height: 20px;
+    padding-bottom:10px;
+    height:30px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.shop {
+    color:#e30e0e;
+    position:absolute;
+    left:408px;
+    top:70px;
+}
+.shop a {
+    font-weight:bold;
+    color:#e30e0e;
+}
+
+
+.find_car {
+    width: 150px;
+    padding-left:10px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    /*font-weight:bold;*/
+}
+
+.find_stock {
+    width: 110px;
+    padding-left:10px;
+    height: 38px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    /*font-weight:bold;*/
+}
+
+.fourElems {
+    width:257px;
+    float: left;
+    margin-right:10px;
+    min-height: 16px;
+    height:36px;
+    padding: 0 10px;
+    border: 1px solid #dadada;
+    display: block;
+    border-radius: 5px;
+}
+.infoCard {
+    padding-top:3px;
+    /*float:left;*/
+}
+
+.infoCard1 {
+    padding-top:6px;
+    /*float:left;*/
+}
+
+.correlationCar {
+    width:848px;
+    line-height: 15px;
+    padding:0 0 5px 90px;
+    margin:0 20px;
+    border-bottom: 1px dotted #CDCDCD;
+}
+.lightAmount {
+    font-size:16px;
+    font-weight:bold;
+}
+
+.merge-part {
+    width: 800px;
+    table-layout: fixed;
+}
+.merge-part th, .merge-part td {
+    height: 28px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+.merge-foot {
+    margin: 10px;
+    text-align: right;
+}
+.merge-foot select {
+    height: 27px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+.merge-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background: #9fc527;
+    border: 1px solid #7fa700;
+    border-radius: 2px;
+}
+
+.max-width{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

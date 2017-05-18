@@ -1,0 +1,150 @@
+body {
+    background: #ebebeb;
+}
+.wrapper {
+    display: -webkit-flex;
+    -webkit-flex-flow: column;
+    display: flex;
+    flex-flow: column;
+}
+.lgbox {
+    margin-bottom: 49px;
+    background: #ffffff;
+}
+.lgbox li {
+    height: 89px;
+    line-height: 89px;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 0 20px;
+    font-size: 28px;
+}
+.lgbox li span {
+    color: #333333;
+    margin-right: 15px;
+}
+.lgtxt {
+    width: 277px;
+    font-size: 28px;
+    padding: 15px;
+    line-height: 30px;
+    color: #ababab;
+}
+.butcss {
+    width: 188px;
+    height: 58px;
+    border: 1px solid #d2d2d2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ebebeb;
+    font-size: 28px;
+    color: #b8b8b8;
+}
+.neng {
+    background: #e6eff5;
+    border: 1px solid #008df4;
+    color: #008df4;
+}
+.tjniu {
+    width: 590px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #008df4;
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.yazew {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    color: #999999;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.bindi {
+    background: url("../../images/summer/aa.gif") no-repeat left;
+    width: 420px;
+    line-height: 40px;
+    padding-left: 40px;
+    margin: 20px auto;
+    font-size: 24px;
+    color: #999999;
+}
+.bindi span {
+    color: #008df4;
+}
+
+
+.box {
+    background: #ffffff;
+    margin-bottom: 15px;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.duigou {
+    background: url("../../images/summer/dg.gif") no-repeat;
+    width: 114px;
+    height: 111px;
+    margin: 38px auto 27px;
+}
+.yuyue {
+    text-align: center;
+    font-size: 28px;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.shuom {
+    margin-bottom: 38px;
+    font-size: 22px;
+    color: #666666;
+    text-align: center;
+}
+.fuwu {
+    font-size: 24px;
+    color: #333333;
+    line-height: 50px;
+    padding: 15px 20px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+}
+.fuwu span {
+    display: block;
+}
+.fuwu span:first-child {
+    width: 138px;
+}
+.yans {
+    font-weight: bold;
+    color: #fd6e4b;
+}
+.fuwu1 {
+    padding: 15px 20px;
+}
+.fuwu1 div {
+    font-size: 24px;
+    color: #333333;
+    line-height: 50px;
+    display: -webkit-flex;
+    -webkit-flex-flow: row;
+    display: flex;
+    flex-flow: row;
+}
+.fuwu1 span {
+    display: block;
+}
+.fuwu1 div span:first-child {
+    width: 138px;
+}

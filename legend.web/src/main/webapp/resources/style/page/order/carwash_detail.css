@@ -1,0 +1,33 @@
+
+.qxy_form .qxy_line{}
+.btn_center p{line-height: 30px;}
+.qxy_form .form_row{margin-bottom: 0;}
+/*工单编号 start*/
+.qxy_form .order_sn {padding-left: 10px;margin-bottom: 20px;color: #999;}
+.qxy_form .order_sn_header {padding:0 25px 0 25px;color: #999;}
+/*.order_sn span{margin-right: 50px;}*/
+/*工单编号 end*/
+
+/*照片上传 start*/
+.img_row{padding-left: 10px;padding-bottom: 10px;padding-top: 10px;}
+/*照片上传 end*/
+
+.img_row p{}
+/*图片添加按钮 start*/
+.file_btn{opacity: 0;}
+.img_add_btn_box{border: 1px dashed #dcdcdc;background: #fff url(../../img/page/member/img_add_btn.png) no-repeat center ;cursor: pointer;border-radius: 0;}
+.img_add_btn_box:hover{box-shadow: 0 0 8px #ccc;background: #fff url(../../img/page/member/img_add_btn.png) no-repeat center ;}
+.img_add_btn input{cursor: pointer;}
+.uploadifive-queue{display: none;}
+.img_add_btn{background: #fff url(../../img/page/member/img_add_btn.png) no-repeat center ;border-radius: 0;border:none;}
+.uploadifive-button:hover{background: none;}
+/*图片添加按钮 end*/
+
+/*图片盒子样式 start*/
+.img_box .img_item{float: left; width: 120px; height:120px;margin-right: 20px; position: relative; margin-top: 10px;}
+.img_item_inner{width: 100%;height:120px;border: 1px solid #dcdcdc;background: #fff;}
+.img_del_btn{position: absolute;width: 20px;height: 20px;background: url(../../img/page/member/img_del_btn.png) no-repeat center ;top:-10px;right:-10px;}
+.img_item:hover{box-shadow: 0 0 8px #ccc;}
+/*图片盒子样式 end*/
+
+.order_invalid{background: url("../../img/page/order/order_invalid.png") no-repeat -40px -40px;}

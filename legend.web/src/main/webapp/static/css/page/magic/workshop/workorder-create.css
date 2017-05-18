@@ -1,0 +1,32 @@
+/**
+ * zmx 2016-07-04
+ * 维修工单查询页面
+ */
+/*表单内容*/
+.form-box{ background: #f7f7f7; padding:5px 15px 15px 15px; border: 1px solid #e8e8e8;}
+.form-box .form-label{ width: 105px;}
+.form-box .form-item{ width: 145px;}
+.form-box .service-width{ width: 435px;}
+/*服务项目*/
+.project-box{ background: #fff; margin-top: 20px; border: 1px solid #dcdcdc; padding: 10px;}
+.project-title{ height: 40px; line-height: 40px; font-weight: bold;}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{ background: #f9f9f9;}
+.cost-box{ margin-top: 20px;}
+.cost{ line-height: 25px;}
+.max-text{ max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+/*选项卡*/
+.tab-box{background: #fff; margin-top: 20px; border: 1px solid #dcdcdc; border-top: none;}
+.tab{height: 38px;background: #fff;border-bottom: 1px solid #ddd;}
+.tabcon{padding:20px 10px 0 10px;}
+/*按钮*/
+.btn-box{ height: 64px; padding:15px 10px 0 15px;}
+
+.yqx-table{table-layout:inherit;}
+.work-btn{ margin: 10px 0 0 10px; display: none;}
+.dispatching{ margin-top: 10px; display: none;}
+.tab-box h3{ line-height: 35px; padding-left: 20px; color: #333; font-weight: bold;}
+.form-box .time-width{ width: 650px;}
+.font-weight{ font-weight: bold;}
+#tabCon .tab-item{ width: inherit; padding: 0 20px;}
+.workTime{ width: 80px;}
+.input-width{ width: 150px;}

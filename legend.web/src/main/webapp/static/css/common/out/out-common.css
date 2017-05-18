@@ -1,0 +1,172 @@
+/**
+ * 出库管理公共样式
+ * zmx 2016-08-25
+ */
+.order-right {
+    width: 823px;
+}
+
+/*
+ * 表单主内容区 start
+ */
+.order-head {
+    margin-bottom: 10px;
+}
+
+.order-head .headline {
+    line-height: 45px;
+}
+
+.order-row {
+    margin: 0 -15px;
+}
+
+.order-group {
+    padding: 15px 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.order-group:last-child {
+    border-bottom: none;
+}
+
+/* 表单主内容区 end */
+
+.yqx-table .text-r {
+    text-align: right;
+}
+
+.yqx-table .text-l {
+    text-align: left;
+}
+
+.yqx-table .text-c {
+    text-align: center;
+}
+
+.green {
+    color: #7fa700;
+}
+
+.red {
+    color: #f55d5e;
+}
+
+.grey {
+    color: #666;
+}
+
+/*印章公共样式 start*/
+.seal, .seal-2 {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: url("../../../img/page/order/orderSeal.png") no-repeat;
+}
+
+/*待报价 orderStatus='CJDD'*/
+.no-quoted {
+    background-position: 0 0;
+}
+
+/*已报价 orderStatus='DDBJ'*/
+.quoted {
+    background-position: -121px 0;
+}
+
+/*已派工 orderStatus='FPDD ,DDSG'*/
+.dispatching {
+    background-position: 0 -119px;
+}
+
+/*已完工 orderStatus='DDWC'*/
+.finished {
+    background-position: -130px -119px;
+}
+
+/*待结算 pc和app规则：orderStatus='CJDD,DDWC'*/
+.no-settlement {
+    background-position: 0 -236px;
+}
+
+/*已挂帐 orderStatus='DDYFK' pay_status=1*/
+.sign {
+    background-position: -134px -237px;
+}
+
+/*已结清 orderStatus='DDYFK' pay_status=2*/
+.settlement {
+    background-position: 0 -348px;
+}
+
+/*无效 orderStatus='WXDD'*/
+.invalid {
+    background-position: -140px -348px;
+}
+
+.seal-2 {
+    background: url("../../../img/page/order/order-status-2.png") no-repeat;
+    height: 106px;
+}
+
+.seal-2.yzf {
+    background-position: -110px 0;
+}
+
+/*印章公共样式 end*/
+
+.weight {
+    font-weight: bold;
+}
+
+.black {
+    color: #000;
+}
+
+.yqx-table td {
+    line-height: 20px;
+}
+
+.yqx-table .ellipsis-1 {
+    height: 20px;
+    line-height: 20px;
+}
+
+.yqx-table .ellipsis-2 {
+    max-height: 36px;
+    line-height: 20px;
+    white-space: normal;
+}
+
+/* 表格列公共样式 */
+.tc-checkbox {
+    width: 32px;
+}
+
+.tc-price {
+    width: 80px;
+}
+
+.tc-date {
+    width: 90px;
+}
+
+.tc-datetime {
+    width: 102px;
+}
+
+.tc-seq {
+    width: 60px;
+}
+
+/* form 单位 */
+.has-unit {
+    padding-right: 50px;
+}
+
+.has-unit .fa {
+    width: 50px;
+    border-left: none;
+}

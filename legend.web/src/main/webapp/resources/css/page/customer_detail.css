@@ -1,0 +1,273 @@
+/* css 客户详情 */
+
+.d_top {
+    height: 52px;
+    padding-top: 30px;
+}
+.d_top li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.d_top li.djzk {
+    float: right;
+    width: 90px;
+    background: #8fb027;
+    margin-right: 0;
+}
+.khxx {
+    border: 1px solid #cdcdcd;
+    padding-bottom: 30px;
+    background: #f9f9f9;
+    margin-bottom: 30px;
+    position: relative;
+}
+.khxx h2 {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #efefef;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 14px;
+}
+.kh_xc > li {
+    width: 50%;
+    float: left;
+    line-height: 37px;
+    padding-top: 20px;
+}
+.xxqz {
+    display: inline-block;
+    width: 72px;
+    margin-left: 20px;
+}
+.xxsel {
+    width: 367px;
+    height: 37px;
+    line-height: 37px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.xxtxt {
+    width: 353px;
+    height: 39px;
+    line-height: 39px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+.xxtxx {
+    width: 317px;
+    height: 39px;
+    line-height: 39px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+.xxtxb {
+    width: 250px;
+    height: 37px;
+    line-height: 37px;
+    background: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+div.telBox {
+    float:left;
+    width:856px;
+}
+p.tel {
+    width:419px;
+    float:left;
+    color:#000;
+}
+span.tName {
+    margin-right:30px;
+}
+.jcbh {
+    border: 1px solid #cdcdcd;
+    background: #f9f9f9;
+    margin-bottom: 30px;
+}
+.jcbh h2 {
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #cdcdcd;
+    background: #d7e4e4 url("../../images/rjj.gif") no-repeat 950px;
+}
+.jcbh h2 a {
+    display: block;
+    width: 958px;
+    height: 100%;
+    padding-left: 20px;
+    font-size: 14px;
+}
+.jcbh h3 {
+    display: block;
+    width: 958px;
+    height: 100%;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.jc_list {
+    padding-top: 20px;
+    width: 100%;
+}
+.jc_list li {
+    display: block;
+    width: 100%;
+    line-height: 37px;
+}
+.jc_left {
+    width: 92px;
+    float: left;
+    text-align: center;
+}
+.jc_right {
+    float: right;
+    width: 886px;
+    overflow: hidden;
+}
+.jc_right span {
+    float: left;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    padding: 0 13px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+.jc_right span.current {
+    border: 1px solid #fa4837;
+    color: #fa4837;
+}
+.jc_right .detail {
+    margin-left: 20px;
+}
+.jc_line {
+    border-top: 1px dotted #aebdc7;
+    padding: 10px 0;
+}
+
+.khxx .more {
+    background-image: url("../../images/mj1.gif");
+}
+.morebut {
+    width: 80px;
+    height: 22px;
+    line-height: 21px;
+    color: #c9c9c9;
+    cursor: pointer;
+    padding-left: 18px;
+    border: 1px solid #cdcdcd;
+    border-top: none;
+    background: #f9f9f9 url("../../images/mj.gif") no-repeat 70px;
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    margin-left: -50px;
+}
+.kh_xc {
+    height: 170px;
+    overflow: hidden;
+}
+.kh_xc li {
+	height: 30px;
+}
+.his_tbl {
+    margin: 15px;
+    font-size: 14px;
+}
+.his_tbl th, .his_tbl td {
+    /*height: 30px;*/
+    line-height: 1.5;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #e4e4e4;
+    word-break: break-all;
+}
+.his_tbl .t1 {
+    width: 250px;
+}
+.his_tbl .t2 {
+    width: 500px;
+}
+.his_tbl .t3 {
+    width: 100px;
+}
+.his_tbl .t4 {
+    width: 100px;
+}
+
+/*-----车型改造后新加的css start-----*/
+.carType_btn{
+  font-size: 14px;
+  color: #666;
+  padding: 0 16px;
+  height: 39px;
+  line-height: 39px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  border-color: #c1c1c1;
+  background: #f7f7f7;
+  background: linear-gradient(top,#fff,#f5f5f5);
+  background: -ms-linear-gradient(top,#fff,#f5f5f5);
+  background: -moz-linear-gradient(top,#fff,#f5f5f5);
+  background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f5f5f5));
+  text-align: center;
+  margin-left: 10px;    
+}
+.kh_xc > li .qxy_input_downlist{left:94px;}
+/*-----车型改造后新加的css start-----*/
+
+/** 工单历史央视－－*/
+
+.bx_cont {
+    padding: 5px 0 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.bx_cont table {
+    background: #FFFFFF;
+}
+
+.bx_cont table th, .bx_cont table td {
+    padding: 10px 14px;
+    white-space: nowrap;
+    text-align: center;
+    color: #333333;
+    border: 1px solid #cdcdcd;
+}
+
+.bx_cont table th {
+    font-size: 14px;
+}
+.qxy_search_form .advanced_search:before{
+    border:none;
+}

@@ -1,0 +1,111 @@
+/*
+ * by zmx 2016/08/18
+ * 生产线管理
+*/
+
+.title{
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Microsoft Yahei", "微软雅黑";
+}
+.production-table{
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    border-top: 1px solid #d6d6d6;
+}
+.yqx-table td a{
+    text-decoration: underline;
+}
+.color-blue{
+    color: #009fed;
+}
+.color-green{
+    color: #80a61e;
+}
+.color-red{
+    color: #f35f62;
+}
+.yqx-table>tbody>tr:hover>td, .yqx-table>tr:hover>td {
+    background: #ebf1cc;
+}
+.max-width{
+    max-width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*弹窗样式 start*/
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{
+    text-align: center;
+}
+.form-box .form-label{
+    width: 60px;
+    vertical-align: top;
+    padding-top: 10px;
+}
+.form-box .form-item{
+    width: 340px;
+    margin-bottom: 10px;
+}
+.form-item-box{
+    display: inline-block;
+    width: 380px;
+    text-align: left;
+}
+.form-item-box a{
+   line-height: 30px;
+    text-decoration: underline;
+    margin-left: 8px;
+}
+.form-item-box a.color-grey{
+    color: #666;
+}
+.form-item-box a.color-green{
+    color: #80a61e;
+}
+.dialog-btn-box{
+    border-top:1px solid #ddd;
+    padding: 18px 0;
+}
+.dialog-con .form-box{
+    text-align: left;
+}
+.add-team,.Z-scheduling-add{
+    vertical-align: top;
+    line-height: 38px;
+    text-decoration: underline;
+}
+.add-team:hover{
+    text-decoration: underline;
+}
+.form-box .form-item-quick{
+    width: 160px;
+}
+.layui-layer-page .layui-layer-content{
+    overflow: inherit;
+}
+.line-title{
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+}
+.dialog-con-box{
+    height: 300px;
+    overflow-y: scroll;
+}
+.con-detail{
+    width: 510px;
+    height:300px;
+    overflow: auto;
+    padding: 10px;
+}
+/*弹窗样式 end*/

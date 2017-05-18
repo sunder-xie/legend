@@ -1,0 +1,109 @@
+.order-head{
+    line-height: 45px;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 14px;
+}
+.order-detail{
+    background-color: white;
+    border: 1px solid #cdcdcd;
+    font-family: "Microsoft Yahei", "微软雅黑";
+}
+.order-info{
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 16px 0 0 10px;
+    position: relative;
+}
+.order-info>div{
+    margin-bottom: 22px;
+}
+.inline{
+    display: inline-block;
+}
+.w245{
+    width: 245px;
+}
+.w160{
+    width: 160px;
+}
+.w130{
+    width: 130px;
+}
+
+/*服务项目*/
+.project-box{
+    padding: 10px;
+}
+.project-title{
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{
+    background: #f9f9f9;
+}
+.cost-box{
+    margin-top: 20px;
+}
+.cost{
+    line-height: 25px;
+}
+.max-text{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*按钮*/
+.button{
+    padding: 0 10px 10px 10px;
+}
+.mr10{
+    margin-right: 10px;
+}
+
+.dialog-break{ margin: 28px 0;}
+.choose{
+    line-height: 100px;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+}
+
+.break-reason{
+    margin-top: 20px;
+}
+.break-reason .form-item{
+    width: 165px;
+}
+.remark{
+    height: 36px;
+}
+.replacement-box h3{height: 30px; line-height: 30px; font-weight: bold; padding-left: 20px;}
+.replacement-box li{ background: #f0f0f0; height: 30px; line-height: 30px; color: #333; padding-left: 10px;}
+
+.grey{
+    background-color: #999;
+}
+.status-image{
+    width: 110px;
+    height: 106px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.image-dsg{
+    background: url("../../../../img/page/magic/image-dsg.png");
+}
+.image-sgz{
+    background: url("../../../../img/page/magic/image-sgz.png");
+}
+.image-sgzd{
+    background: url("../../../../img/page/magic/image-sgzd.png");
+}
+.image-ywg{
+    background: url("../../../../img/page/magic/image-ywg.png");
+}
+.overflow{
+    overflow-x: auto;
+}

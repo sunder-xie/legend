@@ -1,0 +1,155 @@
+
+.perf-content .form .yqx-input{
+    padding-right: 30px;
+}
+
+.perf-content .form .form-item>.fa {
+    height: 30px;
+    line-height: 30px;
+}
+
+.perf-content .form .form-date {
+    width: 230px;
+    height: 30px;
+    margin: 0 10px 0 8px;
+}
+
+.perf-content .form {
+    margin: 0 10px;
+}
+
+.rule-box {
+    position: relative;
+    margin: 10px 8px 0 0;
+}
+
+.rule-box:hover .c-question-i {
+    background-position: -22px 0;
+}
+
+.rule-box:hover .rule-detail:hover {
+    color: #607b0a;
+}
+
+.rule-detail {
+    display: inline-block;
+    margin-left: 13px;
+    margin-right: 5px;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: initial;
+}
+
+.rule-detail-tips {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    background: #fff;
+    max-width: 418px;
+    min-width: 157px;
+    white-space: nowrap;
+    z-index: 101;
+    font-family: MicrosoftYahei, SimHei, Tahoma, sans-serif;
+}
+
+.rule-detail-tips .tips-box {
+    padding: 12px 30px 12px 12px;
+    max-height: 428px;
+    overflow-y: auto;
+}
+.rule-detail-tips .info {
+    color: #666;
+    padding-left: 0;
+}
+
+.rule-detail-tips .month {
+    color: #000;
+}
+
+.rule-detail-tips .angle {
+    position: absolute;
+    display: inline-block;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid #fff;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    top: -14px;
+    right: 75px;
+}
+
+.rule-detail-tips h4 {
+    margin-bottom: 14px;
+    font-size: 12px;
+}
+
+.rule-detail-tips p {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.rule-detail-tips .rate {
+    color: #fd461e;
+    font-weight: 700;
+}
+
+.rule-detail-tips p:last-child {
+    margin: 0;
+}
+
+.detail {
+    font-size: 12px;
+    color: #999;
+}
+
+.perf-content .show-grid {
+    margin: 0;
+    padding: 19px 0 19px 12px;
+}
+
+
+/* 业绩表格 container start */
+.perf-content .container-header {
+    height: 45px;
+    padding-left: 10px;
+    border-bottom: 1px solid #ddd;
+    line-height: 44px;
+}
+
+.container-list .yqx-table th {
+    font-size: 14px;
+}
+/* 业绩表格 container end */
+.perf-content .yqx-btn {
+    height: 30px;
+    line-height: 28px;
+}
+
+.perf-content button {
+    font-family: Simsun,Tahoma,Arial,Helvetica Neue,Hiragino Sans GB,sans-serif;
+}
+
+.perf-content .headline {
+    margin: 2px 0 10px;
+}
+.yqx-input {
+    width: 100%;
+    height: 30px;
+}
+/* 表格 */
+.perf-content .yqx-table th {
+    background: #f2feca;
+}
+
+.table-header-icon {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: 0 6px 3px 0;
+    background: url('../../../../../img/page/report/statistics/staff/table-header-icon.png');
+    vertical-align: middle;
+}
+
+.export-box {
+    padding-right: 10px;
+}

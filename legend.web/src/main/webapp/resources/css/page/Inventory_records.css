@@ -1,0 +1,101 @@
+.xinxi_title{
+    clear: both;
+    width:980px;
+    height: 45px;
+    margin-top: 20px;
+    background: #d7d7d7;
+}
+.title_dingdan,.title_quejian{
+    display: block;
+    float:left;
+    width: 140px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: bold;
+}
+.title_quejian{
+    background: url(../../images/black_dingdan.gif) no-repeat;
+    color: white;
+}
+.fanhui{
+    float: right;
+    width: 105px;
+    height: 35px;
+    margin-top:5px;
+    margin-right:10px;
+    border:1px solid #c1c1c1;
+    cursor: pointer;
+}
+.main{
+    margin-top:20px;
+    margin-bottom:20px;
+    width:978px;
+    border: 1px solid #cdcdcd;
+}
+.title_head,.nrul,.nrul_2{
+    text-align:center;
+    list-style-type: none;
+    margin:0 0 0 10px;
+}
+.title_head li,.nrul li,.nrul_2 li{
+    display: block;
+    float: left;
+    color:#666666;
+    font-weight:bold;
+}
+.req_head{
+    height: 37px;
+    border-bottom: 1px solid #cdcdcd;
+    line-height: 37px;
+}
+.neirong{
+    background-color:#f9f9f9;
+}
+.nrul,.nrul_2{
+    height:40px;
+    width:954px;
+    margin-top:0;
+    /*margin-left:10px;*/
+    padding-top:10px;
+    border-bottom:1px dashed #aebdc7;
+}
+.nrul_2{
+    border-bottom: none;
+}
+.nrul li,.nrul_2 li{
+    line-height:37px;
+    text-align: center;
+    font-weight:normal;
+}
+.nr_d{
+    width:170px;
+}
+.nr_f{
+    width:180px;
+}
+.nr_c,.nr_n,.nr_z,.nr_z_2{
+    width:150px;
+}
+.nr_cz,.nr_cz_2{
+   width:120px;
+}
+.sc_or_dl{
+    color:#1c32bb;
+    white-space: nowrap;
+}
+.sc,.dl,.check_data{
+    cursor: pointer;
+}
+.pc{
+    width:170px;
+}
+.pk{
+    width:93px;
+}
+.pt{
+    width:147px;
+}
+.p_cz{
+    width:100px
+}

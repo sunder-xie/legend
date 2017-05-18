@@ -1,0 +1,20 @@
+.qxy_custom_part_checkbox {
+	
+}
+
+.qxy_custom_part_checkbox label {
+	width: 260px;
+}
+
+.qxy_custom_part_checkbox label input {
+	margin: 0 10px 0;
+}
+
+.dlg_overflow {
+	overflow-y: scroll;
+	padding-right: 15px;
+}
+
+.dlg_overflow .btn_right {
+	float: right
+}

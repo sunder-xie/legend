@@ -1,0 +1,168 @@
+/*页面的公共样式 开始*/
+a{
+    cursor: pointer;
+}
+.right{
+    float: right;
+    width: 825px;
+}
+.right p.big-title{
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+}
+.smart-mask{
+    float: right;
+    background: url("../../../img/page/smart/smartMask.png") no-repeat center;
+    width: 76px;
+    height: 30px;
+    margin-top: 12px;
+    margin-right: 2px;
+}
+.process-nav-true{
+    height: 40px;
+}
+.form{
+    box-sizing: content-box;
+}
+body .dis{
+    display: none;
+}
+.chooseScheme,.carInfo{
+    display: none;
+}
+.time-tips{
+     color: #999;
+    display: inline-block;
+    line-height: 45px;
+    height: 44px;
+}
+.time-tips-red{
+    color: #f55d5e;
+}
+/*页面的公共样式 结束*/
+
+/*流程图的样式 开始*/
+.process-nav-true .nav_process li{
+    height: 39px;
+}
+/*流程图的样式 结束*/
+
+
+/*智能开单第一页头部样式 开始*/
+.smart-header-box{
+    position: relative;
+    width: 823px;
+    height: 60px;
+    line-height: 59px;
+    background-color: #edf3d9;
+    border-left: 1px #dddddd solid;
+    border-right: 1px #dddddd solid;
+    border-top: 1px #dddddd solid;
+}
+.smart-header-left{
+    float: left;
+    margin-left: 70px;
+}
+.smart-header-right{
+    float: right;
+    margin-right: 10px;
+}
+.smart-header-right a{
+    text-decoration: underline;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.smart-word{
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    font-size: 14px;
+}
+.smart-header-box .img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 66px;
+    height: 62px;
+    background: url("../../../img/page/smart/sharep.png") no-repeat 0 0;
+}
+.smart-header-box .span-color{
+    color: #666666;
+}
+.remain-time-box{
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.remain-time{
+ font-style: normal;
+    color: #ff7800;
+    font-weight: bold;
+}
+.smart-header-right .want-recharge{
+    margin: 0;
+}
+/*智能开单第一页头部样式 结束*/
+
+
+/*智能开单第一页样式 开始*/
+.enter{
+    width: 823px;
+    height: 205px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+.js-search-button,.want-recharge{
+    width: 88px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #fa7b7c;
+    color: #ffffff;
+    border: 1px solid #f55d5e;
+    border-radius: 2px;
+    margin:5px 0 0 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.js-search-button:hover,.want-recharge:hover{
+    background-color: #ff8d8e;
+}
+.js-search-button:active,.want-recharge:active{
+    background-color: #f35f62;
+}
+.s_up{
+    background: url("../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px;
+}
+.s_down{
+    background: url("../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px;
+}
+input.red_border{
+    border: #f50f14 1px solid;
+}
+div.red_border{
+    border: #f50f14 1px solid;
+}
+
+/*提示*/
+.pop-tips {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    font-style: normal;
+    text-align: center;
+    color: #159;
+    background: #e8e8e8;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 9px;
+    margin-left: 5px;
+}
+/*智能开单第一页样式 结束*/

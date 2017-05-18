@@ -1,0 +1,72 @@
+
+.qxy_form .form_row{opacity: 1;}
+.qxy_form .form_item .field_box{width:auto;}
+.qxy_group .group_head h3{border-right:none;}
+.qxy_form .form_item .w330{width:330px;}
+.qxy_form .form_item .w364{width:364px;}
+.qxy_form .form_item .w235{width:235px;}
+.qxy_form .form_item .w268{width: 268px;}
+.qxy_form .form_item .w838{width:838px;}
+.qxy_form .form_item .w100{width:100px!important;}
+.qxy_form .form_item .w125{width:125px!important;}
+.btn_center{text-align: center;}
+.qxy_form .qxy_line{border-bottom:1px solid #dfdfdf;margin-bottom: 20px;}
+.qxy_form .form_item .label_box {width:85px;}
+.padding85{padding-left: 85px;}
+.margin-left40{margin-left: 40px;}
+.margin-left80{margin-left: 80px;}
+td .qxy_input_downlist{left:-1px;top:38px;}
+
+/*表格公共样式 start*/
+table th.border_left_none,
+table td.border_left_none{border-left:none !important;}
+table th.border_bottom_none,
+table td.border_bottom_none{border-bottom:none !important;}
+table th.border_left_none,
+table td.border_left_none{border-left:none !important;}
+table th.background_none,
+table td.background_none{background:none !important;}
+table th.padding_none,
+table td.padding_none{padding: 0 !important;}
+table th.text_align_center,
+table td.text_align_center{text-align: center !important;}
+/*表格公共样式 end*/
+
+/* div被选中公共样式 start */
+.check_box{}
+.check_box p{float: left;margin-right: 10px;border-radius: 3px;cursor: pointer;background: #eeeeee;border:1px solid #cecece;margin-bottom: 10px;position: relative;}
+.check_box .checked{border:1px solid #89b11a;background-color: #fff;color: #111;}
+.check_box .checked:after{content: "";position: absolute;width: 19px;height:17px;background: url(../img/page/order/selected.png) no-repeat;right:0;bottom:0;}
+/* div被选中公共样式 end */
+
+/* 优惠券公共样式 start */
+.coupon_check_box p{height: 40px;width: 163px;background: url(../../img/common/quan.jpg) no-repeat 10px center;padding: 10px 5px 8px 50px;}
+.coupon_check_box p span{float: left;display: block;}
+.coupon_check_box p span.inner1{width: 120px;border-right: 1px dashed #cecece;}
+.coupon_check_box p span.inner2{width: 40px;line-height: 40px;text-align: center;}
+.coupon_check_box p span em{display:block;font-style: normal;width:100%;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;height: 20px;line-height: 20px;}
+.coupon_check_box p span em.service_name{color: #ff6c00;}
+/* 优惠券公共样式 end */
+
+/*带单位的input start*/
+.unit_input{float: left;}
+.unit_input input{height:35px;width: 80px;line-height:35px;vertical-align: top;background: #fff;border-radius: 3px 0 0 3px;border:1px solid #c9c9c9;padding: 0 8px;}
+.unit_input input[disabled]{background: #eee;}
+.unit_input span{display: inline-block; height:35px;width:35px;border-radius: 0 3px 3px 0; border:1px solid #c9c9c9;border-left:none;vertical-align: top;background: #fff;line-height: 35px;text-align: center;}
+/*带单位的input end*/
+
+/*弹框公共样式 start*/
+.dialog_title{background: #f5f2e6;text-align: center;height:40px;font-size: 18px;font-weight: 900;line-height: 40px;padding-top: 10px;}
+.dialog_btn .qxy_btn{margin: 30px 10px auto 10px;padding: 10px 60px;}
+/*弹框公共样式 end*/
+
+/*选择车型 start*/
+.qxy_form .car_type_btn{margin:0;margin-left: 10px;}
+
+/*必填字段*/
+.must{font-size: 16px;float: right;margin-right: 5px;color: red;vertical-align: middle;}
+th .must{float: none;height:11px;line-height: 11px;display: inline-block;}
+
+/*面包nav*/
+.mianbao_nav{font-size: 14px;font-weight: 900;padding-left: 15px;}
+.mianbao_nav a{font-weight: 900;}

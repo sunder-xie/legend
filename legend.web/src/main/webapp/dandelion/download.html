@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>淘汽云修App为爱保驾护航</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="shortcut icon" href="http://tqmall-dandelion-img.oss-cn-hangzhou.aliyuncs.com/images/dandelion/logo/logo_400x400.png?t=1"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="../resources/js/common/legend_common.js"></script>
+    <style type="text/css">
+        .flow {
+            display: block;
+        }
+        .flow1 {
+            height: 942px;
+        }
+        .flow2 {
+            height: 1363px;
+        }
+        .flow3 {
+            height: 800px;
+        }
+        .owner-box {
+            line-height: 55px;
+            padding: 26px 0 0 113px;
+            font-size: 28px;
+            color: #fff;
+        }
+        .B-logo {
+            display: block;
+            width: 55px;
+            height: 55px;
+            margin-left: -78px;
+            background: url(images/download/B_logo.png) center no-repeat;
+            float: left;
+        }
+        .B-btn {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            width: 179px;
+            height: 60px;
+            margin-top: -30px;
+            font-size: 23px;
+            color: #119bf6;
+            text-align: center;
+            background: rgba(0, 0, 0, 0);
+            border: 2px solid #119bf6;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+<!--<div class="loading">0%</div>-->
+<div style="display: none"><img src="http://tqmall-dandelion-img.oss-cn-hangzhou.aliyuncs.com/images/dandelion/logo/logo_400x400.png?t=1"/></div>
+<div class="jiazai"><img src="images/load.png"></div>
+<div id="wrapper" class="wrapper">
+    <img class="flow flow1" src="images/download/flow_1.jpg?v=1.0"/>
+    <img class="flow flow2" src="images/download/flow_2.jpg"/>
+    <img class="flow flow3" src="images/download/flow_3.jpg"/>
+</div>
+
+<div id="sidebar" class="sidebar">
+    <div class="owner-box"><i class="B-logo"></i>淘汽云修 车主App</div>
+    <button class="download-btn B-btn">点击下载</button>
+</div>
+<div class="tips-bg">
+    <img src="images/tips.png" />
+</div>
+</body>
+<script src="js/lib/weixin/jweixin.min.js"></script>
+<script src="js/lib/zepto/zepto.min.js"></script>
+<script src="js/lib/crypto/sha.js"></script>
+<script src="js/lib/template.js"></script>
+<script src="js/Dao.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?177aadfd52500674827db74ca8f51989";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    ;(function() {
+        var UA = window.navigator.userAgent.toLowerCase();
+        var shareLink = location.href,
+            imgUrl = 'http://tqmall-dandelion-img.oss-cn-hangzhou.aliyuncs.com/images/dandelion/logo/logo_400x400.png?t=1';
+
+        App.share("淘汽云修App为爱保驾护航", "我们珍惜每一次为您服务的机会\n每一滴汗水只为您一份满意的笑容", imgUrl, shareLink);
+
+        if(!UA.match(/Android|Mobile|iOS|iPhone/i)) {
+            location.href = "http://www.yunqixiu.com/legend/portal/dandelion/download";
+        }
+    })();
+
+    App.init = function() {
+        var code = App.pageParams["code"];
+        $(".invite-code").text(code);
+
+        $(document).on("tap", ".download-btn", function() {
+            App.jump2download();
+        });
+    };
+
+    function view() {
+        App.setTitle('淘汽云修App为爱保驾护航');
+        this.pageParams = Dao.parseUrl();
+
+        App.init();
+    }
+
+//    App.wxmask = function() {
+//        var UA = window.navigator.userAgent.toLowerCase();
+//        if(UA.match(/MicroMessenger/i) == 'micromessenger') {
+//            var $tips_bg = $('.tips-bg');
+//            if (UA.match(/android/i)) {
+//                $tips_bg.find('img').attr('src', 'images/tips_android.png');
+//            }
+//            $tips_bg.css('width', $(document).width());
+//            $tips_bg.css('height', $(document).height()).show(2000);
+//        }
+//    };
+
+    App.changeSize = function () {
+        var page = document.body || document.documentElement;
+        window.orientation;
+        var phoneWidth = parseInt( page.clientWidth );
+        var phoneScale = phoneWidth / 640;
+        $('#wrapper')[0].style.cssText = '-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scale(' + phoneScale + ');transform:scale(' + phoneScale + ');';
+        $('#sidebar')[0].style.cssText = '-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scale(' + phoneScale + ');transform:scale(' + phoneScale + ');';
+//        App.wxmask();
+    };
+
+    $(function () {
+        App.changeSize();
+//        window.screen.lockOrientation(['portrait-primary','portrait-secondary']);
+        window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', App.changeSize);
+        //图片预加载
+        var rarr = [
+                    'images/download/flow_1.jpg',
+                    'images/download/flow_2.jpg',
+                    'images/download/flow_3.jpg'
+                ],
+                rl = rarr.length,
+                rnum = 0;
+        for (var i = 0; i < rl; i++) {
+            var img = new Image();
+            img.src = rarr[i];
+            img.onload = function () {
+                if (++rnum >= rl) {
+                    App.run(view);
+                }
+            };
+        }
+    });
+</script>
+</html>

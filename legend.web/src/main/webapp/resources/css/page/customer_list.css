@@ -1,0 +1,291 @@
+/* css 客户列表 */
+.checkser {
+    height: 36px;
+    line-height: 36px;
+    width: 830px;
+    margin: 32px auto;
+    font-size: 18px;
+    color: #383838;
+}
+
+.khsear {
+    width: 625px;
+    height: 34px;
+    line-height: 34px;
+    background: #fff;
+    border: 1px solid #dad9d9;
+    border-right: none;
+    padding-left: 10px;
+    /*color: #a8a8a8;*/
+    margin-left: 12px;
+}
+
+.khbut {
+    width: 43px;
+    height: 36px;
+    border: 1px solid #dad9d9;
+    border-left: none;
+    background: #fff url("../../images/kht.gif") no-repeat left;
+}
+
+.kh_box {
+    height: 45px;
+    overflow: hidden;
+    /*padding-top: 20px;*/
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.kh_bleft {
+    float: left;
+    padding-left: 64px;
+}
+
+.kh_bleft a {
+    margin-right: 10px;
+    display: inline-block;
+    width: 86px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+}
+
+
+.kh_bleft a.current {
+    color: #FFF;
+    background: #434343;
+}
+
+.kh_next{
+    width: 977px;
+    height: 45px;
+    overflow: hidden;
+    background: #d7d7d7;
+    margin-bottom: 15px;
+}
+
+.kh_bright {
+    text-align: right;
+    padding-top: 6px;
+    line-height: 33px;
+    float: right;
+    margin-right: 12px;
+}
+
+.kh_dao {
+    width: 100px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    display: inline-block;
+    background: #f8f8f8;
+    border: 1px solid #c1c1c1;
+    margin-left: 12px;
+}
+
+.kh_list {
+    width: 990px;
+    position: relative;
+}
+
+.kh_list li {
+    width: 235px;
+    height: 220px;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #cdcdcd;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.kh_litop {
+    
+    border-bottom: 1px dotted #aebdc7;
+    line-height: 22px;
+    padding: 8px 15px;
+}
+
+.kh_litop .tit {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.kh_litop .cInfo {
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.kh_cc {
+    padding: 15px 0 0 15px;
+    line-height: 18px;
+}
+
+.delete-btn {
+    color: #fa4837;
+    display: none;
+    /*float:right;*/
+    position: absolute;
+    left: 193px;
+    top: 10px;
+    padding: 12px 15px 0 0;
+}
+
+.customer_item:hover {
+    border: 1px solid #fa4837;
+}
+
+.customer_item:hover .delete-btn {
+    display: block;
+}
+
+.ltop {
+    padding: 15px 0;
+    position: relative;
+    cursor: pointer;
+    /*border-bottom: 1px dotted #aebdc7;*/
+}
+
+.kh_boxbc {
+    border-top: 1px solid #fbfbfb;
+    padding-top: 20px;
+}
+
+.kh_tap {
+    padding-left: 64px;
+}
+
+.kh_tap span {
+    display: inline-block;
+    width: 86px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.kh_tap span.current {
+    color: #FFF;
+    background: #434343;
+}
+
+.kh_cha span {
+    line-height: 40px;
+    width: 64px;
+    text-align: right;
+    display: inline-block;
+    color: #111;
+    vertical-align: middle;
+}
+
+.khcha {
+    width: 785px;
+    height: 18px;
+    background: #FFF;
+    border: 1px solid #8a8a8a;
+    padding: 10px 0 10px 10px;
+    margin-right: 10px;
+}
+
+.kh_ani {
+    width: 103px;
+    height: 40px;
+    color: #FFF;
+    font-size: 14px;
+    background: #32cd32;
+}
+
+.kh_pp {
+    height: 40px;
+    /*margin-bottom: -20px;*/
+    overflow: hidden;
+}
+
+.khlss {
+    float: left;
+    width: 897px;
+    overflow: hidden;
+    height: 0;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #fbfbfb;
+    margin-top: 20px;
+}
+
+.khrss {
+    float: right;
+    width: 72px;
+    line-height: 30px;
+    background: url("../../images/xj.gif") no-repeat 58px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.krcur {
+    background-image: url("../../images/xj1.gif");
+}
+
+.khlists li {
+    width: 440px;
+    line-height: 40px;
+    margin-top: 10px;
+    float: left;
+}
+
+.khlists li span {
+    line-height: 40px;
+    width: 64px;
+    display: inline-block;
+    color: #111;
+    text-align: right;
+}
+
+.khchas {
+    width: 345px;
+    height: 18px;
+    background: #FFF;
+    border: 1px solid #dadada;
+    padding: 10px 0 10px 10px;
+    margin-right: 10px;
+}
+.d_top li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.car_model {
+    width: 100%;
+    height: 22px;
+    overflow: hidden;
+}
+
+.gd_tab{
+    margin: 0 0 20px;
+}
+
+
+/* 下线提醒弹窗样式 start */
+.dg-panel{width: 658px;height: 330px;}
+.dg-panel .dg-panel-head{height: 52px;line-height: 52px;background: #232e49;}
+.dg-panel .dg-panel-title{font-size: 16px;font-weight: 700;text-align: center;color: #fff;margin:0;}
+.dg-panel .dg-panel-body{background: #fff;}
+.dg-panel .dg-content{margin: 40px 50px;}
+.dg-panel .dg-msg{line-height: 1.4;font-size: 14px;font-weight: 700;text-align: left;color: #333;text-indent: 2em;}
+.dg-panel .dg-note{margin: 20px 40px 30px;line-height: 1.4;font-size: 12px;text-align: left;color: #666;}
+.dg-panel .dg-note2{margin: 20px 0 50px;line-height: 1.4;font-size: 14px;text-align: left;color: #0a30f1;text-indent: 2em;}
+.dg-panel .dg-btns-tool{text-align: center;}
+.dg-panel .dg-btns-tool .btn{margin-right: 5px;font-size: 14px;}
+.dg-panel .dg-btns-tool .btn:last-child{margin-right: 0;}
+.dg-panel .dg-btns-tool .btn-1:hover{color: #fff;}
+.dg-panel .dg-btns-tool .btn-2:hover{color: #666;}
+/* 下线提醒弹窗样式 end */
+

@@ -1,0 +1,43 @@
+/*
+ * zmx 2016/06/02
+ * 付款流水记录 页面样式
+*/
+
+/*标题右侧标签 start*/
+.tag{ width: 118px; height: 43px; background: #fff; border:1px dashed #ddd; margin-left: 10px; padding: 5px 10px;}
+.tag .ico{ width: 26px; height: 26px; float: left; margin: 0 12px 0 5px; background: url("../../../../img/page/settlement/pay/tag-ico.png") no-repeat;}
+.tag .ico1{ background-position: 3px 0;}
+.tag .ico2{ background-position: -28px 0;}
+.tag .ico3{ background-position: -60px 0;}
+.tag .tagcon{height: 43px; overflow: hidden; float: left;}
+.tag .tagcon .tag-title{ color: #333; line-height: 16px;}
+.tag .tagcon .tag-money{ font-family: arial, verdana, sans-serif; font-size: 14px; color: #333; font-weight: bold;}
+/*标题右侧标签 end*/
+
+/*查询 start*/
+.search-box{background: #fff;border: 1px solid #ddd;border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;padding: 10px;}
+.text-width{ width: 148px;}
+.text-conditionLike{
+    width: 165px;
+}
+.condition-btn{ display: inline-block; height: 28px; line-height: 28px; padding: 0 12px;
+    background: #f9f9f9; border:1px solid #ddd; color: #333; border-radius: 3px;vertical-align: middle;}
+.condition-active{border: 1px solid #99ba27; background: url("../../../../img/page/settlement/pay/btn-active.png") no-repeat right bottom #eaf9bb;}
+/*查询 end*/
+
+/*操作按钮 start*/
+.btn-box{height: 36px;}
+.btn-box a{line-height: 34px;color: #474747;font-size: 12px;padding: 0 10px;}
+.btn-box a:hover{color: #9fc527;}
+.btn-box a.hover{color: #9fc527;}
+.btn-box i{margin-right: 4px;}
+/*操作按钮 end*/
+
+/*表格 start*/
+.yqx-table{table-layout: auto;}
+.yqx-table td .time{ width: 60px;}
+.max-text{ max-width: 130px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+/*表格 end*/
+.red{ color: #f25e61;}
+.overflow-width{ max-width: 100px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
+.yqx-table>tbody>tr>.text-margin,.yqx-table>thead>tr>.text-margin{ padding-left: 16px;}

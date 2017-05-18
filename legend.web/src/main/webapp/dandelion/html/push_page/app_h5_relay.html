@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>淘汽云修商家版 APP</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script src="../../js/adapter.js"></script>
+    <script src="../../../resources/js/common/legend_common.js"></script>
+    <link rel="stylesheet" href="../../js/lib/iSlider/islider.css"/>
+    <style type="text/css">
+        html {font-size: 1em;height:100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight: rgba(0, 0, 0, 0);-webkit-text-size-adjust: none;overflow: -moz-scrollbars-vertical; /*强制firefox出现滑动条*/}
+        body {font-size: 0.75em;height: 100%;position: relative;background-color: #efefef;font-family: "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";}
+        body h1, body h2, body h3, body h4, body h5, body h6, body strong, body em {font-weight: normal;}
+        label {cursor: pointer;}
+        a:link, a:visited {text-decoration: none;}
+        input:focus {outline: none;}
+        input, button, select, textarea {outline: none;-webkit-appearance: none; /*强制去除表单自带的样式*/}
+        textarea {resize: none;-webkit-appearance: none; /*强制去除textarea自带的样式*/}
+        input:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px white inset;}
+        /*利用阴影来填充掉input自动填充色*/
+        textarea, input, select {background: none;border: none;margin: 0;padding: 0;}
+        a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+        u, ul, var {margin: 0;padding: 0;}
+        article, aside, footer, header, hgroup, nav, section, figure, figcaption {display: block;}
+        /*html5设置*/
+        h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub {font-size: 1em;}
+        body, input, button, select, textarea, sub {font-family: Arial, sans-serif;}
+        em, cite, address, optgroup {font-style: normal;}
+        kbd, samp, code {font-family: monospace;}
+        img, input, button, select, textarea {vertical-align: middle;outline: none;}
+        ul, ol {list-style: none;}
+        img, fieldset {border: 0;}
+        abbr, acronym {cursor: help;border-bottom: 1px dotted black;}
+        table {width: 100%;border-spacing: 0;border: 0;  }
+        table th, table td {border: 0;}
+        legend, hr {overflow: hidden;position: absolute;top: 0;left: 0;}
+        legend, hr, caption {visibility: hidden;font-size: 0;width: 0;height: 0;line-height: 0;}
+        input::-webkit-input-placeholder {color: #bdb4ad;}
+        @-webkit-keyframes seesaw {
+            0% {
+                -webkit-transform: translateY(0) translateZ(0);
+            }
+            50% {
+                -webkit-transform: translateY(0.2rem) translateZ(0);
+            }
+            100% {
+                -webkit-transform: translateY(0) translateZ(0);
+            }
+        }
+        @-webkit-keyframes seesaw1 {
+            0% {
+                -webkit-transform: rotate(180deg) translateY(0) translateZ(0);
+            }
+            50% {
+                -webkit-transform: rotate(180deg) translateY(0.2rem) translateZ(0);
+            }
+            100% {
+                -webkit-transform: rotate(180deg) translateY(0) translateZ(0);
+            }
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size: 0.2rem;
+            background: #fff;
+        }
+        .wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #sidebar {
+            position: fixed;
+            bottom: -1px;
+            left: 0;
+            width: 6.4rem;
+            /*height: 1.07rem;*/
+            height: 0.91rem;
+            background: url(../../images/nationalplay/bg.jpg) no-repeat;
+            background-size:100%;
+        }
+        .tips-bg {
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: .8;
+            z-index:100;
+        }
+        .tips-bg img {
+            width: 100%;
+        }
+        .page {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color:#fff;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .page1 {
+            background-image: url(../../images/app_h5_relay/new_page_01.jpg);
+        }
+        .page2 {
+            background-image: url(../../images/app_h5_relay/page_02.jpg);
+        }
+        .page3 {
+            background-image: url(../../images/app_h5_relay/page_03.jpg);
+        }
+        .page4 {
+            background-image: url(../../images/app_h5_relay/page_04.jpg);
+        }
+        .page5 {
+            background-image: url(../../images/app_h5_relay/page_05.jpg);
+        }
+        .page6 {
+            background-image: url(../../images/app_h5_relay/page_06.jpg);
+        }
+        .page i {
+            position: absolute;
+            left: 50%;
+            bottom: 5%;
+            display: block;
+            width: 0.52rem;
+            height: 0.26rem;
+            margin-left: -0.26rem;
+            background: url(../../images/nationalplay/arrow.png) center no-repeat;
+            background-size: contain;
+            -webkit-animation: seesaw 2s linear 0s infinite;
+            animation: seesaw 2s linear 0s infinite;
+        }
+        .page6 i {
+            bottom: auto;
+            top: 5%;
+            -webkit-animation: seesaw1 2s linear 0s infinite;
+            animation: seesaw1 2s linear 0s infinite;
+        }
+        .owner-box {
+            line-height: 0.55rem;
+            padding: 0.26rem 0 0 1.13rem;
+            font-size: 0.28rem;
+            color: #333;
+        }
+        .B-logo {
+            display: block;
+            width: 0.55rem;
+            height: 0.55rem;
+            margin-left: -0.78rem;
+            background: url(../../images/download/B_logo.png) center no-repeat;
+            background-size: contain;
+            float: left;
+        }
+        .B-btn {
+            position: absolute;
+            top: 50%;
+            right: 0.2rem;
+            width: 1.79rem;
+            height: 0.6rem;
+            margin-top: -0.26rem;
+            font-size: 0.23rem;
+            text-align: center;
+            background: url(../../images/nationalplay/download.png) top no-repeat;
+            background-size:contain;
+            outline:none;
+            border:0;
+        }
+        .download_btn{position:absolute;top:50%;left:50%;width:2rem;height:0.49rem;background:url(../../images/app_h5_relay/download_btn.png) no-repeat center;background-size:contain;margin-left:-1rem;margin-top:-1.95rem;}
+    </style>
+</head>
+
+<body>
+<img src="../../images/app_h5_relay/share_icon.png" style="position:absolute;z-index: -2;opacity: 0;width:0;height:0" alt="">
+
+<div id="wrapper" class="wrapper">
+</div>
+<div class="tips-bg">
+    <img src="../../images/tips.png" />
+</div>
+<script src="../../js/lib/zepto/zepto.min.js"></script>
+<script src="../../js/lib/iSlider/islider.js"></script>
+<script src="../../js/lib/crypto/sha.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../../js/Dao.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?177aadfd52500674827db74ca8f51989";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    Model.home = function(id, shopId, templateId, success) {
+        var url = "/pub/shop/marketing/get",
+                params = {
+                    id: id || "",
+                    shopId: shopId || "",
+                    templateId: templateId || ""
+                };
+        return Dao.getData(url, params, success);
+    };
+    var data = [{
+        content: '<div class="page page1"><a href="javascript:;" class="download_btn"></a><i></i></div>'
+    }, {
+        content: '<div class="page page2"><i></i></div>'
+    }, {
+        content: '<div class="page page3"><i></i></div>'
+    }, {
+        content: '<div class="page page4"><i></i></div>'
+    },{
+        content: '<div class="page page5"><i></i></div>'
+    },{
+        content: '<div class="page page6"><i></i></div>'
+    }];
+
+    function init() {
+        var id = App.pageParams["id"],
+                shopId = App.pageParams["shopId"],
+                templateId = App.pageParams["templateId"],
+                result,
+                imgUrl = "../../images/app_h5_relay/app_icon.png";
+        App.share("淘汽云修商家版", "", imgUrl, location.href);
+        Model.home(id, shopId, templateId, function(json) {
+            result = json;
+        });
+
+        new iSlider({
+            data: data,
+            type: 'dom',
+            dom: document.getElementById("wrapper"),
+            isVertical: true,
+            isOverspread: true
+        });
+    }
+    //苹果设备跳转到对应的 app store
+    var UA = window.navigator.userAgent.toLowerCase();
+    if(UA.match(/iPad|iOS|iPhone/i)) {
+        $('.download_btn').attr('href', 'https://itunes.apple.com/us/app/tao-qi-yun-xiu/id990531550?mt=8');
+    }
+    function view() {
+        if(!UA.match(/Android|Mobile|iOS|iPhone|iPad/i)) {
+            //pc端访问移动页下载页，跳到pc端下载页
+            location.href = BASE_PATH+"/portal/merchant/merchant_download";
+            return false;
+        }
+        this.pageParams = Dao.parseUrl();
+        init();
+    }
+    $(document).on("tap", ".download_btn", function(e) {
+        if(UA.match(/MicroMessenger/i) == 'micromessenger') {
+            var $tips_bg = $('.tips-bg');
+            if (UA.match(/android/i)=="android") {
+                $tips_bg.find('img').attr('src', '../../images/tips_android.png');
+                $tips_bg.css('height', $(document).height()).show();
+            } else {
+                $tips_bg.css('height', $(document).height()).show();
+            }
+            return false;
+        }
+        if(UA.match(/iPad|iOS|iPhone/i)) {
+            window.location.href = 'https://itunes.apple.com/us/app/tao-qi-yun-xiu/id990531550?mt=8';
+        }else{
+            window.location.href = 'http://tqmall-flash.oss-cn-hangzhou.aliyuncs.com/mace/android/tqmall-1.2-tqmall-release.apk';
+        }
+    });
+    Zepto(function() {
+        var rarr = [
+                    '../../images/app_h5_relay/new_page_01.jpg',
+                    '../../images/app_h5_relay/page_02.jpg',
+                    '../../images/app_h5_relay/page_03.jpg',
+                    '../../images/app_h5_relay/page_04.jpg',
+                    '../../images/app_h5_relay/page_05.jpg',
+                    '../../images/app_h5_relay/page_06.jpg'
+                ],
+                rl = rarr.length,
+                rnum = 0;
+        for (var i = 0; i < rl; i++) {
+            var img = new Image();
+            img.src = rarr[i];
+            img.onload = function () {
+                if (++rnum >= rl) {
+                    App.run(view);
+                }
+            };
+        }
+    });
+</script>
+</body>
+</html>

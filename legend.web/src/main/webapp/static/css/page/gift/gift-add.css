@@ -1,0 +1,56 @@
+
+.container {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+.container label {
+    margin-right: 10px;
+}
+
+.form-item>.yqx-input, .form-item>.form-item {
+    width: 85%;
+}
+
+.manager-box.form-item {
+    width: 80%;
+}
+
+.manager-box .yqx-input {
+    width: 100%;
+}
+.license-box .yqx-input {
+    width: 250px;
+}
+
+.license-box .yqx-btn {
+    padding: 0 6px;
+    margin-left: 10px;
+}
+
+.show-grid .col-6:nth-child(2) {
+    padding-left: 10px;
+}
+
+.remark-box .yqx-input {
+    width: 92.5%;
+}
+
+.form-item .width-100 {
+    width: 100%;
+}
+.must {
+    position: relative;
+}
+.must:after {
+    content: '*';
+    color: red;
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    right: -7px;
+}

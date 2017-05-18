@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- cube获取车辆统计信息 -->
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcCustomerInfoService"
+                     id="RpcCustomerInfoService" version="${dubbo.cube.version}" owner="shenyang.zhou"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcBusinessDailyService" id="rpcBusinessDailyService"
+                     version="${dubbo.cube.version}" owner="twg"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcShopInfoService" id="rpcShopInfoService"
+                     version="${dubbo.cube.version}" owner="tanghao"/>
+
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcOrderStatService" id="rpcOrderStatService"
+                     version="${dubbo.cube.version}" owner="hao.tang"/>
+    <!-- 客户分析统计接口 -->
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcCustomerAnalysisService"
+                     id="rpcCustomerAnalysisService" version="${dubbo.cube.version}" owner="jian.ma"/>
+    <!-- 客情维护统计接口 -->
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcCustomerMaintainService"
+                     id="rpcCustomerMaintainService" version="${dubbo.cube.version}" owner="jian.ma"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcBusinessMonthlyService"
+                     id="rpcBusinessMonthlyService" version="${dubbo.cube.version}" owner="jian.ma"/>
+    <!-- 集客方案：客户标签等接口-->
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcTagService"
+                     id="rpcTagService" version="${dubbo.cube.version}" owner="shenyang.zhou"/>
+    <!-- cube热门统计排序接口-->
+    <dubbo:reference interface="com.tqmall.cube.shop.provider.popularsort.RpcPopularSortService"
+                     id="rpcPopularSortService" version="${dubbo.cube.version}" owner="shenyang.zhou" />
+
+    <!--cube报表接口 -->
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcOrderInfoDetailService" id="rpcOrderInfoDetailService"
+                     version="${dubbo.cube.version}" owner="th"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcCardCouponConsumeService" id="rpcCardCouponConsumeService"
+                     version="${dubbo.cube.version}" owner="th"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcCardCouponRechargeService" id="rpcCardCouponRechargeService"
+                     version="${dubbo.cube.version}" owner="th"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcStatOrderPaymentService" id="rpcStatOrderPaymentService"
+                     version="${dubbo.cube.version}" owner="wjc"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcCarModelStatisticService" id="rpcCarModelStatisticService"
+                     version="${dubbo.cube.version}" owner="jian.ma"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcShopBusinessOverviewService" id="rpcShopBusinessOverviewService"
+                     version="${dubbo.cube.version}" owner="yiming.xin"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcEmpPercentageService" id="rpcEmpPercentageService"
+                     version="${dubbo.cube.version}" owner="hao.tang"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcPerformanceConfigService" id="rpcPerformanceConfigService"
+                     version="${dubbo.cube.version}" owner="hao.tang"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcGatherPercentageService" id="rpcGatherPercentageService"
+                     version="${dubbo.cube.version}" owner="hao.tang"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcWarehouseAnalysisService" id="rpcWarehouseAnalysisService"
+                     version="${dubbo.cube.version}" owner="dongc"/>
+
+    <dubbo:reference interface="com.tqmall.cube.magic.service.RpcStaffPerformanceService" id="rpcStaffPerformanceService" version="${dubbo.cube.version}" owner="bao.ding"/>
+    <dubbo:reference interface="com.tqmall.cube.shop.RpcGoodsPurchaseSaleStatistics" id="rpcGoodsPurchaseSaleStatistics"
+                     version="${dubbo.cube.version}" owner="jian.ma"/>
+
+    <!--集客效果-->
+    <dubbo:reference interface="com.tqmall.cube.shop.provider.marketing.gather.RpcGatherStatService" id="rpcGatherStatService" version="${dubbo.cube.version}" owner="yiming.xin"/>
+    <!--钣喷月报-物料、非物料成本/盈亏平衡-->
+    <dubbo:reference interface="com.tqmall.cube.magic.service.RpcBpCostReportService" id="rpcBpCostReportService"
+                     version="${dubbo.cube.version}" owner="shulin.zhang"/>
+
+    <!--精准营销-->
+    <dubbo:reference interface="com.tqmall.cube.shop.provider.marketing.accurate.RpcAccurateService" id="rpcAccurateService"
+                     version="${dubbo.cube.version}" owner="yiming.xin"/>
+
+    <dubbo:reference interface="com.tqmall.cube.shop.provider.report.RpcGrossProfitsService" id="rpcGrossProfitsService"
+                     version="${dubbo.cube.version}" owner="wanghui"/>
+</beans>

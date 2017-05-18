@@ -1,0 +1,145 @@
+.container .title-container {
+    margin: 0 0 10px 9px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+
+.container .title-container:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    border-left: 2px solid #999;
+    top: 0;
+    left: -9px;
+}
+.choose-box .title,
+.choose-box .btn-edit,
+.status-box i {
+    font-family: MicrosoftYahei, sans-serif;
+}
+
+.status-box, .btn-edit {
+    cursor: pointer;
+    display: inline-block;
+}
+.yqx-wrapper .choose-box {
+    padding: 0 14px 0 16px;
+    width: 480px;
+    height: 60px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    background: #eee;
+}
+
+.yqx-wrapper .container {
+    padding: 15px 15px 20px;
+    background: #fff;
+}
+
+.choose-box + .choose-box {
+    margin-top: 9px;
+}
+
+.choose-box h3 {
+    font-size: 14px;
+    color: #333;
+}
+
+.choose-box h3,
+.choose-box p,
+.choose-box>div,
+.choose-box>.btn-edit {
+    display: inline-block;
+    line-height: 58px;
+    vertical-align: middle;
+}
+
+.choose-box p {
+    margin-left: 20px;
+}
+
+.choose-box .btn-edit {
+    height: 35px;
+    width: 38px;
+    line-height: 35px;
+    margin: 12px 27px 0 0;
+    text-align: center;
+    border-radius: 1px;
+    background: #607b0a;
+    color: #fff;
+    font-weight: 900;
+}
+
+.choose-box .status-box,
+.choose-box .btn-edit {
+    float: right;
+}
+
+.choose-box .status-box .white-cube {
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    display: inline-block;
+    width: 41px;
+    height: 31px;
+    border-radius: 1px;
+    background: #fff;
+}
+
+.status-box i {
+    position: absolute;
+    right: 6px;
+    display: inline-block;
+    font-style: normal;
+    line-height: 33px;
+    vertical-align: top;
+    font-weight: 900;
+}
+
+.choose-box .status-box {
+    position: relative;
+    width: 98px;
+    height: 35px;
+    margin-top: 12px;
+    background: #fa482c;
+    border-radius: 1px;
+    color: #fff;
+    font-weight: 900;
+}
+.choose-box .btn-edit:hover,
+.choose-box .status-box:hover {
+    opacity: .7;
+}
+
+.choose-box .status-box.opened {
+    background: #607b0a;
+}
+
+.status-box.opened i {
+    right: initial;
+    left: 6px;
+}
+
+.status-box.opened .white-cube {
+    left: initial;
+    right: 3px;
+}
+
+.yqx-btn.change-version {
+    padding: 0;
+    margin-left: 578px;
+    height: 35px;
+    width: 100px;
+}
+
+.print-guide,
+.receipt-guide {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.receipt-guide {
+    color: red;
+}
+

@@ -1,0 +1,63 @@
+body {
+    width:980px;
+    font-size:16px;
+    margin:0 auto;
+    padding: 0;
+    background-color:white;
+    color:black;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.head {
+    width:100%;
+}
+.head h1, .head h3 {
+    padding: 0 102px;
+}
+h1, h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+.headInfo span {
+    display:inline-block;
+    width:220px;
+    margin-right:6px;
+    white-space: nowrap;
+}
+.headInfo .customName {
+    width:542px;
+}
+.headInfo .salesDate {
+    width:200px;
+}
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse:collapse;
+}
+td, th {
+    height:25px;
+    border:1px solid #000;
+}
+th {
+    text-align:center;
+}
+.count span {
+    margin-right: 60px;
+}
+.signature {
+    margin-top:5px;
+    margin-bottom: 20px;
+}
+.signature span {
+    display: inline-block;
+    width:238px;
+    margin-right: 6px;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}

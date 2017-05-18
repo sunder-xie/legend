@@ -1,0 +1,21 @@
+.width-2 {
+    width: 156px;
+}
+.content>.table-box{
+    margin-bottom: 0;
+    border-bottom:0 ;
+}
+.table_total{
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    border-top: 0px;
+    background: #fff;
+    padding: 0 10px;
+}
+.table_total span{
+    margin-right: 15px;
+}
+.hide{
+    display: none;
+}

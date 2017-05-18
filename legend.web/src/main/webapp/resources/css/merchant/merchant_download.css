@@ -1,0 +1,8 @@
+.box_wrap .box{width:980px;height:100%;margin:0 auto;}
+.box_wrap .box1{height: 618px;background: url(../../images/portal/merchant/new_box1_01.jpg) center repeat-x;}
+.box_wrap .box2{height: 583px;background: #fff url(../../images/portal/merchant/box2_03.jpg) center no-repeat;}
+.box_wrap .box3{height: 580px;background: #eee url(../../images/portal/merchant/box3_03.jpg) center no-repeat;}
+.box_wrap .box4{height: 580px;background: #fff url(../../images/portal/merchant/box4_03.jpg) center no-repeat;}
+.box_wrap .box5{height: 578px;background: #eee url(../../images/portal/merchant/box5_03.jpg) center no-repeat;}
+.box_wrap .box6{height: 586px;background: #fff url(../../images/portal/merchant/box6_03.jpg) center no-repeat;}
+.box_wrap .download{width:175px;height:41px;display: block;border:1px solid #fff;background: #c5e8f8;border-radius: 30px;line-height: 41px;text-align: center;font-size: 20px;margin-top:250px;float: left;margin-left: 185px;}

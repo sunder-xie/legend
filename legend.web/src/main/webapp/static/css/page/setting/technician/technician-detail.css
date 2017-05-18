@@ -1,0 +1,63 @@
+/*
+* create by zmx 2017/1/5
+* 技师认证
+*/
+
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 10px;
+    padding-top: 0;
+}
+.content .show-grid{
+    margin-top: 20px;
+}
+.content .form-label{
+    width: 80px;
+    text-align: right;
+}
+.content .form-item {
+    width: 120px;
+}
+.content .w-210{
+    width: 210px;
+}
+.content .w-140{
+    width: 140px;
+}
+.tips-box,.tips{
+    display: inline-block;
+}
+.tips-wrapper{
+    display: inline-block;
+}
+.tips-box{
+    position: relative;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: #eee;
+    border: 1px solid #d2d2d2;
+}
+.tips{
+    color: #666;
+}
+.tips-box:after{
+    content:"";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("../../../../img/page/setting/close-grey.png") no-repeat;
+    position: absolute;
+    top:-9px;
+    right: -9px;
+    cursor: pointer;
+}
+.btn-box{
+    padding: 15px;
+    border-top: 1px solid #cacaca;
+}
+
+/*--- 专修品牌 start --- */
+.majorCarBrand_item{display: inline-block;background: #fff;line-height: 36px; border: 1px solid #ccc;border-radius: 4px;margin-left:10px;padding: 0 10px;position: relative;height:36px;}
+.majorCarBrand_item i{position: absolute; width: 20px; height: 20px; background: url("../../../../img/page/setting/close-grey.png") no-repeat center; top: -10px; right: -10px;cursor: pointer;} /*--- 专修品牌 end --- */
+.show-grid .repair-item{ display: inline-block; vertical-align: middle;}

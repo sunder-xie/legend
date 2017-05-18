@@ -1,0 +1,279 @@
+/*.aside {*/
+    /*float: left;*/
+    /*width: 200px;*/
+/*}*/
+.main {
+    float: right;
+    width: 828px;
+}
+
+.top, .content {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+/*.nav {*/
+    /*padding: 0 18px;*/
+    /*font-size: 12px;*/
+    /*color: #666;*/
+/*}*/
+/*.nav-item dt, .nav-title {*/
+    /*line-height: 43px;*/
+    /*font-size: 14px;*/
+/*}*/
+/*.nav-item dt:before, .nav-title:before {*/
+    /*display: inline-block;*/
+    /*content: "";*/
+    /*width: 18px;*/
+    /*height: 18px;*/
+    /*margin-right: 7px;*/
+    /*background: url("../../images/drainage_activities/sprite.png") no-repeat;*/
+    /*vertical-align: middle;*/
+/*}*/
+/*.nav-title {*/
+    /*color: #062c5f;*/
+    /*border-bottom: 1px solid #e8e8e8;*/
+/*}*/
+/*.nav-title:before {*/
+    /*background-position: 0 0;*/
+/*}*/
+/*.nav-title span {*/
+    /*text-decoration: underline;*/
+/*}*/
+/*.nav-item {*/
+    /*border-bottom: 1px solid #e8e8e8;*/
+/*}*/
+/*.nav-item:last-child {*/
+    /*border-bottom: none;*/
+/*}*/
+/*.nav-item dt {*/
+    /*color: #535353;*/
+/*}*/
+/*.nav-item dd {*/
+    /*margin-bottom: 13px;*/
+/*}*/
+/*.nav-voucher dt:before {*/
+    /*background-position: 0 -36px;*/
+/*}*/
+/*.nav-payment dt:before {*/
+    /*background-position: 0 -72px;*/
+/*}*/
+/*.nav-more dt:before {*/
+    /*background-position: 0 -105px;*/
+/*}*/
+
+.top {
+    margin-bottom: 10px;
+}
+.flow {
+    border-bottom: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+.flow li {
+    position: relative;
+    float: left;
+    width: 33.33333%;
+    line-height: 38px;
+    color: #90b127;
+    text-align: center;
+}
+.flow li:before {
+    display: inline-block;
+    content: attr(content);
+    width: 19px;
+    height: 19px;
+    margin: -3px 10px 0 0;
+    line-height: 22px;
+    font-size: 14px;
+    color: #fff;
+    background: url("../../images/drainage_activities/sprite.png") 1px -140px no-repeat;
+    vertical-align: middle;
+}
+.flow li:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    content: "";
+    width: 18px;
+    height: 38px;
+    background: url("../../images/drainage_activities/sprite.png") 0 -170px no-repeat;
+}
+.flow li:last-child:after {
+    display: none;
+}
+
+.tabs {
+    margin: 0 18px;
+}
+.tab {
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    border-bottom: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+.tab-item {
+    box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    position: relative;
+    padding: 11px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.tab-item p {
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #535353;
+    border-right: 1px solid #e8e8e8;
+}
+.tab-item:last-child p {
+    border: none;
+}
+.tab-item.active {
+    color: #062c5f;
+}
+.tab-item.active:before, .tab-item.active:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+}
+.tab-item.active:before {
+    width: 100%;
+    border-bottom: 3px solid #062c5f;
+}
+.tab-item.active:after {
+    left: 50%;
+    bottom: 3px;
+    margin-left: -2px;
+    border-bottom: 4px solid #062c5f;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.act-detail {
+    position: relative;
+    padding: 10px 0 10px;
+    border-bottom: 1px solid #e8e8e8;
+    cursor: pointer;
+}
+.act-detail .inner {
+    margin: 0 200px 0 160px;
+}
+.act-detail:hover {
+    background: #e0e0e0; color: #333;
+}
+.act-detail .l {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-left: -160px;
+    line-height: 150px;
+    text-align: center;
+}
+.act-detail .l img {
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+.act-detail .r {
+    float: right;
+    margin-right: -200px;
+    text-align: right;
+}
+.name-row {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+}
+.gain-row {
+    line-height: 1.5;
+    color: #444;
+}
+.gain-row .label {
+    color: #666;
+}
+.gain-row strong {
+    font-size: 14px;
+    color: #da3127;
+}
+.price-row {
+    line-height: 1.5;
+    font-size: 12px;
+    color: #666;
+}
+.price-row strong {
+    font-size: 14px;
+    color: #ff7800;
+}
+.service-row {
+    margin-left: 60px;
+    line-height: 1.4;
+    color: #444;
+}
+.service-row .label {
+    margin-left: -60px;
+    color: #666;
+}
+.join-row {
+    line-height: 2.2;
+    color: #999;
+}
+.join-row .label {
+    color: #444;
+}
+.join-row strong {
+    margin-right: 3px;
+    font-size: 14px;
+    color: #d71001;
+}
+.check-row {
+    margin: 15px 0 5px;
+}
+.check-row [type=checkbox] {
+    margin-right: 5px;
+}
+.check-row .protocol-btn {
+    color: #159;
+}
+.join-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 106px;
+    height: 37px;
+    color: #fff;
+    background: #f53b43;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.join-btn.joined {
+    background: #90b127;
+}
+.join-btn.audit_fail {
+    background: #999;
+}
+.join-btn.audit_ing {
+    background: #159;
+}
+
+.act-intro .title {
+    padding: 0 20px;
+    line-height: 39px;
+    font-size: 14px;
+    color: #535353;
+}
+a{
+    color: #666666;
+}

@@ -1,0 +1,375 @@
+/*
+ * by weilu 2016/07/14
+ * 负载看板页面
+*/
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1469513788_6617453.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1469513788_6617453.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1469513788_6617453.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1469513788_6617453.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1469513788_6617453.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont";
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    background-color: #f1f1f1;
+    font-size: 12px;
+}
+.main{
+    box-sizing: border-box;
+}
+.tc{
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    line-height: 30px;
+}
+.tc_fst{
+    padding-left: 112px;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.time_line{
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+.time_title {
+    display: -webkit-flex;
+    display: flex;
+}
+.hour{
+    overflow: hidden;
+    padding-left: 112px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: wrap;
+    flex-flow: wrap;
+}
+.tomorrow .hour{
+    padding-left: 0;
+}
+.hour li{
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url("../../../../img/page/magic/time_bg.png") no-repeat 0 bottom;
+    border-bottom: 1px solid #ddd;
+    /*border-left: 1px solid #ddd;*/
+}
+.hour .w40{
+    /*width: 40px;*/
+    /*flex: inherit;*/
+    /*background: none;*/
+    border-right: 1px solid #ddd;
+}
+.hour .start{
+    background-repeat: repeat-y;
+}
+.item{
+    background-color: #3c83a7;
+    height: 40px;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 40px;
+    margin: 10px 0;
+}
+.loadplate{
+    background-color: #f1f1f1;
+    padding-top: 50px;
+}
+.flow{
+    border-top: 1px solid #ddd;
+    background-color: #e8e8e8;
+}
+.flow>li{
+    height: 24px;
+    border-bottom: 1px solid #ddd;
+    display: -webkit-flex;
+    display: flex;
+}
+.name{
+    width: 112px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 10px;
+    background-color: #7e98a5;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+.c0{
+    background-color: #07b0b2;
+}
+.c1{
+    background-color: #0bb29f;
+}
+.c2{
+    background-color: #13a655;
+}
+.c3{
+    background-color: #16ab14;
+}
+.c4{
+    background-color: #88b684;
+}
+.c5{
+    background-color: #62a81b;
+}
+.c6{
+    background-color: #92a826;
+}
+.c7{
+    background-color: #bad563;
+}
+.c8{
+    background-color: #c9d51a;
+}
+.c9{
+    background-color: #d58917;
+}
+.cA,.ca{
+    background-color: #d5975c;
+}
+.cB,.cb{
+    background-color: #d5b0ac;
+}
+.cC,.cc{
+    background-color: #d55327;
+}
+.cD,.cd{
+    background-color: #d5755f;
+}
+.cE,.ce{
+    background-color: #d59bb3;
+}
+.cF,.cf{
+    background-color: #d54325;
+}
+.cG,.cg{
+    background-color: #d56a79;
+}
+.cH,.ch{
+    background-color: #d52a8e;
+}
+.cI,.ci{
+    background-color: #d579d2;
+}
+.cJ,.cj{
+    background-color: #951cd5;
+}
+.cK,.ck{
+    background-color: #9454d5;
+}
+.cL,.cl{
+    background-color: #a492d5;
+}
+.cM,.cm{
+    background-color: #710ad5;
+}
+.cN,.cn{
+    background-color: #6d58d5;
+}
+.cO,.co{
+    background-color: #4d1ed5;
+}
+.cP,.cp{
+    background-color: #242fd5;
+}
+.cQ,.cq{
+    background-color: #5fb1d5;
+}
+.cR,.cr{
+    background-color: #469ad5;
+}
+.cS,.cs{
+    background-color: #cdd570;
+}
+.cT,.ct{
+    background-color: #0f6fd5;
+}
+.cU,.cu{
+    background-color: #ce64d5;
+}
+.cV,.cv{
+    background-color: #a537d5;
+}
+.cW,.cw{
+    background-color: #bf79d5;
+}
+.cX,.cx{
+    background-color: #d50a1a;
+}
+.cY,.cy{
+    background-color: #d50b64;
+}
+.cZ,.cz{
+    background-color: #109cd5;
+}
+.flow-block{
+    overflow: hidden;
+    -webkit-flex: 1;
+    flex: 1;
+    position: relative;
+}
+.flow-block li{
+    width: 56px;
+    line-height: 24px;
+    height: 24px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+}
+.gap{
+    margin-left: 20px;
+}
+.sum_up{
+    margin: 10px 0;
+    display: -webkit-flex;
+    display: flex;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    height: 100px;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+.sum_up p {
+    white-space: nowrap;
+    text-align: center;
+    line-height: 16px;
+}
+.sum_up>li{
+    border-left: 1px solid #ddd;
+}
+.sum1{
+    -webkit-flex: 2;
+    flex: 2;
+}
+.sum2{
+    -webkit-flex: 3;
+    flex: 3;
+}
+.sum3{
+    -webkit-flex: 5;
+    flex: 5;
+}
+.border0{
+    border: 0!important;
+}
+.sum3 li{
+    float: left;
+}
+.sum1 p:last-Child, .sum2 p:last-Child {
+    padding: 8px 0 24px 0;
+}
+.sum3 p:last-Child {
+    padding-bottom: 16px;
+}
+.sum_up .sum_title{
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.ul-center{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.summary{
+    background-color: transparent;
+    border: 0;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+    margin-top: 40px;
+    height: 60px;
+}
+.summary li{
+    border: 0;
+}
+.item1{
+    padding-left: 20px;
+    line-height: 32px;
+}
+.item-sg{
+    background-color: #a37334;
+}
+.name-sg{
+    background-color: #a48e71;
+}
+.item-kp{
+    background-color: #ad4545;
+}
+.name-kp{
+    background-color: #a47777;
+}
+.pname, .mname{
+    display: inline-block;
+    width: 40%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.mname{
+    text-align: right;
+    width: 50%;
+}
+.logo{
+    position: relative;
+    height: 44px;
+    padding-left: 14px;
+    text-align: left;
+}
+.js-nav-menu{
+    position: relative;
+}
+.toggle{
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    right: 6px;
+}
+.plate{
+    display: inline-block;
+    padding: 0 0 0 20px;
+    position: absolute;
+    left: -16px;
+    width: 42px;
+}
+.aside-nav .nav-root a, .aside-nav .nav-root span{
+    color: #b8c7ce;
+}
+.aside-nav .nav-root a:hover, .aside-nav .nav-root span:hover{
+    color: #fff;
+}
+.vhidden{
+    visibility: hidden;
+}

@@ -1,0 +1,151 @@
+.kh_box {
+    height: 45px;
+    margin: 30px 0 20px;
+}
+.kh_bleft {
+    float: left;
+}
+.kh_bleft a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #fc3d3c;
+    border-radius: 3px;
+}
+.lvsed {
+    margin: 10px 0 20px;
+}
+.lvsed .kh_bleft a {
+    background: #8aaa25;
+}
+.kh_bright {
+    float: right;
+    line-height: 45px;
+}
+.kh_list {
+    width: 990px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.kh_list li {
+    width: 235px;
+    height: 243px;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #cdcdcd;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+}
+.kh_litop {
+    border-bottom: 1px dotted #aebdc7;
+    line-height: 22px;
+    padding: 8px 15px;
+}
+.kh_litop .tit {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.kh_cc {
+    padding: 15px 0 0 15px;
+    line-height: 18px;
+}
+.nache {
+    color: #fb4834;
+    text-align: center;
+    border-top: 1px dotted #aebdc7;
+    padding-top: 13px;
+    margin-top: 15px;
+}
+
+
+.cont {
+    display: block;
+    width: 990px;
+    position: relative;
+}
+.cont li {
+    width: 235px;
+    height: 306px;
+    background: #f9f9f9;
+    float: left;
+    border: 1px solid #cdcdcd;
+    margin: 0 10px 10px 0;
+}
+.ltop {
+    height: 60px;
+    padding: 15px 10px 0;
+    border-bottom: 1px dotted #aebdc7;
+}
+.llet {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+}
+.lright {
+    float: right;
+    width: 160px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.midc {
+    padding: 7px 0;
+    border-bottom: 1px dotted #aebdc7;
+}
+.ptxt {
+    width: 100%;
+    padding: 3px 0;
+    line-height: 20px;
+}
+.pleft {
+    float: left;
+    padding-left: 15px;
+}
+.pright {
+    float: right;
+    width: 155px;
+    padding-right: 15px;
+}
+.qing {
+    padding: 15px;
+}
+.qing span {
+    font-weight: bold;
+    margin: 0 15px;
+}
+.but_left {
+    width: 100px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #c1c1c1;
+    margin-top: 12px;
+    margin-left: 10px;
+    float: left;
+}
+.but_right {
+    width: 100px;
+    height: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    margin-top: 12px;
+    margin-right: 10px;
+    float: right;
+}
+.cont li.jiesuan {
+    background-image: url("../../images/zhang.png?20151127");
+    background-repeat: no-repeat;
+    background-position: 80px 194px;
+}
+

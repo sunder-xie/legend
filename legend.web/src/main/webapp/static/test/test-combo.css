@@ -1,0 +1,24 @@
+.test {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    bottom: 5px;
+    left: 5px;
+    display: block;
+    line-height: 68px;
+    font-family: "Microsoft YaHei", Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.test {
+    left: 6px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.test1 {
+    position: absolute;
+    display: block;
+    font-size: 14px;
+}

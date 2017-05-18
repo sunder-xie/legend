@@ -1,0 +1,46 @@
+/*
+* create by zmx 2016/12/07
+* 上下班设置
+*/
+
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0 10px 10px 10px;
+    position: relative;
+}
+.content h3{
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    border-bottom: 1px solid #cacaca;
+}
+.content .show-grid i{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    background: url("../../../../static/img/page/setting/ico.png") no-repeat;
+    vertical-align: middle;
+}
+.content .show-grid i.on-time{
+    background-position: -44px -34px;
+}
+.content .show-grid i.off-time{
+    background-position: -82px -34px;
+}
+.content .show-grid i.rest-time{
+    background-position: -114px -32px;
+}
+.save-btn{
+    margin-left: 105px;
+}
+.clock{
+    position: absolute;
+    top:30px;
+    left: 0;
+    z-index: 10;
+}
+.popover{
+    z-index: 10;
+}

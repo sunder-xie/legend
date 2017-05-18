@@ -1,0 +1,145 @@
+/*
+* create by zmx 2016/11/29
+* 导入数据页面样式
+*/
+.content{
+    padding: 0 20px;
+    background: #fff;
+    border: 1px solid #cacaca;
+}
+.content h3{
+    border-bottom: 1px solid #cacaca;
+    font-size: 12px;
+    line-height: 40px;
+    color: #666;
+}
+.step-box{
+    margin: 22px 6px;
+    border-left: 2px solid #cacaca;
+}
+.step-title{
+    margin: 0 0 10px -8px;
+    height: 14px;
+}
+.step-title .radio-box{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.step-title span{
+    font-size: 14px;
+    color: #333;
+    font-family: "宋体";
+}
+.red{
+    border:3px solid #fd461e;
+}
+.green{
+    border:3px solid #607b0a;
+}
+.step-text{
+    line-height: 25px;
+    padding-left: 17px;
+    color: #333;
+}
+.download-box{
+    margin: 10px 0 30px 17px;
+}
+.matters{
+    display: inline-block;
+    margin-left: 10px;
+    color: #666;
+    vertical-align: bottom;
+}
+.matters p{
+    line-height: 16px;
+}
+.step-form{
+    margin: 10px 17px;
+    position: relative;
+}
+.file{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    opacity: 0;
+    cursor:pointer;
+}
+.import-box{
+    margin-top: 10px;
+}
+.import-box span{
+    color: #666;
+    vertical-align: bottom;
+}
+.result-box{
+    margin-left: 17px;
+}
+.result-box p{
+    line-height: 20px;
+    color: #333;
+}
+.result-box li{
+    color: #fd461e;
+    line-height: 20px;
+}
+.result-box li i{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #fd461e;
+    margin-right: 10px;
+    border-radius:50%
+}
+.yqx-btn[disabled]{
+    color: #fff;
+    background: #999;
+    border: none;
+    cursor: not-allowed;
+}
+.prompt{
+    line-height: 20px;
+    color: #fd461e;
+    padding-left: 15px;
+}
+.v-top{
+    vertical-align: top;
+}
+.blue{
+    border: 3px solid #222d49;
+}
+.member-table{
+    width: 247px;
+    border: 1px solid #cacaca;
+}
+.member-table .yqx-table td{
+    line-height: 10px;
+}
+.member-table .yqx-table td.bold{
+    font-weight: bold;
+}
+.order-right{
+    position: relative;
+}
+.export-contact{
+    position: absolute;
+    top:125px;
+    right: 20px;
+    padding:10px;
+    width: 170px;
+    height: 48px;
+    background: #f9f9f9;
+    border: 1px solid #cacaca;
+}
+.export-contact img{
+    margin-right: 10px;
+}
+.export-contact p{
+    line-height: 14px;
+}
+.go-back{
+    margin-top: 10px;
+}

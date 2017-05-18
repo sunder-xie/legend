@@ -1,0 +1,12 @@
+.btn-1:hover {
+    background: #18a1d5;
+}
+.btn-1 {
+    color: #fff;
+    background: #3fb2de;
+    border: 1px solid #18a1d5;
+}
+
+.btn-group {
+    margin-bottom: 10px;
+}

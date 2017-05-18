@@ -1,0 +1,134 @@
+/*
+ * create by zmx 2016/11/14
+ * 油漆库存
+*/
+
+.form-box{
+    padding: 10px;
+    border:1px solid #cacaca;
+    background: #fff;
+}
+.form-box .form-item{
+    width: 160px;
+}
+.total-title{
+    background: #fff;
+    border:1px dashed #cacaca;
+    padding: 4px 14px;
+    margin-top: 12px;
+    line-height: 25px;
+}
+.total-title img{
+    vertical-align: middle;
+    margin-right:5px;
+}
+.total-title span{
+    font-weight: bold;
+    font-size: 14px;
+}
+.table-btn{
+    height: 54px;
+    padding: 10px 0;
+}
+.select-num{
+    font-weight: bold;
+    color: #f35f62;
+    padding: 0 2px;
+    font-style: normal;
+}
+.stock-num{
+    line-height: 30px;
+    margin-left: 10px;
+}
+.select-all-box{
+    margin-right:10px;
+    line-height: 18px;
+}
+.export{
+    color: #333;
+    line-height: 34px;
+}
+.table-list{
+    border: 1px solid #cacaca;
+    border-bottom: none;
+}
+.yqx-table{
+    table-layout: auto;
+}
+.yqx-table>tbody>tr>td div{
+    line-height: 18px;
+}
+.max-name-width{
+    width: 233px;
+    max-height: 36px;
+    white-space: normal;
+}
+.max-width{
+    width: 233px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.max-width-other{
+    width: 100px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.grey-color{
+    background: #999;
+}
+.grey-color:hover{
+    background: #999;
+}
+.yqx-btn[disabled]{
+     color: #fff;
+     background: #999;
+     border: none;
+    cursor: not-allowed;
+}
+.yqx-table>tbody>tr>td div.p-right,.yqx-table>thead>tr>th div.p-right{
+    padding-right: 10px;
+}
+.yqx-table>tbody>tr>td div.p-left,.yqx-table>thead>tr>th div.p-left{
+    padding-left: 10px;
+}
+.dialog-con{
+    background: url("../../../../img/page/magic/step.png") no-repeat 15px 33px;
+}
+.step-box{
+    margin: 18px 0 0 40px;
+}
+.step-5{
+    margin-top: 16px;
+}
+.step-title{
+    text-align: left;
+    color: #666;
+    font-family: "宋体";
+    font-size: 12px;
+    line-height: 20px;
+}
+.step-text{
+    text-align: left;
+    color: #333;
+    font-family: "宋体";
+    font-size: 14px;
+    line-height: 25px;
+}
+.step-text span{
+    color: #232e49;
+    font-weight: bold;
+}
+.btn-box{
+    height: 40px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top:1px solid #d6d6d6;
+}
+.step-btn{
+    margin-left: 60px;
+}
+.max-name-width span{
+    color: #fd461e;
+}

@@ -1,0 +1,225 @@
+.order-right{
+    width:823px;
+}
+.order-body {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fafafa;
+}
+.fa-item .yqx-input{
+    padding-right: 36px;
+    box-sizing: border-box;
+}i{
+    font-style: normal;
+}
+.marB4{
+    margin-bottom: 4px;
+}
+.marR10{
+    margin-right: 10px;
+}
+.marR5{
+    margin-right: 5px;
+}
+.textC{
+    text-align: center;
+}
+
+/*头部 start*/
+h1.headline {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.manage-buttons>.yqx-btn{
+    padding: 0 12px;
+}
+.manage-buttons a{
+    font-family: sans-serif, Hiragino Sans GB ,Helvetica,Arial;
+}
+.order-head {
+    margin-bottom: 10px;
+}
+/*头部 end*/
+
+/*侧边栏 start*/
+.act-tab {
+    padding:15px 10px;
+    width: 10%;
+}
+.activity-manage{
+    line-height: 26px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei","Hiragino Sans GB",Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+}
+/*侧边栏 end*/
+
+/*内容区 start*/
+.body-content{
+    position: relative;
+    width: 90%;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    padding-top: 20px;
+}
+.body-content strong{
+    color: #f55d5e;
+    font-size: 20px;
+    font-weight: 900;
+    vertical-align: -2px;
+    margin-left: 4px;
+}
+.time-select{
+    width: 170px;
+}
+/*内容区 end*/
+
+/*选择服务 start*/
+.choose-box{
+    display: inline-block;
+    border-right:  1px dashed #ddd;
+    width: 59%;
+    min-height: 380px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+fieldset{
+    margin-bottom: 20px;
+}
+fieldset:last-of-type{
+    margin: 0;
+}
+.fieldset-title{
+    margin-right: 10px;
+}
+/*选择服务 end*/
+
+/*底部按钮区域*/
+.content-footer{
+    margin: 20px 30px;
+    padding-top: 20px;
+    line-height: 30px;
+    border-top: 1px solid #ddd;
+}
+.yqx-btn.disable {
+    border: 1px solid #d2d2d2;
+    background: #ddd;
+    color: #666;
+}
+.content-footer .yqx-btn + .content-footer .yqx-btn{
+    margin-left: 10px;
+}
+.js-end{
+    padding: 0 8px;
+}
+/*底部按钮区域 end*/
+
+
+/*右边提示 start*/
+.tip-box{
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 38%;
+    right: 0;
+}
+.tip-box-content{
+    display: table;
+    height: 75%;
+}
+.tip-box-text{
+    display: table-cell;
+    vertical-align: middle;
+}
+.tip-img{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url('../../../../img/page/wechat/tip_img.png');
+    vertical-align: middle;
+}
+.tips{
+     display: inline-block;
+     white-space: pre-line;
+     vertical-align: middle;
+     text-align: left;
+     line-height: 20px;
+ }
+/*右边提示 end*/
+
+/*公共弹窗样式 start*/
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.bounce-content{
+    padding: 10px 20px;
+}
+.bounce-content-wrapper{
+    padding: 16px;
+}
+.bounce-foot{
+    text-align: center;
+    margin: 10px 0;
+}
+.qrcode-preview-foot{
+    margin: 0;
+}
+.bounce-content .bounce-row{
+    padding: 10px;
+    text-align: center;
+}
+#qrcodeView{
+    text-align: center;
+}
+/*公共弹窗样式 end*/
+
+.display-none{
+    display: none;
+}
+
+/*提示tips end*/
+.down-payment-tips{
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 12px;
+    height: 12px;
+    background: url('../../../../img/page/wechat/appservice/tips.png') 0 bottom no-repeat;
+}
+.down-payment-tips>p{
+    position: absolute;
+    left: -123px;
+    top: -40px;
+    width: 280px;
+    padding: 0 6px;
+    line-height: 30px;
+    text-align: center;
+    color: #c28803;
+    background-color: #fffceb;
+    border: 1px solid #eedfa8;
+    border-radius: 4px;
+    display: none;
+}
+.down-payment-tips:hover>p, .down-payment-tips>p:hover{
+    display: block;
+}
+.down-payment-tips>p:after{
+    content:'';
+    position: absolute;
+    width: 14px;
+    height: 7px;
+    background: url('../../../../img/page/wechat/appservice/tips.png') 0 top no-repeat;
+    left: 120px;
+    top: 30px;
+}
+/*提示tips end*/

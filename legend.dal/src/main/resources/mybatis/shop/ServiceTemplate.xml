@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.shop.ServiceTemplateDao">
+
+    <resultMap id = "BaseResultMap" type = "ServiceTemplate" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "name" property = "name" />
+        <result column = "service_sn" property = "serviceSn" />
+        <result column = "service_price" property = "servicePrice" />
+        <result column = "flags" property = "flags" />
+        <result column = "service_note" property = "serviceNote" />
+        <result column = "shop_service_note" property = "shopServiceNote" />
+        <result column = "status" property = "status" />
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "third_img_url" property = "thirdImgUrl" />
+        <result column = "third_service_info" property = "thirdServiceInfo" />
+        <result column = "sort" property = "sort" />
+        <result column = "price_type" property = "priceType" />
+        <result column = "service_info" property = "serviceInfo" />
+        <result column = "cate_id" property = "cateId" />
+        <result column = "cate_tag" property = "cateTag" />
+        <result column = "virtual_join_num" property = "virtualJoinNum" />
+        <result column = "settle_price" property = "settlePrice" />
+        <result column = "profit_price" property = "profitPrice" />
+        <result column = "agreement" property = "agreement" />
+        <result column = "edit_status" property = "editStatus" />
+        <result column = "down_payment" property = "downPayment" />
+        <result column = "delete_status" property = "deleteStatus" />
+        <result column = "app_publish_status" property = "appPublishStatus" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            name as name,
+            service_sn as serviceSn,
+            service_price as servicePrice,
+            flags as flags,
+            service_note as serviceNote,
+            shop_service_note as shopServiceNote,
+            status as status,
+            img_url as imgUrl,
+            third_img_url as thirdImgUrl,
+            third_service_info as thirdServiceInfo,
+            sort as sort,
+            price_type as priceType,
+            service_info as serviceInfo,
+            cate_id as cateId,
+            cate_tag as cateTag,
+            virtual_join_num as virtualJoinNum,
+            settle_price as settlePrice,
+            profit_price as profitPrice,
+            agreement as agreement,
+            edit_status as editStatus,
+            down_payment as downPayment,
+            delete_status as deleteStatus,
+            app_publish_status as appPublishStatus,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "name != null">
+                    and name = #{name}
+                </if>
+                <if test = "serviceSn != null">
+                    and service_sn = #{serviceSn}
+                </if>
+                <if test = "servicePrice != null">
+                    and service_price = #{servicePrice}
+                </if>
+                <if test = "flags != null">
+                    and flags = #{flags}
+                </if>
+                <if test = "serviceNote != null">
+                    and service_note = #{serviceNote}
+                </if>
+                <if test = "shopServiceNote != null">
+                    and shop_service_note = #{shopServiceNote}
+                </if>
+                <if test = "status != null">
+                    and status = #{status}
+                </if>
+                <if test = "imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test = "thirdImgUrl != null">
+                    and third_img_url = #{thirdImgUrl}
+                </if>
+                <if test = "thirdServiceInfo != null">
+                    and third_service_info = #{thirdServiceInfo}
+                </if>
+                <if test = "sort != null">
+                    and sort = #{sort}
+                </if>
+                <if test = "priceType != null">
+                    and price_type = #{priceType}
+                </if>
+                <if test = "serviceInfo != null">
+                    and service_info = #{serviceInfo}
+                </if>
+                <if test = "cateId != null">
+                    and cate_id = #{cateId}
+                </if>
+                <if test = "cateTag != null">
+                    and cate_tag = #{cateTag}
+                </if>
+                <if test = "virtualJoinNum != null">
+                    and virtual_join_num = #{virtualJoinNum}
+                </if>
+                <if test = "settlePrice != null">
+                    and settle_price = #{settlePrice}
+                </if>
+                <if test = "profitPrice != null">
+                    and profit_price = #{profitPrice}
+                </if>
+                <if test = "agreement != null">
+                    and agreement = #{agreement}
+                </if>
+                <if test = "editStatus != null">
+                    and edit_status = #{editStatus}
+                </if>
+                <if test="downPayment != null">
+                    and down_payment = #{downPayment}
+                </if>
+                <if test = "nameLike != null">
+                    and name like CONCAT('%',#{nameLike},'%')
+                </if>
+                <if test="ids != null">
+                    and id in (
+                    <foreach collection="ids" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="deleteStatus != null">
+                    and delete_status = #{deleteStatus}
+                </if>
+                <if test="appPublishStatus != null">
+                    and app_publish_status = #{appPublishStatus}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "name != null">
+                    name = #{name},
+                </if>
+                <if test = "serviceSn != null">
+                    service_sn = #{serviceSn},
+                </if>
+                <if test = "servicePrice != null">
+                    service_price = #{servicePrice},
+                </if>
+                <if test = "flags != null">
+                    flags = #{flags},
+                </if>
+                <if test = "serviceNote != null">
+                    service_note = #{serviceNote},
+                </if>
+                <if test = "shopServiceNote != null">
+                    shop_service_note = #{shopServiceNote},
+                </if>
+                <if test = "status != null">
+                    status = #{status},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "thirdImgUrl != null">
+                    third_img_url = #{thirdImgUrl},
+                </if>
+                <if test = "thirdServiceInfo != null">
+                    third_service_info = #{thirdServiceInfo},
+                </if>
+                <if test = "sort != null">
+                    sort = #{sort},
+                </if>
+                <if test = "priceType != null">
+                    price_type = #{priceType},
+                </if>
+                <if test = "serviceInfo != null">
+                    service_info = #{serviceInfo},
+                </if>
+                <if test = "cateId != null">
+                    cate_id = #{cateId},
+                </if>
+                <if test = "cateTag != null">
+                    cate_tag = #{cateTag},
+                </if>
+                <if test = "virtualJoinNum != null">
+                    virtual_join_num = #{virtualJoinNum},
+                </if>
+                <if test = "settlePrice != null">
+                    settle_price = #{settlePrice},
+                </if>
+                <if test = "profitPrice != null">
+                    profit_price = #{profitPrice},
+                </if>
+                <if test = "agreement != null">
+                    agreement = #{agreement},
+                </if>
+                <if test = "editStatus != null">
+                    edit_status = #{editStatus},
+                </if>
+                <if test="downPayment != null">
+                    down_payment = #{downPayment},
+                </if>
+                <if test="deleteStatus != null">
+                    delete_status = #{deleteStatus},
+                </if>
+                <if test="appPublishStatus != null">
+                    app_publish_status = #{appPublishStatus},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_service_template
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_service_template
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_service_template
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_service_template
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_service_template
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_service_template
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_service_template
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_service_template (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "name != null">
+                name,
+            </if>
+            <if test = "serviceSn != null">
+                service_sn,
+            </if>
+            <if test = "servicePrice != null">
+                service_price,
+            </if>
+            <if test = "flags != null">
+                flags,
+            </if>
+            <if test = "serviceNote != null">
+                service_note,
+            </if>
+            <if test = "shopServiceNote != null">
+                shop_service_note,
+            </if>
+            <if test = "status != null">
+                status,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "thirdImgUrl != null">
+                third_img_url,
+            </if>
+            <if test = "thirdServiceInfo != null">
+                third_service_info,
+            </if>
+            <if test = "sort != null">
+                sort,
+            </if>
+            <if test = "priceType != null">
+                price_type,
+            </if>
+            <if test = "serviceInfo != null">
+                service_info,
+            </if>
+            <if test = "cateId != null">
+                cate_id,
+            </if>
+            <if test = "cateTag != null">
+                cate_tag,
+            </if>
+            <if test = "virtualJoinNum != null">
+                virtual_join_num,
+            </if>
+            <if test = "settlePrice != null">
+                settle_price,
+            </if>
+            <if test = "profitPrice != null">
+                profit_price,
+            </if>
+            <if test = "agreement != null">
+                agreement,
+            </if>
+            <if test = "editStatus != null">
+                edit_status,
+            </if>
+            <if test="downPayment != null">
+                down_payment,
+            </if>
+            <if test="deleteStatus != null">
+                delete_status,
+            </if>
+            <if test="appPublishStatus != null">
+                app_publish_status,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "name != null">
+                #{name},
+            </if>
+            <if test = "serviceSn != null">
+                #{serviceSn},
+            </if>
+            <if test = "servicePrice != null">
+                #{servicePrice},
+            </if>
+            <if test = "flags != null">
+                #{flags},
+            </if>
+            <if test = "serviceNote != null">
+                #{serviceNote},
+            </if>
+            <if test = "shopServiceNote != null">
+                #{shopServiceNote},
+            </if>
+            <if test = "status != null">
+                #{status},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "thirdImgUrl != null">
+                #{thirdImgUrl},
+            </if>
+            <if test = "thirdServiceInfo != null">
+                #{thirdServiceInfo},
+            </if>
+            <if test = "sort != null">
+                #{sort},
+            </if>
+            <if test = "priceType != null">
+                #{priceType},
+            </if>
+            <if test = "serviceInfo != null">
+                #{serviceInfo},
+            </if>
+            <if test = "cateId != null">
+                #{cateId},
+            </if>
+            <if test = "cateTag != null">
+                #{cateTag},
+            </if>
+            <if test = "virtualJoinNum != null">
+                #{virtualJoinNum},
+            </if>
+            <if test = "settlePrice != null">
+                #{settlePrice},
+            </if>
+            <if test = "profitPrice != null">
+                #{profitPrice},
+            </if>
+            <if test = "agreement != null">
+                #{agreement},
+            </if>
+            <if test = "editStatus != null">
+                #{editStatus},
+            </if>
+            <if test="downPayment != null">
+                #{downPayment},
+            </if>
+            <if test="deleteStatus != null">
+                #{deleteStatus},
+            </if>
+            <if test="appPublishStatus != null">
+                #{appPublishStatus},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_service_template
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_service_template (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            name,
+            service_sn,
+            service_price,
+            flags,
+            service_note,
+            shop_service_note,
+            status,
+            img_url,
+            third_img_url,
+            third_service_info,
+            sort,
+            price_type,
+            service_info,
+            cate_id,
+            cate_tag,
+            virtual_join_num,
+            settle_price,
+            profit_price,
+            agreement,
+            edit_status,
+            down_payment,
+            delete_status,
+            app_publish_status,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.name != null">
+                    #{item.name},
+                </if>
+                <if test="item.name == null">
+                    "" ,
+                </if>
+                <if test="item.serviceSn != null">
+                    #{item.serviceSn},
+                </if>
+                <if test="item.serviceSn == null">
+                    NULL ,
+                </if>
+                <if test="item.servicePrice != null">
+                    #{item.servicePrice},
+                </if>
+                <if test="item.servicePrice == null">
+                    0.00 ,
+                </if>
+                <if test="item.flags != null">
+                    #{item.flags},
+                </if>
+                <if test="item.flags == null">
+                    BZFW ,
+                </if>
+                <if test="item.serviceNote != null">
+                    #{item.serviceNote},
+                </if>
+                <if test="item.serviceNote == null">
+                    '' ,
+                </if>
+                <if test="item.shopServiceNote != null">
+                    #{item.shopServiceNote},
+                </if>
+                <if test="item.shopServiceNote == null">
+                    '' ,
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    0 ,
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    '' ,
+                </if>
+                <if test="item.thirdImgUrl != null">
+                    #{item.thirdImgUrl},
+                </if>
+                <if test="item.thirdImgUrl == null">
+                    '' ,
+                </if>
+                <if test="item.thirdServiceInfo != null">
+                    #{item.thirdServiceInfo},
+                </if>
+                <if test="item.thirdServiceInfo == null">
+                    '' ,
+                </if>
+                <if test="item.sort != null">
+                    #{item.sort},
+                </if>
+                <if test="item.sort == null">
+                    1 ,
+                </if>
+                <if test="item.priceType != null">
+                    #{item.priceType},
+                </if>
+                <if test="item.priceType == null">
+                    1 ,
+                </if>
+                <if test="item.serviceInfo != null">
+                    #{item.serviceInfo},
+                </if>
+                <if test="item.serviceInfo == null">
+                    NULL ,
+                </if>
+                <if test="item.cateId != null">
+                    #{item.cateId},
+                </if>
+                <if test="item.cateId == null">
+                    0 ,
+                </if>
+                <if test="item.cateTag != null">
+                    #{item.cateTag},
+                </if>
+                <if test="item.cateTag == null">
+                    0 ,
+                </if>
+                <if test="item.virtualJoinNum != null">
+                    #{item.virtualJoinNum},
+                </if>
+                <if test="item.virtualJoinNum == null">
+                    0 ,
+                </if>
+                <if test="item.settlePrice != null">
+                    #{item.settlePrice},
+                </if>
+                <if test="item.settlePrice == null">
+                    0.00 ,
+                </if>
+                <if test="item.profitPrice != null">
+                    #{item.profitPrice},
+                </if>
+                <if test="item.profitPrice == null">
+                    0.00 ,
+                </if>
+                <if test="item.agreement != null">
+                    #{item.agreement},
+                </if>
+                <if test="item.agreement == null">
+                    NULL ,
+                </if>
+                <if test="item.editStatus != null">
+                    #{editStatus} ,
+                </if>
+                <if test="item.editStatus == null">
+                    0 ,
+                </if>
+                <if test="item.downPayment != null">
+                    #{item.downPayment},
+                </if>
+                <if test="item.downPayment == null">
+                    0.00 ,
+                </if>
+                <if test="item.deleteStatus != null">
+                    #{item.deleteStatus},
+                </if>
+                <if test="item.deleteStatus == null">
+                    0 ,
+                </if>
+                <if test="item.appPublishStatus != null">
+                    #{item.appPublishStatus},
+                </if>
+                <if test="item.appPublishStatus == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

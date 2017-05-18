@@ -1,0 +1,125 @@
+/**
+ * Created by sky on 2017/2/23.
+ */
+
+.yunui-head-menu-panel {
+  position: fixed;
+  z-index: 99999;
+  padding: 30px 0;
+  font-family: Simsun,Tahoma,Arial,Helvetica Neue,Hiragino Sans GB,sans-serif;
+  color: #fff;
+  background: rgba(79, 90, 122, 0.95);
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 1px 2px 1px #4f5a7a;
+
+  @at-root {
+
+    .yunui-head-menu-arrow {
+      position: absolute;
+      top: -10px;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-bottom-color: rgba(79, 90, 122, 0.95);
+    }
+
+    .yunui-head-menu-content {
+      display: -webkit-flex;
+      display: flex;
+      overflow: hidden;
+
+      /* 垂直样式 start */
+      dt, .yunui-vertical-item {
+        margin-bottom: 17px;
+        line-height: 1;
+        white-space: nowrap;
+        word-break: keep-all;
+      }
+
+      .flex-box {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+      }
+
+      dl {
+        margin-bottom: -5000px;
+        padding-bottom: 5000px;
+
+        & + dl {
+          border-left: 1px solid #5d6784;
+        }
+
+        dt {
+          padding: 0 30px;
+          margin-bottom: 22px;
+          font-size: 14px;
+          color: #a9badc;
+          font-weight: bold;
+        }
+
+        dd {
+          max-height: 190px;
+        }
+      }
+
+      .yunui-vertical {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        flex-basis: 100%;
+        padding-left: 30px;
+
+        &:last-child {
+          padding-right: 30px;
+        }
+
+        .yunui-vertical-item {
+          font-size: 12px;
+          color: #fff;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      /* 垂直样式 end */
+
+      /* 水平样式 start */
+      .yunui-horizontal {
+        display: -webkit-flex;
+        display: flex;
+        align-content: space-between;
+      }
+
+      .yunui-horizontal-item {
+        margin: 0 15px;
+        white-space: nowrap;
+        word-break: keep-all;
+        font-size: 12px;
+        color: #fff;
+
+        &:first-child {
+          margin-left: 30px;
+        }
+
+        &:last-child {
+          margin-right: 30px;
+        }
+      }
+      /* 水平样式 end */
+
+      a {
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+}

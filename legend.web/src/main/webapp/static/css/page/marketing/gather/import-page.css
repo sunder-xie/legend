@@ -1,0 +1,89 @@
+/**
+* Create by zmx 2016/12/20
+* 导入客户会员
+*/
+
+.content{
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 20px;
+}
+.left-box{
+    width: 325px;
+}
+.export-box{
+    width: 320px;
+    height: 145px;
+    background: #f9f9f9;
+    border: 1px solid #cacaca;
+}
+.export-pic{
+    width: 115px;
+    height: 143px;
+}
+.green{
+    background: #607b0a;
+}
+.blue{
+    background: #222d49;
+}
+.export-pic p{
+    text-align: center;
+    color: #fff;
+    font-family: "Arial";
+    line-height: 16px;
+    opacity:0.5;
+}
+.export-pic img{
+    display: block;
+    margin: 32px auto 10px auto;
+}
+.export-text{
+    margin-left: 14px;
+}
+.export-text h3{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.export-text p{
+    color: #666;
+}
+.export-btn{
+    margin-top: 46px;
+}
+.export-top{
+    margin-top: 20px;
+}
+.right-box{
+    width: 378px;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+.right-box h3{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.right-box p{
+    line-height: 22px;
+    padding-top: 5px;
+}
+.right-box p i{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #fd461e;
+    border-radius: 1px;
+    margin-right: 12px;
+}
+.export-help{
+    margin-top: 50px;
+}
+.help-download{
+    display: block;
+    padding-top: 15px;
+}
+.help-download img{
+    vertical-align: middle;
+    margin-right: 8px;
+}

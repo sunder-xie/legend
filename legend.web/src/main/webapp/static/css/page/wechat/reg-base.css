@@ -1,0 +1,278 @@
+i {
+    font-style: normal;
+    display: inline-block;
+}
+
+.must:after {
+    content: '*';
+    color: red;
+    margin-left: 1px;
+    display: inline-block;
+    position: absolute;
+    top: -15px;
+    left: 0;
+}
+
+.must {
+    position: relative;
+}
+
+.order-process .order-step {
+    float: none;
+    display: inline-block;
+    -webkit-transform: none;
+    transform: none;
+}
+
+h1.headline {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.order-process {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.order-process .order-step:before {
+    height: 3px;
+}
+
+.order-body {
+    width: 100%;
+    min-height: 400px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.order-body h2 {
+    font-size: 13px;
+    background: #f9f9f9;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    display: block;
+    color: #333;
+}
+
+.order-body .content {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+
+.Z-right {
+    position: relative;
+}
+
+/** 按钮 **/
+
+.yqx-btn {
+    border-radius: 2px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.yqx-btn-3 {
+    border: 1px solid #7fa700;
+    background: #90af34;
+    color: #fff;
+}
+
+.yqx-btn-3:hover {
+    background: #a3cd20;
+}
+
+.yqx-btn[disabled] {
+    background-color: #eee;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+a[disable]:hover {
+    color: #000;
+}
+
+.yqx-btn-default {
+    background: #f9f9f9;
+    border-color: #d2d2d2;
+    color: #333;
+    font-size: 14px;
+}
+
+/** 按钮 end **/
+
+/** 底部 start **/
+.confirm-line {
+    padding: 15px 0;
+    margin: 20px 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.confirm-line {
+    position: relative;
+    text-align: center;
+}
+
+/** 底部 end */
+
+/** 上传图片 start **/
+.btn-upload {
+    position: relative;
+    background: url(../../../img/page/order/carwashPrefect/add.jpg) no-repeat center center;
+    border: 1px solid #dcdcdc;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.btn-upload-img {
+    width: 112px;
+    height: 112px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-upload input {
+    position: absolute;
+    width: 118px;
+    height: 118px;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+.file-del {
+    background: url('../../../img/page/order/carwashPrefect/close.png') no-repeat;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+}
+
+.file-show {
+    display: inline-block;
+    position: relative;
+    padding: 3px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #dcdcdc;
+}
+
+/** 上传图片 end **/
+
+/**
+ * sky 2016-04-06
+ * 单选tag样式 start
+ */
+.single-tag {
+    display: inline-block;
+}
+
+.single-tag > li {
+    display: inline-block;
+    margin: 0 5px 10px 0;
+    cursor: pointer;
+}
+
+.single-tag .tag-control {
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+}
+
+.single-tag > li:last-of-type {
+    margin-right: 0;
+}
+
+.single-tag .tag-control .tag-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.single-tag .tag-control .hl-r {
+    color: #fd5959;
+}
+
+.single-tag .tag-control.selected {
+    position: relative;
+    line-height: 32px;
+    border: 2px solid #8eb110;
+}
+
+.online {
+    background: url('../../../img/page/wechat/yellow-back-small.jpg') repeat-x;
+}
+
+.type-select.offline {
+    padding: 8px 30px;
+}
+
+.offline {
+    background: url('../../../img/page/wechat/yellow-back-long.jpg') repeat-x;
+    color: #333;
+    position: relative;
+}
+
+.offline h4 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.offline p {
+    line-height: 24px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.single-tag .tag-control.selected:after {
+    display: inline;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20px;
+    height: 18px;
+    background: url("../../../img/common/order/order-sprite.png") 0 0 no-repeat;
+}
+
+/* 单选tag样式 end */
+
+.yqx-input {
+    border-width: 1px;
+    border-radius: 1px;
+}
+
+.yqx-wrapper {
+    position: relative;
+}
+
+.order-head {
+    top: 77px;
+    position: absolute;
+    height: 34px;
+    width: 823px;
+}
+
+.order-right {
+    margin-top: 40px;
+}
+
+.layui-layer-page .layui-layer-content {
+    overflow: hidden;
+}
+
+.no-data, .no-data h2{
+    color: red;
+}

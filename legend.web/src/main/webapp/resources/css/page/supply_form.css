@@ -1,0 +1,150 @@
+.cc_top {
+    height:37px;
+    line-height:37px;
+    margin:10px auto;
+}
+
+.cc_foot {
+    height:50px;
+    margin:10px 0;
+    text-align: center;
+}
+
+.list_head li {
+    font-size:15px;
+    font-weight:bold;
+    color:#666;
+}
+
+.cc_init {
+    float:left;
+}
+
+.btn {
+    font-size:15px;
+    display:inline-block;
+    font-weight:normal;
+    text-align:center;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.cc_top .importbtn {
+    background-color:#f7f7f7;
+    border:1px solid #c1c1c1;
+    float:right;
+    color:#6e6e6e;
+    width:100px;
+    height:35px;
+    line-height:35px;
+    margin-left: 10px;
+}
+
+.cc_box {
+    border:1px solid #cdcdcd;
+    background-color:#f9f9f9;
+}
+
+.cc_list {
+    height:37px;
+    line-height:37px;
+    padding:0 10px 0 20px;
+    margin:10px 0;
+}
+
+.cc_list li {
+    float:left;
+    height:100%;
+    text-align:center;
+    margin-right:10px;
+}
+
+.list_head{
+    border-bottom:1px solid #cdcdcd;
+    background-color:#efefef;
+    margin:0;
+}
+
+.w178 {
+    width:178px;
+}
+
+.w142 {
+    width:142px;
+}
+
+.cc_txt {
+    border:1px solid #dadada;
+    width:93%;
+    min-height:16px;
+    padding:10px 0;
+    padding-left:7%;
+    border-radius:3px;
+    background:#fff;
+    color:#666;
+}
+
+li .accessories {
+    background-color:#eee;
+}
+
+.initbtn, .notuse {
+    margin:0 auto;
+    color:#fff;
+    width:125px;
+    height:31px;
+    padding-top:19px;
+}
+
+.initbtn {
+    background-color:#f79b36;
+    margin-right:20px;
+}
+
+.notuse {
+    background-color:#41b3de;
+}
+
+.s_right {
+    float: right;
+    width:84px;
+    height:84px;
+    position:relative;
+    background: url("../../images/an.jpg") no-repeat;
+}
+
+.s_right:hover {
+    float: right;
+    width:84px;
+    height:84px;
+    position:relative;
+    background: url("../../images/an_1.jpg") no-repeat;
+}
+
+.file-box{
+    position:relative;
+    width:260px;
+}
+.txt{
+    height:22px;
+    border:1px solid #cdcdcd;
+    width:180px;
+}
+.file-btn{
+    background-color:#FFF;
+    border:1px solid #CDCDCD;
+    height:24px;
+    width:70px;
+    color:#6E6E6E;
+}
+.fileField {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:888;
+    height:24px;
+    filter:alpha(opacity:0);
+    opacity: 0;
+    width:260px
+}
+

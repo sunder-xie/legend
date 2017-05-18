@@ -1,0 +1,14 @@
+/*
+ * create by sky 2016-04-14
+ * 经营报表--工单流水明细
+ */
+
+.w30{width: 30px;}
+.w80{width: 80px;}
+.w100{width: 100px;}
+.w130{width: 130px}
+.w150{width: 150px}
+.scroller{width: 100%;overflow-x: auto;}
+
+.dropdown .dropdown-menu{width: 280px;}
+.dropdown .dropdown-menu li{float: left;min-width: 75px;padding: 5px;}

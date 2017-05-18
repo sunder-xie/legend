@@ -1,0 +1,94 @@
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+.info-link-box{
+
+}
+.pic-box{
+    width: 265px;
+    height: 295px;
+    float: left;
+    margin-right: 15px;
+}
+.pic-box a{
+    display: block;
+    width: 265px;
+    height: 295px;
+}
+.pic-box h3{
+    padding: 30px 0 10px 25px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+.pic-box p{
+    color: #fff;
+    padding-left: 25px;
+    line-height:18px;
+}
+.wx{
+    background: url("../../../resources/images/marketing/popularize1.png") no-repeat;
+}
+.pyq{
+    background: url("../../../resources/images/marketing/popularize2.png") no-repeat;
+}
+.pic-box:last-child{
+    margin-right: 0px;
+}
+.pic-box .shop{
+    width: 265px;
+    height: 140px;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.pic-box .shop a{
+    display: block;
+    width: 265px;
+    height: 140px;
+}
+.shop-activity{
+    width: 90px;
+    height: 140px;
+    float: left;
+    background: url("../../../resources/images/marketing/popularize3.png") no-repeat;
+}
+.shop-notice{
+    width: 90px;
+    height: 140px;
+    float: left;
+    background: url("../../../resources/images/marketing/popularize4.png") no-repeat;
+}
+.shop-activity p,.shop-notice p{
+    width: 100%;
+    padding-left: 0px;
+    text-align: center;
+    color: #fff;
+    font-family: arial, helvetica, sans-serif;
+    padding-top: 80px;
+}
+.shop-activity-info{
+    float: left;
+    margin-left: 14px;
+}
+.shop-activity-info h3{
+    padding: 15px 0 0 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    line-height: 30px;
+}
+.shop-activity-info p{
+    padding: 10px 0 0 0;
+    font-size: 12px;
+    color: #333;
+}

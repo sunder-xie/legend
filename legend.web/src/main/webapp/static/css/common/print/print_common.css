@@ -1,0 +1,28 @@
+.tq_print_logo {
+    width: 100px;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.tq_print_logo img {
+    width: 100%;
+    height: 100%;
+    border:0;
+}
+
+/* 去除页眉页脚 start */
+@page {
+    size:  auto;   /* auto is the initial value */
+    margin: 0;  /* this affects the margin in the printer settings */
+}
+html {
+     margin: 0;  /* this affects the margin on the html before sending to printer */
+ }
+
+body {
+    width: 259mm;
+    padding: 50px;
+    height: auto;
+}
+/* 去除页眉页脚 end */

@@ -1,0 +1,39 @@
+.search-form {
+    padding-bottom: 10px;
+}
+/*打卡说明  start*/
+.explain-box{
+    height: 65px;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+.explain-left{
+    width: 40px;
+    height: 46px;
+    float: left;
+    border-right: 1px solid #d2d2d2;
+}
+.explain-left p{
+    padding-top: 7px;
+}
+.explain-right{
+    height: 45px;
+    float: left;
+    padding-left: 15px;
+}
+.explain-right p{
+    color: #333;
+    line-height: 22px;
+}
+.explain-right a{
+    color: #008c00;
+    text-decoration: underline;
+}
+.explain-right img{
+    vertical-align: middle;
+    margin: 0 6px;
+}
+/*打卡说明  end*/
+

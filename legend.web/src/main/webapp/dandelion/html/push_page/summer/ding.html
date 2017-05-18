@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>预约超值套餐</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link type="text/css" rel="stylesheet" href="../../../css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../../../css/summer/over.css" />
+</head>
+<body>
+<div id="wrapper" class="wrapper">
+    <div class="upbox">
+        <div class="mdbo">
+            <div class="mgleft"><img src="../../../images/summer/pic.jpg"></div>
+            <div class="mgright">
+                <h2>淘汽云修磊波店</h2>
+                <p class="icon1">杭州市余杭区嘉企路10号</p>
+                <p class="icon2">133XXXXXXXX</p>
+            </div>
+            <div class="starbox"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+    </div>
+    <section class="conty">
+        <p><img src="../../../images/summer/gt.gif"></p>
+        <h2>该门店还未参加活动！</h2>
+        <p>您可以关注“淘汽云修”公众号<br>查看其他服务门店</p>
+    </section>
+    <div class="downdiv"></div>
+</div>
+<footer>
+    <nav></nav>
+    <section id="mask" class="mask">
+        <div id="around" class="around"></div>
+        <div id="layer" class="layer"></div>
+    </section>
+</footer>
+</body>
+<script src="../../../js/lib/zepto/zepto.min.js"></script>
+<script src="../../../js/lib/crypto/sha.js"></script>
+<script src="../../../js/lib/template.js"></script>
+<script src="../../../js/Dao.js"></script>
+<script>
+    var UA = window.navigator.userAgent.toLowerCase();
+    if(!UA.match(/Android|Mobile|iOS|iPhone/i)) {
+        location.href = "http://www.yunqixiu.com/legend/portal/dandelion/download";
+    }
+    App.init();
+    var height = Math.round(App.height / App.phoneScale);
+    $('#wrapper').height(height);
+    App.loadHide();
+</script>
+</html>

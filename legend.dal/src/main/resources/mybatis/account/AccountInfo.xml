@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.AccountInfoDao">
+    <!-- Result Map -->
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.account.AccountInfo">
+        <result column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="creator" property="creator"/>
+        <result column="modifier" property="modifier"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="balance" property="balance"/>
+        <result column="expense_amount" property="expenseAmount"/>
+        <result column="expense_count" property="expenseCount"/>
+        <result column="customer_id" property="customerId"/>
+    </resultMap>
+
+    <resultMap id="commonPairMap" type="com.tqmall.legend.bi.entity.CommonPair">
+        <result column="customer_id" property="dataF" javaType="long"/>
+        <result column="id" property="dataS" javaType="long"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            balance as balance,
+            expense_amount as expenseAmount,
+            expense_count as expenseCount,
+            customer_id as customerId,
+        </trim>
+
+    </sql>
+
+    <!-- 查询条件 -->
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId!= null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="balance!= null">
+                    and balance = #{balance}
+                </if>
+                <if test="expenseAmount!= null">
+                    and expense_amount = #{expenseAmount}
+                </if>
+                <if test="expenseCount!= null">
+                    and expense_count = #{expenseCount}
+                </if>
+                <if test="customerId!= null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test="customerIds != null">
+                    and customer_id in (
+                    <foreach collection="customerIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+
+    </sql>
+
+    <!-- 批量更新条件 -->
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId!= null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="balance!= null">
+                    balance = #{balance},
+                </if>
+                <if test="expenseAmount!= null">
+                    expense_amount = #{expenseAmount},
+                </if>
+                <if test="expenseCount!= null">
+                    expense_count = #{expenseCount},
+                </if>
+                <if test="customerId!= null">
+                    customer_id = #{customerId},
+                </if>
+            </trim>
+        </set>
+
+    </sql>
+
+    <!-- 插入记录 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_account_info (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId!= null">
+                shop_id,
+            </if>
+            <if test="balance!= null">
+                balance,
+            </if>
+            <if test="expenseAmount!= null">
+                expense_amount,
+            </if>
+            <if test="expenseCount!= null">
+                expense_count,
+            </if>
+            <if test="customerId!= null">
+                customer_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId!= null">
+                #{shopId},
+            </if>
+            <if test="balance!= null">
+                #{balance},
+            </if>
+            <if test="expenseAmount!= null">
+                #{expenseAmount},
+            </if>
+            <if test="expenseCount!= null">
+                #{expenseCount},
+            </if>
+            <if test="customerId!= null">
+                #{customerId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 获取对象全部结果集 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_info
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+
+    </select>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_account_info
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_info
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_info
+        where id in (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_account_info
+        set is_deleted='Y'
+        where id in (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_account_info
+	    set is_deleted='Y'
+	    where id=#{id}
+	
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_account_info
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_account_info
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_account_info (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            balance,
+            expense_amount,
+            expense_count,
+            customer_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.balance != null">
+                    #{item.balance},
+                </if>
+                <if test="item.balance == null">
+                    0.00,
+                </if>
+                <if test="item.expenseAmount != null">
+                    #{item.expenseAmount},
+                </if>
+                <if test="item.expenseAmount == null">
+                    0.00,
+                </if>
+                <if test="item.expenseCount != null">
+                    #{item.expenseCount},
+                </if>
+                <if test="item.expenseCount == null">
+                    0 ,
+                </if>
+                <if test="item.customerId != null">
+                    #{item.customerId},
+                </if>
+                <if test="item.customerId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="getAccountInfoByCustomerIdAndShopId" resultType="com.tqmall.legend.entity.account.AccountInfo">
+        SELECT <include refid="BaseColumnList"/>
+        FROM legend_account_info
+        where
+        is_deleted = 'N'
+        and shop_id = #{shopId}
+        and customer_id = #{customerId}
+    </select>
+
+    <select id="getCustomerIdAccountIdPair" resultMap="commonPairMap">
+        SELECT customer_id, id
+        FROM legend_account_info
+        WHERE shop_id = #{shopId}
+        and is_deleted = 'N'
+    </select>
+    <select id="selectByCustomerIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_info
+        where customer_id in (
+        <foreach collection="customerIds" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and is_deleted = 'N'
+        and shop_id = #{shopId}
+
+    </select>
+</mapper>

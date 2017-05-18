@@ -1,0 +1,79 @@
+.left-menu{
+    width: 215px;
+    /*height: 148px;*/
+    background: #fff;
+    border: 2px solid #8eb110;
+}
+.menu-item{
+    width: 200px;
+    height: 48px;
+    margin: auto;
+    line-height: 45px;
+    border-bottom: 1px solid #eeeeee;
+}
+.menu-item span{
+    font-weight: bolder;
+    white-space: nowrap;
+}
+.item-img1{
+    width: 16px;
+    height: 21px;
+    background: url("../../images/technology_center/item-arrow.png") -25px 0 no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.item-img2{
+    width: 18px;
+    height: 19px;
+    background: url("../../images/technology_center/item-arrow.png") 0 -22px no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.item-img4{
+    width: 18px;
+    height: 19px;
+    background: url("../../images/technology_center/ser-ico.png") center no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.item-img3{
+    width: 18px;
+    height: 19px;
+    background: url("../../images/technology_center/item-arrow.png") 0 -42px no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.arrow{
+    width: 9px;
+    height: 13px;
+    background: url("../../images/technology_center/item-arrow.png") -16px 0 no-repeat;
+    display: inline-block;
+    margin-left: 60px;
+    vertical-align: middle;
+}
+.active .item-img1 {
+    background-position-x: 0;
+}
+.active .item-img2, .active .item-img3 {
+    background-position-x: -18px;
+}
+.active .item-img4 {
+    background: url("../../images/technology_center/cser-ico.png") center no-repeat;
+}
+.active .tab{
+    display: inline-block;
+    width: 60px;
+    color: #ff7800;
+    vertical-align: middle;
+}
+.no-border{
+    border-bottom: none;
+}

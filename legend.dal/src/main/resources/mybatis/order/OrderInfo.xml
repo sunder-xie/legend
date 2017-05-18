@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.order.OrderInfoDao">
+    <resultMap id="BaseResultMap" type="OrderInfo" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="order_type" property="orderType"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="order_sn" property="orderSn"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="customer_car_id" property="customerCarId"/>
+        <result column="expected_time" property="expectedTime"/>
+        <result column="goods_amount" property="goodsAmount"/>
+        <result column="service_amount" property="serviceAmount"/>
+        <result column="tax_amount" property="taxAmount"/>
+        <result column="total_amount" property="totalAmount"/>
+        <result column="postscript" property="postscript"/>
+        <result column="order_status" property="orderStatus"/>
+        <result column="car_license" property="carLicense"/>
+        <result column="car_brand_id" property="carBrandId"/>
+        <result column="car_series_id" property="carSeriesId"/>
+        <result column="car_power_id" property="carPowerId"/>
+        <result column="car_year_id" property="carYearId"/>
+        <result column="car_models_id" property="carModelsId"/>
+        <result column="car_brand" property="carBrand"/>
+        <result column="car_series" property="carSeries"/>
+        <result column="car_power" property="carPower"/>
+        <result column="car_year" property="carYear"/>
+        <result column="car_models" property="carModels"/>
+        <result column="car_company" property="carCompany"/>
+        <result column="import_info" property="importInfo"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="customer_mobile" property="customerMobile"/>
+        <result column="vin" property="vin"/>
+        <result column="engine_no" property="enginenNo"/>
+        <result column="receiver" property="receiver"/>
+        <result column="invoice_type" property="invoiceType"/>
+        <result column="discount" property="discount"/>
+        <result column="receiver_name" property="receiverName"/>
+        <result column="operator_name" property="operatorName"/>
+        <result column="order_amount" property="orderAmount"/>
+        <result column="pay_status" property="payStatus"/>
+        <result column="finish_time" property="finishTime"/>
+        <result column="pay_time" property="payTime"/>
+        <result column="goods_count" property="goodsCount"/>
+        <result column="service_count" property="serviceCount"/>
+        <result column="car_alias" property="carAlias"/>
+        <result column="pre_discount_rate" property="preDiscountRate"/>
+        <result column="pre_tax_amount" property="preTaxAmount"/>
+        <result column="pre_preferentia_amount" property="prePreferentiaAmount"/>
+        <result column="pre_coupon_amount" property="preCouponAmount"/>
+        <result column="pre_total_amount" property="preTotalAmount"/>
+        <result column="pay_amount" property="payAmount"/>
+        <result column="sign_amount" property="signAmount"/>
+        <result column="other_insurance_company_id" property="otherInsuranceCompanyId"/>
+        <result column="other_insurance_company_name" property="otherInsuranceCompanyName"/>
+        <result column="goods_discount" property="goodsDiscount"/>
+        <result column="service_discount" property="serviceDiscount"/>
+        <result column="fee_discount" property="feeDiscount"/>
+        <result column="fee_amount" property="feeAmount"/>
+        <result column="contact_name" property="contactName"/>
+        <result column="contact_mobile" property="contactMobile"/>
+        <result column="insurance_company_id" property="insuranceCompanyId"/>
+        <result column="insurance_company_name" property="insuranceCompanyName"/>
+        <result column="mileage" property="mileage"/>
+        <result column="car_color" property="carColor"/>
+        <result column="buy_time" property="buyTime"/>
+        <result column="customer_address" property="customerAddress"/>
+        <result column="oil_meter" property="oilMeter"/>
+        <result column="is_visit" property="isVisit"/>
+        <result column="is_lock" property="isLock"/>
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "order_tag" property = "orderTag" />
+        <result column = "ver" property = "ver" />
+        <result column = "refer" property = "refer" />
+        <result column="upkeep_mileage" property="upkeepMileage"/>
+        <result column="create_time" property="createTime"/>
+        <result column="order_discount_amount" property="orderDiscountAmount"/>
+        <result column="confirm_time" property="confirmTime"/>
+        <result column="proxy_type" property="proxyType"/>
+        <result column="channel_id" property="channelId"/>
+        <result column="channel_name" property="channelName"/>
+        <result column="expect_time" property="expectTime"/>
+        <result column="down_payment" property="downPayment"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            order_type as orderType,
+            parent_id as parentId,
+            order_sn as orderSn,
+            customer_id as customerId,
+            customer_car_id as customerCarId,
+            expected_time as expectedTime,
+            goods_amount as goodsAmount,
+            service_amount as serviceAmount,
+            tax_amount as taxAmount,
+            total_amount as totalAmount,
+            postscript as postscript,
+            order_status as orderStatus,
+            car_license as carLicense,
+            car_brand_id as carBrandId,
+            car_series_id as carSeriesId,
+            car_power_id as carPowerId,
+            car_year_id as carYearId,
+            car_models_id as carModelsId,
+            car_brand as carBrand,
+            car_series as carSeries,
+            car_power as carPower,
+            car_year as carYear,
+            car_models as carModels,
+            car_company as carCompany,
+            import_info as importInfo,
+            customer_name as customerName,
+            customer_mobile as customerMobile,
+            vin as vin,
+            engine_no as engineNo,
+            receiver as receiver,
+            invoice_type as invoiceType,
+            discount as discount,
+            receiver_name as receiverName,
+            operator_name as operatorName,
+            order_amount as orderAmount,
+            pay_status as payStatus,
+            finish_time as finishTime,
+            pay_time as payTime,
+            goods_count as goodsCount,
+            service_count as serviceCount,
+            car_alias as carAlias,
+            pre_discount_rate as preDiscountRate,
+            pre_tax_amount as preTaxAmount,
+            pre_preferentia_amount as prePreferentiaAmount,
+            pre_coupon_amount as preCouponAmount,
+            pre_total_amount as preTotalAmount,
+            pay_amount as payAmount,
+            sign_amount as signAmount,
+            other_insurance_company_id as otherInsuranceCompanyId,
+            other_insurance_company_name as otherInsuranceCompanyName,
+            goods_discount as goodsDiscount,
+            service_discount as serviceDiscount,
+            fee_discount as feeDiscount,
+            fee_amount as feeAmount,
+            contact_name as contactName,
+            contact_mobile as contactMobile,
+            insurance_company_id as insuranceCompanyId,
+            insurance_company_name as insuranceCompanyName,
+            mileage as mileage,
+            car_color as carColor,
+            buy_time as buyTime,
+            customer_address as customerAddress,
+            oil_meter as oilMeter,
+            is_visit as isVisit,
+            is_lock as isLock,
+            img_url as imgUrl,
+            order_tag as orderTag,
+            ver as ver,
+            refer as refer,
+            upkeep_mileage as upkeepMileage,
+            create_time as createTime,
+            order_discount_amount as orderDiscountAmount,
+            confirm_time as confirmTime,
+            proxy_type as proxyType,
+            channel_id as channelId,
+            channel_name as channelName,
+            expect_time as expectTime,
+            down_payment as downPayment,
+        </trim>
+
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="orderType != null">
+                    and order_type = #{orderType}
+                </if>
+                <if test="parentId != null">
+                    and parent_id = #{parentId}
+                </if>
+                <if test="orderSn != null">
+                    and order_sn = #{orderSn}
+                </if>
+                <if test="customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test="customerIds != null">
+                    and customer_id in (
+                    <foreach collection="customerIds" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test="expectedTime != null">
+                    and expected_time = #{expectedTime}
+                </if>
+                <if test="goodsAmount != null">
+                    and goods_amount = #{goodsAmount}
+                </if>
+                <if test="serviceAmount != null">
+                    and service_amount = #{serviceAmount}
+                </if>
+                <if test="taxAmount != null">
+                    and tax_amount = #{taxAmount}
+                </if>
+                <if test="totalAmount != null">
+                    and total_amount = #{totalAmount}
+                </if>
+                <if test="postscript != null">
+                    and postscript = #{postscript}
+                </if>
+                <if test="orderStatus != null">
+                    and order_status = #{orderStatus}
+                </if>
+                <if test="carLicense != null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test="licenseList != null">
+                    and car_license in (
+                    <foreach collection="licenseList" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="carBrandId != null">
+                    and car_brand_id = #{carBrandId}
+                </if>
+                <if test="carSeriesId != null">
+                    and car_series_id = #{carSeriesId}
+                </if>
+                <if test="carPowerId != null">
+                    and car_power_id = #{carPowerId}
+                </if>
+                <if test="carYearId != null">
+                    and car_year_id = #{carYearId}
+                </if>
+                <if test="carModelsId != null">
+                    and car_models_id = #{carModelsId}
+                </if>
+                <if test="carBrand != null">
+                    and car_brand = #{carBrand}
+                </if>
+                <if test="carSeries != null">
+                    and car_series = #{carSeries}
+                </if>
+                <if test="carPower != null">
+                    and car_power = #{carPower}
+                </if>
+                <if test="carYear != null">
+                    and car_year = #{carYear}
+                </if>
+                <if test="carModels != null">
+                    and car_models = #{carModels}
+                </if>
+                <if test="carCompany != null">
+                    and car_company = #{carCompany}
+                </if>
+                <if test="importInfo != null">
+                    and import_info = #{importInfo}
+                </if>
+                <if test="customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test="customerMobile != null">
+                    and customer_mobile = #{customerMobile}
+                </if>
+                <if test="vin != null">
+                    and vin like CONCAT('%',#{vin},'%')
+                </if>
+                <if test="engineNo != null">
+                    and engine_no = #{engineNo}
+                </if>
+                <if test="receiver != null">
+                    and receiver = #{receiver}
+                </if>
+                <if test="invoiceType != null">
+                    and invoice_type = #{invoiceType}
+                </if>
+                <if test="discount != null">
+                    and discount = #{discount}
+                </if>
+                <if test="receiverName != null">
+                    and receiver_name = #{receiverName}
+                </if>
+                <if test="operatorName != null">
+                    and operator_name = #{operatorName}
+                </if>
+                <if test="orderAmount != null">
+                    and order_amount = #{orderAmount}
+                </if>
+                <if test="payStatus != null">
+                    and pay_status = #{payStatus}
+                </if>
+                <if test="payStatusList != null">
+                    and pay_status in (
+                    <foreach collection="payStatusList" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="finishTime != null">
+                    and finish_time = #{finishTime}
+                </if>
+                <if test="payTime != null">
+                    and pay_time = #{payTime}
+                </if>
+                <if test="goodsCount != null">
+                    and goods_count > #{goodsCount}
+                </if>
+                <if test="serviceCount != null">
+                    and service_count = #{serviceCount}
+                </if>
+                <if test="carAlias != null">
+                    and car_alias = #{carAlias}
+                </if>
+
+                <if test="preDiscountRate != null">
+                    and pre_discount_rate = #{preDiscountRate}
+                </if>
+                <if test="preTaxAmount != null">
+                    and pre_tax_amount = #{preTaxAmount}
+                </if>
+                <if test="prePreferentiaAmount != null">
+                    and pre_preferentia_amount = #{prePreferentiaAmount}
+                </if>
+                <if test="preCouponAmount != null">
+                    and pre_coupon_amount = #{preCouponAmount}
+                </if>
+                <if test="preTotalAmount != null">
+                    and pre_total_amount = #{preTotalAmount}
+                </if>
+                <if test="payAmount != null">
+                    and pay_amount = #{payAmount}
+                </if>
+                <if test="signAmount != null">
+                    and sign_amount = #{signAmount}
+                </if>
+                <if test="otherInsuranceCompanyId != null">
+                    and other_insurance_company_id = #{otherInsuranceCompanyId}
+                </if>
+                <if test="otherInsuranceCompanyName != null">
+                    and other_insurance_company_name = #{otherInsuranceCompanyName}
+                </if>
+                <if test="goodsDiscount != null">
+                    and goods_discount = #{goodsDiscount}
+                </if>
+                <if test="serviceDiscount != null">
+                    and service_discount = #{serviceDiscount}
+                </if>
+                <if test="feeDiscount != null">
+                    and fee_discount = #{feeDiscount}
+                </if>
+                <if test="feeAmount != null">
+                    and fee_amount = #{fee_amount}
+                </if>
+                <if test="contactName != null">
+                    and contact_name = #{contactName}
+                </if>
+                <if test="contactMobile != null">
+                    and contact_mobile = #{contactMobile}
+                </if>
+
+                <if test="contactMobiles != null">
+                    and contact_mobile in (
+                    <foreach collection="contactMobiles" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+
+                <if test="insuranceCompanyId != null">
+                    and insurance_company_id = #{insuranceCompanyId}
+                </if>
+                <if test="insuranceCompanyName != null">
+                    and insurance_company_name = #{insuranceCompanyName}
+                </if>
+                <if test="mileage != null">
+                    and mileage = #{mileage}
+                </if>
+                <if test="carColor != null">
+                    and car_color = #{carColor}
+                </if>
+                <if test="buyTime != null">
+                    and buy_time = #{buyTime}
+                </if>
+                <if test="customerAddress != null">
+                    and customer_address = #{customerAddress}
+                </if>
+                <if test="oilMeter != null">
+                    and oil_meter = #{oilMeter}
+                </if>
+                <if test="isVisit != null">
+                    and is_visit = #{isVisit}
+                </if>
+                <if test="isLock != null">
+                    and is_lock = #{isLock}
+                </if>
+                <if test = "imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test = "orderTag != null">
+                    and order_tag = #{orderTag}
+                </if>
+                <if test = "ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test = "refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="orderStatuss != null">
+                    and order_status in (
+                    <foreach collection="orderStatuss" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="keyword != null">
+                    and (
+                    car_license like CONCAT('%',#{keyword},'%')
+                    or customer_name like CONCAT('%',#{keyword},'%')
+                    or customer_mobile like CONCAT('%',#{keyword},'%')
+                    or order_sn like CONCAT('%',#{keyword},'%')
+                    )
+                </if>
+                <if test="contactKeyword != null">
+                    and (
+                    car_license like CONCAT('%',#{contactKeyword},'%')
+                    or contact_name like CONCAT('%',#{contactKeyword},'%')
+                    or contact_mobile like CONCAT('%',#{contactKeyword},'%')
+                    or order_sn like CONCAT('%',#{contactKeyword},'%')
+                    )
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+                    and create_time >= #{startTime}
+                     ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+                    and create_time <= #{endTime}
+                ]]>
+                </if>
+                <if test="payStartTime != null">
+                    <![CDATA[
+                    and pay_time >= #{payStartTime}
+                     ]]>
+                </if>
+                <if test="payEndTime != null">
+                    <![CDATA[
+                    and pay_time <= #{payEndTime}
+                ]]>
+                </if>
+                <if test="carLicenseLike != null">
+                    <![CDATA[
+                    and car_license like CONCAT('%',#{carLicenseLike},'%')
+                    ]]>
+                </if>
+                <if test="customerNameLike != null">
+                    <![CDATA[
+                    and customer_name like CONCAT('%',#{customerNameLike},'%')
+                     ]]>
+                </if>
+                <if test="contactNameLike != null">
+                    <![CDATA[
+                    and contact_name like CONCAT('%',#{contactNameLike},'%')
+                     ]]>
+                </if>
+                <if test="carLike != null">
+                    <![CDATA[
+                    and (
+                    car_brand like CONCAT('%',#{carLike},'%')
+                    or car_series like  CONCAT('%',#{carLike},'%')
+                    or car_alias like CONCAT('%',#{carLike},'%')
+                    )
+                     ]]>
+                </if>
+                <if test="orderSnLike != null">
+                    <![CDATA[
+                    and order_sn like CONCAT('%',#{orderSnLike},'%')
+                     ]]>
+                </if>
+                <if test="mobileLike != null">
+                    <![CDATA[
+                    and (customer_mobile = #{mobileLike} or contact_mobile = #{mobileLike})
+                    ]]>
+                </if>
+                <if test="customerIds != null">
+                    and customer_id in (
+                    <foreach collection="customerIds" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="upkeepMileage != null">
+                    and upkeep_mileage = #{upkeepMileage}
+                </if>
+                <if test="createTime != null">
+                    and create_time = #{createTime}
+                </if>
+                <if test="orderDiscountAmount != null">
+                    and order_discount_amount = #{orderDiscountAmount}
+                </if>
+                <if test="confirmTime != null">
+                    and confirm_time = #{confirmTime}
+                </if>
+                <if test="orderTags != null">
+                    and order_tag in (
+                    <foreach collection="orderTags" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="proxyTypes != null">
+                    and proxy_type in (
+                    <foreach collection="proxyTypes" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="proxyType !=null">
+                    and proxy_type = #{proxyType}
+                </if>
+                <if test="channelId !=null">
+                    and channel_id = #{channelId}
+                </if>
+                <if test="channelName !=null">
+                    and channel_name = #{channelName}
+                </if>
+                <if test="expectTime !=null">
+                    and expect_time = #{expectTime}
+                </if>
+                <if test="downPayment !=null">
+                    and down_payment = #{downPayment}
+                </if>
+                <if test="orderIds != null">
+                    and id in
+                    (
+                    <foreach collection="orderIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="orderType != null">
+                    order_type = #{orderType},
+                </if>
+                <if test="parentId != null">
+                    parent_id = #{parentId},
+                </if>
+                <if test="orderSn != null">
+                    order_sn = #{orderSn},
+                </if>
+                <if test="customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test="customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test="expectedTime != null">
+                    expected_time = #{expectedTime},
+                </if>
+                <if test="goodsAmount != null">
+                    goods_amount = #{goodsAmount},
+                </if>
+                <if test="serviceAmount != null">
+                    service_amount = #{serviceAmount},
+                </if>
+                <if test="taxAmount != null">
+                    tax_amount = #{taxAmount},
+                </if>
+                <if test="totalAmount != null">
+                    total_amount = #{totalAmount},
+                </if>
+                <if test="postscript != null">
+                    postscript = #{postscript},
+                </if>
+                <if test="orderStatus != null">
+                    order_status = #{orderStatus},
+                </if>
+                <if test="carLicense != null">
+                    car_license = #{carLicense},
+                </if>
+                <if test="carBrandId != null">
+                    car_brand_id = #{carBrandId},
+                </if>
+                <if test="carSeriesId != null">
+                    car_series_id = #{carSeriesId},
+                </if>
+                <if test="carPowerId != null">
+                    car_power_id = #{carPowerId},
+                </if>
+                <if test="carYearId != null">
+                    car_year_id = #{carYearId},
+                </if>
+                <if test="carModelsId != null">
+                    car_models_id = #{carModelsId},
+                </if>
+                <if test="carBrand != null">
+                    car_brand = #{carBrand},
+                </if>
+                <if test="carSeries != null">
+                    car_series = #{carSeries},
+                </if>
+                <if test="carPower != null">
+                    car_power = #{carPower},
+                </if>
+                <if test="carYear != null">
+                    car_year = #{carYear},
+                </if>
+                <if test="carModels != null">
+                    car_models = #{carModels},
+                </if>
+                <if test="carCompany != null">
+                    car_company = #{carCompany},
+                </if>
+                <if test="importInfo != null">
+                    import_info = #{importInfo},
+                </if>
+                <if test="customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test="customerMobile != null">
+                    customer_mobile = #{customerMobile},
+                </if>
+                <if test="vin != null">
+                    vin = #{vin},
+                </if>
+                <if test="engineNo != null">
+                    engine_no = #{engineNo},
+                </if>
+                <if test="receiver != null">
+                    receiver = #{receiver},
+                </if>
+                <if test="invoiceType != null">
+                    invoice_type = #{invoiceType},
+                </if>
+                <if test="discount != null">
+                    discount = #{discount},
+                </if>
+                <if test="receiverName != null">
+                    receiver_name = #{receiverName},
+                </if>
+                <if test="operatorName != null">
+                    operator_name = #{operatorName},
+                </if>
+                <if test="orderAmount != null">
+                    order_amount = #{orderAmount},
+                </if>
+                <if test="payStatus != null">
+                    pay_status = #{payStatus},
+                </if>
+                <if test="finishTime != null">
+                    finish_time = #{finishTime},
+                </if>
+                <if test="payTime != null">
+                    pay_time = #{payTime},
+                </if>
+                <if test="goodsCount != null">
+                    goods_count = #{goodsCount},
+                </if>
+                <if test="serviceCount != null">
+                    service_count = #{serviceCount},
+                </if>
+                <if test="carAlias != null">
+                    car_alias = #{carAlias},
+                </if>
+                <if test="preDiscountRate != null">
+                    pre_discount_rate = #{preDiscountRate},
+                </if>
+                <if test="preTaxAmount != null">
+                    pre_tax_amount = #{preTaxAmount},
+                </if>
+                <if test="prePreferentiaAmount != null">
+                    pre_preferentia_amount = #{prePreferentiaAmount},
+                </if>
+                <if test="preCouponAmount != null">
+                    pre_coupon_amount = #{preCouponAmount},
+                </if>
+                <if test="preTotalAmount != null">
+                    pre_total_amount = #{preTotalAmount},
+                </if>
+                <if test="payAmount != null">
+                    pay_amount = #{payAmount},
+                </if>
+                <if test="signAmount != null">
+                    sign_amount = #{signAmount},
+                </if>
+                <if test="otherInsuranceCompanyId != null">
+                    other_insurance_company_id = #{otherInsuranceCompanyId},
+                </if>
+                <if test="otherInsuranceCompanyName != null">
+                    other_insurance_company_name = #{otherInsuranceCompanyName},
+                </if>
+                <if test="goodsDiscount != null">
+                    goods_discount = #{goodsDiscount},
+                </if>
+                <if test="serviceDiscount != null">
+                    service_discount = #{serviceDiscount},
+                </if>
+                <if test="feeDiscount != null">
+                    fee_discount = #{feeDiscount},
+                </if>
+                <if test="feeAmount != null">
+                    fee_amount = #{feeAmount},
+                </if>
+                <if test="contactName != null">
+                    contact_name = #{contactName},
+                </if>
+                <if test="contactMobile != null">
+                    contact_mobile = #{contactMobile},
+                </if>
+                <if test="insuranceCompanyId != null">
+                    insurance_company_id = #{insuranceCompanyId},
+                </if>
+                <if test="insuranceCompanyName != null">
+                    insurance_company_name = #{insuranceCompanyName},
+                </if>
+                <if test="mileage != null">
+                    mileage = #{mileage},
+                </if>
+                <if test="carColor != null">
+                    car_color = #{carColor},
+                </if>
+                <if test="buyTime != null">
+                    buy_time = #{buyTime},
+                </if>
+                <if test="customerAddress != null">
+                    customer_address = #{customerAddress},
+                </if>
+                <if test="oilMeter != null">
+                    oil_meter = #{oilMeter},
+                </if>
+                <if test="isVisit != null">
+                    is_visit = #{isVisit},
+                </if>
+                <if test="isLock != null">
+                    is_lock = #{isLock},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "orderTag != null">
+                    order_tag = #{orderTag},
+                </if>
+                <if test = "ver != null">
+                    ver = #{ver},
+                </if>
+                <if test = "refer != null">
+                    refer = #{refer},
+                </if>
+                <if test="upkeepMileage != null">
+                    upkeep_mileage = #{upkeepMileage},
+                </if>
+                <if test="createTime != null">
+                    create_time = #{createTime},
+                </if>
+                <if test="orderDiscountAmount != null">
+                    order_discount_amount = #{orderDiscountAmount},
+                </if>
+                <if test="confirmTime != null">
+                    confirm_time = #{confirmTime},
+                </if>
+                <if test="proxyType !=null">
+                    proxy_type = #{proxyType},
+                </if>
+                <if test="channelId !=null">
+                    channel_id = #{channelId},
+                </if>
+                <if test="channelName !=null">
+                    channel_name = #{channelName},
+                </if>
+                <if test="expectTime !=null">
+                    expect_time = #{expectTime},
+                </if>
+                <if test="downPayment !=null">
+                    down_payment = #{downPayment},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_order_info
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_info
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_info
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectByIdAndShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_info
+        where id = #{id} and shop_id = #{shopId}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_info
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_order_info
+        set is_deleted='Y', gmt_modified = now()
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_order_info
+        set is_deleted='Y', gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_order_info
+        set is_deleted='Y', gmt_modified = now()
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_order_info (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="payTime != null">
+                pay_time,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="orderType != null">
+                order_type,
+            </if>
+            <if test="parentId != null">
+                parent_id,
+            </if>
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+            <if test="customerId != null">
+                customer_id,
+            </if>
+            <if test="customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test="expectedTime != null">
+                expected_time,
+            </if>
+            <if test="goodsAmount != null">
+                goods_amount,
+            </if>
+            <if test="serviceAmount != null">
+                service_amount,
+            </if>
+            <if test="taxAmount != null">
+                tax_amount,
+            </if>
+            <if test="totalAmount != null">
+                total_amount,
+            </if>
+            <if test="postscript != null">
+                postscript,
+            </if>
+            <if test="orderStatus != null">
+                order_status,
+            </if>
+            <if test="carLicense != null">
+                car_license,
+            </if>
+            <if test="carBrandId != null">
+                car_brand_id,
+            </if>
+            <if test="carSeriesId != null">
+                car_series_id,
+            </if>
+            <if test="carPowerId != null">
+                car_power_id,
+            </if>
+            <if test="carYearId != null">
+                car_year_id,
+            </if>
+            <if test="carModelsId != null">
+                car_models_id,
+            </if>
+            <if test="carBrand != null">
+                car_brand,
+            </if>
+            <if test="carSeries != null">
+                car_series,
+            </if>
+            <if test="carPower != null">
+                car_power,
+            </if>
+            <if test="carYear != null">
+                car_year,
+            </if>
+            <if test="carModels != null">
+                car_models,
+            </if>
+            <if test="carCompany != null">
+                car_company,
+            </if>
+            <if test="importInfo != null">
+                import_info,
+            </if>
+            <if test="customerName != null">
+                customer_name,
+            </if>
+            <if test="customerMobile != null">
+                customer_mobile,
+            </if>
+            <if test="vin != null">
+                vin,
+            </if>
+            <if test="engineNo != null">
+                engine_no,
+            </if>
+            <if test="receiver != null">
+                receiver,
+            </if>
+            <if test="invoiceType != null">
+                invoice_type,
+            </if>
+            <if test="discount != null">
+                discount,
+            </if>
+            <if test="receiverName != null">
+                receiver_name,
+            </if>
+            <if test="operatorName != null">
+                operator_name,
+            </if>
+            <if test="orderAmount != null">
+                order_amount,
+            </if>
+            <if test="payStatus != null">
+                pay_status,
+            </if>
+            <if test="finishTime != null">
+                finish_time,
+            </if>
+            <if test="goodsCount != null">
+                goods_count,
+            </if>
+            <if test="serviceCount != null">
+                service_count,
+            </if>
+            <if test="carAlias != null">
+                car_alias,
+            </if>
+            <if test="preDiscountRate != null">
+                pre_discount_rate,
+            </if>
+            <if test="preTaxAmount != null">
+                pre_tax_amount,
+            </if>
+            <if test="prePreferentiaAmount != null">
+                pre_preferentia_amount,
+            </if>
+            <if test="preCouponAmount != null">
+                pre_coupon_amount,
+            </if>
+            <if test="preTotalAmount != null">
+                pre_total_amount,
+            </if>
+            <if test="payAmount != null">
+                pay_amount,
+            </if>
+            <if test="signAmount != null">
+                sign_amount,
+            </if>
+            <if test="otherInsuranceCompanyId != null">
+                other_insurance_company_id,
+            </if>
+            <if test="otherInsuranceCompanyName != null">
+                other_insurance_company_name,
+            </if>
+            <if test="goodsDiscount != null">
+                goods_discount,
+            </if>
+            <if test="serviceDiscount != null">
+                service_discount,
+            </if>
+            <if test="feeDiscount != null">
+                fee_discount,
+            </if>
+            <if test="feeAmount != null">
+                fee_amount,
+            </if>
+            <if test="contactName != null">
+                contact_name,
+            </if>
+            <if test="contactMobile != null">
+                contact_mobile,
+            </if>
+            <if test="insuranceCompanyId != null">
+                insurance_company_id,
+            </if>
+            <if test="insuranceCompanyName != null">
+                insurance_company_name,
+            </if>
+            <if test="mileage != null">
+                mileage,
+            </if>
+            <if test="carColor != null">
+                car_color,
+            </if>
+            <if test="buyTime != null">
+                buy_time,
+            </if>
+            <if test="customerAddress != null">
+                customer_address,
+            </if>
+            <if test="oilMeter != null">
+                oil_meter,
+            </if>
+            <if test="isVisit != null">
+                is_visit,
+            </if>
+            <if test="isLock != null">
+                is_lock,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "orderTag != null">
+                order_tag,
+            </if>
+            <if test = "ver != null">
+                ver,
+            </if>
+            <if test = "refer != null">
+                refer,
+            </if>
+            <if test="upkeepMileage != null">
+                upkeep_mileage,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="orderDiscountAmount != null">
+                order_discount_amount,
+            </if>
+            <if test="confirmTime != null">
+                confirm_time,
+            </if>
+            <if test="proxyType !=null">
+                proxy_type,
+            </if>
+            <if test="channelId !=null">
+                channel_id,
+            </if>
+            <if test="channelName !=null">
+                channel_name,
+            </if>
+            <if test="expectTime !=null">
+                expect_time,
+            </if>
+            <if test="downPayment !=null">
+                down_payment,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="payTime != null">
+                #{payTime},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="orderType != null">
+                #{orderType},
+            </if>
+            <if test="parentId != null">
+                #{parentId},
+            </if>
+            <if test="orderSn != null">
+                #{orderSn},
+            </if>
+            <if test="customerId != null">
+                #{customerId},
+            </if>
+            <if test="customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test="expectedTime != null">
+                #{expectedTime},
+            </if>
+            <if test="goodsAmount != null">
+                #{goodsAmount},
+            </if>
+            <if test="serviceAmount != null">
+                #{serviceAmount},
+            </if>
+            <if test="taxAmount != null">
+                #{taxAmount},
+            </if>
+            <if test="totalAmount != null">
+                #{totalAmount},
+            </if>
+            <if test="postscript != null">
+                #{postscript},
+            </if>
+            <if test="orderStatus != null">
+                #{orderStatus},
+            </if>
+            <if test="carLicense != null">
+                #{carLicense},
+            </if>
+            <if test="carBrandId != null">
+                #{carBrandId},
+            </if>
+            <if test="carSeriesId != null">
+                #{carSeriesId},
+            </if>
+            <if test="carPowerId != null">
+                #{carPowerId},
+            </if>
+            <if test="carYearId != null">
+                #{carYearId},
+            </if>
+            <if test="carModelsId != null">
+                #{carModelsId},
+            </if>
+            <if test="carBrand != null">
+                #{carBrand},
+            </if>
+            <if test="carSeries != null">
+                #{carSeries},
+            </if>
+            <if test="carPower != null">
+                #{carPower},
+            </if>
+            <if test="carYear != null">
+                #{carYear},
+            </if>
+            <if test="carModels != null">
+                #{carModels},
+            </if>
+            <if test="carCompany != null">
+                #{carCompany},
+            </if>
+            <if test="importInfo != null">
+                #{importInfo},
+            </if>
+            <if test="customerName != null">
+                #{customerName},
+            </if>
+            <if test="customerMobile != null">
+                #{customerMobile},
+            </if>
+            <if test="vin != null">
+                #{vin},
+            </if>
+            <if test="engineNo != null">
+                #{engineNo},
+            </if>
+            <if test="receiver != null">
+                #{receiver},
+            </if>
+            <if test="invoiceType != null">
+                #{invoiceType},
+            </if>
+            <if test="discount != null">
+                #{discount},
+            </if>
+            <if test="receiverName != null">
+                #{receiverName},
+            </if>
+            <if test="operatorName != null">
+                #{operatorName},
+            </if>
+            <if test="orderAmount != null">
+                #{orderAmount},
+            </if>
+            <if test="payStatus != null">
+                #{payStatus},
+            </if>
+            <if test="finishTime != null">
+                #{finishTime},
+            </if>
+            <if test="goodsCount != null">
+                #{goodsCount},
+            </if>
+            <if test="serviceCount != null">
+                #{serviceCount},
+            </if>
+            <if test="carAlias != null">
+                #{carAlias},
+            </if>
+            <if test="preDiscountRate != null">
+                #{preDiscountRate},
+            </if>
+            <if test="preTaxAmount != null">
+                #{preTaxAmount},
+            </if>
+            <if test="prePreferentiaAmount != null">
+                #{prePreferentiaAmount},
+            </if>
+            <if test="preCouponAmount != null">
+                #{preCouponAmount},
+            </if>
+            <if test="preTotalAmount != null">
+                #{preTotalAmount},
+            </if>
+            <if test="payAmount != null">
+                #{payAmount},
+            </if>
+            <if test="signAmount != null">
+                #{signAmount},
+            </if>
+            <if test="otherInsuranceCompanyId != null">
+                #{otherInsuranceCompanyId},
+            </if>
+            <if test="otherInsuranceCompanyName != null">
+                #{otherInsuranceCompanyName},
+            </if>
+            <if test="goodsDiscount != null">
+                #{goodsDiscount},
+            </if>
+            <if test="serviceDiscount != null">
+                #{serviceDiscount},
+            </if>
+            <if test="feeDiscount != null">
+                #{feeDiscount},
+            </if>
+            <if test="feeAmount != null">
+                #{feeAmount},
+            </if>
+            <if test="contactName != null">
+                #{contactName},
+            </if>
+            <if test="contactMobile != null">
+                #{contactMobile},
+            </if>
+            <if test="insuranceCompanyId != null">
+                #{insuranceCompanyId},
+            </if>
+            <if test="insuranceCompanyName != null">
+                #{insuranceCompanyName},
+            </if>
+            <if test="mileage != null">
+                #{mileage},
+            </if>
+            <if test="carColor != null">
+                #{carColor},
+            </if>
+            <if test="buyTime != null">
+                #{buyTime},
+            </if>
+            <if test="customerAddress != null">
+                #{customerAddress},
+            </if>
+            <if test="oilMeter != null">
+                #{oilMeter},
+            </if>
+            <if test="isVisit != null">
+                #{isVisit},
+            </if>
+            <if test="isLock != null">
+                #{isLock},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "orderTag != null">
+                #{orderTag},
+            </if>
+            <if test = "ver != null">
+                #{ver},
+            </if>
+            <if test = "refer != null">
+                #{refer},
+            </if>
+            <if test="upkeepMileage !=null">
+                #{upkeepMileage},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="orderDiscountAmount != null">
+                #{orderDiscountAmount},
+            </if>
+            <if test="confirmTime != null">
+                #{confirmTime},
+            </if>
+            <if test="proxyType !=null">
+                #{proxyType},
+            </if>
+            <if test="channelId !=null">
+                #{channelId},
+            </if>
+            <if test="channelName !=null">
+                #{channelName},
+            </if>
+            <if test="expectTime !=null">
+                #{expectTime},
+            </if>
+            <if test="downPayment !=null">
+                #{downPayment},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_order_info
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!--<select id="payedOrderSum" resultType="java.util.Map">-->
+    <select id="payedOrderSum" resultType="com.tqmall.legend.bi.entity.StatisticsDaily">
+        select shop_id as shopId, sum(order_amount) as orderProfit, count(order_amount) as orderCount,
+        pay_time as orderDate
+        from legend_order_info
+        where is_deleted='N' and pay_status = 2 and order_status != "WXDD"
+        <if test="startTime != null and endTime != null">
+            and
+            <![CDATA[
+        pay_time > #{startTime} and pay_time < #{endTime}
+        ]]>
+        </if>
+        group by shop_id
+    </select>
+
+
+
+
+    <sql id="OutWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+
+                <if test="isDeleted == null">and t.is_deleted = 'N' and a.is_deleted = 'N'</if>
+                <if test="shopId == null">t.shop_id = #{shopId}</if>
+                <if test="receiver != null">
+                    receiver = #{receiver},
+                </if>
+                <if test="keyword != null">
+                    and (
+                    t.car_license like CONCAT('%',#{keyword},'%')
+                    or t.customer_mobile like CONCAT('%',#{keyword},'%')
+                    or t.order_sn like CONCAT('%',#{keyword},'%')
+                    )
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+                    and t.create_time >= #{startTime}
+                     ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+                    and t.create_time <= #{endTime}
+                     ]]>
+                </if>
+                <if test="parts != null">
+                    and a.goods_sn like CONCAT('%', #{parts}, '%') or a.goods_name like CONCAT('%', #{parts}, '%') or
+                    a.goods_format like CONCAT('%', #{parts}, '%')
+                </if>
+
+            </trim>
+        </where>
+    </sql>
+
+    <!-- 2C-APP 根据联系人和车牌号获得工单列表 -->
+    <select id="selectByContactMobileAndLicense" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_info
+        where
+        is_deleted = 'N'
+        and contact_mobile = #{contactMobile}
+        <if test="carLicenses != null">
+            and car_License in (
+            <foreach collection="carLicenses" item="tag" separator=",">
+                #{tag}
+            </foreach>
+            )
+        </if>
+        <if test="shopId != null">
+            and shop_id = #{shopId}
+        </if>
+        order by create_time desc
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <select id="selectByIdsAndShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_info
+        where
+        is_deleted = 'N'
+        and shop_id = #{shopId}  and id in
+        (
+        <foreach collection="orderIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <select id="findUnVisitList" resultType="com.tqmall.legend.entity.order.OrderInfo">
+        SELECT a.id as id,
+            a.shop_id as shopId,
+            a.customer_id as customerId,
+            a.customer_car_id as customerCarId,
+            a.car_license as carLicense,
+            a.customer_name as customerName,
+            a.customer_mobile as customerMobile,
+            a.contact_name as contactName,
+            a.contact_mobile as contactMobile,
+            a.confirm_time as confirmTime
+        FROM legend_order_info a
+        JOIN (
+            SELECT customer_car_id, MAX(confirm_time) confirmTime
+            FROM legend_order_info
+            WHERE shop_id = #{shopId}
+            AND order_status = 'DDYFK'
+            <![CDATA[
+            AND confirm_time >= #{confirmTimeGt}
+            ]]>
+            <![CDATA[
+            AND confirm_time <= #{confirmTimeLt}
+            ]]>
+            AND is_deleted = 'N'
+            AND customer_car_id IS NOT NULL
+            GROUP BY customer_car_id) b
+        ON a.shop_id = #{shopId} AND a.customer_car_id = b.customer_car_id AND a.confirm_time = b.confirmTime
+    </select>
+
+    <update id="updateOrderVisit">
+        UPDATE legend_order_info
+        SET is_visit = 1
+        WHERE is_deleted = 'N'
+          AND shop_id = #{shopId}
+          AND id = #{orderId}
+    </update>
+
+    <!-- 查询门店所有开过单的服务顾问ids -->
+    <select id = "selectReceiverByShopId" resultType = "java.lang.Long">
+        select distinct(receiver)
+        from legend_order_info
+        where shop_id=#{shopId}
+        and is_deleted='N'
+        and receiver > 0
+        and order_status != 'WXDD'
+    </select>
+</mapper>

@@ -1,0 +1,50 @@
+/*
+ * create by zmx 2016/11/14
+ * 油漆盘点列表页
+*/
+.new-inventory{
+    margin-top: 10px;
+}
+.new-inventory i{
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 4px;
+}
+.form-box{
+    padding: 10px;
+    border:1px solid #cacaca;
+    background: #fff;
+}
+.table-list{
+    border-left: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+}
+.yqx-table {
+    width: 100%;
+    table-layout: auto;
+}
+.list-tab-box{
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.max-width{
+    max-width: 150px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.yqx-table td a{
+    text-decoration: underline;
+}
+.edit{
+    color: #607b0a;
+}
+.delete{
+    color: #fd461e;
+}
+.look{
+    color: #333;
+}
+.yqx-table>tbody>tr>td div.p-left,.yqx-table>thead>tr>th div.p-left{
+    padding-left: 10px;
+}

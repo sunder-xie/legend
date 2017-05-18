@@ -1,0 +1,90 @@
+.pathTree {
+    line-height: 20px;
+    margin-top: 15px;
+}
+.storeNav {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #ebeaef;
+    overflow: hidden;
+}
+.storeNav li {
+    display: inline;
+    padding-right: 39px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #666;
+    float: left;
+    cursor: pointer;
+}
+
+.storeNav li.current {
+    color: #00f;
+}
+.storeBox {
+    padding: 24px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ebeaef;
+    overflow: hidden;
+}
+.storeInfo {
+    width: 475px;
+    float: left;
+    margin-right: 140px;
+}
+.storeImg {
+    height: 110px;
+    float: left;
+}
+.storeContent {
+    font-size: 14px;
+}
+.functionalDetail>li {
+    width: 232px;
+    height: 250px;
+    margin: 0 15px 47px 0;
+    float: left;
+}
+.storeHead {
+    line-height: 36px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+.storeSummary {
+    font-size: 13px;
+    line-height: 20px;
+}
+.subHead {
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+.seq, .subtitle {
+    float: left;
+}
+.seq {
+    font-size: 42px;
+    margin-right: 9px;
+}
+.seq .seq0 {
+    color: #333;
+}
+.seq .seq1 {
+    color: #3e82f8;
+}
+.subtitle {
+    padding-top: 5px;
+}
+.subtitle .subHeadCN, .subtitle .subHeadENG {
+    line-height: 16px;
+}
+.subtitle .subHeadCN {
+    font-weight: 700;
+    color: #333;
+}
+.fd_content {
+    margin-left: 51px;
+}
+.fd_content li {
+    line-height: 30px;
+}

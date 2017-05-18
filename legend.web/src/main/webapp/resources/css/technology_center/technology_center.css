@@ -1,0 +1,313 @@
+.banner {
+    width: 100%;
+    height: 93px;
+    padding-top: 40px;
+    background-color: #3e82f8;
+    position: relative;
+}
+.tt-box {
+    width: 160px;
+    min-height: 50px;
+    margin: 0 auto;
+    padding-left: 90px;
+    background: url("../../images/technology_center/banner_logo.png") left center no-repeat;
+    color: #fff;
+    text-align: left;
+}
+.tt-tit_cn {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.tt-tit_eng {
+    font-size: 18px;
+}
+.delta {
+    width: 0px;
+    height: 0;
+    margin: 43px auto 0;
+    border-top: 16px solid #3E82F8;
+    border-left: 12px solid rgba(0, 0, 0, 0);
+    border-right: 12px solid rgba(0, 0, 0, 0);
+    display: block;
+    position: absolute;
+    z-index: 111;
+    left: 50%;
+    bottom: -16px;
+}
+.container {
+    width: 100%;
+    padding: 100px 0;
+}
+.container1 {
+    background-color: #f5f5f5;
+}
+.container2 {
+    background-color: #fff;
+}
+.subHead{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.subHead .cn {
+    margin-bottom: 20px;
+    font-size: 42px;
+    color: #333;
+}
+.subHead .summary {
+    font-size: 14px;
+    color: #666;
+}
+.summary span {
+    padding: 0 10px;
+}
+.summary .hr {
+    display: inline-block;
+    width: 20px;
+    height: 4px;
+    border-top:1px solid #dcdcdc;
+}
+
+/* exports */
+.experts-list {
+    height: 350px;
+    overflow: hidden;
+}
+.experts-list li {
+    float: left;
+    width: 232px;
+    height: 100%;
+    /*margin-right: 50px;*/
+    margin-right: 20px;
+}
+.export_photo {
+    /*width: 100%;*/
+    height: 260px;
+}
+.export_info {
+    padding: 7px;
+    background-color: #222d49;
+    color: #fff;
+    text-align: center;
+}
+.export_name {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+.export_summary {
+    height: 50px;
+    line-height: 18px;
+    font-size: 12px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+/* car brand */
+.car_brand-list {
+    width: 100%;
+    overflow: hidden;
+}
+.car_brand-list li {
+    float: left;
+    width: 139px;
+    height: 81px;
+    border: 1px solid #f5f5f5;
+}
+.car_brand_img {
+    width: 100%;
+    height: 100%;
+}
+/*special topic*/
+.topic-content {
+    width: 1019px;
+    overflow: hidden;
+}
+.topic_item {
+    width: 314px;
+    margin-right: 23px;
+    background-color: #fff;
+    float: left;
+}
+.stb_item .topic_img-box {
+    padding: 8px;
+}
+.topic_img {
+    width: 100%;
+    height: 100%;
+}
+.stb_item .topic_info {
+    padding: 8px 18px;
+}
+.stb_item .topic_name {
+    line-height: 21px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #333;
+    text-align: left;
+}
+.stb_item .topic_summary {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.topic-list {
+    float: left;
+}
+.topic-list li {
+    margin: 0 8px;
+    border-bottom: 1px solid #dcdcdc;
+    overflow: hidden;
+}
+.topic-list .last {
+    border: 0;
+}
+.topic-list .topic_img-box {
+    width: 121px;
+    height: 93px;
+    padding: 8px 8px 8px 0;
+    float: left;
+}
+.topic-list .topic_info {
+    width: 156px;
+    padding: 8px 0 8px 8px;
+    float: left;
+}
+.topic-list .topic_name {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+.topic-list .topic_summary {
+    height: 74px;
+    line-height: 19px;
+    overflow: hidden;
+}
+.tech_train-list {
+    width: 992px;
+    margin-left: -1px;
+    overflow: hidden;
+}
+.tech_train-list li {
+    width: 206px;
+    height: 80px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #fff;
+    float: left;
+}
+.tt_summary  {
+    line-height: 15px;
+}
+.tt_class {
+    margin: 20px 0 10px;
+    font-size: 16px;
+    font-weight: 900;
+}
+.tt_1 {
+    color: #3c73dd;
+}
+.tt_2 {
+    color: #805bd0;
+}
+.tt_3 {
+    color: #109d50;
+}
+.tt_4 {
+    color: #fa9e00;
+}
+.tt_5 {
+    color: #fc9b00;
+}
+.tt_6 {
+    color: #5d6d89;
+}
+.tt_7 {
+    color: #f7383e;
+}
+.tt_8 {
+    color: #40aedc;
+}
+/*equipments*/
+.equipments-content {
+    width: 1074px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.equipments-box {
+    width: 990px;
+    height: 287px;
+    float: left;
+    overflow: hidden;
+}
+.equipments-list {
+    height: 100%;
+}
+.equipments-list li {
+    width: 232px;
+    margin-right: 20px;
+    float: left;
+}
+.equipments-list img {
+    width: 232px;
+    height: 232px;
+}
+.tt_btn {
+    display: inline-block;
+    width: 22px;
+    height: 287px;
+    float: left;
+}
+.left_btn {
+    margin-right: 20px;
+    background: url("../../images/technology_center/left_btn.png") center no-repeat;
+}
+.left_btn:hover {
+    background: url("../../images/technology_center/left_sel_btn.png") center no-repeat;
+}
+.right_btn {
+    margin-left: 20px;
+    background: url("../../images/technology_center/right_btn.png") center no-repeat;
+}
+.right_btn:hover {
+    background: url("../../images/technology_center/right_sel_btn.png") center no-repeat;
+}
+.part_name {
+    height: 40px;
+    line-height: 20px;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #FFF;
+}
+/*top-nav*/
+.top_nav {
+    margin: -155px 0 0  570px;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+.top_nav li {
+    width: 58px;
+    height: 28px;
+    line-height: 16px;
+    border: 1px solid #E5E5E5;
+    padding: 15px 0;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+}
+.top_nav li.cur {
+    width: 60px;
+    height: 30px;
+    border: 0;
+    color: #fff;
+    background-color: #5593ff;
+}
+.top_nav li.top {
+    padding-top: 30px;
+    padding-bottom: 0;
+    text-align: center;
+    background: #e5e5e5 url("../../images/join/top.png") center 16px no-repeat;
+}

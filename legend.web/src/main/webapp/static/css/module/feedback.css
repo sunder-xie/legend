@@ -1,0 +1,232 @@
+.feedback-box {
+    padding: 9px 4px 4px 9px;
+    line-height: 0;
+    text-align: center;
+    white-space: nowrap;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.feedback-dialog .yqx-select-options {
+    max-height: 150px;
+}
+
+.feedback-dialog {
+    width: 530px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+}
+
+.feedback-dialog .feedback-form .yqx-input[name=feedbackModule] {
+    text-indent: 8px;
+}
+
+.feedback-dialog textarea.yqx-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 2px 0 2px 0;
+}
+
+.feedback-dialog .feedback-icon {
+    display: inline-block;
+    background: url('../../img/common/feedback/feedback-icons.png') no-repeat;
+}
+
+.feedback-icon.feedback-pic {
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
+    vertical-align: -3px;
+    background-position: -23px 0;
+}
+
+.feedback-dialog * {
+    box-sizing: content-box;
+}
+
+.feedback-dialog .show-grid
+, .feedback-dialog .show-grid .form-item {
+    width: 100%;
+}
+
+.feedback-dialog .add-pic {
+    padding: 7px 10px;
+    color: #9fc526;
+    background: #f3f3f3;
+    border: 1px solid #dadada;
+    border-top: 0;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    cursor: pointer;
+}
+
+.feedback-dialog .dialog-title {
+    text-align: center;
+    font-size: 16px;
+    color: #535353;
+    background: #fff;
+    border-bottom: 1px solid #dadada;
+}
+
+.feedback-dialog .dialog-title i {
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.feedback-dialog .dialog-title i:hover,  .feedback-dialog .dialog-title i.current-tab{
+    height: 52px;
+    border-bottom: 4px solid #9fc526;
+}
+
+.feedback-dialog .history-tab {
+    margin-left: 62px;
+}
+
+.feedback-dialog .feedback-history {
+    position: relative;
+    min-height: 126px;
+    background: #f9f9f9;
+}
+
+.feedback-dialog .dialog-content {
+    padding: 29px;
+}
+.feedback-box .feedback-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    background: url('../../img/common/feedback/feedback.png');
+}
+
+.feedback-box .feedback-icon-1 {
+    background-position: 0 0;
+}
+
+.feedback-box:hover {
+    padding-left: 11px;
+    padding-right: 11px;
+    background: #9fc527;
+    border-color: #7fa700;
+}
+
+.feedback-box:hover .feedback-icon-1 {
+    background-position: 0 -27px;
+}
+
+.feedback-box:hover .feedback-text {
+    display: inline-block;
+}
+.feedback-text {
+    display: none;
+    margin-left: 7px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.feedback-dialog textarea{
+    line-height: 14px;
+}
+
+.feedback-dialog .feedback-view-box {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.feedback-dialog .feedback-view {
+    display: inline-block;
+    height: 20px;
+    margin-right: 4px;
+    line-height: 20px;
+    color: #fff;
+    background: #9fc526;
+    border-radius: 1px;
+}
+
+.feedback-dialog .feedback-file-name {
+    max-width: 132px;
+    margin-left: 4px;
+    overflow: hidden;
+    font-style: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.feedback-dialog .feedback-icon.white-del-icon {
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    margin: 0 7px;
+    vertical-align: bottom;
+    background-position: 1px 5px;
+    cursor: pointer;
+}
+
+.feedback-dialog .feedback-time {
+    color: #ccc;
+}
+
+.feedback-dialog .history-text {
+    margin: 10px 0;
+    color: #333;
+}
+
+.feedback-dialog .history-main {
+    margin-bottom: 10px;
+}
+
+.feedback-dialog .history-reply {
+    max-height:142px;
+    margin: 10px 0 92px 0;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #e8e8e8;
+    border-radius: 1px;
+}
+
+.feedback-dialog .history-reply p {
+    color: #9fc526;
+}
+
+.feedback-dialog .more-feedback {
+    position: absolute;
+    bottom: 29px;
+    color: #888;
+}
+
+.feedback-dialog .continue-feedback {
+    position: absolute;
+    right: 29px;
+    bottom: 73px;
+    width: 71px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: #52c9f2;
+    border-radius: 1px;
+}
+
+.feedback-thanks .thanks-main {
+    height: 102px;
+    text-align: center;
+}
+
+.thanks-main>img {
+    margin-top: 42px;
+}
+
+.feedback-thanks .thanks-text {
+    padding: 26px 22px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #9fc526;
+}

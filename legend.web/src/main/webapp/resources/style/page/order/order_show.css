@@ -1,0 +1,27 @@
+
+.bx_cont {
+    padding: 5px 0 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.bx_cont table {
+    background: #FFFFFF;
+}
+
+.bx_cont table th, .bx_cont table td {
+    padding: 10px 14px;
+    white-space: nowrap;
+    text-align: center;
+    color: #333333;
+    border: 1px solid #cdcdcd;
+}
+
+.bx_cont table th {
+    font-size: 14px;
+}
+.qxy_search_form .advanced_search:before{
+    border:none;
+}
+

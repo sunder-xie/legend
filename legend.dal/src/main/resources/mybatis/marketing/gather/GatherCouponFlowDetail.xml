@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.gather.GatherCouponFlowDetailDao">
+
+    <resultMap id = "BaseResultMap" type = "GatherCouponFlowDetail" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "gather_config_id" property = "gatherConfigId" />
+        <result column = "gather_customer_note_id" property = "gatherCustomerNoteId" />
+        <result column = "gather_time" property = "gatherTime" />
+        <result column = "refer_user_id" property = "referUserId" />
+        <result column = "refer_customer_id" property = "referCustomerId" />
+        <result column = "refer_customer_car_id" property = "referCustomerCarId" />
+        <result column = "refer_customer_name" property = "referCustomerName" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "customer_mobile" property = "customerMobile" />
+        <result column = "account_coupon_id" property = "accountCouponId" />
+        <result column = "is_new" property = "isNew" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            gather_config_id as gatherConfigId,
+            gather_customer_note_id as gatherCustomerNoteId,
+            gather_time as gatherTime,
+            refer_user_id as referUserId,
+            refer_customer_id as referCustomerId,
+            refer_customer_car_id as referCustomerCarId,
+            refer_customer_name as referCustomerName,
+            customer_id as customerId,
+            customer_mobile as customerMobile,
+            account_coupon_id as accountCouponId,
+            is_new as isNew,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "gatherConfigId != null">
+                    and gather_config_id = #{gatherConfigId}
+                </if>
+                <if test = "gatherCustomerNoteId != null">
+                    and gather_customer_note_id = #{gatherCustomerNoteId}
+                </if>
+                <if test = "gatherTime != null">
+                    and gather_time = #{gatherTime}
+                </if>
+                <if test = "referUserId != null">
+                    and refer_user_id = #{referUserId}
+                </if>
+                <if test="referCustomerId != null">
+                    and refer_customer_id = #{referCustomerId}
+                </if>
+                <if test = "referCustomerCarId != null">
+                    and refer_customer_car_id = #{referCustomerCarId}
+                </if>
+                <if test = "referCustomerName != null">
+                    and refer_customer_name = #{referCustomerName}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "customerMobile != null">
+                    and customer_mobile = #{customerMobile}
+                </if>
+                <if test = "accountCouponId != null">
+                    and account_coupon_id = #{accountCouponId}
+                </if>
+                <if test = "isNew != null">
+                    and is_new = #{isNew}
+                </if>
+                <if test="gmtModifiedGT != null">
+                    <![CDATA[
+                    and gmt_modified >= #{gmtModifiedGT}
+                    ]]>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "gatherConfigId != null">
+                    gather_config_id = #{gatherConfigId},
+                </if>
+                <if test = "gatherCustomerNoteId != null">
+                    gather_customer_note_id = #{gatherCustomerNoteId},
+                </if>
+                <if test = "gatherTime != null">
+                    gather_time = #{gatherTime},
+                </if>
+                <if test = "referUserId != null">
+                    refer_user_id = #{referUserId},
+                </if>
+                <if test="referCustomerId != null">
+                    refer_customer_id = #{referCustomerId},
+                </if>
+                <if test = "referCustomerCarId != null">
+                    refer_customer_car_id = #{referCustomerCarId},
+                </if>
+                <if test = "referCustomerName != null">
+                    refer_customer_name = #{referCustomerName},
+                </if>
+                <if test = "customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test = "customerMobile != null">
+                    customer_mobile = #{customerMobile},
+                </if>
+                <if test = "accountCouponId != null">
+                    account_coupon_id = #{accountCouponId},
+                </if>
+                <if test = "isNew != null">
+                    is_new = #{isNew},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_gather_coupon_flow_detail
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gather_coupon_flow_detail
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gather_coupon_flow_detail
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gather_coupon_flow_detail
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_gather_coupon_flow_detail
+        set is_deleted='Y' , gmt_modified = now()
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_gather_coupon_flow_detail
+        set is_deleted='Y' , gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_gather_coupon_flow_detail
+        set is_deleted='Y' , gmt_modified = now()
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_gather_coupon_flow_detail (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "gatherConfigId != null">
+                gather_config_id,
+            </if>
+            <if test = "gatherCustomerNoteId != null">
+                gather_customer_note_id,
+            </if>
+            <if test = "gatherTime != null">
+                gather_time,
+            </if>
+            <if test = "referUserId != null">
+                refer_user_id,
+            </if>
+            <if test="referCustomerId != null">
+                refer_customer_id,
+            </if>
+            <if test = "referCustomerCarId != null">
+                refer_customer_car_id,
+            </if>
+            <if test = "referCustomerName != null">
+                refer_customer_name,
+            </if>
+            <if test = "customerId != null">
+                customer_id,
+            </if>
+            <if test = "customerMobile != null">
+                customer_mobile,
+            </if>
+            <if test = "accountCouponId != null">
+                account_coupon_id,
+            </if>
+            <if test = "isNew != null">
+                is_new,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "gatherConfigId != null">
+                #{gatherConfigId},
+            </if>
+            <if test = "gatherCustomerNoteId != null">
+                #{gatherCustomerNoteId},
+            </if>
+            <if test = "gatherTime != null">
+                #{gatherTime},
+            </if>
+            <if test="referUserId != null">
+                #{referUserId},
+            </if>
+            <if test = "referCustomerId != null">
+                #{referCustomerId},
+            </if>
+            <if test = "referCustomerCarId != null">
+                #{referCustomerCarId},
+            </if>
+            <if test = "referCustomerName != null">
+                #{referCustomerName},
+            </if>
+            <if test = "customerId != null">
+                #{customerId},
+            </if>
+            <if test = "customerMobile != null">
+                #{customerMobile},
+            </if>
+            <if test = "accountCouponId != null">
+                #{accountCouponId},
+            </if>
+            <if test = "isNew != null">
+                #{isNew},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_gather_coupon_flow_detail
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_gather_coupon_flow_detail (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            gather_config_id,
+            gather_customer_note_id,
+            gather_time,
+            refer_user_id,
+            refer_customer_id,
+            refer_customer_car_id,
+            refer_customer_name,
+            customer_id,
+            customer_mobile,
+            account_coupon_id,
+            is_new,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.gatherConfigId != null">
+                    #{item.gatherConfigId},
+                </if>
+                <if test="item.gatherConfigId == null">
+                    0 ,
+                </if>
+                <if test="item.gatherCustomerNoteId != null">
+                    #{item.gatherCustomerNoteId},
+                </if>
+                <if test="item.gatherCustomerNoteId == null">
+                    0 ,
+                </if>
+                <if test="item.gatherTime != null">
+                    #{item.gatherTime},
+                </if>
+                <if test="item.gatherTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.referUserId != null">
+                    #{item.referUserId},
+                </if>
+                <if test="item.referUserId == null">
+                    0 ,
+                </if>
+                <if test="item.referCustomerId != null">
+                    #{item.referCustomerId},
+                </if>
+                <if test="item.referCustomerId == null">
+                    0 ,
+                </if>
+                <if test="item.referCustomerCarId != null">
+                    #{item.referCustomerCarId},
+                </if>
+                <if test="item.referCustomerCarId == null">
+                    0 ,
+                </if>
+                <if test="item.referCustomerName != null">
+                    #{item.referCustomerName},
+                </if>
+                <if test="item.referCustomerName == null">
+                    '',
+                </if>
+                <if test="item.customerId != null">
+                    #{item.customerId},
+                </if>
+                <if test="item.customerId == null">
+                    0 ,
+                </if>
+                <if test="item.customerMobile != null">
+                    #{item.customerMobile},
+                </if>
+                <if test="item.customerMobile == null">
+                    '',
+                </if>
+                <if test="item.accountCouponId != null">
+                    #{item.accountCouponId},
+                </if>
+                <if test="item.accountCouponId == null">
+                    0 ,
+                </if>
+                <if test="item.isNew != null">
+                    #{item.isNew},
+                </if>
+                <if test="item.isNew == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

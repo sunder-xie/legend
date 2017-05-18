@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.activity.CzCouponNoticeDao">
+
+    <resultMap id = "BaseResultMap" type = "CzCouponNotice" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "coupon_name" property = "couponName" />
+        <result column = "coupon_desc" property = "couponDesc" />
+        <result column = "start_time" property = "startTime" />
+        <result column = "end_time" property = "endTime" />
+        <result column = "coupon_type" property = "couponType" />
+        <result column = "coupon_status" property = "couponStatus" />
+        <result column = "reason" property = "reason" />
+        <result column = "code_img_url" property = "codeImgUrl" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            coupon_name as couponName,
+            coupon_desc as couponDesc,
+            start_time as startTime,
+            end_time as endTime,
+            coupon_type as couponType,
+            coupon_status as couponStatus,
+            reason as reason,
+            code_img_url as codeImgUrl,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "shopIds != null">
+                    and shop_id in (
+                    <foreach collection="shopIds" index="index" item="item" separator=",">
+                        #{item}
+                    </foreach>
+                    )
+                </if>
+                <if test = "couponName != null">
+                    and coupon_name = #{couponName}
+                </if>
+                <if test = "couponDesc != null">
+                    and coupon_desc = #{couponDesc}
+                </if>
+                <if test = "startTime != null">
+                    and start_time = #{startTime}
+                </if>
+                <if test = "endTime != null">
+                    and end_time = #{endTime}
+                </if>
+                <if test = "usable != null">
+                    <![CDATA[
+                    and end_time > #{usable}
+                    ]]>
+                </if>
+                <if test = "unusable != null">
+                    <![CDATA[
+                    and end_time < #{unusable}
+                    ]]>
+                </if>
+                <if test = "couponType != null">
+                    and coupon_type = #{couponType}
+                </if>
+                <if test = "couponStatus != null">
+                    and coupon_status = #{couponStatus}
+                </if>
+                <if test = "couponStatuss != null">
+                    and coupon_status in (
+                    <foreach collection="couponStatuss" index="index" item="item" separator=",">
+                        #{item}
+                    </foreach>
+                    )
+                </if>
+                <if test = "reason != null">
+                    and reason = #{reason}
+                </if>
+                <if test = "codeImgUrl != null">
+                    and code_img_url = #{codeImgUrl}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "couponName != null">
+                    coupon_name = #{couponName},
+                </if>
+                <if test = "couponDesc != null">
+                    coupon_desc = #{couponDesc},
+                </if>
+                <if test = "startTime != null">
+                    start_time = #{startTime},
+                </if>
+                <if test = "endTime != null">
+                    end_time = #{endTime},
+                </if>
+                <if test = "couponType != null">
+                    coupon_type = #{couponType},
+                </if>
+                <if test = "couponStatus != null">
+                    coupon_status = #{couponStatus},
+                </if>
+                <if test = "reason != null">
+                    reason = #{reason},
+                </if>
+                <if test = "codeImgUrl != null">
+                    code_img_url = #{codeImgUrl},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_chezhu_coupon_notice
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_chezhu_coupon_notice
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_chezhu_coupon_notice
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_chezhu_coupon_notice
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_chezhu_coupon_notice
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_chezhu_coupon_notice
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_chezhu_coupon_notice
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_chezhu_coupon_notice (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "couponName != null">
+                coupon_name,
+            </if>
+            <if test = "couponDesc != null">
+                coupon_desc,
+            </if>
+            <if test = "startTime != null">
+                start_time,
+            </if>
+            <if test = "endTime != null">
+                end_time,
+            </if>
+            <if test = "couponType != null">
+                coupon_type,
+            </if>
+            <if test = "couponStatus != null">
+                coupon_status,
+            </if>
+            <if test = "reason != null">
+                reason,
+            </if>
+            <if test = "codeImgUrl != null">
+                code_img_url,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "couponName != null">
+                #{couponName},
+            </if>
+            <if test = "couponDesc != null">
+                #{couponDesc},
+            </if>
+            <if test = "startTime != null">
+                #{startTime},
+            </if>
+            <if test = "endTime != null">
+                #{endTime},
+            </if>
+            <if test = "couponType != null">
+                #{couponType},
+            </if>
+            <if test = "couponStatus != null">
+                #{couponStatus},
+            </if>
+            <if test = "reason != null">
+                #{reason},
+            </if>
+            <if test = "codeImgUrl != null">
+                #{codeImgUrl},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_chezhu_coupon_notice
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_chezhu_coupon_notice (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            coupon_name,
+            coupon_desc,
+            start_time,
+            end_time,
+            coupon_type,
+            coupon_status,
+            reason,
+            code_img_url,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.couponName != null">
+                    #{item.couponName},
+                </if>
+                <if test="item.couponName == null">
+                    NULL ,
+                </if>
+                <if test="item.couponDesc != null">
+                    #{item.couponDesc},
+                </if>
+                <if test="item.couponDesc == null">
+                    NULL ,
+                </if>
+                <if test="item.startTime != null">
+                    #{item.startTime},
+                </if>
+                <if test="item.startTime == null">
+                    NULL ,
+                </if>
+                <if test="item.endTime != null">
+                    #{item.endTime},
+                </if>
+                <if test="item.endTime == null">
+                    NULL ,
+                </if>
+                <if test="item.couponType != null">
+                    #{item.couponType},
+                </if>
+                <if test="item.couponType == null">
+                    NULL ,
+                </if>
+                <if test="item.couponStatus != null">
+                    #{item.couponStatus},
+                </if>
+                <if test="item.couponStatus == null">
+                    NULL ,
+                </if>
+                <if test="item.reason != null">
+                    #{item.reason},
+                </if>
+                <if test="item.reason == null">
+                    NULL ,
+                </if>
+                <if test="item.codeImgUrl != null">
+                    #{item.codeImgUrl},
+                </if>
+                <if test="item.codeImgUrl == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

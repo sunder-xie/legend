@@ -1,0 +1,146 @@
+.marR10{
+    margin-right: 10px;
+}
+.display-none{
+    display: none;
+}
+.order-right{
+    width:823px;
+}
+.order-head .headline{
+    line-height: 45px;
+    font-size: 16px;
+}
+.form-item>.fa{
+    line-height: 30px;
+}
+.search-box{
+    margin-bottom:10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+i{
+    font-style: normal;
+}
+.form-item{
+    margin-right: 6px;
+}
+.list-tab.current-tab, .list-tab:hover{
+    background-color: #fff;
+}
+
+.new-card{
+    height: 58px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.new-coupon-card{
+    height: 74px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.intro-title{
+    color: #333;
+    font-weight: bold;
+}
+.intro-content{
+    height: 36px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: #666;
+    border-left: 1px solid #c9c9c9;
+    padding-left: 11px;
+}
+.coupon-intro-content{
+    width: 580px;
+    height: 50px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: #666;
+    border-left: 1px solid #c9c9c9;
+    padding-left: 11px;
+}
+.coupon-btn{
+    margin-top: 8px;
+}
+
+#tableList .card-detail-box{
+    padding: 0;
+}
+#tableList tr:nth-child(4n), #tableList tr:nth-child(4n-1){
+    background-color: #f9f9f9;
+}
+#tableList tr:nth-child(odd)>td{
+    border: none;
+}
+
+.card-detail{
+    position: relative;
+    text-align: left;
+    background-color: #eee;
+    padding : 10px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    margin: 10px 30px 20px;
+}
+.card-tag{
+    position: absolute;
+    width: 16px;
+    height: 7px;
+    right: 48px;
+    top: -7px;
+    background: url('../../../img/page/wechat/rescue-tag.png') -7px 0 no-repeat;
+}
+.member-name,.member-explain,.amount-limit,.use-range,.effective{
+    padding-bottom: 10px;
+}
+.use-range,.service-discount{
+    white-space:normal;
+}
+.explain{
+    display: inline-block;
+    overflow: hidden;
+    white-space: normal;
+    vertical-align: top;
+    width: 93%;
+}
+.service-discount{
+    margin-bottom: 20px;
+}
+.link{
+    color:#76951f;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.red-link{
+    color: #f35f62;
+}
+
+/*弹框*/
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.bounce-content{
+    margin: 10px 20px;
+    border-bottom: 1px solid #dadada;
+}
+.bounce-foot{
+    text-align: center;
+    margin: 10px 0;
+}
+.mb10{
+    margin-bottom: 10px;
+}

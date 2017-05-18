@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.warehouseout.WarehouseOutDao">
+
+    <resultMap id = "BaseResultMap" type = "WarehouseOut" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "warehouse_out_sn" property = "warehouseOutSn" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "goods_receiver" property = "goodsReceiver" />
+        <result column = "order_id" property = "orderId" />
+        <result column = "status" property = "status" />
+        <result column = "inventory_type" property = "inventoryType" />
+        <result column = "car_license" property = "carLicense" />
+        <result column = "car_type" property = "carType" />
+        <result column = "car_byname" property = "carByname" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "customer_name" property = "customerName" />
+        <result column = "customer_mobile" property = "customerMobile" />
+        <result column = "rel_sn" property = "relSn" />
+        <result column = "rel_id" property = "relId" />
+        <result column = "out_type" property = "outType" />
+        <result column="comment" property="comment"/>
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <include refid = "COMMON.BASE_COLUMN_LIST" />
+        shop_id as shopId,
+        warehouse_out_sn as warehouseOutSn,
+        customer_car_id as customerCarId,
+        goods_receiver as goodsReceiver,
+        order_id as orderId,
+        status as status,
+        inventory_type as inventoryType,
+        car_license as carLicense,
+        car_type as carType,
+        car_byname as carByname,
+        customer_id as customerId,
+        customer_name as customerName,
+        customer_mobile as customerMobile,
+        rel_sn as relSn,
+        rel_id as relId,
+        out_type as outType,
+        comment as comment
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "warehouseOutSn != null">
+                    and warehouse_out_sn = #{warehouseOutSn}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test = "goodsReceiver != null">
+                    and goods_receiver = #{goodsReceiver}
+                </if>
+                <if test = "orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test = "status != null">
+                    and status = #{status}
+                </if>
+                <if test = "inventoryType != null">
+                    and inventory_type = #{inventoryType}
+                </if>
+                <if test = "carLicense != null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test = "carType != null">
+                    and car_type = #{carType}
+                </if>
+                <if test = "carByname != null">
+                    and car_byname = #{carByname}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test = "customerMobile != null">
+                    and customer_mobile = #{customerMobile}
+                </if>
+                <if test = "relSn != null">
+                    and rel_sn = #{relSn}
+                </if>
+                <if test = "relId != null">
+                    and rel_id = #{relId}
+                </if>
+                <if test = "outType != null">
+                    and out_type = #{outType}
+                </if>
+                <if test="warehouseOutIds != null">
+                and id in
+                (
+                <foreach collection = "warehouseOutIds" index = "index" item = "tag" separator = ",">
+                    #{tag}
+                </foreach>
+                )
+            </if>
+                <if test="orderIds != null">
+                    and order_id in
+                    (
+                    <foreach collection = "orderIds" index = "index" item = "tag" separator = ",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <include refid = "COMMON.BASE_UPDATE_SET" />
+            <if test = "shopId != null">
+                shop_id = #{shopId},            </if>
+            <if test = "warehouseOutSn != null">
+                warehouse_out_sn = #{warehouseOutSn},            </if>
+            <if test = "customerCarId != null">
+                customer_car_id = #{customerCarId},            </if>
+            <if test = "goodsReceiver != null">
+                goods_receiver = #{goodsReceiver},            </if>
+            <if test = "orderId != null">
+                order_id = #{orderId},            </if>
+            <if test = "status != null">
+                status = #{status},            </if>
+            <if test = "inventoryType != null">
+                inventory_type = #{inventoryType},            </if>
+            <if test = "carLicense != null">
+                car_license = #{carLicense},
+            </if>
+            <if test = "carType != null">
+                car_type = #{carType},
+            </if>
+            <if test = "carByname != null">
+                car_byname = #{carByname},
+            </if>
+            <if test = "customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test = "customerName != null">
+                customer_name = #{customerName},
+            </if>
+            <if test = "customerMobile != null">
+                customer_mobile = #{customerMobile},
+            </if>
+            <if test = "relSn != null">
+                rel_sn = #{relSn},
+            </if>
+            <if test = "relId != null">
+                rel_id = #{relId},
+            </if>
+            <if test = "outType != null">
+                out_type = #{outType},
+            </if>
+            <if test="comment != null">
+                comment = #{comment}
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_warehouse_out
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_warehouse_out
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_warehouse_out
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_warehouse_out
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_warehouse_out
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_warehouse_out
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_warehouse_out
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_warehouse_out (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,        </if>
+            <if test = "warehouseOutSn != null">
+                warehouse_out_sn,        </if>
+            <if test = "customerCarId != null">
+                customer_car_id,        </if>
+            <if test = "goodsReceiver != null">
+                goods_receiver,        </if>
+            <if test = "orderId != null">
+                order_id,        </if>
+            <if test = "status != null">
+                status,        </if>
+            <if test = "inventoryType != null">
+                inventory_type,        </if>
+            <if test = "carLicense != null">
+                car_license,        </if>
+            <if test = "carType != null">
+                car_type,        </if>
+            <if test = "carByname != null">
+                car_byname,        </if>
+            <if test = "customerId != null">
+                customer_id,        </if>
+            <if test = "customerName != null">
+                customer_name,        </if>
+            <if test = "customerMobile != null">
+                customer_mobile,        </if>
+            <if test = "relSn != null">
+                rel_sn,
+            </if>
+            <if test = "relId != null">
+                rel_id,
+            </if>
+            <if test = "outType != null">
+                out_type,
+            </if>
+            <if test="comment != null">
+                comment
+            </if>
+
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "warehouseOutSn != null">
+                #{warehouseOutSn},
+            </if>
+            <if test = "customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test = "goodsReceiver != null">
+                #{goodsReceiver},
+            </if>
+            <if test = "orderId != null">
+                #{orderId},
+            </if>
+            <if test = "status != null">
+                #{status},
+            </if>
+            <if test = "inventoryType != null">
+                #{inventoryType},
+            </if>
+            <if test = "carLicense != null">
+                #{carLicense},
+            </if>
+            <if test = "carType != null">
+                #{carType},
+            </if>
+            <if test = "carByname != null">
+                #{carByname},
+            </if>
+            <if test = "customerId != null">
+                #{customerId},
+            </if>
+            <if test = "customerName != null">
+                #{customerName},
+            </if>
+            <if test = "customerMobile != null">
+                #{customerMobile},
+            </if>
+            <if test = "relSn != null">
+                #{relSn},
+            </if>
+            <if test = "relId != null">
+                #{relId},
+            </if>
+            <if test = "outType != null">
+                #{outType},
+            </if>
+            <if test="comment != null">
+                #{comment}
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_warehouse_out
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <select id="getWarehouseOutCount" resultType="java.lang.Integer">
+        select
+        count(t.id)
+        from legend_warehouse_out t
+        where t.is_deleted='N' and t.shop_id = #{shopId}
+
+        <if test="goodsReceiver != null">
+            and t.goods_receiver = #{goodsReceiver}
+        </if>
+        <if test="orderId != null">
+            and t.order_id = #{orderId}
+        </if>
+        <if test="warehouseOutSn != null">
+            and t.warehouse_out_sn = #{warehouseOutSn}
+        </if>
+        <if test="status != null">
+            and t.status = #{status}
+        </if>
+        <if test="keyword != null">
+            and (t.car_license like CONCAT('%', #{keyword}, '%') or (t.customer_mobile like CONCAT('%', #{keyword}, '%')))
+        </if>
+        order by t.gmt_modified desc
+    </select>
+
+    <resultMap id="SearchResultMap" type="com.tqmall.legend.entity.warehouseout.WarehouseOut"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="goods_id" property="goodsId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="goods_count" property="goodsCount"/>
+        <result column="order_id" property="orderId"/>
+        <result column="goods_sn" property="goodsSn"/>
+        <result column="name" property="name"/>
+        <result column="measure_unit" property="measureUnit"/>
+        <result column="stock" property="stock"/>
+        <result column="format" property="format"/>
+        <result column="warehouse_out_sn" property="warehouseOutSn"/>
+        <result column="goods_receiver" property="goodsReceiver"/>
+        <result column = "rel_sn" property = "relSn" />
+        <result column = "rel_id" property = "relId" />
+        <result column = "out_type" property = "outType" />
+    </resultMap>
+
+    <select id="getWarehouseOutList" resultMap="SearchResultMap">
+        select
+        t.id as id,
+        t.shop_id as shopId,
+        t.warehouse_out_sn as warehouseOutSn,
+        t.customer_car_id as customerCarId,
+        t.goods_receiver as goodsReceiver,
+        t.order_id as orderId,
+        t.status as status,
+        t.inventory_type as inventoryType,
+        t.gmt_create as gmtCreate,
+        t.car_license as carLicense,
+        t.car_type as carType,
+        t.car_byname as carByname,
+        t.customer_id as customerId,
+        t.customer_name as customerName,
+        t.customer_mobile as customerMobile
+        from legend_warehouse_out t
+        <if test="part != null or carInfo != null " >
+        left join legend_warehouse_out_detail b
+        on (t.warehouse_out_sn = b.warehouse_out_sn)
+        </if>
+        where t.is_deleted='N' and t.shop_id = #{shopId}
+        <if test="goodsReceiver != null">
+            and t.goods_receiver = #{goodsReceiver}
+        </if>
+        <if test="orderId != null">
+            and t.order_id = #{orderId}
+        </if>
+        <if test="warehouseOutSn != null">
+            and t.warehouse_out_sn = #{warehouseOutSn}
+        </if>
+        <if test="status != null">
+            and t.status = #{status}
+        </if>
+        <if test="startTime != null">
+            <![CDATA[
+                    and t.gmt_create >= #{startTime}
+                     ]]>
+        </if>
+        <if test="endTime != null">
+            <![CDATA[
+                    and t.gmt_create <= #{endTime}
+                     ]]>
+        </if>
+        <if test="keyword != null">
+            and (t.car_license like CONCAT('%', #{keyword}, '%') or (t.customer_mobile like CONCAT('%', #{keyword}, '%')))
+        </if>
+        <if test="part != null">
+            and (b.goods_name like CONCAT('%', #{part}, '%') or (b.goods_sn like CONCAT('%', #{part},'%')) or
+            (b.goods_format like CONCAT('%', #{part},'%')))
+        </if>
+        <if test="carInfo != null">
+            and (b.car_info like CONCAT('%', #{carInfo}, '%'))
+        </if>
+        group by t.warehouse_out_sn
+        order by t.gmt_modified desc
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+</mapper>

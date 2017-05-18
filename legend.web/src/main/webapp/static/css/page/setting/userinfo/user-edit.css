@@ -1,0 +1,130 @@
+/*
+* create by zmx 2017/1/5
+* 人员资料编辑
+*/
+
+.content{
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+    padding-top: 0;
+}
+.content .show-grid{
+    margin-top: 20px;
+}
+.content .form-label{
+    width: 80px;
+    text-align: right;
+}
+.content .form-item{
+    width: 140px;
+}
+.content .w-210{
+    width: 210px;
+}
+.content .role-width{
+    display: inline-block;
+}
+.btn-box{
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #cacaca;
+}
+.w-200{
+    width: 200px;
+}
+.manager-device{
+    margin-right: 10px;
+}
+.login-time{
+    line-height: 30px;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    padding: 0 5px;
+    background: #fff;
+    width: 120px;
+}
+.popover{
+    z-index: 99;
+    border: 1px solid #cacaca;
+}
+
+
+.card-btns {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+}
+
+.card-wrapper {
+    position: relative;
+    width: 300px;
+    height: 510px;
+    padding: 10px;
+}
+
+.card-box {
+    position: absolute;
+    width: 300px;
+    height: 464px;
+    background: url("../../../../img/page/setting/badge.png") no-repeat;
+    background-size: contain;
+    border: 1px solid #dcdcdc;
+}
+
+.car-number {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.shape {
+    margin: 14px 50px 0;
+    text-align: center;
+}
+
+.shape img {
+    width: 100%;
+}
+
+.small-car-num {
+    margin-top: 8px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.download-pattern {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -233;
+    opacity: 0;
+    width: 150px;
+    height: 255px;
+}
+.card-tips{
+    position: absolute;
+    bottom:10px;
+    left: 0;
+    padding: 0 15px;
+    line-height: 20px;
+    color: red;
+}
+
+.download-btn {
+    display: block;
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    color: #fff;
+}

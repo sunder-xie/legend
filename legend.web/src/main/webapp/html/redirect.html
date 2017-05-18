@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var App = (function () {
+        return {
+            isApp: !!window["TqmallLegend"],
+            goToPCLoginView: function (uuid) {
+                this.isApp && TqmallLegend.goToPCLoginView(uuid);
+            }
+        }
+    })();
+
+    window.onload = function () {
+        var uuid = decodeURI(location.search).replace(/(?:\?|&)\s*uuid\s*=\s*([^&]+)\s*[^&]*.*$/, function($0, $1) {
+            return $1;
+        });
+        App.goToPCLoginView(uuid);
+        try {
+            TqmallLegend.getVersion();
+        } catch (ex) {
+            download();
+        }
+    };
+
+    function download() {
+        var UA = window.navigator.userAgent.toLowerCase();
+        if (UA.match(/android/i)) {
+            window.location.href = "http://www.yunqixiu.com/legend/portal/merchant/merchant_download";
+        } else if (UA.match(/iphone/i)) {
+            window.location.href = 'http://www.yunqixiu.com/legend/portal/merchant/merchant_download';
+        }
+    }
+
+</script>
+</body>
+</html>

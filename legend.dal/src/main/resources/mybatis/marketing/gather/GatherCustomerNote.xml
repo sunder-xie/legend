@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.gather.GatherCustomerNoteDao">
+
+    <resultMap id = "BaseResultMap" type = "GatherCustomerNote" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "user_id" property = "userId" />
+        <result column = "allot_sn" property = "allotSn" />
+        <result column = "user_name" property = "userName" />
+        <result column = "creator_name" property = "creatorName" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "car_license" property = "carLicense" />
+        <result column = "customer_name" property = "customerName" />
+        <result column = "customer_mobile" property = "customerMobile" />
+        <result column = "gather_type" property = "gatherType" />
+        <result column = "operate_type" property = "operateType" />
+        <result column = "rel_id" property = "relId" />
+        <result column = "account_coupon_id" property = "accountCouponId" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            user_id as userId,
+            allot_sn as allotSn,
+            user_name as userName,
+            creator_name as creatorName,
+            customer_id as customerId,
+            customer_car_id as customerCarId,
+            car_license as carLicense,
+            customer_name as customerName,
+            customer_mobile as customerMobile,
+            gather_type as gatherType,
+            operate_type as operateType,
+            rel_id as relId,
+            account_coupon_id as accountCouponId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test = "allotSn != null">
+                    and allot_sn = #{allotSn}
+                </if>
+                <if test = "userName != null">
+                    and user_name = #{userName}
+                </if>
+                <if test = "creatorName != null">
+                    and creator_name = #{creatorName}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test = "carLicense != null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test = "customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test = "customerMobile != null">
+                    and customer_mobile = #{customerMobile}
+                </if>
+                <if test = "gatherType != null">
+                    and gather_type = #{gatherType}
+                </if>
+                <if test = "operateType != null">
+                    and operate_type = #{operateType}
+                </if>
+                <if test = "relId != null">
+                    and rel_id = #{relId}
+                </if>
+                <if test = "accountCouponId != null">
+                    and account_coupon_id = #{accountCouponId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "userId != null">
+                    user_id = #{userId},
+                </if>
+                <if test = "allotSn != null">
+                    allot_sn = #{allotSn},
+                </if>
+                <if test = "userName != null">
+                    user_name = #{userName},
+                </if>
+                <if test = "creatorName != null">
+                    creator_name = #{creatorName},
+                </if>
+                <if test = "customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test = "customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test = "carLicense != null">
+                    car_license = #{carLicense},
+                </if>
+                <if test = "customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test = "customerMobile != null">
+                    customer_mobile = #{customerMobile},
+                </if>
+                <if test = "gatherType != null">
+                    gather_type = #{gatherType},
+                </if>
+                <if test = "operateType != null">
+                    operate_type = #{operateType},
+                </if>
+                <if test = "relId != null">
+                    rel_id = #{relId},
+                </if>
+                <if test = "accountCouponId != null">
+                    account_coupon_id = #{accountCouponId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_gather_customer_note
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gather_customer_note
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gather_customer_note
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gather_customer_note
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_gather_customer_note
+        set is_deleted='Y' , gmt_modified = now()
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_gather_customer_note
+        set is_deleted='Y' , gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_gather_customer_note
+        set is_deleted='Y' , gmt_modified = now()
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_gather_customer_note (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "userId != null">
+                user_id,
+            </if>
+            <if test = "allotSn != null">
+                allot_sn,
+            </if>
+            <if test = "userName != null">
+                user_name,
+            </if>
+            <if test = "creatorName != null">
+                creator_name,
+            </if>
+            <if test = "customerId != null">
+                customer_id,
+            </if>
+            <if test = "customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test = "carLicense != null">
+                car_license,
+            </if>
+            <if test = "customerName != null">
+                customer_name,
+            </if>
+            <if test = "customerMobile != null">
+                customer_mobile,
+            </if>
+            <if test = "gatherType != null">
+                gather_type,
+            </if>
+            <if test = "operateType != null">
+                operate_type,
+            </if>
+            <if test = "relId != null">
+                rel_id,
+            </if>
+            <if test = "accountCouponId != null">
+                account_coupon_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "userId != null">
+                #{userId},
+            </if>
+            <if test = "allotSn != null">
+                #{allotSn},
+            </if>
+            <if test = "userName != null">
+                #{userName},
+            </if>
+            <if test = "creatorName != null">
+                #{creatorName},
+            </if>
+            <if test = "customerId != null">
+                #{customerId},
+            </if>
+            <if test = "customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test = "carLicense != null">
+                #{carLicense},
+            </if>
+            <if test = "customerName != null">
+                #{customerName},
+            </if>
+            <if test = "customerMobile != null">
+                #{customerMobile},
+            </if>
+            <if test = "gatherType != null">
+                #{gatherType},
+            </if>
+            <if test = "operateType != null">
+                #{operateType},
+            </if>
+            <if test = "relId != null">
+                #{relId},
+            </if>
+            <if test = "accountCouponId != null">
+                #{accountCouponId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_gather_customer_note
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_gather_customer_note (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            user_id,
+            allot_sn,
+            user_name,
+            creator_name,
+            customer_id,
+            customer_car_id,
+            car_license,
+            customer_name,
+            customer_mobile,
+            gather_type,
+            operate_type,
+            rel_id,
+            account_coupon_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.userId != null">
+                    #{item.userId},
+                </if>
+                <if test="item.userId == null">
+                    0 ,
+                </if>
+                <if test="item.allotSn != null">
+                    #{item.allotSn},
+                </if>
+                <if test="item.allotSn == null">
+                    '',
+                </if>
+                <if test="item.userName != null">
+                    #{item.userName},
+                </if>
+                <if test="item.userName == null">
+                    '',
+                </if>
+                <if test="item.creatorName != null">
+                    #{item.creatorName},
+                </if>
+                <if test="item.creatorName == null">
+                    '',
+                </if>
+                <if test="item.customerId != null">
+                    #{item.customerId},
+                </if>
+                <if test="item.customerId == null">
+                    0 ,
+                </if>
+                <if test="item.customerCarId != null">
+                    #{item.customerCarId},
+                </if>
+                <if test="item.customerCarId == null">
+                    0 ,
+                </if>
+                <if test="item.carLicense != null">
+                    #{item.carLicense},
+                </if>
+                <if test="item.carLicense == null">
+                    '',
+                </if>
+                <if test="item.customerName != null">
+                    #{item.customerName},
+                </if>
+                <if test="item.customerName == null">
+                    '',
+                </if>
+                <if test="item.customerMobile != null">
+                    #{item.customerMobile},
+                </if>
+                <if test="item.customerMobile == null">
+                    '',
+                </if>
+                <if test="item.gatherType != null">
+                    #{item.gatherType},
+                </if>
+                <if test="item.gatherType == null">
+                    0 ,
+                </if>
+                <if test="item.operateType != null">
+                    #{item.operateType},
+                </if>
+                <if test="item.operateType == null">
+                    0 ,
+                </if>
+                <if test="item.relId != null">
+                    #{item.relId},
+                </if>
+                <if test="item.relId == null">
+                    0 ,
+                </if>
+                <if test="item.accountCouponId != null">
+                    #{item.accountCouponId},
+                </if>
+                <if test="item.accountCouponId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

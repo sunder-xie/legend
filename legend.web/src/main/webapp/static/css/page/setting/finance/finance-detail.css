@@ -1,0 +1,32 @@
+/*
+* create by zmx 2017/1/5
+* 银行卡信息
+*/
+
+
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 10px;
+    padding-top: 0;
+}
+.content .show-grid{
+    margin-top: 18px;
+}
+.form-label{
+    width: 70px;
+    text-align: right;
+}
+.form-item{
+    width: 140px;
+}
+.w-214{
+    width: 214px;
+}
+.w-70{
+    width: 70px;
+}
+.btn-box{
+    padding: 15px;
+    border-top: 1px solid #cacaca;
+}

@@ -1,0 +1,60 @@
+/*
+* create by zmx 2016/12/02
+* 供应商资料页面样式
+*/
+.form-box{
+    padding: 10px;
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding-top: 0;
+}
+.form-box .form-item{
+    width: 133px;
+}
+.form-box .supplier-text-width{
+    width: 302px;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.derived{
+    padding-top: 10px;
+    line-height: 20px;
+    color: #333;
+}
+.derived img{
+    vertical-align: middle;
+}
+.table-con{
+    border: 1px solid #cacaca;
+    border-bottom: 0;
+}
+.table-con a:hover{
+    text-decoration: underline;
+}
+.table-con .yqx-table>tbody>tr>td:first-child,.table-con .yqx-table>thead>tr>th:first-child{
+    padding-left: 10px;
+}
+.yqx-dialog .yqx-dialog-body{
+    padding: 35px 18px 0px 18px;
+}
+.yqx-dialog .yqx-dialog-body .merge-text{
+    padding-top: 35px;
+    line-height: 20px;
+    color: #666;
+    vertical-align: top;
+}
+.yqx-dialog .yqx-dialog-body .merge-text p{
+    display: inline-block;
+    width: 480px;
+    vertical-align: top;
+}
+.dialog-btn{
+    margin-top: 32px;
+    padding: 15px;
+    border-top: 1px solid #cacaca;
+    text-align: center;
+}
+.yqx-dialog .dialog-supplier{
+    width: 180px;
+}

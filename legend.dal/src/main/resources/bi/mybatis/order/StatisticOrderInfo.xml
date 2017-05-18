@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.bi.dao.order.StatisticsOrderInfoDao">
+
+    <!--获取车辆最近一次到店时间-->
+    <select id="getLastOrderDate" resultType="java.util.Date">
+        select gmt_create
+        from legend_order_info
+        where is_deleted = 'N'
+        and shop_id = #{shopId} and
+        customer_car_id= #{customerCarId}
+        order by id desc limit 0,1;
+    </select>
+</mapper>

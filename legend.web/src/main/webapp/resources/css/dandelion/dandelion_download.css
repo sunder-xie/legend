@@ -1,0 +1,105 @@
+.flow-container {
+    min-width: 1190px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.flow-head {
+    height: 726px;
+    background: url(../../images/portal/dandelion/flow_1_pc.jpg?v=1.0) center no-repeat;
+}
+.flow-center {
+    height: 812px;
+    background: url(../../images/portal/dandelion/flow_2_pc.jpg) center no-repeat;
+}
+.flow-foot {
+    height: 1157px;
+    background: url(../../images/portal/dandelion/flow_3_pc.jpg) center no-repeat;
+}
+
+.flow-head-content {
+    position: relative;
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+}
+.link-buttons {
+    position: absolute;
+    bottom: 300px;
+    right: 190px;
+}
+.btn {
+    display: block;
+    height: 49px;
+    margin-right: 18px;
+    float: left;
+}
+/*鼠标经过时，苹果版下载 样式改变  start*/
+.btn-iphone {
+    font-size:14px;
+    font-family: "微软雅黑";
+    color:#ffffff;
+    text-align:center;
+    height:49px;
+    line-height:49px;
+    width: 174px;
+    background: url(../../images/portal/dandelion/D_iphone.png) center no-repeat;
+}
+.btn-iphone:hover {color: #fff;background: url(../../images/portal/dandelion/D_iphone_h.png?20150827) center no-repeat;}
+/*.btn-iphone:hover {*/
+    /*font-size: 18px;*/
+    /*text-align:center;*/
+/*}*/
+/*鼠标经过时，苹果版下载 样式改变  end*/
+
+/*鼠标经过时，安卓版下载 样式改变  start*/
+.btn-android {
+    font-size:14px;
+    font-family: "微软雅黑";
+    color:#ffffff;
+    text-align:center;
+    height:49px;
+    line-height:49px;
+    width: 174px;
+    background: url(../../images/portal/dandelion/D_android.png?20150825) center no-repeat;
+}
+.btn-android:hover {color: #fff;background: url(../../images/portal/dandelion/D_android_h.png?20150827) center no-repeat;}
+/*.btn-android:hover{*/
+    /*font-size: 18px;*/
+    /*color: #fff;*/
+    /*text-align:center;*/
+/*}*/
+/*鼠标经过时，安卓版下载 样式改变  end*/
+.btn-code {
+    width: 50px;
+    background: url(../../images/portal/dandelion/D_code.png) center no-repeat;
+}
+.code-box {
+    position: absolute;
+    top: 55px;
+    right: -35px;
+    display: none;
+    width: 125px;
+    height: 144px;
+    padding: 30px 16px 10px;
+    text-align: center;
+    background: url(../../images/portal/dandelion/code_box.png) center no-repeat;
+}
+.code-box .Qr-code {
+    margin-bottom: 5px;
+}
+
+.link-authorization {
+    position: absolute;
+    bottom: 45px;
+    right: 160px;
+}
+.link-authorization h2 {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.link-list li {
+    float: left;
+    margin-right: 20px;
+}
+h2{font-size:16px;  margin-top: 2px;}

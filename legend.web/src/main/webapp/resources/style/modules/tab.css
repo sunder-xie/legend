@@ -1,0 +1,59 @@
+/*-----公共 tab 样式 start-------*/
+.qxy_tab, .qxy_second_nav {
+	height: 45px;
+	margin: 0 0 20px 0;
+	background-color: #d7d7d7;
+	position: relative;
+}
+
+.qxy_tab ul {
+	float: left;
+}
+
+.qxy_tab li, .qxy_second_nav li {
+	float: left;
+	width: 125px;
+	height: 45px;
+	text-align: center;
+}
+
+.qxy_tab li span, .qxy_second_nav li span {
+	margin: 0 5px;
+}
+
+.qxy_tab li a, .qxy_second_nav li a {
+	display: block;
+	width: 125px;
+	height: 49px;
+	line-height: 45px;
+	color: #535353;
+}
+
+.qxy_tab li a:hover, .qxy_tab li .current, .qxy_second_nav li a:hover,
+	.qxy_second_nav li .current {
+	color: #ffffff;
+	background: url("../img/common/t1.gif") no-repeat;
+}
+
+.qxy_tab li.export_xls, .qxy_second_nav li.export_xls {
+	float: right;
+	line-height: 45px;
+}
+
+.qxy_tab .toolbar {
+	float: right;
+}
+
+.qxy_tab_btn {
+	border: 1px solid #CCC;
+	height: 18px;
+	padding: 10px 20px 0 20px;
+	margin: 8px 5px 0px 0px;
+	font-size: 11px;
+	display: inline-block;
+	color: #666666;
+	cursor: pointer;
+	background-color: #f7f7f7;
+}
+
+/*------公共 tab 样式 end-------*/

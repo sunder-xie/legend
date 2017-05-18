@@ -1,0 +1,93 @@
+/*-----公共分页样式 start-------*/
+.qxy_page {
+	margin: 10px auto;
+	text-align: center;
+}
+
+.qxy_page_inner {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font-size: 0;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.qxy_page a, .qxy_page span {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 0 12px;
+	height: 32px;
+	line-height: 32px;
+	color: green;
+	text-decoration: none;
+	background-color: #fff;
+	border-right: 1px solid #ddd;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.qxy_page span.disabled {
+	color: #777;
+	cursor: not-allowed;
+	background-color: #fbfbfb;
+	border-color: #ddd;
+}
+.opt_right span.disabled {
+	color: #999;
+	cursor: not-allowed;
+}
+.qxy_page a:hover {
+	color: #2a6496;
+	background-color: #eee;
+	border-color: #ddd;
+}
+
+.qxy_page span.current {
+	color: #fff;
+	background: #85af1d;
+}
+
+.qxy_page input {
+	width: 32px;
+	height: 18px;
+	margin: -2px 2px 0;
+	line-height: 18px;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+.qxy_page .qxy_page_count {
+	border-radius: 5px 0 0 5px;
+}
+
+.qxy_page .qxy_go_btn {
+	border-right: none;
+	border-radius: 0 5px 5px 0;
+}
+
+.qxy_module{
+	padding: 0 0 10px;
+}
+.qxy_module>span {
+	font-size: 22px;
+	font-weight: bold;
+	color: #333333;
+	vertical-align: bottom;
+	margin-right: 3px;
+}
+
+.qxy_module>em {
+	margin:6px 0 0;
+	font-size: 12px;
+	color: #999999;
+	display: block;
+}
+/*-----公共分页样式 end-------*/
+
+

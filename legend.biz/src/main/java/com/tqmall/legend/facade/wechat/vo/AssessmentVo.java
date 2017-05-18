@@ -1,0 +1,18 @@
+package com.tqmall.legend.facade.wechat.vo;
+
+import com.tqmall.common.util.DateUtil;
+import com.tqmall.dandelion.wechat.client.dto.wechat.AssessmentDTO;
+
+/**
+ * Created by pituo on 16/8/18.
+ */
+public class AssessmentVo extends AssessmentDTO {
+    private String applyTimeStr;//申请时间
+
+    public String getApplyTimeStr() {
+        if(getGmtCreate() == null){
+            return "";
+        }
+        return DateUtil.convertDateToYMDHMS(getGmtCreate());
+    }
+}

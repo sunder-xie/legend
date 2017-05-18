@@ -1,0 +1,31 @@
+.input-group + .input-group {
+    margin-left: 31px;
+}
+
+.dropdown-menu {
+    padding: 0;
+    padding-bottom: 7px;
+}
+
+.form-options {
+    padding-bottom: 0;
+}
+
+.form-item {
+    width: 138px;
+}
+
+.table-box{
+    border: 1px solid #ddd;
+    border-bottom: 0;
+}
+.total-box{
+    border: 1px solid #ddd;
+    border-top: 0;
+    line-height: 30px;
+    background: #fff;
+    padding: 0 10px;
+}
+.total-box span{
+    margin-right: 15px;
+}

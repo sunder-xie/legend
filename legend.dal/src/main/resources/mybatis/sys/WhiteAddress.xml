@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.sys.WhiteAddressDao">
+
+    <resultMap id="BaseResultMap" type="WhiteAddress" extends="COMMON.BASE_RESULT_MAP">
+        <result column="ip_address" property="ipAddress"/>
+        <result column="login_begin_time" property="loginBeginTime"/>
+        <result column="login_end_time" property="loginEndTime"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="shop_manager_id" property="shopManagerId"/>
+        <result column="shop_manager_account" property="shopManagerAccount"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            ip_address as ipAddress,
+            login_begin_time as loginBeginTime,
+            login_end_time as loginEndTime,
+            shop_id as shopId,
+            shop_manager_id as shopManagerId,
+            shop_manager_account as shopManagerAccount,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="ipAddress != null">
+                    and ip_address = #{ipAddress}
+                </if>
+                <if test="loginBeginTime != null">
+                    and login_begin_time = #{loginBeginTime}
+                </if>
+                <if test="loginEndTime != null">
+                    and login_end_time = #{loginEndTime}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="shopManagerId != null">
+                    and shop_manager_id = #{shopManagerId}
+                </if>
+                <if test="shopManagerAccount != null">
+                    and shop_manager_account = #{shopManagerAccount}
+                </if>
+                <if test="loginTime != null">
+                    <![CDATA[
+                    and login_begin_time <= #{loginTime}
+                    and login_end_time >= #{loginTime}
+                     ]]>
+                </if>
+                <if test="shopManagerIds != null">
+                    and shop_manager_id in
+                    (
+                    <foreach collection="shopManagerIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="ipAddress != null">
+                    ip_address = #{ipAddress},
+                </if>
+                <if test="loginBeginTime != null">
+                    login_begin_time = #{loginBeginTime},
+                </if>
+                <if test="loginEndTime != null">
+                    login_end_time = #{loginEndTime},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="shopManagerId != null">
+                    shop_manager_id = #{shopManagerId},
+                </if>
+                <if test="shopManagerAccount != null">
+                    shop_manager_account = #{shopManagerAccount},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_white_address
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_white_address
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_white_address
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_white_address
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_white_address
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_white_address
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_white_address
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_white_address (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="ipAddress != null">
+                ip_address,
+            </if>
+            <if test="loginBeginTime != null">
+                login_begin_time,
+            </if>
+            <if test="loginEndTime != null">
+                login_end_time,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="shopManagerId != null">
+                shop_manager_id,
+            </if>
+            <if test="shopManagerAccount != null">
+                shop_manager_account,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="ipAddress != null">
+                #{ipAddress},
+            </if>
+            <if test="loginBeginTime != null">
+                #{loginBeginTime},
+            </if>
+            <if test="loginEndTime != null">
+                #{loginEndTime},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="shopManagerId != null">
+                #{shopManagerId},
+            </if>
+            <if test="shopManagerAccount != null">
+                #{shopManagerAccount},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_white_address
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+</mapper>

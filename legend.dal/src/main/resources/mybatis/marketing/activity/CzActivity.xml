@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.activity.CzActivityDao">
+
+    <resultMap id = "BaseResultMap" type = "CzActivity" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "act_name" property = "actName" />
+        <result column = "act_desc" property = "actDesc" />
+        <result column = "detail_desc" property = "detailDesc" />
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "tiny_img_url" property = "tinyImgUrl" />
+        <result column = "start_time" property = "startTime" />
+        <result column = "end_time" property = "endTime" />
+        <result column = "act_status" property = "actStatus" />
+        <result column = "reason" property = "reason" />
+        <result column = "code_img_url" property = "codeImgUrl" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            act_name as actName,
+            act_desc as actDesc,
+            detail_desc as detailDesc,
+            img_url as imgUrl,
+            tiny_img_url as tinyImgUrl,
+            start_time as startTime,
+            end_time as endTime,
+            act_status as actStatus,
+            reason as reason,
+            code_img_url as codeImgUrl,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "actName != null">
+                    and act_name = #{actName}
+                </if>
+                <if test = "actDesc != null">
+                    and act_desc = #{actDesc}
+                </if>
+                <if test = "detailDesc != null">
+                    and detail_desc = #{detailDesc}
+                </if>
+                <if test = "imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test = "tinyImgUrl != null">
+                    and tiny_img_url = #{tinyImgUrl}
+                </if>
+                <if test = "startTime != null">
+                    and start_time = #{startTime}
+                </if>
+                <if test = "endTime != null">
+                    and end_time = #{endTime}
+                </if>
+                <if test = "actStatus != null">
+                    and act_status = #{actStatus}
+                </if>
+                <if test = "reason != null">
+                    and reason = #{reason}
+                </if>
+                <if test = "codeImgUrl != null">
+                    and code_img_url = #{codeImgUrl}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "actName != null">
+                    act_name = #{actName},
+                </if>
+                <if test = "actDesc != null">
+                    act_desc = #{actDesc},
+                </if>
+                <if test = "detailDesc != null">
+                    detail_desc = #{detailDesc},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "tinyImgUrl != null">
+                    tiny_img_url = #{tinyImgUrl},
+                </if>
+                <if test = "startTime != null">
+                    start_time = #{startTime},
+                </if>
+                <if test = "endTime != null">
+                    end_time = #{endTime},
+                </if>
+                <if test = "actStatus != null">
+                    act_status = #{actStatus},
+                </if>
+                <if test = "reason != null">
+                    reason = #{reason},
+                </if>
+                <if test = "codeImgUrl != null">
+                    code_img_url = #{codeImgUrl},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_chezhu_activity
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_chezhu_activity
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_chezhu_activity
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_chezhu_activity
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_chezhu_activity
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_chezhu_activity
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_chezhu_activity
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_chezhu_activity (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "actName != null">
+                act_name,
+            </if>
+            <if test = "actDesc != null">
+                act_desc,
+            </if>
+            <if test = "detailDesc != null">
+                detail_desc,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "tinyImgUrl != null">
+                tiny_img_url,
+            </if>
+            <if test = "startTime != null">
+                start_time,
+            </if>
+            <if test = "endTime != null">
+                end_time,
+            </if>
+            <if test = "actStatus != null">
+                act_status,
+            </if>
+            <if test = "reason != null">
+                reason,
+            </if>
+            <if test = "codeImgUrl != null">
+                code_img_url,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "actName != null">
+                #{actName},
+            </if>
+            <if test = "actDesc != null">
+                #{actDesc},
+            </if>
+            <if test = "detailDesc != null">
+                #{detailDesc},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "tinyImgUrl != null">
+                #{tinyImgUrl},
+            </if>
+            <if test = "startTime != null">
+                #{startTime},
+            </if>
+            <if test = "endTime != null">
+                #{endTime},
+            </if>
+            <if test = "actStatus != null">
+                #{actStatus},
+            </if>
+            <if test = "reason != null">
+                #{reason},
+            </if>
+            <if test = "codeImgUrl != null">
+                #{codeImgUrl},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_chezhu_activity
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_chezhu_activity (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            act_name,
+            act_desc,
+            detail_desc,
+            img_url,
+            tiny_img_url,
+            start_time,
+            end_time,
+            act_status,
+            reason,
+            code_img_url,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.actName != null">
+                    #{item.actName},
+                </if>
+                <if test="item.actName == null">
+                    NULL ,
+                </if>
+                <if test="item.actDesc != null">
+                    #{item.actDesc},
+                </if>
+                <if test="item.actDesc == null">
+                    NULL ,
+                </if>
+                <if test="item.detailDesc != null">
+                    #{item.detailDesc},
+                </if>
+                <if test="item.detailDesc == null">
+                    NULL ,
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    NULL ,
+                </if>
+                <if test="item.tinyImgUrl != null">
+                    #{item.tinyImgUrl},
+                </if>
+                <if test="item.tinyImgUrl == null">
+                    NULL ,
+                </if>
+                <if test="item.startTime != null">
+                    #{item.startTime},
+                </if>
+                <if test="item.startTime == null">
+                    NULL ,
+                </if>
+                <if test="item.endTime != null">
+                    #{item.endTime},
+                </if>
+                <if test="item.endTime == null">
+                    NULL ,
+                </if>
+                <if test="item.actStatus != null">
+                    #{item.actStatus},
+                </if>
+                <if test="item.actStatus == null">
+                    NULL ,
+                </if>
+                <if test="item.reason != null">
+                    #{item.reason},
+                </if>
+                <if test="item.reason == null">
+                    NULL ,
+                </if>
+                <if test="item.codeImgUrl != null">
+                    #{item.codeImgUrl},
+                </if>
+                <if test="item.codeImgUrl == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

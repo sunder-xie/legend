@@ -1,0 +1,222 @@
+/**
+ * 工单模块公共样式 
+ * ch 2016-04-01
+ */
+
+/*===by zxg 定义*/
+
+/*头部*/
+.order-box{
+    width: 823px;
+    background-color: white;
+    padding-bottom: 6px;
+}
+.order-box > .order-box-head{
+    padding-left: 8px;
+}
+.order-box > .order-box-body{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.order-box .row{
+    padding-left: 8px;
+    margin-bottom: 5px;
+}
+.order-box .return{
+
+    line-height: 41px;
+    overflow: hidden;
+    margin-right: 22px;
+}
+
+/**
+ * 右侧内容区样式 start
+ */
+.order-right{width:823px;}
+/* 右侧内容区样式 end*/
+
+/**
+ * ch 2016-04-06
+ * 表格动态行样式 start
+ */
+.dynamic-table{width: 100%;margin-bottom: 20px;}
+.dynamic-table th{height:36px;text-align: center;border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;background: #f9f9f9;vertical-align: middle;}
+.dynamic-table .dynamic-add-btn {width: 45px;}
+.dynamic-table .dynamic-add-btn a{display: inline-block;width: 35px;height:24px;line-height: 24px;text-align: center;color: #fff;border:1px solid #7fa700;background: #9fc527;border-radius: 3px;}
+.dynamic-table .dynamic-add-btn a:hover{background: #a3cd20;}
+.dynamic-table .dynamic-del-btn a{color: #ef5227;}
+.dynamic-table .dynamic-del-btn a:hover{text-decoration: underline;}
+.dynamic-table td{padding:8px 3px 0 3px;}
+.dynamic-table tr > td:first-child{text-align: center;}
+.dynamic-table tr > td:last-child{padding-right:8px;text-align: right;}
+.dynamic-table td > .form-item{width: 100%;}
+/* 表格动态行样式 end */
+
+/*
+ * sky 2016-04-07
+ * 表单主内容区 start
+ */
+.order-head{margin-bottom: 10px;}
+/* modify by sky 2016-04-24 .headline */
+.order-head .headline{line-height: 45px;}
+.order-row{margin: 0 -15px;}
+.order-group{padding: 15px 0;border-bottom: 1px solid #dcdcdc;}
+.order-group:last-child{border-bottom: none;}
+/* 表单主内容区 end */
+
+/**
+ * sky 2016-04-07
+ * 工作进度样式 start
+ */
+.order-process{margin-bottom: 12px}
+.order-process .order-step{position: relative;float: left;width: 28px;margin-left: 80px;font-size: 12px;-webkit-transform: translateX(-100%);transform: translateX(-100%);}
+.order-process .order-step:first-of-type{margin-left: 0}
+.order-process .order-step .order-step-circle{width: 28px;line-height: 30px; margin: 0 auto 3px;font-weight: 600;text-align: center;color: #fff;background: url("../../../img/common/order/order-sprite.png") -53px -37px no-repeat;}
+.order-process .order-step .order-step-title{position: absolute;left: 50%;margin-top: 8px;white-space: nowrap;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);color: #666;}
+.order-process .order-step:before{display: inline;content: "";position: absolute;top: 14px;left: -75px;width: 70px;height: 2px;margin-bottom: 12px;background: #b3b3b3; border-radius: 5px;}
+.order-process .order-step:first-of-type:before{display: none}
+
+.order-process .order-step-finish .order-step-circle{background: url("../../../img/common/order/order-sprite.png") 0 -37px no-repeat;}
+.order-process .order-step-finish .order-step-title{color: #75960c}
+.order-process .order-step-finish:before{background: #8bb30d}
+/* 工作进度样式 end */
+
+
+/* 优惠券公共样式 start */
+.coupon-check-box .coupon{height: 60px;width: 220px;background: url(../../../img/common/order/quan.jpg) no-repeat 10px center;padding: 10px 5px 8px 50px;border-radius: 3px; cursor: pointer; border: 1px solid #cecece;}
+.coupon-check-box .coupon span{float: left;display: inline;}
+.coupon-check-box .coupon span.inner1{width: 120px;border-right: 1px dashed #cecece;}
+.coupon-check-box .coupon span.inner2{width: 40px;line-height: 40px;text-align: center;}
+.coupon-check-box .coupon span em{display:block;font-style: normal;width:100%;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;height: 20px;line-height: 20px;}
+.coupon-check-box .coupon span em.service_name{color: #ff6c00;}
+/* 优惠券公共样式 end */
+
+/*印章公共样式 start*/
+.seal, .seal-2{width: 110px;height: 110px;position: absolute;top: -6px;right: -6px;background: url("../../../img/page/order/orderSeal.png") no-repeat;}
+/*待报价 orderStatus='CJDD'*/
+.no-quoted{background-position: 0 0;}
+/*已报价 orderStatus='DDBJ'*/
+.quoted{background-position: -121px 0;}
+/*已派工 orderStatus='FPDD ,DDSG'*/
+.dispatching{background-position: 0 -119px;}
+/*已完工 orderStatus='DDWC'*/
+.finished{background-position: -130px -119px;}
+/*待结算 pc和app规则：orderStatus='CJDD,DDWC'*/
+.no-settlement{background-position: 0 -236px;}
+/*已挂帐 orderStatus='DDYFK' pay_status=1*/
+.sign{background-position: -134px -237px;}
+/*已结清 orderStatus='DDYFK' pay_status=2*/
+.settlement{background-position: 0 -348px;}
+/*无效 orderStatus='WXDD'*/
+.invalid{background-position: -140px -348px;}
+.seal-2 {
+    background: url("../../../img/page/order/order-status-2.png") no-repeat;
+    height: 106px;
+}
+
+.seal-2.yzf {
+    background-position: -110px 0;
+}
+/*印章公共样式 end*/
+
+.order-form .form-label{
+    width: 80px;
+}
+.order-form .form-item {
+    width: 118px;
+}
+.order-form .form-data-width{
+    width: 330px;
+}
+.form-label-remark {
+    width: 60px;
+    text-align: left;
+}
+.form-item-remark {
+    width: 730px;
+}
+
+/** 车辆更多信息 样式 start **/
+.yqx-text.car-license {
+    width: initial;
+    display: inline-block;
+    line-height: initial;
+    height: initial;
+    font-weight: bold;
+}
+.license-detail {
+    display: inline-block;
+    color: #8eb210;
+    border: 1px solid #83b210;
+    border-radius: 1px;
+    width: 79px;
+    height: 19px;
+    line-height: 17px;
+    text-align: center;
+    vertical-align: baseline;
+}
+/** 车辆更多信息 end **/
+
+.display-none{
+    display: none;
+}
+
+.pay-total {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mwhbox {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+/* 预付定金 */
+.pre-payment {
+    display: inline-block;
+    font-style: normal;
+    margin-left: 10px;
+}
+.weight {
+    font-weight: bold;
+}
+
+.black {
+    color: #000;
+}
+
+.yqx-table > tbody > tr > td.text-r, .yqx-table > thead > tr > th.text-r {
+    text-align: right;
+}
+
+.yqx-table > tbody > tr > td.text-l, .yqx-table > thead > tr > th.text-l {
+    text-align: left;
+}
+
+.yqx-table > tbody > tr > td.text-c, .yqx-table > thead > tr > th.text-c {
+    text-align: center;
+}
+
+.yqx-table td {
+    line-height: 25px;
+}
+
+.yqx-table .ellipsis-1 {
+    height: auto;
+    line-height: 20px;
+}
+
+.yqx-table .ellipsis-2 {
+    max-height: 40px;
+    line-height: 20px;
+    white-space: normal;
+}
+
+/* 表格列公共样式 */
+.tc-checkbox {
+    width: 32px;
+}
+
+.tc-price {
+    width: 80px;
+}

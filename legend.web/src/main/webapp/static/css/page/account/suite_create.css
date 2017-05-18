@@ -1,0 +1,102 @@
+.left-menu,.right-content{
+    float: left;
+}
+.right-content{
+    width: 823px;
+}
+.content{
+    border: 1px solid #c9c9c9;
+    background-color: #fff;
+    padding: 15px 10px 0;
+    margin-top: 10px;
+}
+.pay-way,.amount,.collection{
+    margin-bottom: 10px;
+}
+.value,.basic-info,.charge-table{
+    border-bottom: 1px solid #dcdcdc;
+}
+.value{
+    padding: 15px 0 15px 10px;
+}
+.button{
+    padding: 15px 0 15px 0 ;
+}
+.fr{
+    float: right;
+}
+.remark{
+    padding-left: 33px;
+}
+.basic-info{
+    padding: 0 0 15px 10px;
+}
+.w200{
+    width: 200px;
+}
+th,td{
+    text-align: center;
+}
+.w90{
+    width: 90px;
+}
+.w80{
+    width: 80px;
+}
+.w50{
+    width: 50px;
+}
+.p10{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.w100{
+    width: 100%;
+}
+.table-head{
+    line-height: 35px;
+    background-color: #f9f9f9;
+}
+.delete{
+    color: #ee644d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.charge-table{
+    padding: 15px 0 15px 10px;
+}
+.ml77{
+    margin-left: 77px;
+    margin-top: 15px;
+}
+.add{
+    margin-top: 10px;
+}
+.title{
+    font-weight: bolder;
+    border-left: 2px solid #999;
+    padding-left: 4px;
+}
+.coupon-name{
+    margin: 15px 0 0 15px;
+}
+.yqx-input{
+    text-align: center;
+}
+.price{
+    margin: 15px 0 0 38px;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

@@ -1,0 +1,48 @@
+.wpcucc {
+    background: #FFFFFF url("../../images/join/bang.jpg") no-repeat top;
+    padding-top: 211px;
+    margin-top: 30px;
+}
+.xiaolian {
+    width: 600px;
+    margin: 0 auto;
+    background: url("../../images/join/xl.gif") no-repeat;
+}
+.xiaolian h2 {
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+    padding-left: 111px;
+    line-height: 30px;
+}
+.xiaolian p {
+    padding-left: 111px;
+    line-height: 44px;
+}
+.xiaolian p.dianxia {
+    color: #fd7000;
+}
+.xl_an {
+    padding: 40px 0 80px;
+}
+.xl_an button {
+    width: 190px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.cheng {
+    background: #f99521;
+}
+.lan {
+    background: #008ff0;
+}
+.lvse {
+    background: #70be46;
+    margin-right: 0!important;
+}

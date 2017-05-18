@@ -1,0 +1,398 @@
+i {
+    font-style: normal;
+}
+
+i.fa-km.fa {
+    border-left: 0;
+    color: #000;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.speedily-checkbox {
+    width: 20px;
+}
+
+.quick-carinfo {
+    border: 1px solid rgb(221, 221, 221);
+    background: rgb(249, 249, 249);
+    font-size: 12px;
+    padding: 14px 10px;
+    margin-bottom: 10px;
+}
+
+.quick-carinfo.yqx-table tr.group-inputs {
+    background: rgb(249, 249, 249);
+}
+
+.quick-carinfo.yqx-table tr.group-inputs:hover {
+    background: rgb(249, 249, 249);
+}
+
+.group-inputs {
+    margin-bottom: 10px;
+}
+
+.query-orderdetail .form-label {
+    width: 80px;
+    text-align: right;
+}
+
+.form-item .fa.goods-fa {
+    border-left: 0;
+    line-height: 30px;
+    color: black;
+}
+
+
+/* tab start */
+.query-orderdetail, .query-carinfo {
+    background: #fff;
+    border: 1px solid rgb(221, 221, 221);
+    border-top: 0;
+}
+
+.query-orderdetail {
+    font-size: 12px;
+}
+
+.orderdetail-nav {
+    height: 38px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    position: relative;
+}
+
+
+/* 新物料提示  start */
+.tab-item .tip {
+    display: none;
+    font-size: 12px;
+    border-radius: 1px;
+    color: #fff;
+    background: #fa7b7c;
+    position: absolute;
+    top: -13px;
+    width: 100px;
+    line-height: 20px;
+    right: -80px;
+    height: 20px;
+    font-weight: 100;
+}
+
+.tip-angl {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border-right: 10px solid #fa7b7c;
+    border-top: 5px solid transparent;
+    position: absolute;
+    left: -5px;
+    top: 15px;
+    display: inline-block;
+    border-bottom: 5px solid transparent;
+}
+/* 新物料提示  end */
+/* tab end */
+
+.nav-btn {
+    top: 50%;
+    position: absolute;
+    right: 10px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    opacity: .5;
+}
+
+.margin-body {
+    padding: 0 10px;
+}
+
+/**
+ * 配件区域 start
+ */
+
+.tools-bar-icons {
+    float: right;
+}
+
+.tools-bar .strong-i {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.tools-bar {
+    margin: 12px 0;
+    position: relative;
+}
+
+.add-new-btn .i-btn {
+    padding-left: 5px;
+}
+
+.add-new-btn {
+    padding-bottom: 10px;
+    color: #7a7a7a;
+}
+
+.add-new-btn {
+    cursor: pointer;
+}
+
+.add-new-btn:hover {
+    border-color: #000;
+    color: #d2d2d2;
+}
+
+.tools-bar-new {
+    float: right;
+}
+
+.tools-bar a {
+    padding: 0 10px;
+    color: #7a7a7a;
+    display: inline-block;
+    position: relative;
+}
+
+.tools-bar a:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background: #d2d2d2;
+    height: 20px;
+    top: 5px;
+    left: -1px;
+}
+
+.tools-bar a:first-child::before {
+    content: none;
+}
+
+.tools-bar a > span {
+    font-size: 14px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.tools-bar a:hover {
+    color: #000;
+}
+
+/**
+ * 配件区域 end
+ */
+
+/* table start */
+.quick-carinfo.yqx-table .input-item {
+    border: 0;
+}
+
+.query-orderdetail .yqx-table tbody .form-item {
+    width: 100%;
+}
+
+.goods-datatr .form-item .fa {
+    width: 36px;
+}
+
+.goods-datatr .form-item .yqx-input-icon {
+    padding-right: 26px;
+}
+
+.query-orderdetail .yqx-table .form-label,.query-orderdetail .yqx-table .form-item {
+    width: initial;
+}
+
+.form-label-date {
+    width: 55px;
+}
+
+.form-item.yqx-input-date {
+    width: 130px;
+}
+
+.margin-body .yqx-table .yqx-tbody tr {
+    background: #fff;
+    border: 0;
+}
+
+tr.goods-datatr .form-item {
+    width: 100%;
+}
+
+.margin-body .yqx-table .yqx-tbody td {
+    border: 0;
+}
+
+.tabletr-del {
+    color: #ee3f02;
+    text-decoration: underline;
+}
+
+.tabletr-del:hover {
+    opacity: .7;
+}
+
+.table-addbtn {
+    width: 40px;
+    padding: 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.get-service button {
+    margin-top: 10px;
+}
+
+.form-body .yqx-table {
+    padding: 0;
+}
+
+.yqx-th-2 {
+    width: 20px;
+}
+
+.yqx-th-5 {
+    width: 50px;
+}
+
+.yqx-th-9 {
+    width: 90px;
+}
+
+.yqx-th-10 {
+    width: 100px;
+}
+
+.yqx-th-12 {
+    width: 128px;
+}
+
+.yqx-th-6 {
+    width: 60px;
+}
+
+.yqx-th-7 {
+    width: 70px
+}
+
+.yqx-th-8 {
+    width: 80px;
+}
+/* table end */
+
+.btn-add-goods {
+    width: 34px;
+    font-size: 12px;
+    padding: 2px 0;
+    line-height: 12px;
+}
+
+/* 备注及按钮 */
+.input-mark {
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.input-mark .form-label {
+    vertical-align: top;
+    margin-top: 10px;
+    width: 50px;
+}
+
+.input-mark .form-item {
+    width: 708px;
+    height: 28px;
+}
+
+.tools-bar.tools-icons {
+    line-height: 30px;
+    margin: 5px 0;
+}
+.money-sum {
+    color: #ff7800;
+}
+
+p.pay-line {
+    margin-bottom: 20px;
+}
+
+.pay-line-all {
+    padding-bottom: 10px; border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.form-last-btns {
+    padding-bottom: 20px;
+}
+
+.form-last-btns button {
+    margin-right: 10px;
+}
+
+/* 备注及按钮 end */
+
+table.yqx-table tr th {
+    background: #f9f9f9;
+}
+
+
+.input-item, .input-item-4 {
+    display: inline-block;
+}
+
+.input-item-4 + .input-item-4 {
+    margin-left: 6px;
+}
+
+.input-item-3 + .input-item-3 {
+    margin-left: 6px;
+}
+
+.order-form {
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    background: #f7f7f7;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+}
+
+/* hack start */
+.order-form .show-grid {
+    margin-left: -10px;
+    margin-right: 10px;
+}
+/* hack end */
+.i-service {
+    padding: 0 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.i-service:hover {
+    color: #9fc527;
+}
+
+.i-selected {
+    color: #9fc527;
+}
+
+.i-service + .i-service {
+    border-left: 1px solid #e8e8e8;
+}
+
+.hot-service{
+    padding: 0 4px;
+    border: 1px solid #f00;
+    border-radius: 50%;
+    background: #f00;
+    color: #fff;
+    margin-right: 5px;
+}

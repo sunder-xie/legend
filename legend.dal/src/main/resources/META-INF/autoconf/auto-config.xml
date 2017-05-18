@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config description="">
+    <group name="jdbc">
+
+        <property name="legend.jdbc.driverClassName" defaultValue="com.mysql.jdbc.Driver"
+                  description="JDBC driver class name"/>
+        <property name="legend.jdbc.url"
+                  defaultValue=" jdbc:mysql://127.0.0.1:3306/legend_dev?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"
+                  description="JDBC URL"/>
+        <property name="legend.jdbc.username" defaultValue="legend"
+                  description="JDBC user name"/>
+        <property name="legend.jdbc.password" defaultValue="" description="JDBC password"/>
+
+        <property name = "legend.bi.jdbc.driverClassName" defaultValue = "com.mysql.jdbc.Driver"
+                  description = "JDBC driver class name" />
+        <property name = "legend.bi.jdbc.url"
+                  defaultValue = " jdbc:mysql://127.0.0.1:3306/legend_action_log_dev?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"
+                  description = "JDBC URL" />
+        <property name = "legend.bi.jdbc.username" defaultValue = "legend"
+                  description = "JDBC user name" />
+        <property name = "legend.bi.jdbc.password" defaultValue = "" description = "JDBC password" />
+
+    </group>
+    <script>
+        <generate template="jdbc.properties.vm" destfile="jdbc.properties"
+                  charset="UTF-8"/>
+    </script>
+</config>

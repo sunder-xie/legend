@@ -1,0 +1,14 @@
+/**
+ * zmx 2016-07-14
+ 编辑页面
+ */
+/*表单内容*/
+.form-box{ background: #f7f7f7; padding:5px 15px 15px 15px; border: 1px solid #e8e8e8;}
+.form-box .form-label{ width: 105px;}
+.form-box .form-item{ width: 145px;}
+.form-box .service-width{ width: 435px;}
+.table-box{ background: #fff; border: 1px solid #e8e8e8; border-top:none; padding-top: 10px;}
+.table-box h3{ line-height: 30px; padding-left: 10px; font-weight: bold;}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{ background: #f9f9f9;}
+.btn-box{ padding: 20px 10px;}
+.margin{ margin-right: 5px;}

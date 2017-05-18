@@ -1,0 +1,298 @@
+body{
+    margin:0 auto;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    width:980px;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+table {
+    table-layout: fixed;
+    border-collapse:collapse;
+}
+.wts_head{
+    padding: 20px 122px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+.wts_head_dh{
+    font-size: 14px;
+    float: left;
+}
+.wb_ri {
+    font-size: 14px;
+    float: right;
+    padding-right: 180px;
+}
+.wts_tab{
+    width: 980px;
+    margin-bottom: 30px;
+}
+.gongsi_name{
+    font-size: 20px;
+    text-align: center;
+}
+.wb_b {
+    line-height: 25px;
+}
+td{
+    border:1px solid #000;
+    padding-left:8px;
+}
+.bottom {
+    border-bottom: 0;
+}
+.half_tab{
+    width: 50%;
+}
+.third_tab{
+    width: 33%;
+}
+.td_center{
+    width: 100%;
+}
+.ck_title{
+    font-weight: bold;
+    text-align: center;
+}
+.car_img{
+    width:490px;
+    height:500px;
+    position: relative;
+}
+.car_img img{
+    position:absolute;
+    top:88px;
+    left:35px;
+}
+.car_img span{
+    position: absolute;
+}
+.waiguan{
+    top:12px;
+}
+.jianyi_licheng{
+    top:470px;
+}
+.zyzb{
+    top:90px;
+    left:20px;
+}
+.zqcm{
+    top:184px;
+    left:20px;
+}
+.zhsj{
+    top:262px;
+    left:20px;
+}
+.zhcm{
+    top:306px;
+    left:20px;
+}
+.zhl{
+    top:404px;
+    left:20px;
+}
+.qd{
+    top:108px;
+    left:210px;
+}
+.fdjg{
+    top:158px;
+    left:196px;
+}
+.bg {
+    top:208px;
+    left:190px;
+}
+.cd1{
+    top:243px;
+    left:205px;
+}
+.sep {
+    top:271px;
+    left:190px;
+}
+.cd2 {
+    top:290px;
+    left:205px;
+}
+.hg {
+    top:328px;
+    left:190px;
+}
+.hxg{
+    top:363px;
+    left:205px;
+}
+.hd{
+    top:393px;
+    left:210px;
+}
+.yyzb{
+    top:90px;
+    left:360px;
+}
+.yqcm{
+    top:184px;
+    left:360px;
+}
+.yhsj{
+    top:262px;
+    left:360px;
+}
+.yhcm{
+    top:306px;
+    left:360px;
+}
+.yhl{
+    top:404px;
+    left:360px;
+}
+.ul_img{
+    width:490px;
+    height:500px;
+    *width:460px;
+    *padding:10px;
+}
+.neishi_ul,.scwp_ul{
+    list-style-type:none;
+    padding:0;
+    margin:18px 0 0 10px;
+}
+.neishi_ul li,.scwp_ul li{
+    float:left;
+}
+.neishi{
+    width:157px;
+    *width:153px;
+    margin-bottom:10px;
+}
+.neishi_1{
+    width:157px;
+    *width:153px;
+    margin-bottom:10px;
+}
+.neishi_1 span {
+    display: inline-block;
+    width:83px;
+}
+.neishi_2{
+    width:151px;
+}
+.neishi_2 span {
+    display: inline-block;
+    width:47px;
+}
+.neishi_1 span.sel_border{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border:1px solid #000;
+    vertical-align:middle;
+    margin-left:5px;
+}
+span.selected{
+    background: url("../../images/selected.png") no-repeat center;
+}
+.neishi span{
+    display: inline-block;
+    width: 68px;
+}
+.yibiao{
+    clear: both;
+}
+.xuhao,.neirong,.yaoqiu{
+    text-align: center;
+    font-weight: bold;
+}
+.xuhao{
+    width: 16.7%;
+}
+.neirong{
+    width:33.4%;
+}
+.sixed{
+    width: 16.7%;
+    text-align:center;
+    font-weight:bold;
+}
+.tishi_and_jianyi{
+    width: 100%;
+    height:60px;
+    padding-top:10px;
+    vertical-align:top;
+}
+.xieyi{
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px 5px;
+}
+.xieyi_nr{
+    margin-left: 10px;
+}
+.khqz{
+    width: 50%;
+    height: 110px;
+    padding-top:10px;
+    vertical-align:top;
+}
+.ymd{
+    display: inline-block;
+    margin-top: 90px;
+    letter-spacing: 35px;
+    float:right;
+}
+.wxby_foot{
+    list-style-type: none;
+}
+.wxby_foot li{
+    float: left;
+}
+.ewm{
+    height: 90px;
+    width: 93px;
+    background: url(../../images/print/ewm.PNG) no-repeat;
+}
+.wf_name,.wf_add{
+    font-size:14px;
+}
+.wf_name{
+    margin-left:-40px;
+}
+.wf_add{
+    margin-left:100px;
+}
+.wf_tqmall{
+    font-size:20px;
+    font-weight:bold;
+    margin-left:160px;
+}
+.wxrx{
+    margin-left:-10px;
+}
+.cz{
+    margin-left:100px;
+}
+.telphone,.web_add{
+    font-weight:bold;
+    font-size:16px;
+    margin-left:200px;
+}
+.web_add{
+    margin-left:60px;
+}
+.tp_2{
+    width:150px;
+    margin-left:50px;
+}
+.qxrx{
+    margin-left:30px;
+}
+.ewm{
+    margin-left:848px;
+    margin-top:-60px;
+}

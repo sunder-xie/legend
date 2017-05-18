@@ -1,0 +1,14 @@
+/**
+ * Created by sky on 2017/2/22.
+ */
+
+$BASE_PATH: '/legend/static';
+
+@function getUrl ($path) {
+  @if ($path == null) {
+    @error('getUrl：路径不能为空！');
+  }
+  @else {
+    @return url($BASE_PATH + $path);
+  }
+}

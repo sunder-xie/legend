@@ -1,0 +1,11 @@
+tqmall.oss.bucketName        = ${tqmall_oss_bucketName}
+crm.oss.bucketName           = ${crm_oss_bucketName}
+tqmall.oss.isTest            = ${tqmall_oss_isTest}
+tqmall.oss.accesskeyId       = ${tqmall_oss_accesskeyId}
+tqmall.oss.accessKeySecret   = ${tqmall_oss_accessKeySecret}
+
+tqmall.oss.endpoint          = ${tqmall_oss_endpoint}
+tqmall.oss.imgEndpoint       = ${tqmall_oss_imgEndpoint}
+tqmall.oss.region            = ${tqmall_oss_region}
+crm.oss.region               = ${crm_oss_region}
+tqmall.oss.regionImg         = ${tqmall_oss_regionImg}

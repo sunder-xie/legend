@@ -1,0 +1,349 @@
+.qxy_btn {
+    margin-right: 6px;
+}
+.qxy_right{
+    width: 760px;
+    float: right;
+    overflow: visible;
+    margin-left: 0px;
+}
+.qxy_form .qxy_btn_degreen:hover{
+    background: #4E8C4E;
+}
+.tongji {
+    padding: 0 0 10px;
+}
+
+.tongji > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+
+.tongji > em {
+    font-size: 18px;
+    color: #999999;
+}
+
+.bx_cont {
+    padding: 5px 0 15px;
+    margin-bottom: 50px;
+    overflow-x: auto;
+}
+
+.bx_cont table {
+    background: #FFFFFF;
+}
+
+.bx_cont table th {
+    font-size: 14px;
+}
+
+.bx_cont table th, .bx_cont table td {
+    padding: 10px 14px;
+    white-space: nowrap;
+    text-align: center;
+    /* color: #333333; */
+    border: 1px solid #cdcdcd;
+}
+
+.stats_list {
+    overflow-x: auto;
+}
+
+.stats_list table {
+    background: #fff;
+}
+
+.stats_list table td,
+.stats_list table th {
+    padding: 10px 14px;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+
+}
+
+.even_backgroud {
+    background: #efefef;
+}
+
+/*打印样式*/
+.print_lable {
+    text-align: -webkit-right;
+}
+
+.print_lable_adr {
+    margin-right: 120px;
+    margin-top: -15px;
+}
+
+.print_lable_adr_right {
+    margin-top: -15px;
+    /*margin-top: -20px;*/
+}
+.print_lable_bottom{
+    text-align: -webkit-right;
+    margin-top: -15px;
+}
+.tq_print_logo {
+    width: 100px;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.tq_print_logo img {
+    width: 100%;
+    height: 100%;
+    border:0;
+}
+.head {
+    width:100%;
+    background-color:#fff;
+}
+.head h1, .head h3 {
+    padding: 0 102px;
+}
+h1, h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+.headInfo span {
+    display:inline-block;
+    margin-right:6px;
+    white-space: nowrap;
+}
+.headInfo .customName {
+    width:315px;
+}
+.headInfo .salesDate {
+    float:right;
+}
+table {
+    width: 100%;
+    border-collapse:collapse;
+    border:1px solid #000;
+}
+td, th {
+    height:20px;
+    line-height:20px;
+    font-size: 14px;
+    border-top:1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.signature {
+    width:100%;
+    padding:10px 0;
+    margin-bottom: 20px;
+    background-color:#fff;
+    overflow: hidden;
+}
+.signature span {
+    display: inline-block;
+    margin-right: 6px;
+}
+.sign_date {
+    float:right;
+}
+
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+/*分车型出入汇总统计报表*/
+.top_text {
+    margin-top: -16px;
+    margin-left: 200px;
+}
+.bottom_text{
+    margin-left: 400px;
+    margin-top: -16px;
+}
+.top_time{
+    margin-left: 100px;
+}
+/* 统计报表左右按钮样式 start */
+.qxy_right .go_left_or_right{
+    visibility: hidden;
+    position:fixed;color:#fff;text-align:center;z-index: 3;opacity: 0.5;
+}
+.qxy_right .go_left{
+    border-left:25px solid transparent;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    border-right:25px solid #999;
+}
+.qxy_right .go_right{
+    border-right:25px solid transparent;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    border-left:25px solid #999;
+}
+.qxy_right .go_left_or_right:hover{
+    opacity: 1;
+}
+.qxy_right .stats_list:hover .go_left_or_right,
+.qxy_right .table_content:hover .go_left_or_right{
+    visibility: visible;
+}
+/* 统计报表左右按钮样式 end */
+.stats_menu{
+    float:left;
+}
+.top_msg{
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.top_msg span{
+    margin-right: 20px;
+}
+
+/*商品进价分析*/
+.goods_in_price table td{
+    padding: 4px 7px;
+}
+.goods_in_price table td table{border:none;}
+.goods_in_price table td table tr.colcount5{border:none;}
+.goods_in_price table td table tr.colcount5 .col1{width:20%;}
+.goods_in_price table td table tr.colcount5 .col2{width:20%;}
+.goods_in_price table td table tr.colcount5 .col3{width:20%;}
+.goods_in_price table td table tr.colcount5 .col4{width:20%;}
+.goods_in_price table td table tr.colcount5 .col5{width:20%;}
+.goods_in_price table td table tr td:first-child{border-left:none;}
+.goods_in_price table td table tr td:last-child{border-right:none;}
+.goods_in_price table td table td {border-top:none;}
+.goods_in_price table td table tr:last-child td{border-bottom: none;}
+
+.col_count_width{width:600px;}
+.goods_in_price table td.no_padding{padding:0;}
+
+/*表格套表格详情样式*/
+.table-content td{cursor: pointer;}
+.table_detail table td,.table_detail table th{ border: 1px solid #fff;padding: 3px 5px;background: #f4f4f4;font-size: 12px}
+.table_detail table th{background: #f1f1f1;font-weight: 700;}
+
+
+/*商品销售排行弹窗样式*/
+.qxy_dialog{
+    background-color: #f5f2e6;
+    padding: 25px;
+}
+.mwhbox {
+    /*height: 450px;*/
+    background-color: #f5f2e6;
+    overflow: auto;
+}
+.mwtab {
+    width: 100%;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+.mwtab th {
+    border: 1px solid #cdcdcd;
+    font-weight: bold;
+}
+.mwtab td {
+    border: 1px solid #cdcdcd;
+}
+.mhyic {
+    font-weight: bold;
+    color: #e50206;
+    text-align: left;
+    padding-left: 10px;
+}
+.btn_group a.qxy_btn{margin-left: 0px;}
+/*商品销售排行弹窗样式end*/
+.rep {
+    background-color: rgba(10, 220, 247, 0.11);
+}
+/*商品排序样式start*/
+.ico,.up,.down{padding-right: 16px!important;position: relative;}
+.ico:after{
+    width: 11px;
+    height: 12px;
+    content:"";
+    position: absolute;
+    top:34%;
+    right:3px;
+    background: url("../../../../resources/style/img/common/paixu.jpg") right no-repeat;
+}
+.up:after{
+    width: 11px;
+    height: 5px;
+    content:"";
+    position: absolute;
+    top:46%;
+    right:3px;
+    background:url("../../../../resources/style/img/common/up.jpg") right no-repeat;
+}
+.down:after{
+    width: 11px;
+    height: 5px;
+    content:"";
+    position: absolute;
+    top:44%;
+    right:3px;
+    background:url("../../../../resources/style/img/common/down.png") right no-repeat;
+}
+/*商品排序样式end*/
+.explain{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.explain li{
+	margin-left: 20px;
+	margin-top:10px;
+}
+
+#gross_summary_content {
+    margin-bottom: 20px;
+}
+.td_center {
+    text-align: center;
+}
+.td_border {
+    border-left: 1px #000 solid;
+    border-right: 1px #000 solid;
+}
+#gross_summary_content > .go_left, #gross_summary_content > .go_right{
+    display: none;
+}
+.stats_list .bg1{background: #f2f6ea;}
+.stats_list .bg2{background: #f6eaeb;}
+.stats_list .bg3{background: lightgreen;}
+.stats_list .bg4{background: yellow;}
+
+.stock_analysis_right {float: right !important;}
+/*垂直菜单的new图标。start*/
+.menu_new{display: inline-block;background: url(../../img/page/statistics/new_icon.png) no-repeat 2px 0;padding:10px 25px;}
+/*垂直菜单的new图标。end*/
+/*报表详细说明点击下载 start*/
+.download_pdf{text-align: left;line-height: 30px;}
+.download_pdf a{color: blue;text-decoration: underline;}
+/*报表详细说明点击下载 end*/
+
+/* 下线提醒弹窗样式 start */
+.dg-panel{width: 658px;height: 210px;}
+.dg-panel .dg-panel-head{height: 52px;line-height: 52px;background: #232e49;}
+.dg-panel .dg-panel-title{font-size: 16px;font-weight: 700;text-align: center;color: #fff;margin:0;}
+.dg-panel .dg-panel-body{background: #fff;}
+.dg-panel .dg-content{margin: 40px 50px;}
+.dg-panel .dg-msg{line-height: 1.4;font-size: 14px;font-weight: 700;text-align: left;color: red;text-indent: 2em; margin:35px 0 30px 0;}
+.dg-panel .dg-note{margin: 20px 40px 30px;line-height: 20px;font-size: 12px;text-align: left;color: #666;}
+.dg-panel .dg-note2{margin: 20px 0 50px;line-height: 1.4;font-size: 14px;text-align: left;color: #0a30f1;text-indent: 2em;}
+.dg-panel .dg-btns-tool{text-align: center;}
+.dg-panel .dg-btns-tool .btn{margin-right: 5px;font-size: 14px;}
+.dg-panel .dg-btns-tool .btn:last-child{margin-right: 0;}
+.dg-panel .dg-btns-tool .btn-1:hover{color: #fff;}
+.dg-panel .dg-btns-tool .btn-2:hover{color: #666;}
+/* 下线提醒弹窗样式 end */

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--车主mq -->
+    <bean id="messagePlatformCApp" class="com.tqmall.legend.biz.jms.yunxiu.MessagePlatformCApp" init-method="init">
+        <property name="host" value="${legend.mq.host}"/>
+        <property name="onOff" value="${legend.mq.onOff}"/>
+        <property name="username" value="${legend.mq.tradeLog.username}"/>
+        <property name="password" value="${legend.mq.tradeLog.password}"/>
+        <property name="routingKey" value="${legend.mq.yunxiu.routingKey}"/>
+        <property name="defaultExchange" value="${legend.mq.tradeLog.defaultExchange}"/>
+
+    </bean>
+
+    <bean id="messagePlatformCrm" class="com.tqmall.legend.biz.jms.crm.MessagePlatformCrm" init-method="init">
+        <property name="host" value="${legend.mq.host}"/>
+        <property name="onOff" value="${legend.mq.onOff}"/>
+        <property name="username" value="${legend.mq.tradeLog.username}"/>
+        <property name="password" value="${legend.mq.tradeLog.password}"/>
+        <property name="routingKey" value="${legend.mq.crm.routingKey}"/>
+        <property name="defaultExchange" value="${legend.mq.tradeLog.defaultExchange}"/>
+
+    </bean>
+
+    <bean id="messagePlatformWechat" class="com.tqmall.legend.biz.jms.wechat.MessagePlatformWechat" init-method="init">
+        <property name="host" value="${legend.mq.host}"/>
+        <property name="onOff" value="${legend.mq.onOff}"/>
+        <property name="username" value="${legend.mq.tradeLog.username}"/>
+        <property name="password" value="${legend.mq.tradeLog.password}"/>
+        <property name="routingKey" value="${legend.mq.yun.wechat.appoint.routingKey}"/>
+        <property name="defaultExchange" value="${legend.mq.tradeLog.defaultExchange}"/>
+
+    </bean>
+    <!--车主门店活动,公告mq -->
+    <bean id="messagePlatformCzApp" class="com.tqmall.legend.biz.jms.yunxiu.MessagePlatformCzApp" init-method="init">
+        <property name="host" value="${legend.mq.host}"/>
+        <property name="onOff" value="${legend.mq.onOff}"/>
+        <property name="username" value="${legend.mq.tradeLog.username}"/>
+        <property name="password" value="${legend.mq.tradeLog.password}"/>
+        <property name="routingKey" value="${legend.mq.dandelion.activity.routingKey}"/>
+        <property name="defaultExchange" value="${legend.mq.tradeLog.defaultExchange}"/>
+
+    </bean>
+    <!--车主充值mq -->
+    <bean id="messagePlatformRechargeCzApp" class="com.tqmall.legend.biz.jms.yunxiu.MessagePlatformRechargeCzApp"
+          init-method="init">
+        <property name="host" value="${legend.mq.host}"/>
+        <property name="onOff" value="${legend.mq.onOff}"/>
+        <property name="username" value="${legend.mq.tradeLog.username}"/>
+        <property name="password" value="${legend.mq.tradeLog.password}"/>
+        <property name="routingKey" value="${legend.mq.dandelion.recharge.routingKey}"/>
+        <property name="defaultExchange" value="${legend.mq.tradeLog.defaultExchange}"/>
+
+    </bean>
+    <!--微信节点推送mq -->
+    <bean id="messagePlatformDdlWechat" class="com.tqmall.legend.biz.jms.ddlwechat.MessagePlatformDdlWechat" init-method="init">
+        <property name="host" value="${legend.mq.host}"/>
+        <property name="onOff" value="${legend.mq.onOff}"/>
+        <property name="username" value="${legend.mq.tradeLog.username}"/>
+        <property name="password" value="${legend.mq.tradeLog.password}"/>
+        <property name="routingKey" value="${legend.mq.yun.ddlwechat.routingKey}"/>
+        <property name="defaultExchange" value="${legend.mq.tradeLog.defaultExchange}"/>
+
+    </bean>
+
+
+</beans>

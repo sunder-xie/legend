@@ -1,0 +1,52 @@
+.person_list_title {border-bottom:1px solid #cdcdcd;background: #efefef;}
+.person_list_title div.person_list_title_left{height:50px;float: left;line-height: 50px;padding-left: 20px;font-weight: 700;}
+.person_list_title div.person_list_title_right{height:50px;float: right;line-height: 50px;}
+.person_list{border: 1px solid #cdcdcd;margin:20px 0;}
+
+.person_list table{width: 100%;}
+.person_list table th,
+.person_list table td{text-align: center;line-height: 40px;border-bottom: 1px solid #d1d1d1;}
+.person_list table th{background: #f9f9f9;}
+
+.person_list table .last_tr td{border-bottom: none;}
+
+.person_list table .bg_white td{background: #f9f9f9;}
+.person_list table td a{color: #333;padding: 0 10px;}
+
+.person_list table td a:hover{text-decoration: underline;color: #192fd3;}
+
+
+.person_list_title_right a{color: #333;padding: 0 15px;display: inline-block;border: 1px solid #c1c1c1;line-height: 30px;margin-right: 10px;background: url(../../img/page/hrm/add_person_icon.jpg) repeat-x;border-radius: 2px;}
+.person_list_title_right a.add_person i{color: #8fb027;font-style: normal;font-size: 20px;padding-right: 8px;vertical-align: middle;}
+
+
+.addOrUpdate {width: 750px;}
+.addOrUpdate ul{width: 680px;margin:0 auto;padding:20px 0;}
+.addOrUpdate li{width: 340px;line-height: 40px;float: left;}
+.addOrUpdate li > label{display: inline-block;width: 60px;}
+.addOrUpdate li > input{border:1px solid #dadada;height:30px;border-radius: 4px;background: #fff;padding-left: 8px;width: 243px;}
+
+.addOrUpdate li > input.w155{width: 155px;}
+
+.addOrUpdate_content{background: #fff;}
+
+
+.role_list{border: 1px solid #cdcdcd;margin:0 0 20px 0;border-bottom: none;}
+a.add_role{background: #8fb027;color: #fff;padding: 0 30px;border:none;background: url(../../img/page/hrm/add_role_icon.jpg) repeat-x;}
+
+.role_row,.role_item{border-bottom: 1px solid #cdcdcd;}
+.role_row{line-height: 40px;padding-left: 20px;background: #f9f9f9;}
+.role_row input,
+.role_item input{vertical-align: middle;margin-right: 10px;}
+
+.role_row label,
+.role_item label{cursor: pointer;}
+
+.role_item{line-height: 40px;padding-left: 40px;display: none;}
+
+.role_row i{display: inline-block;width: 50px;height:12px;margin-left: 10px;cursor: pointer;}
+.role_row i.item_down{background: url(../../img/common/arrow_down.png) no-repeat left center;}
+.role_row i.item_up{background: url(../../img/common/arrow_up.png) no-repeat left center;}
+
+
+

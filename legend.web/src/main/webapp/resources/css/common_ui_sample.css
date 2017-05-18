@@ -1,0 +1,18 @@
+@charset "utf-8";
+.container{
+  width:1024px;
+  margin: 0 auto;
+  padding-top:20px;
+}
+
+.btn_switch_gray_green{
+}
+
+div.space_10{
+  height:10px;
+}
+div.page_control_cmn{
+  left:10px;
+  top:350px;
+}
+

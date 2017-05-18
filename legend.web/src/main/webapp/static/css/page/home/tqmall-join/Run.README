@@ -1,0 +1,7 @@
+## 编译文件：
+sass /Users/sky/workspace/legend-http/legend.web/src/main/webapp/static/css/page/home/tqmall-join/tqmall-join.scss /Users/sky/workspace/legend-http/legend.web/src/main/webapp/static/css/page/home/tqmall-join.min.css --style expanded -C
+
+## 监听文件变化：
+sass /Users/sky/workspace/legend-http/legend.web/src/main/webapp/static/css/page/home/tqmall-join/tqmall-join.scss:/Users/sky/workspace/legend-http/legend.web/src/main/webapp/static/css/page/home/tqmall-join.min.css --style expanded -C --watch
+
+## 最终的文件 将结尾的 --style 设置为 compressed

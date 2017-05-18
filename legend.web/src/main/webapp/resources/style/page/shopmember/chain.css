@@ -1,0 +1,209 @@
+.chain_dlg {
+    padding: 0px;
+}
+
+.chain_dlg_title_font {
+    line-height: 56px;
+    font-size: 18px;
+    color: #535353;
+    font-weight: bold;
+}
+
+.chain_dlg_form {
+    padding: 0px 10px 10px;
+}
+
+.chain_dlg_title {
+    height: 56px;
+    background: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    text-align: center;
+}
+
+#chain_dlg_cancel_btn {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    color: #666666;
+    background: #f8f8f8;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+#chain_dlg_save_btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    background: #8fb027;
+    border: 1px solid #8fb027;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.chain_title {
+    height: 40px;
+}
+
+.chain_title .chain_title_left {
+    float: left;
+}
+
+.chain_title .chain_title_right {
+    float: right;
+}
+
+.dlg_overflow {
+    padding: 5px 15px 50px 15px;
+    overflow-y: scroll;
+}
+
+.dlg_overflow .qxy_unit_box .qxy_input_unit {
+    width: 30px;
+    padding-left: 0;
+    text-align: center;
+    height: 30px;
+}
+
+.dlg_overflow form {
+    padding: 15px 15px 0;
+}
+
+.dlg_overflow .dlg_btn_center {
+    text-align: center;
+}
+
+.card_hide {
+    display: none;
+}
+
+.chain_log table {
+    background: #fff;
+    margin: auto;
+    table-layout: fixed;
+}
+
+.chain_log table td, .chain_log table th {
+    padding: 10px 14px;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+}
+
+.chain_log table th {
+    background-color: #d7d7d7;
+}
+
+.chain_log table td {
+    text-align: left;
+    line-height: 19px;
+}
+
+.suite_edit_service_title {
+    padding-left: 100px;
+    margin-bottom: 0;
+}
+
+.suite_edit_service_content {
+    padding-left: 100px;
+}
+
+.blue_title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0000FF;
+}
+
+.black_title {
+    text-align: center;
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+}
+
+/*---充值弹框样式bug fix--*/
+.dynamic {
+    padding: 0;
+    text-align: center;
+}
+/*---充值弹框样式bug fix--*/
+
+.qxy_form .add_customer_btn{
+    padding: 0 5px;
+    margin-left: 5px;
+    margin-right: 0;
+    line-height: 28px;
+    height: 28px;
+}
+
+#payDlg .qxy_form .form_row{
+    margin-bottom: 10px;
+}
+
+.qxy_dialog .btn_group{
+    height: 56px;
+    background: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    text-align: center;
+}
+/*充值页面更改提交按钮 开始*/
+.cz_abc{
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    line-height:56px;
+}
+.tj_abc{
+    color:ghostwhite!important;
+    position:absolute;
+    top:15px;
+    right:15px;
+    font-weight:normal!important;
+}
+/*充值页面更改提交按钮 end*/
+/*----------工单弹框按钮统一样式 start-------------*/
+.qxy_dialog{padding: 0;}
+/*.qxy_dialog form{padding: 20px 10px;}*/
+.qxy_dialog .btn_group a{
+    position: absolute;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.qxy_dialog .btn_group a.cancel{
+    left: 15px;
+    top: 15px;
+    color: #666666;
+    background: #f8f8f8;
+}
+.qxy_dialog .btn_group a.save{
+    color: #535353;
+    font-weight: bold;
+}
+/*----------工单弹框按钮统一样式 end-------------*/
+
+/*.qxy_dialog .btn_group span{*/
+    /*line-height: 56px;*/
+    /*font-size: 18px;*/
+    /*right: 15px;*/
+    /*top: 15px;*/
+    /*color: #ffffff;*/
+    /*background: #8fb027;*/
+/*}*/

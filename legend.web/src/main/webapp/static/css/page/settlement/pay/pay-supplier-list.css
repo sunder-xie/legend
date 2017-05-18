@@ -1,0 +1,46 @@
+/*
+ * zmx 2016/06/01
+ * 公司付款明细账单 页面样式
+*/
+
+/*标题右侧标签 start*/
+.tag{ height: 43px; background: #fff; border:1px dashed #ddd; margin-left: 10px; padding: 5px 10px;}
+.tag .ico{ width: 26px; height: 26px; float: left; margin: 0 12px 0 5px; background: url("../../../../img/page/settlement/pay/tag-ico.png") no-repeat;}
+.tag .ico1{ background-position: 3px 0;}
+.tag .ico2{ background-position: -28px 0;}
+.tag .ico3{ background-position: -60px 0;}
+.tag .tagcon{height: 43px; overflow: hidden; float: left;}
+.tag .tagcon .tag-title{ color: #333; line-height: 16px;}
+.tag .tagcon .tag-money{ font-family: arial, verdana, sans-serif; font-size: 14px; color: #333; font-weight: bold;}
+/*标题右侧标签 end*/
+.yqx-wrapper .yqx-table {
+    table-layout: auto;
+}
+/*查询 start*/
+.search-box{background: #fff;border: 1px solid #ddd;border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;padding: 10px;  }
+.condition-btn{ display: inline-block; height: 30px; line-height: 30px; padding: 0 12px; background: #f9f9f9; border:1px solid #ddd; color: #333; border-radius: 3px;}
+.condition-active{border: 1px solid #99ba27; background: url("../../../../img/page/settlement/pay/btn-active.png") no-repeat right bottom #eaf9bb;}
+/*查询 end*/
+
+/*操作按钮 start*/
+.btn-box{ height: 36px; margin: 10px 0;}
+/*操作按钮 end*/
+
+/*表格 start*/
+.tableCon .yqx-table input{ margin-right: 8px;}
+.tableCon a{color: #9fc527;text-decoration: underline;}
+/*表格 end*/
+.tableCon .inlist-link{ color: #0470f5;}
+.red{color:#f25e61;}
+/*金额统计*/
+.search-result{
+    line-height: 29px;
+    border-bottom: 1px solid #cacaca;
+    padding-left: 10px;
+    color: #333;
+    background: #fff;
+}
+.search-result span{
+    color: #666;
+    margin-left: 10px;
+}

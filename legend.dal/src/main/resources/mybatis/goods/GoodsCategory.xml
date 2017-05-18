@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.goods.GoodsCategoryDao">
+
+    <resultMap id="BaseResultMap" type="GoodsCategory" extends="COMMON.BASE_RESULT_MAP">
+        <result column="goods_type_id" property="goodsTypeId"/>
+        <result column="cat_name" property="catName"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="sort" property="sort"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="tqmall_cat_id" property="tqmallCatId"/>
+        <result column="tqmall_status" property="tqmallStatus"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        goods_type_id as goodsTypeId,
+        cat_name as catName,
+        parent_id as parentId,
+        sort as sort,
+        shop_id as shopId,
+        tqmall_cat_id as tqmallCatId,
+        tqmall_status as tqmallStatus
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="goodsTypeId != null">
+                    and goods_type_id = #{goodsTypeId}
+                </if>
+                <if test="catName != null">
+                    and cat_name = #{catName}
+                </if>
+                <if test="parentId != null">
+                    and parent_id = #{parentId}
+                </if>
+                <if test="sort != null">
+                    and sort = #{sort}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="tqmallCatId != null">
+                    and tqmall_cat_id = #{tqmallCatId}
+                </if>
+                <if test="tqmallStatus != null">
+                    and tqmall_status = #{tqmallStatus}
+                </if>
+                <if test="catIds != null">
+                    and id in
+                    (
+                    <foreach collection="catIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test="goodsTypeId != null">
+                goods_type_id = #{goodsTypeId},
+            </if>
+            <if test="catName != null">
+                cat_name = #{catName},
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId},
+            </if>
+            <if test="sort != null">
+                sort = #{sort},
+            </if>
+            <if test="shopId != null">
+                shop_id = #{shopId},
+            </if>
+            <if test="tqmallCatId != null">
+                tqmall_cat_id = #{tqmallCatId},
+            </if>
+            <if test="tqmallStatus != null">
+                tqmall_status = #{tqmallStatus}
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_goods_category
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_goods_category
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_goods_category
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_goods_category
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_goods_category
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_goods_category
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_goods_category
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_goods_category (
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+        goods_type_id,
+        cat_name,
+        parent_id,
+        sort,
+        shop_id,
+        tqmall_cat_id,
+        tqmall_status
+        )
+        values (
+        <include refid="COMMON.BASE_INSERT_VALUE"/>
+        #{goodsTypeId},
+        #{catName},
+        #{parentId},
+        #{sort},
+        #{shopId},
+        #{tqmallCatId},
+        #{tqmallStatus}
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_goods_category
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!--批量插入-->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_goods_category (
+        is_deleted,
+        gmt_create,
+        creator,
+        gmt_modified,
+        modifier,
+        goods_type_id,
+        cat_name,
+        parent_id,
+        sort,
+        shop_id,
+        tqmall_cat_id,
+        tqmall_status
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            'N',
+            now(),
+            #{item.creator},
+            now(),
+            #{item.creator},
+            <if test="item.goodsTypeId != null">#{item.goodsTypeId},</if>
+            <if test="item.goodsTypeId == null">0,</if>
+            #{item.catName},
+            <if test="item.parentId != null">#{item.parentId},</if>
+            <if test="item.parentId == null">0,</if>
+            <if test="item.sort != null">#{item.sort},</if>
+            <if test="item.sort == null">0,</if>
+            #{item.shopId},
+            <if test="item.tqmallCatId != null">#{item.tqmallCatId},</if>
+            <if test="item.tqmallCatId == null">0,</if>
+            <if test="item.tqmallStatus != null">#{item.tqmallStatus}</if>
+            <if test="item.tqmallStatus == null">2</if>
+            )
+        </foreach>
+    </insert>
+</mapper>

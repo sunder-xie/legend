@@ -1,0 +1,69 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--调用magic的DUBBO接口-->
+    <dubbo:reference interface="com.tqmall.magic.service.proxy.RpcProxyService" id="rpcProxyService"
+                     version="${dubbo.magic.version}" owner="shulin.zhang"/>
+    <dubbo:reference interface="com.tqmall.magic.service.channel.RpcChannelService" id="rpcChannelService"
+                     version="${dubbo.magic.version}" owner="chaoxiang.ma"/>
+    <dubbo:reference interface="com.tqmall.magic.service.partner.RpcShopPartnerService" id="rpcShopPartnerService"
+                     version="${dubbo.magic.version}" owner="chaoxiang.ma"/>
+    <dubbo:reference interface="com.tqmall.magic.service.board.RpcBoardProcessService"
+                     id="rpcBoardProcessService"
+                     version="${dubbo.magic.version}" owner="chaoxiang.ma"/>
+    <!--magic获取委托单状态判断接口-->
+    <dubbo:reference interface="com.tqmall.magic.service.proxy.RpcProxyStatusService" id="rpcProxyStatusService"
+                     version="${dubbo.magic.version}" owner="shulin.zhang"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.shopmanger.RpcShopManagerExtService"
+                     id="rpcShopManagerExtService"
+                     version="${dubbo.magic.version}" owner="shulin.zhang"/>
+    <!--自动派工接口-->
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcAutoAllocateService" id="rpcAutoAllocateService"
+                     version="${dubbo.magic.version}" owner="shulin.zhang"/>
+    <!--施工扫描-->
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcTaskScanService" id="rpcTaskScanService"
+                     version="${dubbo.magic.version}" owner="shulin.zhang"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcWorkOrderService" id="rpcWorkOrderService"
+                     version="${dubbo.magic.version}" owner="bao.ding"/>
+
+
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcPaintLevelService" id="rpcPaintLevelService"
+                     version="${dubbo.magic.version}" owner="xinyin.yan"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcPaintSpeciesService" id="rpcPaintSpeciesService"
+                     version="${dubbo.magic.version}" owner="xinyin.yan"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcProductionLineService"
+                     id="rpcProductionLineService"
+                     version="${dubbo.magic.version}" owner="xinyin.yan"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcProcessService" id="rpcProcessService"
+                     version="${dubbo.magic.version}" owner="xinyin.yan"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcPLineProcessRelService"
+                     id="rpcPLineProcessRelService"
+                     version="${dubbo.magic.version}" owner="xinyin.yan"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.workshop.RpcLineProcessManagerService"
+                     id="rpcLineProcessManagerService"
+                     version="${dubbo.magic.version}" owner="xinyin.yan"/>
+
+    <!--油漆使用记录接口-->
+    <dubbo:reference interface="com.tqmall.magic.service.paint.RpcPaintRecordService"
+                     id="rpcPaintRecordService"
+                     version="${dubbo.magic.version}" owner="shulin.zhang"/>
+    <!--配件资料（油漆）扩展信息接口-->
+    <dubbo:reference interface="com.tqmall.magic.service.goods.RpcGoodsPaintExtService"
+                     id="rpcGoodsPaintExtService"
+                     version="${dubbo.magic.version}" owner="shulin.zhang"/>
+
+    <dubbo:reference interface="com.tqmall.magic.service.paint.RpcPaintInventoryService"
+                     id="rpcPaintInventoryService"
+                     version="${dubbo.magic.version}" owner="bao.ding"/>
+
+</beans>

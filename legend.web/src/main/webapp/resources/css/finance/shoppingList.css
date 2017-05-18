@@ -1,0 +1,352 @@
+.con-left{
+    width: 200px;
+    float: left;
+}
+.con-right{
+    width: 770px;
+    background-color: white;
+    float: right;
+    font-family: initial;
+}
+.con-right .con-list{
+    background-color: white;
+    margin-bottom: 40px;
+}
+.con-right .con-list:last-child{
+    background-color: white;
+    margin-bottom: 0px;
+}
+.con-right .bills-title{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+}
+.con-right .bills-title .customize-bills{
+    font-size: 12px;
+    color: #3265a1;
+    float: right;
+    cursor: pointer;
+}
+.con-right .bills-rule{
+    padding:5px 20px;
+}
+.bills-rule .bills-date-title{
+    font-size: 14px;
+}
+.bills-rule .more-bills{
+    font-size: 12px;
+    color: #3265a1;
+    margin-left: 5px;
+}
+.bills-notice{
+    padding: 15px 20px 15px;
+    color: #b8b8b8;
+    background-color: white;
+}
+.con-right .content{
+    background-color: #f7f7f7;
+}
+.con-right .goods-info{
+    padding:5px 20px;
+    color: #999999;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #f7f7f7;
+}
+.con-right .goods-info .goods-name-img{
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+}
+.con-right .goods-info .goods-model-title{
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+.con-right .goods-info .goods-name-title{
+    width: 25%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+}
+.con-right .goods-info .goods-price-title{
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+}
+.con-right .goods-info .goods-num-title{
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+}
+.con-right .goods-info .goods-price-total-title{
+    width: 11%;
+    display: inline-block;
+    text-align: center;
+}
+.con-right .bills-info{
+    float: left;
+}
+.con-right .bills-list{
+    border-bottom: 1px solid #eaeaea;
+}
+.bills-info .bills-list,.bills-list li{
+    float: left;
+}
+.bills-info .bills-list .goods-img{
+    width: 89px;
+    height: 89px;
+    border-right: 1px solid #eaeaea;
+    text-align: center;
+    line-height: 89px;
+}
+.bills-list .goods-img img{
+    max-width: 100%;
+    max-height: 100%;
+    /*vertical-align: middle;*/
+}
+.bills-info .bills-list .goods-name{
+    width: 215px;
+    padding: 19px 12.5px;
+    line-height: 25px;
+}
+.bills-info .bills-list .goods-model{
+    width: 145px;
+    text-align: center;
+    line-height: 63px;
+    color: #b8b8b8;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.bills-info .bills-list .goods-price{
+     width: 122px;
+     text-align: center;
+     line-height: 63px;
+}
+.bills-list .goods-price .goods-price-per{
+    font-size: 14px;
+    color: #ff7800;
+}
+.bills-list .goods-price-unit{
+    color: #b8b8b8;
+}
+.bills-list .goods-price-total .total-per-price{
+    color: #ff7800;
+    font-size: 14px;
+}
+.bills-info .bills-list .goods-num{
+    text-align: center;
+    line-height: 63px;
+    width: 45px;
+}
+.bills-info .bills-list .goods-price-total{
+    text-align: center;
+    width: 128px;
+    line-height: 63px;
+}
+.con-right .other-info{
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    float: left;
+    padding: 30px 20px;line-height: 25px;
+}
+.other-info .other-info-title .total-price-title{
+    float: right;
+    margin-right: 40px;
+}
+.other-info-title .total-price-title .total-price{
+    font-size: 24px;
+    color: #ff7800;
+    font-family: Helvetica Neue;
+}
+.other-info-title .total-price-title .total-price-unit{
+    color: #c6c6c6;
+}
+.con-right .other-info .bills-edit{
+    width: 150px;
+    height: 40px;
+    background-color: #4bc8f4;
+    border-radius: 7px;
+    font-size: 14px;
+    color: white;
+    float: right;
+    margin-right: 30px;
+}
+.con-right .other-info .bills-del{
+    width: 88px;
+    height: 40px;
+    background-color: white;
+    border-radius: 7px;
+    font-size: 14px;
+    float: right;
+    margin-right: 30px;
+    border: 1px solid #c6c6c6;
+}
+.con-right .other-info .bills-del:hover{
+    background-color: #4bc8f4;
+    color: white;
+    border: 1px solid #4bc8f4;
+}
+.bills-finish{
+    width: 138px;
+    height: 140px;
+    background: url("../../images/finance/sprite.png") no-repeat 4px 0px;
+    float: right;
+    margin-top: -140px;
+    margin-right: 120px;
+    display: none;
+}
+.bills-expire{
+    width: 138px;
+    height: 140px;
+    background: url("../../images/finance/sprite.png") no-repeat -130px 0px;
+    float: right;
+    margin-top: -140px;
+    margin-right: 120px;
+    display: none;
+}
+
+/*新增弹框样式*/
+.dialog{
+    background-color: #fff;
+    width: 760px;
+    height: 460px;
+    padding: 20px;
+}
+
+.dialog .title{
+    border-bottom: 1px solid #f4f4f4;
+}
+.dialog-confirm{
+    width: 320px;
+    height: 160px;
+}
+.center{
+    text-align: center;
+}
+.c3{
+    color: #333;
+}
+.f16{
+    font-size: 16px;
+}
+.lh20{
+    line-height: 20px;
+}
+.dialog-text{
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #f4f4f4;
+}
+.dialog-text-bold{
+    padding-top: 40px;
+}
+.c80{
+    color: #808080;
+}
+.f14{
+    font-size: 14px;
+}
+.dialog-op span, .dialog-op a{
+    display: inline-block;
+}
+.dialog-op .confirm{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #9fc526;
+    border-radius: 4px;
+    margin: 0 auto ;
+    cursor: pointer;
+}
+.dialog-op .return{
+    background-color: #fff;
+    border: 1px solid #999;
+    margin-left: 20px;
+    color: #444;
+    cursor: pointer;
+}
+.dialog-op .return{
+    margin-left: 10px;
+}
+
+.borrow-confirm .confirm{
+    width: auto;
+    padding: 0 5px;
+}
+.btn_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background: url("../../../img/page/buy/btn_close.png") no-repeat;
+    cursor: pointer;
+}
+.popbox {
+    width: 260px;
+    height: 140px;
+    padding: 30px 50px;
+    background: #fff;
+    border-radius: 5px;
+}
+.tipTxt {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+.redTxt {
+    font-size: 18px;
+    color: #ef0913;
+    text-align: center;
+}
+.btn_join {
+    display: block;
+    width: 130px;
+    height: 36px;
+    border-radius: 5px;
+    background: #1795d2;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    margin: 30px auto 12px auto;
+    cursor: pointer;
+}
+.finance-dialog{
+    width: 520px;
+    height: 240px;
+}
+.finance-dialog-text{
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.txt-left{
+    text-align: left;
+}
+.finance-dialog .lh30.center{
+    text-align: center;
+}
+.red{
+    color: #c9252c;
+}
+.lh20{
+    line-height: 20px;
+}
+.lh50{
+    line-height: 50px;
+}
+.finance-dialog .dialog-text-bold{
+    padding: 10px 0;
+}
+.finance-dialog .finance-dialog-text{
+    padding: 0 0 10px 0;
+}
+.finance-dialog .confirm:last-child{
+    margin-left: 20px;
+}

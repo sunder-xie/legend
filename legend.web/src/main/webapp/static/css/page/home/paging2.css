@@ -1,0 +1,74 @@
+.yqx-page {
+    margin: 20px 0 60px 0;
+}
+.yqx-page>div, .page-go {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    color: #666;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-left: 0;
+    cursor: pointer;
+}
+
+.yqx-page>div:first-child {
+    border-left: 1px solid #ddd;
+}
+
+.yqx-page .disabled {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.yqx-page .disabled:hover {
+    background: #fff;
+    color: #999;
+}
+
+.yqx-page .page-current, .yqx-page>div:hover {
+    color: #fff;
+    background: #00a0ea;
+}
+
+.yqx-page .page-jump {
+    width: initial;
+    background: transparent;
+    margin-left: 19px;
+    border: 0;
+}
+
+.yqx-page .page-jump:hover {
+    background: transparent;
+    color: inherit;
+}
+
+.page-jump div, .page-jump .page-input input {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.page-jump .page-input {
+    width: 46px;
+    height: 100%;
+    margin: 0 0 0 7px;
+    line-height: 40px;
+}
+
+.page-input input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.page-jump .page-go {
+    background: #f7f7f7;
+    width: 40px;
+}

@@ -1,0 +1,43 @@
+.qxy_group .group_content {
+	padding: 0px;
+}
+
+.shop-name-container {
+	background: url("../../img/page/member/title-bg.jpg");
+	height: 110px;
+}
+
+.shop-name-container .company-name {
+	padding-top: 25px;
+	color: white;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+.shop-name-container .shop-name {
+	padding-top: 10px;
+	color: white;
+	font-size: 30px;
+	padding-left: 20px;
+}
+
+.qxy_group_userinfo .group_head {
+	background-color: #efecdf;
+}
+
+.qxy_group_userinfo .group_content {
+	background-color: #f9f6e9;
+}
+
+.field_box {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.qxy_form  .form_item, .qxy_form  .form_row {
+	margin-bottom: 0;
+}
+
+.qxy_form {
+	padding: 30px 22px;
+}

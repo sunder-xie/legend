@@ -1,0 +1,4 @@
+.qxy_form .form_row{margin-bottom: 0;}
+/*工单编号 start*/
+.qxy_form .order_sn {padding-left: 10px;margin-bottom: 10px;color: #999;}
+.qxy_form .order_sn_header {padding:0 25px 0 25px;color: #999;}

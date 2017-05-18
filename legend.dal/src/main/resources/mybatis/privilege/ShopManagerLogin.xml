@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.privilege.ShopManagerLoginDao">
+
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.privilege.ShopManagerLogin"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="manager_id" property="managerId"/>
+        <result column="account" property="account"/>
+        <result column="password" property="password"/>
+        <result column="lower_password" property="lowerPassword"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="is_formal_user" property="isFormalUser"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        manager_id as managerId,
+        account as account,
+        password as password,
+        lower_password as lowerPassword,
+        shop_id as shopId,
+        is_formal_user as isFormalUser
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="managerId != null">
+                    and manager_id = #{managerId}
+                </if>
+                <if test="account != null">
+                    and account = #{account}
+                </if>
+                <if test="password != null">
+                    and password = #{password}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="lowerPassword != null">
+                    and lower_password = #{lowerPassword}
+                </if>
+                <if test="isFormalUser != null">
+                    and is_formal_user = #{isFormalUser}
+                </if>
+                <if test="ids != null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="managerIds != null">
+                    and manager_id in
+                    (
+                    <foreach collection="managerIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test="managerId != null">
+                manager_id = #{managerId},
+            </if>
+            <if test="account != null">
+                account = #{account},
+            </if>
+            <if test="password != null">
+                password = #{password},
+            </if>
+            <if test="shopId != null">
+                shop_id = #{shopId},
+            </if>
+            <if test="lowerPassword != null">
+                lower_password = #{lowerPassword},
+            </if>
+            <if test="isFormalUser != null">
+                is_formal_user = #{isFormalUser}
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop_manager_login
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager_login
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="selectByAccountAndShopId" resultMap="BaseResultMap">
+        select
+        t.manager_id as managerId,
+        t.account as account,
+        t.password as password,
+        t.lower_password as lowerPassword,
+        t.is_formal_user as isFormalUser
+        from legend_shop_manager_login t left join legend_shop_manager a on t.manager_id = a.id
+        where (t.account = #{0} or a.mobile = #{0}) and t.is_deleted ='N' and a.is_deleted='N' and t.shop_id = #{1} limit
+        1
+    </select>
+
+    <!-- 查询 -->
+    <select id="selectByMobile" resultMap="BaseResultMap">
+        select
+        t.id,
+        t.account,
+        t.shop_id
+        from legend_shop_manager_login t left join legend_shop_manager l on t.manager_id = l.id
+        where l.mobile = #{mobile} and t.is_deleted ='N' and l.is_deleted='N' limit 1
+    </select>
+
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_manager_login
+        where manager_id = #{managerId} and shop_id=#{shopId} and is_deleted='N' limit 1
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_shop_manager_login
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_shop_manager_login
+        set is_deleted='Y'
+        where id=#{id} limit 1
+    </update>
+
+    <!--    &lt;!&ndash; 删除 &ndash;&gt;
+        <update id = "delByAccount">
+            update legend_shop_manager_login
+            set is_deleted='Y'
+            <include refid = "BaseWhereClause" />
+        </update>-->
+
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_shop_manager_login (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="managerId != null">
+                manager_id,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="lowerPassword != null">
+                lower_password,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="isFormalUser != null">
+                is_formal_user,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="managerId != null">
+                #{managerId},
+            </if>
+            <if test="account != null">
+                #{account},
+            </if>
+            <if test="password != null">
+                #{password},
+            </if>
+            <if test="lowerPassword != null">
+                #{lowerPassword},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="isFormalUser != null">
+                #{isFormalUser},
+            </if>
+        </trim>
+        )
+    </insert>
+
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_shop_manager_login
+        <include refid="BaseUpdateSet"/>
+        where id = #{id} and shop_id = #{shopId} and is_deleted = 'N' limit 1
+    </update>
+
+    <!-- 通过account更新-->
+    <update id="updateByAccount">
+        update legend_shop_manager_login
+        <include refid="BaseUpdateSet"/>
+        where manager_id = #{managerId} and shop_id = #{shopId} and is_deleted='N' limit 1
+    </update>
+</mapper>

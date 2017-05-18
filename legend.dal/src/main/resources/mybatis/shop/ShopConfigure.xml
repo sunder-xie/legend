@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.shop.ShopConfigureDao">
+
+    <resultMap id = "BaseResultMap" type = "ShopConfigure" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "conf_type" property = "confType" />
+        <result column = "conf_key" property = "confKey" />
+        <result column = "conf_value" property = "confValue" />
+        <result column = "role_id" property = "roleId" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            conf_type as confType,
+            conf_key as confKey,
+            conf_value as confValue,
+            role_id as roleId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "confType != null">
+                    and conf_type = #{confType}
+                </if>
+                <if test="confKey != null">
+                    and conf_key = #{confKey}
+                </if>
+                <if test = "confValue != null">
+                    and conf_value = #{confValue}
+                </if>
+                <if test = "roleId != null">
+                    and role_id = #{roleId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "confType != null">
+                    conf_type = #{confType},
+                </if>
+                <if test = "confKey != null">
+                    conf_key = #{confKey},
+                </if>
+                <if test = "confValue != null">
+                    conf_value = #{confValue},
+                </if>
+                <if test = "roleId != null">
+                    role_id = #{roleId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_shop_configure
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_configure
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_configure
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_configure
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_shop_configure
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_shop_configure
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_shop_configure
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_shop_configure (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "confType != null">
+                conf_type,
+            </if>
+            <if test = "confKey != null">
+                conf_key,
+            </if>
+            <if test = "confValue != null">
+                conf_value,
+            </if>
+            <if test = "roleId != null">
+                role_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "confType != null">
+                #{confType},
+            </if>
+            <if test = "confKey != null">
+                #{confKey},
+            </if>
+            <if test = "confValue != null">
+                #{confValue},
+            </if>
+            <if test = "roleId != null">
+                #{roleId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_shop_configure
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop_configure (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            conf_type,
+            conf_key,
+            conf_value,
+            role_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.confType != null">
+                    #{item.confType},
+                </if>
+                <if test="item.confType == null">
+                    NULL ,
+                </if>
+                <if test="item.confKey != null">
+                    #{item.confKey},
+                </if>
+                <if test="item.confKey == null">
+                    NULL ,
+                </if>
+                <if test="item.confValue != null">
+                    #{item.confValue},
+                </if>
+                <if test="item.confValue == null">
+                    NULL ,
+                </if>
+                <if test="item.roleId != null">
+                    #{item.roleId},
+                </if>
+                <if test="item.roleId == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

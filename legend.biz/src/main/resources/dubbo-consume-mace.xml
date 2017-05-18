@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 在线支付（目前mace在维护） -->
+    <dubbo:reference interface="com.tqmall.mace.service.wxpay.RpcPayService" id="maceRpcPayService"
+                     version="${dubbo.mace.version}" owner="shenyang.zhou"/>
+    <!-- 检查用户提现中金额和可提现余额（mace） -->
+    <dubbo:reference interface="com.tqmall.mace.service.balance.RpcUserBalanceService" id="rpcUserBalanceService"
+                     version="${dubbo.mace.version}" owner="feilong.li"/>
+    <!-- 检查用户提现中金额和可提现余额（mace） -->
+    <dubbo:reference interface="com.tqmall.mace.service.anxin.RpcAxService" id="rpcAxService"
+                     version="${dubbo.mace.version}" owner="dehuang.zhang"/>
+</beans>

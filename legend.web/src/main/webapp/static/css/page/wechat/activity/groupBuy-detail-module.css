@@ -1,0 +1,152 @@
+.groupBuy-choose-title{
+    vertical-align: top;
+    margin-top: 8px;
+    display: inline-block;
+}
+.groupBuy-scroll-wrapper{
+    width: 340px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.groupBuy-item-collection{
+    width: 316px;
+    min-height: 300px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.groupBuy-item{
+    border: 1px solid #ddd;
+}
+.groupBuy-item-content{
+    height: 118px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+.groupBuy-img{
+    width: 68px;
+    height: 68px;
+    margin-right: 10px;
+    background-image: url('../../../../img/page/wechat/default-service-img.jpg');
+    background-size: 68px 68px;
+}
+.groupBuy-img-transparent{
+    background-image: none;
+}
+.groupBuy-item-text{
+    width: 200px;
+}
+.bounce-groupBuy-text{
+    width: 274px;
+}
+.groupBuy-item-text>h3, .bounce-groupBuy-text>h3{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Microsoft YaHei","Hiragino Sans GB",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+.groupBuy-content-title{
+    line-height: 26px;
+    color: #777;
+}
+.groupBuy-content-li{
+    overflow: hidden;
+    white-space: pre-wrap;
+    line-height: 17px;
+}
+.groupBuy-item-content .groupBuy-content-li{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+}
+/*item form start*/
+.groupBuy-item-form{
+    padding: 10px;
+    background-color: #e8ebde;
+}
+.groupBuy-form-row{
+    line-height: 30px;
+}
+.groupBuy-form-row + .groupBuy-form-row{
+    margin-top: 10px;
+}
+.groupBuy-fieldset{
+    color: #666;
+    position: relative;
+}
+.groupBuy-fieldset .long-title{
+    width: 48px;
+    display: inline-block;
+    text-align: right;
+}
+.groupBuy-long-button{
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.groupBuy-fa-item .yqx-input{
+    padding-right: 35px;
+    box-sizing: border-box;
+}
+.groupBuy-fa-item .fa{
+    line-height: 30px;
+    color: #666;
+}
+.groupBuy-form-input{
+    height: 30px;
+    width: 84px;
+}
+/*item form end*/
+
+/*设置车主服务弹窗 start*/
+.groupBuy-bounce-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: 99998;
+}
+.groupBuy-bounce-wrapper{
+    position: fixed;
+    z-index: 99999;
+    width: 480px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -46%);
+}
+.groupBuy-bounce-wrapper .fieldset-title{
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+.groupBuy-bounce-wrapper .yqx-input{
+    width: 150px;
+}
+.groupBuy-bounce-wrapper .input-long{
+    width: 240px;
+}
+.groupBuy-bounce-wrapper .yqx-btn{
+    width: 110px;
+}
+.groupBuy-bounce-wrapper fieldset{
+     margin-bottom: 14px;
+ }
+.groupBuy-bounce-wrapper fieldset:last-of-type{
+    margin-bottom: 0;
+}
+/*设置车主服务弹窗 end*/
+

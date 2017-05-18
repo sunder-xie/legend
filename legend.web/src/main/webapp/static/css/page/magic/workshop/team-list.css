@@ -1,0 +1,19 @@
+/*
+ * by zmx 2016/07/04
+ * 班组管理
+*/
+.team-table{ font-size: 12px; margin-top: 20px; border-top: 1px solid #cacaca}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{ background: #f9f9f9;}
+/*对齐方式*/
+.yqx-table>tbody>tr>.text-l{ text-align: left;}
+.yqx-table>thead>tr>.text-l{ text-align: left;}
+.yqx-table a{ text-decoration: underline; margin-right: 5px;}
+.edit{color: #9fc527;}
+.delete{ color: #999;}
+/*弹窗样式 start*/
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{text-align: center;padding: 10px;}
+/*弹窗样式 end*/
+.inquiry{ height: 68px; text-align: center; padding-top: 62px;}
+.max-width{ max-width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }

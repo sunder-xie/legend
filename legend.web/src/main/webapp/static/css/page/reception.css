@@ -1,0 +1,213 @@
+/**
+ * zmx 2016-04-23
+ * 接车维修首页样式
+ */
+
+/*title start*/
+.yqx-wrapper{
+    width: 930px;
+    margin: 0 auto;
+}
+
+/*search start*/
+.license-search-content{
+    text-align: center;
+    font-size: 0;
+    height: 64px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.license-search-content .Z-search-title{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: MicrosoftYahei, sans-serif;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.license-search-content .yqx-downlist-wrap{
+    position: relative;
+}
+.yqx-downlist-wrap{
+    margin: 16px 0;
+}
+.license-search-content input{
+    border: 1px solid #ddd;
+    border-right: none;
+    padding-left: 30px;
+    width: 330px;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+}
+.license-search-content .Z-search{
+    position: absolute;
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    background: url("../../img/common/index/search.png") no-repeat;
+    top: 50%;
+    margin-top: -7.5px;
+    left: 10px;
+}
+.license-search-content  .btn-save{
+    background: #9fc527;
+    font-size: 16px;
+    color: #fff;
+    width: 60px;
+    height: 32px;
+}
+/*search end*/
+
+/*link start*/
+.link-box{
+    height: auto;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    background-color: #fff;
+}
+
+.appointment{
+    width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px dotted #ddd;
+    padding: 15px 0 0 0;
+}
+.appointment h3,.appointment ul{ display: block; float: left;}
+.appointment h3{ margin-right: 15px;}
+.appointment ul{ max-width: 780px;}
+.appointment h3 span{ font-size: 12px;cursor: pointer;}
+.workshop{
+    width: 900px;
+    margin: 0 auto;
+    border-top: 1px dotted #ddd;
+    height: 66px;
+    line-height: 66px;
+}
+.appointment li{
+    display: inline-block;
+    cursor: pointer;
+    font-family: MircosoftYahei;
+    margin-bottom: 20px;
+}
+.appointment i{
+    font-style: normal;
+    display: inline-block;
+    color: #ccc;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.appointment li i{
+    font-style: normal;
+    display: inline-block;
+    color: #ccc;
+    font-size: 20px;
+    vertical-align: middle;
+    margin: 0 12px;
+}
+.appointment-customer i{
+    width: 32px;
+    height: 31px;
+    background: url("../../../static/img/common/index/appointment.png") no-repeat;
+    vertical-align: middle;
+}
+.reception-cars i{
+    width: 32px;
+    height: 31px;
+    background: url("../../../static/img/common/index/reception.png") no-repeat;
+    vertical-align: middle;
+}
+.repair-bill i{
+    width: 32px;
+    height: 31px;
+    background: url("../../../static/img/common/index/bill.png") no-repeat;
+    vertical-align: middle;
+}
+.work-shop i{
+    width: 32px;
+    height: 31px;
+    background: url("../../../static/img/common/index/work.png") no-repeat;
+    vertical-align: middle;
+}
+.reception-cars span,.repair-bill span{
+    vertical-align: sub;
+}
+.link-box li{
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 10px;
+    background-color: #f7f7f8;
+}
+.link-box li:hover{
+    background-color: #9fc527;
+    color: #fff;
+}
+.link-box li:hover i{
+    color: #fff;
+}
+
+/*link end*/
+
+
+/*board start*/
+.yqx-board{
+    width: 930px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.yqx-board-head{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #232e49;
+    font-weight: bold;
+    font-size: 14px;
+}
+.yqx-board .yqx-group-content{
+    padding-top: 0;
+}
+.yqx-board .yqx-table>thead>tr>th{
+    background: #f9f9f9;
+    color: #999;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+.yqx-board .yqx-table>tbody>tr>td{
+    border:none;
+    text-align: left;
+    padding:14px 4px;
+    color: #333;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.yqx-board .yqx-table .padding-10 {
+    padding-left: 10px;
+}
+
+.yqx-board .yqx-table>tbody>tr:nth-child(2n){
+    background:#fff;
+}
+.yqx-board .yqx-table>tbody>tr:hover>td{
+    color:#8bb013;
+    cursor: pointer;
+}
+.yqx-board .yqx-table .state-color{
+    color: #f19434;
+}
+.table-overflow-y-auto{
+    max-height:450px;
+    overflow-y: auto ;
+}
+/*board end*/
+
+/*车辆查询模板 start*/
+.yqx-dl-no-data {text-align: center;height: 32px;line-height: 32px;}
+.yqx-dl-no-data > a{display:inline-block;width:58px;background:#9fc527;color:#fff;border-radius:3px;height: 22px;line-height: 22px;}
+.js-downlist-item a{color: #000;}
+/*车辆查询模板 end*/

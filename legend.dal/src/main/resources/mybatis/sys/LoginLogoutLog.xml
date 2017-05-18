@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.sys.LoginLogoutLogDao">
+
+    <resultMap id = "BaseResultMap" type = "LoginLogoutLog" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "login_time" property = "loginTime" />
+        <result column = "logout_time" property = "logoutTime" />
+        <result column = "manager_login_id" property = "managerLoginId" />
+        <result column = "account" property = "account" />
+        <result column = "shop_id" property = "shopId" />
+        <result column = "refer" property = "refer" />
+        <result column = "op_url" property = "opUrl" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            login_time as loginTime,
+            logout_time as logoutTime,
+            manager_login_id as managerLoginId,
+            account as account,
+            shop_id as shopId,
+            refer as refer,
+            op_url as opUrl,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "loginTime != null">
+                    and login_time = #{loginTime}
+                </if>
+                <if test = "logoutTime != null">
+                    and logout_time = #{logoutTime}
+                </if>
+                <if test = "managerLoginId != null">
+                    and manager_login_id = #{managerLoginId}
+                </if>
+                <if test = "account != null">
+                    and account = #{account}
+                </if>
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test = "opUrl != null">
+                    and op_url = #{opUrl}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "loginTime != null">
+                    login_time = #{loginTime},
+                </if>
+                <if test = "logoutTime != null">
+                    logout_time = #{logoutTime},
+                </if>
+                <if test = "managerLoginId != null">
+                    manager_login_id = #{managerLoginId},
+                </if>
+                <if test = "account != null">
+                    account = #{account},
+                </if>
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "refer != null">
+                    refer = #{refer},
+                </if>
+                <if test = "opUrl != null">
+                    op_url = #{opUrl},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_login_logout_log
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_login_logout_log
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_login_logout_log
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_login_logout_log
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_login_logout_log
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_login_logout_log
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_login_logout_log
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_login_logout_log (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "loginTime != null">
+                login_time,
+            </if>
+            <if test = "logoutTime != null">
+                logout_time,
+            </if>
+            <if test = "managerLoginId != null">
+                manager_login_id,
+            </if>
+            <if test = "account != null">
+                account,
+            </if>
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "refer != null">
+                refer,
+            </if>
+            <if test = "opUrl != null">
+                op_url,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "loginTime != null">
+                #{loginTime},
+            </if>
+            <if test = "logoutTime != null">
+                #{logoutTime},
+            </if>
+            <if test = "managerLoginId != null">
+                #{managerLoginId},
+            </if>
+            <if test = "account != null">
+                #{account},
+            </if>
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "refer != null">
+                #{refer},
+            </if>
+            <if test = "opUrl != null">
+                #{opUrl},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_login_logout_log
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+</mapper>

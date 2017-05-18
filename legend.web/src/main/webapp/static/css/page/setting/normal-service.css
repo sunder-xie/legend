@@ -1,0 +1,72 @@
+/*
+* create by zmx 2016/12/07
+* 标准化服务页面
+*/
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0px 10px 10px 10px;
+}
+.content h3{
+    line-height: 40px;
+    font-size: 12px;
+    color: #666;
+}
+.content h3 strong{
+    font-weight: bold;
+    color: #333;
+}
+.yqx-group-content li{
+    width: 255px;
+    float: left;
+    margin-bottom: 15px;
+}
+.yqx-group .yqx-group-content{
+    padding-bottom: 0;
+}
+.yqx-group-content .form-label{
+    width: 95px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+.yqx-group-content .form-item{
+    width: 80px;
+}
+.yqx-group .yqx-group-head i{
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background: url("../../../img/page/setting/ico.png") no-repeat;
+    vertical-align: middle;
+}
+.yqx-group .yqx-group-head i.ico0{
+    background-position: 0 0;
+}
+.yqx-group .yqx-group-head i.ico1{
+    background-position: -40px 0;
+}
+.yqx-group .yqx-group-head i.ico2{
+    background-position: -80px 0;
+}
+.yqx-group .yqx-group-head i.ico3{
+    background-position: -118px 0;
+}
+.yqx-group .yqx-group-head i.ico4{
+    background-position: -160px 0;
+}
+.yqx-group .yqx-group-head i.ico5{
+    background-position: 0 -33px;
+}
+.display-none{
+    display: none;
+}
+.service-item{
+    cursor:pointer;
+}
+.red-color{
+    color: red;
+}

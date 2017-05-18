@@ -1,0 +1,65 @@
+/**
+ * 版喷中心二期公共样式
+ * zmx 2016-07-04
+ */
+.yqx-wrapper *{box-sizing: border-box;}
+
+/**
+ * 右侧内容区样式 start
+ */
+.order-right{width:823px;}
+/**
+ * 右侧内容区样式 end
+ */
+
+/*
+ * 表单主内容区 start
+ */
+.order-head{margin-bottom: 10px;}
+.order-head .headline{line-height: 45px;}
+.order-row{margin: 0 -15px;}
+.order-group{padding: 15px 0;border-bottom: 1px solid #dcdcdc;}
+.order-group:last-child{border-bottom: none;}
+/* 表单主内容区 end */
+
+
+/*
+ * 仿bootstrap 栅栏式布局 start
+ */
+.show-grid{margin: 10px 0;zoom: 1;_height: 1px;}
+.show-grid:after{display: table;content: "";clear: both;}
+.show-grid [class^=col-]{float: left;}
+.col-3{width: 25%;}
+.col-4{width: 33.3333333%;}
+.col-6{width: 50%;}
+.col-8{width: 66.6666666%;}
+.col-9{width: 75%;}
+/* 仿bootstrap 栅栏式布局 end */
+
+
+/*弹窗样式 start*/
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{text-align: center;padding: 10px;}
+.link-btn{display: block;width: 150px;height: 30px;line-height: 30px;text-align: center;border: 1px solid #9fc527;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;color: #333;margin: 10px auto;  }
+/*弹窗样式 end*/
+
+
+/*对齐方式*/
+.yqx-table>tbody>tr>.text-l{ text-align: left;}
+.yqx-table>tbody>tr>.text-r{ text-align: right;}
+.yqx-table>thead>tr>.text-l{ text-align: left;}
+.yqx-table>thead>tr>.text-r{ text-align: right;}
+
+.yqx-text .more-car{ padding: 3px 5px; color: #8eb210; border: 1px solid #8eb210;}
+
+
+/*金额样式*/
+.money-font{ font-size: 12px; font-weight: bold; color: #fd461e; font-style: normal;}
+
+.weight{
+    font-weight: bold;
+}
+.black{
+    color: #000;
+}

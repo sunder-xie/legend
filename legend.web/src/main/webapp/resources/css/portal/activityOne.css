@@ -1,0 +1,121 @@
+body,div,img,p,ul,li,a{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family:"微软雅黑";
+}
+a{
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+}
+.clearfix {zoom: 1; _height: 1px; }
+
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.electrical{
+    background:#d44003;
+}
+.prize-top{
+    width:100%;
+    height: 654px;
+    background:url("../../images/portal/activeOne/pc-prize-top.jpg") no-repeat center 0;
+    position:relative;
+}
+/*.electrical img{*/
+    /*width:100%;*/
+/*}*/
+.prize-bottom{
+    width:100%;
+    height: 654px;
+    background: url("../../images/portal/activeOne/pc-prize-bottom3.jpg") no-repeat center 0;
+}
+.prize-bottom-text{ width:900px;height:440px; margin: 0 auto;padding: 80px 30px;color: #fff;}
+.prize-bottom-text p{line-height: 40px;}
+.prize-bottom-text p.text-ident{padding-left:80px;}
+.prize-bottom-text p.black{color: #722303;}
+.prize-owner{
+    width: 100%;
+    height: 454px;
+    background: url("../../images/portal/activeOne/prize-owner.jpg") no-repeat center 0;
+    position: relative;
+}
+
+.empty{
+    height:1rem;
+}
+.download-prize{
+    width:154px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    border-radius: 23px;
+    color: #cc0b26;
+    text-align: center;
+    font-size:14px;
+    font-weight:bold;
+    margin-top: 12px;
+}
+.download-prize a{display:block;width:154px; height: 30px;color: #cc0b26;}
+.download-prize a:hover{color: red;}
+.ma-download{
+    width:40px;
+    vertical-align: middle;
+    margin-left:20px;
+    cursor:pointer;
+}
+.download-share{
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    margin-right: -442px;
+    height: 50px;
+    line-height: 50px;
+}
+.download-share li{
+    float:left;
+}
+.share-tool{
+    width: 240px;
+    height:50px; 
+    position: absolute;
+    left:50%;
+    top:90px;
+    margin-left: -150px;
+}
+.share-tool .jiathis_style_32x32 .jiathis_separator{display: none !important;}
+.jiathis_style_32x32{position: relative;}
+.jiathis_style_32x32:before{content:"分享到：";position: absolute;left:-62px;top:8px;color: #eee;font-size: 16px;}
+.centerBottom{display: none;}
+.share-tool li{
+    width:48px;
+    float:left;
+}
+.share-tool .word{
+    padding-top: 18px;
+    font-size: 18px;
+    color: #fff;
+    width: 71px;
+}
+.ma-big{
+    display:none;
+    position:absolute;
+    bottom: -200px;
+    right: 50%;
+    margin-right: -166px;
+}
+.content{overflow: hidden; height: 268px; width: 932px; position: absolute; top: 140px; left: 50%; margin-left:-467px; }
+.content .usr-lst{margin-top: 15px;}
+.content .usr-lst li{color: #fff;height: 35px;line-height: 35px;}
+.address{width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.content .usr-lst li {float: left;width: 450px;padding-left: 15px;}
+.content .usr-lst li span{display: inline-block;}
+.content .usr-lst li .name{width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.get-prize{width:130px; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.no-prize{
+    text-align:center;
+    font-size:18px;
+    display: none;
+}
+

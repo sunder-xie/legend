@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.service.ServiceWarnDao">
+    <!-- Result Map -->
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.service.ServiceWarn">
+        <result column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="creator" property="creator"/>
+        <result column="modifier" property="modifier"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="service_type" property="serviceType"/>
+        <result column="car_id" property="carId"/>
+        <result column="car_license" property="carLicense"/>
+        <result column="service_time" property="serviceTime"/>
+        <result column="service_status" property="serviceStatus"/>
+        <result column="warn_start_time" property="warnStartTime"/>
+        <result column="warn_end_time" property="warnEndTime"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            service_type as serviceType,
+            car_id as carId,
+            car_license as carLicense,
+            service_time as serviceTime,
+            service_status as serviceStatus,
+            warn_start_time as warnStartTime,
+            warn_end_time as warnEndTime,
+        </trim>
+
+    </sql>
+
+    <!-- 查询条件 -->
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId!= null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="serviceType!= null">
+                    and service_type = #{serviceType}
+                </if>
+                <if test="carId!= null">
+                    and car_id = #{carId}
+                </if>
+                <if test="carLicense!= null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test="serviceTime!= null">
+                    and service_time = #{serviceTime}
+                </if>
+                <if test="serviceStatus!= null">
+                    and service_status = #{serviceStatus}
+                </if>
+                <if test="serviceStatusN!= null">
+                    and service_status != #{serviceStatusN}
+                </if>
+                <if test="warnStartTime!= null">
+                    and warn_start_time = #{warnStartTime}
+                </if>
+                <if test="warnEndTime!= null">
+                    and warn_end_time = #{warnEndTime}
+                </if>
+            </trim>
+        </where>
+
+    </sql>
+
+    <!-- 批量更新条件 -->
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId!= null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="serviceType!= null">
+                    service_type = #{serviceType},
+                </if>
+                <if test="carId!= null">
+                    car_id = #{carId},
+                </if>
+                <if test="carLicense!= null">
+                    car_license = #{carLicense},
+                </if>
+                <if test="serviceTime!= null">
+                    service_time = #{serviceTime},
+                </if>
+                <if test="serviceStatus!= null">
+                    service_status = #{serviceStatus},
+                </if>
+                <if test="warnStartTime!= null">
+                    warn_start_time = #{warnStartTime},
+                </if>
+                <if test="warnEndTime!= null">
+                    warn_end_time = #{warnEndTime},
+                </if>
+            </trim>
+        </set>
+
+    </sql>
+
+    <!--批量插入-->
+    <insert id = "batchInsert" parameterType="java.util.List">
+        insert into legend_service_warn (
+        is_deleted,
+        gmt_create,
+        creator,
+        gmt_modified,
+        modifier,
+        shop_id,
+        service_type,
+        car_id,
+        car_license,
+        service_time,
+        service_status,
+        warn_start_time,
+        warn_end_time
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                now(),
+                <if test = "item.creator != null">#{item.creator},</if>
+                <if test = "item.creator == null">0,</if>
+                now(),
+                <if test = "item.modifier != null">#{item.modifier},</if>
+                <if test = "item.modifier == null">0,</if>
+                <if test = "item.shopId != null">#{item.shopId},</if>
+                <if test = "item.shopId == null">0,</if>
+                <if test = "item.serviceType != null">#{item.serviceType},</if>
+                <if test = "item.serviceType == null">0,</if>
+                <if test = "item.carId != null">#{item.carId},</if>
+                <if test = "item.carId == null">0,</if>
+                <if test = "item.carLicense != null">#{item.carLicense},</if>
+                <if test = "item.carLicense == null">'',</if>
+                <if test = "item.serviceTime != null">#{item.serviceTime},</if>
+                <if test = "item.serviceTime == null">NULL ,</if>
+                <if test = "item.serviceStatus != null">#{item.serviceStatus},</if>
+                <if test = "item.serviceStatus == null">0,</if>
+                <if test = "item.warnStartTime != null">#{item.warnStartTime},</if>
+                <if test = "item.warnEndTime != null">#{item.warnEndTime},</if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <!-- 插入记录 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_service_warn (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId!= null">
+                shop_id,
+            </if>
+            <if test="serviceType!= null">
+                service_type,
+            </if>
+            <if test="carId!= null">
+                car_id,
+            </if>
+            <if test="carLicense!= null">
+                car_license,
+            </if>
+            <if test="serviceTime!= null">
+                service_time,
+            </if>
+            <if test="serviceStatus!= null">
+                service_status,
+            </if>
+            <if test="warnStartTime!= null">
+                warn_start_time,
+            </if>
+            <if test="warnEndTime!= null">
+                warn_end_time,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId!= null">
+                #{shopId},
+            </if>
+            <if test="serviceType!= null">
+                #{serviceType},
+            </if>
+            <if test="carId!= null">
+                #{carId},
+            </if>
+            <if test="carLicense!= null">
+                #{carLicense},
+            </if>
+            <if test="serviceTime!= null">
+                #{serviceTime},
+            </if>
+            <if test="serviceStatus!= null">
+                #{serviceStatus},
+            </if>
+            <if test="warnStartTime!= null">
+                #{warnStartTime},
+            </if>
+            <if test="warnEndTime!= null">
+                #{warnEndTime},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 获取对象全部结果集 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_service_warn
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+
+    </select>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_service_warn
+        <include refid="BaseWhereClause"/>
+    </select>
+
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_service_warn
+        where id in (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+
+    </select>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_service_warn
+        set is_deleted='Y'
+        where id=#{id}
+	
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_service_warn
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_service_warn
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_service_warn
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+    <!--不在范围内的车辆信息-->
+    <select id="customerCarsNotExit" resultType="com.tqmall.legend.entity.customer.CustomerCar">
+        select license as license,keepup_time as keepupTime,shop_id as shopId,id as id  from legend_customer_car
+        where is_deleted = 'N'
+        <if test="shopId!= null">
+            and shop_id=#{shopId}
+        </if>
+        <if test="carIds != null">
+            and id not in (
+            <foreach collection="carIds" index="index" item="tag" separator=",">
+                #{tag}
+            </foreach>
+            )
+        </if>
+        <if test="keepupTime != null">
+            <![CDATA[
+                    and keepup_time >= #{keepupTime}
+                    ]]>
+        </if>
+    </select>
+
+</mapper>

@@ -1,0 +1,116 @@
+body{
+    background: #f5f5f5;
+}
+.wrap{
+    width: 990px;
+    height: 184px;
+    margin: 74px auto 215px auto;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    padding: 48px 0;
+}
+.wrap-left{
+    width: 670px;
+    height: 184px;
+}
+.wrap-left h3{
+    line-height: 41px;
+    font-size: 20px;
+    color: #333;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    padding-left: 117px;
+}
+.wrap-left h3 img{
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.pay-money{
+    padding-left: 172px;
+    line-height: 32px;
+    font-size: 12px;
+    color: #666;
+}
+.pay-money em{
+    font-style: normal;
+    color: #FD461E;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: arial, verdana, sans-serif;
+}
+.pay-money span:first-child{
+    border-right:1px solid #d2d2d2;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+.congratulations{
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 172px;
+}
+.accounts-tip{
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 172px;
+}
+.wrap-left .login-btn{
+    display: block;
+    width: 110px;
+    height: 30px;
+    background: #009df0;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #0088d0;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    margin:14px 0 0 172px;
+    border-radius: 2px;
+}
+.wrap-right{
+    width: 318px;
+    height: 184px;
+    border-left: 1px solid #d2d2d2;
+    background: url("../../../../static/img/page/sell/success-bg.png") no-repeat right top;
+}
+.code{
+    width: 108px;
+    height: 108px;
+    border: 1px solid #d2d2d2;
+    margin: 12px 0 12px 88px;
+}
+.code img{
+    width: 108px;
+    height: 108px;
+}
+.wrap-right h3{
+    padding-left: 88px;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    color: #333;
+}
+.wrap-right p{
+    padding-left: 88px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+}
+.services{
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 172px;
+}
+.services img{
+    vertical-align: middle;
+}
+.services span{
+    color: #fd6444;
+}
+.services .customer{
+    margin: 0 2px;
+    text-decoration: underline;
+    color: #009df0;
+}

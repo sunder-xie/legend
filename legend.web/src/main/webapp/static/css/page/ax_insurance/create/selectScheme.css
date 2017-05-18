@@ -1,0 +1,472 @@
+.clearfix{
+    overflow: hidden;
+}
+.clearfix :after{
+    clear: both;
+}
+.wrapper{
+    width: 100%;
+    background-color: #eeeeee;
+}
+.content{
+    width: 980px;
+    margin:0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+.left{
+    float: left;
+    width: 138px;
+    height: 135px;
+    border: 1px solid #dddddd;
+}
+li{
+    list-style: none;
+}
+.right{
+    float: right;
+    width: 825px;
+}
+.nav_process{
+    width: 823px;
+    height: 38px;
+    background: url("../../../../img/page/ax_insurance/spT2.png") no-repeat -1px -2px;
+    color: #666666;
+    border: #dddddd 1px solid;
+}
+.nav_process li{
+    display: inline-block;
+    width: 112px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 17px;
+    box-sizing: border-box;
+}
+.nav_pLi{
+    color: #FFFFFF;
+}
+.green{
+    color: #8eb210;
+}
+.right p.choose{
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.all_choose{
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+}
+.detail_w,.choose_w{
+    height: 46px;
+    line-height: 46px;
+    padding-left: 9px;
+    font-size: 14px;
+    color: #535353;
+    box-sizing: border-box;
+}
+.car_detail{
+    width: 100%;
+    height: 80px;
+}
+.span_w{
+    display: inline-block;
+    width: 105px;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+}
+.car,.brand,.car_price{
+    display: inline-block;
+    color: #666666;
+}
+.car_price{
+    color: #ff7800;
+}
+.re_choose{
+    display: inline-block;
+    width: 93px;
+    height: 22px;
+    background-color: #9fc527;
+    border: #7fa700 1px solid;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    margin-left: 45px;
+    cursor: pointer;
+}
+.scheme{
+    width: 805px;
+    margin: auto;
+    background-color: #f9f9f9;
+}
+.scheme_con{
+    width: 763px;
+    margin: auto;
+}
+.force,.business{
+    font-size: 12px;
+    padding: 20px 0 10px 0;
+    box-sizing: border-box;
+    color: #535353;
+}
+table{
+    width: 100%;
+}
+table th{
+    background-color: #f3f3f3;
+    height: 35px;
+    line-height: 35px;
+    color: #333333;
+}
+table td.check{
+    text-align: center;
+}
+table td.touB{
+    width: 170px;
+}
+.business_table td,.force_table td{
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+}
+table td,table th{
+    border-bottom: #d1d1d1 1px solid;
+}
+.times{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.times span{
+    vertical-align: middle;
+    display: inline-block;
+}
+.startT,.endT{
+    width: 167px;
+    height: 37px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 37px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.startT{
+    border: 1px solid #c9c9c9;
+}
+.endT{
+    background-color: #eeeeee;
+}
+.endW{
+    margin-left: 25px;
+}
+.startW{
+    margin-left: 10px;
+}
+.bPrice,.btn{
+    display: inline-block;
+}
+.bPrice{
+    width: 48px;
+    height: 21px;
+    border: #c9c9c9 1px solid;
+    border-radius: 3px 0 0 3px;
+    line-height: 21px;
+    vertical-align: top;
+    text-align: center;
+}
+.btn{
+    width: 21px;
+    height: 21px;
+    border-top: #c9c9c9 1px solid;
+    border-right: #c9c9c9 1px solid;
+    border-bottom: #c9c9c9 1px solid;
+    border-radius: 0 3px 3px 0;
+    vertical-align: top;
+}
+.touB_jp{
+    min-width: 68px;
+    height: 23px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+.s_up2{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 7px 9px;
+}
+.s_down2{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -18px 8px;
+}
+.main,.additional{
+     text-align: center;
+    vertical-align: middle;
+}
+.business_th4{
+    width: 120px;
+}
+.business_th5{
+    width: 80px;
+}
+.next_btn{
+    width: 88px;
+    height: 33px;
+    background-color: #fa7b7c;
+    border: #f55d5e 1px solid;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 15px 0 20px 9px;
+    float: left;
+    cursor: pointer;
+}
+.back{
+    width: 88px;
+    height: 33px;
+    background-color: #f9f9f9;
+    border: #d6d6d6 1px solid;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    color:#666666;
+    margin: 15px 9px 20px 0;
+    float: right;
+    cursor: pointer;
+}
+.popup{
+    width: 576px;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*margin-left: -288px;*/
+    /*top: 50%;*/
+    /*margin-top: -202px;*/
+    /*height: 404px;*/
+    background-color: #FFFFFF;
+    border-radius: 1px;
+}
+.popup_head{
+    width: 100%;
+    height: 55px;
+    background-color: #5f636e;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 55px;
+    text-align: center;
+    position: relative
+}
+.closeBtn{
+    background: url("../../../../img/page/ax_insurance/closeBtn.png") no-repeat center;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -12px;
+    cursor: pointer;
+}
+.select_conf{
+    width: 556px;
+    margin: 10px auto;
+    height: 349px;
+}
+.select_conf .div{
+    margin-bottom: 5px;
+}
+.search{
+    width: 189px;
+    height: 37px;
+    border: #c9c9c9 1px solid;
+    border-radius: 3px 0 0 3px;
+    padding-left: 9px;
+    box-sizing: border-box;
+}
+.search-button{
+    width: 30px;
+    height: 35px;
+    vertical-align: middle;
+    border-top:  #c9c9c9 1px solid;
+    border-right:  #c9c9c9 1px solid;
+    border-bottom:  #c9c9c9 1px solid;
+    border-radius: 0 3px 3px 0;
+    background: url("../../../../img/page/ax_insurance/sP.png") no-repeat -462px -45px;
+    cursor: pointer;
+}
+.div .tips{
+    width: 320px;
+    color: #666666;
+}
+.div .tips em{
+    font-style: normal;
+    color: #f55d5e;
+}
+.query .queryDiv{
+    cursor: pointer;
+}
+.ipt{
+    width: 103px;
+    height: 37px;
+    border: #c9c9c9 1px solid;
+    border-radius: 3px 0 0 3px;
+    box-sizing: border-box;
+    vertical-align: top;
+    line-height: 37px;
+    text-align: center;
+    color: #999999;
+}
+.s_btn{
+    width: 30px;
+    height: 35px;
+    border-top:  #c9c9c9 1px solid;
+    border-right:  #c9c9c9 1px solid;
+    border-bottom:  #c9c9c9 1px solid;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+.s_up{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px;
+}
+.s_down{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px;
+}
+.m-left5{
+    margin-left: 5px;
+}
+.div.query{
+    position: relative;
+}
+.query ul{
+    position: absolute;
+    top: 35px;
+    border: #c9c9c9 1px solid;
+    width: 132px;
+    background-color: #FFFFFF;
+    height: 117px;
+    overflow: auto;
+}
+.query ul li{
+    width: 107px;
+    height: 35px;
+    margin: 3px auto 3px auto;
+    line-height: 35px;
+    color: #666666;
+}
+.query ul li:hover,.touB_jp .touB_ul li:hover{
+    background-color: #80a61e;
+    color: #ffffff;
+}
+.ul1{
+    left: 0;
+}
+.ul2{
+    left: 139px;
+}
+.ul3{
+    left: 278px;
+}
+.ul4{
+    left: 417px;
+}
+.dis{
+    display: none;
+}
+/*table的样式*/
+.queryList{
+    border-top: #d6d6d6 1px solid;
+    border-bottom: #d6d6d6 1px solid;
+    width: 100%;
+    color: #666666;
+    height: 242px;
+    overflow-y:auto;
+}
+.queryList table{
+    width: 100%;
+}
+.queryList table tr{
+    height: 29px;
+    line-height: 29px;
+    border-bottom: #eeeeee 1px solid;
+}
+.queryList table tr:nth-child(even){
+    background-color: #fafafa;
+}
+.queryList table tr:nth-child(odd){
+    background-color: #FFFFFF;
+}
+.queryList table tr:hover{
+    background-color: #ebf2c9;
+    border-bottom: #eeeeee 1px solid;
+    cursor: pointer;
+}
+.div div{
+    display: inline-block;
+}
+.tiS{
+    width: 234px;
+    height: 242px;
+    margin-left: 144px;
+    line-height: 242px;
+    vertical-align: middle;
+    text-align: center;
+}
+.touB_ul{
+    width: 70px;
+    height: 105px;
+    overflow: auto;
+    border: #c9c9c9 1px solid;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 29px;
+    z-index: 99;
+    left: 0;
+}
+.touB_jp .touB_ul li{
+    height: 23px;
+    line-height: 23px;
+    width: 60px;
+    margin: 3px auto;
+}
+.tips_outline{
+    width: 300px;
+    height: 200px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+.tips_outline p{
+    width: 30px;
+}
+.Cbtn{
+    background-color:#a0c338;
+    border: #80a61e 1px solid;
+    width: 90px;
+    height: 35px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    bottom: 20px;cursor: pointer;
+}
+#tipsA{
+    display: none;
+}
+.p{
+    width: 250px;
+    margin: 30px auto 0 auto;
+}
+body .flotation{
+    line-height: 50px;
+    text-align: center;
+}

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration debug="false">
+	<property name="COMMON_PATTERN"
+			  value="[%d{'yy-MM-dd HH:mm:ss,SSS',GMT+8:00}] %-5p [%.10t][%X{CU}] %logger{36}[%L] - %m%n" />
+	<property name="LOG_CHARSET" value="UTF-8" />
+
+	<appender name="CORE" class="ch.qos.logback.core.FileAppender">
+		<file>logs/core.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="CACHE" class="ch.qos.logback.core.FileAppender">
+		<file>logs/cache.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="COMMON" class="ch.qos.logback.core.FileAppender">
+		<file>logs/common.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="CUS_ASSIGN" class="ch.qos.logback.core.FileAppender">
+		<file>logs/customerAssign.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="DB" class="ch.qos.logback.core.FileAppender">
+		<filter class="com.tqmall.common.util.log.DbNoConneInfoFilter" />
+		<file>logs/db.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="ERROR" class="ch.qos.logback.core.FileAppender">
+		<file>logs/error.log</file>
+		<append>false</append>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="MONITOR" class="ch.qos.logback.core.FileAppender">
+		<file>logs/monitor.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="REMOTE" class="ch.qos.logback.core.FileAppender">
+		<file>logs/remote.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="SCHEDULE" class="ch.qos.logback.core.FileAppender">
+		<file>logs/schedule.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="SPRING" class="ch.qos.logback.core.FileAppender">
+		<file>logs/spring.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="HTTP_REQUEST" class="ch.qos.logback.core.FileAppender">
+		<file>logs/httpRequest.log</file>
+		<append>false</append>
+		<encoder>
+			<charset>${LOG_CHARSET}</charset>
+			<pattern>${COMMON_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.tqmall.legend">
+		<level value="DEBUG" />
+	</logger>
+
+	<logger name="com.tqmall.core.*" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="CORE" />
+	</logger>
+	<logger name="com.tqmall.web.aspect.HttpRequestLogAspect" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="HTTP_REQUEST" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	<logger name="com.tqmall.legend.web.customer.CustomerController"
+			additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="CUS_ASSIGN" />
+	</logger>
+	<logger name="com.tqmall.web.filter.MonitorFilter" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="MONITOR" />
+	</logger>
+	<logger name="com.tqmall.legend.dao" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="DB" />
+		<appender-ref ref="ERROR" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	<logger name="com.ibatis" additivity="false">
+		<!--<level value="WARN" />-->
+		<level value="DEBUG" />
+		<appender-ref ref="DB" />
+		<appender-ref ref="ERROR" />
+	</logger>
+	<logger name="java.sql" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="DB" />
+		<appender-ref ref="ERROR" />
+	</logger>
+	<logger name="java.sql.ResultSet" additivity="false">
+		<!--<level value="INFO" />-->
+		<level value="DEBUG" />
+		<appender-ref ref="DB" />
+		<appender-ref ref="ERROR" />
+	</logger>
+	<logger name="net.sf.ehcache">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.apache">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.apache.velocity">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.directwebremoting" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="REMOTE" />
+		<appender-ref ref="ERROR" />
+	</logger>
+	<logger name="org.mybatis.spring" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="SPRING" />
+		<appender-ref ref="INFO" />
+	</logger>
+	<logger name="org.springframework" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="SPRING" />
+		<appender-ref ref="ERROR" />
+	</logger>
+	<logger name="org.springframework.security">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.springframework.scheduling" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="SCHEDULE" />
+		<appender-ref ref="ERROR" />
+	</logger>
+	<logger name="org.mitre">
+		<level value="info" />
+	</logger>
+	<logger name="com.alibaba.dubbo" additivity="false">
+		<priority value ="DEBUG"/>
+		<appender-ref ref="COMMON" />
+	</logger>
+
+	<root level="INFO">
+		<appender-ref ref="COMMON" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="ERROR" />
+		<appender-ref ref="CORE" />
+	</root>
+
+</configuration>

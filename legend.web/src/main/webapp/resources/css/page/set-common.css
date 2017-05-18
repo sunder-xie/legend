@@ -1,0 +1,201 @@
+.gd_tab{
+    margin-top: 0px;
+}
+.base-data{
+    border: 1px solid #cdcdcd;
+    margin-bottom:10px;
+}
+.head{
+    position: relative;
+    background: #efefef;
+    height: 38px;
+    border-bottom: 1px solid #cdcdcd ;
+}
+.head span{
+    display: inline-block;
+    border-right: 1px solid #cdcdcd;
+    height: 14px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 12px 20px;
+}
+.head button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float:right;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    background-color:#f7f7f7;
+    border: 1px solid #CCC;
+}
+.base-data label{
+    width: 80px;
+    padding-left: 5px;
+    height: 40px;
+    line-height: 37px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: left;
+}
+.base-data .attr_list label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+.base-data span{
+    font-size: 14px;
+    font-weight: bold;
+}
+.data-set{
+    /*background: #f9f9f9;  修改发布车主服务的背景颜色*/
+    padding: 10px 22px;
+}
+.data-set button{
+    /*float:right;*/
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.data-set li{
+    padding: 10px 0;
+    float: left;
+}
+.action-btn{
+    margin-top: 20px;
+    height: 40px;
+}
+.action-btn button{
+    margin-right: 20px;
+    float: left;
+    height: 30px;
+}
+.form-control{
+    width:  350px;
+    height: 38px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+.red-star{
+    color: #fa4837;
+}
+input,select{
+    background: white;
+}
+input[disabled="disabled"]{
+    background: #eee;
+    color: #c9c9c9;
+}
+.form-group label{
+    width: 100%;
+    text-align: center;
+}
+.form-group .form-control{
+    width: 100%;
+    /*text-align: center;*/
+}
+.part-info{
+    background: white;
+    margin: 0 45px 0 22px;
+    padding: 20px 30px;
+    border: 1px solid #dadada;
+}
+.part-info .text-container{
+    float: left;
+    margin-left: 30px;
+    width: 600px;
+}
+.part-info img{
+    float: left;
+}
+
+.item-name{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.item-detail{
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 22px;
+
+}
+
+.img-container{
+    display: inline-block;
+}
+.img-container img{
+    margin: 0 10px 10px 0;
+}
+div a.btn_cmn{
+    display: inline-block;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.mar-3{
+    margin: 3px;
+}
+.mar-l-10{
+    margin-left: 10px;
+}
+.mar-l-20{
+    margin-left: 20px;
+}
+.choose_button a.btn_gray{
+    line-height: 1;
+}
+.mar-bot-10{
+    margin-bottom: 10px;
+}
+.wrapper div.page_control_cmn{
+    position: static;
+    text-align: center;
+    height: 34px;
+    margin-top: 30px;
+}
+.wrapper div.page_control_cmn>a{
+    float: none;
+}
+.xiugaimima{
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    border:1px solid #c1c1c1;
+    background-color:#f6f6f6;
+    margin-left:50px;
+}
+.data-set li input{
+    *padding-left:3px;
+    line-height: 38px;
+}
+#serviceUnit{
+    width: 166px;
+}
+#servicePrice{
+    width: 169px;
+    margin-right:10px;
+}
+#zcw-data li {
+    float: inherit;
+    width:100%;
+}
+.fujiafy li {
+    width: 50%;
+}
+.fujiafy li #carLevelId {
+    width: 352px;
+}
+.add-role-ensure {
+    width: 69px!important;
+    height: 30px!important;
+    line-height: 30px!important;
+    margin-top: 3px!important;
+}

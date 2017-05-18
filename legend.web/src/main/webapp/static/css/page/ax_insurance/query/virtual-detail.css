@@ -1,0 +1,195 @@
+/*右侧部分样式开始*/
+em{
+    font-style: normal;
+}
+.Z-right{
+    width: 830px;
+    float: left;
+    background: #eee;
+    /*font-family: "宋体";*/
+}
+.Z-title{
+    background: #eee;
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+.Z-header dl{
+    float: right;
+}
+.Z-title span{
+    color: #333;
+    font-size: 16px;
+    font-family: MircosoftYahei;
+    font-weight: bold;
+}
+.Z-title .Z-reCal{
+    display: inline-block;
+    width: 102px;
+    height: 37px;
+    background: #f87c7e;
+    line-height: 37px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.Z-title .Z-modify{
+    display: inline-block;
+    width: 102px;
+    height: 37px;
+    background: #8eb210;
+    line-height: 37px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.Z-title .Z-back{
+    display: inline-block;
+    width: 90px;
+    height: 37px;
+    line-height: 37px;
+    background: #f9f9f9;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border-radius: 3px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.Z-right .Z-group{
+    background: #fff;
+    padding: 10px 0;
+    line-height: 30px;
+}
+.Z-right .yqx-group{
+    font-size: 14px;
+    background: #f9f9f9;
+    width: 800px;
+    margin: 0 auto 10px;
+    border: none;
+}
+.Z-right .yqx-group .yqx-group-head{
+    background: #eee;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 15px;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    color: #333;
+    border: none;
+}
+.Z-right .yqx-group .yqx-group-content{
+    background: #fff;
+    padding: 15px 50px;
+}
+.Z-right .yqx-group .yqx-group-content p span:nth-child(2){
+    float: right;
+    width: 220px;
+}
+.Z-right .yqx-group .yqx-group-content p span:nth-child(2) i{
+    display: inline-block;
+    font-style: normal;
+    background: #ff1d00;
+    color: #fff;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 2px;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.yqx-group .insurance-detail{
+    border: 1px solid #f3f3f3;
+    margin-bottom: 20px;
+}
+.insurance-detail p:nth-child(1){
+    background: #f3f3f3;
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+.insurance-detail p:nth-child(n+2){
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.insurance-detail p:nth-child(n+2) span:nth-child(n+2){
+    color: #8eb210;
+}
+/*投保单详情商业险投保单信息部分样式开始*/
+.Z-tbd-info em{
+    color: #ff7800;
+}
+/*隐藏奖励金*/
+/*.Z-tbd-info p:nth-child(2){*/
+    /*position: relative;*/
+/*}*/
+/*.Z-tbd-info p:nth-child(2) em{*/
+    /*position: absolute;*/
+    /*width: 150px;*/
+    /*right: -90px;*/
+    /*font-size: 15px;*/
+    /*display: none;*/
+    /*top: 0;*/
+/*}*/
+.Z-group .insurance-money{
+    display: inline-block;
+    border-top: 10px solid transparent;
+    border-left: 10px solid black;
+    border-bottom: 10px solid transparent;
+    border-right: 73px solid transparent;
+    vertical-align: middle;
+}
+/*投保单详情商业险投保单信息部分样式结束*/
+
+/*投保单详情商业险保障内容部分样式开始*/
+.Z-group .Z-insurance-info table{
+    table-layout: fixed;
+    width: 100%;
+    margin: 20px 0;
+}
+.Z-group .Z-insurance-info thead{
+    background: #f3f3f3;
+}
+.Z-group>div:last-child{
+    border-bottom: 1px solid #ddd;
+}
+.Z-group .Z-insurance-info thead th:nth-child(1){
+    width: 90px;
+}
+.Z-group .Z-insurance-info thead th:nth-child(2){
+    width: 400px;
+}
+.Z-group .Z-insurance-info tbody{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.Z-group .Z-insurance-info .main-insurance tr:nth-child(1) td:nth-child(n+2){
+    border-bottom: 1px solid #ddd;
+}
+.Z-group .Z-insurance-info .main-insurance tr:nth-child(1) td:nth-child(1){
+    text-align: center;
+    vertical-align: middle;
+}
+.Z-group .Z-insurance-info .main-insurance tr:nth-child(n+2) td:nth-child(n+1){
+    border-bottom: 1px solid #ddd;
+}
+.Z-group .Z-insurance-info .main-insurance input{
+    vertical-align: baseline;
+    margin-right: 5px;
+}
+/*投保单详情商业险保障内容部分样式结束*/
+.Z-right .Z-footer{
+    background: #fff;
+    text-align: right;
+}
+.Z-footer dl{
+    display: inline-block;
+}
+/*右侧部分样式结束*/

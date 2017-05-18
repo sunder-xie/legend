@@ -1,0 +1,13 @@
+/*
+ * create by sky 2016-04-19
+ * 管理报表--服务类型分析
+ */
+
+.w150{width: 150px;}
+.h345{height: 345px;}
+
+.sale-ratio-icon,
+.times-ratio-icon
+{display: inline-block;width: 24px;height: 22px;margin-right: 3px;vertical-align: middle;background: url('../../images/report/rp-sprite.png') no-repeat;}
+.sale-ratio-icon{background-position: -45px -72px;}
+.times-ratio-icon{background-position: -41px -113px;}

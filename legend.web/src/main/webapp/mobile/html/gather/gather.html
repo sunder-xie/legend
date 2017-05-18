@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-mw="1080">
+<head>
+    <meta charset="UTF-8">
+    <title>淘汽云修</title>
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 基础文件 start -->
+    <style>
+        /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+        html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:0;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        html {
+            font-size: 1em;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight: rgba(0, 0, 0, 0);
+            -webkit-text-size-adjust: none;
+            overflow: -moz-scrollbars-vertical;
+            /*强制firefox出现滑动条*/
+        }
+
+        body {
+            position: relative;
+            font: 0.75em/1.4 "Microsoft YaHei", Sans-Serif;
+            color: #333;
+        }
+
+        /* 分享遮罩层 */
+        .share-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 921204;
+            width: 100%;
+            height: 100%;
+            /* “点击右上角分享”图片 */
+            background: rgba(0, 0, 0, .6) url("data:image/png;base64,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") 92% 2%/4.21rem 1.65rem no-repeat;
+        }
+
+        .text-template-field {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="../../static/style/widget/dialog/dialog.css">
+    <script src="../../static/script/lib/wxsdk/wx.min.js"></script>
+    <script src="../../static/script/lib/vue/vue-combo.min.js"></script>
+    <script src="../../static/script/widget/adaptor/adaptor.min.js"></script>
+    <script src="../../static/script/widget/dialog/dialog.min.js"></script>
+    <script>
+        ////^ Vue 配置信息 ////
+        Vue.http.options.root = '/legend';
+        Vue.http.options.timeout = 15 * 1000;
+        ////$ Vue 配置信息 ////
+
+        ////^ 工具类 ////
+        var utils = {
+            /**
+             * 空函数
+             */
+            noop: function () {},
+            /**
+             * 判断数据类型
+             * @param seed
+             * @param type
+             * @returns {boolean}
+             */
+            isDataType: function (seed, type) {
+                return Object.prototype.toString(seed) === '[object ' + type + ']';
+            },
+            /**
+             * 显示分享遮罩层
+             */
+            showShareMask: function () {
+                var mask = document.createElement('section');
+                mask.className = 'share-mask';
+                document.body.appendChild(mask);
+                mask.addEventListener('touchend', function () {
+                    document.body.removeChild(mask);
+                    mask = null;
+                }, false);
+            },
+            /**
+             * 获取指定的URL数据
+             * @param name 参数集中的某一个参数名
+             * @param search url参数部分(必须带?开头)
+             * @returns {null}
+             */
+            queryParam: function (name, search) {
+                var queryStr = search || location.search,
+                        reg,
+                        match;
+
+                if (queryStr) {
+                    reg = new RegExp('(?:\\?|&)' + name + '=([^&?]*)', 'i');
+                    match = queryStr.match(reg);
+                    return match == null ? null : match[1];
+                }
+
+                return null;
+            },
+            /**
+             * 组装FormData数据，用于ajax-post请求
+             * @param data {Object}
+             * @returns {FormData}
+             */
+            getFormData: function (data) {
+                var formData = new FormData(), item;
+                if (this.isDataType(data, 'Object')) {
+                    for (item in data) {
+                        if (data.hasOwnProperty(item)) {
+                            formData.append(item, data[item]);
+                        }
+                    }
+                }
+                return formData;
+            },
+            /**
+             * 组装QueryData数据，用于ajax-get请求
+             * @param data {Object}
+             * @returns {string}
+             */
+            getQueryData: function (data) {
+                var item, query = [];
+                if (this.isDataType(data, 'Object')) {
+                    for (item in data) {
+                        if (data.hasOwnProperty(item)) {
+                            query.push(item + '=' + data[item]);
+                        }
+                    }
+                }
+
+                return query.length ? '?' + query.join('&') : '';
+            },
+            /**
+             * 利用[Vue].$set方法设置Vue-data数据
+             * *注：key值支持复杂结构字符串（{'xxx.xxx': 'xxx'}）
+             * @param context Vue对象
+             * @param data {Object}
+             */
+            setVueData: function (context, data) {
+                var item;
+                if (context instanceof Vue && this.isDataType(data, 'Object')) {
+                    for (item in data) {
+                        if (data.hasOwnProperty(item)) {
+                            context.$set(item, data[item]);
+                        }
+                    }
+                }
+            }
+        };
+        ////$ 工具类 ////
+
+        ////^ 微信工具类 ////
+        var wxUtils = {
+            /**
+             * 微信配置方法
+             * *注：使用微信的任何功能前，必须有调用过该方法
+             */
+            config: function() {
+                var link = location.href.split('#')[0], debug = false;
+
+                Vue.http.get('pub/wechat/share?url=' + encodeURIComponent(link))
+                        .then(function(response) {
+                            var data = response.body.data;
+                            if (response.body.success && data) {
+                                wx.config({
+                                    debug: debug,
+                                    appId: data.appId,
+                                    timestamp: data.timestamp,
+                                    nonceStr: data.nonceStr,
+                                    signature: data.signature,
+                                    jsApiList: [
+                                        'onMenuShareTimeline',
+                                        'onMenuShareAppMessage',
+                                        'onMenuShareQQ',
+                                        'onMenuShareQZone'
+                                    ]
+                                });
+
+                                wx.ready(function () {
+                                    if (debug) {
+                                        wx.checkJsApi({
+                                            jsApiList: [
+                                                'onMenuShareTimeline',
+                                                'onMenuShareAppMessage',
+                                                'onMenuShareQQ',
+                                                'onMenuShareQZone'
+                                            ],
+                                            success: function(res) {
+                                                alert(res.errMsg);
+                                            }
+                                        });
+                                        wx.error(function (res) {
+                                            alert(res.errMsg);
+                                        });
+                                    }
+                                });
+                            }
+                        });
+            },
+            /**
+             * 微信分享方法
+             * @param title
+             * @param desc
+             * @param imgUrl 必须是绝对路径
+             * @param link 必须是绝对路径
+             * @param success
+             * @param cancel
+             */
+            share: function(title, desc, imgUrl, link, success, cancel) {
+                link = link.split('#')[0];
+
+                wx.ready(function() {
+                    var options = {
+                        title: title,
+                        desc: desc,
+                        link: link,
+                        imgUrl: imgUrl,
+                        success: success || utils.noop,
+                        cancel: cancel || utils.noop
+                    };
+
+                    wx.onMenuShareTimeline(options);
+                    wx.onMenuShareAppMessage(options);
+                    wx.onMenuShareQQ(options);
+                    wx.onMenuShareQZone(options);
+                });
+            }
+        };
+        ////$ 微信工具类 ////
+
+        // 获取微信配置
+        wxUtils.config();
+    </script>
+    <!-- 基础文件 end -->
+    <link rel="stylesheet" href="../../static/style/page/gather/gather.css">
+</head>
+<body>
+    <section class="wrapper" id="wrapper">
+        <section class="panel">
+            <div class="ticket">
+                <div class="ticket-inner">
+                    <template v-if="!template.waitingRender">
+                        <p class="ticket-name">{{* form.ticketName }}</p>
+                        <p class="ticket-date">有效期 {{* form.validityPeriodStr }}</p>
+                    </template>
+                    <div class="ticket-count" v-if="form.isSourceCustomer"><strong>{{form.surplusNum}}</strong>张</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="form" v-if="template.hasReceive">
+                    <div class="form-group">
+                        <input type="text" class="form-control" v-model.trim="form.mobile" @input="canReceiveCoupon" placeholder="请输入手机号码">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-input-verify" id="verifyInput" v-model.trim="form.smsCode" @input="canReceiveCoupon" placeholder="请输入验证码"><!--
+                    --><button class="form-btn form-btn-verify" v-touch:tap="sendCode" v-bind="disabled" v-bind:disabled="!form.canSendSmsCode">{{verifyText}}</button>
+                    </div>
+                    <div class="form-submit">
+                        <div class="form-group">
+                            <button class="form-btn form-btn-collect" v-touch:tap="receiveCoupon" v-bind:disabled="!form.canReceiveCoupon">马上领取</button>
+                        </div>
+                        <div class="form-group">
+                            <button class="form-btn form-btn-share" v-touch:tap="share">分享给好友</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="result" v-else="!template.hasReceive">
+                    <template v-if="form.resultCode !== 1">
+                        <div class="msg-box">
+                            <p class="msg"><mark>1张</mark>券已经放入<mark>账户{{form.mobile}}</mark></p>
+                            <p class="msg" v-if="form.surplusNum > 0">还有<mark>{{form.surplusNum}}张</mark>优惠券，可以分享给好友</p>
+                        </div>
+                        <button class="form-btn form-btn-share" v-if="form.surplusNum > 0" v-touch:tap="share">分享给好友</button>
+                    </template>
+                </div>
+            </div>
+            <div class="rules">
+                <template v-if="!template.waitingRender">
+                    <dl class="rules-list">
+                        <dt>活动规则：</dt>
+                        <dd><p>此优惠券仅限在{{* form.shopName }}使用；</p></dd>
+                        <dd><p>此优惠券每个账号仅限使用{{* form.perAccountNum }}次；</p></dd>
+                        <dd><p>此优惠券使用最终解释权归{{* form.shopName }}所有；<br/>门店地址：{{* form.shopAddress }}</p></dd>
+                    </dl>
+                </template>
+            </div>
+        </section>
+        <div class="text-template-field">
+            <div id="noCouponsTpl">
+                <section class="dialog-panel">
+                    <div class="dialog-panel-close js-dialog-close"></div>
+                    <figure class="dialog-cry-box text-center">
+                        <img src="../../static/image/gather/cry.png">
+                        <figcaption>亲，来晚一步<br>优惠券已经被好友抢光光了</figcaption>
+                    </figure>
+                    <div class="dialog-shop-box">
+                        <p class="dialog-info text-center">不要紧!{{form.shopName}}为你提供更多优惠服务<br>欢迎进店体验</p>
+                        <figure class="qr-code-box text-center" v-if="form.qrCode">
+                            <div class="qr-code-img-box">
+                                <img :src="form.qrCode">
+                            </div>
+                            <figcaption>长按二维码关注门店微信公众号，获取更多优惠信息。<br>门店地址：{{form.shopAddress}}</figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            // 弹窗对象
+            var httpLoadingId, dialogOpenId;
+            // ajax 请求接口集合
+            var ajaxUrls = {
+                // 【车主领券：领券页面初始信息】
+                getCouponInfo: 'pub/gather-coupon/getCouponInfo',
+                // 【车主领券：获取短信验证码】
+                sendCode: 'pub/gather-coupon/send-code',
+                // 【车主领券：领取优惠券】
+                receiveCoupon: 'pub/gather-coupon/receive-coupon'
+            };
+
+            var gatherCouponConfigId = utils.queryParam('gatherCouponConfigId');
+            // 手机号码正表达式
+            var telReg = /^1[34578][0-9]\d{8}$/;
+            // 错误信息集合
+            var errMsg = {
+                repeatRequestMsg: '太快了，过会儿再试试~',
+                mobileFormatMsg: '手机号码格式不正确~',
+                mobileRequireMsg: '手机号码不能为空~',
+                smsCodeRequireMsg: '验证码不能为空~',
+                voucherEmptyMsg: '亲，您已经领取的太多了，留条分享给好友吧~'
+            };
+
+            new Vue({
+                el: '#wrapper',
+                data: {
+                    template: {
+                        hasReceive: true,
+                        waitingRender: true
+                    },
+                    form: {
+                        canReceiveCoupon: false,
+                        canSendSmsCode: true
+                    },
+                    verifyText: '获取验证码'
+                },
+                created: function () {
+                    var that = this;
+
+                    httpLoadingId = dialog.loading();
+
+                    // 领券页面初始化信息
+                    that.$http.get(ajaxUrls.getCouponInfo + '?gatherCouponConfigId=' + gatherCouponConfigId)
+                            .then(function (response) {
+                                var data = response.body.data,
+                                        shareTitle,
+                                        shareDesc;
+
+                                dialog.close(httpLoadingId);
+
+                                if (response.body.success) {
+                                    utils.setVueData(that, {
+                                        'form.ticketName': (data.shopName == null ? '' : data.shopName) + ' ' + (data.couponName == null ? '' : data.couponName),
+                                        'form.perAccountNum': data.perAccountNum,
+                                        'form.shopName': data.shopName,
+                                        'form.shopAddress': data.shopAddress,
+                                        'form.couponName': data.couponName,
+                                        'form.totalCouponNum': data.totalCouponNum,
+                                        'form.validityPeriodStr': data.validityPeriodStr,
+                                        'form.qrCode': data.qrCode,
+                                        'template.waitingRender': false
+                                    });
+
+                                    ////^ HTML-title设置 ////
+                                    document.title = that.$data.form.ticketName;
+                                    ////$ HTML-title设置 ////
+
+                                    ////^ wx 分享 ////
+                                    shareTitle = '您有一张' + data.couponName + '优惠券，马上点击领取，' + data.shopName;
+                                    shareDesc = '感恩老客户，好友享实惠，优惠限量送。' + shareTitle;
+                                    wxUtils.share(shareTitle, shareDesc, 'http://tqmall-legend.oss-cn-hangzhou.aliyuncs.com/image/orig_148239634710632292.png', location.href);
+                                    ////$ wx 分享 ////
+                                } else {
+                                    dialog.toast(response.body.message);
+                                }
+                            }, function () {
+                                dialog.close(httpLoadingId);
+                            });
+                },
+                methods: {
+                    /**
+                     * 点击显示弹窗方法
+                     */
+                    share: utils.showShareMask,
+                    /**
+                     * 判断是否能“马上领取”方法
+                     */
+                    canReceiveCoupon: function () {
+                        var that = this;
+                        that.$data.form.canReceiveCoupon = (that.$data.form.mobile && that.$data.form.smsCode);
+                    },
+                    /**
+                     * 发送验证码方法
+                     */
+                    sendCode: function () {
+                        var that = this,
+                                mobile = that.$data.form.mobile,
+                                formData = utils.getFormData({
+                                    gatherCouponConfigId: gatherCouponConfigId,
+                                    mobile: mobile
+                                });
+
+                        ////^ 校验数据 ////
+                        if (!that.$data.form.canSendSmsCode) {
+                            dialog.toast(errMsg.smsCodeRepeatMsg);
+                            return;
+                        }
+
+                        if (!telReg.test(mobile)) {
+                            dialog.toast(errMsg.mobileFormatMsg);
+                            return;
+                        }
+                        ////$ 校验数据 ////
+
+                        that.$data.form.canSendSmsCode = false;
+
+                        ////^ 验证码输入框聚焦 ////
+                        document.getElementById('verifyInput').focus();
+                        ////$ 验证码输入框聚焦 ////
+
+                        ////^ 下次请求验证码倒计时 ////
+                        (function () {
+                            var time = 60,
+                                    timer,
+                                    initVerifyText = that.$data.verifyText;
+
+                            function timerFn() {
+                                if (time <= 0) {
+                                    that.$data.form.canSendSmsCode = true;
+                                    that.$set('verifyText', initVerifyText);
+                                    clearInterval(timer);
+                                    return;
+                                }
+                                that.$data.verifyText = '重新发送(' + (time--) + ')';
+                            }
+
+                            timerFn();
+                            timer = setInterval(timerFn, 1000);
+                        })();
+                        ////$ 下次请求验证码倒计时 ////
+
+                        that.$http.post(ajaxUrls.sendCode, formData)
+                                .then(function (response) {
+                                    if (!response.body.success) {
+                                        dialog.toast(response.body.message);
+                                    }
+                                });
+                    },
+                    /**
+                     * 马上领取优惠券方法
+                     */
+                    receiveCoupon: function () {
+                        var that = this,
+                                mobile = that.$data.form.mobile,
+                                smsCode = that.$data.form.smsCode,
+                                formData = utils.getFormData({
+                                    gatherCouponConfigId: gatherCouponConfigId,
+                                    mobile: mobile,
+                                    smsCode: smsCode
+                                });
+
+                        ////^ 校验数据 ////
+                        if (!that.$data.form.canReceiveCoupon) {
+                            dialog.toast(errMsg.repeatRequestMsg);
+                            return;
+                        }
+
+                        if (smsCode === '') {
+                            dialog.toast(errMsg.smsCodeRequireMsg);
+                            return;
+                        }
+
+                        if (mobile === '') {
+                            dialog.toast(errMsg.mobileRequireMsg);
+                            return;
+                        } else if (!telReg.test(mobile)) {
+                            dialog.toast(errMsg.mobileFormatMsg);
+                            return;
+                        }
+                        ////$ 校验数据 ////
+
+                        httpLoadingId = dialog.loading();
+                        that.$data.form.canReceiveCoupon = false;
+
+                        that.$http.post(ajaxUrls.receiveCoupon, formData)
+                                .then(function (response) {
+                                    var that = this,
+                                            data = response.body.data;
+                                    that.$data.form.canReceiveCoupon = (that.$data.form.mobile && that.$data.form.smsCode);
+                                    dialog.close(httpLoadingId);
+
+                                    function closeDialogEvent() {
+                                        dialog.close(dialogOpenId);
+                                        for (i = 0; i < len; i++) {
+                                            $$closeBtn[i].removeEventListener('touchend', closeDialogEvent);
+                                        }
+                                    }
+
+                                    if (response.body.success) {
+                                        utils.setVueData(that, {
+                                            'form.mobile': data.mobile,
+                                            'form.surplusNum': data.surplusNum,
+                                            'form.isSourceCustomer': data.isSourceCustomer,
+                                            'form.perAccountNum': data.perAccountNum,
+                                            'form.resultCode': data.resultCode,
+                                            'template.hasReceive': false
+                                        });
+
+                                        switch (data.resultCode) {
+                                                // case 0: 成功
+                                                // 没有可以领取的优惠券
+                                            case 1:
+                                                dialogOpenId = dialog.open(document.querySelector('#noCouponsTpl').innerHTML);
+                                                var $$closeBtn = document.querySelectorAll('.js-dialog-close'),
+                                                        len = $$closeBtn.length, i;
+
+                                                if (len) {
+                                                    for (i = 0; i < len; i++) {
+                                                        $$closeBtn[i].addEventListener('touchend', closeDialogEvent, false);
+                                                    }
+                                                }
+                                                break;
+                                                // 超过当前账户领取上限
+                                            case 2:
+                                                dialog.toast(errMsg.voucherEmptyMsg);
+                                                break;
+                                        }
+                                    } else {
+                                        dialog.toast(response.body.message);
+                                    }
+                                }, function () {
+                                    that.$data.form.canReceiveCoupon = (that.$data.form.mobile && that.$data.form.smsCode);
+                                    dialog.close(httpLoadingId);
+                                });
+                    }
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

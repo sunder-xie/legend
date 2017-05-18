@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.article.ArticleDao">
+
+    <resultMap id="BaseResultMap" type="Article" extends="COMMON.BASE_RESULT_MAP">
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="summery" property="summery"/>
+        <result column="status" property="status"/>
+        <result column="cat_id" property="catId"/>
+        <result column="sort" property="sort"/>
+        <result column="type" property="type"/>
+        <result column="main_image" property="mainImage"/>
+        <result column="image_gallery" property="imageGallery"/>
+        <result column="shop_level" property="shopLevel"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            title as title,
+            content as content,
+            summery as summery,
+            status as status,
+            cat_id as catId,
+            sort as sort,
+            type as type,
+            main_image as mainImage,
+            image_gallery as imageGallery,
+            shop_level as shopLevel,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="title != null">
+                    and title = #{title}
+                </if>
+                <if test="content != null">
+                    and content = #{content}
+                </if>
+                <if test="summery != null">
+                    and summery = #{summery}
+                </if>
+                <if test="status != null">
+                    and status = #{status}
+                </if>
+                <if test="catId != null">
+                    and cat_id = #{catId}
+                </if>
+                <if test="sort != null">
+                    and sort = #{sort}
+                </if>
+                <if test="type != null">
+                    and type = #{type}
+                </if>
+                <if test="mainImage != null">
+                    and main_image = #{mainImage}
+                </if>
+                <if test="imageGallery != null">
+                    and image_gallery = #{imageGallery}
+                </if>
+                <if test="shopLevel != null">
+                    and (shop_level = #{shopLevel} or shop_level = 0)
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="title != null">
+                    title = #{title},
+                </if>
+                <if test="content != null">
+                    content = #{content},
+                </if>
+                <if test="summery != null">
+                    summery = #{summery},
+                </if>
+                <if test="status != null">
+                    status = #{status},
+                </if>
+                <if test="catId != null">
+                    cat_id = #{catId},
+                </if>
+                <if test="sort != null">
+                    sort = #{sort},
+                </if>
+                <if test="type != null">
+                    type = #{type},
+                </if>
+                <if test="mainImage != null">
+                    main_image = #{mainImage},
+                </if>
+                <if test="imageGallery != null">
+                    image_gallery = #{imageGallery},
+                </if>
+                <if test="shopLevel != null">
+                    shop_level = #{shopLevel},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_article
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_article
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_article
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_article
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_article
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_article
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_article
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_article (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="summery != null">
+                summery,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="catId != null">
+                cat_id,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="mainImage != null">
+                main_image,
+            </if>
+            <if test="imageGallery != null">
+                image_gallery,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="title != null">
+                #{title},
+            </if>
+            <if test="content != null">
+                #{content},
+            </if>
+            <if test="summery != null">
+                #{summery},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="catId != null">
+                #{catId},
+            </if>
+            <if test="sort != null">
+                #{sort},
+            </if>
+            <if test="type != null">
+                #{type},
+            </if>
+            <if test="mainImage != null">
+                #{mainImage},
+            </if>
+            <if test="imageGallery != null">
+                #{imageGallery},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_article
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,74 @@
+/*
+ * by zmx 2016/05/13
+ * 股东管理
+*/
+.table-detail{
+    margin-top: 10px;
+    border-top: 1px solid #cacaca;
+}
+.yqx-group .yqx-group-content .yqx-table{
+    font-size: 12px;
+}
+table.yqx-table tr th {
+    background: #f9f9f9;
+}
+.yqx-table .edit{
+    color: #9fc527;
+    text-decoration: underline;
+}
+.yqx-table .exit{
+    color: #999;
+    text-decoration: underline;
+}
+/*弹窗样式 start*/
+.tank{
+    background: #fff;
+}
+.btn_group{
+    height:55px;
+    line-height:55px;
+    text-align:center;
+    background:#232e49;
+
+    font-size: 16px;
+    color: #fff;
+}
+.t_middle{
+    text-align: center;
+    padding-top: 20px;
+}
+.dialog-lable-width{
+    width: 100px;
+}
+.dialog-form-width{
+    width: 170px;
+    text-align: left;
+}
+.t_middle li{
+    margin-top: 5px;
+}
+.t-bottom{
+    margin: 5px 0 15px 0;
+    text-align: center;
+}
+.exit-title{
+    line-height: 40px;
+    margin-left: 45px;
+    font-weight: bold;
+}
+.textarea-box{
+    width: 410px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.textarea-box textarea{
+    background: #f6f6f6;
+}
+.partner-ellipsis{
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*弹窗样式 end*/

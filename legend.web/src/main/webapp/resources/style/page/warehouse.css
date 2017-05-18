@@ -1,0 +1,230 @@
+/* 采购入库列表 start*/
+	/* 蓝字入库状态样式 start */
+	.qxy_list_table{font-size: 14px;}
+	.qxy_list_table li{margin-bottom:15px;border:1px solid #cdcdcd;}
+	.qxy_list_table .list_tit a{display: block;height: 35px;line-height: 35px;color:#666666;}
+	.qxy_list_table .list_tit a.list_link1{width:370px;float: left;text-indent: 20px;font-weight: bold;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+	.qxy_list_table .list_tit a.list_link2{width: 330px;float: right;}
+	.qxy_list_table .list_tit a.list_link3{width: 50px;float: right;color: red;}
+	.qxy_list_table .list_tit a:hover{color: red;}
+	.qxy_list_table .list_cont{border-top:1px solid #cdcdcd;}
+	.qxy_list_table table{width: 100%;font-size: 12px;position: relative;z-index: -1;background:#f9f9f9;}
+	.qxy_list_table .list_cont table td{height: 40px;line-height:35px;padding-left:20px;border-bottom:1px dashed #ccc;}
+	.qxy_list_table .list_cont table tr:last-child td{border-bottom:none;}
+	.qxy_list_table .list_cont td.col1{width: 15%;}
+	.qxy_list_table .list_cont td.col2{width: 25%;}
+	.qxy_list_table .list_cont td.col3{width: 20%;}
+	.qxy_list_table .list_cont td.col4{width: 10%;}
+	.qxy_list_table .list_cont td.col5{width: 17%;}
+	.qxy_list_table .list_cont td.col6{width: 16%;}
+    .qxy_list_table .list_tit .arrow_up{background : url(../img/common/arrow_up.png) center no-repeat;cursor: pointer;}
+    .qxy_list_table .list_tit .arrow_down{background : url(../img/common/arrow_down.png) center no-repeat;  cursor: pointer;}
+    .qxy_list_table .list_tit i{float:right;width: 20px;height:20px;margin:10px 10px 0 10px;}
+	/* 蓝字入库状态样式 end */
+
+	/* 红字入库状态样式 start */
+	.qxy_list_table .redWord{color:#e30e0e;}
+	.qxy_list_table li.redWord{background: url(../img/common/return.png) no-repeat right bottom;}
+	.qxy_list_table li.redWord a{color:#e30e0e;}
+	.qxy_list_table li.redWord a.list_link3{display:none;}
+	/* 红字入库状态样式 end */
+
+	/* 作废状态样式 start */
+	.qxy_list_table li.voided{color:#b7b7b7;background: url(../img/common/voided.png) no-repeat right bottom;}
+	.qxy_list_table li.voided a{color:#b7b7b7;}
+	.qxy_list_table li.voided a.list_link3{display:none;}
+	/* 作废状态样式 end */
+/* 采购入库列表 end*/
+
+/*未领料工单列表页 start*/
+	.qxy_waiting_order_table .list_tit a{height: 44px;line-height: 44px;}
+	.qxy_waiting_order_table .list_tit a.is_service{background: url(../img/common/iservice.png) no-repeat 10px center;padding-left: 40px;}
+	.qxy_waiting_order_table .list_tit a.list_link4{width: 80px;float: right;}
+	.qxy_waiting_order_table .list_tit a.list_link5{float: right;background-color: #8fb027;padding: 0 15px;height: 32px;font-weight: bold;text-align: center;line-height: 32px;color: #fff;border-radius: 5px;margin: 5px;}
+    .qxy_waiting_order_table .list_tit a.list_link6{float: right;background-color: #808080;padding: 0 15px;height: 32px;font-weight: bold;text-align: center;line-height: 32px;color: #fff;border-radius: 5px;margin: 5px;}
+    .qxy_waiting_order_table .list_tit a.list_link7{float: right;background-color: #FF0000;padding: 0 15px;height: 32px;font-weight: bold;text-align: center;line-height: 32px;color: #fff;border-radius: 5px;margin: 5px;}
+    .qxy_waiting_order_table .list_tit a.list_link8{float: right;background-color: #0000ff;padding: 0 15px;height: 32px;font-weight: bold;text-align: center;line-height: 32px;color: #fff;border-radius: 5px;margin: 5px;}
+	.qxy_waiting_order_table .list_cont table td{line-height: 25px;text-indent:0;vertical-align: middle;padding-left: 10px;}
+	.qxy_waiting_order_table .list_cont table td span{font-weight: bold;font-size: 14px;}
+	.qxy_waiting_order_table .list_cont td.col1{width: 6%;text-indent: 0px;}
+	.qxy_waiting_order_table .list_cont td.col2{width: 35%;}
+	.qxy_waiting_order_table .list_cont td.col1 img{margin: 10px;}
+    .qxy_waiting_order_table .list_cont td.col3{width:13%;}
+    .qxy_waiting_order_table .list_cont td.col4{width:17%;}
+	.qxy_waiting_order_table .list_cont table{border-bottom: 1px dashed #aebdc8;}
+	.qxy_waiting_order_table .list_cont table:last-child{border-bottom: none;}
+/*未领料工单列表页 end*/
+
+
+/*待报价工单列表页 start*/
+	.qxy_waiting_price_table .list_cont td{padding-left: 15px;}
+	.qxy_waiting_price_table .list_cont table td h3{margin-top: 13px;}
+/*待报价工单列表页 end*/
+
+/*仓库公用按钮 start*/
+	._x_green_btn{
+		background:#8fb027;
+		float:right;
+	}
+	._x_green_btn:hover{
+		background:#8fb027;
+	}
+/*仓库公用按钮 end*/
+/*
+蓝字入库名称
+*/
+    ._x_blue_in_sn{
+        padding-left:20px;
+        color:#a4a4a4;
+    }
+/*已作废出库单头上背景图标*/
+.bg_voided {
+  background: url("../../images/voided.png") center right no-repeat;
+  height: 80px;
+  margin:0px;
+  line-height:80px;
+}
+
+/*仓库红字样式*/
+.red_word{
+    color:#e30e0e;
+}
+.red_word input,
+.red_word select,
+.red_word a.chosen-single > span{
+    color:#e30e0e;
+}
+
+
+/*添加供应商    start*/
+.sv_txt {
+  width: 188px;
+  height: 15px;
+  padding: 10px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+}
+.us_box {
+    width: 760px;
+}
+
+.us_t {
+    height: 56px;
+    background: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    text-align: center;
+}
+.lbut {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    color: #666666;
+    background: #f8f8f8;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.add_c {
+  margin-top: 20px;
+}
+.sv_ser {
+  width: 210px;
+  height: 37px;
+  line-height: 37px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+}
+.rbut {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    color: #ffffff;
+    background: #8fb027;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.us_t span {
+    line-height: 56px;
+    font-size: 18px;
+    color: #535353;
+    font-weight: bold;
+}
+
+.add_k {
+    width: 331px;
+}
+
+.addtit {
+    height: 72px;
+    line-height: 72px;
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+    text-align: center;
+}
+
+.add_c li {
+    margin: 0 0 20px 24px;
+    line-height: 37px;
+}
+
+.add_c li span {
+    display: inline-block;
+    +display:inline;
+    +zoom:1;
+    width: 72px;
+}
+
+.add_c li span font {
+    vertical-align: middle;
+}
+
+/*添加供应商    end*/
+/*添加新配件弹框样式    start*/
+.add_bk{
+    width: 100%;
+    bottom: -9px;
+    left: 0px;
+    position: absolute;
+    background: #f5f2e6;
+    padding: 10px 0;
+    border-top:1px solid #dadada;
+}
+.add_bk div{
+    text-align: center;
+}
+/*添加新配件弹框样式    end*/
+.jiange {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* 下线提醒弹窗样式 start */
+.dg-panel{width: 658px;height: 330px;}
+.dg-panel .dg-panel-head{height: 52px;line-height: 52px;background: #232e49;}
+.dg-panel .dg-panel-title{font-size: 16px;font-weight: 700;text-align: center;color: #fff;margin:0;}
+.dg-panel .dg-panel-body{background: #fff;}
+.dg-panel .dg-content{margin: 40px 50px;}
+.dg-panel .dg-msg{line-height: 1.4;font-size: 14px;font-weight: 700;text-align: left;color: #333;text-indent: 2em;}
+.dg-panel .dg-note{margin: 20px 40px 30px;line-height: 1.4;font-size: 12px;text-align: left;color: #666;}
+.dg-panel .dg-note2{margin: 20px 0 50px;line-height: 1.4;font-size: 14px;text-align: left;color: #0a30f1;text-indent: 2em;}
+.dg-panel .dg-btns-tool{text-align: center;}
+.dg-panel .dg-btns-tool .btn{margin-right: 5px;font-size: 14px;}
+.dg-panel .dg-btns-tool .btn:last-child{margin-right: 0;}
+.dg-panel .dg-btns-tool .btn-1:hover{color: #fff;}
+.dg-panel .dg-btns-tool .btn-2:hover{color: #666;}
+.dg-panel strong {
+    font-size: 18px;
+    color: red;
+}
+/* 下线提醒弹窗样式 end */

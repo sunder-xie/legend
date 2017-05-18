@@ -1,0 +1,571 @@
+body{
+    padding-left: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+.head-banner {
+    position: relative;
+    background: url('../../img/page/guide/second-car.jpg') no-repeat;
+    height: 150px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.head-banner a {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+}
+
+.banner-hide {
+    display: none;
+}
+
+.yqx-help-box {
+    z-index: 10;
+}
+
+.clearfix.yqx-wrapper {
+    padding-bottom: 20px;
+}
+
+.yqx-help-back {
+    z-index: 9999999;
+    opacity: .6;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+.yqx-help {
+    position: absolute;
+    z-index: 99999991;
+}
+
+.guide-img {
+    background: url('../../img/page/guide/new-help-min.png') no-repeat;
+}
+
+.yqx-help-1 {
+    height: 308px;
+    width: 320px;
+    background-position: 0 -120px;
+}
+
+.yqx-help .next {
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+}
+
+.yqx-home-help {
+    top: 21px;
+}
+
+.yqx-home-help .next {
+    left: 90px;
+    bottom: 10px;
+}
+
+.banner-del {
+    background: url(../../third-plugin/layer/skin/default/icon.png) -149px -31px no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.block{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.yqx-wrapper.clearfix {
+    width: 100%;
+    padding-top: 70px;
+    overflow-x: auto;
+}
+.process{
+    height: 320px;
+    width: 100%;
+    min-width: 980px;
+    background: url("../../../static/img/page/guide/bgimg.jpg"), #ffd400;
+    position: relative;
+}
+
+.process-hide {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-style: normal;
+    border: 1px solid #ddd;
+    color: #232e49;
+    width: 58px;
+    height: 23px;
+    line-height: 23px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.process-show {
+    font-size: 14px;
+    position: absolute;
+    right: -90px;
+    top: 0;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    background: #ffd400;
+}
+
+.process-show i {
+    color: #fff;
+    font-weight: bold;
+}
+
+.process-show .fa {
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.process-hide i {
+    margin-right: 7px;
+    font-size: 14px;
+}
+.status{
+    position: relative;
+    width: 980px;
+    padding-top: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+.repair{
+    position: relative;
+    width: 100px;
+}
+.link{
+    width: 86px;
+    text-align: center;
+    margin: 0 auto;
+}
+.link1{
+    margin: 0 auto;
+}
+.title{
+    position: absolute;
+    width: 180px;
+    top:-20px;
+    left: -40px;
+}
+
+.shortarrow {
+    width: 4%;
+}
+.longarrow {
+    width: 45%;
+}
+.image1{
+    line-height: 86px;
+}
+.image{
+    line-height: 80px;
+}
+img{
+    vertical-align: middle;
+}
+.text{
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #000;
+}
+.red{
+    color: #d30032;
+}
+.status-name{
+    font-weight: bold;
+    margin-top: 9px;
+}
+.order,.settlement,.return{
+    position: relative;
+    vertical-align:bottom;
+    width: 100px;
+}
+.circle{
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin:auto;
+}
+/* 图标 start */
+.repairimg{
+    background:url("../../../static/img/page/guide/repair.png") no-repeat 50% 50% #fff6cc;
+}
+
+.repairimg:hover {
+    height: 86px;
+    width: 86px;
+    box-shadow: 2px 2px 8px #E6C11F, -2px -2px 8px #E6C11F;
+    background:url("../../../static/img/page/guide/repair.png") no-repeat 50% 50%,-webkit-linear-gradient(#fff,#f0f0f0);
+    background:url("../../../static/img/page/guide/repair.png") no-repeat 50% 50%,linear-gradient(#fff,#f0f0f0);
+}
+
+.orderimg{
+    background: url("../../../static/img/page/guide/order.png") no-repeat 50% 50% #fff6cc;
+}
+
+.orderimg:hover {
+    height: 86px;
+    width: 86px;
+    box-shadow: 2px 2px 8px #E6C11F, -2px -2px 8px #E6C11F;
+    background: url("../../../static/img/page/guide/order.png") no-repeat 50% 50% ,-webkit-linear-gradient(#fff,#f0f0f0);
+    background: url("../../../static/img/page/guide/order.png") no-repeat 50% 50% ,linear-gradient(#fff,#f0f0f0);
+}
+
+.settleimg{
+    background: url("../../../static/img/page/guide/settlement.png") no-repeat 50% 50% #fff6cc;
+}
+
+.settleimg:hover {
+    height: 86px;
+    width: 86px;
+    box-shadow: 2px 2px 8px #E6C11F, -2px -2px 8px #E6C11F;
+    background: url("../../../static/img/page/guide/settlement.png") no-repeat 50% 50% ,-webkit-linear-gradient(#fff,#f0f0f0);
+    background: url("../../../static/img/page/guide/settlement.png") no-repeat 50% 50% ,linear-gradient(#fff,#f0f0f0);
+}
+.returnimg{
+    background: url("../../../static/img/page/guide/return.png") no-repeat 50% 50% #fff6cc;
+}
+.returnimg:hover{
+    height: 86px;
+    width: 86px;
+    box-shadow: 2px 2px 8px #E6C11F, -2px -2px 8px #E6C11F;
+    background: url("../../../static/img/page/guide/return.png") no-repeat 50% 50% ,-webkit-linear-gradient(#fff,#f0f0f0);
+    background: url("../../../static/img/page/guide/return.png") no-repeat 50% 50% ,linear-gradient(#fff,#f0f0f0);
+}
+.purchaseimg{
+    background: url("../../../static/img/page/guide/purchase.png") no-repeat 50% 50% #fff6cc;
+}
+.purchaseimg:hover{
+    height: 86px;
+    width: 86px;
+    box-shadow: 2px 2px 8px #E6C11F, -2px -2px 8px #E6C11F;
+    background: url("../../../static/img/page/guide/purchase.png") no-repeat 50% 50% ,-webkit-linear-gradient(#fff,#f0f0f0);
+    background: url("../../../static/img/page/guide/purchase.png") no-repeat 50% 50% ,linear-gradient(#fff,#f0f0f0);
+}
+.inventoryimg{
+    background: url("../../../static/img/page/guide/inventory.png") no-repeat 50% 50% #fff6cc;
+}
+.inventoryimg:hover{
+    height: 86px;
+    width: 86px;
+    box-shadow: 2px 2px 8px #E6C11F, -2px -2px 8px #E6C11F;
+    background: url("../../../static/img/page/guide/inventory.png") no-repeat 50% 50% ,-webkit-linear-gradient(#fff,#f0f0f0);
+    background: url("../../../static/img/page/guide/inventory.png") no-repeat 50% 50% ,linear-gradient(#fff,#f0f0f0);
+}
+.wareimg{
+    background: url("../../../static/img/page/guide/warehouse.png") no-repeat 50% 50% #fff6cc;
+}
+.wareimg:hover{
+    height: 86px;
+    width: 86px;
+    box-shadow: 2px 2px 8px #E6C11F, -2px -2px 8px #E6C11F;
+    background: url("../../../static/img/page/guide/warehouse.png") no-repeat 50% 50% ,-webkit-linear-gradient(#fff,#f0f0f0);
+    background: url("../../../static/img/page/guide/warehouse.png") no-repeat 50% 50% ,linear-gradient(#fff,#f0f0f0);
+}
+
+/* 图标 end */
+.s-down{
+    margin-top: 17px;
+}
+.purchase,.inventory,.warehouse{
+    position: relative;
+    margin-top: 20px;
+    width: 100px;
+}
+
+/** table start */
+.table-content {
+    min-height: 496px;
+}
+.appointtable{
+    position: relative;
+    margin: 30px auto;
+    width: 980px;
+}
+.table-box{
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background: #fff;
+}
+
+.guide-table {
+    width: 100%;
+}
+
+.guide-table thead tr{
+    margin-left: 29px;
+    line-height: 36px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+    color: #999;
+}
+
+.guide-table tbody tr {
+    cursor: pointer;
+}
+.guide-table tbody tr:hover td{
+    color: #7fa700;
+}
+
+.guide-table .first-td,
+.guide-table th:first-child {
+    padding-left: 29px;
+}
+
+.guide-table th:last-child {
+    width: 100px;
+}
+
+.text-right,
+.guide-table .th-right {
+    text-align: right;
+}
+
+.guide-table .last-td,
+.guide-table th:last-child {
+    padding-right: 29px;
+}
+
+.guide-table tbody tr div {
+    border-bottom: 1px dashed #ddd;
+    height: 42px;
+    line-height: 42px;
+    overflow: hidden;
+}
+
+.guide-table tbody td {
+    height: 44px;
+    vertical-align: middle;
+}
+
+td.carlicense {
+    color: #0071ee;
+}
+/** table end */
+
+.tab-item{
+    font-weight: bold;
+}
+
+.tab-item:hover, .tab-item.current-item{
+    border-left: 1px solid #ddd;
+    line-height: 36px;
+    margin-bottom: 0;
+}
+.width-carlicense {
+    width: 132px;
+}
+
+.w160{
+    width: 160px;
+}
+
+/** 提醒样式 start **/
+.warn {
+    display: inline-block;
+    font-style: normal;
+    height: 200px;
+    line-height: 200px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    color: red;
+}
+/** 提醒样式 end **/
+
+.tablebottom{
+    width: 100%;
+    line-height: 42px;
+    vertical-align: middle;
+    padding-right: 29px;
+    text-align: right;
+}
+.tablebottom a{
+    color: #71c4e4;
+}
+
+.tablehead .tab-item:first-child {
+    border-left: 1px solid #ddd;
+}
+
+.tablehead .tab-item {
+    width: inherit;
+    padding: 0 10px;
+}
+/** 字体、状态颜色 start **/
+.orange{
+    color: #f19434;
+    text-align: right;
+}
+
+.confirm {
+    color: #47bd34;
+}
+
+.notconfirm {
+    color: #f05529;
+}
+
+/* 已派工 */
+.ypg {
+    color: #f29530;
+}
+
+/* 已完工 */
+.ywg {
+    color: #8fb70d;
+}
+
+/* 已挂账 */
+.ygz {
+    color: #c69161;
+}
+
+/* 待报价 */
+.dbj {
+    color: #EE3F02;
+}
+
+/* 已报价 */
+.ybj {
+    color: #0470f5;
+}
+
+.quick-visit {
+    color: #4dbd3b;
+    text-align: left;
+}
+/** 字体、状态颜色 end **/
+.width-time {
+    width: 180px;
+}
+
+.width-customer {
+    width: 114px;
+}
+.w148{
+    width: 148px;
+}
+.width-phone{
+    width: 120px;
+}
+
+.width-price {
+    padding-right: 20px;
+    width: 120px;
+}
+.procurement {
+    line-height: 25px;
+}
+.green {
+    color: #7fa700;
+}
+.w194{
+    width: 194px;
+}
+.num{
+    display:inline-block;
+    padding: 0 5px;
+    margin-left: 5px;
+    line-height: 14px;
+    background: #d30032;
+    font-family: arial, verdana, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 10px;
+}
+.tablebottom img{
+    margin:0 0 3px 7px;
+}
+.h86 {
+    height: 86px;
+    width: 86px;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.downarrow,.uparrow{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.block img {
+    width: 100%;
+}
+.mb28{
+    margin-bottom: 28px;
+}
+.yqx-foot{
+    margin-top: 0;
+}
+
+.guide-table .today {
+    margin-left: 5px;
+    color: #ef2c32;
+    border-bottom: 0;
+}
+
+.guide-table .carmodel {
+    display: inline-block;
+    width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-style:normal;
+}
+
+.width-332,
+.stock-warning .carmodel {
+    width: 332px;
+}
+.max-width-name {
+    max-width: 151px;
+}
+
+.stock-warning .has-next-link {
+    padding-top: 5px;
+}
+.stock-warning p {
+    line-height: 12px;
+}
+
+.guide-table .appoint-content {
+    display: inline-block;
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-style:normal;
+}
+
+.show-tips {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

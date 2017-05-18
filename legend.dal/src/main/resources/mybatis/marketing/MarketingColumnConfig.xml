@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.MarketingColumnConfigDao">
+
+    <resultMap id = "BaseResultMap" type = "MarketingColumnConfig" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "template_id" property = "templateId" />
+        <result column = "name" property = "name" />
+        <result column = "address" property = "address" />
+        <result column = "mobile" property = "mobile" />
+        <result column = "service_name" property = "serviceName" />
+        <result column = "service_note" property = "serviceNote" />
+        <result column = "service_price" property = "servicePrice" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            template_id as templateId,
+            name as name,
+            address as address,
+            mobile as mobile,
+            service_name as serviceName,
+            service_note as serviceNote,
+            service_price as servicePrice
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "templateId != null">
+                    and template_id = #{templateId}
+                </if>
+                <if test="templateIds != null">
+                    and template_id in
+                    (
+                    <foreach collection="templateIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_column_config
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+</mapper>

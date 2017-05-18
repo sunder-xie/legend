@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.warehouseout.WarehouseOutDetailDao">
+
+    <!-- 批量保存出库单明细-->
+    <insert id="batchSave" parameterType="java.util.List">
+        insert into legend_warehouse_out_detail (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            warehouse_out_id,
+            warehouse_out_sn,
+            goods_id,
+            supplier_id,
+            goods_count,
+            hand_by_in,
+            hand_by_on,
+            order_id,
+            inventory_price,
+            sale_price,
+            goods_real_count,
+            goods_sn,
+            goods_name,
+            goods_format,
+            car_info,
+            status,
+            rel_sn,
+            rel_id,
+            rel_detail_id,
+            order_goods_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.warehouseOutId != null">
+                    #{item.warehouseOutId},
+                </if>
+                <if test="item.warehouseOutId == null">
+                    0,
+                </if>
+                <if test="item.warehouseOutSn != null">
+                    #{item.warehouseOutSn},
+                </if>
+                <if test="item.warehouseOutSn == null">
+                    NULL,
+                </if>
+                <if test="item.goodsId != null">
+                    #{item.goodsId},
+                </if>
+                <if test="item.goodsId == null">
+                    0,
+                </if>
+                <if test="item.supplierId != null">
+                    #{item.supplierId},
+                </if>
+                <if test="item.supplierId == null">
+                    0,
+                </if>
+                <if test="item.goodsCount != null">
+                    #{item.goodsCount},
+                </if>
+                <if test="item.goodsCount == null">
+                    0,
+                </if>
+                <if test="item.handByIn != null">
+                    #{item.handByIn},
+                </if>
+                <if test="item.handByIn == null">
+                    0,
+                </if>
+                <if test="item.handByOn != null">
+                    #{item.handByOn},
+                </if>
+                <if test="item.handByOn == null">
+                    0,
+                </if>
+                <if test="item.orderId != null">
+                    #{item.orderId},
+                </if>
+                <if test="item.orderId == null">
+                    0,
+                </if>
+                <if test="item.inventoryPrice != null">
+                    #{item.inventoryPrice},
+                </if>
+                <if test="item.inventoryPrice == null">
+                    NULL,
+                </if>
+                <if test="item.salePrice != null">
+                    #{item.salePrice},
+                </if>
+                <if test="item.salePrice == null">
+                    NULL,
+                </if>
+                <if test="item.goodsRealCount != null">
+                    #{item.goodsRealCount},
+                </if>
+                <if test="item.goodsRealCount == null">
+                    Null,
+                </if>
+                <if test="item.goodsSn != null">
+                    #{item.goodsSn},
+                </if>
+                <if test="item.goodsSn == null">
+                    NULL,
+                </if>
+                <if test="item.goodsName != null">
+                    #{item.goodsName},
+                </if>
+                <if test="item.goodsName == null">
+                    NULL,
+                </if>
+                <if test="item.goodsFormat != null">
+                    #{item.goodsFormat},
+                </if>
+                <if test="item.goodsFormat == null">
+                    NULL,
+                </if>
+                <if test="item.carInfo != null">
+                    #{item.carInfo},
+                </if>
+                <if test="item.carInfo == null">
+                    NULL,
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    NULL,
+                </if>
+                <if test="item.relSn != null">
+                    #{item.relSn},
+                </if>
+                <if test="item.relSn == null">
+                    NULL,
+                </if>
+                <if test="item.relId != null">
+                    #{item.relId},
+                </if>
+                <if test="item.relId == null">
+                    NULL,
+                </if>
+                <if test="item.relDetailId != null">
+                    #{item.relDetailId},
+                </if>
+                <if test="item.relDetailId == null">
+                    NULL,
+                </if>
+                <if test="item.orderGoodsId != null">
+                    #{item.orderGoodsId}
+                </if>
+                <if test="item.orderGoodsId == null">
+                    NULL,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+</mapper>

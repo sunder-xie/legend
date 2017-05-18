@@ -1,0 +1,263 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.con-left{
+    width: 200px;
+    float: left;
+}
+.con-right{
+    width: 770px;
+    background-color: white;
+    float: right;
+}
+.con-right .bills-date{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+}
+.con-right .bills-money{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    font-family: initial;
+}
+.bills-money .should-pay{
+    font-size: 14px;
+}
+.bills-money .money{
+    color: #ffac7d;
+    margin-left: 10px;
+}
+.bills-money .history-bills{
+    color: #4a74a9;
+    text-decoration: underline;
+    margin-left: 100px;
+}
+.bills-money .credit-line{
+    font-size: 14px;
+}
+.bills-money .credit-money{
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    margin-left: 10px;
+    display: inline-block;
+}
+.bills-money .price-unit{
+    font-size: 12px;
+}
+.bills-money .credit-edit{
+    font-size: 12px;
+    color: #3265a1;
+    margin-left: 18px;
+}
+.con-right .bills-info{
+    border-bottom: 1px solid #eaeaea;
+}
+.bills-info .bills-title{
+    margin: 15px 0px 0 20px;
+}
+.bills-info .bills-title .over{
+    float: right;
+    margin-right: 20px;
+    color: #a1bc55;
+}
+.bills-info .bills-action{
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.bills-action .pay-notice .already-pay{
+    float:right;
+    margin: 17px 0px 0px 10px;
+}
+.pay-notice .already-pay .already-pay-date{
+    color: #a1bc55;
+}
+
+.bills-action > li {
+    float: left;
+    width: 50%;
+}
+
+.bills-info .credit-info .bill-info-inner {
+    border-right: 1px solid #eaeaea;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+.bills-info .bills-action .financeHelper{
+    vertical-align: middle;
+}
+.bills-info .credit-info .canUsed-credit{
+    margin-top: 10px;
+}
+.credit-info .canUsed-credit .canUsed-edit-balance{
+    color: #98b640;
+}
+.bills-info .credit-info .should-pay-money{
+    margin-top: 15px;
+}
+.credit-info .should-pay-money .should-pay-money-total{
+    color: #ff9958;
+}
+.bills-info .credit-info .expire-interest{
+    margin-top: 15px;
+}
+.credit-info .expire-interest .expire-interest-money{
+    color: #df5e58;
+}
+.bills-info .credit-info .calculate-time{
+    margin-top: 7px;
+    color: #d3d3d3;
+}
+.bills-info .credit-info .canUsed-edit-balance,.should-pay-money-total,.expire-interest-money{
+    float: right;
+    margin-right: 20px;
+}
+
+.bills-info .should-pay-info {
+    position: relative;
+}
+.bills-info .should-pay-info .should-pay-info-money{
+    margin-bottom: 11px;
+    font-size: 24px;
+    color: #ff8e42;
+}
+
+.bills-info .should-pay-info .bill-info-inner {
+    margin: 20px 0 0 20px;
+    padding-top: 15px;
+}
+.bills-info .should-pay-info .should-pay-info-title{
+    margin: 10px 0 10px;
+}
+
+.should-pay-info-deadline {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.should-pay-info-deadline .deadline-date .deadline-date-detail{
+    color: #df5e58;
+}
+.bills-info .pay-notice{
+    margin-left: 20px;
+    float: left;
+}
+.bills-info .pay-notice p{
+    margin-top: 3px;
+}
+.bills-info .pay-notice .card-num{
+    margin-left: 35px;
+    color: #3265a1;
+}
+.bills-info .pay-notice .confirm-pay{
+    width: 78px;
+    height: 26px;
+    background-color: #90b127;
+    border-radius: 7px;
+    color: white;
+    font-size: 12px;
+    margin-top:10px ;
+}
+.con-right .transaction{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+.con-right .transaction-title{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #f7f7f7;
+}
+.con-right .order-date,.receiving-date{
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+}
+.con-right .transaction-title .order-money1{
+    width: 26%;
+    display: inline-block;
+    text-align: right;
+}
+.con-right .tq-order{
+    width: 25%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.con-right .transaction-detail{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+.con-right .transaction-detail .order-money2{
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+}
+
+/*
+ * modify by sky 20160330
+ * 银行付款通道
+*/
+.bill_repaymentCashier {
+    padding: 20px;
+    background: #f7f7f7;
+}
+
+.bill_repaymentCashier .msg {
+    line-height: 2.5;
+}
+
+.bank-pay-item {
+    float: left;
+    margin: 0 10px 10px 0;
+    font-size: 12px;
+    color: #999;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.bank-pay-item.selected {
+    border-color: #ff7800;
+}
+
+.bank-pay-item > label {
+    display: block;
+    min-width: 215px;
+    line-height: 19px;
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.bank-pay-item img {
+    width: 19px;
+    height: 19px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.bank-pay-item strong {
+    color: #444;
+}
+
+.confirm_payment {
+    width: 76px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #fff;
+    background: #90b127;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* modify by sky 20160330 end */

@@ -1,0 +1,114 @@
+.content {
+    border: 1px solid #c9c9c9;
+    background-color: #fff;
+    padding: 15px 10px;
+    margin-top: 10px;
+}
+
+.line {
+    padding: 0 10px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.credit-line {
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+.credit-line button {
+    color: blue;
+    cursor: pointer;
+}
+
+.btns-group {
+    border-top: 1px solid #c9c9c9;
+    padding-top: 10px;
+}
+
+.col-4 .form-item {
+    width: 60%;
+}
+
+.col-8 .form-item {
+    width: 78%;
+}
+
+.must {
+    font-style: normal;
+    position: relative;
+}
+
+.must:after {
+    content: '*';
+    color: red;
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    left: -5px;
+}
+
+.yqx-input.input-warning {
+    border-color: red;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.show-grid .form-label-width {
+    width: 100px;
+    text-align: right;
+}
+
+.box {
+    padding: 15px 0px;
+    border-top: 1px solid #c9c9c9;
+}
+
+.detail-box {
+    margin-bottom: 20px;
+}
+
+.show-grid .form-remark-width {
+    width: 685px;
+}
+
+.card-box {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border-top: 1px solid #c9c9c9;
+}
+
+.card-tips-wrap {
+    position: relative;
+}
+
+.card-tips {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+}
+
+.card-tips p {
+    line-height: 30px;
+}
+
+.card-tips .title {
+    color: #999;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

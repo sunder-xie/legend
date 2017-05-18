@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <dubbo:reference interface="com.tqmall.finance.service.pay.aliPay.MessagePayService" id="messagePayService"
+                     version="${dubbo.finance.version}" owner="tanghao"/>
+
+    <!--寄售活动账务中心保存更新额度接口-->
+    <dubbo:reference interface="com.tqmall.finance.service.consignment.FcOnConsignmentService"
+                     id="fcOnConsignmentService"
+                     version="${dubbo.finance.version}" owner="dehuang.zhang"/>
+
+    <dubbo:reference interface="com.tqmall.finance.service.insurance.FcInsuranceService" id="fcInsuranceService"
+                     version="${dubbo.finance.version}" owner="linjian"/>
+
+    <dubbo:reference interface="com.tqmall.finance.service.credit.FcAccountAmountService" id="fcAccountAmountService"
+                     version="${dubbo.finance.version}" owner="linjian"/>
+    <dubbo:reference interface="com.tqmall.finance.service.pay.WebPayService" id="webPayService"
+                     version="${dubbo.finance.version}" owner="dehuang.zhang"/>
+
+
+
+</beans>

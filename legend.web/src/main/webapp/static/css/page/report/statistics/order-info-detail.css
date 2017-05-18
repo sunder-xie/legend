@@ -1,0 +1,82 @@
+.search-form {
+    padding: 0 10px 10px 10px;
+}
+.search-form .yqx-input{
+    width: 150px;
+}
+/*维修工长度限制 */
+.cb11 {
+    max-width: 147px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lines {
+    margin: 0 10px;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.search-form .input-group {
+    display: inline-block;
+    float: left;
+}
+
+.search-form .input-group.fr {
+    float: right;
+}
+.search-form .col-4.input-group {
+    margin: 0;
+}
+
+.input-group + .input-group {
+    margin-left: 18px;
+}
+
+.heit{
+    height:30px;
+}
+
+.scroll{
+    overflow-x:auto;
+}
+
+.alert{
+    width:200px;
+    margin: 0 auto;
+}
+
+#searchBtn{
+    min-width:77px;
+}
+.wid22{
+    width: 78px;
+}
+.hiddenLong{
+    max-width: 58px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.show-grid.input-width-xs .yqx-input {
+    width: 145.8px;
+}
+
+.show-grid.input-width-middle .yqx-input {
+    width: 171.3px;
+}
+.table-box{
+    border: 1px solid #ddd;
+    border-bottom: 0;
+}
+.total-box{
+    border: 1px solid #ddd;
+    border-top: 0;
+    line-height: 30px;
+    background: #fff;
+    padding: 0 10px;
+}
+.total-box span{
+    margin-right: 15px;
+}

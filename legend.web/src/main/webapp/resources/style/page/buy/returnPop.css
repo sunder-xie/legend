@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/*默认样式  start*/
+*{ margin: 0; padding: 0;}
+a{ text-decoration: none;}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body{
+    background: #eeeeee;
+}
+/*默认样式  end*/
+
+.pop-bg{
+    width: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+}
+.return-pop-box{
+    width: 795px;
+    overflow: hidden;
+    border: 1px solid #d2d6de;
+    background: #fff;
+}
+
+.pop-title{
+    height: 40px;
+    border-bottom: 1px solid #d2d6de;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #444;
+    padding-left: 20px;
+}
+.pop-title span{
+    line-height: 40px;
+}
+.pop-title a{
+    display: block;
+    width: 17px;
+    height: 17px;
+    float: right;
+    margin:11px 25px;
+}
+
+.return-list{
+    width: 753px;
+    max-height: 400px;
+    overflow-x: hidden;
+    margin: 20px 20px 0 20px;
+    border: 1px solid #d2d6de;
+    border-bottom: none;
+}
+.return-list table{
+    table-layout: fixed;
+    overflow-y: auto;
+    width: 100%;
+}
+.return-list th{
+    height: 28px;
+    line-height: 28px;
+    background: #f7f7f7;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #999;
+}
+.return-list td{
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #999;
+    vertical-align: middle;
+}
+.return-list-pic{
+    width: 88px;
+    height: 88px;
+    border-right: 1px solid #e8e8e8;
+}
+
+.return-list-pic img{
+    width: 88px;
+    height: 88px;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.pop-goods-name{
+    width: 330px;
+    padding:0 20px;
+    word-wrap: break-word;
+    vertical-align: middle;
+}
+.pop-total{
+    height: 46px;
+    line-height: 46px;
+    text-align: right;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #444;
+    padding-right: 20px;
+}
+
+.pop-total span{
+    font-size: 24px;
+    color: #ff7800;
+}
+
+.btn-box{
+    height: 60px;
+    border-top: 1px solid #f4f4f4;
+}
+.btn-box a{
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: #9fc526;
+    margin: 15px auto;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+
+.order-pop{
+    color: #115599;
+}
+.btn-box .btn{
+    position: inherit;
+}

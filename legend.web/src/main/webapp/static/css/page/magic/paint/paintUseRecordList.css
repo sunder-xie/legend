@@ -1,0 +1,45 @@
+/*
+ * create by zmx 2016/11/15
+ * 油漆使用记录
+*/
+.new-inventory{
+    margin-top: 10px;
+}
+.new-inventory i{
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 4px;
+}
+.form-box{
+    padding: 10px;
+    border:1px solid #cacaca;
+    background: #fff;
+}
+
+.yqx-table {
+    width: 100%;
+    table-layout: auto;
+    border-left: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+}
+.list-tab-box{
+    margin-bottom: 0;
+}
+.max-width{
+    max-width: 150px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.yqx-table td a{
+    text-decoration: underline;
+}
+.edit{
+    color: #607b0a;
+}
+.delete{
+    color: #fd461e;
+}
+.yqx-table td a.view{
+    color: #333;
+}

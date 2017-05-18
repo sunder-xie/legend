@@ -1,0 +1,103 @@
+.content {
+    width:980px;
+    margin-top: 10px;
+    font-size:16px;
+    color:#333;
+}
+.d_top {
+    padding-top: 30px;
+    overflow:hidden;
+}
+.d_top li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #FFF;
+    background: #F77C7E;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+.company_payment, .company_payment span {
+    text-align: center;
+    vertical-align:top;
+    margin-bottom:10px;
+    font-size:20px;
+    font-weight: 700;
+}
+.payItem {
+    padding:10px 0;
+    overflow:hidden;
+}
+.payItem li {
+    width:243px;
+    height:32px;
+    line-height:30px;
+    text-align: center;
+    border:1px solid #000;
+    background-color: #fff;
+    float:left;
+}
+.box {
+    background-color: #FAFAFA;
+}
+.th {
+    padding:10px 20px;
+    font-weight: 700;
+    background-color:#F4F5F5;
+    overflow:hidden;
+}
+.td {
+    padding:15px 0;
+    margin:0 20px;
+    border-bottom:1px solid #F2F2F2;
+    background-color: #FAFAFA;
+    overflow:hidden;
+}
+.th li, .td li {
+    height:16px;
+    float:left;
+}
+.warehouseNum {
+    width:210px;
+}
+.td .warehouseNum {
+    color:#06c;
+    text-decoration: underline;
+    cursor:pointer;
+}
+.warehouseDate {
+    width:110px;
+}
+.purchaseAmount {
+    width:180px;
+}
+.unpayAmount {
+    width:180px;
+}
+.payAmount {
+    width:180px;
+}
+.payBtn {
+    width:50px;
+}
+.td .payBtn {
+    text-align: center;
+    padding-left: 30px;
+    color:#06c;
+    text-decoration: underline;
+    cursor:pointer;
+}
+.td .font-red {
+    color:#F00;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+

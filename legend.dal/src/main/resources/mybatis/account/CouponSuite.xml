@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.CouponSuiteDao">
+
+    <resultMap id="BaseResultMap" type="CouponSuite" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="suite_name" property="suiteName"/>
+        <result column="amount" property="amount"/>
+        <result column="total_amount" property="totalAmount"/>
+        <result column="sale_price" property="salePrice"/>
+        <result column="suite_status" property="suiteStatus"/>
+        <result column="used_count" property="usedCount"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            suite_name as suiteName,
+            amount as amount,
+            total_amount as totalAmount,
+            sale_price as salePrice,
+            suite_status as suiteStatus,
+            used_count as usedCount,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="suiteName != null">
+                    and suite_name = #{suiteName}
+                </if>
+                <if test="amount != null">
+                    and amount = #{amount}
+                </if>
+                <if test="totalAmount != null">
+                    and total_amount = #{totalAmount}
+                </if>
+                <if test="salePrice != null">
+                    and sale_price = #{salePrice}
+                </if>
+                <if test="suiteStatus != null">
+                    and suite_status = #{suiteStatus}
+                </if>
+                <if test="usedCount != null">
+                    and used_count = #{usedCount}
+                </if>
+                <if test="ids !=null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="id" separator=",">
+                        #{id}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="suiteName != null">
+                    suite_name = #{suiteName},
+                </if>
+                <if test="amount != null">
+                    amount = #{amount},
+                </if>
+                <if test="totalAmount != null">
+                    total_amount = #{totalAmount},
+                </if>
+                <if test="salePrice != null">
+                    sale_price = #{salePrice},
+                </if>
+                <if test="suiteStatus != null">
+                    suite_status = #{suiteStatus},
+                </if>
+                <if test="usedCount != null">
+                    used_count = #{usedCount},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_coupon_suite
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon_suite
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon_suite
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon_suite
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+    <select id="selectByIdss" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon_suite
+        where id in
+        (
+        <foreach collection="ids" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+        and shop_id = #{shopId}
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_coupon_suite
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_coupon_suite
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_coupon_suite
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_coupon_suite (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="suiteName != null">
+                suite_name,
+            </if>
+            <if test="amount != null">
+                amount,
+            </if>
+            <if test="totalAmount != null">
+                total_amount,
+            </if>
+            <if test="salePrice != null">
+                sale_price,
+            </if>
+            <if test="suiteStatus != null">
+                suite_status,
+            </if>
+            <if test="usedCount != null">
+                used_count,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="suiteName != null">
+                #{suiteName},
+            </if>
+            <if test="amount != null">
+                #{amount},
+            </if>
+            <if test="totalAmount != null">
+                #{totalAmount},
+            </if>
+            <if test="salePrice != null">
+                #{salePrice},
+            </if>
+            <if test="suiteStatus != null">
+                #{suiteStatus},
+            </if>
+            <if test="usedCount != null">
+                #{usedCount},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_coupon_suite
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_coupon_suite (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            suite_name,
+            amount,
+            total_amount,
+            sale_price,
+            suite_status,
+            used_count,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.suiteName != null">
+                    #{item.suiteName},
+                </if>
+                <if test="item.suiteName == null">
+                    '',
+                </if>
+                <if test="item.amount != null">
+                    #{item.amount},
+                </if>
+                <if test="item.amount == null">
+                    0.00,
+                </if>
+                <if test="item.totalAmount != null">
+                    #{item.totalAmount},
+                </if>
+                <if test="item.totalAmount == null">
+                    0.00,
+                </if>
+                <if test="item.salePrice != null">
+                    #{item.salePrice},
+                </if>
+                <if test="item.salePrice == null">
+                    0.00,
+                </if>
+                <if test="item.suiteStatus != null">
+                    #{item.suiteStatus},
+                </if>
+                <if test="item.suiteStatus == null">
+                    0 ,
+                </if>
+                <if test="item.usedCount != null">
+                    #{item.usedCount},
+                </if>
+                <if test="item.usedCount == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper> 

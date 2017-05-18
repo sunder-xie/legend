@@ -1,0 +1,35 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 9999;
+}
+#menu { margin: 0; padding: 0; position: fixed; left: 20px; top: 168px; list-style-type: none; z-index: 70;}
+#menu li { height: 35px; line-height: 35px;}
+#menu a {  color: #fff; font-size: 16px;}
+#menu .active a { font-size: 18px; font-weight: bold;}
+#menu .active:before{content:""; display: inline-block; width: 3px; height: 16px; background: #ffff00; margin-right: 10px; vertical-align: middle}
+#dowebok .section{
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+.return{
+    display: block;
+    width: 85px;
+    height: 35px;
+    position: fixed;
+    top:500px;
+    left: 20px;
+    z-index: 500;
+    font-size: 18px;
+    line-height: 35px;
+    color: #fff;
+}
+.return img{
+    vertical-align: middle;
+}
+.return:hover{
+    color: #fff;
+}

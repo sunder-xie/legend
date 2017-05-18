@@ -1,0 +1,112 @@
+/*.search {*/
+/*margin-bottom: 10px;*/
+/*}*/
+/*.selcont {*/
+/*background: none repeat scroll 0 0 #fff;*/
+/*border: 1px solid #dadada;*/
+/*border-radius: 5px;*/
+/*}*/
+.w_ge {
+    height: 35px;
+    margin: 0 10px;
+    padding-left: 10px;
+    width: 150px;
+}
+/*.searchBtn {*/
+/*width:60px;*/
+/*height:35px;*/
+/*background-color: #090;*/
+/*color:#fff;*/
+/*font-size: 16px;*/
+/*border-radius:3px;*/
+/*margin-right:10px;*/
+/*cursor:pointer;*/
+/*}*/
+/*.export {*/
+/*width: 80px;*/
+/*height: 33px;*/
+/*line-height: 33px;*/
+/*text-align: center;*/
+/*font-size: 14px;*/
+/*color:#6e6e6e;*/
+/*background-color:#fff;*/
+/*border: 1px solid #c1c1c1;*/
+/*display: block;*/
+/*float: right;*/
+/*}*/
+/*.content {*/
+/*width:978px;*/
+/*border-left: 1px solid #666483;*/
+/*border-right: 1px solid #666483;*/
+/*overflow-x: auto;*/
+/*color:#000;*/
+/*background-color: #fff;*/
+/*}*/
+/*.tablePage {*/
+/*width:1190px;*/
+/*}*/
+/*.head {*/
+/*width:978px;*/
+/*border:1px solid #666483;*/
+/*border-bottom:0;*/
+/*background-color:#fff;*/
+/*}*/
+/*h1, h3 {*/
+/*text-align: center;*/
+/*padding: 5px 0;*/
+/*}*/
+/*.headInfo span {*/
+/*display:inline-block;*/
+/*width:220px;*/
+/*margin-right:6px;*/
+/*white-space: nowrap;*/
+/*}*/
+/*.headInfo .customName {*/
+/*width:315px;*/
+/*}*/
+/*.headInfo .salesDate {*/
+/*width:140px;*/
+/*float:right;*/
+/*}*/
+/*table {*/
+/*width: 100%;*/
+/*border-collapse:collapse;*/
+/*border-top:2px solid #000;*/
+/*border-bottom: 2px solid #000;*/
+/*}*/
+/*td, th {*/
+/*height:25px;*/
+/*font-size: 14px;*/
+/*border-top:1px solid #000;*/
+/*border-bottom: 1px solid #000;*/
+/*}*/
+/*.signature {*/
+/*width:978px;*/
+/*border:1px solid #666483;*/
+/*border-top:0;*/
+/*padding:0px 0;*/
+/*margin-bottom: 20px;*/
+/*background-color:#fff;*/
+/*overflow: hidden;*/
+/*}*/
+/*.signature span {*/
+/*display: inline-block;*/
+/*margin-right: 6px;*/
+/*}*/
+/*.sign_date {*/
+/*float:right;*/
+/*width:140px;*/
+/*}*/
+
+/*.right {*/
+/*text-align: right;*/
+/*}*/
+/*.center {*/
+/*text-align: center;*/
+/*}*/
+/*.bold {*/
+/*font-weight: bold;*/
+/*}*/
+/*.claim{*/
+/*color: #ff0000;*/
+/*}*/

@@ -1,0 +1,293 @@
+/**
+ * ch 2016-04-10
+ * 工单列表样式
+ */
+
+/**
+ * 顶部导航按钮组 start
+ */
+
+.order-list-title h3 {
+    font-weight: 900;
+    color: #222;
+    line-height: 36px;
+}
+
+.order-list-title .tools-btn a {
+    color: #fff;
+    margin-left: 10px;
+}
+
+
+.order-list-title .tools-btn a span {
+    margin-right: 6px;
+    font-weight: 900;
+}
+
+.order-list-title .tools-btn a.btn-1 {
+    background: #3fb2de;
+    border: 1px solid #18a1d5;
+}
+
+.order-list-title .tools-btn a.btn-1:hover {
+    background: #18a1d5;
+}
+
+.order-list-title .tools-btn a.btn-2 {
+    background: #f29530;
+    border: 1px solid #de811c;
+}
+
+.order-list-title .tools-btn a.btn-2:hover {
+    background: #de811c;
+}
+
+.order-list-title .tools-btn a.btn-3 {
+    background: #8fb70d;
+    border: 1px solid #7ba004;
+}
+
+.order-list-title .tools-btn a.btn-3:hover {
+    background: #7ba004;
+}
+
+.order-list-title .tools-btn a.btn-4 {
+    background: #c69161;
+    border: 1px solid #bc793c;
+}
+
+.order-list-title .tools-btn a.btn-4:hover {
+    background: #bc793c;
+}
+.tools-bar.select-btns-right {
+    float: right;
+    line-height: 40px;
+    height: 40px;
+}
+
+.tools-bar.select-btns {
+    float: left;
+    margin: 10px;
+    font-size: 12px;
+    z-index: 10;
+    position: relative;
+}
+
+.tools-bar.select-btns-right .btn-setting{
+    display: none;
+}
+/**
+ * 顶部导航按钮组 end
+ */
+
+/**
+ * 查询条件 start
+ */
+.condition-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+    margin-top: 10px;
+    border-radius: 4px 4px 0 0;
+}
+
+.condition-box .row-line {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.condition-box .tools-bar {
+    line-height: 35px;
+}
+
+.condition-box .tools-bar span {
+    margin: 0 6px;
+}
+
+.condition-box .double-date {
+    width: 200px;
+}
+
+/**
+ * 查询条件 end
+ */
+
+/**
+ * 数据列表表格 start
+ */
+.table-scroll-box {
+    overflow-x: scroll;
+}
+
+.order-list-table .yqx-table {
+    width: auto;
+    min-width: 100%;
+}
+
+.order-list-table .tools-bar {
+    height: 35px;
+    position: relative;
+    display: none;
+}
+
+.order-list-table .tools-bar > a {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.order-list-table .tools-bar > a > i {
+    margin-left: 6px;
+}
+
+.order-list-table .setting-box {
+    padding: 0 70px 0 6px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    line-height: 35px;
+}
+
+.order-list-table .setting-box label {
+    float: left;
+    margin-right: 20px;
+}
+
+.order-list-table .setting-box label > input {
+    margin-right: 8px;
+}
+
+/**
+ * 数据列表表格 end
+ */
+
+/**
+ * 数据列表卡片 start
+ */
+
+.order-list-card .tools-bar {
+    line-height: 35px;
+    padding-left: 8px;
+    height: 10px;
+}
+
+.order-list-card .tools-bar input {
+    margin-right: 6px;
+}
+
+.order-list-card i {
+    font-style: normal;
+}
+
+/**
+ * 数据列表卡片 end
+ */
+.condition-box .senior-search{color: #666; vertical-align: bottom;}
+.search-input {
+    width: 649px;
+}
+.tools-bar a.hover {
+    color: #8db117;
+}
+.senior-width{
+    width: 157px;
+}
+
+.senior-width input,.senior-time-width input{
+    width: 100%;
+}
+.condition-box {
+    position: relative;
+}
+.senior-box {
+    margin-bottom: 10px;
+}
+.senior-box:last-child {
+    margin-bottom: 0;
+}
+.senior-box, .search-btns {
+    display: inline-block;
+}
+.senior-width-2 {
+    width: 217px;
+}
+
+.senior-width-3 {
+    width: 255px;
+}
+
+.senior-width-4 {
+    width: 150px;
+}
+.senior-width + .senior-width {
+    margin:0 5px;
+}
+
+.search-absolute-btns {
+    right: 10px;
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+.yqx-table>tbody>tr>td, .yqx-table>thead>tr>th{
+    text-align: left;
+}
+
+.yqx-table .th-right, .yqx-table .td-right {
+    text-align: right;
+}
+
+.yqx-table .padding-10 {
+    padding-right: 10px;
+}
+
+.yqx-table>tbody>tr>td.td-center, .yqx-table>thead>tr>th.td-center{
+    text-align: center;
+}
+.max-text{
+    max-width: 65px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 无效 */
+.status-wx {
+    color: #666666;
+}
+/* 待报价 */
+.status-dbj {
+    color: #EE3F02;
+}
+/* 已报价 */
+.status-ybj {
+    color: #0470f5;
+}
+/* 已派工 */
+.status-ypg {
+    color: #f29530;
+}
+/* 已完工 */
+.status-ywg {
+    color: #CCCC00;
+}
+/* 已挂账 */
+.status-ygz {
+    color: #c69161;
+}
+/* 已结清 */
+.status-yjq {
+    color: #8fb70d;
+}
+.search-result{
+    line-height: 40px;
+    border-bottom: 1px solid #cacaca;
+    padding-left: 10px;
+    color: #333;
+    background: #fff;
+}
+.search-result span{
+    color: #666;
+    margin-left: 10px;
+}

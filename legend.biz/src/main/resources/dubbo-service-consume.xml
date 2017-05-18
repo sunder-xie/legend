@@ -1,0 +1,31 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:consumer check="${dubbo.consumer.check}"/>
+
+    <!-- 依赖外部dubbo服务 -->
+    <import resource="classpath*:dubbo-consume-athena.xml"/>
+    <import resource="classpath*:dubbo-consume-billcenter.xml"/>
+    <import resource="classpath*:dubbo-consume-cube.xml"/>
+    <import resource="classpath*:dubbo-consume-dandelion.xml"/>
+    <import resource="classpath*:dubbo-consume-ddlwechat.xml"/>
+    <import resource="classpath*:dubbo-consume-finance.xml"/>
+    <import resource="classpath*:dubbo-consume-holy.xml"/>
+    <import resource="classpath*:dubbo-consume-insurance.xml"/>
+    <import resource="classpath*:dubbo-consume-itemcenter.xml"/>
+    <import resource="classpath*:dubbo-consume-mace.xml"/>
+    <import resource="classpath*:dubbo-consume-magic.xml"/>
+    <import resource="classpath*:dubbo-consume-search.xml"/>
+    <import resource="classpath*:dubbo-consume-tqmallstall.xml"/>
+    <import resource="classpath*:dubbo-consume-ucenter.xml"/>
+    <import resource="classpath*:dubbo-consume-venus.xml"/>
+    <import resource="classpath*:dubbo-consume-valley.xml"/>
+    <import resource="classpath*:dubbo-consume-mana.xml"/>
+
+
+
+
+</beans>

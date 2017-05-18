@@ -1,0 +1,171 @@
+.clearfix{
+    overflow: hidden;
+}
+.clearfix :after{
+    clear: both;
+}
+.wrapper{
+    width: 100%;
+    background-color: #eeeeee;
+}
+.content{
+    width: 980px;
+    margin:0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+.left{
+    float: left;
+    width: 138px;
+    height: 135px;
+    border: 1px solid #dddddd;
+}
+li{
+    list-style: none;
+}
+.right{
+    float: right;
+    width: 825px;
+}
+.right p{
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.allFail,.allSec{
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+    height: 375px;
+}
+.allSec{
+    position: relative;
+}
+.failLeft{
+    width: 320px;
+    height: 158px;
+    margin: 70px auto 0 auto;
+}
+.Fail_all{
+    width: 140px;
+    margin:auto;
+}
+.pic{
+    display: inline-block;
+    width: 36px;
+    height: 35px;
+    background: url("../../../../img/page/ax_insurance/sP.png") no-repeat 1px -88px;
+    vertical-align: middle;
+}
+.f_word{
+    font-size: 24px;
+    color: #ff7800;
+    vertical-align: middle;
+}
+.Fail_all .Fail_res{
+    font-size: 14px;
+    color: #666666;
+    padding-left: 42px;
+    width: 100%;
+}
+.back_re{
+    width: 118px;
+    height: 33px;
+    background-color: #f9f9f9;
+    border: #d2d2d2 1px solid;
+    border-radius: 2px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    margin: 41px auto 0 auto;
+}
+.circular{
+    width: 301px;
+    height: 301px;
+    background-color: #fafafa;
+    border-radius: 156px;
+    margin-top: 40px;
+}
+.men{
+    width: 310px;
+    height: 265px;
+    background: url("../../../../img/page/ax_insurance/sP.png") no-repeat -35px -234px;
+    position: absolute;
+    left: 82px;
+    top: 30px;
+}
+.secLeft{
+    width: 405px;
+    height: 280px;
+    margin: 29px 0 0 39px;
+    float: left;
+}
+.sec_p{
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background: url("../../../../img/page/ax_insurance/sP.png") no-repeat -2px -49px;
+    vertical-align: middle;
+}
+.cong{
+    font-size: 24px;
+    color: #8eb210;
+    vertical-align: middle;
+}
+.S_word{
+    font-size: 14px;
+    color: #666666;
+    padding-left: 38px;
+    padding-top: 3px;
+    padding-bottom: 11px;
+}
+.secRight{
+    float: left;
+    width: 301px;
+    height: 301px;
+    background-color: #edf3d9;
+    border-radius: 156px;
+    margin-top: 40px;
+}
+.QR_code{
+    width: 190px;
+    height: 190px;
+    margin: 55px auto 0 auto;
+}
+.QR_code img{
+    width: 190px;
+    height: 190px;
+}
+.Q_w{
+    width: 100%;
+    font-size: 14px;
+    color: #8eb210;
+    text-align: center;
+}
+.QR_p{
+    width: 151px;
+    height: 151px;
+    background: url("../../../../img/page/ax_insurance/sP.png") no-repeat -95px -46px;
+    position: absolute;
+    top: 146px;
+    right: 341px;
+}
+.amount{
+    margin-top: 12px;
+    width: 298px;
+}
+.amount p{
+    font-size: 12px;
+    line-height: 18px;
+}
+.amount p.hei{
+    height: 16px;
+}
+.amount span,.S_word span{
+    color: #ff7800;
+}

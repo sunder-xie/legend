@@ -1,0 +1,14 @@
+/**
+ * Created by sky on 2017/1/10.
+ */
+
+@mixin ellipsis-multiple-line ($line) {
+  @if ($line != null) {
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}

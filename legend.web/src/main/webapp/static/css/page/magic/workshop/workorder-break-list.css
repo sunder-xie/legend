@@ -1,0 +1,26 @@
+/**
+ * zmx 2016-07-04
+ * 中断管理列表页面
+ */
+.content{ background: #fff; border: 1px solid #ddd; }
+.search-box{ padding:10px;}
+.recovery-btn{ color: #fc1414; text-decoration: underline;}
+.recovery-btn:hover{ color: #fc1414; text-decoration: underline;}
+.dialog-recovery{ margin: 28px 0;}
+.search-box .form-label{ width: 105px;}
+.search-box .form-item{ width: 152px;}
+.yqx-table {
+    width: 100%;
+    table-layout: inherit;
+}
+div#breakTable {
+    overflow: hidden;
+    overflow-x: auto;
+}
+.order-number{
+    color: #9fc524;
+    text-decoration: underline;
+}
+.order-number:hover{
+    text-decoration: underline;
+}

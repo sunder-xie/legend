@@ -1,0 +1,222 @@
+table,#ftr,#hdr {
+    width:980px;
+    margin:0 auto 6px auto;
+}
+table {
+    clear:both;
+}
+th,td {
+    height:30px;
+    vertical-align: middle;
+    border:1px solid black;
+    overflow:hidden;
+    word-break: break-all;
+}
+th {
+    text-align:center;
+}
+.td {
+    min-height:20px;
+    line-height: 20px;
+    padding:5px 0 305px 0;
+    margin-bottom:-300px;
+    border-left: 1px solid #000;
+    float:left;
+}
+.center {
+    text-align: center;
+}
+.sequence {
+    width:35px;
+    text-align: center;
+}
+.service-item .col_2 {
+    width:69px;
+}
+.service-item .col_3 {
+    width:375px;
+}
+.service-item .col_4 {
+    width:80px;
+}
+.service-item .col_5 {
+    width:65px;
+}
+.service-item .col_6 {
+    width:50px;
+}
+.service-item .col_7 {
+    width:80px;
+}
+.service-item .col_8 {
+    width:80px;
+}
+.service_item .col_9 {
+    width:65px;
+}
+.service_item .col_10 {
+    width:65px;
+}
+.accessories-material .col_2 {
+    width:250px;
+}
+.accessories-material .col_3 {
+    width:350px;
+}
+.accessories-material .col_4 {
+    width:60px;
+}
+.accessories-material .col_5 {
+    width:40px;
+}
+.accessories-material .col_6 {
+    width:60px;
+}
+.accessories-material .col_7 {
+    width:106px;
+}
+.accessories-material .col_8 {
+    width:80px;
+}
+.extra-costs .col_2 {
+    width:329px;
+}
+.extra-costs .col_3 {
+    width:130px;
+}
+.extra-costs .col_4 {
+    width:80px;
+}
+.extra-costs .col_5 {
+    width:400px;
+}
+.sign-row .col_1 {
+    width:96px;
+}
+.sign-row .td_sign {
+    width:146px;
+}
+.t_tr2 td {
+    width:50%;
+    height:35px;
+}
+.t_tr3 td {
+    height:100px;
+    line-height: 20px;
+    vertical-align: top;
+}
+.t_tr3 td p {
+    margin-top: -50px;
+}
+.t_tr4 td {
+    height:100px;
+    vertical-align: top;
+}
+.tit {
+    font-size:20px;
+    text-align:center;
+}
+.company {
+    padding:5px 102px;
+    text-align: center;
+    font-size:32px;
+}
+.orderID, .record_date, .blankPage, .count {
+    display:inline-block;
+    vertical-align: text-bottom;
+    text-align: left;
+    font-size:16px;
+}
+.orderID, .record_date {
+    padding-right:30px;
+}
+.orderID, .blankPage {
+    clear:both;
+    float:right;
+}
+.record_date, .count {
+    float:left;
+}
+
+img {
+    border:1px solid;
+}
+._block {
+    height:20px;
+    border:1px solid black;
+    padding-left:15px;
+}
+.ymd {
+    padding-left:75px;
+    text-align:right;
+}
+.orderpp {
+    margin-bottom: 6px;
+}
+label,span,td,th,div,p {
+    font-weight: bold;
+}
+.zfy span {
+    font-size:20px;
+}
+.total {
+    width:32%;
+    padding-left:5px;
+    font-size:16px;
+    float:left;
+}
+.total span {
+    padding-left:20px;
+}
+.dInfo {
+    border-left: 0;
+    overflow: hidden;
+}
+
+.costomInfoTable .text {
+    display: inline-block;
+    width:100px;
+    height:20px;
+    line-height: 20px;
+    margin-bottom:3px;
+    vertical-align: bottom;
+    border-bottom: 1px solid #000;
+}
+.item_tit {
+    line-height: 20px;
+    text-align:left;
+    font-size:18px;
+}
+.fee {
+    float:right;
+}
+.signature {
+    width:980px;
+    line-height: 40px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.signature div {
+    float:left;
+}
+#ftr {
+    overflow: hidden;
+}
+#ftr p {
+    line-height: 20px;
+    float:left;
+}
+.ftr_1 {
+    width:430px;
+}
+.ftr_2 {
+    width:330px;
+}
+.ftr_3 {
+    width:220px;
+}
+.sign {
+    display: inline-block;
+    width: 100px;
+    height: 16px;
+}

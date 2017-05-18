@@ -1,0 +1,1 @@
+package com.tqmall.legend.entity.finance;import lombok.Data;import lombok.EqualsAndHashCode;import java.math.BigDecimal;/**    * @功能描述: 云修金融 * @日期 2016-01-20 * @版本号 V1.0 */@Data@EqualsAndHashCode(callSuper = false)public class FinanceCenterVo{	private BigDecimal purchaseMoney; //采购金}

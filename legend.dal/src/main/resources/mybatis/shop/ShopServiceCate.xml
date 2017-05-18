@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.shop.ShopServiceCateDao">
+
+    <resultMap id="BaseResultMap" type="ShopServiceCate" extends="COMMON.BASE_RESULT_MAP">
+        <result column="name" property="name"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="parent_id" property="parentId"/>
+        <result column = "cate_type" property = "cateType" />
+        <result column = "cate_tag" property = "cateTag" />
+        <result column = "icon_url" property = "iconUrl" />
+        <result column = "default_img_url" property = "defaultImgUrl" />
+        <result column = "cate_sort" property = "cateSort" />
+    </resultMap>
+
+    <resultMap id="serviceCateName" type="ServiceCateVo">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            name as name,
+            shop_id as shopId,
+            parent_id as parentId,
+            cate_type as cateType,
+            cate_tag as cateTag,
+            icon_url as iconUrl,
+            default_img_url as defaultImgUrl,
+            cate_sort as cateSort,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="name != null">
+                    and name = #{name}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="parentId != null">
+                    and parent_id = #{parentId}
+                </if>
+                <if test = "cateType != null">
+                    and cate_type = #{cateType}
+                </if>
+                <if test = "cateTag != null">
+                    and cate_tag = #{cateTag}
+                </if>
+                <if test = "iconUrl != null">
+                    and icon_url = #{iconUrl}
+                </if>
+                <if test = "defaultImgUrl != null">
+                    and default_img_url = #{defaultImgUrl}
+                </if>
+                <if test = "cateSort != null">
+                    and cate_sort = #{cateSort}
+                </if>
+                <if test="nameLike != null">
+                    and name like CONCAT('%',#{nameLike},'%')
+                </if>
+                <if test="shopIds != null">
+                    and shop_id in (
+                    <foreach collection="shopIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="cateTypes != null">
+                    and cate_type in (
+                    <foreach collection="cateTypes" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="orCateType != null">
+                    or cate_type = #{orCateType}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="name != null">
+                    name = #{name},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="parentId != null">
+                    parent_id = #{parentId},
+                </if>
+                <if test="cateType != null">
+                    cate_type = #{cateType},
+                </if>
+                <if test="cateTag != null">
+                    cate_tag = #{cateTag},
+                </if>
+                <if test = "iconUrl != null">
+                    icon_url = #{iconUrl},
+                </if>
+                <if test = "defaultImgUrl != null">
+                    default_img_url = #{defaultImgUrl},
+                </if>
+                <if test = "cateSort != null">
+                    cate_sort = #{cateSort},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop_service_cate
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_cate
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_cate
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_cate
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_shop_service_cate
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_shop_service_cate
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_shop_service_cate
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_shop_service_cate (
+        <trim suffix="" suffixOverrides=",">
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test = "name != null">
+                name,
+            </if>
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "parentId != null">
+                parent_id,
+            </if>
+            <if test = "cateType != null">
+                cate_type,
+            </if>
+            <if test = "cateTag != null">
+                cate_tag,
+            </if>
+            <if test = "iconUrl != null">
+                icon_url,
+            </if>
+            <if test = "defaultImgUrl != null">
+                default_img_url,
+            </if>
+            <if test = "cateSort != null">
+                cate_sort,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+        <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test = "name != null">
+                #{name},
+            </if>
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "parentId != null">
+                #{parentId},
+            </if>
+            <if test = "cateType != null">
+                #{cateType},
+            </if>
+            <if test = "cateTag != null">
+                #{cateTag},
+            </if>
+            <if test = "iconUrl != null">
+                #{iconUrl},
+            </if>
+            <if test = "defaultImgUrl != null">
+                #{defaultImgUrl},
+            </if>
+            <if test = "cateSort != null">
+                #{cateSort},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_shop_service_cate
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+
+    <!-- 根据获得车主服务一级类别信息 -->
+    <select id="selectFirstCate" resultMap="serviceCateName">
+        select
+           id, name
+        from legend_shop_service_cate
+        where is_deleted = 'N'
+        and parent_id = 0
+        and shop_id = 0
+        and cate_type = 1
+    </select>
+
+    <select id="selectByIds2" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_cate
+        where id in
+        <foreach collection="ids" index="index" item="tag" separator="," open="(" close=")">
+            #{tag}
+        </foreach>
+        and (shop_id = #{shopId} OR shop_id = 0)
+    </select>
+
+    <!--批量插入-->
+    <insert id = "batchInsert" parameterType="java.util.List">
+        insert into legend_shop_service_cate (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            name,
+            shop_id,
+            parent_id,
+            cate_type,
+            cate_tag,
+            icon_url,
+            default_img_url,
+            cate_sort,
+        </trim>
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator="," >
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.name != null">
+                    #{item.name},
+                </if>
+                <if test="item.name == null">
+                    "" ,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.parentId != null">
+                    #{item.parentId},
+                </if>
+                <if test="item.parentId == null">
+                    0 ,
+                </if>
+                <if test="item.cateType != null">
+                    #{item.cateType},
+                </if>
+                <if test="item.cateType == null">
+                    0 ,
+                </if>
+                <if test="item.cateTag != null">
+                    #{item.cateTag},
+                </if>
+                <if test="item.cateTag == null">
+                    0 ,
+                </if>
+                <if test="item.iconUrl != null">
+                    #{item.iconUrl},
+                </if>
+                <if test="item.iconUrl == null">
+                    "" ,
+                </if>
+                <if test="item.defaultImgUrl != null">
+                    #{item.defaultImgUrl},
+                </if>
+                <if test="item.defaultImgUrl == null">
+                    "" ,
+                </if>
+                <if test="item.cateSort != null">
+                    #{item.cateSort},
+                </if>
+                <if test="item.cateSort == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="findServiceCatesByCatNames" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        from legend_shop_service_cate
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and cate_type = #{cateType}
+        and name in
+        <foreach collection="catNames" item="tag" index="index" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+    </select>
+</mapper>

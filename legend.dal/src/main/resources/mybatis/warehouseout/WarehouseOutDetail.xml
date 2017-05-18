@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.warehouseout.WarehouseOutDetailDao">
+    <resultMap id="BaseResultMap" type="WarehouseOutDetail" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="warehouse_out_id" property="warehouseOutId"/>
+        <result column="goods_id" property="goodsId"/>
+        <result column="supplier_id" property="supplierId"/>
+        <result column="goods_count" property="goodsCount"/>
+        <result column="hand_by_in" property="handByIn"/>
+        <result column="hand_by_on" property="handByOn"/>
+        <result column="order_id" property="orderId"/>
+        <result column="warehouse_out_sn" property="warehouseOutSn"/>
+        <result column="inventory_price" property="inventoryPrice"/>
+        <result column="sale_price" property="salePrice"/>
+        <result column="goods_real_count" property="goodsRealCount"/>
+        <result column="goods_sn" property="goodsSn"/>
+        <result column="goods_name" property="goodsName"/>
+        <result column="goods_format" property="goodsFormat"/>
+        <result column="car_info" property="carInfo"/>
+        <result column="status" property="status"/>
+        <result column="rel_sn" property="relSn"/>
+        <result column="rel_id" property="relId"/>
+        <result column="rel_detail_id" property="relDetailId"/>
+        <result column="order_goods_id" property="orderGoodsId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        warehouse_out_id as warehouseOutId,
+        warehouse_out_sn as warehouseOutSn,
+        goods_id as goodsId,
+        supplier_id as supplierId,
+        goods_count as goodsCount,
+        hand_by_in as handByIn,
+        hand_by_on as handByOn,
+        inventory_price as inventoryPrice,
+        sale_price as salePrice,
+        order_id as orderId,
+        goods_real_count as goodsRealCount,
+        goods_sn as goodsSn,
+        goods_name as goodsName,
+        goods_format as goodsFormat,
+        car_info as carInfo,
+        status as status,
+        rel_sn as relSn,
+        rel_id as relId,
+        rel_detail_id as relDetailId,
+        order_goods_id as orderGoodsId
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="warehouseOutId != null">
+                    and warehouse_out_id = #{warehouseOutId}
+                </if>
+                <if test="warehouseOutIds != null">
+                    and warehouse_out_id in (
+                    <foreach collection="warehouseOutIds" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="orderIds != null">
+                    and order_id in (
+                    <foreach collection="orderIds" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="warehouseOutSn != null">
+                    and warehouse_out_sn = #{warehouseOutSn}
+                </if>
+                <if test="goodsId != null">
+                    and goods_id = #{goodsId}
+                </if>
+                <if test="supplierId != null">
+                    and supplier_id = #{supplierId}
+                </if>
+                <if test="goodsCount != null">
+                    and goods_count = #{goodsCount}
+                </if>
+                <if test="handByIn != null">
+                    and hand_by_in = #{handByIn}
+                </if>
+                <if test="handByOn != null">
+                    and hand_by_on = #{handByOn}
+                </if>
+                <if test="orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test="inventoryPrice != null">
+                    and inventory_price = #{inventoryPrice}
+                </if>
+                <if test="salePrice != null">
+                    and sale_price = #{salePrice}
+                </if>
+                <if test="goodsRealCount != null">
+                    and goods_real_count = #{goodsRealCount}
+                </if>
+                <if test="goodsSn != null">
+                    and goods_sn = #{goodsSn}
+                </if>
+                <if test="goodsName != null">
+                    and goods_name = #{goodsName}
+                </if>
+                <if test="goodsFormat != null">
+                    and goods_format = #{goodsFormat}
+                </if>
+                <if test="carInfo != null">
+                    and car_info = #{carInfo}
+                </if>
+                <if test="status != null">
+                    and status = #{status}
+                </if>
+                <if test="relSn != null">
+                    and rel_sn = #{relSn}
+                </if>
+                <if test="relId != null">
+                    and rel_id = #{relId}
+                </if>
+                <if test="relDetailId != null">
+                    and rel_detail_id = #{relDetailId}
+                </if>
+                <if test="orderGoodsId != null">
+                    and order_goods_id = #{orderGoodsId}
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+                    and gmt_create >= #{startTime}
+                     ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+                    and gmt_create <= #{endTime}
+                     ]]>
+                </if>
+                <if test="statuss != null">
+                    and status in (
+                    <foreach collection="statuss" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="ids != null">
+                    and id in (
+                    <foreach collection="ids" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test="shopId != null">
+                shop_id = #{shopId},
+            </if>
+            <if test="warehouseOutId != null">
+                warehouse_out_id = #{warehouseOutId},
+            </if>
+            <if test="warehouseOutSn != null">
+                warehouse_out_sn = #{warehouseOutSn},
+            </if>
+            <if test="goodsId != null">
+                goods_id = #{goodsId},
+            </if>
+            <if test="supplierId != null">
+                supplier_id = #{supplierId},
+            </if>
+            <if test="goodsCount != null">
+                goods_count = #{goodsCount},
+            </if>
+            <if test="handByIn != null">
+                hand_by_in = #{handByIn},
+            </if>
+            <if test="handByOn != null">
+                hand_by_on = #{handByOn},
+            </if>
+            <if test="orderId != null">
+                order_id = #{orderId},
+            </if>
+            <if test="inventoryPrice != null">
+                inventory_price = #{inventoryPrice},
+            </if>
+            <if test="salePrice != null">
+                sale_price = #{salePrice},
+            </if>
+            <if test="goodsRealCount != null">
+                goods_real_count = #{goodsRealCount},
+            </if>
+            <if test="goodsSn != null">
+                goods_sn = #{goodsSn},
+            </if>
+            <if test="goodsName != null">
+                goods_name = #{goodsName},
+            </if>
+            <if test="goodsFormat != null">
+                goods_format = #{goodsFormat},
+            </if>
+            <if test="carInfo != null">
+                car_info = #{carInfo},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="relSn != null">
+                rel_sn = #{relSn},
+            </if>
+            <if test="relId != null">
+                rel_id = #{relId},
+            </if>
+            <if test="relDetailId != null">
+                rel_detail_id = #{relDetailId},
+            </if>
+            <if test="orderGoodsId != null">
+                order_goods_id = #{orderGoodsId}
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_warehouse_out_detail
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_out_detail
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_out_detail
+        where id = #{id}
+    </select>
+
+    <!-- 根据orderID查询 -->
+    <select id="getWareOutDetail" resultMap="BaseResultMap">
+        select
+        t.id as id,
+        t.shop_id as shopId,
+        t.warehouse_out_id as warehouseOutId,
+        t.warehouse_out_sn as warehouseOutSn,
+        t.goods_id as goodsId,
+        t.supplier_id as supplierId,
+        t.goods_count as goodsCount,
+        t.hand_by_in as handByIn,
+        t.hand_by_on as handByOn,
+        t.order_id as orderId,
+        t.gmt_create as gmtCreate,
+        t.inventory_price as inventoryPrice,
+        t.sale_price as salePrice,
+        t.goods_real_count as goodsRealCount,
+        t.goods_sn as goodsSn,
+        t.goods_name as goodsName,
+        t.order_goods_id as orderGoodsId,
+        t.goods_format as goodsFormat,
+        l.measure_unit as measureUnit,
+        l.stock as stock
+        from legend_warehouse_out_detail t left join legend_goods l on t.goods_id = l.id
+        where t.warehouse_out_id = #{warehouseOutId} and t.shop_id = #{shopId}
+    </select>
+
+    <!--add by twg-->
+    <select id="selectWareOutDetail" resultMap="BaseResultMap">
+        select
+        t.id as id,
+        t.shop_id as shopId,
+        t.warehouse_out_id as warehouseOutId,
+        t.warehouse_out_sn as warehouseOutSn,
+        t.goods_id as goodsId,
+        t.supplier_id as supplierId,
+        t.goods_count as goodsCount,
+        t.hand_by_in as handByIn,
+        t.hand_by_on as handByOn,
+        t.order_id as orderId,
+        t.gmt_create as gmtCreate,
+        t.inventory_price as inventoryPrice,
+        t.sale_price as salePrice,
+        t.goods_real_count as goodsRealCount,
+        t.goods_sn as goodsSn,
+        t.goods_name as goodsName,
+        t.order_goods_id as orderGoodsId,
+        t.car_info as carInfo,
+        t.goods_format as goodsFormat
+
+        from legend_warehouse_out_detail t
+        where t.warehouse_out_id = #{warehouseOutId}
+        and t.shop_id = #{shopId}
+        and t.is_deleted = 'N'
+
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="SearchResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_out_detail
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_warehouse_out_detail
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_warehouse_out_detail
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_warehouse_out_detail
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_warehouse_out_detail (
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+        shop_id,
+        warehouse_out_id,
+        warehouse_out_sn,
+        goods_id,
+        supplier_id,
+        goods_count,
+        hand_by_in,
+        hand_by_on,
+        order_id,
+        inventory_price,
+        sale_price,
+        goods_real_count,
+        goods_sn,
+        goods_name,
+        goods_format,
+        car_info,
+        status,
+        rel_sn,
+        rel_id,
+        rel_detail_id,
+        order_goods_id
+        )
+        values (
+        <include refid="COMMON.BASE_INSERT_VALUE"/>
+        #{shopId},
+        #{warehouseOutId},
+        #{warehouseOutSn},
+        #{goodsId},
+        #{supplierId},
+        #{goodsCount},
+        #{handByIn},
+        #{handByOn},
+        #{orderId},
+        #{inventoryPrice},
+        #{salePrice},
+        #{goodsRealCount},
+        #{goodsSn},
+        #{goodsName},
+        #{goodsFormat},
+        #{carInfo},
+        #{status},
+        #{relSn},
+        #{relId},
+        #{relDetailId},
+        #{orderGoodsId}
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_warehouse_out_detail
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!-- 通过条件更新 -->
+    <update id="update">
+        update legend_warehouse_out_detail
+        <include refid="BaseUpdateSet"/>
+        where shop_id=#{shopId}
+        <if test="id != null">
+            and id = #{id}
+        </if>
+        <if test="orderId != null">
+            and order_id = #{orderId}
+        </if>
+        <if test="warehouseOutId != null">
+            and warehouse_out_id = #{warehouseOutId}
+        </if>
+    </update>
+    <resultMap id="SearchResultMap" type="com.tqmall.legend.entity.warehouseout.WarehouseOutDetail"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="goods_id" property="goodsId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="goods_count" property="goodsCount"/>
+        <result column="order_id" property="orderId"/>
+        <result column="goods_sn" property="goodsSn"/>
+        <result column="name" property="name"/>
+        <result column="measure_unit" property="measureUnit"/>
+        <result column="format" property="format"/>
+        <result column="warehouse_out_sn" property="warehouseOutSn"/>
+        <result column="inventory_price" property="inventoryPrice"/>
+        <result column="sale_price" property="salePrice"/>
+        <result column="goods_real_count" property="goodsRealCount"/>
+        <result column="rel_sn" property="relSn"/>
+        <result column="rel_id" property="relId"/>
+        <result column="rel_detail_id" property="relDetailId"/>
+        <result column="order_goods_id" property="orderGoodsId"/>
+    </resultMap>
+
+    <!-- create by jason 2015-06-20 商品销售排行报表-->
+    <select id="getWareGoodsSaleRank" resultMap="BaseResultMap">
+        SELECT
+        a.shop_id as shopId,
+        a.goods_id as goodsId,
+        a.goods_count as goodsCount,
+        a.inventory_price as inventoryPrice,
+        a.sale_price as salePrice,
+        a.goods_sn as goodsSn,
+        a.goods_name as goodsName,
+        a.goods_format as goodsFormat,
+        a.car_info as carInfo,
+        a.status as status
+        FROM legend_warehouse_out_detail a LEFT JOIN legend_goods b ON a.goods_id = b.id
+        WHERE a.is_deleted = 'N'
+        AND b.is_deleted = 'N'
+        AND a.status = 'LZCK'
+        <if test="shopId != null">
+            AND a.shop_id = #{shopId}
+        </if>
+        <if test="catId != null">
+            AND b.cat_id = #{catId}
+        </if>
+        <if test="startTime != null">
+            <![CDATA[
+                AND a.gmt_create >= #{startTime}
+            ]]>
+        </if>
+        <if test="endTime != null">
+            <![CDATA[
+                AND a.gmt_create <= #{endTime}
+            ]]>
+        </if>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 查询总数 -->
+    <select id="selectGoodsCount" resultType="java.lang.Integer">
+        select count(DISTINCT goods_id)
+        from legend_warehouse_out_detail
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <sql id="BaseWhereClause2">
+        <if test="startTime != null &amp;&amp; endTime != null">
+            and wod.gmt_create BETWEEN #{startTime} and #{endTime}
+        </if>
+        <if test="goodsName != null">
+            and wod.goods_name like CONCAT('%',#{goodsName},'%')
+        </if>
+        <if test="goodsFormat != null">
+            and wod.goods_format like CONCAT('%',#{goodsFormat},'%')
+        </if>
+        <if test="warehouseOutSn != null">
+            and wod.warehouse_out_sn = #{warehouseOutSn}
+        </if>
+        <if test="orderSn != null">
+            and oi.order_sn = #{orderSn}
+        </if>
+        <if test="customerName != null">
+            and oi.customer_name like CONCAT('%',#{customerName},'%')
+        </if>
+        <if test="status != null">
+            and wod.status = #{status}
+        </if>
+        <if test="status == null">
+            and wod.status in ('LZCK','HZCK')
+        </if>
+        <if test="shopId != null">
+            and wod.shop_id = #{shopId}
+        </if>
+        <if test="goodsReceiver != null">
+            and wo.goods_receiver = #{goodsReceiver}
+        </if>
+    </sql>
+    <!-- 查询总计信息 -->
+    <select id="getTotalInfo" resultType="com.tqmall.legend.bi.entity.StatisticsWarehouseOut">
+        select ifnull(sum(wod.goods_count),0) as totalCount,
+               ifnull(sum(wod.sale_price * wod.goods_count),0) as totalSalePriceAmount,
+               ifnull(sum(wod.inventory_price * wod.goods_count),0) as totalInventoryPriceAmount
+        from legend_warehouse_out_detail wod
+        left join legend_order_info oi on oi.id = wod.order_id
+        left join legend_warehouse_out wo on wo.id = wod.warehouse_out_id
+        where wod.is_deleted = 'N' and wo.is_deleted = 'N'
+        <include refid="BaseWhereClause2"/>
+    </select>
+
+    <!-- 查询出库明细报表总数量 -->
+    <select id="selectReportCount" parameterType="com.tqmall.legend.entity.statistics.param.WarehouseOutReportParam"
+            resultType="java.lang.Integer">
+        select count(1) from (
+        select wod.id,count(1) from legend_warehouse_out_detail wod
+        left join legend_order_info oi on oi.id = wod.order_id
+        left join legend_warehouse_out wo on wo.id = wod.warehouse_out_id
+        where wod.is_deleted = 'N' and wo.is_deleted = 'N'
+        <include refid="BaseWhereClause2"/>
+        group by wod.id
+        ) a
+    </select>
+
+    <!-- 查询出库明细报表 -->
+    <select id="selectReportInfo" parameterType="com.tqmall.legend.entity.statistics.param.WarehouseOutReportParam"
+            resultType="java.lang.Long">
+        select wod.id as id from legend_warehouse_out_detail wod
+        left join legend_order_info oi on oi.id = wod.order_id
+        left join legend_warehouse_out wo on wo.id = wod.warehouse_out_id
+        where wod.is_deleted = 'N' and wo.is_deleted = 'N'
+        <include refid="BaseWhereClause2"/>
+        group by wod.id
+        order by wod.gmt_create desc
+        limit #{offset},#{size}
+    </select>
+    <!-- 批量插入-->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_warehouse_out_detail (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            warehouse_out_id,
+            goods_id,
+            supplier_id,
+            goods_count,
+            hand_by_in,
+            hand_by_on,
+            order_id,
+            warehouse_out_sn,
+            inventory_price,
+            sale_price,
+            goods_real_count,
+            goods_sn,
+            goods_name,
+            goods_format,
+            car_info,
+            status,
+            rel_sn,
+            rel_id,
+            rel_detail_id,
+            order_goods_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.warehouseOutId != null">
+                    #{item.warehouseOutId},
+                </if>
+                <if test="item.warehouseOutId == null">
+                    0 ,
+                </if>
+                <if test="item.goodsId != null">
+                    #{item.goodsId},
+                </if>
+                <if test="item.goodsId == null">
+                    0 ,
+                </if>
+                <if test="item.supplierId != null">
+                    #{item.supplierId},
+                </if>
+                <if test="item.supplierId == null">
+                    0 ,
+                </if>
+                <if test="item.goodsCount != null">
+                    #{item.goodsCount},
+                </if>
+                <if test="item.goodsCount == null">
+                    0.00,
+                </if>
+                <if test="item.handByIn != null">
+                    #{item.handByIn},
+                </if>
+                <if test="item.handByIn == null">
+                    0 ,
+                </if>
+                <if test="item.handByOn != null">
+                    #{item.handByOn},
+                </if>
+                <if test="item.handByOn == null">
+                    0 ,
+                </if>
+                <if test="item.orderId != null">
+                    #{item.orderId},
+                </if>
+                <if test="item.orderId == null">
+                    0 ,
+                </if>
+                <if test="item.warehouseOutSn != null">
+                    #{item.warehouseOutSn},
+                </if>
+                <if test="item.warehouseOutSn == null">
+                    '',
+                </if>
+                <if test="item.inventoryPrice != null">
+                    #{item.inventoryPrice},
+                </if>
+                <if test="item.inventoryPrice == null">
+                    0.00,
+                </if>
+                <if test="item.salePrice != null">
+                    #{item.salePrice},
+                </if>
+                <if test="item.salePrice == null">
+                    0.00,
+                </if>
+                <if test="item.goodsRealCount != null">
+                    #{item.goodsRealCount},
+                </if>
+                <if test="item.goodsRealCount == null">
+                    0.00,
+                </if>
+                <if test="item.goodsSn != null">
+                    #{item.goodsSn},
+                </if>
+                <if test="item.goodsSn == null">
+                    '',
+                </if>
+                <if test="item.goodsName != null">
+                    #{item.goodsName},
+                </if>
+                <if test="item.goodsName == null">
+                    '',
+                </if>
+                <if test="item.goodsFormat != null">
+                    #{item.goodsFormat},
+                </if>
+                <if test="item.goodsFormat == null">
+                    '',
+                </if>
+                <if test="item.carInfo != null">
+                    #{item.carInfo},
+                </if>
+                <if test="item.carInfo == null">
+                    '',
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    '',
+                </if>
+                <if test="item.relSn != null">
+                    #{item.relSn},
+                </if>
+                <if test="item.relSn == null">
+                    '',
+                </if>
+                <if test="item.relId != null">
+                    #{item.relId},
+                </if>
+                <if test="item.relId == null">
+                    0 ,
+                </if>
+                <if test="item.relDetailId != null">
+                    #{item.relDetailId},
+                </if>
+                <if test="item.relDetailId == null">
+                    0 ,
+                </if>
+                <if test="item.orderGoodsId != null">
+                    #{item.orderGoodsId},
+                </if>
+                <if test="item.orderGoodsId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="listOrderId2RealInventoryAmountPair" resultMap="commonPairMap">
+        SELECT
+            order_id as dataF,
+            sum(inventory_price*goods_real_count) as dataS
+        FROM legend_warehouse_out_detail
+        WHERE is_deleted='N'
+          AND shop_id=#{shopId}
+          AND order_id IN(
+          <foreach collection="orderIds" item="item" separator=",">
+              #{item}
+          </foreach>
+          )
+          AND status ='LZCK'
+        group by order_id
+    </select>
+
+    <resultMap id="commonPairMap" type="com.tqmall.legend.bi.entity.CommonPair">
+        <result column="dataF" property="dataF" javaType="java.lang.Long"/>
+        <result column="dataS" property="dataS" javaType="java.math.BigDecimal"/>
+    </resultMap>
+</mapper>

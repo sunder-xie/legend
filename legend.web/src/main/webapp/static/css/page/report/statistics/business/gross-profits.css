@@ -1,0 +1,8 @@
+.quick-filter {
+    display: inline-block;
+    vertical-align: middle;
+}
+.quick-filter i{
+    text-decoration: underline;
+    cursor: pointer;
+}

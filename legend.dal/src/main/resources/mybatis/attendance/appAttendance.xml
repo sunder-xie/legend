@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.attendance.AppAttendanceDao">
+
+    <resultMap id = "BaseResultMap" type = "AppAttendance" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "user_id" property = "userId" />
+        <result column = "work_time" property = "workTime" />
+        <result column = "status" property = "status" />
+        <result column = "longitude" property = "longitude" />
+        <result column = "latitude" property = "latitude" />
+        <result column = "ver" property = "ver" />
+        <result column = "refer" property = "refer" />
+        <result column = "location_is_valid" property = "locationIsValid" />
+        <result column = "user_name" property = "userName" />
+        <result column = "sign_status" property = "signStatus" />
+    </resultMap>
+
+
+    <select id = "selectSignInTime" parameterType="long" resultType = "hashmap">
+        select conf_value
+        from legend_shop_configure
+        where where shop_id = #{shopid} and conf_type=9 and conf_key = 20
+    </select>
+    <select id = "selectSignOffTime" parameterType="long" resultType = "hashmap">
+        select conf_value
+        from legend_shop_configure
+        where where shop_id = #{shopid} and conf_type=9 and conf_key = 21
+    </select>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            user_id as userId,
+            work_time as workTime,
+            status as status,
+            longitude as longitude,
+            latitude as latitude,
+            ver as ver,
+            refer as refer,
+            location_is_valid as locationIsValid,
+            user_name as userName,
+            sign_status as signStatus
+
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test = "workTime != null">
+                    and work_time = #{workTime}
+                </if>
+                <if test = "status != null">
+                    and status = #{status}
+                </if>
+                <if test = "longitude != null">
+                    and longitude = #{longitude}
+                </if>
+                <if test = "latitude != null">
+                    and latitude = #{latitude}
+                </if>
+                <if test="flag != null">
+                    and DATE_FORMAT(work_time,'%m-%d-%Y') = DATE_FORMAT(NOW(),'%m-%d-%Y')
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="locationIsValid != null">
+                    and location_is_valid = #{locationIsValid}
+                </if>
+                <if test="userName != null">
+                    and user_name = #{userName}
+                </if>
+                <if test="signStatus != null">
+                    and sign_status = #{signStatus}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "userId != null">
+                    user_id = #{userId},
+                </if>
+                <if test = "workTime != null">
+                    work_time = #{workTime},
+                </if>
+                <if test = "status != null">
+                    status = #{status},
+                </if>
+                <if test = "longitude != null">
+                    longitude = #{longitude},
+                </if>
+                <if test = "latitude != null">
+                    latitude = #{latitude},
+                </if>
+                <if test="ver != null">
+                    ver = #{ver},
+                </if>
+                <if test="refer != null">
+                    refer = #{refer},
+                </if>
+                <if test="locationIsValid != null">
+                     location_is_valid = #{locationIsValid},
+                </if>
+                <if test="userName != null">
+                     user_name = #{userName},
+                </if>
+                <if test="signStatus != null">
+                     sign_status = #{signStatus},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_app_attendance
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_app_attendance
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!--按月查找打卡记录-->
+    <select id = "selectByMonth" resultMap = "BaseResultMap">
+        select
+            DATE_FORMAT(work_time,'%m-%d') as dayStr,
+            id as id,
+            shop_id as shopId,
+            user_id as userId,
+            work_time as workTime,
+            status as status,
+            longitude as longitude,
+            latitude as latitude,
+            sign_status as signStatus,
+            location_is_valid as locationIsValid
+        from legend_app_attendance
+        where
+          shop_id = #{shopId}
+        AND
+          DATE_FORMAT(work_time,'%Y-%m') = #{selectTime}
+        AND
+          is_deleted = 'N'
+        order by work_time desc
+    </select>
+
+
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_app_attendance
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_app_attendance
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_app_attendance
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_app_attendance
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_app_attendance
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_app_attendance (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "userId != null">
+                user_id,
+            </if>
+            <if test = "workTime != null">
+                work_time,
+            </if>
+            <if test = "status != null">
+                status,
+            </if>
+            <if test = "longitude != null">
+                longitude,
+            </if>
+            <if test = "latitude != null">
+                latitude,
+            </if>
+            <if test="ver != null">
+                ver,
+            </if>
+            <if test="refer != null">
+                refer,
+            </if>
+            <if test="locationIsValid != null">
+                 location_is_valid,
+            </if>
+            <if test="userName != null">
+                 user_name,
+            </if>
+            <if test="signStatus != null">
+                 sign_status,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "userId != null">
+                #{userId},
+            </if>
+            <if test = "workTime != null">
+                #{workTime},
+            </if>
+            <if test = "status != null">
+                #{status},
+            </if>
+            <if test = "longitude != null">
+                #{longitude},
+            </if>
+            <if test = "latitude != null">
+                #{latitude},
+            </if>
+            <if test="ver != null">
+                #{ver},
+            </if>
+            <if test="refer != null">
+                #{refer},
+            </if>
+            <if test="locationIsValid != null">
+                #{locationIsValid},
+            </if>
+            <if test="userName != null">
+                #{userName},
+            </if>
+            <if test="signStatus != null">
+                #{signStatus},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_app_attendance
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_app_attendance (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            user_id,
+            work_time,
+            status,
+            longitude,
+            latitude,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.userId != null">
+                    #{item.userId},
+                </if>
+                <if test="item.userId == null">
+                    NULL ,
+                </if>
+                <if test="item.workTime != null">
+                    #{item.workTime},
+                </if>
+                <if test="item.workTime == null">
+                    NULL ,
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    NULL ,
+                </if>
+                <if test="item.longitude != null">
+                    #{item.longitude},
+                </if>
+                <if test="item.longitude == null">
+                    NULL ,
+                </if>
+                <if test="item.latitude != null">
+                    #{item.latitude},
+                </if>
+                <if test="item.latitude == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

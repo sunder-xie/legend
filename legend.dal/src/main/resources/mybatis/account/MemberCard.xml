@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.MemberCardDao">
+
+    <resultMap id="BaseResultMap" type="MemberCard" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="card_number" property="cardNumber"/>
+        <result column="balance" property="balance"/>
+        <result column="expense_amount" property="expenseAmount"/>
+        <result column="expense_count" property="expenseCount"/>
+        <result column="receiver" property="receiver"/>
+        <result column="receiver_name" property="receiverName"/>
+        <result column="deposit_count" property="depositCount"/>
+        <result column="deposit_amount" property="depositAmount"/>
+        <result column="publisher" property="publisher"/>
+        <result column="publisher_name" property="publisherName"/>
+        <result column="card_type_id" property="cardTypeId"/>
+        <result column="expire_date" property="expireDate"/>
+        <result column="account_id" property="accountId"/>
+        <result column="raw_card_id" property="rawCardId"/>
+    </resultMap>
+    <resultMap id="commonPair" type="com.tqmall.legend.bi.entity.CommonPair">
+        <result column="dataF" property="dataF" javaType="java.lang.Long"/>
+        <result column="dataS" property="dataS" javaType="java.lang.Integer"/>
+    </resultMap>
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            card_number as cardNumber,
+            balance as balance,
+            expense_amount as expenseAmount,
+            expense_count as expenseCount,
+            receiver as receiver,
+            receiver_name as receiverName,
+            deposit_count as depositCount,
+            deposit_amount as depositAmount,
+            publisher as publisher,
+            publisher_name as publisherName,
+            card_type_id as cardTypeId,
+            expire_date as expireDate,
+            account_id as accountId,
+            raw_card_id as rawCardId,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="cardNumber != null">
+                    and card_number = #{cardNumber}
+                </if>
+                <if test="balance != null">
+                    and balance = #{balance}
+                </if>
+                <if test="expenseAmount != null">
+                    and expense_amount = #{expenseAmount}
+                </if>
+                <if test="expenseCount != null">
+                    and expense_count = #{expenseCount}
+                </if>
+                <if test="receiver != null">
+                    and receiver = #{receiver}
+                </if>
+                <if test="receiverName != null">
+                    and receiver_name = #{receiverName}
+                </if>
+                <if test="depositCount != null">
+                    and deposit_count = #{depositCount}
+                </if>
+                <if test="depositAmount != null">
+                    and deposit_amount = #{depositAmount}
+                </if>
+                <if test="publisher != null">
+                    and publisher = #{publisher}
+                </if>
+                <if test="publisherName != null">
+                    and publisher_name = #{publisherName}
+                </if>
+                <if test="cardTypeId != null">
+                    and card_type_id = #{cardTypeId}
+                </if>
+                <if test="expireDate != null">
+                    and expire_date = #{expireDate}
+                </if>
+                <if test="accountId != null">
+                    and account_id = #{accountId}
+                </if>
+                <if test="rawCardId != null">
+                    and raw_card_id = #{rawCardId}
+                </if>
+                <if test="cardIds != null">
+                    and id in
+                    <foreach collection="cardIds" open="(" close=")" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="cardNumber != null">
+                    card_number = #{cardNumber},
+                </if>
+                <if test="balance != null">
+                    balance = #{balance},
+                </if>
+                <if test="expenseAmount != null">
+                    expense_amount = #{expenseAmount},
+                </if>
+                <if test="expenseCount != null">
+                    expense_count = #{expenseCount},
+                </if>
+                <if test="receiver != null">
+                    receiver = #{receiver},
+                </if>
+                <if test="receiverName != null">
+                    receiver_name = #{receiverName},
+                </if>
+                <if test="depositCount != null">
+                    deposit_count = #{depositCount},
+                </if>
+                <if test="depositAmount != null">
+                    deposit_amount = #{depositAmount},
+                </if>
+                <if test="publisher != null">
+                    publisher = #{publisher},
+                </if>
+                <if test="publisherName != null">
+                    publisher_name = #{publisherName},
+                </if>
+                <if test="cardTypeId != null">
+                    card_type_id = #{cardTypeId},
+                </if>
+                <if test="expireDate != null">
+                    expire_date = #{expireDate},
+                </if>
+                <if test="accountId != null">
+                    account_id = #{accountId},
+                </if>
+                <if test="rawCardId != null">
+                    raw_card_id = #{rawCardId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_member_card
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_member_card
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_member_card
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_member_card
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_member_card
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_member_card
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_member_card
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_member_card (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="cardNumber != null">
+                card_number,
+            </if>
+            <if test="balance != null">
+                balance,
+            </if>
+            <if test="expenseAmount != null">
+                expense_amount,
+            </if>
+            <if test="expenseCount != null">
+                expense_count,
+            </if>
+            <if test="receiver != null">
+                receiver,
+            </if>
+            <if test="receiverName != null">
+                receiver_name,
+            </if>
+            <if test="depositCount != null">
+                deposit_count,
+            </if>
+            <if test="depositAmount != null">
+                deposit_amount,
+            </if>
+            <if test="publisher != null">
+                publisher,
+            </if>
+            <if test="publisherName != null">
+                publisher_name,
+            </if>
+            <if test="cardTypeId != null">
+                card_type_id,
+            </if>
+            <if test="expireDate != null">
+                expire_date,
+            </if>
+            <if test="accountId != null">
+                account_id,
+            </if>
+            <if test="rawCardId != null">
+                raw_card_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="cardNumber != null">
+                #{cardNumber},
+            </if>
+            <if test="balance != null">
+                #{balance},
+            </if>
+            <if test="expenseAmount != null">
+                #{expenseAmount},
+            </if>
+            <if test="expenseCount != null">
+                #{expenseCount},
+            </if>
+            <if test="receiver != null">
+                #{receiver},
+            </if>
+            <if test="receiverName != null">
+                #{receiverName},
+            </if>
+            <if test="depositCount != null">
+                #{depositCount},
+            </if>
+            <if test="depositAmount != null">
+                #{depositAmount},
+            </if>
+            <if test="publisher != null">
+                #{publisher},
+            </if>
+            <if test="publisherName != null">
+                #{publisherName},
+            </if>
+            <if test="cardTypeId != null">
+                #{cardTypeId},
+            </if>
+            <if test="expireDate != null">
+                #{expireDate},
+            </if>
+            <if test="accountId != null">
+                #{accountId},
+            </if>
+            <if test="rawCardId != null">
+                #{rawCardId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_member_card
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_member_card (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            card_number,
+            balance,
+            expense_amount,
+            expense_count,
+            receiver,
+            receiver_name,
+            deposit_count,
+            deposit_amount,
+            publisher,
+            publisher_name,
+            card_type_id,
+            expire_date,
+            account_id,
+            raw_card_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.cardNumber != null">
+                    #{item.cardNumber},
+                </if>
+                <if test="item.cardNumber == null">
+                    '',
+                </if>
+                <if test="item.balance != null">
+                    #{item.balance},
+                </if>
+                <if test="item.balance == null">
+                    0.00,
+                </if>
+                <if test="item.expenseAmount != null">
+                    #{item.expenseAmount},
+                </if>
+                <if test="item.expenseAmount == null">
+                    0.00,
+                </if>
+                <if test="item.expenseCount != null">
+                    #{item.expenseCount},
+                </if>
+                <if test="item.expenseCount == null">
+                    0 ,
+                </if>
+                <if test="item.receiver != null">
+                    #{item.receiver},
+                </if>
+                <if test="item.receiver == null">
+                    0 ,
+                </if>
+                <if test="item.receiverName != null">
+                    #{item.receiverName},
+                </if>
+                <if test="item.receiverName == null">
+                    '',
+                </if>
+                <if test="item.depositCount != null">
+                    #{item.depositCount},
+                </if>
+                <if test="item.depositCount == null">
+                    0 ,
+                </if>
+                <if test="item.depositAmount != null">
+                    #{item.depositAmount},
+                </if>
+                <if test="item.depositAmount == null">
+                    0.00,
+                </if>
+                <if test="item.publisher != null">
+                    #{item.publisher},
+                </if>
+                <if test="item.publisher == null">
+                    0 ,
+                </if>
+                <if test="item.publisherName != null">
+                    #{item.publisherName},
+                </if>
+                <if test="item.publisherName == null">
+                    '',
+                </if>
+                <if test="item.cardTypeId != null">
+                    #{item.cardTypeId},
+                </if>
+                <if test="item.cardTypeId == null">
+                    0 ,
+                </if>
+                <if test="item.expireDate != null">
+                    #{item.expireDate},
+                </if>
+                <if test="item.expireDate == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.accountId != null">
+                    #{item.accountId},
+                </if>
+                <if test="item.accountId == null">
+                    0 ,
+                </if>
+                <if test="item.rawCardId != null">
+                    #{item.rawCardId},
+                </if>
+                <if test="item.rawCardId == null">
+                    0,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="countByAccountId" resultType="java.lang.Integer">
+        select COUNT(1)
+        from legend_member_card
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and account_id = #{accountId}
+    </select>
+
+    <select id="isExistCardNumber" resultType="com.tqmall.legend.entity.account.MemberCard" >
+        select <include refid="BaseColumnList"/>
+         from legend_member_card
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and card_number = #{cardNumber}
+    </select>
+
+    <select id="findByAccountIds" resultType="com.tqmall.legend.entity.account.MemberCard">
+        select <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE is_deleted = 'N' and
+         account_id in
+        (
+        <foreach collection="list" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <select id="findUsedCardType" resultMap="commonPair">
+        select
+          card_type_id as dataF,
+          count(id) as dataS
+        from legend_member_card
+        WHERE is_deleted = 'N'
+        and shop_id = #{shopId}
+        group by card_type_id
+    </select>
+
+    <select id="findAccountIdsWithDel" resultType="com.tqmall.legend.entity.account.MemberCard">
+        select <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE
+        account_id in
+        (
+        <foreach collection="list" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        GROUP by account_id
+        order by gmt_create desc
+    </select>
+
+    <select id="selectGrantedAccountIds" resultType="java.lang.Long">
+        SELECT account_id as accountId
+        from legend_member_card
+        WHERE shop_id = #{shopId}
+        and account_id in
+        (
+        <foreach collection="accountIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and is_deleted = 'N'
+    </select>
+    <select id="selectExistedCardNumbers" resultType="java.lang.String">
+        SELECT card_number as cardNumber
+        from legend_member_card
+        WHERE shop_id = #{shopId}
+        and card_number in
+        (
+        <foreach collection="cardNumbers" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and is_deleted = 'N'
+    </select>
+    <select id="findAllSortedCard" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        ORDER BY account_id, gmt_create
+        limit ${offset}, ${limit}
+    </select>
+    <select id="selectByAccountIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE is_deleted = 'N'
+        and shop_id = #{shopId}
+        and account_id in
+        (
+        <foreach collection="accountIds" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+    <select id="getMemberCardWithDeletedByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE  shop_id = #{shopId}
+        and id in
+        (
+        <foreach collection="ids" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <select id="findByIdContainDeleted" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE
+          shop_id=#{shopId} AND id=#{cardId}
+    </select>
+    <select id="findByRawIdContainDeleted" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE
+        shop_id=#{shopId} AND raw_card_id=#{rawCardId}
+    </select>
+    <select id="findMaxMemberCardId" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE
+        id = (
+          select max(id) from legend_member_card where shop_id = #{shopId}
+        )
+    </select>
+    <select id="getMemberCardListByAccountId" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM legend_member_card
+        WHERE
+        account_id = #{accountId} and is_deleted = 'N'
+    </select>
+</mapper>

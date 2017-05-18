@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.activity.PurchaseBannerConfigDao">
+
+    <resultMap id = "BaseResultMap" type = "PurchaseBannerConfig" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "banner_img_url" property = "bannerImgUrl" />
+        <result column = "effective_date" property = "effectiveDate" />
+        <result column = "expire_date" property = "expireDate" />
+        <result column = "opt_type" property = "optType" />
+        <result column = "display_type" property = "displayType" />
+        <result column = "display_city_ids" property = "displayCityIds" />
+        <result column = "display_shop_ids" property = "displayShopIds" />
+        <result column = "shop_type" property = "shopType" />
+        <result column = "activity_type" property = "activityType" />
+        <result column = "banner_status" property = "bannerStatus" />
+        <result column = "custom_redirect_url" property = "customRedirectUrl" />
+        <result column = "banner_sort" property = "bannerSort" />
+        <result column = "activity_name" property = "activityName" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            banner_img_url as bannerImgUrl,
+            effective_date as effectiveDate,
+            expire_date as expireDate,
+            opt_type as optType,
+            display_type as displayType,
+            display_city_ids as displayCityIds,
+            display_shop_ids as displayShopIds,
+            shop_type as shopType,
+            activity_type as activityType,
+            banner_status as bannerStatus,
+            custom_redirect_url as customRedirectUrl,
+            banner_sort as bannerSort,
+            activity_name as activityName,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "bannerImgUrl != null">
+                    and banner_img_url = #{bannerImgUrl}
+                </if>
+                <if test = "effectiveDate != null">
+                    and effective_date = #{effectiveDate}
+                </if>
+                <if test = "expireDate != null">
+                    and expire_date = #{expireDate}
+                </if>
+                <if test = "optType != null">
+                    and opt_type = #{optType}
+                </if>
+                <if test = "displayType != null">
+                    and (display_type = #{displayType} or display_type = 0)
+                </if>
+                <if test = "displayCityIds != null">
+                    and (FIND_IN_SET( #{displayCityIds}, display_city_ids ) > 0 or display_type = 0)
+                </if>
+                <if test = "displayShopIds != null">
+                    and (FIND_IN_SET( #{displayShopIds}, display_shop_ids ) > 0 or display_type = 0)
+                </if>
+                <if test = "shopType != null">
+                    and (shop_type = #{shopType} or shop_type = 0)
+                </if>
+                <if test = "activityType != null">
+                    and activity_type = #{activityType}
+                </if>
+                <if test = "bannerStatus != null">
+                    and banner_status = #{bannerStatus}
+                </if>
+                <if test = "customRedirectUrl != null">
+                    and custom_redirect_url = #{customRedirectUrl}
+                </if>
+                <if test = "bannerSort != null">
+                    and banner_sort = #{bannerSort}
+                </if>
+                <if test = "activityName != null">
+                    and activity_name like CONCAT('%', #{activityName},'%')
+                </if>
+                <if test="onlyShopType != null">
+                    and shop_type = #{onlyShopType}
+                </if>
+                <if test = "onlyDisplayCityIds != null">
+                    and FIND_IN_SET( #{onlyDisplayCityIds}, display_city_ids ) > 0
+                </if>
+                <if test = "onlyDisplayType != null">
+                    and display_type = #{onlyDisplayType}
+                </if>
+                <if test = "onlyDisplayShopIds != null">
+                    and FIND_IN_SET( #{onlyDisplayShopIds}, display_shop_ids ) > 0
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "bannerImgUrl != null">
+                    banner_img_url = #{bannerImgUrl},
+                </if>
+                <if test = "effectiveDate != null">
+                    effective_date = #{effectiveDate},
+                </if>
+                <if test = "expireDate != null">
+                    expire_date = #{expireDate},
+                </if>
+                <if test = "optType != null">
+                    opt_type = #{optType},
+                </if>
+                <if test = "displayType != null">
+                    display_type = #{displayType},
+                </if>
+                <if test = "displayCityIds != null">
+                    display_city_ids = #{displayCityIds},
+                </if>
+                <if test = "displayShopIds != null">
+                    display_shop_ids = #{displayShopIds},
+                </if>
+                <if test = "shopType != null">
+                    shop_type = #{shopType},
+                </if>
+                <if test = "activityType != null">
+                    activity_type = #{activityType},
+                </if>
+                <if test = "bannerStatus != null">
+                    banner_status = #{bannerStatus},
+                </if>
+                <if test = "customRedirectUrl != null">
+                    custom_redirect_url = #{customRedirectUrl},
+                </if>
+                <if test = "bannerSort != null">
+                    banner_sort = #{bannerSort},
+                </if>
+                <if test = "activityName != null">
+                    activity_name = #{activityName},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_purchase_banner_config
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_banner_config
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_banner_config
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_banner_config
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_purchase_banner_config
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_purchase_banner_config
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_purchase_banner_config
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_purchase_banner_config (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "bannerImgUrl != null">
+                banner_img_url,
+            </if>
+            <if test = "effectiveDate != null">
+                effective_date,
+            </if>
+            <if test = "expireDate != null">
+                expire_date,
+            </if>
+            <if test = "optType != null">
+                opt_type,
+            </if>
+            <if test = "displayType != null">
+                display_type,
+            </if>
+            <if test = "displayCityIds != null">
+                display_city_ids,
+            </if>
+            <if test = "displayShopIds != null">
+                display_shop_ids,
+            </if>
+            <if test = "shopType != null">
+                shop_type,
+            </if>
+            <if test = "activityType != null">
+                activity_type,
+            </if>
+            <if test = "bannerStatus != null">
+                banner_status,
+            </if>
+            <if test = "customRedirectUrl != null">
+                custom_redirect_url,
+            </if>
+            <if test = "bannerSort != null">
+                banner_sort,
+            </if>
+            <if test = "activityName != null">
+                activity_name ,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "bannerImgUrl != null">
+                #{bannerImgUrl},
+            </if>
+            <if test = "effectiveDate != null">
+                #{effectiveDate},
+            </if>
+            <if test = "expireDate != null">
+                #{expireDate},
+            </if>
+            <if test = "optType != null">
+                #{optType},
+            </if>
+            <if test = "displayType != null">
+                #{displayType},
+            </if>
+            <if test = "displayCityIds != null">
+                #{displayCityIds},
+            </if>
+            <if test = "displayShopIds != null">
+                #{displayShopIds},
+            </if>
+            <if test = "shopType != null">
+                #{shopType},
+            </if>
+            <if test = "activityType != null">
+                #{activityType},
+            </if>
+            <if test = "bannerStatus != null">
+                #{bannerStatus},
+            </if>
+            <if test = "customRedirectUrl != null">
+                #{customRedirectUrl},
+            </if>
+            <if test = "bannerSort != null">
+                #{bannerSort},
+            </if>
+            <if test = "activityName != null">
+                #{activityName},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_purchase_banner_config
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_purchase_banner_config (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            banner_img_url,
+            effective_date,
+            expire_date,
+            opt_type,
+            display_type,
+            display_city_ids,
+            display_shop_ids,
+            shop_type,
+            activity_type,
+            banner_status,
+            custom_redirect_url,
+            banner_sort,
+            activity_name,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.bannerImgUrl != null">
+                    #{item.bannerImgUrl},
+                </if>
+                <if test="item.bannerImgUrl == null">
+                    '',
+                </if>
+                <if test="item.effectiveDate != null">
+                    #{item.effectiveDate},
+                </if>
+                <if test="item.effectiveDate == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.expireDate != null">
+                    #{item.expireDate},
+                </if>
+                <if test="item.expireDate == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.optType != null">
+                    #{item.optType},
+                </if>
+                <if test="item.optType == null">
+                    '',
+                </if>
+                <if test="item.displayType != null">
+                    #{item.displayType},
+                </if>
+                <if test="item.displayType == null">
+                    0 ,
+                </if>
+                <if test="item.displayCityIds != null">
+                    #{item.displayCityIds},
+                </if>
+                <if test="item.displayCityIds == null">
+                    '',
+                </if>
+                <if test="item.displayShopIds != null">
+                    #{item.displayShopIds},
+                </if>
+                <if test="item.displayShopIds == null">
+                    '',
+                </if>
+                <if test="item.shopType != null">
+                    #{item.shopType},
+                </if>
+                <if test="item.shopType == null">
+                    0 ,
+                </if>
+                <if test="item.activityType != null">
+                    #{item.activityType},
+                </if>
+                <if test="item.activityType == null">
+                    0 ,
+                </if>
+                <if test="item.bannerStatus != null">
+                    #{item.bannerStatus},
+                </if>
+                <if test="item.bannerStatus == null">
+                    0 ,
+                </if>
+                <if test="item.customRedirectUrl != null">
+                    #{item.customRedirectUrl},
+                </if>
+                <if test="item.customRedirectUrl == null">
+                    '',
+                </if>
+                <if test="item.bannerSort != null">
+                    #{item.bannerSort},
+                </if>
+                <if test="item.bannerSort == null">
+                    0 ,
+                </if>
+                <if test = "item.activityName != null">
+                    #{activityName},
+                </if>
+                <if test = "item.activityName == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="queryByParam" parameterType="com.tqmall.legend.entity.activity.PurchaseBannerConfig" resultMap="BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_banner_config
+        <include refid = "BaseWhereClause" />
+        order by banner_sort
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <select id="selectCountByParam" parameterType="com.tqmall.legend.entity.activity.PurchaseBannerConfig" resultType="java.lang.Integer">
+        select
+        count(1)
+        from legend_purchase_banner_config
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <select id="queryByParamWithStartTime" parameterType="com.tqmall.legend.entity.activity.PurchaseBannerConfig" resultMap="BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_banner_config
+        <include refid = "BaseWhereClause" />
+        <![CDATA[
+         and effective_date <= now()
+        ]]>
+        order by banner_sort
+    </select>
+</mapper>

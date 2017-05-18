@@ -1,0 +1,174 @@
+.to-detail {
+    text-decoration: underline;
+    color: #fd461e;
+}
+
+.buy-form {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bfbfbf;
+    background: #fff;
+}
+
+.buy-form .yqx-input {
+    width: 160px;
+    height: 30px;
+}
+
+.buy-form .form-item + .form-item {
+    margin-left: 10px;
+}
+
+.region-box,
+.region {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.region-box {
+    margin-left: 38px;
+}
+
+.region {
+    width: 57px;
+    height: 29px;
+    line-height: 29px;
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+}
+
+.region.selected {
+    line-height: 27px;
+}
+
+.yqx-table .name {
+    text-align: left;
+}
+
+.region + .region {
+    margin-left: 10px;
+}
+
+.search-btn {
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.sub-title {
+    margin-top: 10px;
+}
+
+.detail-box {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #bfbfbf;
+}
+
+.detail-title {
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #fff;
+    background: #5e626e;
+}
+
+.detail-box .table-box {
+    padding: 0 20px;
+}
+
+.detail-box .table-box .text {
+    padding-left: 20px;
+}
+
+.detail-box .table-box .key {
+    width: 60px;
+    padding-left: 0;
+    text-align: left;
+}
+
+.detail-box .table-box .yqx-table {
+    border-top: 0;
+}
+.detail-box .table-box .yqx-table tr {
+    background: #fff;
+}
+
+.detail-box .table-box .yqx-table tr:last-child td {
+    border-top: 0;
+}
+
+.detail-box .table-box .yqx-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.detail-box .yqx-table tbody td {
+    padding: 0;
+    height: 50px;
+}
+
+.yqx-table .js-detail-tr {
+    cursor: pointer;
+}
+
+.detail-main .yqx-table td {
+    padding-left: 11px;
+    text-align: left;
+}
+
+.detail-main .detail-btn {
+    position: absolute;
+    right: 0;
+    top: -9px;
+}
+
+.declare-info {
+    width: 100%;
+}
+
+.yqx-table .car-info {
+    white-space: inherit !important;
+}
+
+.wrapper-main .text-r {
+    text-align: right !important;
+}
+
+.person-icon {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.price .measure-unit {
+    margin-left: 0;
+}
+
+.wrapper-main .yqx-table td {
+    white-space: normal;
+    word-break: break-all;
+}
+
+.has-map .key > div {
+    height: 100%;
+    padding-top: 7px;
+}
+
+.has-map td.text > p {
+    padding-top: 10px;
+}
+
+#map {
+    width: 700px;
+    height: 426px;
+    vertical-align: bottom;
+    margin: 10px 0;
+}
+
+#distance .text {
+    padding: 0;
+    color: #fd461e;
+}

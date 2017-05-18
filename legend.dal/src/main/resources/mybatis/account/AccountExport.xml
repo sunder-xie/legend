@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tqmall.legend.dao.account.AccountExportDao">
+	<select id="pageMember"
+			parameterType="com.tqmall.legend.dao.account.param.MemberExportPagedParam"
+			resultType="com.tqmall.legend.entity.account.MemberExportEntity">
+		select
+			c.id as customerId,
+			c.customer_name as customerName,
+			c.mobile as mobile,
+			d.type_name as cardInfo,
+			a.card_number as cardNum,
+			a.balance as balance,
+			a.deposit_amount as cumulativeDeposit,
+			a.expire_date as expireDate,
+			a.gmt_create as createDate 
+		from
+			<include refid="pageMemberFromClause"/>
+		where
+			<include refid="pageMemberWhereClause"/>
+		<include refid="COMMON.ORDER_BY"/>
+		<include refid="COMMON.LIMIT"/>
+	</select>
+
+	<select id="countMember"
+			parameterType="com.tqmall.legend.dao.account.param.MemberExportParam"
+			resultType="java.lang.Integer">
+		SELECT count(1)
+		FROM
+			<include refid="pageMemberFromClause"/>
+		WHERE
+			<include refid="pageMemberWhereClause"/>
+	</select>
+
+	<select id="summarizeMember"
+			parameterType="com.tqmall.legend.dao.account.param.MemberExportParam"
+			resultType="com.tqmall.legend.entity.account.MemberExportSummary">
+		SELECT
+			count(1) as numberSummary,
+			sum(a.balance) as balanceSummary,
+			sum(a.deposit_amount) as depositSummary
+		FROM
+			<include refid="pageMemberFromClause"/>
+		WHERE
+			<include refid="pageMemberWhereClause"/>
+
+	</select>
+	
+	<sql id="pageMemberFromClause">
+		legend_member_card a join
+		legend_account_info b join
+		legend_customer c join
+		legend_member_card_info d on
+		a.account_id = b.id and b.customer_id = c.id and a.card_type_id = d.id
+	</sql>
+	<sql id="pageMemberWhereClause">
+		a.is_deleted = 'N'
+		and a.shop_id = #{shopId}
+		<if test="cardInfoId != null">
+			and a.card_type_id = #{cardInfoId}
+		</if>
+		<if test="cardNum != null">
+			and a.card_number = #{cardNum}
+		</if>
+		and a.expire_date > #{now}
+		and c.is_deleted = 'N'
+		and c.shop_id = #{shopId}
+		<if test="mobile != null">
+			and c.mobile = #{mobile}
+		</if>
+		<if test="customerName != null">
+			AND c.customer_name LIKE CONCAT('%',#{customerName},'%')
+		</if>
+	</sql>
+
+	<select id="pageCombo"
+			parameterType="com.tqmall.legend.dao.account.param.ComboExportPagedParam"
+			resultType="com.tqmall.legend.entity.account.ComboExportEntity">
+		SELECT
+			c.id as customerId,
+			c.customer_name as customerName,
+			c.mobile as mobile,
+			e.combo_name as comboInfo,
+			d.service_name as comboService,
+			(d.total_service_count - d.used_service_count) as remainNumber,
+			a.expire_date as expireDate,
+			a.gmt_create as createDate
+		FROM 
+			<include refid="pageComboFromClause"/>
+		WHERE
+			<include refid="pageComboWhereClause"/>
+		<include refid="COMMON.ORDER_BY"/>
+		<include refid="COMMON.LIMIT"/>
+	</select>
+
+	<select id="countCombo"
+			parameterType="com.tqmall.legend.dao.account.param.ComboExportParam"
+			resultType="java.lang.Integer">
+		SELECT count(1)
+		FROM
+			<include refid="pageComboFromClause"/>
+		WHERE
+			<include refid="pageComboWhereClause"/>
+	</select>
+
+	<select id="summarizeCombo"
+			parameterType="com.tqmall.legend.dao.account.param.ComboExportParam"
+			resultType="com.tqmall.legend.entity.account.ComboExportSummary">
+		SELECT
+			count(DISTINCT a.id) as comboNumberSummary,
+			count(DISTINCT d.service_id) as serviceNumberSummary,
+			sum(d.total_service_count - d.used_service_count) as comboServiceRemainSummary
+		FROM
+		<include refid="pageComboFromClause"/>
+		WHERE
+		<include refid="pageComboWhereClause"/>
+	</select>
+
+	<sql id="pageComboFromClause">
+		legend_account_combo a JOIN
+		legend_account_info b JOIN
+		legend_customer c JOIN
+		legend_account_combo_service_rel d JOIN
+		legend_combo_info e on
+		a.account_id = b.id AND b.customer_id = c.id AND d.combo_id = a.id and a.combo_info_id = e.id
+	</sql>
+	
+	<sql id="pageComboWhereClause">
+		a.is_deleted = 'N'
+		AND a.shop_id = #{shopId}
+		<if test="comboInfoId != null">
+			AND a.combo_info_id = #{comboInfoId}
+		</if>
+		AND a.combo_status = 0
+		AND a.expire_date > #{now}
+		AND c.is_deleted = 'N'
+		AND c.shop_id = #{shopId}
+		<if test="mobile != null">
+			AND c.mobile = #{mobile}
+		</if>
+		<if test="customerName != null">
+			AND c.customer_name LIKE CONCAT('%',#{customerName},'%')
+		</if>
+		<if test="serviceId != null">
+			AND d.service_id = #{serviceId}
+		</if>
+		AND d.total_service_count > d.used_service_count
+	</sql>
+
+
+</mapper>

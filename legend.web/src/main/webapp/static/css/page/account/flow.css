@@ -1,0 +1,134 @@
+body{
+    overflow-x: auto;
+}
+
+i {
+    font-style: normal;
+}
+.fr {
+    float: right !important;
+}
+
+.yqx-group {
+    margin-bottom:10px;
+    font-size: 12px;
+}
+
+.info-region .yqx-table{
+    width:auto;
+}
+
+.yqx-group,
+#info .yqx-group-head{
+    background: #fff;
+}
+
+#info .yqx-group-content{
+    padding:0;
+}
+
+.yqx-table>tbody>tr>td a, .yqx-table>thead>tr>th a{
+    color:#0470f5;
+}
+
+.form-item {
+    width: 160px;
+}
+
+.headline{
+    margin-bottom:10px;
+}
+.list{
+    width:130px;
+    line-height:28px;
+    height:28px;
+}
+
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{text-align: center;padding: 10px;}
+.retreat-form-width{ width: 80px;}
+.retreat-item-width{ width: 140px; text-align: left;}
+.retreat-tip{ line-height: 40px; text-align: center; color: #f2666a;}
+
+.yqx-table>tbody>tr>.text-l, .yqx-table>thead>tr>.text-l, .yqx-table>tr>.text-l, .yqx-table>tr>.text-l{ text-align: left;}
+
+.overflow{
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.w150{
+    max-width: 150px;
+}
+.blue{
+    color: #0D71F5;
+}
+.disabled{
+    cursor: not-allowed;
+    color: grey;
+}
+
+.fl-box button, .fl-box p, .fl-box div {
+    float: left;
+}
+
+.search-form * {
+    line-height: 30px;
+}
+
+.date-box {
+    margin-right: 10px;
+}
+
+.date {
+    text-decoration: underline;
+}
+
+.date:hover,
+.date.selected {
+    color: #617a19;
+}
+
+.count-sum {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.count-sum .money {
+    color: #fd461e;
+}
+
+.count-sum .amount {
+    margin-right: 25px;
+}
+
+.yqx-table>thead>tr>th, .yqx-table>tr>th,.yqx-table>tbody>tr>td, .yqx-table>tr>td{
+    text-align: left;
+    padding-left: 15px;
+}
+.yqx-table>tr>.text-r,.yqx-table>tbody>tr>.text-r, .yqx-table>tr>.text-r{
+    text-align: right;
+    padding-right: 40px;
+}
+.yqx-table>tr>.text-r1,.yqx-table>tbody>tr>.text-r1, .yqx-table>tr>.text-r1{
+    text-align: right;
+    padding-right: 30px;
+}
+.text-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

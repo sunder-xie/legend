@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.customer.VisitLogDao">
+
+    <resultMap id="BaseResultMap" type="VisitLog" extends="COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "satisfaction_star" property = "satisfactionStar" />
+        <result column = "purchase_intention_star" property = "purchaseIntentionStar" />
+        <result column = "next_visit_time" property = "nextVisitTime" />
+        <result column = "visit_time" property = "visitTime" />
+        <result column = "visit_method" property = "visitMethod" />
+        <result column = "content" property = "content" />
+        <result column = "visitor_name" property = "visitorName" />
+        <result column = "visitor_id" property = "visitorId" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "visit_type" property = "visitType" />
+        <result column = "expired_time" property = "expiredTime" />
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        satisfaction_star as satisfactionStar,
+        purchase_intention_star as purchaseIntentionStar,
+        next_visit_time as nextVisitTime,
+        visit_time as visitTime,
+        visit_method as visitMethod,
+        content as content,
+        visitor_name as visitorName,
+        visitor_id as visitorId,
+        customer_car_id as customerCarId,
+        customer_id as customerId,
+        visit_type as visitType,
+        expired_time as expiredTime,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "satisfactionStar != null">
+                    and satisfaction_star = #{satisfactionStar}
+                </if>
+                <if test = "purchaseIntentionStar != null">
+                    and purchaseIntention_star = #{purchaseIntentionStar}
+                </if>
+                <if test = "nextVisitTime != null">
+                    and next_visit_time = #{nextVisitTime}
+                </if>
+                <if test = "visitTime != null">
+                    and visit_time = #{visitTime}
+                </if>
+                <if test = "visitMethod != null">
+                    and visit_method = #{visitMethod}
+                </if>
+                <if test = "content != null">
+                    and content = #{content}
+                </if>
+                <if test = "visitorName != null">
+                    and visitor_name = #{visitorName}
+                </if>
+                <if test = "visitorId != null">
+                    and visitor_id = #{visitorId}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "visitType != null">
+                    and visit_type = #{visitType}
+                </if>
+                <if test = "expiredTime != null">
+                    and expired_time = #{expiredTime}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test = "shopId != null">
+                shop_id = #{shopId},
+            </if>
+            <if test = "satisfactionStar != null">
+                satisfaction_star = #{satisfactionStar},
+            </if>
+            <if test = "purchaseIntentionStar != null">
+                purchaseIntention_star = #{purchaseIntentionStar},
+            </if>
+            <if test = "nextVisitTime != null">
+                next_visit_time = #{nextVisitTime},
+            </if>
+            <if test = "visitTime != null">
+                visit_time = #{visitTime},
+            </if>
+            <if test = "visitMethod != null">
+                visit_method = #{visitMethod},
+            </if>
+            <if test = "content != null">
+                content = #{content},
+            </if>
+            <if test = "visitorName != null">
+                visitor_name = #{visitorName},
+            </if>
+            <if test = "visitorId != null">
+                visitor_id = #{visitorId},
+            </if>
+            <if test = "customerCarId != null">
+                customer_car_id = #{customerCarId},
+            </if>
+            <if test = "customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test = "visitType != null">
+                visit_type = #{visitType},
+            </if>
+            <if test = "expiredTime != null">
+                expired_time = #{expiredTime},
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_visit_log
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_visit_log
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_visit_log
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_visit_log
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_visit_log
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_visit_log
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_visit_log
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_visit_log (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "satisfactionStar != null">
+                satisfaction_star,
+            </if>
+            <if test = "purchaseIntentionStar != null">
+                purchase_intention_star,
+            </if>
+            <if test = "nextVisitTime != null">
+                next_visit_time,
+            </if>
+            <if test = "visitTime != null">
+                visit_time,
+            </if>
+            <if test = "visitMethod != null">
+                visit_method,
+            </if>
+            <if test = "content != null">
+                content,
+            </if>
+            <if test = "visitorName != null">
+                visitor_name,
+            </if>
+            <if test = "visitorId != null">
+                visitor_id,
+            </if>
+            <if test = "customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test = "customerId != null">
+                customer_id,
+            </if>
+            <if test = "visitType != null">
+                visit_type,
+            </if>
+            <if test = "expiredTime != null">
+                expired_time,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "satisfactionStar != null">
+                #{satisfactionStar},
+            </if>
+            <if test = "purchaseIntentionStar != null">
+                #{purchaseIntentionStar},
+            </if>
+            <if test = "nextVisitTime != null">
+                #{nextVisitTime},
+            </if>
+            <if test = "visitTime != null">
+                #{visitTime},
+            </if>
+            <if test = "visitMethod != null">
+                #{visitMethod},
+            </if>
+            <if test = "content != null">
+                #{content},
+            </if>
+            <if test = "visitorName != null">
+                #{visitorName},
+            </if>
+            <if test = "visitorId != null">
+                #{visitorId},
+            </if>
+            <if test = "customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test = "customerId != null">
+                #{customerId},
+            </if>
+            <if test = "visitType != null">
+                #{visitType},
+            </if>
+            <if test = "expiredTime != null">
+                #{expiredTime},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_visit_log
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+</mapper>

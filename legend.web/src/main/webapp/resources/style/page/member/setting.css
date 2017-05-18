@@ -1,0 +1,96 @@
+.qxy_group .group_content {
+	padding: 0px;
+}
+
+.shop-name-container {
+	background: #f77c7e;
+	height: 110px;
+	position: relative;
+}
+
+.shop-name-container .company-name {
+	padding-top: 25px;
+	color: white;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+.shop-name-container .shop-name {
+	padding-top: 10px;
+	color: white;
+	font-size: 30px;
+	padding-left: 20px;
+}
+/*满意度调查样式*/
+.shop-name-container .shop-name a{font-size: 12px;text-decoration: underline;margin-left: 8px;}
+
+.qxy_group_userinfo .group_head {
+	background-color: #efecdf;
+}
+
+.qxy_group_userinfo .group_content {
+	background-color: #f9f6e9;
+}
+
+.field_box {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.qxy_form  .form_item, .qxy_form  .form_row {
+	margin-bottom: 0;
+}
+
+.qxy_form {
+	padding: 30px 22px;
+}
+.qxy_group .group_head .shopApp{background: url(../../img/page/member/app.gif) 1px 5px no-repeat #f7f7f7;}
+
+.qxy_group .group_head .setTechnician{
+	background: url(../../img/page/member/check.png) 1px 5px no-repeat #f7f7f7;
+}
+
+.qxy_group .group_head .btn_bank{background: url(../../img/page/member/bank.png) 2px 7px no-repeat #f7f7f7;}
+
+.technician_dialog {
+	display: none;
+}
+.technician_icon{
+	position: inherit;
+	margin: 9% 35%;
+}
+.tel{
+	display: inline;
+}
+.technician_status1{
+	background: url(../../img/page/member/check.png) 10px 10px no-repeat red;
+	color: white;
+	padding: 0px 40px;
+}
+.technician_status2{
+	background: url(../../img/page/member/check.png) 10px 10px no-repeat green;
+	color: white;
+	padding: 0px 40px;
+}
+.technician_status img{
+	width: 10px;
+	height: 10px;
+}
+.technician_status p{
+	color:white;
+}
+
+/**
+ * ch 2016-03-11
+ * top排行榜入口样式 start
+ */
+.top-ranking{height:110px;width: 207px;background: url(../../img/page/top-ranking/top-ranking-bg.gif) no-repeat center;position: absolute;top:0;right:0;text-align: right;color: #333;}
+.top-ranking .ce-number{color:#ff4d50;font-size:24px;}
+.top-ranking .ce-fuhao{color: #ff4d50;}
+.top-ranking p{padding-right: 8px;}
+.top-ranking .txt1{margin-top: 8px;line-height: 20px;}
+.top-ranking .txt2{margin-top: 8px;position: relative;padding-right:20px;}
+.top-ranking .txt2:after{content: "";position: absolute;right:10px;top:2px;width: 7px;height:7px;background: url(../../img/page/top-ranking/jian-tou.png) no-repeat center;}
+/**
+ * top排行榜入口样式 end
+ */

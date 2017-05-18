@@ -1,0 +1,273 @@
+
+/* css */
+.checkser {
+    width:100%;
+    overflow: hidden;
+    /*margin-top: 20px;*/
+}
+.khsear {
+    width: 200px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #dad9d9;
+    padding-left: 10px;
+    border-radius:5px;
+}
+.searchButton {
+    width:80px;
+    height:38px;
+    margin-top:2px;
+    background-color: #32cd32;
+    color:#fff;
+    font-weight: bold;
+    border-radius:2px;
+    cursor:pointer;
+}
+.s_box {
+    height: 105px;
+    padding-top: 20px;
+}
+.s_left {
+    width: 900px;
+    display: block;
+    float: left;
+}
+
+/*.s_right {
+    float: right;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    margin: 32px auto;
+    font-size: 18px;
+    color: #383838;
+}*/
+
+
+.checkser .s_left>li {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-bottom:10px;
+    color: #535353;
+}
+.stext {
+    width: 338px;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    padding-left: 10px;
+    margin-left: 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+.selcont {
+    width:155px;
+    height: 38px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+li .chosen-container{
+    margin-left:10px;
+}
+.w_ge {
+    width: 147px;
+    padding-left: 10px;
+    margin: 0 10px;
+}
+
+.cont {
+    display: block;
+    width: 990px;
+    position: relative;
+}
+.cont .current{
+    border:1px solid #fa4837;
+}
+
+.cont li {
+    width: 235px;
+    height: 306px;
+    background: #f9f9f9;
+    float: left;
+    border: 1px solid #cdcdcd;
+    margin: 0 10px 10px 0;
+}
+.ltop {
+    height: 60px;
+    cursor: pointer;
+    padding: 15px 10px 0;
+    border-bottom: 1px dotted #aebdc7;
+}
+
+.ltop:hover .delete-btn {
+    display:block;
+}
+
+.llet {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+}
+.lright {
+    float: right;
+    width: 160px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    overflow: hidden;
+}
+.midc {
+    padding: 7px 0;
+    border-bottom: 1px dotted #aebdc7;
+    height:166px;
+    position: relative;
+}
+.ptxt {
+    width: 100%;
+    padding: 3px 0;
+    line-height: 20px;
+}
+.pleft {
+    float: left;
+    padding-left: 15px;
+}
+.pright {
+    float: left;
+    padding-right: 15px;
+}
+.ptxt div.light {
+    font-size:16px;
+    color:#FFA500;
+}
+
+.qing {
+    width:100%;
+    height:10px;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px dotted #aebdc7;
+    position:absolute;
+    bottom: 0;
+}
+.qing span {
+    font-weight: bold;
+    margin: 0 15px;
+}
+.new_settlement_btn {
+    display: none;
+    color: #3f84ae;
+}
+
+.bing {
+    padding: 15px;
+    height:10px;
+}
+.bing span {
+    font-weight: bold;
+    margin: 0 5px;
+    color: #fa4837;
+}
+
+.but_left {
+    width: 100px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #c1c1c1;
+    background-color: #f9f9f9;
+    margin-top: 12px;
+    margin-left: 10px;
+    float: left;
+    cursor: pointer;
+}
+.but_right {
+    width: 100px;
+    height: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    background-color: #f9f9f9;
+    margin-top: 12px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+.but_left:hover, .but_right:hover {
+    background-color: #ececec;
+}
+
+.cont li.jiesuan {
+    background-image: url("../../images/zhang.png?20151127");
+    background-repeat: no-repeat;
+    background-position: 80px 194px;
+}
+
+.delete-btn{
+    color: #fa4837;
+    display: none;
+    float:right;
+}
+.order_item:hover {
+    border:1px solid #fa4837;
+}
+.order_item:hover .delete-btn{
+    display: block;
+}
+.order_item:hover .new_settlement_btn{
+    display: block;
+}
+
+.in_tb {
+    height: 45px;
+    line-height: 45px;
+    margin: 30px 0 20px;
+}
+.intl {
+    display: block;
+    height: 100%;
+    width: 140px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #f43232;
+    border-radius: 3px;
+    float: left;
+}
+a.intl:hover {
+    color: #000000;
+}
+.intr {
+    float: right;
+    color: #1d38cf;
+    text-decoration: underline;
+    margin-top:46px;
+}
+.yiwan {
+    background-color: #f49733;
+}
+.order_tasking_btn {
+    background: none;
+    color: #3f84ae;
+    border: none;
+}
+.order_tasking_btn:hover {
+    background: none;
+}
+.wrapper .gd_tab{
+    margin: 0 0 20px;
+}
+.form-width{ width: 165px;}
+.form-width-car{ width: 600px;}
+.no-margin{ margin-top: 0;}

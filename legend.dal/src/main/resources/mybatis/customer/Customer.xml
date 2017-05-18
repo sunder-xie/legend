@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.customer.CustomerDao">
+
+    <resultMap id="BaseResultMap" type="Customer" extends="COMMON.BASE_RESULT_MAP">
+        <result column = "customer_name" property = "customerName" />
+        <result column = "mobile" property = "mobile" />
+        <result column = "tel" property = "tel" />
+        <result column = "shop_id" property = "shopId" />
+        <result column = "haode_user_id" property = "haodeUserId" />
+        <result column = "driving_license" property = "drivingLicense" />
+        <result column = "customer_addr" property = "customerAddr" />
+        <result column = "birthday" property = "birthday" />
+        <result column = "company" property = "company" />
+        <result column = "identity_card" property = "identityCard" />
+        <result column = "license_check_date" property = "licenseCheckDate" />
+        <result column = "license_get_date" property = "licenseGetDate" />
+        <result column = "contact" property = "contact" />
+        <result column = "contact_mobile" property = "contactMobile" />
+        <result column = "source" property = "source" />
+        <result column = "remark" property = "remark" />
+        <result column = "ver" property="ver"/>
+        <result column = "refer" property="refer"/>
+        <result column = "email" property="email"/>
+        <result column = "import_flag" property="importFlag"/>
+    </resultMap>
+
+    <resultMap id="commonPairMap" type="com.tqmall.legend.bi.entity.CommonPair">
+        <result column="mobile" property="dataF" javaType="string"/>
+        <result column="id" property="dataS" javaType="long"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        customer_name as customerName,
+        mobile as mobile,
+        tel as tel,
+        shop_id as shopId,
+        haode_user_id as haodeUserId,
+        driving_license as drivingLicense,
+        customer_addr as customerAddr,
+        birthday as birthday,
+        company as company,
+        identity_card as identityCard,
+        license_check_date as licenseCheckDate,
+        license_get_date as licenseGetDate,
+        contact as contact,
+        contact_mobile as contactMobile,
+        source as source,
+        remark as remark,
+        ver as ver,
+        refer as refer,
+        email as email,
+        import_flag as importFlag,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test = "customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test = "mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test = "tel != null">
+                    and tel = #{tel}
+                </if>
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "haodeUserId != null">
+                    and haode_user_id = #{haodeUserId}
+                </if>
+                <if test = "haodeUserIdThan != null">
+                    <![CDATA[
+                    and haode_user_id > #{haodeUserIdThan}
+                    ]]>
+                </if>
+                <if test="customerIdList != null">
+                    and id in (
+                    <foreach collection="customerIdList" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test = "drivingLicense != null">
+                    and driving_license = #{drivingLicense}
+                </if>
+                <if test = "customerAddr != null">
+                    and customer_addr = #{customerAddr}
+                </if>
+                <if test = "birthday != null">
+                    and birthday = #{birthday}
+                </if>
+                <if test = "company != null">
+                    and company = #{company}
+                </if>
+                <if test = "identityCard != null">
+                    and identity_card = #{identityCard}
+                </if>
+                <if test = "licenseCheckDate != null">
+                    and license_check_date = #{licenseCheckDate}
+                </if>
+                <if test = "licenseGetDate != null">
+                    and license_get_date = #{licenseGetDate}
+                </if>
+                <if test = "contact != null">
+                    and contact = #{contact}
+                </if>
+                <if test = "contactMobile != null">
+                    and contact_mobile = #{contactMobile}
+                </if>
+                <if test = "source != null">
+                    and source = #{source}
+                </if>
+                <if test = "companyLike != null">
+                    and company like CONCAT('%',#{companyLike},'%')
+                </if>
+                <if test = "remark != null">
+                    and remark = #{remark}
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="email != null">
+                    and email = #{email}
+                </if>
+                <if test="importFlag != null">
+                    and import_flag = #{importFlag}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test = "customerName != null">
+                customer_name = #{customerName},
+            </if>
+            <if test = "mobile != null">
+                mobile = #{mobile},
+            </if>
+            <if test = "tel != null">
+                tel = #{tel},
+            </if>
+            <if test = "shopId != null">
+                shop_id = #{shopId},
+            </if>
+            <if test = "haodeUserId != null">
+                haode_user_id = #{haodeUserId},
+            </if>
+            <if test = "drivingLicense != null">
+                driving_license = #{drivingLicense},
+            </if>
+            <if test = "customerAddr != null">
+                customer_addr = #{customerAddr},
+            </if>
+            <if test = "birthday != null">
+                birthday = #{birthday},
+            </if>
+            <if test = "company != null">
+                company = #{company},
+            </if>
+            <if test = "identityCard != null">
+                identity_card = #{identityCard},
+            </if>
+            <if test = "licenseCheckDate != null">
+                license_check_date = #{licenseCheckDate},
+            </if>
+            <if test = "licenseGetDate != null">
+                license_get_date = #{licenseGetDate},
+            </if>
+            <if test = "contact != null">
+                contact = #{contact},
+            </if>
+            <if test = "contactMobile != null">
+                contact_mobile = #{contactMobile},
+            </if>
+            <if test = "source != null">
+                source = #{source},
+            </if>
+            <if test = "remark != null">
+                remark = #{remark},
+            </if>
+            <if test="ver != null">
+                ver = #{ver},
+            </if>
+            <if test="refer != null">
+                refer = #{refer},
+            </if>
+            <if test="email != null">
+                email = #{email},
+            </if>
+            <if test="importFlag != null">
+                import_flag = #{importFlag},
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_customer
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        where id = #{id}
+        and is_deleted = 'N'
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="getCustomerByCarId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        where id = #{customerId} and shop_id = #{shopId} and is_deleted = 'N'
+        order by gmt_modified desc
+        limit 0,4
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <select id="selectByIdss" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        where id in
+        (
+        <foreach collection="ids" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and shop_id = #{shopId}
+    </select>
+
+    <!-- 根据IDS和mobile批量查询 -->
+    <select id="selectByIdsAndMobile" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        where id in
+        (
+        <foreach collection="ids" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and mobile = #{mobile}
+        and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_customer
+        set is_deleted='Y',gmt_modified = now()
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_customer
+        set is_deleted='Y',gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_customer
+        set is_deleted='Y',gmt_modified = now()
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 根据shopId删除,重新初始化时使用 -->
+    <update id="deleteByShopId">
+        update legend_customer
+        set is_deleted='Y',gmt_modified = now()
+        where shop_id = #{shopId}
+        and is_deleted='N'
+    </update>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_customer (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "customerName != null">
+                customer_name,
+            </if>
+            <if test = "mobile != null">
+                mobile,
+            </if>
+            <if test = "tel != null">
+                tel,
+            </if>
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "haodeUserId != null">
+                haode_user_id,
+            </if>
+            <if test = "drivingLicense != null">
+                driving_license,
+            </if>
+            <if test = "customerAddr != null">
+                customer_addr,
+            </if>
+            <if test = "birthday != null">
+                birthday,
+            </if>
+            <if test = "company != null">
+                company,
+            </if>
+            <if test = "identityCard != null">
+                identity_card,
+            </if>
+            <if test = "licenseCheckDate != null">
+                license_check_date,
+            </if>
+            <if test = "licenseGetDate != null">
+                license_get_date,
+            </if>
+            <if test = "contact != null">
+                contact,
+            </if>
+            <if test = "contactMobile != null">
+                contact_mobile,
+            </if>
+            <if test = "source != null">
+                source,
+            </if>
+            <if test = "remark != null">
+                remark,
+            </if>
+            <if test="ver != null">
+                ver,
+            </if>
+            <if test="refer != null">
+                refer,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="importFlag != null">
+                import_flag,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "customerName != null">
+                #{customerName},
+            </if>
+            <if test = "mobile != null">
+                #{mobile},
+            </if>
+            <if test = "tel != null">
+                #{tel},
+            </if>
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "haodeUserId != null">
+                #{haodeUserId},
+            </if>
+            <if test = "drivingLicense != null">
+                #{drivingLicense},
+            </if>
+            <if test = "customerAddr != null">
+                #{customerAddr},
+            </if>
+            <if test = "birthday != null">
+                #{birthday},
+            </if>
+            <if test = "company != null">
+                #{company},
+            </if>
+            <if test = "identityCard != null">
+                #{identityCard},
+            </if>
+            <if test = "licenseCheckDate != null">
+                #{licenseCheckDate},
+            </if>
+            <if test = "licenseGetDate != null">
+                #{licenseGetDate},
+            </if>
+            <if test = "contact != null">
+                #{contact},
+            </if>
+            <if test = "contactMobile != null">
+                #{contactMobile},
+            </if>
+            <if test = "source != null">
+                #{source},
+            </if>
+            <if test = "remark != null">
+                #{remark},
+            </if>
+            <if test="ver != null">
+                #{ver},
+            </if>
+            <if test="refer != null">
+                #{refer},
+            </if>
+            <if test="email != null">
+                #{email},
+            </if>
+            <if test="importFlag != null">
+                #{importFlag},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_customer
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!--通过姓名/手机号码获得用户信息-->
+    <select id="getCustomerByNameMobile" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        where shop_id= #{shopId} and is_deleted="N"
+        <if test=" mobile != null">
+            and mobile like CONCAT('%',#{mobile},'%')
+        </if>
+        <if test=" customerName != null">
+            and customer_name like CONCAT('%',#{customerName},'%')
+        </if>
+    </select>
+
+    <!--批量插入-->
+    <insert id = "batchInsert" parameterType="java.util.List">
+        insert into legend_customer (
+        is_deleted,
+        gmt_create,
+        creator,
+        gmt_modified,
+        modifier,
+        customer_name,
+        mobile,
+        tel,
+        shop_id,
+        haode_user_id,
+        driving_license,
+        customer_addr,
+        birthday,
+        company,
+        identity_card,
+        license_check_date,
+        license_get_date,
+        contact,
+        contact_mobile,
+        ver,
+        refer,
+        remark,
+        email,
+        import_flag
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            'N',
+            now(),
+            #{item.creator},
+            now(),
+            #{item.creator},
+            #{item.customerName},
+            #{item.mobile},
+            <if test = "item.tel != null">#{item.tel},</if>
+            <if test = "item.tel == null">'',</if>
+            #{item.shopId},
+            <if test = "item.haodeUserId != null">#{item.haodeUserId},</if>
+            <if test = "item.haodeUserId == null">0,</if>
+            <if test = "item.drivingLicense != null">#{item.drivingLicense},</if>
+            <if test = "item.drivingLicense == null">NULL,</if>
+            <if test = "item.customerAddr != null">#{item.customerAddr},</if>
+            <if test = "item.customerAddr == null">NULL,</if>
+            <if test = "item.birthday != null">#{item.birthday},</if>
+            <if test = "item.birthday == null">NULL,</if>
+            <if test = "item.company != null">#{item.company},</if>
+            <if test = "item.company == null">NULL,</if>
+            <if test = "item.identityCard != null">#{item.identityCard},</if>
+            <if test = "item.identityCard == null">NULL,</if>
+            <if test = "item.licenseCheckDate != null">#{item.licenseCheckDate},</if>
+            <if test = "item.licenseCheckDate == null">NULL,</if>
+            <if test = "item.licenseGetDate != null">#{item.licenseGetDate},</if>
+            <if test = "item.licenseGetDate == null">NULL,</if>
+            <if test = "item.contact != null">#{item.contact},</if>
+            <if test = "item.contact == null">NULL,</if>
+            <if test = "item.contactMobile != null">#{item.contactMobile},</if>
+            <if test = "item.contactMobile == null">NULL,</if>
+            <if test = "item.ver != null">#{item.ver},</if>
+            <if test = "item.ver == null">NULL ,</if>
+            <if test = "item.refer != null">#{item.refer},</if>
+            <if test = "item.refer == null">0,</if>
+            <if test = "item.remark != null">#{item.remark},</if>
+            <if test = "item.remark == null">NULL,</if>
+            <if test = "item.email != null">#{item.email},</if>
+            <if test = "item.email == null">'',</if>
+            <if test = "item.importFlag != null">#{item.importFlag}</if>
+            <if test = "item.importFlag == null">''</if>
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="searchCompanyList" resultMap="BaseResultMap">
+        select
+       DISTINCT (company)
+        from legend_customer
+        where shop_id= #{shopId} and is_deleted="N" and company is not null and company !=''
+        <if test=" company != null">
+            and company like CONCAT('%',#{company},'%')
+        </if>
+    </select>
+
+    <!--数据迁移用的-->
+    <select id="getCustomerByGroupMobile" resultType="com.tqmall.legend.entity.customer.Customer">
+        select <include refid="BaseColumnList"/> from
+        legend_customer
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and mobile !=''
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <select id="selectByMobiles" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer
+        where mobile in
+        (
+        <foreach collection="mobiles" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and shop_id = #{shopId}
+        and is_deleted = 'N'
+    </select>
+    <select id="getPhoneCustomerIdPairList" resultMap="commonPairMap">
+        SELECT mobile, id
+        FROM legend_customer
+        WHERE shop_id = #{shopId}
+        and is_deleted = 'N'
+    </select>
+</mapper>

@@ -1,0 +1,85 @@
+/*-----公共 下拉列表 样式 start-------*/
+
+.qxy_input_downlist {
+	position: absolute;
+	background-color: #eceaea;
+	border: 1px solid #cecab4;
+	font-size: 14px;
+	z-index: 15;
+	width: auto;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px #ccc;
+	+left:0;
+	+top:38px;
+	text-align: left;
+}
+
+.qxy_input_downlist ul li {
+	height: 30px;
+	cursor: pointer;
+}
+
+.qxy_input_downlist ul.list_title {
+	border-bottom: 1px solid #cecab4;
+}
+.qxy_input_downlist ul.list_content{
+	max-height: 150px;
+	overflow-y: scroll;
+}
+.qxy_input_downlist ul.list_content li{
+	border-bottom: 1px dotted #dadada;
+}
+.qxy_input_downlist ul.list_content li:last-child{
+	border: none;
+}
+.qxy_input_downlist ul.list_content li:hover {
+	background: #fff;
+}
+.qxy_input_downlist ul.list_content li.current {
+	background: #fff;
+}
+
+.qxy_input_downlist ul li b,
+.qxy_input_downlist ul li span{	
+	width: 49%;
+	display: inline-block;
+	+display: inline;
+	+zoom:1;
+	line-height: 30px;
+	text-indent: 15px;
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+	overflow:hidden;
+	height: 30px;
+}
+.qxy_input_downlist .list_bottom{
+	padding: 5px 0;
+	text-align: center;
+	padding-right: 6px;
+	border-top: 1px solid #cecab4;
+}
+.qxy_input_downlist .list_bottom .qxy_add_btn{
+	  display: inline-block;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  text-decoration: none;
+	  text-align: center;
+	  font-size: 14px;
+	  vertical-align: middle;
+	  color: #fff;
+	  line-height: 16px;
+	  margin-right: 8px;
+}
+.qxy_input_downlist .list_bottom .qxy_add_btn:before{
+	margin-top: 0;
+}
+/* modify by sky 20160329 start */
+.qxy_input_downlist .downlist_no_data {
+	line-height: 1.4;
+	padding: 10px;
+	font-size: 12px;
+	text-align: center;
+	color: #e64a3d;
+}
+/* modify by sky 20160329 end */
+/*------公共 下拉列表 样式 end-------*/

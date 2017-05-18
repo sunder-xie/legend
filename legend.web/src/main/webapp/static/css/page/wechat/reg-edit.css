@@ -1,0 +1,146 @@
+h2 .warning {
+   color:  #f74a3f;
+   font-size: 12px;
+   margin-left: 10px;
+}
+
+.yqx-input {
+   width: 118px;
+   height: 30px;
+}
+
+.input-long {
+   width: 210px;
+}
+
+.input-short {
+   width: 110px;
+}
+
+.fieldset-title {
+   display: inline-block;
+   width: 110px;
+   text-align: right;
+   margin-right: 14px;
+   color: #666;
+   vertical-align: middle;
+}
+
+.fieldset-title p {
+   line-height: 16px;
+}
+
+.color-999 {
+   color: #999;
+}
+label {
+   color: #999;
+   vertical-align: middle;
+   margin-left: 7px;
+   display: inline-block;
+}
+
+label p {
+   line-height: 18px;
+}
+
+fieldset {
+   margin-bottom: 23px;
+}
+
+.dash-line {
+   border-top: 1px dashed #ddd;
+   margin: 0 10px 23px;
+}
+
+.check-radio div {
+   vertical-align: middle;
+   display: inline-block;
+}
+
+.check-radio div + div {
+   margin-left: 27px;
+}
+
+.check-radio i {
+   vertical-align: bottom;
+   margin-left: 5px;
+}
+
+.form-item .yqx-input[readonly] {
+   background: #fff;
+}
+
+.form-item>.fa {
+   line-height: 30px;
+   color: #333;
+}
+
+.file-box .btn-upload, .file-box .file-show {
+    position: relative;
+    border-style: dashed;
+}
+
+.margin-top-10 {
+   margin-top: 10px;
+}
+
+.btn-download {
+   height: 30px;
+   width: 90px;
+   padding: 0;
+   line-height: 30px;
+}
+
+/* 身份证 start */
+.basic {
+   position: relative;
+}
+
+.idcard-box {
+   position: absolute;
+   bottom: 100px;
+   right: 40px;
+}
+
+.idcard {
+   display: inline-block;
+   text-align: center;
+   float: left;
+   position: relative;
+}
+
+.idcard + .idcard {
+   margin-left: 30px;
+}
+
+.idcard-img {
+   width: 232px;
+   height: 145px;
+}
+
+.idcard p {
+   margin-top: 10px;
+}
+
+/* 身份证 end */
+
+/* 图片模板 */
+.template-img {
+   margin-left: 20px;
+}
+.license-box, .orgcode-box {
+   width: 134px;
+}
+
+.license-box img, .orgcode-box img {
+   width: 126px
+}
+
+.apply-letter-box {
+   width: 80px;
+}
+
+.apply-letter-box img {
+   width: 72px;
+}

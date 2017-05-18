@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.prechecks.PrecheckDetailsDao">
+
+    <resultMap id="BaseResultMap" type="PrecheckDetails" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="precheck_id" property="precheckId"/>
+        <result column="precheck_item_id" property="precheckItemId"/>
+        <result column="precheck_item_name" property="precheckItemName"/>
+        <result column="precheck_value_id" property="precheckValueId"/>
+        <result column="precheck_value_type" property="precheckValueType"/>
+        <result column="precheck_value" property="precheckValue"/>
+        <result column="hand_by" property="handBy"/>
+        <result column="suggestion" property="suggestion"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        precheck_id as precheckId,
+        precheck_item_id as precheckItemId,
+        precheck_item_name as precheckItemName,
+        precheck_value_id as precheckValueId,
+        precheck_value_type as precheckValueType,
+        precheck_value as precheckValue,
+        hand_by as handBy,
+        suggestion as suggestion
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                shop_id = #{shopId}
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="precheckId != null">
+                    and precheck_id = #{precheckId}
+                </if>
+                <if test="precheckItemId != null">
+                    and precheck_item_id = #{precheckItemId}
+                </if>
+                <if test="precheckItemName != null">
+                    and precheck_item_name = #{precheckItemName}
+                </if>
+                <if test="precheckValueId != null">
+                    and precheck_value_id = #{precheckValueId}
+                </if>
+                <if test="precheckValueType != null">
+                    and precheck_value_type = #{precheckValueType}
+                </if>
+                <if test="precheckValue != null">
+                    and precheck_value = #{precheckValue}
+                </if>
+                <if test="handBy != null">
+                    and hand_by = #{handBy}
+                </if>
+                <if test="suggestion != null">
+                    and suggestion = #{suggestion}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim prefixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                shop_id = #{shopId},
+                <if test="precheckId != null">
+                    precheck_id = #{precheckId},
+                </if>
+                <if test="precheckItemParent != null">
+                    precheck_item_parent = #{precheckItemParent},
+                </if>
+                <if test="precheckItemId != null">
+                    precheck_item_id = #{precheckItemId},
+                </if>
+                <if test="precheckItemName != null">
+                    precheck_item_name = #{precheckItemName},
+                </if>
+                <if test="precheckValueId != null">
+                    precheck_value_id = #{precheckValueId},
+                </if>
+                <if test="precheckValueType != null">
+                    precheck_value_type = #{precheckValueType},
+                </if>
+                <if test="precheckValue != null">
+                    precheck_value = #{precheckValue},
+                </if>
+                <if test="handBy != null">
+                    hand_by = #{handBy},
+                </if>
+                <if test="suggestion !=null">
+                    suggestion = #{suggestion}
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <sql id="BaseInsertSets">
+        <set>
+            <trim prefixOverrides=",">
+                <if test="isDeleted != null">
+                    is_deleted=#{isDeleted},
+                </if>
+                <if test="creator != null">
+                    creator=#{creator},
+                </if>
+                <if test="gmtModified != null ">
+                    gmt_modified= NOW(),
+                </if>
+                <if test="modifier != null">
+                    modifier=#{modifier},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="precheckId != null">
+                    precheck_id = #{precheckId},
+                </if>
+                <if test="precheckItemParent != null">
+                    precheck_item_parent = #{precheckItemParent},
+                </if>
+                <if test="precheckItemId != null">
+                    precheck_item_id = #{precheckItemId},
+                </if>
+                <if test="precheckItemName != null">
+                    precheck_item_name = #{precheckItemName},
+                </if>
+                <if test="precheckValueId != null">
+                    precheck_value_id = #{precheckValueId},
+                </if>
+                <if test="precheckValueType != null">
+                    precheck_value_type = #{precheckValueType},
+                </if>
+                <if test="precheckValue != null">
+                    precheck_value = #{precheckValue},
+                </if>
+                <if test="handBy != null">
+                    hand_by = #{handBy},
+                </if>
+                <if test="suggestion !=null">
+                    suggestion = #{suggestion}
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_precheck_details
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_precheck_details
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_precheck_details
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_precheck_details
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_precheck_details
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_precheck_details
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_precheck_details
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_precheck_details (
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+        shop_id,
+        precheck_id,
+        precheck_item_parent,
+        precheck_item_id,
+        precheck_item_name,
+        precheck_value_id,
+        precheck_value_type,
+        precheck_value,
+        hand_by,
+        suggestion
+        )
+        values (
+        <include refid="COMMON.BASE_INSERT_VALUE"/>
+        #{shopId},
+        #{precheckId},
+        #{precheckItemParent},
+        #{precheckItemId},
+        #{precheckItemName},
+        #{precheckValueId},
+        #{precheckValueType},
+        #{precheckValue},
+        #{handBy},
+        #{suggestion}
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_precheck_details
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <select id="getPrecheckDetail" resultType="com.tqmall.legend.entity.precheck.PrecheckDetails">
+        select a.shop_id as shopId,
+        a.precheck_id as precheckId,
+        a.precheck_item_id as precheckItemId,
+        a.precheck_item_type as precheckItemType,
+        a.precheck_item_name as precheckItemName,
+        a.precheck_value_id as precheckValueId,
+        a.precheck_value_type as precheckValueType,
+        a.precheck_value as precheckValue,
+        a.hand_by as handBy,
+        a.suggestion as suggestion
+        from legend_precheck_details a
+        <where>
+            <trim prefixOverrides="and">
+                a.shop_id = #{shopId} and a.is_deleted = 'N'
+                <if test="precheckId != null">
+                    and a.precheck_id = #{precheckId}
+                </if>
+                <if test="precheckItemType != null">
+                    and a.precheck_item_type = #{precheckItemType}
+                </if>
+            </trim>
+        </where>
+        order by a.precheck_id desc
+    </select>
+
+    <insert id="addPrecheckDetail" parameterType="com.tqmall.legend.entity.precheck.PrecheckDetails">
+        insert into legend_precheck_details
+        <include refid="BaseInsertSets"/>
+    </insert>
+
+    <insert id="batchInsertDetail" useGeneratedKeys="true" parameterType="java.util.List">
+        <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into legend_precheck_details (
+        shop_id,
+        precheck_id,
+        precheck_item_id,
+        precheck_item_type,
+        precheck_item_name,
+        precheck_value_id,
+        precheck_value_type,
+        precheck_value,
+        suggestion,
+        creator,
+        gmt_create,
+        gmt_modified
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.shopId},
+            <if test="item.precheckId != null">
+                #{item.precheckId},
+            </if>
+            <if test="item.precheckId == null">
+                0,
+            </if>
+            <if test="item.precheckItemId != null">
+                #{item.precheckItemId},
+            </if>
+            <if test="item.precheckItemId == null">
+                null,
+            </if>
+            <if test="item.precheckItemType != null">
+                #{item.precheckItemType},
+            </if>
+            <if test="item.precheckItemType == null">
+                0,
+            </if>
+            <if test="item.precheckItemName != null">
+                #{item.precheckItemName},
+            </if>
+            <if test="item.precheckItemName == null">
+                null,
+            </if>
+            <if test="item.precheckValueId != null">
+                #{item.precheckValueId},
+            </if>
+            <if test="item.precheckValueId == null">
+                0,
+            </if>
+            <if test="item.precheckValueType != null">
+                #{item.precheckValueType},
+            </if>
+            <if test="item.precheckValueType == null">
+                0,
+            </if>
+            <if test="item.precheckValue != null">
+                #{item.precheckValue},
+            </if>
+            <if test="item.precheckValue == null">
+                null,
+            </if>
+            <if test="item.suggestion != null">
+                #{item.suggestion},
+            </if>
+            <if test="item.suggestion == null">
+                null,
+            </if>
+            <if test="item.creator != null">
+                #{item.creator},
+            </if>
+            <if test="item.creator == null">
+                0,
+            </if>
+            NOW(),
+            NOW()
+            )
+        </foreach>
+    </insert>
+</mapper>

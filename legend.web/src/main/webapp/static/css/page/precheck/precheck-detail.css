@@ -1,0 +1,129 @@
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    table-layout:fixed
+}
+
+.right-box{
+    width: 827px;
+    overflow: hidden;
+    float: right;
+    margin-top: 20px;
+}
+.title{
+    height: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    
+}
+/*车辆详情 start*/
+.car-message{
+    overflow: hidden;
+    background: #f7f7f7;
+    border:1px solid #ddd;
+}
+.car-message td{
+    line-height: 35px;
+    
+    font-size: 12px;
+    color: #333;
+    word-break:break-all;
+}
+.car-title{
+    text-align: right;
+}
+.car-message .form-label{ width: 90px;}
+.car-message .form-item{ width: 150px;}
+
+/*车辆详情 end*/
+
+/*车况信息 start*/
+.car-infor{
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+.car-infor-tab{
+    height: 43px;
+    line-height: 43px;
+    border-bottom: 1px solid #ddd;
+    
+    font-size: 14px;
+    color: #333;
+    padding: 0 12px;
+}
+.car-condition{
+    padding: 0 10px;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+}
+.car-condition-title{
+    height: 30px;
+    line-height: 30px;
+    background: #f9f9f9;
+    padding-left:10px;
+    
+    font-size: 12px;
+    color: #333;
+}
+.car-condition-infor{
+    overflow: hidden;
+    padding-left: 10px;
+    
+    font-size: 12px;
+    color: #333;
+}
+.car-condition-infor span{
+    line-height: 35px;
+    display: block;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+.condition-btn{
+    padding: 10px;
+}
+.detail-row{
+    clear:both;
+}
+.detail-title{
+    width: 100px;
+    line-height: 30px;
+}
+.detail-message{
+    max-width: 150px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.order-bold{
+    font-weight: bold;
+    color: #333;
+}
+.detail-width{
+    width: 255px;
+}
+
+.btn-org {
+    background: rgb(242, 149, 48);
+}
+.nav-btn {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.save-height{
+    line-height: 32px;
+}
+.yqx-btn-1{
+    color: #333;
+    margin-left: 5px;
+}
+

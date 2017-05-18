@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.notice.NoticePublicDao">
+
+    <resultMap id = "BaseResultMap" type = "NoticeEntity" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "publisher" property = "publisher" />
+        <result column = "notice_title" property = "noticeTitle" />
+        <result column = "notice_content" property = "noticeContent" />
+        <result column = "publish_status" property = "publishStatus" />
+        <result column = "sort" property = "sort" />
+        <result column = "shop_level" property="shopLevel"/>
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            publisher as publisher,
+            notice_title as noticeTitle,
+            notice_content as noticeContent,
+            publish_status as publishStatus,
+            sort as sort,
+            shop_level as shopLevel,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "publisher != null">
+                    and publisher = #{publisher}
+                </if>
+                <if test = "noticeTitle != null">
+                    and notice_title like CONCAT('%',#{noticeTitle},'%')
+                </if>
+                <if test = "publishStatus != null">
+                    and publish_status = #{publishStatus}
+                </if>
+                 <if test = "startTime != null">
+                   <![CDATA[
+                    and gmt_modified >= #{startTime}
+                ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+                    and gmt_modified <= #{endTime}
+                ]]>
+                </if>
+                <if test="lastNoticeTime != null">
+                    <![CDATA[
+                    and gmt_modified > #{lastNoticeTime}
+                ]]>
+                </if>
+                <if test="shopLevel != null">
+                    and (shop_level = #{shopLevel} or shop_level = 0)
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_public_notice
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_public_notice
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 获取最近公告 -->
+     <select id="getLastNotice" resultMap = "BaseResultMap">
+       select
+        max(gmt_modified),
+        <include refid = "BaseColumnList" />
+        from legend_public_notice
+        <include refid = "BaseWhereClause" />      
+     </select>
+
+</mapper> 

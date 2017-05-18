@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.inventory.InventoryStockDao">
+
+    <resultMap id = "BaseResultMap" type = "InventoryStock" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "record_id" property = "recordId" />
+        <result column = "record_sn" property = "recordSn" />
+        <result column = "goods_id" property = "goodsId" />
+        <result column = "goods_name" property = "goodsName" />
+        <result column = "goods_format" property = "goodsFormat" />
+        <result column = "goods_sn" property = "goodsSn" />
+        <result column = "measure_unit" property = "measureUnit" />
+        <result column = "current_stock" property = "currentStock" />
+        <result column = "real_stock" property = "realStock" />
+        <result column = "diff_stock" property = "diffStock" />
+        <result column = "reason" property = "reason" />
+        <result column = "inventory_price" property = "inventoryPrice" />
+        <result column = "inventory_pre_price" property = "inventoryPrePrice" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            record_id as recordId,
+            record_sn as recordSn,
+            goods_id as goodsId,
+            goods_name as goodsName,
+            goods_format as goodsFormat,
+            goods_sn as goodsSn,
+            measure_unit as measureUnit,
+            current_stock as currentStock,
+            real_stock as realStock,
+            diff_stock as diffStock,
+            reason as reason,
+            inventory_price as inventoryPrice,
+            inventory_pre_price as inventoryPrePrice,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "recordId != null">
+                    and record_id = #{recordId}
+                </if>
+                <if test = "recordSn != null">
+                    and record_sn = #{recordSn}
+                </if>
+                <if test = "goodsId != null">
+                    and goods_id = #{goodsId}
+                </if>
+                <if test = "goodsName != null">
+                    and goods_name = #{goodsName}
+                </if>
+                <if test = "goodsFormat != null">
+                    and goods_format = #{goodsFormat}
+                </if>
+                <if test = "goodsSn != null">
+                    and goods_sn = #{goodsSn}
+                </if>
+                <if test = "measureUnit != null">
+                    and measure_unit = #{measureUnit}
+                </if>
+                <if test = "currentStock != null">
+                    and current_stock = #{currentStock}
+                </if>
+                <if test = "realStock != null">
+                    and real_stock = #{realStock}
+                </if>
+                <if test = "diffStock != null">
+                    and diff_stock = #{diffStock}
+                </if>
+                <if test = "reason != null">
+                    and reason = #{reason}
+                </if>
+                <if test = "inventoryPrice != null">
+                    and inventory_price = #{inventoryPrice}
+                </if>
+                <if test = "inventoryPrePrice != null">
+                    and inventory_pre_price = #{inventoryPrePrice}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "recordId != null">
+                    record_id = #{recordId},
+                </if>
+                <if test = "recordSn != null">
+                    record_sn = #{recordSn},
+                </if>
+                <if test = "goodsId != null">
+                    goods_id = #{goodsId},
+                </if>
+                <if test = "goodsName != null">
+                    goods_name = #{goodsName},
+                </if>
+                <if test = "goodsFormat != null">
+                    goods_format = #{goodsFormat},
+                </if>
+                <if test = "goodsSn != null">
+                    goods_sn = #{goodsSn},
+                </if>
+                <if test = "measureUnit != null">
+                    measure_unit = #{measureUnit},
+                </if>
+                <if test = "currentStock != null">
+                    current_stock = #{currentStock},
+                </if>
+                <if test = "realStock != null">
+                    real_stock = #{realStock},
+                </if>
+                <if test = "diffStock != null">
+                    diff_stock = #{diffStock},
+                </if>
+                <if test = "reason != null">
+                    reason = #{reason},
+                </if>
+                <if test = "inventoryPrice != null">
+                    inventory_price = #{inventoryPrice},
+                </if>
+                <if test = "inventoryPrePrice != null">
+                    inventory_pre_price = #{inventoryPrePrice},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_inventory_stock
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_inventory_stock
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_inventory_stock
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_inventory_stock
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_inventory_stock
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_inventory_stock
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_inventory_stock
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_inventory_stock (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "recordId != null">
+                record_id,
+            </if>
+            <if test = "recordSn != null">
+                record_sn,
+            </if>
+            <if test = "goodsId != null">
+                goods_id,
+            </if>
+            <if test = "goodsName != null">
+                goods_name,
+            </if>
+            <if test = "goodsFormat != null">
+                goods_format,
+            </if>
+            <if test = "goodsSn != null">
+                goods_sn,
+            </if>
+            <if test = "measureUnit != null">
+                measure_unit,
+            </if>
+            <if test = "currentStock != null">
+                current_stock,
+            </if>
+            <if test = "realStock != null">
+                real_stock,
+            </if>
+            <if test = "diffStock != null">
+                diff_stock,
+            </if>
+            <if test = "reason != null">
+                reason,
+            </if>
+            <if test = "inventoryPrice != null">
+                inventory_price,
+            </if>
+            <if test = "inventoryPrePrice != null">
+                inventory_pre_price,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "recordId != null">
+                #{recordId},
+            </if>
+            <if test = "recordSn != null">
+                #{recordSn},
+            </if>
+            <if test = "goodsId != null">
+                #{goodsId},
+            </if>
+            <if test = "goodsName != null">
+                #{goodsName},
+            </if>
+            <if test = "goodsFormat != null">
+                #{goodsFormat},
+            </if>
+            <if test = "goodsSn != null">
+                #{goodsSn},
+            </if>
+            <if test = "measureUnit != null">
+                #{measureUnit},
+            </if>
+            <if test = "currentStock != null">
+                #{currentStock},
+            </if>
+            <if test = "realStock != null">
+                #{realStock},
+            </if>
+            <if test = "diffStock != null">
+                #{diffStock},
+            </if>
+            <if test = "reason != null">
+                #{reason},
+            </if>
+            <if test = "inventoryPrice != null">
+                #{inventoryPrice},
+            </if>
+            <if test = "inventoryPrePrice != null">
+                #{inventoryPrePrice},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_inventory_stock
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <!-- batch insert-->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_inventory_stock (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            record_id,
+            record_sn,
+            goods_id,
+            goods_name,
+            goods_format,
+            goods_sn,
+            measure_unit,
+            current_stock,
+            real_stock,
+            diff_stock,
+            reason,
+            inventory_price,
+            inventory_pre_price,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.recordId != null">
+                    #{item.recordId},
+                </if>
+                <if test="item.recordId == null">
+                    0 ,
+                </if>
+                <if test="item.recordSn != null">
+                    #{item.recordSn},
+                </if>
+                <if test="item.recordSn == null">
+                    '' ,
+                </if>
+                <if test="item.goodsId != null">
+                    #{item.goodsId},
+                </if>
+                <if test="item.goodsId == null">
+                    0,
+                </if>
+                <if test="item.goodsName != null">
+                    #{item.goodsName},
+                </if>
+                <if test="item.goodsName == null">
+                    '' ,
+                </if>
+                <if test="item.goodsFormat != null">
+                    #{item.goodsFormat},
+                </if>
+                <if test="item.goodsFormat == null">
+                    '' ,
+                </if>
+                <if test="item.goodsSn != null">
+                    #{item.goodsSn},
+                </if>
+                <if test="item.goodsSn == null">
+                    '',
+                </if>
+                <if test="item.measureUnit != null">
+                    #{item.measureUnit},
+                </if>
+                <if test="item.measureUnit == null">
+                    '',
+                </if>
+                <if test="item.currentStock != null">
+                    #{item.currentStock},
+                </if>
+                <if test="item.currentStock == null">
+                    0 ,
+                </if>
+                <if test="item.realStock != null">
+                    #{item.realStock},
+                </if>
+                <if test="item.realStock == null">
+                    null ,
+                </if>
+                <if test="item.diffStock != null">
+                    #{item.diffStock},
+                </if>
+                <if test="item.diffStock == null">
+                    null ,
+                </if>
+                <if test="item.reason != null">
+                    #{item.reason},
+                </if>
+                <if test="item.reason == null">
+                    '',
+                </if>
+                <if test="item.inventoryPrice != null">
+                    #{item.inventoryPrice},
+                </if>
+                <if test="item.inventoryPrice == null">
+                    0,
+                </if>
+                <if test="item.inventoryPrePrice != null">
+                    #{item.inventoryPrePrice},
+                </if>
+                <if test="item.inventoryPrePrice == null">
+                    0,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

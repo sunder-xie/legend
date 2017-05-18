@@ -1,0 +1,225 @@
+.yqx-downlist-wrap {
+    width: 100%;
+}
+.main {
+    float: right;
+    width: 828px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+.head {
+    padding: 0 10px;
+}
+.headline {
+    float: left;
+    line-height: 44px;
+    font-size: 16px;
+    color: #535353;
+}
+.head h1{ font-weight: normal;}
+
+/* 操作流程导航栏 */
+.flow {
+    margin-bottom: 10px;
+    border: solid #e8e8e8;
+    border-width: 1px 0;
+    overflow: hidden;
+}
+.flow li {
+    position: relative;
+    float: left;
+    width: 25%;
+    line-height: 38px;
+    color: #535353;
+    text-align: center;
+}
+.flow li:before {
+    display: inline;
+    content: attr(content);
+    margin-right: 5px;
+    font-size: 14px;
+    color: #062c5f;
+    vertical-align: middle;
+}
+.flow li:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    content: "";
+    width: 18px;
+    height: 38px;
+    background: url("../../../../static/img/page/activity/sprite.png") 0 -170px no-repeat;
+}
+.flow li:last-child:after {
+    display: none;
+}
+
+
+/*
+ * 仿bootstrap 栅栏式布局 start
+ */
+.show-grid{margin: 10px 0;zoom: 1;_height: 1px;}
+.show-grid:after{display: table;content: "";clear: both;}
+.show-grid [class^=col-]{float: left;}
+.col-3{width: 25%;}
+.col-4{width: 33.3333333%;}
+.col-6{width: 50%;}
+.col-8{width: 66.6666666%;}
+.col-9{width: 75%;}
+/* 仿bootstrap 栅栏式布局 end */
+
+.text-content{ padding: 10px; padding-top: 0;}
+.text-content .form-label{ width: 80px;}
+.text-content .form-item{ width: 110px;}
+.text-content .form-item-long{ width: 310px; padding-left: 0;}
+
+
+/*选择服务*/
+.group-row {
+    margin-bottom: 10px;
+}
+.group-title{
+    float: left;
+    width: 92px;
+    padding-right: 10px;
+    line-height: 37px;
+    font-size: 12px;
+    text-align: right;
+    color: #535353;
+}
+.container {
+    float: left;
+    width: 715px;
+    overflow: hidden;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    border-radius: 3px;
+}
+.yqx-table>thead>tr>th, .yqx-table>tr>th {
+    background: #f9f9f9;
+    border-top: 1px solid #d6d6d6;
+    padding: 8px 4px;
+}
+.group_photo{
+    float: left;
+    width: 715px;
+    overflow: hidden;
+}
+
+/*照片*/
+.photo_box {
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.img_item_inner{
+    width: 120px;
+}
+.group-padding{
+    padding: 10px 0;
+}
+.textarea-width{ width: 715px; height: 60px;}
+/* 按钮样式修改 */
+.btn-box {
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+}
+
+.upload-btn{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-align: center;
+    width: 120px;
+    background: #8fb027;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 10px;
+    position: relative;
+}
+.upload-btn:hover{
+    cursor: pointer;
+}
+.form-item-car{ width: 140px;}
+.vehicle{
+    line-height: 34px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding: 0 5px;
+    background: #fff;
+}
+.vehicle-num{
+    line-height: 34px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding: 0 5px;
+    background: #eee;
+    cursor: not-allowed;
+}
+.vehicle input{ border: none; width: 200px;}
+.vehicle .btn{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding:0 10px;
+    background: #8fb027;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 3px;
+    float:right;
+}
+
+.vehicle .yqx-input:focus{border:none;box-shadow: none;}
+.upload-btn input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity:0;
+}
+
+.max-width{ max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.yearPowerBak-box .yqx-downlist-panel ul li span {
+    width: 90%;
+}
+.car-model{
+    float: left;
+}
+.order_info {
+    line-height: 44px;
+    text-align: right;
+}
+.order_info label {
+    margin-right: 20px;
+    font-size: 12px;
+    color: #999;
+}
+.order_info label:last-of-type {
+    margin-right: 0;
+}
+.order_info strong {
+    color: #535353;
+}
+
+/*已保存*/
+.color0{color:#8836b2;}
+/*审核中*/
+.color1{color:#ffa800;}
+/*审核成功*/
+.color2{color:#93bd22;}
+/*审核失败*/
+.color3{color:#f77c7e;}
+/*已打款*/
+.color4{color:#36a5b2;}
+
+.yqx-downlist-panel ul li b, .yqx-downlist-panel ul li span{
+    text-indent: 0px;
+}

@@ -1,0 +1,400 @@
+/*查询表单 start*/
+.search-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 10px;
+}
+
+.search-btn-box {
+    width: 70px;
+    text-align: right;
+}
+
+.senior-search {
+    color: #666;
+    vertical-align: bottom;
+}
+
+.senior-width {
+    width: 160px;
+    margin: 0 3px;
+}
+
+.senior-width:last-child {
+    margin-right: 0;
+}
+
+.senior-time-width {
+    width: 200px;
+}
+
+.senior-width input, .senior-time-width input {
+    width: 100%;
+}
+
+.search-input {
+    width: 720px;
+}
+
+.search-zh {
+    display: none;
+}
+
+.senior-box {
+    width: 100%;
+}
+
+.date-width {
+    width: 200px;
+}
+
+.senior-box li + li {
+    margin-top: 5px;
+}
+
+.senior-box li:first-child .senior-width + .senior-width {
+    margin-left: 15px;
+}
+
+/*查询表单 end*/
+
+/*tab start*/
+.tabbox {
+    height: 36px;
+}
+
+.tabbox a {
+    line-height: 34px;
+    color: #474747;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.tabbox a:hover {
+    color: #9fc527;
+}
+
+.tabbox a.hover {
+    color: #9fc527;
+}
+
+.tabbox i {
+    margin-right: 4px;
+}
+
+/*tab end*/
+
+/*card start*/
+.tabcon {
+    overflow: hidden;
+    display: none;
+}
+
+.tabcon li {
+    display: block;
+    width: 198px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    float: left;
+    margin: 0 10px 8px 0;
+}
+
+.tabcon li:nth-child(4n) {
+    margin-right: 0px;
+}
+
+.tabcon li:hover {
+    border: 1px solid #9fc527;
+    box-shadow: 0px 0px 1px #9fc527;
+    cursor: pointer;
+}
+
+.card-top {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 4px 10px;
+}
+
+.plate-number {
+    height: 24px;
+    line-height: 24px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 14px;
+}
+
+.plate-left {
+    width: 100px;
+}
+
+.status {
+    width: 65px;
+    text-align: right;
+    color: #7fa700;
+    font-size: 12px;
+}
+
+.car-infor {
+    width: 178px;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: #666;
+}
+
+.card-middle {
+    padding: 5px 10px;
+}
+
+.car-middle-infor {
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.time-color {
+    color: #f55d5e;
+}
+
+.card-bot {
+    height: 45px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 0 10px;
+    text-align: right;
+}
+
+.card-bot .order, .card-bot .chanel {
+    display: inline-block;
+    height: 24px;
+    width: 35px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    border: 1px solid #80a61e;
+    border-radius: 1px;
+    margin-top: 10px;
+}
+
+.card-bot .chanel {
+    border-color: #f35f62;
+}
+
+.confirm-btn {
+    line-height: 25px;
+    padding: 0 15px;
+}
+
+/*card end*/
+
+/*table start*/
+.table-scroll-box .bz {
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.table-scroll-box .yqx-table {
+    width: auto;
+    min-width: 100%;
+}
+
+.table-scroll-box th, .table-scroll-box td {
+    padding: 0;
+}
+
+.table-scroll-box {
+    overflow-x: scroll;
+}
+
+.appoint-content {
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.table-order, .table-order:hover {
+    color: #0470f5;
+    text-decoration: underline;
+}
+
+.table-chanel, .table-chanel:hover {
+    color: #ee3f02;
+    text-decoration: underline;
+}
+
+.table-confirm, .table-confirm:hover {
+    color: #1db000;
+    text-decoration: underline;
+}
+
+.table-plant {
+    color: #666;
+}
+
+.table-scroll-box {
+    overflow-x: scroll;
+}
+
+.order-list-table .yqx-table {
+    width: auto;
+    min-width: 100%;
+}
+
+.order-list-table-inner {
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #fff;
+}
+
+.order-list-table .tools-bar {
+    height: 35px;
+    position: relative;
+}
+
+.order-list-table .tools-bar > a {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.order-list-table .tools-bar > a > i {
+    margin-left: 6px;
+}
+
+.order-list-table .setting-box {
+    padding: 0 70px 0 6px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    display: none;
+    line-height: 35px;
+}
+
+.order-list-table .setting-box label {
+    float: left;
+    margin-right: 20px;
+}
+
+.order-list-table .setting-box label > input {
+    margin-right: 8px;
+}
+
+.yqx-table > tbody > tr > td, .yqx-table > thead > tr > th, .yqx-table > tr > td, .yqx-table > tr > th {
+    text-align: left;
+}
+
+.yqx-table > tbody > tr > .serial-number, .yqx-table > thead > tr > .serial-number {
+    text-align: center;
+}
+
+.yqx-table > tbody > tr > .operation, .yqx-table > thead > tr > .operation {
+    text-align: right;
+}
+
+/*table end*/
+
+/*弹窗样式 start*/
+.tank {
+    background: #fff;
+}
+
+.btn_group {
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    background: #232e49;
+
+    font-size: 16px;
+    color: #fff;
+}
+
+.t_middle {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.link-btn {
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #9fc527;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #333;
+    margin: 10px auto;
+}
+
+.link-chanel-btn {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #9fc527;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #333;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.t_middle .hover {
+    border: 1px solid red;
+}
+
+.t-bottom {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-width {
+    padding: 0 10px;
+    line-height: 25px;
+}
+
+/*弹窗样式 end*/
+
+/**无效颜色*/
+.invalid-color {
+    color: #666666;
+}
+
+/**待确认颜色*/
+.to-confirm-color {
+    color: #f05529;
+}
+
+/**待开单颜色*/
+.confirmed-color {
+    color: #47bd34;
+}
+
+/**已开单颜色*/
+.ordered-color {
+    color: #0066CC;
+}
+
+/**已取消*/
+.canceled-color {
+    color: #666666;
+}
+
+/*.appoint-table tbody tr:hover td{*/
+/*color: #7fa700;*/
+/*}*/

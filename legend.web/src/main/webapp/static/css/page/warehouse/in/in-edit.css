@@ -1,0 +1,233 @@
+.list-box .yqx-table {
+    margin-bottom: 10px;
+}
+
+.blue-num {
+    color: #115599;
+    font-weight: bold;
+}
+
+.order-num {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-left: 2px;
+}
+
+form.main {
+    background: #fff;
+    width: 100%;
+    border: 1px solid #cacaca;
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.order-right {
+    width: 825px;
+}
+
+i {
+    font-style: normal;
+}
+
+.main .show-grid > .form-item {
+    width: 47%;
+}
+
+.main .show-grid > .form-item:nth-child(2) {
+    margin-left: 6%;
+}
+
+.main .yqx-input, .form-item > .form-item {
+    width: 85%;
+}
+
+.main .form-item > .form-item .yqx-input, .yqx-downlist-wrap > .yqx-input, .form-item > .yqx-downlist-wrap {
+    width: 100%;
+}
+
+.main .supplier-box > .form-item {
+    width: 214px;
+}
+
+.form-item label {
+    margin-right: 7px;
+}
+
+.main .supplier-box .yqx-btn {
+    width: 88px;
+    margin-top: 3px;
+    margin-right: 2px;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.list-box {
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0 9px;
+}
+
+.list-box .nav {
+    height: 45px;
+    line-height: 45px;
+}
+
+.list-box .nav h3 {
+    font-weight: bold;
+}
+
+.tool-item {
+    display: inline-block;
+}
+
+.form-footer.btn-group {
+    height: 66px;
+}
+
+.form-footer.btn-group > div {
+    height: 66px;
+    line-height: 66px;
+}
+
+.yqx-btn + .yqx-btn {
+    margin-left: 10px;
+}
+
+.remark-info .form-item {
+    width: 100%;
+}
+
+.remark-info label {
+    margin-right: 58px;
+}
+
+.money-count .yqx-input {
+    width: 150px;
+}
+
+.money-count .fa {
+    margin: 0 10px;
+}
+
+.money-count label:first-child {
+    margin-right: 10px;
+}
+
+.remark-info .yqx-input {
+    width: 88%;
+}
+
+.split-icon {
+    margin: 0 10px;
+}
+
+.main .form-item > .yqx-input {
+    padding-right: 36px;
+}
+
+.red-num {
+    color: #fa482c;
+}
+
+.add-goods-dg .search-box .yqx-btn {
+    padding: 0 10px;
+}
+
+.add-goods-dg .col-1 {
+    width: 80px;
+}
+
+.add-goods-dg .col-2 {
+    width: 180px;
+}
+
+.add-goods-dg .col-3 {
+    width: 70px;
+}
+
+.add-goods-dg .col-4 {
+    width: 60px;
+}
+
+.add-goods-dg .col-6 {
+    width: 45px;
+}
+
+.list-box .yqx-table .form-item {
+    width: 100%;
+}
+
+.list-box .yqx-table .hidden-input {
+    text-align: center;
+    width: 100%;
+}
+
+i[class*='js-'], div[class*='js-'] {
+    cursor: pointer;
+}
+
+.pay-mode .yqx-select-options {
+    right: 0;
+}
+
+.operator-name {
+    vertical-align: .1px;
+    font-size: 13px;
+}
+
+.other-order {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.must:after {
+    content: '*';
+    display: block;
+    position: absolute;
+    right: -6px;
+    top: -5px;
+    color: red;
+
+}
+
+.must {
+    position: relative;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.money-count .form-item.inline-block {
+    width: initial;
+}
+
+.list-box table {
+    border-top: 1px solid #cacaca;
+}
+
+.tc-1 {
+    width: 100px;
+}
+
+.tc-2 {
+    width: 210px;
+}
+
+.tc-4 {
+    width: 120px;
+}
+
+.tc-6 {
+    width: 60px;
+}
+
+.tc-7 {
+    width: 110px;
+}

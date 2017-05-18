@@ -1,0 +1,306 @@
+/**
+ * Created by sky on 2016/12/21.
+ */
+
+@import "../../base";
+
+$borderRadius: 5px !default;
+$borderDashed: .03rem dashed #d83d37;
+$yunuiDialogCloseImg: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAACdElEQVRYhc3ZTW7TQBjG8T8jtggqteIE3IET0CQrKGIBFV36TpkdVM0C8bXBTu9CD4CURSX2FYsZqyZ5X3vG8ybus6k6k1a/jsb2M+6j5XL5ErgEngM/gQsOmKqqBj/jvf8EvAH+ABePgRo4ivMfgRNgvidjdrz3NfeeJ0DtuAe3mQHNIWFatsBtnjlgJXx+crgCBlg54BxYC5OTwXvA66qqzl38Zo4Ol8b3lgHwHMB1BjX4qTJunhQw/I+GCeHe+4YEMOyiYQJ4BM+EqWYbDDIaDggfAC+kn9HQEODS3cMSng2GfjTAAh1+nW4Ts2YEGIbREODSyr5SxlPSEP7wnfEhMKShwXaPj9oS3aSiwQaugdepYMhDQxm8D5zVKnPREODSRXiK3lVqjMAwDk0ESHCpZKmPZmV8MGPR0A//ARwD35Bh18p4UkrQoLfA18Bv4EyY0+7PySlFg35xPhXGRm+JbizQECBfgTtl/i7Om5w9rdAA74CNMreJ8yaxRH8hXHxSjgkrbRIrdENYSe33OeAtRu3QAq096W6FMZNaW4rWbl/fgRfx63aKa20JWq2XhK2wQd8SJbV2NFqtl4T+3Y350W0MWi0/7ILbqHDvfTY8F11SfszgOWiLtqbW2ngqT0oq2rJequ0wFZ6C/oV9vSyCD6Fr5IuruF6i19pBeB/a/MQhRNvjs76LU0MfAgxAVVXaiqt3FQmtvr1UxosTD7fJ8G1035Nur/88yoF30TmP5r0kFd6iJwe3SYE74IoHAm4T4eLbWu/9ygEfhMnJwG3iuz1pxd87dk8Yk4PbKFvl1hGAN8Bf4DMPBNwmwi8Jvhtg8Q+dD++x2Wn/YgAAAABJRU5ErkJggg==";
+
+
+%control {
+  width: 100%;
+  height: 1.2rem;
+  font-size: .45rem;
+  background: #fff;
+  border-radius: $borderRadius;
+  outline: none;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  font: .45rem/1.4 "Helvetica Neue", Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "Heiti", sans-serif;
+  background: #d83d37 url($STATIC_IMAGE_PATH + "/gather/bg.jpg") top left/contain no-repeat;
+  overflow: hidden;
+
+  &, * {
+    box-sizing: border-box;
+  }
+
+  // .wrapper root
+  @at-root {
+    .panel {
+      width: 9.8rem;
+      margin: 5.3rem auto .78rem;
+      border-radius: 0 0 $borderRadius $borderRadius;
+      overflow: hidden;
+
+      // .panel root
+      @at-root {
+        .ticket {
+          position: relative;
+          background: #fbd320 url($STATIC_IMAGE_PATH + '/gather/car.png') top right/contain no-repeat;
+
+          .ticket-inner {
+            padding: .55rem .4rem;
+            border-top: $borderDashed;
+            border-bottom: $borderDashed;
+          }
+
+          &:before, &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: .4rem;
+            height: .4rem;
+            background: #d83d37;
+            border-radius: 50%;
+          }
+
+          &:before {
+            left: 0;
+            transform: translate(-50%, -50%);
+          }
+
+          &:after {
+            right: 0;
+            transform: translate(50%, -50%);
+          }
+
+          // .ticket root
+          @at-root {
+            .ticket-name {
+              width: 7rem;
+              margin: 0 0 0.36rem;
+              font-size: .5rem;
+              font-weight: bold;
+            }
+
+            .ticket-date {
+              margin: 0;
+              font-size: .35rem;
+              color: #705c01;
+            }
+
+            .ticket-count {
+              position: absolute;
+              top: .55rem;
+              right: .52rem;
+              font-weight: bold;
+
+              strong {
+                font-size: .8rem;
+                color: #aa1a15;
+              }
+            }
+          }
+        }
+
+        .box {
+          background: #faefe0;
+          border-bottom: $borderDashed;
+        }
+
+        .form {
+          padding: 1.1rem .4rem;
+
+          // .form root
+          @at-root {
+            .form-group {
+
+              & + & {
+                margin-top: .25rem;
+              }
+            }
+
+            .form-submit {
+              margin-top: 1.12rem;
+            }
+
+            .form-btn {
+              @extend %control;
+              vertical-align: baseline;
+              color: #fff;
+              border: none;
+            }
+
+            .form-btn[disabled] {
+              background: #666;
+            }
+
+            .form-control {
+              @extend %control;
+              text-indent: .35rem;
+              border: 1px solid #dcdcdc;
+            }
+
+            .form-input-verify {
+              width: 5rem;
+              margin-right: .25rem;
+            }
+
+            .form-btn-verify {
+              width: 3.74rem;
+              background: #de4640;
+            }
+
+            .form-btn-collect {
+              background: #c12219;
+            }
+
+            .form-btn-share {
+              background: #fdb436;
+            }
+          }
+        }
+
+        .result {
+          padding: .6rem .4rem;
+
+          .msg-box {
+            margin: .65rem 0;
+
+            .msg {
+              margin: 0;
+              line-height: 1.6;
+              font-size: .4rem;
+              text-align: center;
+            }
+
+            mark {
+              color: #ab1b15;
+              background: transparent;
+            }
+          }
+        }
+
+        .rules {
+          padding: .6rem .4rem;
+          background: #faefe0;
+
+          // .rules root
+          @at-root {
+            .rules-list {
+              color: #d83d37;
+
+              dt {
+                font-size: .4rem;
+                font-weight: bold;
+                margin-bottom: .3rem;
+              }
+
+              dd {
+                counter-increment: rules;
+                line-height: 1.7;
+                font-size: .36rem;
+                margin: auto;
+
+                &:before {
+                  content: counter(rules)"、";
+                  display: inline;
+                  float: left;
+                }
+
+                p {
+                  margin: 0;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dialog-panel {
+  position: relative;
+  width: 9.78rem;
+  padding: .6rem .22rem .55rem;
+  font: .45rem/1.4 "Helvetica Neue", Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "Heiti", sans-serif;
+  background: #fff;
+  border-radius: $borderRadius;
+
+  .dialog-panel-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: .45rem .4rem;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: .45rem;
+      height: .45rem;
+      background: url($yunuiDialogCloseImg) center/contain no-repeat;
+    }
+  }
+
+  @at-root {
+    figure {
+      margin: 0;
+    }
+
+    .dialog-cry-box {
+      padding-bottom: .6rem;
+      border-bottom: 1px solid #999;
+
+      img {
+        width: 1.77rem;
+        height: 1.77rem;
+        margin-bottom: .4rem;
+      }
+
+      figcaption {
+        line-height: 1.6;
+        font-size: .5rem;
+        font-weight: bold;
+      }
+    }
+
+    .dialog-shop-box {
+      padding-top: .6rem;
+
+      .dialog-info {
+        margin: 0;
+        line-height: 1.6;
+        font-size: .4rem;
+      }
+
+      .qr-code-box {
+
+
+        figcaption {
+          line-height: 1.6;
+          font-size: .36rem;
+          color: #666;
+        }
+      }
+
+      .qr-code-img-box {
+        position: relative;
+        width: 2.17rem;
+        height: 2.17rem;
+        margin: .45rem auto;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+

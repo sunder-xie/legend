@@ -1,0 +1,74 @@
+/**
+ * 库存查询
+ * zmx 2016-08-08
+ */
+
+.form-box {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 10px;
+}
+
+.form-box .form-item {
+    width: 150px;
+}
+
+.list-tab-box {
+    position: relative;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.new-menu {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.new-menu i {
+    font-style: normal;
+}
+
+.table-con {
+    overflow-x: auto;
+}
+
+.max-width {
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.yqx-table > tbody > tr > td.p-left, .yqx-table > thead > tr > th.p-left {
+    padding-left: 10px;
+}
+
+.blue {
+    color: #232e49;
+}
+
+.tc-1 {
+    width: 123px;
+}
+
+.tc-3 {
+    width: 50px;
+}
+
+.tc-8 {
+    width: 70px;
+}
+
+.tc-9 {
+    width: 59px;
+}
+
+.tc-4, .tc-6 {
+    width: 80px;
+}
+
+.tc-10 {
+    width: 110px;
+}

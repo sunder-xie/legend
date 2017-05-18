@@ -1,0 +1,380 @@
+
+/*
+ * by weilu 2016/07/14
+ * 负载看板页面
+*/
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1469513788_6617453.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1469513788_6617453.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1469513788_6617453.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1469513788_6617453.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1469513788_6617453.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont";
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.js-nav-menu{
+    position: relative;
+}
+.toggle{
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    right: 6px;
+}
+.plate{
+    display: inline-block;
+    padding: 0 20px;
+    position: absolute;
+    left: -16px;
+    width: 20px;
+}
+.aside-nav .nav-root a, .aside-nav .nav-root span{
+    color: #b8c7ce;
+}
+.aside-nav .nav-root a:hover, .aside-nav .nav-root span:hover{
+    color: #fff;
+}
+
+
+
+
+
+
+/*
+ * by weilu 2016/07/14
+ * 工序看板页面
+*/
+body{
+    background-color: #f1f1f1;
+}
+.cf{
+    color: #fff;
+}
+.c3{
+    color: #333!important;
+}
+.c6{
+    color: #666;
+}
+.b1{
+    background-color: #adafb0;
+}
+.b2{
+    background-color: #965c6b;
+}
+.b3{
+    background-color: #ae6c5a;
+}
+.b4{
+    background-color: #7f71a6;
+}
+.b5{
+    background-color: #99679b;
+}
+.b6{
+    background-color: #71a6ad;
+}
+.b7{
+    background-color: #a9be65;
+}
+.icon-normal,.icon-wait,.icon-edge,.icon-timeout,.icon-prev,.icon-next,.icon-go,.icon-down,.icon-up{
+    background: url("../../../../img/page/magic/board.png") no-repeat;
+    display: inline-block;
+}
+.icon-normal{
+    width: 18px;
+    height: 18px;
+    background-position: -18px 0;
+}
+.icon-wait{
+    width: 18px;
+    height: 18px;
+    background-position: 0 0;
+}
+.icon-edge{
+    width: 18px;
+    height: 18px;
+    background-position: -39px 0;
+}
+.icon-timeout{
+    width: 18px;
+    height: 18px;
+    background-position: -58px 0;
+}
+.iTwinkle {
+    -webkit-animation-name: 'twinkle';
+    -webkit-animation-duration: 0.37s;
+    -webkit-animation-delay: 0;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: step-start;
+}
+@-webkit-keyframes twinkle {
+    0% {
+        background-position: -58px 0;
+    }
+    50% {
+        background-position: -78px 0;
+    }
+    100% {
+        background-position: -58px 0;
+    }
+}
+.icon-prev{
+    width: 20px;
+    height: 32px;
+    background-position: 0 -44px;
+}
+.icon-next{
+    width: 20px;
+    height: 32px;
+    background-position: -18px -44px;
+}
+.icon-go{
+    width: 26px;
+    height: 26px;
+    background-position: -94px -18px;;
+}
+.icon-down{
+    width: 26px;
+    height: 26px;
+    background-position: -156px -18px;;
+}
+.icon-up{
+    width: 26px;
+    height: 26px;
+    background-position: -125px -18px;;
+}
+.title{
+    height: 60px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+.title_name{
+    font-size: 14px;
+    line-height: 60px;
+    color: #444;
+    padding-left: 20px;
+}
+.sumary li{
+    float: left;
+    width: 110px;
+    height: 60px;
+    line-height: 60px;
+}
+.icon-sumary{
+    float: left;
+    margin: 22px 5px;
+}
+.loadplate{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+}
+.flow-col-1{
+    height: 132px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.flow-col-4{
+    -webkit-flex: 4;
+    flex: 4;
+    display: -webkit-flex;
+    display: flex;
+}
+.flow-plate{
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 5px;
+    overflow: hidden;
+}
+.wait-plate{
+    margin-left: 0;
+}
+.plate-top{
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.plate-list{
+    color: #666;
+    padding: 5px 5px 0;
+    overflow: hidden;
+    -webkit-flex: 1;
+    flex: 1;
+}
+body > .plate-list {
+    overflow: initial;
+    -webkit-flex: initial;
+    flex: initial;
+    padding: 0;
+}
+#lineBox .plate-list {
+    height: 204px;
+}
+#lineBox .wait-list, #lineBox .mianqigao, #lineBox .complete-list {
+    height: 452px;
+}
+.plate-list li{
+    position: relative;
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+.plate-list .f14{
+    font-size: 14px;
+}
+.wait-list{
+    background-color: #eae8e8;
+    border: #ddd;
+}
+.interrupt-list{
+    min-width: 620px;
+    padding: 0;
+}
+.plate-list .icon-state{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 9;
+}
+.banjin-list{
+    border: 2px solid #c0a4ac;
+}
+.zuodi-list{
+    border: 2px solid #d8a699;
+}
+.zhongtu-list{
+    border: 2px solid #b4acc8;
+}
+.mianqi-list{
+    border: 2px solid #c9accb;
+}
+.paoguang-list{
+    border: 2px solid #a3c8cd;
+}
+.complete-list{
+    border: 2px solid #ddd;
+    background-color: #eae8e8;
+}
+
+.direction{
+    text-align: center;
+    padding: 8px 0;
+}
+.interrupt{
+    background-color: #eae8e8;
+    -webkit-flex: 4;
+    flex: 4;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+}
+.interrupt-top{
+    margin: 0;
+    line-height: 50px;
+}
+.interrupt-space{
+    -webkit-flex: 1;
+    flex: 1;
+}
+.interrupt-center{
+    -webkit-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.prev, .next{
+    width: 40px;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    display: none;
+}
+.interrupt-list li{
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.zuodi-plate .icon-go{
+    background-position: -187px -18px;;
+}
+.zuodi-plate .icon-down{
+    background-position: -219px -18px;;
+}
+.zuodi-plate .icon-up{
+    background-position: -249px -18px;;
+}
+.zhongtu-plate .icon-go{
+    background-position: -342px -18px;;
+}
+.zhongtu-plate .icon-down{
+    background-position: -62px -18px;;
+}
+.zhongtu-plate .icon-up{
+    background-position: -372px -18px;;
+}
+.mianqi-plate .icon-go{
+    background-position: -404px -18px;;
+}
+.mianqi-plate .icon-down{
+    background-position: -62px -18px;;
+}
+.mianqi-plate .icon-up{
+    background-position: -31px -18px;;
+}
+.paoguang-plate .icon-go{
+    background-position: -280px -18px;;
+}
+.paoguang-plate .icon-up{
+    background-position: -312px -18px;;
+}
+.mianqi-page-plate{
+    -webkit-flex: 4;
+    flex: 4;
+}
+.mianqi-page-list{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.mianqi-page-list li{
+    width: 24%;
+}
+
+.bx-wrapper {
+    max-width: 616px!important;
+}

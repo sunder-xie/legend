@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* 重置样式文件 */
+@import url(../module/reset.css);
+
+@import url(../module/common.css);

@@ -1,0 +1,77 @@
+.print_head {
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+}
+.print_headline {
+    margin: 10px 0 20px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #bb5151;
+}
+.base_info {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+.base_info strong {
+    margin-right: 15px;
+    color: #666;
+}
+.base_info strong:last-child {
+    margin-right: 0;
+}
+table {
+    width: 980px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid;
+}
+table caption {
+    line-height: 35px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid;
+    border-bottom: none;
+}
+table th, table td, table .note {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    border: 1px solid;
+}
+table td, table .note strong {
+    color: #666;
+}
+table .note {
+    padding-left: 10px;
+    text-align: left;
+}
+.print_foot {
+    width: 980px;
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+}
+.print_foot .print_label, .print_foot .print_text {
+    float: right;
+}
+.print_foot .print_text p {
+    font-weight: 600;
+    color: #333;
+}
+.store_info th {
+    text-align: right;
+    border-right: none;
+}
+.store_info td {
+    text-align: left;
+    border-left: none;
+}
+.store_info td.tips {
+    font-weight: 600;
+    color: #333;
+}

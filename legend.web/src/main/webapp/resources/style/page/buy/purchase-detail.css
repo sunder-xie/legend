@@ -1,0 +1,33 @@
+.qxy_tab{margin-bottom: 10px;}
+
+/*---- 搜索区域样式 start -----*/
+.search_box {line-height: 38px;}
+.search_box .fl{float: left;}
+.search_box .fr{float: right;}
+.search_box .col1 a{display: inline-block;width: 90px;text-align: center;color: #333;}
+.search_box .col1 a.blue{color: #4bc8f4;}
+.search_box .col1 a.red{color: #e50206;}
+
+.search_box .col2 input{background: #fff;border: 1px solid #dadada;height:36px;line-height: 36px;width: 160px;padding: 0 8px;border-radius: 4px;}
+.search_box .col2 .search_btn{display: inline-block;width: 44px;height:38px;background: url(../../img/page/buy/search_btn.jpg) no-repeat center;margin-left: 10px;vertical-align: middle;}
+/*---- 搜索区域样式 end -----*/
+
+
+/*---- 搜索结果 start -----*/
+.search_result {border:1px solid #cdcdcd;margin-top: 10px;border-bottom: none;}
+.search_result li {float: left;}
+.search_result .col1 {width: 30%;}
+.search_result .col2 {width: 50%;}
+.search_result .col3 {width: 20%;}
+
+.search_result dt,
+.search_result dd {border-bottom: 1px solid #cdcdcd;padding: 0 10px;line-height: 20px;}
+.search_result dt li{height: 36px;line-height: 36px;font-weight: 900;color: #666;}
+.search_result dt {background: #efefef;}
+.search_result dd {background: #fff;padding: 20px 10px;}
+.search_result dd .jian{color: #ff0000;}
+.search_result dd .jia{color: #9fc527;}
+.search_result dd .color1{color:#a0a0a0;}
+.search_result dd .color2{font-weight: bolder;}
+.search_result dd .col3{font-size: 16px;}
+/*---- 搜索结果 end -----*/

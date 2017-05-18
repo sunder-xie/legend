@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.activity.PurchaseActivityConfigDao">
+
+    <resultMap id = "BaseResultMap" type = "PurchaseActivityConfig" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "activity_name" property = "activityName" />
+        <result column = "activity_type" property = "activityType" />
+        <result column = "custom_redirect_url" property = "customRedirectUrl" />
+        <result column = "tqmall_banner_id" property = "tqmallBannerId" />
+        <result column = "opt_type" property = "optType" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            activity_name as activityName,
+            activity_type as activityType,
+            custom_redirect_url as customRedirectUrl,
+            tqmall_banner_id as tqmallBannerId,
+            opt_type as optType,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "activityName != null">
+                    and activity_name LIKE CONCAT('%',#{activityName},'%')
+                </if>
+                <if test = "activityType != null">
+                    and activity_type = #{activityType}
+                </if>
+                <if test = "customRedirectUrl != null">
+                    and custom_redirect_url = #{customRedirectUrl}
+                </if>
+                <if test = "tqmallBannerId != null">
+                    and tqmall_banner_id = #{tqmallBannerId}
+                </if>
+                <if test = "optType != null">
+                    and opt_type = #{optType}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "activityName != null">
+                    activity_name = #{activityName},
+                </if>
+                <if test = "activityType != null">
+                    activity_type = #{activityType},
+                </if>
+                <if test = "customRedirectUrl != null">
+                    custom_redirect_url = #{customRedirectUrl},
+                </if>
+                <if test = "tqmallBannerId != null">
+                    tqmall_banner_id = #{tqmallBannerId},
+                </if>
+                <if test = "optType != null">
+                    opt_type = #{optType},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_purchase_activity_config
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_activity_config
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_activity_config
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_activity_config
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_purchase_activity_config
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_purchase_activity_config
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_purchase_activity_config
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_purchase_activity_config (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "activityName != null">
+                activity_name,
+            </if>
+            <if test = "activityType != null">
+                activity_type,
+            </if>
+            <if test = "customRedirectUrl != null">
+                custom_redirect_url,
+            </if>
+            <if test = "tqmallBannerId != null">
+                tqmall_banner_id,
+            </if>
+            <if test = "optType != null">
+                opt_type,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "activityName != null">
+                #{activityName},
+            </if>
+            <if test = "activityType != null">
+                #{activityType},
+            </if>
+            <if test = "customRedirectUrl != null">
+                #{customRedirectUrl},
+            </if>
+            <if test = "tqmallBannerId != null">
+                #{tqmallBannerId},
+            </if>
+            <if test = "optType != null">
+                #{optType},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_purchase_activity_config
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_purchase_activity_config (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            activity_name,
+            activity_type,
+            custom_redirect_url,
+            tqmall_banner_id,
+            opt_type,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.activityName != null">
+                    #{item.activityName},
+                </if>
+                <if test="item.activityName == null">
+                    '',
+                </if>
+                <if test="item.activityType != null">
+                    #{item.activityType},
+                </if>
+                <if test="item.activityType == null">
+                    0 ,
+                </if>
+                <if test="item.customRedirectUrl != null">
+                    #{item.customRedirectUrl},
+                </if>
+                <if test="item.customRedirectUrl == null">
+                    '',
+                </if>
+                <if test="item.tqmallBannerId != null">
+                    #{item.tqmallBannerId},
+                </if>
+                <if test="item.tqmallBannerId == null">
+                    0 ,
+                </if>
+                <if test="item.optType != null">
+                    #{item.optType},
+                </if>
+                <if test="item.optType == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="queryByParam" parameterType="com.tqmall.legend.entity.activity.PurchaseActivityConfig" resultMap="BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_purchase_activity_config
+        <include refid="whereByParam"/>
+        ORDER BY gmt_create DESC
+        limit #{offset}, #{limit}
+    </select>
+
+    <select id="selectCountByParam" parameterType="com.tqmall.legend.entity.activity.PurchaseActivityConfig" resultType="java.lang.Integer">
+        select
+        count(1)
+        from legend_purchase_activity_config
+        <include refid = "whereByParam" />
+    </select>
+
+    <sql id="whereByParam">
+        <where>
+            <trim prefixOverrides = "and">
+                is_deleted = 'N'
+                <if test = "activityName != null and activityName != ''">
+                    and activity_name LIKE CONCAT('%',#{activityName},'%')
+                </if>
+                <if test = "activityType != null">
+                    and activity_type = #{activityType}
+                </if>
+                <if test = "optType != null and optType != ''">
+                    and opt_type = #{optType}
+                </if>
+            </trim>
+        </where>
+    </sql>
+</mapper>

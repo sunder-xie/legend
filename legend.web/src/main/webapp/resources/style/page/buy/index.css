@@ -1,0 +1,231 @@
+#mainPage{
+    background-color: #f0f0f0;
+}
+.header-new{
+    margin-top: 70px;
+}
+.top1{
+    height: 249px;
+    background: url("images/top_01.jpg") no-repeat center center;
+}
+.top2{
+    height: 256px;
+    background: url("images/top_02.jpg") no-repeat center center;
+}
+.banner1{
+    width: 1200px;
+    height: 120px;
+    background: url("images/banner_01.jpg") no-repeat center center;
+    margin: 5px auto;
+}
+.banner2{
+    width: 1200px;
+    height: 150px;
+    background: url("images/banner_02.jpg") no-repeat center center;
+    margin: 20px auto;
+}
+.banner3{
+    width: 1200px;
+    height: 77px;
+    background: url("images/buy-send-area.jpg") no-repeat center center;
+    margin: 0 auto;
+}
+.buy-send{
+    width: 1187px;
+    background-color: white;
+    margin: 10px auto 5px;
+    clear: both;
+    position: relative;
+}
+.buy-send-list{
+    width: 1187px;
+    clear: both;
+    overflow: hidden;
+}
+.hook-left{
+    width: 27px;
+    height: 61px;
+    position: absolute;
+    left: 118px;
+    top: -35px;
+}
+.hook-right{
+    width: 27px;
+    height: 61px;
+    position: absolute;
+    right: 118px;
+    top: -35px;
+    z-index: 9999;
+}
+.g-left{
+    width: 479px;
+    height: 307px;
+    float: left;
+    text-align: center;
+    line-height: 307px;
+}
+.g-left img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.g-right{
+    width: 708px;
+    height: 307px;
+    float: right;
+    background-color: white;
+    position: relative;
+}
+.goods-name1{
+    margin: 30px 0px 0px 5px;
+    font-size: 24px;
+    color: #00479d;
+    font-weight: bold;
+    border-bottom: 1px dotted #dadada;
+    width: 680px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+.goods-name2{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #5879b3;
+}
+.notice img{
+    width: 21px;
+    height: 61px;
+    float: left;
+    margin: 8px;
+}
+.notice p{
+    font-size: 20px;
+    color: #c51a05;
+    font-weight: bold;
+    margin-top: 33px;
+}
+.notice h5{
+    font-size: 13px;
+    color: #c51a05;
+}
+.introduce{
+    width: 500px;
+    color: #666666;
+    margin: 18px 0px 10px 10px;
+    line-height: 20px;
+}
+.unit{
+    margin: 0px 0px 0px 10px;
+
+}
+.price{
+    margin: 20px 0px 0px 10px;
+
+}
+.dollar{
+    color: #dc2727;
+    margin-top: 8px;
+}
+.price .hongbao-price{
+    color: #dc2727;
+    font-size: 29px;
+    font-weight: bold;
+}
+.price span{
+    margin-right: 0px;
+}
+.market-price{
+    margin-left: 35px;
+}
+.mix-buy{
+    position: absolute;
+    top: 250px;
+    left: 478px;
+}
+#buy-num{
+    display: inline-block;
+    width: 52px;
+    height: 27px;
+    text-align: center;
+}
+.plus{
+    width: 11px;
+    height: 12px;
+    position: absolute;
+    left: 58px;
+    top: 0px;
+    border: 1px solid #ccc;
+    background: transparent url("images/sprite.png") no-repeat scroll -198.5px -2px;
+    cursor: pointer;
+}
+.minus_no{
+    width: 11px;
+    height: 12px;
+    position: absolute;
+    left: 58px;
+    top: 15px;
+    border: 1px solid #ccc;
+    background: transparent url("images/sprite.png") no-repeat scroll -216.5px -23px;
+    cursor: pointer;
+}
+.minus{
+    width: 11px;
+    height: 12px;
+    position: absolute;
+    left: 58px;
+    top: 15px;
+    background: transparent url("images/sprite.png") no-repeat scroll -198.5px -23px;
+    border: 1px solid #ccc;
+    display: none;
+    cursor: pointer;
+}
+.buy-now{
+    width: 100px;
+    height: 29px;
+    position: absolute;
+    top: 250px;
+    left: 560px;
+    cursor: pointer;
+}
+.copyright{
+    clear: both;
+    width: 1200px;
+    margin: 35px auto;
+}
+.copyright p{
+    color: #999999;
+    font-size: 14px;
+    line-height: 20px;
+}
+.copyright .activity-title{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.btn_4_c, .btn_4_c:hover {
+    font: 700 16px/1.5 arial;
+    vertical-align: baseline;
+    border-radius: 5px;
+    background: #ff0000;
+    color: #fff;
+    padding: 3px 5px;
+    float: left;
+    margin: 10px;
+}
+.mix-buy{
+    font-size: 14px;
+}
+.mix-buy input{
+    border: 1px solid #DDD;
+}
+.mix-buy .dollar{
+    position: relative;
+    left: -215px;
+}
+.totalPrice-title{
+    position: relative;
+    left: -215px;
+}
+.totalPrice{
+    position: relative;
+    left: -215px;
+    color: #dc2727;
+}

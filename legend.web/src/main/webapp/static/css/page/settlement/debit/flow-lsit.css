@@ -1,0 +1,30 @@
+/*
+ * zmx 2016/06/03
+ * 收款流水记录 页面样式
+*/
+
+
+/*查询 start*/
+.search-box{background: #fff;border: 1px solid #ddd;border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;padding: 10px;}
+.text-width{ width: 165px;}
+.condition-btn{ display: inline-block; height: 28px; line-height: 28px; padding: 0 12px;
+    background: #f9f9f9; border:1px solid #ddd; color: #333; border-radius: 3px;vertical-align: middle;}
+.condition-active{border: 1px solid #99ba27; background: url("../../../../img/page/settlement/pay/btn-active.png") no-repeat right bottom #eaf9bb;}
+/*查询 end*/
+
+/*操作按钮 start*/
+.btn-box{height: 36px;}
+.btn-box a{line-height: 34px;color: #474747;font-size: 12px;padding: 0 10px;}
+.btn-box a:hover{color: #9fc527;}
+.btn-box a.hover{color: #9fc527;}
+.btn-box i{margin-right: 4px;}
+/*操作按钮 end*/
+
+/*表格 start*/
+.yqx-table{table-layout: auto;}
+.yqx-table td .time{ width: 60px;}
+.max-text{ max-width: 180px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+/*表格 end*/
+.red{color: #f25e61;}
+.item-width{ width: 148px;}
+.yqx-table>tbody>tr>td.padding-left, .yqx-table>thead>tr>th.padding-left, .yqx-table>tr>td.padding-left, .yqx-table>tr>th.padding-left{ padding-left: 20px;}

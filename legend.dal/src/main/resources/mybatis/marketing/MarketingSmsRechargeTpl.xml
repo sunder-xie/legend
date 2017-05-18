@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.MarketingSmsRechargeTplDao">
+
+    <resultMap id = "BaseResultMap" type = "MarketingSmsRechargeTpl" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "recharge_money" property = "rechargeMoney" />
+        <result column = "buy_sms_num" property = "buySmsNum" />
+        <result column = "free_sms_num" property = "freeSmsNum" />
+        <result column = "flags" property = "flags" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            recharge_money as rechargeMoney,
+            buy_sms_num as buySmsNum,
+            free_sms_num as freeSmsNum,
+            flags as flags,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "rechargeMoney != null">
+                    and recharge_money = #{rechargeMoney}
+                </if>
+                <if test = "buySmsNum != null">
+                    and buy_sms_num = #{buySmsNum}
+                </if>
+                <if test = "freeSmsNum != null">
+                    and free_sms_num = #{freeSmsNum}
+                </if>
+                <if test = "flags != null">
+                    and flags = #{flags}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "rechargeMoney != null">
+                    recharge_money = #{rechargeMoney},
+                </if>
+                <if test = "buySmsNum != null">
+                    buy_sms_num = #{buySmsNum},
+                </if>
+                <if test = "freeSmsNum != null">
+                    free_sms_num = #{freeSmsNum},
+                </if>
+                <if test = "flags != null">
+                    flags = #{flags},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_marketing_sms_recharge_tpl
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_sms_recharge_tpl
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_sms_recharge_tpl
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_sms_recharge_tpl
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_marketing_sms_recharge_tpl
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_marketing_sms_recharge_tpl
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_marketing_sms_recharge_tpl
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_marketing_sms_recharge_tpl (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "rechargeMoney != null">
+                recharge_money,
+            </if>
+            <if test = "buySmsNum != null">
+                buy_sms_num,
+            </if>
+            <if test = "freeSmsNum != null">
+                free_sms_num,
+            </if>
+            <if test = "flags != null">
+                flags,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "rechargeMoney != null">
+                #{rechargeMoney},
+            </if>
+            <if test = "buySmsNum != null">
+                #{buySmsNum},
+            </if>
+            <if test = "freeSmsNum != null">
+                #{freeSmsNum},
+            </if>
+            <if test = "flags != null">
+                #{flags},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_marketing_sms_recharge_tpl
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_marketing_sms_recharge_tpl (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            recharge_money,
+            buy_sms_num,
+            free_sms_num,
+            flags,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.rechargeMoney != null">
+                    #{item.rechargeMoney},
+                </if>
+                <if test="item.rechargeMoney == null">
+                    NULL ,
+                </if>
+                <if test="item.buySmsNum != null">
+                    #{item.buySmsNum},
+                </if>
+                <if test="item.buySmsNum == null">
+                    NULL ,
+                </if>
+                <if test="item.freeSmsNum != null">
+                    #{item.freeSmsNum},
+                </if>
+                <if test="item.freeSmsNum == null">
+                    NULL ,
+                </if>
+                <if test="item.flags != null">
+                    #{item.flags},
+                </if>
+                <if test="item.flags == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

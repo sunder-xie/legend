@@ -1,0 +1,483 @@
+em{
+    font-style: normal;
+}
+.Z-right{
+    width: 830px;
+    float: left;
+}
+.no-data-1,.no-data-2,.no-data-3{
+    background: url("../../../images/marketing/no-data.png") no-repeat;
+    width: 68px;
+    height: 92px;
+    position: absolute;
+    top: 10px;
+    margin-left: -150px;
+    display: none;
+}
+.Z-right .Z-maintain{
+    width: 830px;
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+}
+.Z-right .Z-maintain .increase-total{
+    width: 270px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #9fc527;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+}
+.Z-maintain .increase-total i{
+    background: url("../../../images/marketing/maintain/increase-total-icon.png") no-repeat;
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.increase-total-title{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 90px;
+    font-size: 13px;
+    font-family: MicrosoftYahei;
+}
+.increase-total-num{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 90px;
+    font-size: 26px;
+    font-family: Arial;
+}
+.increase-total-num em{
+    font-size: 13px;
+}
+.Z-right .Z-maintain .remind-total{
+    width: 270px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #fea23f;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+}
+.Z-maintain .remind-total i{
+    background: url("../../../images/marketing/maintain/remind-total-icon.png") no-repeat;
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.remind-total-title{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 90px;
+    font-size: 13px;
+    font-family: MicrosoftYahei;
+}
+.remind-total-num{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 90px;
+    font-size: 26px;
+    font-family: Arial;
+}
+.remind-total-num em{
+    font-size: 13px;
+}
+.Z-right .Z-maintain .active-total{
+    width: 270px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #4bc8f4;
+    position: relative;
+    float: left;
+}
+.Z-maintain .active-total i{
+    background: url("../../../images/marketing/maintain/active-total-icon.png") no-repeat;
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.active-total-title{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 90px;
+    font-size: 13px;
+    font-family: MicrosoftYahei;
+}
+.active-total-num{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 90px;
+    font-size: 26px;
+    font-family: Arial;
+}
+.active-total-num em{
+    font-size: 13px;
+}
+.Z-maintain-report{
+    height: 241px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    float: left;
+    padding: 0 59px;
+    margin-bottom: 10px;
+}
+.Z-type-legend{
+    height: 42px;
+    line-height: 42px;
+}
+.Z-type-legend li{
+    float: left;
+    font-family: MicrosoftYahei;
+    font-size: 14px;
+}
+.Z-type-legend li span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+.remind-num{
+    margin-left: 160px;
+}
+.increase-num,.active-num{
+    margin-left: 50px !important;
+}
+.remind-num span{
+    background-color: #fad4ac;
+}
+.increase-num span{
+    background-color: #d7e4ae;
+}
+.active-num span{
+    background-color: #4bc8f4;
+}
+.Z-report-list{
+    height: 155px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    position: relative;
+
+}
+.report-1,.report-2,.report-3{
+    width: 228px;
+    height: 110px;
+    border: 1px solid #e5e5e5;
+    float: left;
+    background-color: #f9f9f9;
+    /*position: relative;*/
+}
+.Z-maintain-report li:nth-child(n+2){
+    margin-left: 10px;
+}
+.Z-maintain-tag1,.Z-maintain-tag2,.Z-maintain-tag3{
+    position: absolute;
+    width: 13px;
+    height: 12px;
+    background: url("../../../images/marketing/maintain/Z-maintain-tag.png") no-repeat;
+    top: 111px;
+}
+.Z-maintain-tag1{
+    left: 110px;
+}
+.Z-maintain-tag2{
+    left: 350px;
+}
+.Z-maintain-tag3{
+    left: 590px;
+}
+.report-month{
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-top: 10px;
+}
+.report-month span{
+    font-size: 14px;
+    font-family: MicrosoftYahei;
+}
+.report-month span:nth-child(1){
+    margin-left: 101px;
+}
+.report-month span:nth-child(n+2){
+    margin-left: 201px;
+}
+.Z-maintain-notice{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+.Z-maintain-notice i{
+    width: 17px;
+    height: 17px;
+    background: url("../../../images/marketing/maintain/Z-maintain-notice-tag.png") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+/**当月客情类型汇总**/
+.Z-currentMonth-report{
+    width: 828px;
+    border: 1px solid #ddd;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.current-month{
+    width: 200px;
+    margin: 42px 0 0 30px;
+    float: left;
+}
+.current-month-title{
+    font-size: 14px;
+    font-family: MicrosoftYahei;
+    color: #6b6b6b;
+}
+.current-month-status{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: MicrosoftYahei;
+    color: #fd3235;
+    margin-top: 20px;
+    line-height: 22px;
+}
+.current-month-status span{
+    display: inline-block;
+    height: 16px;
+    border-radius: 2px;
+    line-height: 18px;
+    text-align: center;
+}
+.current-month-detail{
+    width: 73px;
+    height: 25px;
+    border-radius: 8px;
+    background-color: #f77c7e;
+    color: #fff;
+    margin-top: 33px;
+}
+.current-month-remind{
+    width: 560px;
+    border: 1px solid #e5e5e5;
+    float: left;
+    margin: 15px 0 15px 0px;
+    background-color: #f9f9f9;
+    padding: 0 10px;
+}
+.current-month-remind li:first-child{
+    height: 42px;
+    line-height: 42px;
+}
+.current-month-remind li:nth-child(n+2){
+    height: 41px;
+    border-top: 1px solid #e8e8e8;
+    line-height: 42px;
+}
+.current-month-remind li span:nth-child(2){
+    cursor: pointer;
+}
+.current-month-remind li span,i{
+    display: inline-block;
+}
+.current-month-remind i{
+    height: 12px;
+    vertical-align: top;
+    border-radius: 8px;
+    max-width: 402px;
+}
+.appointment i{
+    background-color: #c96462;
+}
+.maintain-expire i{
+    background-color: #e17471;
+}
+.insurance-expire i{
+    background-color: #fea23f;
+}
+.yearly-inspection-expire i{
+    background-color: #9fc527;
+}
+.birthday i{
+    background-color: #93db48;
+}
+.visit i{
+    background-color: #48cbf9;
+}
+.lost i{
+    background-color: purple;
+}
+.current-month-remind li span:nth-child(1){
+    width: 110px;
+}
+.current-month-remind li span:nth-child(2){
+    width: 400px;
+    height: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    vertical-align: middle;
+    background-color: #e5e5e5;
+}
+.current-month-remind li span:nth-child(3){
+    width: 35px;
+    text-align: right;
+    white-space: nowrap;
+}
+.display{
+    color: #333333;
+    font-style: normal;
+}
+.current-month-tag{
+    position: absolute;
+    width: 8px;
+    height: 25px;
+    background: url("../../../images/marketing/tag.png") no-repeat;
+    top: 50%;
+    left: 223px;
+    margin-top: -12.5px;
+}
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+/*提醒类别分析*/
+.analysis_box{
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    clear: both;
+}
+.Detail_datebox .date{
+    height: 24px;
+    border-radius: 3px;
+    float:left;
+    margin-left:12px;
+    margin-top: 10px;
+}
+.date_sel a:hover,
+.date_sel a.hover{
+    color: blue;
+}
+.date_sel a{
+    text-decoration: underline;
+}
+
+.date_sel{
+    width: 155px;
+    height: 49px;
+    line-height: 49px;
+    padding-left: 10px;
+    float: left;
+}
+.date_btn{
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #617a19;
+    float:left;
+    color: #fff;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.tableContent{
+    width: 826px;
+    overflow: hidden;
+}
+.tableContent table{
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+.tableContent th,.tableContent td{
+    text-align: left;
+    padding-left: 10px;
+}
+.tabcon_title{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+.DetailTab{
+    height: 40px;
+    line-height: 40px;
+    font-family: Simsun, SimHei, sans-serif;
+    font-size: 12px;
+    color: #535353;
+    margin-top: 10px;
+}
+.DetailTab span{
+    display: block;
+    width: 110px;
+    height:40px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    background: #ddd;
+    margin-right: 2px;
+}
+
+.DetailTab span.hover{
+    border-top:2px solid #617a19;
+    height: 38px;
+    line-height: 38px;
+    color: #333;
+    font-weight: bold;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background: #fff;
+}
+.tabcon_list{
+    height:35px;
+    line-height: 35px;
+    border-bottom: 1px solid #ddd;
+}
+.tabcon_list:nth-child(even) {
+    background: #fafafa;
+}
+
+/*日期*/
+.mb-10 .param{
+    width: 128px;
+    height: 23px;
+    background: #f8f8f8;
+    border:1px solid #bfbfbf;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}

@@ -1,0 +1,307 @@
+.marR20{
+    margin-right: 20px;
+}
+.clearfix{
+    overflow: hidden;
+    zoom:1;
+}
+.transparent{
+    opacity: 0;
+}
+i {
+    font-style: normal;
+    display: inline-block;
+}
+
+h1.headline {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.order-head {
+    margin-bottom: 0px;
+}
+.order-body {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.order-body .content {
+    display: -webkit-flex;
+    display: flex;
+    padding: 20px 0;
+}
+.order-body>h2 {
+    position: relative;
+    padding-left: 70px;
+    height: 70px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 70px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    background: url('../../../img/page/wechat/youhui.png') no-repeat  14px center #f9f9f9;
+}
+.order-body>h3 {
+    padding-left: 10px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #333;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+.toggle{
+    position: absolute;
+    width: 82px;
+    height: 32px;
+    left: 220px;
+    top: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 1px;
+    color: #fff;
+    font-size: 12px;
+}
+#toggle-true{
+    background: #8fb027;
+    border: 1px solid #7fa700;
+}
+#toggle-false{
+    background: #f2666a;
+    border: 1px solid #d81c1f;
+}
+.toggle > span{
+    width: 35px;
+    height: 28px;
+    background: #fff;
+    border-radius: 2px;
+}
+.toggle > small{
+    line-height: 30px;
+}
+#toggle-false > small{
+    margin-right: 4px;
+}
+#toggle-true > small{
+    margin-left: 4px;
+}
+.box{
+    display: inline-block;
+    vertical-align: top;
+}
+.left-box{
+    width: 60%;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+}
+.right-box{
+    width: 40%;
+}
+#intro{
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 10px;
+}
+#intro h3{
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: bold;
+}
+#intro ol {
+    margin-left: 20px;
+    list-style: decimal;
+}
+#intro li{
+    line-height: 2;
+}
+#intro strong{
+    font-weight: bold;
+}
+.form-item .yqx-input {
+    border: #c6c6c6 1px solid;
+    color: #333;
+    height: 30px;
+    border-radius: 1px;
+}
+.faInput{
+    padding-right: 36px;
+    width: 170px;
+}
+.form-item>.fa {
+    line-height: 30px;
+    color: #333;
+}
+
+fieldset>a{
+    display: inline-block;
+    line-height: 28px;
+    padding: 0 4px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #333;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+#manageCoupon{
+    background: url('../../../img/page/wechat/youhuiquan.gif') no-repeat 2px center #f9f9f9;
+    padding-left: 16px;
+}
+#addNew>strong{
+    margin: 0px 4px 0 2px;
+}
+.js-save{
+    margin-left: 70px;
+}
+.js-search{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.chooseBox{
+    position: relative;
+    top: -40px;
+    left: 50px;
+    margin-bottom: -30px;
+}
+#couponType1{
+    width: 168px;
+}
+#echart-box{
+    width:450px;
+    height: 200px;
+    margin: 0 10px;
+    border: 1px solid #e5e5e5;
+    float: left;
+    background-color: #f9f9f9;
+    position: relative;
+}
+#echart{
+    width:450px;
+    height: 200px;
+}
+.tag{
+    position: absolute;
+    top: 88px;
+    left: 100%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.legend{
+    width: 340px;
+    float: left;
+    padding: 50px 0 0 70px;
+
+}
+.legend li{
+    margin-bottom: 10px;
+}
+.legend > ul{
+    margin-bottom: 30px;
+}
+.first{
+    display: inline-block;
+    background: #4bc8f4;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+.second{
+    display: inline-block;
+    background: #4bf4da;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+.third{
+    display: inline-block;
+    background: #c1d1ce;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+.detail{
+    padding: 0 12px;
+    margin-left: 18px;
+}
+
+/** 按钮 **/
+.yqx-btn {
+    border-radius: 2px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.yqx-btn-3 {
+    border: 1px solid #7fa700;
+    background: #90af34;
+    color: #fff;
+}
+
+.yqx-btn-3:hover {
+    background: #a3cd20;
+}
+
+.yqx-btn-default {
+    background: #f9f9f9;
+    border-color: #d2d2d2;
+    color: #333;
+    font-size: 14px;
+}
+
+.question-icon {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    vertical-align: text-bottom;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width:  15px;
+}
+fieldset {
+    margin-bottom: 23px;
+}
+.fieldset-title{
+    margin-right: 20px;
+}
+.radio {
+    vertical-align: baseline;
+}
+.panel-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+.panel-footer .note-img {
+    float: left;
+    width: 39px;
+    height: 39px;
+    margin-right: -39px;
+}
+.panel-footer .note {
+    height: 40px;
+    margin: 0 105px 0 45px;
+    padding: 5px 0;
+}
+.panel-footer .note p {
+    line-height: 1.4;
+}
+.panel-footer .sms-btn {
+    float: right;
+    width: 100px;
+    height: 35px;
+    padding: 0 5px;
+    margin: 2px 0 0 -100px;
+    font-size: 14px;
+    color: #666;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+}
+.panel-footer .sms-btn:hover {
+    background: #f7f7f8;
+}

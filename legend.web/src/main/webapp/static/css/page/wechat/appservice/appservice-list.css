@@ -1,0 +1,284 @@
+.order-right {
+    width: 823px;
+}
+h1.headline {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.order-head {
+    top: 77px;
+    height: 34px;
+    width: 823px;
+}
+.order-body {
+    overflow: hidden;
+}
+.marR10{
+    margin-right: 10px;
+}
+.marR5{
+    margin-right: 5px;
+}
+
+.yqx-btn{
+    padding: 0 10px;
+    min-width: 88px;
+    border-radius: 0;
+    text-align: center;
+}
+/*tab start*/
+.tab-control{
+    height: 34px;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+.service-tab{
+    float: left;
+    width: 80px;
+    line-height: 32px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #f7f7f7;
+    color: #666;
+    cursor: pointer;
+}
+.current-tab{
+    position: relative;
+    height: 34px;
+    background-color: #eee;
+    color: #333;
+    margin-bottom: 10px;
+}
+.current-tab:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background-color: #8fb027;
+}
+/*tab end*/
+
+/*table内部样式 start*/
+#service-publish .yqx-table{
+    border: 1px solid #e1e6eb;
+}
+.input-box{
+    position: relative;
+    display: inline-block;
+}
+.input-box>span{
+    position: absolute;
+    left: 6px;
+    top: 9px;
+    color: #ccc;
+}
+.sale-price-td{
+    position: relative;
+}
+.tips{
+    position: absolute;
+    right: 2px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    background: url('../../../../img/page/wechat/appservice/tips.png') 0 bottom no-repeat;
+}
+.tips>p{
+    position: absolute;
+    left: -74px;
+    top: -40px;
+    width: 170px;
+    padding: 0 6px;
+    line-height: 30px;
+    text-align: center;
+    color: #c28803;
+    background-color: #fffceb;
+    border: 1px solid #eedfa8;
+    border-radius: 4px;
+    display: none;
+}
+.tips:hover>p, .tips>p:hover{
+    display: block;
+}
+.tips>p:after{
+    content:'';
+    position: absolute;
+    width: 14px;
+    height: 7px;
+    background: url('../../../../img/page/wechat/appservice/tips.png') 0 top no-repeat;
+    left: 73px;
+    top: 30px;
+}
+input[type=radio]{
+    position: relative;
+    top: -2px;
+}
+.yqx-input[readonly]{
+    background-color: #eaeaea;
+    color: #999;
+}
+#service-publish .textL{
+    text-align: left;
+}
+#service-publish .yqx-input{
+    width: 62px;
+    height: 30px;
+    border-radius: 0;
+    padding-left: 14px;
+}
+#service-publish tr:nth-child(n){
+    background: #fff;
+}
+#service-publish th, #service-publish td{
+    border-bottom: 1px solid #e1e6eb;
+}
+#service-publish th{
+    border-top: 1px solid #e1e6eb;
+    background: #f5f6fa;
+}
+#service-publish tr:hover>td{
+    background: #fff;
+}
+.td-img{
+    width: 58px;
+    height: 58px;
+    border: 1px solid #e1e6eb;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.appoint-status{
+    color: #8fb027;
+    line-height: 1.8;
+}
+.td-service{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    width: 130px;
+}
+.td-service>p{
+    white-space: normal;
+}
+.toggle{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #ccc;
+    padding: 2px;
+    margin: 0 auto;
+}
+.toggle:before{
+    content: '';
+    float: left;
+    width: 28px;
+    height: 26px;
+    background: #fff;
+    border-radius: 2px;
+}
+.toggle.active{
+    background-color: #9fc527;
+}
+.toggle.active:before{
+    float: right;
+}
+.arrows{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 10px;
+    background: #ccc url('../../../../img/page/wechat/appservice/arrow.png') center no-repeat;
+    cursor: pointer;
+}
+.arrows.current{
+    background-color: #9fc527;
+}
+.arrow-up, .arrow-down{
+    position: absolute;
+    width: 30px;
+    height: 15px;
+}
+.arrow-up{
+    top: 0;
+}
+.arrow-down{
+    bottom: 0;
+}
+.operate-td a{
+    color: #0166ce;
+    line-height: 1.5;
+}
+.down-payment{
+    position: relative;
+}
+.down-payment-tips{
+    position: absolute;
+    right: -2px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    background: url('../../../../img/page/wechat/appservice/tips.png') 0 bottom no-repeat;
+}
+.down-payment-tips>p{
+    position: absolute;
+    left: -123px;
+    top: -40px;
+    width: 280px;
+    padding: 0 6px;
+    line-height: 30px;
+    text-align: center;
+    color: #c28803;
+    background-color: #fffceb;
+    border: 1px solid #eedfa8;
+    border-radius: 4px;
+    display: none;
+}
+.down-payment-tips:hover>p, .down-payment-tips>p:hover{
+    display: block;
+}
+.down-payment-tips>p:after{
+    content:'';
+    position: absolute;
+    width: 14px;
+    height: 7px;
+    background: url('../../../../img/page/wechat/appservice/tips.png') 0 top no-repeat;
+    left: 120px;
+    top: 30px;
+}
+/*table内部样式 end*/
+.table-footer{
+    padding: 14px 20px;
+    border: 1px solid #e1e6eb;
+    border-top: none;
+    background-color: #f5f6fa;
+    margin-bottom: 10px;
+}
+.js-go-edit{
+    margin-top: 10px;
+}
+.blue-btn{
+    background-color: #2dc0e8;
+    border: 1px solid #24a6c9;
+    color: #fff;
+}
+.blue-btn:hover{
+    background-color: #25c8f4;
+
+}
+.arrows-holder{
+    width: 30px;
+    margin-left: 10px;
+    display: inline-block;
+}
+#qrcodeView{
+    height: 240px;
+    width: 240px;
+    margin: 0 auto;
+}

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.shop.GiftDao">
+
+    <resultMap id = "BaseResultMap" type = "Gift" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "gift_sn" property = "giftSn" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "gift_note" property = "giftNote" />
+        <result column = "registrant_id" property = "registrantId" />
+        <result column = "registrant_name" property = "registrantName" />
+        <result column = "shop_id" property = "shopId" />
+        <result column = "gift_content" property = "giftContent" />
+        <result column = "license" property = "license" />
+        <result column = "customer_name" property = "customerName" />
+        <result column = "mobile" property = "mobile" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            gift_sn as giftSn,
+            customer_car_id as customerCarId,
+            gift_note as giftNote,
+            registrant_id as registrantId,
+            registrant_name as registrantName,
+            shop_id as shopId,
+            gift_content as giftContent,
+            license as license,
+            customer_name as customerName,
+            mobile as mobile,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "giftSn != null">
+                    and gift_sn = #{giftSn}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test = "giftNote != null">
+                    and gift_note = #{giftNote}
+                </if>
+                <if test = "registrantId != null">
+                    and registrant_id = #{registrantId}
+                </if>
+                <if test = "registrantName != null">
+                    and registrant_name = #{registrantName}
+                </if>
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "giftContent != null">
+                    and gift_content = #{giftContent}
+                </if>
+                <if test = "license != null">
+                    and license = #{license}
+                </if>
+                <if test = "customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test = "mobile != null">
+                    and mobile = #{mobile}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "giftSn != null">
+                    gift_sn = #{giftSn},
+                </if>
+                <if test = "customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test = "giftNote != null">
+                    gift_note = #{giftNote},
+                </if>
+                <if test = "registrantId != null">
+                    registrant_id = #{registrantId},
+                </if>
+                <if test = "registrantName != null">
+                    registrant_name = #{registrantName},
+                </if>
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "giftContent != null">
+                    gift_content = #{giftContent},
+                </if>
+                <if test = "license != null">
+                    license = #{license},
+                </if>
+                <if test = "customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test = "mobile != null">
+                    mobile = #{mobile},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_gift
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gift
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gift
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_gift
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_gift
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_gift
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_gift
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_gift (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "giftSn != null">
+                gift_sn,
+            </if>
+            <if test = "customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test = "giftNote != null">
+                gift_note,
+            </if>
+            <if test = "registrantId != null">
+                registrant_id,
+            </if>
+            <if test = "registrantName != null">
+                registrant_name,
+            </if>
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "giftContent != null">
+                gift_content,
+            </if>
+            <if test = "license != null">
+                license,
+            </if>
+            <if test = "customerName != null">
+                customer_name,
+            </if>
+            <if test = "mobile != null">
+                mobile
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "giftSn != null">
+                #{giftSn},
+            </if>
+            <if test = "customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test = "giftNote != null">
+                #{giftNote},
+            </if>
+            <if test = "registrantId != null">
+                #{registrantId},
+            </if>
+            <if test = "registrantName != null">
+                #{registrantName},
+            </if>
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "giftContent != null">
+                #{giftContent},
+            </if>
+            <if test = "license != null">
+                #{license},
+            </if>
+            <if test = "customerName != null">
+                #{customerName},
+            </if>
+            <if test = "mobile != null">
+                #{mobile}
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_gift
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_gift (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            gift_sn,
+            customer_car_id,
+            gift_note,
+            registrant_id,
+            registrant_name,
+            shop_id,
+            gift_content,
+            license,
+            customer_name,
+            mobile
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.giftSn != null">
+                    #{item.giftSn},
+                </if>
+                <if test="item.giftSn == null">
+                    NULL ,
+                </if>
+                <if test="item.customerCarId != null">
+                    #{item.customerCarId},
+                </if>
+                <if test="item.customerCarId == null">
+                    NULL ,
+                </if>
+                <if test="item.giftNote != null">
+                    #{item.giftNote},
+                </if>
+                <if test="item.giftNote == null">
+                    NULL ,
+                </if>
+                <if test="item.registrantId != null">
+                    #{item.registrantId},
+                </if>
+                <if test="item.registrantId == null">
+                    NULL ,
+                </if>
+                <if test="item.registrantName != null">
+                    #{item.registrantName},
+                </if>
+                <if test="item.registrantName == null">
+                    NULL ,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.giftContent != null">
+                    #{item.giftContent},
+                </if>
+                <if test="item.giftContent == null">
+                    NULL ,
+                </if>
+                <if test="item.license != null">
+                    #{item.license},
+                </if>
+                <if test="item.license == null">
+                    NULL ,
+                </if>
+                <if test="item.customerName != null">
+                    #{item.customerName},
+                </if>
+                <if test="item.customerName == null">
+                    NULL ,
+                </if>
+                <if test="item.mobile != null">
+                    #{item.mobile},
+                </if>
+                <if test="item.mobile == null">
+                    NULL
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

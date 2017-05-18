@@ -1,0 +1,10 @@
+/*
+ * zmx 2016/06/03
+ * 新建收款单 页面样式
+*/
+
+.pay-form{height: auto; background: #fff; border: 1px solid #ddd; padding: 10px;}
+.form-label-width{ width: 75px; text-align: right;}
+.remarks-width{ width: 420px;}
+.btn-box{ background: #fff; padding: 15px 10px;border: 1px solid #ddd; border-top: none;}
+.form-item-width{ width: 150px;}

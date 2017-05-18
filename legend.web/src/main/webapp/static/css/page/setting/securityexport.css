@@ -1,0 +1,102 @@
+/*
+* create by zmx 2016/12/08
+* 信息导出加密设置
+*/
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    border-top: none;
+}
+.tab-box{
+    height: 40px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #cacaca;
+}
+.tab-box span{
+    display: inline-block;
+    padding: 0 15px;
+    height: 39px;
+    line-height: 39px;
+    border: 1px solid #cacaca;
+    border-bottom: none;
+    background: #ddd;
+    cursor: pointer;
+}
+.tab-box span:first-child{
+    border-left: none;
+}
+.tab-box .current-tab{
+    background: #fff;
+    height: 40px;
+}
+.tab-con{
+    padding: 15px;
+}
+.form-box .form-label{
+    width: 100px;
+}
+.form-box .form-item{
+    width: 205px;
+}
+.form-box .tips{
+    line-height: 40px;
+    font-size: 12px;
+    padding-left: 90px;
+}
+.btn-box{
+    padding-left: 90px;
+}
+.dialog-form{
+    margin-top: 30px;
+    text-align: center;
+}
+.dialog-form .form-item{
+    width: 100px;
+}
+.dialog-form .yqx-btn-micro{
+    line-height: 30px;
+}
+.dialog-btn{
+    margin-top: 30px;
+    text-align: center;
+}
+.dialog-btn button{
+    padding: 0 45px;
+    border-radius: 0;
+}
+.yqx-table > tbody > tr > td{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.yqx-table > tbody > tr > td.col1, .yqx-table > thead > tr > th.col1{
+    width: 105px;
+}
+.yqx-table > tbody > tr > td.col2, .yqx-table > thead > tr > th.col2{
+    width: 175px;
+}
+.yqx-table > tbody > tr > td.col3, .yqx-table > thead > tr > th.col3{
+    width: 165px;
+}
+.yqx-table > tbody > tr > td.col4, .yqx-table > thead > tr > th.col4{
+    width: 350px;
+}
+.password-tips{
+    line-height: 18px;
+    color: #666;
+    padding-left: 90px;
+}
+.code-box{
+    margin-top: 10px;
+}
+.form-box .code-form-item{
+    width: 105px;
+}
+.save-btn-box{
+    margin: 10px 0 0 107px;
+}
+.dialog-btn button:disabled{
+    background: #999;
+    color: #fff;
+    border: none;
+}

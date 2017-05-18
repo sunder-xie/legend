@@ -1,0 +1,144 @@
+i {
+    font-style: normal;
+}
+
+.allot-btn {
+    color: #fff;
+    background: #232e49;
+    text-align: center;
+}
+
+.headline {
+    margin-bottom: 20px;
+}
+
+.staff-btn:after,
+.choose-staff {
+    cursor: pointer;
+}
+.choose-staff {
+    display: inline-block;
+    float: left;
+    height: 24px;
+    width: 69px;
+    margin: 10px 10px 0 0;
+    line-height: 22px;
+    border: 1px solid #cacaca;
+    color: #666;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.box {
+    background: #fff;
+    border: 1px solid #cacaca;
+}
+
+.btn {
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.staff-list {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.staff-btn {
+    position: relative;
+    float: left;
+    margin: 10px 10px 0 0;
+}
+
+.staff-del-btn {
+    display: block;
+    top: -7.5px;
+    right: -7.5px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url('/legend/static/img/page/marketing/gather/allot/close.png');
+}
+
+*[class*="col-"] {
+    float: left;
+}
+
+.allot-result-dialog,
+.choose-staff-dialog {
+    width: 400px;
+    overflow: hidden;
+}
+
+.allot-result-dialog .num {
+    color: #fd461e;
+    font-weight: 700;
+}
+
+.allot-result-dialog .result {
+    line-height: 55px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.allot-result-dialog .yqx-table {
+    text-align: left;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.allot-result-dialog .dialog-content {
+    padding: 0 10px;
+}
+
+.choose-staff-dialog ul li {
+    float: left;
+    width: 25%;
+    margin-top: 18px;
+}
+
+.choose-staff-dialog input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.choose-staff-dialog label {
+    margin-right: 10px;
+}
+
+.choose-staff-dialog .staff-list label {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.choose-staff-dialog .enter-name {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.choose-staff-dialog .dialog-footer {
+    padding-top: 10px;
+    border-top: 0;
+}
+
+.layui-layer-content strong {
+    margin: 0 3px;
+    font-weight: 700;
+}
+
+.yqx-table > tbody > tr > td.text-r, .yqx-table > thead > tr > th.text-r {
+    text-align: right;
+}
+
+.yqx-table > tbody > tr > td.text-l, .yqx-table > thead > tr > th.text-l {
+    text-align: left;
+}
+
+.yqx-table > tbody > tr > td.text-c, .yqx-table > thead > tr > th.text-c {
+    text-align: center;
+}

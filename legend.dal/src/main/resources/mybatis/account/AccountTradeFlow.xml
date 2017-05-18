@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.AccountTradeFlowDao">
+
+    <resultMap id="BaseResultMap" type="AccountTradeFlow" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="order_id" property="orderId"/>
+        <result column="amount" property="amount"/>
+        <result column="pay_amount" property="payAmount"/>
+        <result column="payment_name" property="paymentName"/>
+        <result column="payment_id" property="paymentId"/>
+        <result column="flow_sn" property="flowSn"/>
+        <result column="reverse_id" property="reverseId"/>
+        <result column="is_reversed" property="isReversed"/>
+        <result column="consume_type" property="consumeType"/>
+        <result column="account_id" property="accountId"/>
+        <result column="remark" property="remark"/>
+        <result column="trade_type" property="tradeType"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="mobile" property="mobile"/>
+        <result column="card_balance" property="cardBalance"/>
+        <result column="coupon_explain" property="couponExplain"/>
+        <result column="service_explain" property="serviceExplain"/>
+        <result column="card_explain" property="cardExplain"/>
+        <result column="receiver" property="receiver"/>
+        <result column="receiver_name" property="receiverName"/>
+        <result column="operator_name" property="operatorName"/>
+        <result column="import_flag" property="importFlag"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            order_id as orderId,
+            amount as amount,
+            pay_amount as payAmount,
+            payment_name as paymentName,
+            payment_id as paymentId,
+            flow_sn as flowSn,
+            reverse_id as reverseId,
+            is_reversed as isReversed,
+            consume_type as consumeType,
+            account_id as accountId,
+            remark as remark,
+            trade_type as tradeType,
+            customer_name as customerName,
+            mobile as mobile,
+            card_balance as cardBalance,
+            coupon_explain as couponExplain,
+            service_explain as serviceExplain,
+            card_explain as cardExplain,
+            receiver as receiver,
+            receiver_name as receiverName,
+            operator_name as operatorName,
+            import_flag as importFlag,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test="amount != null">
+                    and amount = #{amount}
+                </if>
+                <if test="payAmount != null">
+                    and pay_amount = #{payAmount}
+                </if>
+                <if test="paymentName != null">
+                    and payment_name = #{paymentName}
+                </if>
+                <if test="paymentId != null">
+                    and payment_id = #{paymentId}
+                </if>
+                <if test="flowSn != null">
+                    and flow_sn = #{flowSn}
+                </if>
+                <if test="reverseId != null">
+                    and reverse_id = #{reverseId}
+                </if>
+                <if test="isReversed != null">
+                    and is_reversed = #{isReversed}
+                </if>
+                <if test="consumeType != null">
+                    and consume_type = #{consumeType}
+                </if>
+                <if test="accountId != null">
+                    and account_id = #{accountId}
+                </if>
+                <if test="remark != null">
+                    and remark = #{remark}
+                </if>
+                <if test="tradeType != null">
+                    and trade_type = #{tradeType}
+                </if>
+                <if test="customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test="mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test="cardBalance != null">
+                    and card_balance = #{cardBalance}
+                </if>
+                <if test="couponExplain != null">
+                    and coupon_explain = #{couponExplain}
+                </if>
+                <if test="serviceExplain != null">
+                    and service_explain = #{serviceExplain}
+                </if>
+                <if test="cardExplain != null">
+                    and card_explain = #{cardExplain}
+                </if>
+                <if test="receiver != null">
+                    and receiver = #{receiver}
+                </if>
+                <if test="receiverName != null">
+                    and receiver_name = #{receiverName}
+                </if>
+                <if test="operatorName != null">
+                    and operator_name = #{operatorName}
+                </if>
+                <if test="startTime != null">
+                    and gmt_create &gt; #{startTime}
+                </if>
+                <if test="endTime != null">
+                    and gmt_create &lt; #{endTime}
+                </if>
+                <if test="consumeTypes != null">
+                    and consume_type in
+                    <foreach collection="consumeTypes" open="(" close=")" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                </if>
+                <if test="accountIds != null">
+                    AND account_id in
+                    <foreach collection="accountIds" separator="," item="tag" index="index" open="(" close=")">
+                        #{tag}
+                    </foreach>
+                </if>
+                <if test="ids !=null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="id" separator=",">
+                        #{id}
+                    </foreach>
+                    )
+                </if>
+                <if test="importFlag != null">
+                    and import_flag = #{importFlag}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="orderId != null">
+                    order_id = #{orderId},
+                </if>
+                <if test="amount != null">
+                    amount = #{amount},
+                </if>
+                <if test="payAmount != null">
+                    pay_amount = #{payAmount},
+                </if>
+                <if test="paymentName != null">
+                    payment_name = #{paymentName},
+                </if>
+                <if test="paymentId != null">
+                    payment_id = #{paymentId},
+                </if>
+                <if test="flowSn != null">
+                    flow_sn = #{flowSn},
+                </if>
+                <if test="reverseId != null">
+                    reverse_id = #{reverseId},
+                </if>
+                <if test="isReversed != null">
+                    is_reversed = #{isReversed},
+                </if>
+                <if test="consumeType != null">
+                    consume_type = #{consumeType},
+                </if>
+                <if test="accountId != null">
+                    account_id = #{accountId},
+                </if>
+                <if test="remark != null">
+                    remark = #{remark},
+                </if>
+                <if test="tradeType != null">
+                    trade_type = #{tradeType},
+                </if>
+                <if test="customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test="mobile != null">
+                    mobile = #{mobile},
+                </if>
+                <if test="cardBalance != null">
+                    card_balance = #{cardBalance},
+                </if>
+                <if test="couponExplain != null">
+                    coupon_explain = #{couponExplain},
+                </if>
+                <if test="serviceExplain != null">
+                    service_explain = #{serviceExplain},
+                </if>
+                <if test="cardExplain != null">
+                    card_explain = #{cardExplain},
+                </if>
+                <if test="receiver != null">
+                    receiver = #{receiver},
+                </if>
+                <if test="receiverName != null">
+                    receiver_name = #{receiverName},
+                </if>
+                <if test="operatorName != null">
+                    operator_name = #{operatorName},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_account_trade_flow
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_trade_flow
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_trade_flow
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <select id="selectByIdAndShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_trade_flow
+        where shop_id=#{shopId} AND id = #{id} AND is_deleted = 'N'
+    </select>
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_trade_flow
+        where id in
+        (
+        <foreach collection="ids" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+        <if test="shopID != null">
+            and shop_id = #{shopID}
+        </if>
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_account_trade_flow
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_account_trade_flow
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_account_trade_flow
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_account_trade_flow (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="orderId != null">
+                order_id,
+            </if>
+            <if test="amount != null">
+                amount,
+            </if>
+            <if test="payAmount != null">
+                pay_amount,
+            </if>
+            <if test="paymentName != null">
+                payment_name,
+            </if>
+            <if test="paymentId != null">
+                payment_id,
+            </if>
+            <if test="flowSn != null">
+                flow_sn,
+            </if>
+            <if test="reverseId != null">
+                reverse_id,
+            </if>
+            <if test="isReversed != null">
+                is_reversed,
+            </if>
+            <if test="consumeType != null">
+                consume_type,
+            </if>
+            <if test="accountId != null">
+                account_id,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="tradeType != null">
+                trade_type,
+            </if>
+            <if test="customerName != null">
+                customer_name,
+            </if>
+            <if test="mobile != null">
+                mobile,
+            </if>
+            <if test="cardBalance != null">
+                card_balance,
+            </if>
+            <if test="couponExplain != null">
+                coupon_explain,
+            </if>
+            <if test="serviceExplain != null">
+                service_explain,
+            </if>
+            <if test="cardExplain != null">
+                card_explain,
+            </if>
+            <if test="receiver != null">
+                receiver,
+            </if>
+            <if test="receiverName != null">
+                receiver_name,
+            </if>
+            <if test="operatorName != null">
+                operator_name,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="amount != null">
+                #{amount},
+            </if>
+            <if test="payAmount != null">
+                #{payAmount},
+            </if>
+            <if test="paymentName != null">
+                #{paymentName},
+            </if>
+            <if test="paymentId != null">
+                #{paymentId},
+            </if>
+            <if test="flowSn != null">
+                #{flowSn},
+            </if>
+            <if test="reverseId != null">
+                #{reverseId},
+            </if>
+            <if test="isReversed != null">
+                #{isReversed},
+            </if>
+            <if test="consumeType != null">
+                #{consumeType},
+            </if>
+            <if test="accountId != null">
+                #{accountId},
+            </if>
+            <if test="remark != null">
+                #{remark},
+            </if>
+            <if test="tradeType != null">
+                #{tradeType},
+            </if>
+            <if test="customerName != null">
+                #{customerName},
+            </if>
+            <if test="mobile != null">
+                #{mobile},
+            </if>
+            <if test="cardBalance != null">
+                #{cardBalance},
+            </if>
+            <if test="couponExplain != null">
+                #{couponExplain},
+            </if>
+            <if test="serviceExplain != null">
+                #{serviceExplain},
+            </if>
+            <if test="cardExplain != null">
+                #{cardExplain},
+            </if>
+            <if test="receiver != null">
+                #{receiver},
+            </if>
+            <if test="receiverName != null">
+                #{receiverName},
+            </if>
+            <if test="operatorName != null">
+                #{operatorName},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_account_trade_flow
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_account_trade_flow (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            order_id,
+            amount,
+            pay_amount,
+            payment_name,
+            payment_id,
+            flow_sn,
+            reverse_id,
+            is_reversed,
+            consume_type,
+            account_id,
+            remark,
+            trade_type,
+            customer_name,
+            mobile,
+            card_balance,
+            coupon_explain,
+            service_explain,
+            card_explain,
+            receiver,
+            receiver_name,
+            operator_name,
+            import_flag,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.orderId != null">
+                    #{item.orderId},
+                </if>
+                <if test="item.orderId == null">
+                    0 ,
+                </if>
+                <if test="item.amount != null">
+                    #{item.amount},
+                </if>
+                <if test="item.amount == null">
+                    0.00,
+                </if>
+                <if test="item.payAmount != null">
+                    #{item.payAmount},
+                </if>
+                <if test="item.payAmount == null">
+                    0.00,
+                </if>
+                <if test="item.paymentName != null">
+                    #{item.paymentName},
+                </if>
+                <if test="item.paymentName == null">
+                    '',
+                </if>
+                <if test="item.paymentId != null">
+                    #{item.paymentId},
+                </if>
+                <if test="item.paymentId == null">
+                    0 ,
+                </if>
+                <if test="item.flowSn != null">
+                    #{item.flowSn},
+                </if>
+                <if test="item.flowSn == null">
+                    '',
+                </if>
+                <if test="item.reverseId != null">
+                    #{item.reverseId},
+                </if>
+                <if test="item.reverseId == null">
+                    0 ,
+                </if>
+                <if test="item.isReversed != null">
+                    #{item.isReversed},
+                </if>
+                <if test="item.isReversed == null">
+                    0 ,
+                </if>
+                <if test="item.consumeType != null">
+                    #{item.consumeType},
+                </if>
+                <if test="item.consumeType == null">
+                    0 ,
+                </if>
+                <if test="item.accountId != null">
+                    #{item.accountId},
+                </if>
+                <if test="item.accountId == null">
+                    0 ,
+                </if>
+                <if test="item.remark != null">
+                    #{item.remark},
+                </if>
+                <if test="item.remark == null">
+                    '',
+                </if>
+                <if test="item.tradeType != null">
+                    #{item.tradeType},
+                </if>
+                <if test="item.tradeType == null">
+                    0 ,
+                </if>
+                <if test="item.customerName != null">
+                    #{item.customerName},
+                </if>
+                <if test="item.customerName == null">
+                    '',
+                </if>
+                <if test="item.mobile != null">
+                    #{item.mobile},
+                </if>
+                <if test="item.mobile == null">
+                    '',
+                </if>
+                <if test="item.cardBalance != null">
+                    #{item.cardBalance},
+                </if>
+                <if test="item.cardBalance == null">
+                    0.00,
+                </if>
+                <if test="item.couponExplain != null">
+                    #{item.couponExplain},
+                </if>
+                <if test="item.couponExplain == null">
+                    '',
+                </if>
+                <if test="item.serviceExplain != null">
+                    #{item.serviceExplain},
+                </if>
+                <if test="item.serviceExplain == null">
+                    '',
+                </if>
+                <if test="item.cardExplain != null">
+                    #{item.cardExplain},
+                </if>
+                <if test="item.cardExplain == null">
+                    '',
+                </if>
+                <if test="item.receiver != null">
+                    #{item.receiver},
+                </if>
+                <if test="item.receiver == null">
+                    0,
+                </if>
+                <if test="item.receiverName != null">
+                    #{item.receiverName},
+                </if>
+                <if test="item.receiverName == null">
+                    '',
+                </if>
+                <if test="item.operatorName != null">
+                    #{item.operatorName},
+                </if>
+                <if test="item.operatorName == null">
+                    '',
+                </if>
+                #{item.importFlag}
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="getLeftValue" resultType="decimal">
+        SELECT card_balance
+        FROM legend_account_trade_flow
+        WHERE is_deleted='N'
+        <![CDATA[AND gmt_create <=  #{endTime} ]]>
+        AND account_id = #{accountId}
+        and trade_type = 3
+        order by gmt_create desc
+        limit 1
+    </select>
+
+    <select id="getAccountTradeFlowList" resultType="com.tqmall.legend.entity.account.AccountTradeFlow">
+        SELECT id
+        FROM legend_account_trade_flow
+        WHERE is_deleted='N'
+        and shop_id = #{shopId}
+        AND account_id = #{accountId}
+        AND trade_type = 3
+        AND consume_type in
+        <foreach collection="consumeTypes" open="(" close=")" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        <![CDATA[
+        AND gmt_create >= #{startTime}
+        AND gmt_create <= #{endTime}
+        ]]>
+
+    </select>
+
+    <select id="getAccountCardChangeAmount" resultType="decimal">
+        SELECT IFNULL(sum(change_amount),0)
+        FROM legend_account_card_flow_detail
+        WHERE is_deleted='N'
+        and shop_id = #{shopId}
+        and account_trade_flow_id in
+        <foreach collection="flowIds" separator="," item="tag" index="index" open="(" close=")">
+            #{tag}
+        </foreach>
+        AND consume_type in
+        <foreach collection="consumeTypes" open="(" close=")" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        <![CDATA[
+        AND gmt_create >= #{startTime}
+        AND gmt_create <= #{endTime}
+        ]]>
+    </select>
+
+    <select id="findFlowByAccountIdsMobilesAndConsumeType" resultMap="BaseResultMap">
+        select 
+        id,flow_sn as flowSn,
+        receiver_name as receiverName,
+        account_id as accountId,
+        operator_name as operatorName,
+        import_flag as importFlag
+        FROM legend_account_trade_flow
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and account_id in
+        <foreach collection="accountIds" index="index" item="tag" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+        and consume_type = #{consumeType}
+        and import_flag = #{importFlag}
+    </select>
+
+    <select id="getTotalChargeAmountByCardIds" resultType="BigDecimal">
+        SELECT ifnull(sum(CASE
+                              WHEN a.consume_type=1 THEN a.amount
+                              ELSE a.card_balance
+                          END),0)
+        FROM legend_account_trade_flow a
+        JOIN legend_account_card_flow_detail b ON a.id=b.account_trade_flow_id
+        WHERE a.is_deleted='N'
+          AND a.is_reversed=0
+          AND a.trade_type=3
+          AND a.consume_type IN(1,5)
+        AND a.shop_id=#{shopId}
+        <foreach collection="cardIds" item="cardId" open="AND b.card_id in (" separator="," close=")">
+            #{cardId}
+        </foreach>
+    </select>
+
+    <select id="getTotalPayAmount" resultType="java.math.BigDecimal">
+        SELECT ifnull(sum(pay_amount), 0)
+        FROM legend_account_trade_flow
+        WHERE shop_id = #{shopId}
+          AND id IN
+        <foreach collection="ids" index="index" item="tag" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+          AND is_reversed = 0
+          AND is_deleted = 'N'
+    </select>
+
+</mapper>

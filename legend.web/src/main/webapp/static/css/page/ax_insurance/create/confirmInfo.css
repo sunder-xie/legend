@@ -1,0 +1,927 @@
+/*买保险送奖励金模式*/
+
+
+.clearfix :after {
+    clear: both;
+}
+
+.wrapper {
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+
+.left {
+    float: left;
+    width: 138px;
+    height: 135px;
+    border: 1px solid #dddddd;
+}
+
+li {
+    list-style: none;
+}
+
+.right {
+    float: right;
+    width: 825px;
+}
+
+.right p.choose {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.all_choose, .all-pack {
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+}
+
+.all_choose input {
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.detail_w, .choose_w ,.coupon-choose-title{
+    height: 46px;
+    line-height: 46px;
+    padding-left: 9px;
+    font-size: 14px;
+    color: #535353;
+    box-sizing: border-box;
+    width: 805px;
+    margin: 10px auto 0 auto;
+
+}
+
+.span_w {
+    display: inline-block;
+    width: 105px;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.car, .brand, .car_price {
+    display: inline-block;
+    color: #666666;
+    height: 100%;
+}
+
+body .dis-car{
+    width: 700px;
+}
+.scheme {
+
+    width: 700px;
+    margin: 10px auto 0 auto;
+}
+
+.scheme_con {
+    width: 763px;
+    margin: auto;
+}
+
+.allData .info, .backG ,.coupon-list{
+    width: 805px;
+    background-color: #f9f9f9;
+}
+
+.force, .business {
+    font-size: 12px;
+    padding: 20px 0 10px 10px;
+    box-sizing: border-box;
+    color: #535353;
+
+}
+
+table {
+    width: 100%;
+    border: #d1d1d1 1px solid;
+}
+
+table th {
+    background-color: #f3f3f3;
+    height: 35px;
+    line-height: 35px;
+    color: #333333;
+}
+
+table td.check {
+    text-align: center;
+}
+
+table td.touB {
+    width: 170px;
+}
+
+table td {
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+}
+
+table td, table th {
+    border-bottom: #d1d1d1 1px solid;
+}
+
+table td:first-child, table th:first-child {
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.time {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+
+.time span {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.businessEndT, .forceEndT, .forceStartT, .businessStartT {
+    width: 165px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.endW {
+    margin-left: 25px;
+}
+
+.startW {
+    margin-left: 10px;
+}
+
+.two {
+    margin-left: 130px;
+}
+
+.same, .same_carD {
+    display: inline-block;
+    float: right;
+    height: 46px;
+    line-height: 46px;
+    margin-right: 9px;
+}
+
+.same_carD {
+    margin-right: 23px;
+}
+
+.Insured {
+
+}
+
+.Insure_d {
+
+}
+
+.all_inf1, .all_inf2 {
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.all_inf_w {
+    display: inline-block;
+    width: 107px;
+    height: 37px;
+    text-align: right;
+    line-height: 37px;
+    vertical-align: middle;
+}
+
+.all_input {
+    width: 205px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: #c9c9c9 1px solid;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.zj_l {
+    display: inline-block;
+    width: 174px;
+    height: 35px;
+    border: 1px solid #c9c9c9;
+    vertical-align: middle;
+    border-radius: 3px 0 0 3px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+}
+
+.zj_btn {
+    display: inline-block;
+    width: 30px;
+    height: 35px;
+    border-bottom: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+    border-top: 1px solid #c9c9c9;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.margin {
+    margin-top: 10px;
+}
+
+.s_up {
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px #FFFFFF;
+}
+
+.s_down {
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px #FFFFFF;
+}
+
+.sendCode, .VCode {
+    display: inline-block;
+}
+
+.VCode {
+    width: 205px;
+    height: 35px;
+    border: 1px solid #c9c9c9;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 3px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+}
+
+.VCode_num {
+    width: 120px;
+    height: 100%;
+    padding-left: 6px;
+    box-sizing: border-box;
+}
+
+.sendCode {
+    width: 77px;
+    height: 22px;
+    background-color: #9fc527;
+    border: #7fa700 1px solid;
+    border-radius: 3px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.sendCode_bc{
+    background-color: #d2d2d2;
+    border-color:#d2d2d2;
+}
+.detail_addr {
+    width: 401px;
+    height: 37px;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    padding-left: 9px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+}
+
+.prev, .area, .city,.warrantyT{
+    display: inline-block;
+    width: 105px;
+    height: 35px;
+    border: 1px solid #c9c9c9;
+    vertical-align: middle;
+    border-radius: 3px 0 0 3px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+}
+
+.imp_tips {
+    height: 54px;
+}
+
+.imp_tips_in {
+    width: 805px;
+    height: 100%;
+    background-color: #f9f9f9;
+    margin: auto;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.imp_tips_in input {
+    margin-left: 10px;
+}
+
+.agree-protocol-label input[type=checkbox] {
+    margin-right: 3px;
+    vertical-align: initial;
+}
+
+.protocol-box {
+    margin-left: 70px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.protocol-box a {
+    font-style: normal;
+    color: #2c8cfa;
+}
+.max-text{
+    max-width: 65px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.total_P {
+    width: 805px;
+    /*height: 60px;*/
+    /*line-height: 60px;*/
+    font-size: 14px;
+    margin: auto;
+    border-bottom: 1px solid #c9c9c9;
+    /*-webkit-user-select: none;*/
+    /*user-select: none;*/
+}
+
+.total_Price,.coupon-amount ,.jq-insurance,.sy-insurance{
+    color: #ff7800;
+    display: inline-block;
+    font-style: normal;
+}
+
+.total_P .incentive {
+    color: #fa7b7c;
+    vertical-align: top;
+}
+.incentive_price{
+    font-style: normal;
+    vertical-align: top;
+}
+.total_P .incomeTotal {
+    vertical-align: top;
+    margin: 10px 0;
+    font-weight: bolder;
+}
+
+.triangle {
+    margin-top: 8px;
+    margin-right: 15px;
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background:url("../../../../img/page/ax_insurance/bounty.png") no-repeat center;
+}
+
+.btn {
+    width: 805px;
+    height: 55px;
+    margin: 15px auto;
+}
+
+.submit {
+    width: 88px;
+    height: 33px;
+    background-color: #fa7b7c;
+    border: #f55d5e 1px solid;
+    border-radius: 3px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    float: left;
+    cursor: pointer;
+}
+
+.back {
+    width: 88px;
+    height: 33px;
+    background-color: #f9f9f9;
+    border: #d2d2d2 1px solid;
+    border-radius: 3px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    float: right;
+    cursor: pointer;
+}
+
+.bonusGold {
+    width: 100%;
+    height: 77px;
+    line-height: 77px;
+}
+
+.color {
+    color: #ff7800;
+    margin-left: 185px;
+}
+
+.bonusGold_p {
+    font-style: normal;
+    color: #ff7800;
+    margin-left: 5px;
+}
+
+.all_inf_w_btn {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+
+.all_inf_w_btn ul{
+    position: absolute;
+    width: 205px;
+    max-height: 105px;
+    left: 0;
+    background-color: #ffffff;
+    top: 35px;
+    border: 1px solid #c9c9c9;
+}
+.all_inf_w_btn ul li{
+    height: 35px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 35px;
+}
+
+.all_inf_w_btn ul li:hover, .warranty ul li:hover, .prevUl li:hover, .cityUl li:hover, .areaUl li:hover ,.warrantyTypeUl li:hover{
+    background-color: #80a61e;
+    color: #ffffff;
+}
+
+body .dis {
+    display: none;
+}
+
+.dis-inB {
+    display: inline-block;
+    width: 345px;
+    padding: 12px 0 3px 0;
+}
+
+.car_detail {
+    width: 700px;
+    margin: auto;
+}
+
+.dis-inS {
+    display: inline-block;
+    width: 229px;
+    height: 37px;
+    line-height: 37px;
+    vertical-align: middle;
+}
+
+.warranty {
+    display: inline-block;
+    position: relative;
+}
+
+
+
+.prevK, .cityK, .areaK ,.warrantyT{
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+
+.prevUl, .cityUl, .areaUl,.warrantyTypeUl{
+    border: 1px solid #c9c9c9;
+    width: 136px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    max-height: 150px;
+    background-color: #FFFFFF;
+    overflow: auto;
+    z-index: 999;
+}
+.warrantyTypeUl{
+    left: 10px;
+}
+
+.prevUl li, .cityUl li, .areaUl li ,.warrantyTypeUl li{
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+body .red_c {
+    border: #f50f14 1px solid;
+}
+
+body .flotation {
+    line-height: 50px;
+    text-align: center;
+}
+
+.servicePack ,.coupon-list{
+    width: 805px;
+    margin: 10px auto 0 auto;
+}
+
+.selectServicePack {
+    width: 110px;
+    height: 35px;
+    border: #f55d5e;
+    border-radius: 3px;
+    background-color: #fa7b7c;
+    color: #FFFFFF;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.sorry{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+}
+.sorry .sorry-tip{
+    vertical-align: middle;
+}
+.sorry .sad-expr,.no-coupon .sad-expr{
+    background: url("../../../../img/page/ax_insurance/sad.png") no-repeat 0 center ;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.sorry em{
+    font-style: normal;
+}
+.sorry-Pa{
+    padding-left: 8px;
+}
+.sorry em.sorry-w{
+    color: #f55d5e;
+}
+/*服务包页面开始*/
+.all-pack {
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 825px;
+}
+
+.sendPack-all .back-insure {
+    font-size: 12px;
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+
+.back-insure {
+    cursor: pointer;
+}
+
+.pack-title, .pay-title {
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pay-title {
+    margin-top: -10px;
+}
+
+.pack-title span {
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.pack-list {
+    margin-bottom: 10px;
+}
+
+.pack-check {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.pack-content {
+    width: 750px;
+    padding: 0 10px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.pack-tips{
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.SelectedPack .pack-content-choose{
+    width: 775px;
+}
+.pack-check:checked + .pack-content {
+    background: #ebf1cc;
+}
+
+.consume-title {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 12px;
+}
+
+.consume-title h3 .recommend {
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    margin-right: 10px;
+    font: bold 16px/25px "Microsoft Yahei", "微软雅黑";
+    text-align: center;
+    background: #9fc527;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.consume-title h3 .pack-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.consume-title h3 .summary {
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.money {
+    font-size: 14px;
+}
+
+.mark {
+    color: #ff7800;
+    background: transparent;
+}
+
+.pack-content table {
+    width: 100%;
+    border: none;
+}
+
+.pack-content td {
+    line-height: 30px;
+    color: #333;
+    font-size: 12px;
+    border-bottom: none;
+}
+
+.pack-content th {
+    line-height: 30px;
+    color: #666;
+    font-size: 12px;
+    background: none;
+    border-bottom: none;
+}
+
+.col1 {
+    width: 410px;
+}
+
+.col2 {
+    width: 122px;
+}
+
+.col3 {
+    width: 65px;
+}
+
+.col4 {
+    width: 95px;
+}
+
+.col5 {
+    width: 50px;
+}
+
+.servicePackN .re_selected {
+    float: right;
+    margin-right: 10px;
+    margin-top: 7px;
+    width: 90px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.backG {
+    padding: 10px 0 10px 10px;
+}
+
+/* 协议样式 */
+.table th,
+.table td {
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.table-border th,
+.table-border td {
+    border: 1px solid #ddd;
+}
+
+.label-must:before {
+    content: "*";
+    display: inline;
+    font-size: 12px;
+    color: #f00;
+}
+
+.tip-text{
+    width: 260px;
+    margin: 15px auto;
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.btn-box{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.btn-box a{
+    display: inline-block;
+    margin: 0 8px;
+    width: 118px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    border: 1px solid #bfbfbf;
+    color: #999;
+    border-radius: 3px;
+    background: #fff;
+}
+.btn-box a.current{
+    color: #9fc527;
+    border: 1px solid #9fc527;
+
+}
+.yqx-dialog-body{
+    text-align: center;
+}
+
+.promt-note {
+    padding: 5px 0;
+    border-top: 1px solid #bfbfbf;
+}
+
+/*电子邮箱*/
+.email-receive{
+    width: 400px;
+    height: 37px;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+}
+/*优惠券选择开始*/
+.coupon-list {
+    font-size: 0;
+    margin: 0 auto;
+}
+
+.coupon-list .coupon-checked{
+    border: #8eb110 2px solid;
+    background: url(../../../../img/common/order/order-sprite.png) 230px 107px no-repeat;
+}
+.coupon-list-li {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 12px;
+    width: 248px;
+    height: 123px;
+    border: #c9c9c9 1px solid;
+    margin: 13px 8px;
+}
+
+.coupon-list-box {
+    width: 210px;
+    height: 90px;
+    overflow: hidden;
+    margin: 17px auto 0 auto;
+}
+
+.coupon-title {
+    font-size: 24px;
+    color: #ff1d00;
+    float: left;
+}
+
+.question-mark {
+    float: right;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: #e8e8e8;
+    line-height: 18px;
+    text-align: center;
+    color: #c9c9c9;
+    cursor: default;
+    margin-top: 3px;
+}
+
+.coupon-time {
+    margin: 7px 0 15px 0;
+    color: #999999;
+}
+.coupon-describe{
+    width: 200px;
+    line-height: 15px;
+    color: #666666;
+}
+.coupon-use-describe{
+    width: 370px;
+    min-height: 90px;
+    position: absolute;
+    left: 168px;
+    top: 55px;
+    padding: 13px;
+    line-height: 18px;
+    font-size: 13px;
+    background-color: #f9f9f9;
+    border: #dddddd 1px solid;
+    z-index: 999;
+    display: none;
+}
+.coupon-use-describe:after,.coupon-use-describe:before{
+    width: 0;
+    height: 0;
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: -20px;
+    border: 10px solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+}
+.coupon-use-describe:before{
+    top: -21px;
+    border-bottom-color: #dddddd;
+}
+.no-coupon{
+    width: 100%;
+    height: 45px;
+    font-size: 12px;
+    line-height: 45px;
+    padding-left: 10px;
+    color: #f55d5e;
+}
+.no-coupon-word{
+    padding-left: 10px;
+}
+.disable-coupon{
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+.dis-coupon{
+    color: #9b9b9b;
+}
+.withStore{
+    font-weight: normal;
+    font-size: 13px;
+}
+/*管理常用地址*/
+.manage-address{
+    color: #f55d5e;
+    font-size: 12px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+.manage-address:hover{
+    color: #f40;
+}

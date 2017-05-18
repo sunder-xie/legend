@@ -1,0 +1,141 @@
+/**
+* Create by zmx 2016/12/20
+* 集客效果
+*/
+.form-box{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 10px;
+}
+.fast-time{
+    display:inline-block ;
+    margin-left: 10px;
+}
+.fast-time a{
+    color: #333;
+    text-decoration: underline;
+}
+.date-select{
+    padding-bottom: 10px;
+}
+.staff-box{
+    padding-top: 10px;
+    border-top: 1px solid #cacaca;
+}
+.staff-box h3{
+    display: inline-block;
+    font-size: 12px;
+    padding-top: 4px;
+}
+.staff-box ul{
+    display: inline-block;
+    max-width: 730px;
+    vertical-align: top;
+}
+.staff-box li{
+    display: inline-block;
+    height: 26px;
+    padding: 0 15px;
+    background: #f9f9f9;
+    border:1px solid #cacaca;
+    line-height: 26px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.staff-box .staff-current{
+    background: #e2e7d0;
+    border: 1px solid #607b0a;
+    position: relative;
+}
+.staff-box .staff-current:after{
+    content:"";
+    display: inline;
+    width: 18px;
+    height: 16px;
+    background: url("../../../../img/page/marketing/gather/card-hover.png") no-repeat;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.detail-box{
+    margin-top: 10px;
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+}
+.detail{
+    width: 257px;
+    height: 200px;
+    border-right: 1px solid #cacaca;
+    margin-left: 10px;
+}
+.detail:last-child{
+    border-right: none;
+}
+.detail h3{
+    line-height: 34px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.detail li{
+    margin-bottom: 10px;
+}
+.detail ul{
+    margin-top: 10px;
+}
+.detail li div{
+    display: inline-block;
+}
+.label{
+    width: 100px;
+}
+.process{
+    width: 82px;
+    height: 8px;
+    border-radius: 4px;
+    background: #cacaca;
+    position: relative;
+    overflow: hidden;
+}
+.total{
+    width: 52px;
+    margin-left: 10px;
+}
+.process-width{
+    position: absolute;
+    height: 8px;
+    border-radius: 4px;
+}
+.bg-green{
+    background: #607b0a;
+}
+.bg-red{
+    background: #fa482c;
+}
+.bg-blue{
+    background: #222d49;
+}
+.table-con{
+    border: 1px solid #cacaca;
+    background: #fff;
+    margin-top: 10px;
+}
+.table-con h3{
+    line-height: 42px;
+    padding-left: 20px;
+    border-bottom: 1px solid #cacaca;
+}
+.export-ec{
+    font-size: 12px;
+    color: #666;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.no-data{
+    border-bottom: 1px solid #cacaca;
+    text-align: center;
+    line-height: 100px;
+    background: #fff;
+}

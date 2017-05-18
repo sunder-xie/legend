@@ -1,0 +1,67 @@
+/**
+ * Created by sky on 2017/2/22.
+ */
+
+/* shortcut dialog start */
+.shortcut-dialog {
+  width: 402px;
+  background: #fff;
+
+  .shortcut-content {
+    padding: 33px 30px 30px;
+  }
+
+  .shortcut-icon {
+    float: left;
+    img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .shortcut-info {
+    padding-left: 10px;
+    overflow: hidden;
+  }
+
+  .shortcut-title {
+    line-height: 2;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .shortcut-primary {
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .shortcut-minor {
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .shortcut-not-prompt {
+    margin-bottom: 18px;
+
+    input[type=checkbox] {
+      margin-right: 3px;
+      vertical-align: baseline;
+    }
+  }
+
+  .shortcut-btns {
+    .yqx-btn {
+      width: 120px;
+
+      & + .yqx-btn {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+/* shortcut dialog end */

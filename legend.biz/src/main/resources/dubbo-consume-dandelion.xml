@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!-- 蒲公英 优惠券 -->
+    <dubbo:reference interface="com.tqmall.dandelion.service.coupon.PgyCouponService" id="PgyCouponService"
+                     version="${dubbo.dandelion.version}" owner="chuang.dong"/>
+
+    <!-- 蒲公英 创建客户接口 -->
+    <dubbo:reference interface="com.tqmall.dandelion.service.user.PgyUserService" id="PgyUserService"
+                     version="${dubbo.dandelion.version}" owner="shuai.wu2"/>
+    <!-- 蒲公英 获取车型接口 -->
+    <dubbo:reference interface="com.tqmall.dandelion.service.car.PgyCarService" id="PgyCarService"
+                     version="${dubbo.dandelion.version}" owner="shuai.wu2"/>
+
+</beans>

@@ -1,0 +1,56 @@
+.gu_box {
+    width: 500px;
+    height: 345px;
+    border: 1px solid #cdcdcd;
+    background: #f5f5f5;
+    margin: 120px auto;
+}
+.gu_tit {
+    height: 36px;
+    border-bottom: 1px solid #cdcdcd;
+    background: #efefef;
+    overflow: hidden;
+}
+.gu_tit h2 {
+    width: 98px;
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #666666;
+    margin-top: 1px;
+    border-right: 1px solid #cdcdcd;
+}
+.gu_top {
+    height: 88px;
+    padding: 50px 50px 0;
+}
+.gu_tl {
+    float: left;
+    padding-right: 30px;
+    border-right: 1px solid #dadada;
+}
+.gu_ttit {
+    float: left;
+    font-size: 16px;
+    color: #414142;
+    padding: 15px 0 0 26px;
+    max-width: 239px;
+    height: 40px;
+    line-height: 20px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.gu_cont {
+    padding: 0 50px;
+    line-height: 25px;
+}
+.gu_cont h2 {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.gu_cont a {
+    color: #0076ca;
+    float: right;
+}

@@ -1,0 +1,15 @@
+/**
+ * Created by sky on 2017/1/10.
+ */
+
+@import "../mixins/ellipsis";
+
+%ellipsis-one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%ellipsis-two-line {
+  @include ellipsis-multiple-line(2);
+}

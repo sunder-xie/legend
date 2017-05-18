@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+           http://code.alibabatech.com/schema/dubbo
+           http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 依赖biz层 -->
+    <import resource="classpath*:biz-context.xml"/>
+
+    <dubbo:provider timeout="60000"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <!--淘汽服务门店统计对外接口-->
+    <dubbo:service interface="com.tqmall.legend.service.service.RpcShopServiceInfoService"
+                   ref="rpcShopServiceInfoService" version="${dubbo.legend.version}" owner="shenyang.zhou"/>
+    <!--创建客户对外接口-->
+    <dubbo:service interface="com.tqmall.legend.service.customer.RpcCustomerCarService"
+                   ref="rpcCustomerCarService" version="${dubbo.legend.version}" owner="shenyang.zhou"/>
+    <!--发送MQ至cube对外接口-->
+    <dubbo:service interface="com.tqmall.legend.service.appoint.RpcAppointService"
+                   ref="rpcAppointService" version="${dubbo.legend.version}" owner="shenyang.zhou"/>
+    <!--车主端下预约单对外接口-->
+    <dubbo:service interface="com.tqmall.legend.service.appoint.RpcAppAppointService"
+                   ref="rpcAppAppointService" version="${dubbo.legend.version}" owner="shenyang.zhou"/>
+    <!--APP技师认证接口-->
+    <dubbo:service interface="com.tqmall.legend.service.service.RpcUserRoleInfoService"
+                   ref="rpcUserRoleInfoService" version="${dubbo.legend.version}" owner="tan.li"/>
+
+    <dubbo:service interface="com.tqmall.legend.service.finance.RpcReturnGoodsService"
+                   ref="rpcReturnGoodsService" version="${dubbo.legend.version}" owner="cheng.zheng"/>
+
+    <!--APP补贴活动接口(部分)-->
+    <dubbo:service interface="com.tqmall.legend.service.subsidy.RpcSubsidyService"
+                   ref="rpcSubsidyService" version="${dubbo.legend.version}" owner="xiangdong.qu"/>
+
+    <!--APP结算相关-->
+    <dubbo:service interface="com.tqmall.legend.service.settlement.RpcSettlementService"
+                   ref="rpcSettlementService" version="${dubbo.legend.version}" owner="xiangdong.qu"/>
+
+    <!--提供给蒲公英接口-->
+    <dubbo:service interface="com.tqmall.legend.service.order.RpcOrderService"
+                   ref="rpcOrderService" version="${dubbo.legend.version}" owner="wangjun.li"/>
+    <!--APP获取门店信息 -->
+    <dubbo:service interface="com.tqmall.legend.service.shop.RpcShopService"
+                   ref="rpcShopService" version="${dubbo.legend.version}" owner="chaoxiang.ma"/>
+
+    <!--APP工单查询相关接口-->
+    <dubbo:service interface="com.tqmall.legend.service.order.RpcAppOrderService"
+                   ref="rpcAppOrderService" version="${dubbo.legend.version}" owner="feilong.li"/>
+
+    <!--提供给stall支付回调-->
+    <dubbo:service interface="com.tqmall.legend.service.onlinepay.RpcOnlinePayCallbackService"
+                   ref="rpcOnlinePayCallbackService" version="${dubbo.legend.version}" owner="wanghui"/>
+
+    <!--提供给app查询打卡时间-->
+    <dubbo:service interface="com.tqmall.legend.service.appsign.RpcAppsignService"
+                   ref="rpcAppsignService" version="${dubbo.legend.version}" owner="tanghao"/>
+
+    <!--提供给app查询配置信息-->
+    <dubbo:service interface="com.tqmall.legend.service.shop.RpcShopConfigService"
+                   ref="rpcShopConfigService" version="${dubbo.legend.version}" owner="twg"/>
+    <!--提供给app查询员工绩效-->
+    <dubbo:service interface="com.tqmall.legend.service.statistics.RpcWorkerPerformanceService"
+                   ref="rpcWorkerPerformanceService" version="${dubbo.legend.version}" owner="jiachao.wang"/>
+
+    <!--提供给app 员工角色-->
+    <dubbo:service interface="com.tqmall.legend.service.customer.RpcUserPvgRoleService"
+                   ref="rpcUserPvgRoleService" version="${dubbo.legend.version}" owner="xiangdong.qu"/>
+    <!--提供给app 店铺员工列表-->
+    <dubbo:service interface="com.tqmall.legend.service.shop.RpcShopManagerService"
+                   ref="rpcShopManagerService" version="${dubbo.legend.version}" owner="xiangdong.qu"/>
+
+    <!--APP淘汽检测接口-->
+    <dubbo:service interface="com.tqmall.legend.service.tqcheck.RpcTqCheckService" ref="rpcTqCheckService"
+                   version="${dubbo.legend.version}" owner="feilong.li"/>
+    <!--提供CRM,电商寄售活动获取共建基金接口-->
+    <dubbo:service interface="com.tqmall.legend.service.activity.RpcConsignmentService" ref="rpcConsignmentService"
+                   version="${dubbo.legend.version}" owner="dehuang.zhang"/>
+
+    <!-- 引流活动接口-->
+    <dubbo:service interface="com.tqmall.legend.service.activity.RpcActivityTemplateService" ref="rpcActivityTemplateService"
+                   version="${dubbo.legend.version}" owner="shenyang.zhou"/>
+
+    <!-- 权限接口-->
+    <dubbo:service interface="com.tqmall.legend.service.privilege.RpcFuncService" ref="rpcFuncService"
+                   version="${dubbo.legend.version}" owner="shenyang.zhou"/>
+    <!--账户接口,提供给账单中心和App使用 -->
+    <dubbo:service interface="com.tqmall.legend.service.account.RpcAccountService" ref="rpcAccountService" version="${dubbo.legend.version}"
+                   owner="wanghui" />
+
+    <!--app账户登录 -->
+    <dubbo:service interface="com.tqmall.legend.service.security.RpcLoginService" ref="rpcLoginService" version="${dubbo.legend.version}"
+                   owner="xiangdong.qu" />
+    <!--门店活动-->
+    <dubbo:service interface="com.tqmall.legend.service.activity.RpcShopActivityService" ref="rpcShopActivityService" version="${dubbo.legend.version}"
+                   owner="wushuai" />
+    <!--安心保险-->
+    <dubbo:service interface="com.tqmall.legend.service.finance.RpcFinanceAccountService" ref="rpcFinanceAccountService" version="${dubbo.legend.version}"
+                   owner="shenyang.zhou" />
+
+    <!--门店支付申请 -->
+    <dubbo:service interface="com.tqmall.legend.service.shop.RpcShopApplyRecordService" ref="rpcShopApplyRecordService" version="${dubbo.legend.version}" owner="feilong.li" />
+
+    <!--库存共享-->
+    <dubbo:service interface="com.tqmall.legend.service.warehouseshare.RpcWarehouseShareService" ref="rpcWarehouseShareService" version="${dubbo.legend.version}" owner="yiming.xin" />
+
+    <!--arg采购活动配置 -->
+    <dubbo:service interface="com.tqmall.legend.service.activity.RpcPurchaseActivityConfigService" ref="rpcPurchaseActivityConfigService" version="${dubbo.legend.version}" owner="hao.tang" />
+    <dubbo:service interface="com.tqmall.legend.service.activity.RpcPurchaseBannerConfigService" ref="rpcPurchaseBannerConfigService" version="${dubbo.legend.version}" owner="hao.tang" />
+    <!--app3.8 -->
+    <dubbo:service interface="com.tqmall.legend.service.common.RpcSnService" ref="rpcSnService" version="${dubbo.legend.version}" owner="shenyang.zhou" />
+    <dubbo:service interface="com.tqmall.legend.service.service.RpcShopServiceCateService" ref="rpcShopServiceCateService" version="${dubbo.legend.version}" owner="shenyang.zhou" />
+    <dubbo:service interface="com.tqmall.legend.service.service.RpcCarLevelService" ref="rpcCarLevelService" version="${dubbo.legend.version}" owner="shenyang.zhou" />
+    <dubbo:service interface="com.tqmall.legend.service.supplier.RpcSupplierService" ref="rpcSupplierService" version="${dubbo.legend.version}" owner="shenyang.zhou" />
+    <dubbo:service interface="com.tqmall.legend.service.warehouse.RpcWarehouseInService" ref="rpcWarehouseInService" version="${dubbo.legend.version}" owner="dehuang.zhang" />
+    <dubbo:service interface="com.tqmall.legend.service.goods.RpcGoodsService" ref="rpcGoodsService" version="${dubbo.legend.version}" owner="shenyang.zhou" />
+    <dubbo:service interface="com.tqmall.legend.service.goods.RpcGoodsCategoryService" ref="rpcGoodsCategoryService" version="${dubbo.legend.version}" owner="shenyang.zhou" />
+    <dubbo:service interface="com.tqmall.legend.service.goods.RpcGoodsBrandService" ref="rpcGoodsBrandService" version="${dubbo.legend.version}" owner="shenyang.zhou" />
+    <dubbo:service interface="com.tqmall.legend.service.login.RpcResetPasswordService" ref="rpcResetPasswordService" version="${dubbo.legend.version}" owner="chaoxiang.ma" />
+    <!--app洗车单-->
+    <dubbo:service interface="com.tqmall.legend.service.order.RpcWashCarOrderService" ref="rpcWashCarOrderService" version="${dubbo.legend.version}" owner="xiangdong.qu" />
+
+
+    <!--云修在线售卖支付 账务回调接口-->
+    <dubbo:service interface="com.tqmall.legend.service.sell.RpcSellOrderPayService" ref="rpcSellOrderPayService" version="${dubbo.legend.version}" owner="xiangdong.qu" />
+    <dubbo:service interface="com.tqmall.legend.service.news.RpcLegendNewsService" ref="rpcLegendNewsService" version="${dubbo.legend.version}" owner="feilong.li"/>
+</beans>

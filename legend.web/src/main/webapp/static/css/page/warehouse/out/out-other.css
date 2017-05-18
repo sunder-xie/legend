@@ -1,0 +1,116 @@
+/**
+* 其他出库
+* zmx 2016-08-25
+*/
+.detail-form-box .form-label {
+    width: 95px;
+}
+
+.detail-form-box .form-item {
+    width: 280px;
+}
+
+.detail-form-box {
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.list-box {
+    border: 1px solid #cacaca;
+    background: #fff;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.list-title {
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.list-title a {
+    font-size: 12px;
+    color: #666;
+}
+
+.list-title span {
+    font-size: 12px;
+    color: #666;
+    padding: 0 3px;
+}
+
+.yqx-table {
+    margin-bottom: 10px;
+}
+
+.yqx-table > thead > tr > th, .yqx-table > tr > th {
+    background: #f9f9f9;
+}
+
+.remarks {
+    margin: 10px 0;
+}
+
+.remarks .form-label {
+    width: 60px;
+}
+
+.remarks textarea {
+    width: 730px;
+}
+
+.btn-box {
+    padding: 15px 0;
+    border-top: 1px solid #cacaca;
+}
+
+.delete-btn {
+    color: #fd461e;
+}
+
+.detail-form-box .form-item .yqx-downlist-wrap {
+    width: 280px;
+}
+
+.max-text {
+    max-width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-height {
+    line-height: 30px;
+}
+
+.yqx-table .form-item {
+    display: block;
+}
+
+.list-box table {
+    border-top: 1px solid #cacaca;
+}
+
+.tc-1 {
+    width: 100px;
+}
+
+.tc-2 {
+    width: 165px;
+}
+
+.tc-3 {
+    width: 120px;
+}
+
+.tc-6 {
+    width: 70px;
+}
+
+.tc-7 {
+    width: 65px;
+}

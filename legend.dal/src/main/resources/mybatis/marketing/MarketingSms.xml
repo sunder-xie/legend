@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.MarketingSmsDao">
+
+    <resultMap id = "BaseResultMap" type = "MarketingSms" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "mobiles" property = "mobiles" />
+        <result column = "licenses" property = "licenses" />
+        <result column = "customer_name" property = "customerName"/>
+        <result column = "receiver_num" property = "receiverNum" />
+        <result column = "operator" property = "operator" />
+        <result column = "sms_num" property = "smsNum" />
+        <result column = "content" property = "content" />
+        <result column = "status" property = "status" />
+        <result column = "send_time" property = "sendTime" />
+        <result column = "sms_log_id" property = "smsLogId"/>
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            mobiles as mobiles,
+            licenses as licenses,
+            customer_name as customerName,
+            receiver_num as receiverNum,
+            operator as operator,
+            sms_num as smsNum,
+            content as content,
+            status as status,
+            send_time as sendTime,
+            sms_log_id as smsLogId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "mobiles != null">
+                    and mobiles = #{mobiles}
+                </if>
+                <if test = "licenses != null">
+                    and licenses = #{licenses}
+                </if>
+                <if test = "customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test = "receiverNum != null">
+                    and receiver_num = #{receiverNum}
+                </if>
+                <if test = "operator != null">
+                    and operator = #{operator}
+                </if>
+                <if test = "smsNum != null">
+                    and sms_num = #{smsNum}
+                </if>
+                <if test = "content != null">
+                    and content = #{content}
+                </if>
+                <if test = "status != null">
+                    and status = #{status}
+                </if>
+                <if test = "sendTime != null">
+                    and send_time = #{sendTime}
+                </if>
+                <if test = "smsLogId != null">
+                    and sms_log_id = #{smsLogId}
+                </if>
+                <if test = "statusGt != null">
+                    <![CDATA[
+                    and status > #{statusGt}
+                     ]]>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "mobiles != null">
+                    mobiles = #{mobiles},
+                </if>
+                <if test = "licenses != null">
+                    licenses = #{licenses},
+                </if>
+                <if test = "customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test = "receiverNum != null">
+                    receiver_num = #{receiverNum},
+                </if>
+                <if test = "operator != null">
+                    operator = #{operator},
+                </if>
+                <if test = "smsNum != null">
+                    sms_num = #{smsNum},
+                </if>
+                <if test = "content != null">
+                    content = #{content},
+                </if>
+                <if test = "status != null">
+                    status = #{status},
+                </if>
+                <if test = "sendTime != null">
+                    send_time = #{sendTime},
+                </if>
+                <if test = "smsLogId != null">
+                    sms_log_id = #{smsLogId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_marketing_sms
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_sms
+        <include refid = "BaseWhereClause" />
+        ORDER BY id desc
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_sms
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_sms
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_marketing_sms
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_marketing_sms
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_marketing_sms
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_marketing_sms (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "mobiles != null">
+                mobiles,
+            </if>
+            <if test = "licenses != null">
+                licenses,
+            </if>
+            <if test = "customerName != null">
+                customer_name,
+            </if>
+            <if test = "receiverNum != null">
+                receiver_num,
+            </if>
+            <if test = "operator != null">
+                operator,
+            </if>
+            <if test = "smsNum != null">
+                sms_num,
+            </if>
+            <if test = "content != null">
+                content,
+            </if>
+            <if test = "status != null">
+                status,
+            </if>
+            <if test = "sendTime != null">
+                send_time,
+            </if>
+            <if test = "smsLogId != null">
+                sms_log_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "mobiles != null">
+                #{mobiles},
+            </if>
+            <if test = "licenses != null">
+                #{licenses},
+            </if>
+            <if test = "customerName != null">
+                #{customerName},
+            </if>
+            <if test = "receiverNum != null">
+                #{receiverNum},
+            </if>
+            <if test = "operator != null">
+                #{operator},
+            </if>
+            <if test = "smsNum != null">
+                #{smsNum},
+            </if>
+            <if test = "content != null">
+                #{content},
+            </if>
+            <if test = "status != null">
+                #{status},
+            </if>
+            <if test = "sendTime != null">
+                #{sendTime},
+            </if>
+            <if test = "smsLogId != null">
+                #{smsLogId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_marketing_sms
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_marketing_sms (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            mobiles,
+            licenses,
+            customer_name,
+            receiver_num,
+            operator,
+            sms_num,
+            content,
+            status,
+            send_time,
+            sms_log_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.mobiles != null">
+                    #{item.mobiles},
+                </if>
+                <if test="item.mobiles == null">
+                    NULL ,
+                </if>
+                <if test="item.licenses != null">
+                    #{item.licenses},
+                </if>
+                <if test="item.licenses == null">
+                    NULL ,
+                </if>
+                <if test="item.customerName != null">
+                    #{item.customerName},
+                </if>
+                <if test="item.customerName == null">
+                    NULL ,
+                </if>
+                <if test="item.receiverNum != null">
+                    #{item.receiverNum},
+                </if>
+                <if test="item.receiverNum == null">
+                    NULL ,
+                </if>
+                <if test="item.operator != null">
+                    #{item.operator},
+                </if>
+                <if test="item.operator == null">
+                    NULL ,
+                </if>
+                <if test="item.smsNum != null">
+                    #{item.smsNum},
+                </if>
+                <if test="item.smsNum == null">
+                    NULL ,
+                </if>
+                <if test="item.content != null">
+                    #{item.content},
+                </if>
+                <if test="item.content == null">
+                    NULL ,
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    NULL ,
+                </if>
+                <if test="item.sendTime != null">
+                    #{item.sendTime},
+                </if>
+                <if test="item.sendTime == null">
+                    NULL ,
+                </if>
+                <if test="item.smsLogId != null">
+                    #{item.smsLogId},
+                </if>
+                <if test="item.smsLogId == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id = "listByLogId" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_sms
+        WHERE shop_id = #{shopId}
+        and sms_log_id = #{smsLogId}
+        and is_deleted = 'N'
+        <if test="status!=null">
+            and status = #{status}
+        </if>
+    </select>
+
+</mapper> 

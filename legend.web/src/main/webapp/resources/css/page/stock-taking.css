@@ -1,0 +1,238 @@
+.xinxi_title{
+    clear: both;
+    width:980px;
+    height: 45px;
+    margin-top: 20px;
+    background: #d7d7d7;
+}
+.title_dingdan,.title_quejian{
+    display: block;
+    float:left;
+    width: 140px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: bold;
+}
+.title_dingdan{
+    background: url(../../images/black_dingdan.gif) no-repeat;
+    color: white;
+}
+.fanhui{
+    float: right;
+    width: 105px;
+    height: 35px;
+    margin-top:5px;
+    margin-right:10px;
+    border:1px solid #c1c1c1;
+    cursor: pointer;
+}
+.main{
+    margin-top:20px;
+    width:978px;
+    border: 1px solid #cdcdcd;
+}
+.title_head,.nrul{
+    list-style-type: none;
+    margin:0;
+    text-align: center;
+}
+.title_head li,.nrul li{
+    display: block;
+    float: left;
+    color:#666666;
+    font-weight:bold;
+}
+.req_head{
+    height: 37px;
+    border-bottom: 1px solid #cdcdcd;
+    line-height: 37px;
+}
+.neirong{
+    background-color:#f9f9f9;
+    padding-bottom: 10px;
+}
+.nrul{
+    height:40px;
+    margin-top:0;
+    padding-left:0;
+    padding-top:10px;
+}
+.nrul li input{
+    height:37px;
+    line-height:37px;
+    font-weight:normal;
+    margin-right: 10px;
+    border: 1px solid #c1c1c1;
+    border-radius: 5px;
+    text-align: center;
+    color:#666666;
+}
+.kucun_h{
+    width:150px;
+    margin-left:15px;
+}
+.fu{
+    color: #eb1818;
+}
+.pdpjul,.footul{
+    list-style-type: none;
+}
+.footul li{
+    float: left;
+}
+.pdpjul{
+    height: 56px;
+    margin:10px 0 0px 20px;
+}
+.pd_l{
+    float:left;
+}
+.hskc{
+    display:block;
+    float:left;
+    width: 99px;
+    height: 45px;
+    padding-left:40px;
+    margin-right:10px;
+    line-height: 45px;
+    background: url(../../images/hskc.gif) no-repeat;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.kaidanren{
+    display:block;
+    float:right;
+    height: 45px;
+    line-height: 45px;
+    margin-right:20px;
+    font-weight:bold;
+    font-size:14px;
+    margin-bottom:20px;
+}
+.kaidanren .xxsel {
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+    width:110px;
+    height:25px;
+}
+.kucun_h{
+    width:216px;
+}
+.kucun_m_b{
+    width:135px;
+}
+.kucun_s_b,.kucun_s_w{
+    width:98px;
+}
+.kucun_m_b_2{
+    width:80px;
+}
+.kucun_ss_w{
+    width:80px;
+}
+.pn{
+    width:260px;
+}
+.lj{
+    width:120px;
+}
+.pb{
+    width:165px;
+}
+.kc,.cbje{
+    width:100px;
+}
+.cb{
+    width:110px;
+}
+.yy{
+    width:85px;
+}
+.chacha{
+    display: inline-block;
+    width: 10px;
+    height: 37px;
+    margin-left: 10px;
+    background: url(../../images/chacha.gif) no-repeat;
+    cursor:pointer;
+}
+
+.chacha_none{
+    display: inline-block;
+    width: 10px;
+    height: 37px;
+    margin-left: 10px;
+    cursor:pointer;
+}
+
+.footul{
+    margin-top:10px;
+}
+.footul li span{
+    display: block;
+    width:139px;
+    height:45px;
+    color:white;
+    font-size:14px;
+    text-align:center;
+    line-height:45px;
+    border-radius:5px;
+}
+.orange_save{
+    background-color:#f99d38;
+    margin-left:0px;
+    margin-right:10px;
+    cursor: pointer;
+}
+.blue_dy{
+    background-color: #52b7de;
+    margin-right:10px;
+    cursor: pointer;
+}
+.green_dy{
+    background-color: #89c378 ;
+    cursor: pointer;
+}
+/*.kucun_h,.kucun_m_b,.kucun_s_b,.kucun_m_b_2{
+    background-color:#eeeeee;
+}*/
+
+.main_wrapper{
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+}
+.main_scroll{
+    width: 139%;
+}
+.delete{
+    width: 14px;
+    visibility: hidden;
+}
+/* 统计报表左右按钮样式 start */
+.go_left_or_right{
+    visibility: hidden;
+    position:fixed;color:#fff;text-align:center;z-index: 3;opacity: 0.5;
+}
+.go_left{
+    border-left:25px solid transparent;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    border-right:25px solid #999;
+}
+.go_right{
+    border-right:25px solid transparent;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    border-left:25px solid #999;
+}
+.go_left_or_right:hover{
+    opacity: 1;
+}
+.main_scroll:hover .go_left_or_right,
+.main_scroll:hover .go_left_or_right{
+    visibility: visible;
+}
+/* 统计报表左右按钮样式 end */

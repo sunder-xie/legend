@@ -1,0 +1,534 @@
+em{
+    font-style: normal;
+    color: #f77c7e;
+}
+.btn-change{
+    background-color: #eaf8be;
+}
+.Z-lost-userType li:hover, .on{
+    background-color: #eaf8be !important;
+    border: 1px solid #90af34 !important;
+}
+.Z-lost-userType li:hover .Z-type-tag, .green-tag{
+    background: url("../../../images/marketing/lost-green-tag.png") no-repeat !important;
+}
+.Z-right{
+    width: 830px;
+    float: left;
+    margin-bottom: 10px;
+}
+.Z-lost-title{
+    font-family: MicrosoftYahei;
+    color: #333;
+    font-weight: bold;
+}
+
+.Z-lost-data{
+    width: 828px;
+    height: 78px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin: 10px 0;
+    position: relative;
+}
+.Z-lost-data li{
+    height: 80px;
+    float: left;
+}
+.Z-lost-money{
+    width: 522px;
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+.lost-money-tag{
+    background: url("../../../images/marketing/lost-money-tag.png") no-repeat;
+    width: 60px;
+    height: 60px;
+    margin:9px 20px;
+    position: absolute;
+}
+.Z-custom-total{
+    width: 100px;
+    border-right: 1px solid #ddd;
+}
+.Z-custom-lost{
+    width: 100px;
+    border-right: 1px solid #ddd;
+}
+.Z-lost-percent{
+    width: 103px;
+}
+.Z-lost-userType{
+    width: 830px;
+    height: 120px;
+}
+.Z-lost-userType li{
+    width: 268px;
+    height: 118px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+.Z-lost-userType li:nth-child(n+2){
+    margin-left: 10px;
+}
+.Z-type-tag{
+    position: absolute;
+    width: 20px;
+    height: 9px;
+    background: url("../../../images/marketing/Z-lost-tag.png") no-repeat;
+    bottom: -9px;
+    left: 50%;
+    margin-left: -10px;
+}
+.Z-type-dataList{
+    width: 828px;
+    margin-top: 10px;
+}
+/**自定义分页条数**/
+
+table,tr,td{
+    border-top: 1px #ddd solid;
+    width: 830px;
+    height: 25px;
+}
+.Z-dataLists tr:nth-child(even){
+    background-color: #fff;
+}
+.Z-dataLists tr:nth-child(1){
+    background-color: #f9f9f9;
+}
+.Z-dataLists tr:nth-child(2n+3){
+    background-color: #fafafa;
+}
+.lost-money {
+    margin: 13px 0 13px 90px;
+}
+.lost-money span{
+    color: #fd3235;
+    font-size: 26px;
+    font-family: Arial;
+}
+.lost-money-title{
+    margin: 13px 0 13px 96px;
+}
+.Z-custom-total,.Z-custom-lost,.Z-lost-percent{
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+}
+.custom-total,.custom-lost,.custom-percent{
+    margin-top: 20px;
+}
+.custom-total-title,.custom-lost-title,.custom-percent-title{
+    color: #737373;
+}
+.custom-high,
+.custom-middle,
+.custom-low {
+    text-align: center;
+    font-size: 14px;
+    font-family: MircosoftYahei;
+    color: #333;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.Z-lost-userType p{
+    clear: both;
+    overflow: hidden;
+    line-height: 20px;
+    padding: 0 15px;
+}
+.Z-lost-userType p span:first-child{
+    float: left;
+}
+.Z-lost-userType p span:last-child{
+    float: right;
+}
+.Z-dataList-header{
+    color: #bfbfbf;
+    height: 60px;
+    background-color: #fff;
+    position: relative;
+}
+.Z-dataList-header:first-child{
+    display: none;
+}
+
+.Z-btn li:nth-child(n+2){
+    text-align: center;
+    color: #474841;
+    display: none;
+    border-left: 1px solid #90af34;
+    border-right: 1px solid #90af34;
+    border-bottom: 1px solid #c6db87;
+}
+.Z-btn li:last-child{
+    border-bottom: 1px solid #90af34;
+}
+
+.Z-dataList-header {
+    color: #FD3235;
+}
+.Z-dataList-header em{
+    font-size: 14px;
+    color: #333;
+}
+.Z-dataList-header > span{
+    margin-left: 10px;
+}
+.Z-dataLists{
+    line-height: 25px;
+    table-layout: fixed;
+}
+.Z-dataLists tr th:first-child{
+    padding-left: 10px;
+}
+.Z-dataLists tr td:first-child{
+    padding-left: 10px;
+}
+.Z-dataLists tr th:nth-child(n+2){
+    text-align: left;
+}
+.Z-dataLists tr td:nth-child(n+2){
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Z-dataLists tr th:first-child{
+    width: 30px;
+}
+.Z-dataLists tr td:first-child{
+    width: 30px;
+}
+.messageTpl{
+    width: 553px;
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    clear: both;
+    overflow: hidden;
+}
+.messageTpl-title{
+    height: 57px;
+    text-align: center;
+    line-height: 57px;
+    font-size: 16px;
+    font-family: MicrosoftYahei;
+    color: #808080;
+    background: #fff;
+}
+.messageTpl-body{
+    border-top: 1px solid #ddd;
+    height: 390px;
+    overflow: auto;
+}
+.message-content{
+    margin: 10px 0;
+    text-align: center;
+}
+.message-content #mobileContent{
+    text-align: left;
+    width: 492px;
+    height: 58px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.message-amount{
+    margin: 10px 0 0 30px;
+    clear: both;
+    overflow: hidden;
+}
+.message-amount-balance{
+    font-size: 14px;
+    font-family: MicrosoftYahei;
+}
+.message-amount-balance em{
+    color: #d01113;
+}
+.message-amount-charge{
+    float: right;
+    margin-right: 30px;
+    border-radius: 2px;
+    background: #f77c7e;
+    color: #fff;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.message-action{
+    text-align: right;
+    margin: 10px 30px 30px 0;
+}
+.message-action .cancel{
+    width: 48px;
+    height: 23px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.message-action .send{
+    width: 48px;
+    height: 23px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background: #9fc526;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.messageTpl-list{
+    width: 100%;
+}
+.messageTpl-list-title{
+    height: 30px;
+    width: 494px;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: MicrosoftYahei;
+}
+.messageTpl-detail{
+    width: 492px;
+    height: 38px;
+    border: 1px solid #ddd;
+    line-height: 40px;
+    background: #fff;
+    margin: 10px auto;
+    color: #9b9b9b;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.messageTpl-detail:hover, .messageTpl-select{
+    background-color: #d7e4ae;
+}
+.messageTpl-list .more{
+    width: 492px;
+    height: 48px;
+    border: 1px solid #ddd;
+    line-height: 48px;
+    margin: 10px auto;
+    background: #fff;
+    color: #9b9b9b;
+    cursor: pointer;
+}
+
+/* 回访记录弹窗 START */
+
+.w_654 {
+    width: 654px;
+}
+.h_500 {
+    height: 500px;
+}
+.one-way {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.show {
+    display: block!important;
+}
+.col-2 {
+    float: left;
+    width: 50%;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+/* .label样式 START */
+.label1 {
+    vertical-align: middle;
+}
+/* .label样式 END */
+
+/* input样式 START */
+.input {
+    height: 23px;
+    line-height: 23px;
+    text-indent: 8px;
+    font-size: 12px;
+    color: #666;
+    background: #eee;
+    border: 1px solid #ddd;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.input:focus {
+    background: #fff;
+}
+/* input样式 END */
+
+/* button样式 START */
+.btn {
+    font-size: 12px;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.btn-s-primary {
+    padding: 5px 10px;
+    color: #fff;
+    background: #8fb027;
+}
+.btn-s-minor {
+    padding: 5px 10px;
+    color: #fff;
+    background: #999;
+}
+/* button样式 END */
+
+.pop-box {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+.pop-head {
+    height: 58px;
+    border-bottom: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+.pop-head .pop-title {
+    margin: 21px 28px;
+    line-height: 16px;
+    font-size: 16px;
+    color: #535353;
+}
+.pop-head .pop-title strong {
+    margin-right: 20px;
+}
+.pop-head .pop-title span {
+    margin-right: 20px;
+    font-size: 12px;
+}
+.pop-head .pop-title .highlight {
+    color: #f77c7e;
+}
+.pop-body {
+    overflow: auto;
+}
+.pop-content {
+    min-height: 444px;
+    padding: 28px;
+    background: #f9f9f9;
+}
+.fl .pop-inner {
+    margin-right: 5px;
+}
+.fr .pop-inner {
+    margin-left: 5px;
+}
+.pop-record {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.pop-record li {
+    padding: 10px;
+    line-height: 1.4;
+    font-size: 12px;
+    color: #444;
+    border-bottom: 1px solid #e8e8e8;
+}
+.pop-record li:last-child {
+    border: none;
+}
+.pop-record li .datetime {
+    font-size: 12px;
+    color: #888;
+}
+.pop-record li .user {
+    font-size: 12px;
+}
+.pop-box-title {
+    font-size: 14px;
+    color: #535353;
+}
+.js-record-content{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.revisit-content {
+    height: 70px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.revisit-text {
+    width: 100%;
+    height: 100%;
+}
+.revisit-btn {
+    text-decoration: underline;
+    color: #159;
+}
+.time {
+    background: #fff;
+}
+.service-box {
+    display: none;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+.pop-record-item .link-default {
+    color: #159;
+}
+/* 回访记录弹窗 END */
+
+.to-excel:hover {
+    color: #F40;
+}
+
+.yqx-btn-1 {
+    border: 1px solid #d2d2d2;
+    background: #f9f9f9;
+    color: #666
+}
+
+.yqx-btn-2 {
+    border: 1px solid #f55d5e;
+    background: #fa7b7c;
+    color: #fff
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+

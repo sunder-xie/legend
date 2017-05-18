@@ -1,0 +1,147 @@
+/*
+ * zmx 2016/06/02
+ * 工单收款 页面样式
+*/
+
+/*查询 start*/
+.search-box{background: #fff;border: 1px solid #ddd;border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;padding:5px 10px;}
+.form-item{ width: 145px; margin: 5px 0;}
+.company-width{ width: 400px;}
+.with123{width: 123px;}
+/*查询 end*/
+
+/*按钮操作 start*/
+.btn-box .tools-bar {
+    height: 40px;
+    line-height: 40px;
+}
+.btn-box .tools-bar > a > i {
+    margin-left: 6px;
+}
+/*按钮操作 end*/
+
+.order-list-card i {
+    font-style: normal;
+}
+.money-font-card{
+    font-size: 14px;
+}
+
+.order-list-card .car-check-body {
+    padding: 10px;
+    height: 143px;
+}
+
+.order-list-card .car-check-body p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.ellipsis-1 {
+    line-height: 14px;
+    height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*数据列表卡片 end*/
+
+/*表格 start*/
+.yqx-link a{ text-decoration: underline;}
+.tools-bar .hover{ color: #9fc527; }
+.tools-bar .hover .icon-color{ color: #9fc527; }
+.debit-btn{ color: #0470f5;}
+.comfirm-order{color: #1db000;}
+.yqx-table .th-right, .yqx-table .td-right {
+    text-align: right;
+}
+.yqx-table .th-left, .yqx-table .td-left {
+    text-align: left;
+}
+.yqx-table .th-center, .yqx-table .td-center {
+    text-align: center;
+}
+.order-list-card .card-status {
+    float: right;
+    /*color: #7fa700;*/
+}
+/* 无效 */
+.status-wx {
+    color: #666666;
+}
+/* 待报价 */
+.status-dbj {
+    color: #EE3F02;
+}
+/* 已报价 */
+.status-ybj {
+    color: #0470f5;
+}
+/* 已派工 */
+.status-ypg {
+    color: #f29530;
+}
+/* 已完工 */
+.status-ywg {
+    color: #CCCC00;
+}
+/* 已挂账 */
+.status-ygz {
+    color: #c69161;
+}
+/* 已结清 */
+.status-yjq {
+    color: #8fb70d;
+}
+
+
+/*表格 end*/
+
+.inlist-link {
+    z-index: 2;
+}
+.inlist-link.debit{
+    color:#1db000;
+}
+.inlist-link.confirm{
+    color: #ee3f02;
+}
+.inlist-link.link-detail{ color: #0470f5;}
+
+.invoice-type{
+    color: #8fb70d;
+}
+
+/*标题右侧标签 start*/
+.tag{background: #fff; border:1px dashed #ddd; margin-left: 10px; margin-bottom: 5px; padding: 5px 10px;}
+.tag .ico{ width: 26px; height: 26px; float: left; margin: 5px 12px 0 5px; background: url("../../../../img/page/settlement/pay/tag-ico.png") no-repeat;}
+.tag .ico1{ background-position: 3px 0;}
+.tag .ico2{ background-position: -28px 0;}
+.tag .ico3{ background-position: -60px 0;}
+.tag .tagcon{overflow: hidden; float: left;}
+.tag .tagcon .tag-title{ color: #333; line-height: 16px;}
+.tag .tagcon .tag-money{ font-family: arial, verdana, sans-serif; font-size: 14px; color: #333; font-weight: bold; line-height: 22px;}
+/*标题右侧标签 end*/
+
+.form-item-width{ width: 148px;}
+.btn-margin{ margin-top: 6px;}
+.tools-bar .collection{font-weight: bold; color: #333;}
+.tools-bar .collection i{font-style: normal; display: inline-block; width: 15px; height: 15px; background: #9fc527; text-align: center;
+line-height: 15px; color: #fff; border-radius: 50%; margin-right: 3px;}
+.company-item-width{ width: 250px;}
+
+/*金额统计样式*/
+.search-result{
+    line-height: 29px;
+    border: 1px solid #cacaca;
+    border-top: 0px;
+    padding-left: 10px;
+    color: #333;
+    background: #fff;
+}
+.search-result span{
+    color: #666;
+    margin-left: 10px;
+}
+

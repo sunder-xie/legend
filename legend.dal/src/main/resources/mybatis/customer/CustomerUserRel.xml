@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.customer.CustomerUserRelDao">
+
+    <resultMap id = "BaseResultMap" type = "CustomerUserRel" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "user_id" property = "userId" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "allot_sn" property = "allotSn" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            user_id as userId,
+            customer_car_id as customerCarId,
+            customer_id as customerId,
+            allot_sn as allotSn,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "allotSn != null">
+                    and allot_sn = #{allotSn}
+                </if>
+                <if test="customerCarIds != null">
+                    and customer_car_id in
+                    (
+                    <foreach collection="customerCarIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="userIds != null">
+                    and user_id in
+                    (
+                    <foreach collection="userIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "userId != null">
+                    user_id = #{userId},
+                </if>
+                <if test = "customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test = "customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test = "allotSn != null">
+                    allot_sn = #{allotSn},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_customer_user_rel
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_user_rel
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_user_rel
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_user_rel
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_customer_user_rel
+        set is_deleted='Y' , gmt_modified = now()
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_customer_user_rel
+        set is_deleted='Y' , gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_customer_user_rel
+        set is_deleted='Y' , gmt_modified = now()
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_customer_user_rel (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "userId != null">
+                user_id,
+            </if>
+            <if test = "customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test = "customerId != null">
+                customer_id,
+            </if>
+            <if test = "allotSn != null">
+                allot_sn,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "userId != null">
+                #{userId},
+            </if>
+            <if test = "customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test = "customerId != null">
+                #{customerId},
+            </if>
+            <if test = "allotSn != null">
+                #{allotSn},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_customer_user_rel
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_customer_user_rel (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            user_id,
+            customer_car_id,
+            customer_id,
+            allot_sn,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.userId != null">
+                    #{item.userId},
+                </if>
+                <if test="item.userId == null">
+                    0 ,
+                </if>
+                <if test="item.customerCarId != null">
+                    #{item.customerCarId},
+                </if>
+                <if test="item.customerCarId == null">
+                    0 ,
+                </if>
+                <if test="item.customerId != null">
+                    #{item.customerId},
+                </if>
+                <if test="item.customerId == null">
+                    0 ,
+                </if>
+                <if test="item.allotSn != null">
+                    #{item.allotSn},
+                </if>
+                <if test="item.allotSn == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <!-- 根据shopId,userId删除数据 -->
+    <update id="batchDelete">
+        update legend_customer_user_rel
+        set is_deleted='Y',gmt_modified = now()
+        <if test = "modifier != null">
+            ,modifier=${modifier}
+        </if>
+        where shop_id = #{shopId}
+        <if test = "userId != null">
+            and user_id = #{userId}
+        </if>
+        <if test="userIds != null">
+            and user_id in
+            (
+            <foreach collection = "userIds" index = "index" item = "tag" separator = ",">
+                #{tag}
+            </foreach>
+            )
+        </if>
+        <if test="customerCarId != null">
+            and customer_car_id = #{customerCarId}
+        </if>
+        <if test="customerCarIds != null">
+            and customer_car_id in
+            (
+            <foreach collection = "customerCarIds" index = "index" item = "tag" separator = ",">
+                #{tag}
+            </foreach>
+            )
+        </if>
+        <if test="customerId != null">
+            and customer_id = #{customerId}
+        </if>
+        and is_deleted='N'
+    </update>
+
+    <!-- 查询 -->
+    <select id = "selectAllotUserIds" resultType = "java.lang.Long">
+        select distinct(user_id)
+        from legend_customer_user_rel
+        where shop_id=#{shopId}
+        and is_deleted='N'
+    </select>
+</mapper>

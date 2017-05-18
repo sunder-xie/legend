@@ -1,0 +1,16 @@
+{
+  "name": "legend-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd legend.web/src/main/webapp/resources && npm run build && cd ../static && npm run build",
+    "mobile": "cd legend.web/src/main/webapp/mobile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://dev.tqmall.com/tqmall/legend.git"
+  },
+  "author": "sky",
+  "license": "ISC"
+}

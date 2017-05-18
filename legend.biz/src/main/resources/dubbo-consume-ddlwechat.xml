@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--蒲公英微信服务-->
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.shop.WeChatShopService" id="weChatShopService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.pay.WeChatPayService" id="weChatPayService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.article.WeChatArticleService"
+                     id="weChatArticleService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.templatereply.TemplateReplyService"
+                     id="templateReplyService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.wifi.WifiService" id="wifiService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.qrcode.WeChatQrcodeService"
+                     id="weChatQrcodeService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.data.DataService" id="dataService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.menu.ShopMenuService" id="shopMenuService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.coupon.WeChatCouponConfigService"
+                     id="weChatCouponConfigService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.coupon.WeChatUserCouponLogService"
+                     id="weChatUserCouponLogService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.coupon.WeChatCouponHistoryService"
+                     id="weChatCouponHistoryService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.activity.WeChatActBuriedService"
+                     id="weChatActBuriedService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.activity.WeChatShopActService"
+                     id="weChatShopActService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.game.WechatGameService" id="wechatGameService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.rescue.WeChatRescueService"
+                     id="weChatRescueService"
+                     version="${dubbo.wechat.version}" owner="pituo"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.assessment.WeChatAssessmentService"
+                     id="weChatAssessmentService"
+                     version="${dubbo.wechat.version}" owner="pituo"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.vipCard.WeChatMembershipCardConfigService"
+                     id="weChatMembershipCardConfigService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.coupon.WeChatCouponService"
+                     id="weChatCouponService"
+                     version="${dubbo.wechat.version}" owner="shuai.wu"/>
+    <dubbo:reference interface="com.tqmall.dandelion.wechat.client.wechat.lottery.DubboWeChatActivityLotteryService"
+                     id="dubboWeChatActivityLotteryService"
+                     version="${dubbo.wechat.version}" owner="kang.zhao"/>
+</beans>

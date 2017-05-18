@@ -1,0 +1,302 @@
+.width-100 {
+    width: 100px;
+}
+.container {
+    width: 823px;
+}
+
+.invisibility {
+    visibility: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.box + .box {
+    margin-top: 10px;
+}
+
+.btn {
+    color: #fff;
+    width: 50px;
+    height: 25px;
+}
+
+.allot-btn:hover,
+.btn:hover {
+    opacity: .7;
+}
+
+.staff-box,
+.filter-box .filter-title,
+.table-caption .title {
+    font-size: 14px;
+    color: #000;
+}
+
+.staff-box {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.staff-box label {
+    display: inline-block;
+    padding-top: 15px;
+    vertical-align: top;
+}
+.table-caption .title {
+    height: 46px;
+    line-height: 44px;
+    padding-left: 10px;
+}
+
+.filter-box .title {
+    line-height: 45px;
+    padding-left: 11px;
+    border-bottom:1px solid #cacaca;
+}
+
+.filter-box .title strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.filter-box .title .money-font {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.filter-box .filter-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-box .filter-condition .filter-title {
+    margin-bottom: 6px;
+}
+
+.filter-prop {
+    padding: 11px 21px 21px 11px;
+    width: 486px;
+}
+
+.title-box {
+    padding:0 11px;
+}
+
+.filter-condition {
+    padding: 11px 0 21px;
+    width: 335px;
+    height: 297px;
+    background: #f9f9f9;
+    border-left: 1px solid #cacaca;
+}
+
+.filter-condition .condition-container {
+    padding: 0 11px;
+    height: 188px;
+    overflow-y: auto;
+}
+
+.reset-btn {
+    background: #999;
+}
+
+.filter-prop .reset-btn {
+    position: absolute;
+    top: -7px;
+    right: 0;
+}
+
+.filter-btn {
+    padding: 6px 4px;
+    background: #f9f9f9;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+}
+
+.search-btn {
+    background: #607b0a;
+}
+
+
+.filter-btn + .filter-btn {
+    margin-left: 10px;
+}
+
+.filter-btn.disabled,
+.filter-btn[disabled]:hover,
+.filter-btn[disabled] {
+    background: #f2f2f2;
+    border-color: #B6B9B6;
+    cursor: not-allowed;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #e2e7d0;
+    border-color: #607b0a;
+}
+
+.filter-detail h5 {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.filter-detail li + li {
+    margin-top: 16px;
+}
+
+.filter-detail li {
+    width: 390px;
+}
+
+.filter-detail p {
+    margin-top: 10px;
+}
+
+.filter-footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.filter-condition ul li {
+    margin-top: 10px;
+}
+.filter-condition ul li:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.filter-condition ul li .yqx-input {
+    height: 25px;
+}
+
+.filter-condition ul li * {
+    line-height: 25px;
+}
+
+.filter-condition select {
+    height: 25px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.page-select-box {
+    margin: 0 10px;
+    line-height: 44px;
+}
+
+.pre-page,
+.pre-page ul {
+    display: inline-block;
+}
+
+.pre-page {
+    position: relative;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.pre-page ul {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+.pre-page:hover ul {
+    display: block;
+}
+
+.pre-page:hover ul li {
+    border-top: 0;
+}
+
+.pre-page li:hover {
+    background: #f8f8f8;
+}
+
+.pre-page:hover .page-input {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.page-input,
+.pre-page li {
+    padding-left: 10px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #cacaca;
+}
+
+.pre-page li {
+    background: #fff;
+}
+
+.pre-page .page-input {
+    display: block;
+    border-radius: 3px;
+    background: #f8f8f8;
+}
+
+.pre-page:before {
+    position: absolute;
+    right: 10px;
+    line-height: 25px;
+}
+
+.table-caption {
+    text-align: left;
+    border-bottom: 1px solid #cacaca;
+}
+
+.allot-btn {
+    margin: 7px 10px 0;
+    line-height: 30px;
+}
+
+.yqx-table .car-license {
+    width: 100px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.yqx-table td:last-child,
+.yqx-table th:last-child {
+    width: 100px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.btn.staff-btn {
+    padding: 5px 10px;
+    border: 1px solid #607b0a;
+    width: initial;
+    color: #607b0a;
+    line-height: initial;
+    font-size: 12px;
+}
+
+.allot-result-dialog .yqx-table th,
+.allot-result-dialog .yqx-table td {
+    text-align: left;
+}
+
+.allot-result-dialog .table-box {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.allot-result-dialog.yqx-dialog .dialog-footer {
+    padding-top: 0;
+    border-top: 0;
+}

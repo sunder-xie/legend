@@ -1,0 +1,114 @@
+i {
+    font-style: normal;
+}
+.del {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* 折扣设置 */
+.single-tag .card-discount .form-item,
+.single-tag .card-discount input,
+.single-tag li .form-item,
+.single-tag li input{
+    vertical-align: baseline;
+}
+.single-tag .table-box button,
+.single-tag li button{
+    width: 90px;
+    margin-top: 13px;
+}
+.single-tag .card-discount input[type=radio],
+.single-tag li input[type=radio]{
+    margin: 0 5px;
+}
+.single-tag .card-discount .form-item,
+.single-tag li .form-item {
+    margin: 0 10px;
+}
+.single-tag .table-box .yqx-input,
+.single-tag .card-discount .yqx-input,
+.single-tag li .yqx-input{
+    width: 50px;
+    height: 26px;
+    margin-top: 4px;
+    margin-right: 5px;
+    vertical-align: top;
+    line-height: 26px;
+    text-align:left;
+}
+
+.single-tag .yqx-table .form-item>.icon-small {
+    height: 26px;
+    line-height: 26px;
+    margin-top: 3px;
+}
+.single-tag >.table-box,
+.single-tag .card-discount,
+.single-tag li{
+    width: 400px;
+    margin: 10px 110px;
+}
+
+.single-tag .card-discount.selected .tag-padding,
+.single-tag li.selected .tag-padding {
+    padding-right: 9px;
+    position: relative;
+}
+.single-tag .card-discount.selected .yqx-input,
+.single-tag li.selected .yqx-input{
+    margin-top: 3px;
+}
+
+.single-tag .card-discount .has-icon,
+.single-tag li .has-icon {
+    padding-right: 30px;
+}
+.single-tag .card-discount.selected .tag-control,
+.single-tag .card-discount.selected .tag-padding,
+.single-tag li.selected .tag-control,
+.single-tag li.selected .tag-padding{
+    line-height: 34px;
+    border: 2px solid #8eb110;
+}
+.single-tag li .table-box {
+    width: 100%;
+    margin-top: 10px;
+}
+.single-tag .yqx-table .yqx-input{
+    vertical-align: middle;
+    margin-left: 0
+}
+
+.single-tag .tag-padding ,
+.single-tag .tag-control {
+    display:inline-block;
+    height: 36px;
+    border: 1px solid #c9c9c9;
+    line-height: 36px;
+    vertical-align: top;
+    cursor: pointer;
+}
+.single-tag .tag-padding {
+    width: 300px;
+    padding-right: 10px;
+    border-left: 0 !important;
+    border-radius: 0 3px 3px 0;
+    text-align: right;
+}
+.single-tag .tag-control {
+    text-align: center;
+    width:100px;
+    border-radius: 3px 0 0 3px;
+
+}
+.single-tag .selected .tag-padding:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20px;
+    height: 18px;
+    background: url("../../../img/common/order/order-sprite.png") 0 0 no-repeat;
+}
+/* 折扣设置 end */

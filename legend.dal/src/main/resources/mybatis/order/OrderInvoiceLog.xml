@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.order.OrderInvoiceLogDao">
+
+    <resultMap id="BaseResultMap" type="OrderInvoiceLog" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="order_id" property="orderId"/>
+        <result column="order_sn" property="orderSn"/>
+        <result column="invoice_type" property="invoiceType"/>
+        <result column="invoice_sn" property="invoiceSn"/>
+        <result column="company" property="company"/>
+        <result column="price" property="price"/>
+        <result column="postscript" property="postscript"/>
+        <result column="operator_name" property="operatorName"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            order_id as orderId,
+            order_sn as orderSn,
+            invoice_type as invoiceType,
+            invoice_sn as invoiceSn,
+            company as company,
+            price as price,
+            postscript as postscript,
+            operator_name as operatorName,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test="orderSn != null">
+                    and order_sn = #{orderSn}
+                </if>
+                <if test="invoiceType != null">
+                    and invoice_type = #{invoiceType}
+                </if>
+                <if test="invoiceSn != null">
+                    and invoice_sn = #{invoiceSn}
+                </if>
+                <if test="company != null">
+                    and company = #{company}
+                </if>
+                <if test="price != null">
+                    and price = #{price}
+                </if>
+                <if test="postscript != null">
+                    and postscript = #{postscript}
+                </if>
+                <if test="operatorName != null">
+                    and operator_name = #{operatorName}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="orderId != null">
+                    order_id = #{orderId},
+                </if>
+                <if test="orderSn != null">
+                    order_sn = #{orderSn},
+                </if>
+                <if test="invoiceType != null">
+                    invoice_type = #{invoiceType},
+                </if>
+                <if test="invoiceSn != null">
+                    invoice_sn = #{invoiceSn},
+                </if>
+                <if test="company != null">
+                    company = #{company},
+                </if>
+                <if test="price != null">
+                    price = #{price},
+                </if>
+                <if test="postscript != null">
+                    postscript = #{postscript},
+                </if>
+                <if test="operatorName != null">
+                    operator_name = #{operatorName},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_order_invoice_log
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_invoice_log
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_invoice_log
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_invoice_log
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_order_invoice_log
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_order_invoice_log
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_order_invoice_log
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_order_invoice_log (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="orderId != null">
+                order_id,
+            </if>
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+            <if test="invoiceType != null">
+                invoice_type,
+            </if>
+            <if test="invoiceSn != null">
+                invoice_sn,
+            </if>
+            <if test="company != null">
+                company,
+            </if>
+            <if test="price != null">
+                price,
+            </if>
+            <if test="postscript != null">
+                postscript,
+            </if>
+            <if test="operatorName != null">
+                operator_name,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="orderSn != null">
+                #{orderSn},
+            </if>
+            <if test="invoiceType != null">
+                #{invoiceType},
+            </if>
+            <if test="invoiceSn != null">
+                #{invoiceSn},
+            </if>
+            <if test="company != null">
+                #{company},
+            </if>
+            <if test="price != null">
+                #{price},
+            </if>
+            <if test="postscript != null">
+                #{postscript},
+            </if>
+            <if test="operatorName != null">
+                #{operatorName},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_order_invoice_log
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+</mapper>

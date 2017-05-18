@@ -1,0 +1,560 @@
+/* css 维修详情 */
+
+.d_top {
+    height: 52px;
+    padding-top: 30px;
+}
+.d_top li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.d_top li.djzk {
+    float: right;
+    /*width: 90px;*/
+    background: #8fb027;
+    margin-right: 0;
+    margin-left: 10px;
+}
+.khxx {
+    border: 1px solid #cdcdcd;
+    padding-bottom: 30px;
+    background: #f9f9f9;
+    margin-bottom: 30px;
+    position: relative;
+}
+.khxx h2 {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #efefef;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 14px;
+}
+.kh_xc {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.kh_xc li {
+    width: 50%;
+    float: left;
+    height:39px;
+    line-height: 39px;
+    padding-top: 20px;
+}
+.kh_xc .full_row {
+    width:100%
+}
+.xxqz {
+    display: inline-block;
+    width: 72px;
+    margin-left: 20px;
+}
+.xxsel {
+    width: 367px;
+    height: 37px;
+    *height:39px;
+    line-height: 37px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.xxtxt {
+    width: 353px;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+.address {
+    width:844px;
+}
+
+.gdbh {
+    padding: 20px 0 0 20px;
+    color: #a4a4a4;
+    height: 12px;
+}
+.morebut {
+    width: 80px;
+    height: 22px;
+    line-height: 21px;
+    color: #c9c9c9;
+    cursor: pointer;
+    padding-left: 18px;
+    border: 1px solid #cdcdcd;
+    border-top: none;
+    background: #f9f9f9 url("../../images/mj.gif") no-repeat 70px;
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    margin-left: -50px;
+}
+.khxx .more {
+    background-image: url("../../images/mj1.gif");
+}
+.wx_box {
+    background: #ebe6cd;
+    border: 1px solid #c1bda9;
+    margin-bottom: 10px;
+}
+.wx_cot {
+    padding-bottom: 10px;
+    position: relative;
+}
+.wx_tit {
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #c1bda9;
+    background: #e2ddc5;
+    position: relative;
+}
+.offer {
+    position: absolute;
+    left: 125px;
+    font-size: 14px;
+}
+.morewh {
+    position: absolute;
+    right: 53px;
+    font-size: 14px;
+    color: #00f;
+    text-decoration: underline;
+}
+.wx_tl {
+    float: left;
+    width: 98px;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    /*border-right: 1px solid #c1bda9;*/
+}
+.wx_tr {
+    float: right;
+    cursor: pointer;
+    height: 100%;
+    width: 878px;
+    border-left: 1px solid #c1bda9;
+    background: url("../../images/xj.gif") no-repeat 850px;
+}
+.wx_tit .mark {
+    background-image: url("../../images/xj1.gif");
+}
+.wx_list {
+    height: 37px;
+    line-height: 37px;
+    margin-left: -5px;
+    position: relative;
+    /*padding-left: 18px;*/
+}
+.wx_list li,.wx_list div {
+    float: left;
+    height: 100%;
+    text-align: center;
+    margin-right: 3px;
+    position:relative;
+}
+.w98 {
+    width: 110px;
+    *width:107px;
+}
+.w520 {
+    width: 154px;
+    *width:154px;
+}
+.w287 {
+    width: 215px;
+}
+.w83 {
+    width: 100px;
+}
+.w68 {
+    width: 68px;
+}
+.w26 {
+    width:26px;
+    text-align: center;
+}
+.w166 {
+    width: 93px;
+}
+.w108 {
+    width: 89px;
+}
+.w180 {
+    width:130px;
+}
+.w563 {
+    width: 509px;
+    *width:506px;
+}
+li.num {
+    position:relative;
+}
+.carmodel{
+    margin-left: -5px;
+}
+.carmodel input{
+    border-left: none;
+}
+.num .unit {
+    position:absolute;
+    left:42px;
+    top:1px;
+    display: block;
+    width:26px;
+    text-align: center;
+    font-size:12px;
+}
+.num .goodsNumber {
+    padding-right:30px;
+    *width:37px!important;
+}
+.m10 {
+    margin-bottom: 10px;
+}
+.wx_txt {
+    width: 100%;
+    height: 37px;
+    line-height: 35px;
+    background: #fff;
+    border: 1px solid #cecab4;
+    border-radius: 2px;
+    padding-left: 4px;
+    *padding-left:0;
+    text-align:center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.wx_sel {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #cecab4;
+    border-radius: 2px;
+}
+.wx_but {
+    background: url("../../images/sz.png") no-repeat center;
+    width: 29px;
+    height: 37px;
+    cursor: pointer;
+}
+.jian {
+    background-image: url("../../images/sz1.png");
+}
+.b_green {
+    background: #e1e6d3;
+}
+.b_green1 {
+    background: #d8dcca;
+}
+.b_blue {
+    background: #d3e2e6;
+}
+.b_blue1 {
+    background: #cad9dc;
+}
+.b_yellow {
+    background: #e6e6d3;
+}
+.b_yellow1 {
+    background: #dcdcca;
+}
+
+.heji {
+    padding-top: 10px;
+}
+.heji li {
+    line-height: 37px;
+    width: 100%;
+    display: block;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+.hj_l {
+    width: 72px;
+    padding-left: 19px;
+    float: left;
+}
+.hj_r {
+    float: left;
+}
+.hj_pad {
+    padding-left: 19px;
+}
+.hj_r span {
+    margin: 0 10px;
+}
+div.hj_balance {
+    padding-left: 19px;
+    margin-top:15px;
+}
+div.hj_balance label.tit, div.hj_balance label span {
+    font-weight: bold;
+    font-size: 16px;
+}
+.hj_txt {
+    width: 46px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #dadada;
+    background: #fff;
+    border-radius: 2px;
+    margin: 0 10px;
+    padding-left: 9px;
+    /*color: #666666;*/
+    font-size: 14px;
+}
+
+.sq_txt {
+    width: 86px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #dadada;
+    background: #fff;
+    border-radius: 2px;
+    margin: 0 10px;
+    padding-left: 9px;
+    /*color: #666666;*/
+    font-size: 14px;
+}
+
+.hj_duan {
+    width: 801px;
+    height: 71px;
+    line-height: 22px;
+    border: 1px solid #dadada;
+    background: #fff;
+    border-radius: 6px;
+    padding-left: 9px;
+    font-size: 14px;
+    margin: 0 10px;
+}
+.d_bottom {
+    padding-top: 0;
+}
+.sug_b {
+    position: absolute;
+    left: 161px;
+    display: none;
+    z-index: 1111111;
+    background-color: #eceaea;
+    border: 1px solid #cecab4;
+}
+.sub_li {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+    border-bottom: 1px dotted #dadada;
+}
+.sug_l {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.mr3 {
+    margin-right: 3px;
+}
+.mr2 {
+    margin-right: 2px;
+}
+.mr1 {
+    margin-right:1px;
+}
+.noline {
+    border-bottom: none;
+}
+.sug_b .current {
+    background: #fff;
+}
+.sub_li_sel {
+    background-color: #fff;
+}
+.sub_add {
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+}
+.add_service_btn {
+    background: url("../../images/11.png") no-repeat;
+    margin-left:10px;
+    width:127px;
+    height:40px;
+}
+.add_fee_btn {
+    background: url("../../images/33.png") no-repeat;
+    margin-left:10px;
+    width:127px;
+    height:40px;
+}
+.add_part_btn {
+    background: url("../../images/22.png") no-repeat;
+    margin-left: 10px;
+    width:127px;
+    height:40px;
+}
+
+select.car_code {
+    width:268px!important;
+    margin-right:10px;
+}
+
+.new_customer {
+    width:90px;
+    height:37px;
+    line-height: 37px;
+    border:1px solid #dadada;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    color:#666;
+    margin-right:25px;
+    float:right;
+}
+button.disabled {
+    cursor: not-allowed;
+    background-color: #eee;
+}
+
+#carLicense ,#carLicense_chosen {
+    position: absolute;
+    z-index: 233;
+    left: 99px;
+    top: 89px;
+}
+/**
+#receiver, #receiver_chosen {
+    position: absolute;
+    z-index: 236;
+    left: 587px;
+    top: 148px;
+}
+*/
+.w268 {
+    width: 256px!important;
+}
+.sug_cp {
+    position: absolute;
+    width: 268px;
+    display: none;
+    z-index: 1111111;
+    background-color: #fff;
+    border: 1px solid #dadada;
+}
+.sug_cp span {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+.sug_cp span.current {
+    background: #3875d7;
+    color: #fff;
+}
+.hj_balance span {
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 10px;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    margin: 0 10px;
+}
+
+.xxtxb {
+    width: 255px;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+a.balance_history_btn {
+    float: left;
+    color: #1d38cf;
+    text-decoration: underline;
+    margin-left: 18px;
+}
+
+a.balance_sign{
+    float: right;
+    color:#ff0000;
+    margin-right: 18px;
+}
+div.hj_signature {
+    width:310px;
+}
+.read_txt {
+    width: 82px;
+    height: 35px;
+    line-height: 35px;
+    margin:0 5px;
+    font-size: 14px;
+    text-align: center;
+    color:#000;
+    background: #fff;
+    border-radius: 2px;
+}
+.hj_pad .read_txt {
+    width: 77px;
+}
+
+.wxxk {
+    width: 310px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.cost_price_amount {
+    width:195px;
+    margin-right:144px;
+    float:right;
+}
+.cost_price_amount input {
+    width:110px;
+    *width:107px;
+    font-size:14px;
+    text-align: center;
+    display: inline-block;
+}
+.seq_list {
+    list-style: decimal outside none;
+    padding-left: 35px;
+    font-size:15px;
+}
+.list_tit {
+    margin-left:30px;
+}
+.tq_record {
+    line-height: 37px;
+}
+/*
+.seq_ml {
+    padding:0;
+    margin-left: -10;
+}*/
+.sum_row {
+    margin-left:30px;
+}
+
+.suggest_content{
+	max-height:210px;
+	overflow-y:scroll;
+}

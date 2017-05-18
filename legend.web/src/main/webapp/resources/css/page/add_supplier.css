@@ -1,0 +1,57 @@
+.service-set li{
+    width: 50%;
+}
+.service-set .full-row{
+    width: 100%;
+}
+.full-row .form-control,.full-row .img-container{
+    width: 830px;
+}
+.full-row label{
+    vertical-align: top;
+}
+.full-row button{
+    margin-left: 0;
+}
+.data-set li{
+    float: left;
+}
+.form-control{
+    width: 365px;
+}
+.service-fee{
+    width: 240px;
+}
+.service-fee-unit{
+    width: 100px;
+    margin-left: 20px;
+}
+.part-code{
+    width: 98px;
+}
+.part-name{
+    width: 286px;
+}
+.part-number{
+    width: 98px;
+}
+.part-price{
+    width: 155px;
+}
+.part-amount{
+    width: 68px;
+}
+.part-money{
+    width: 154px;
+}
+.part-set{
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.part-set li{
+    margin-right: 10px;
+}
+.part-set .form-group label{
+    line-height: 1;
+    height: 20px;
+}

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.marketing.MarketingCaseServiceDao">
+
+    <resultMap id="BaseResultMap" type="MarketingCaseService" extends="COMMON.BASE_RESULT_MAP">
+        <result column="case_id" property="caseId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="service_id" property="serviceId"/>
+        <result column="service_name" property="serviceName"/>
+        <result column="service_note" property="serviceNote"/>
+        <result column="service_price" property="servicePrice"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            case_id as caseId,
+            service_id as serviceId,
+            service_name as serviceName,
+            service_note as serviceNote,
+            service_price as servicePrice
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="caseId != null">
+                    and case_id = #{caseId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="caseId != null">
+                    case_id = #{caseId},
+                </if>
+                <if test="serviceId != null">
+                    service_id = #{serviceId},
+                </if>
+                <if test="serviceName != null">
+                    service_name = #{serviceName},
+                </if>
+                <if test="serviceNote != null">
+                    service_note = #{serviceNote},
+                </if>
+                <if test="servicePrice != null">
+                    service_price = #{servicePrice}
+                </if>
+
+            </trim>
+        </set>
+    </sql>
+
+
+    <!--批量插入-->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_marketing_service_rel (
+        is_deleted,
+        gmt_create,
+        creator,
+        gmt_modified,
+        modifier,
+        shop_id,
+        case_id,
+        service_id,
+        service_name,
+        service_note,
+        service_price
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            'N',
+            <if test="item.gmtCreate != null">#{item.gmtCreate},</if>
+            <if test="item.gmtCreate == null">now(),</if>
+            #{item.creator},
+            <if test="item.gmtModified != null">#{item.gmtModified},</if>
+            <if test="item.gmtModified == null">now(),</if>
+            #{item.creator},
+            #{item.shopId},
+            #{item.caseId},
+            #{item.serviceId},
+            #{item.serviceName},
+            #{item.serviceNote},
+            #{item.servicePrice}
+            )
+        </foreach>
+    </insert>
+
+    <!-- 删除 -->
+    <update id="delete">
+        update legend_marketing_service_rel
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </update>
+
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_marketing_service_rel
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_marketing_service_rel
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_marketing_service_rel (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="caseId != null">
+                case_id,
+            </if>
+            <if test="serviceId != null">
+                service_id,
+            </if>
+            <if test="serviceName != null">
+                service_name,
+            </if>
+            <if test="serviceNote != null">
+                service_note,
+            </if>
+            <if test="servicePrice != null">
+                service_price,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="caseId != null">
+                #{caseId},
+            </if>
+            <if test="serviceId != null">
+                #{serviceId},
+            </if>
+            <if test="serviceName != null">
+                #{serviceName},
+            </if>
+            <if test="serviceNote != null">
+                #{serviceNote},
+            </if>
+            <if test="servicePrice != null">
+                #{servicePrice},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_marketing_service_rel
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_marketing_service_rel
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+</mapper>

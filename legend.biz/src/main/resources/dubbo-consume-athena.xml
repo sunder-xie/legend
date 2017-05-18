@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 获取车型接口 -->
+    <dubbo:reference interface="com.tqmall.athena.client.car.CarCategoryService" id="CarCategoryService"
+                     version="${dubbo.athena.version}" owner="hui.wang"/>
+    <!--获取下次保养里程接口-->
+    <dubbo:reference interface="com.tqmall.athena.client.maintain.MaintainService" id="MaintainService"
+                     version="${dubbo.athena.version}" owner="yiming.xin"/>
+
+    <dubbo:reference interface="com.tqmall.athena.client.car.CarServiceExtend" id="CarServiceExtend"
+                     version="${dubbo.athena.version}" owner="jiachao.wang"/>
+
+</beans>

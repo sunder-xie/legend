@@ -1,0 +1,39 @@
+#customer_create_dialog{padding: 0; }
+#customer_create_dialog form{padding: 0 10px; height: 400px; overflow-y: scroll;overflow-x: hidden;}
+#customer_create_dialog .btn_group{height: 56px; background: #f5f2e6; border-bottom: 1px solid #dadada; position: relative; text-align: center;}
+#customer_create_dialog .btn_group a{position: absolute; width: 72px; height: 24px; line-height: 24px; font-size: 13px; border: 1px solid #c1c1c1; border-radius: 2px; cursor: pointer; }
+#customer_create_dialog .btn_group a:hover{box-shadow: 0 0 8px #ccc;}
+#customer_create_dialog .btn_group a.cancel{left: 15px; top: 15px; color: #666666; background: #f8f8f8; }
+#customer_create_dialog .btn_group a.save{right: 15px; top: 15px; color: #ffffff; background: #8fb027; border: 1px solid #8fb027; }
+#customer_create_dialog .btn_group span{line-height: 56px; font-size: 18px; color: #535353; font-weight: bold; }
+
+
+/*---车型选择样式---start---*/
+.carType_wraper{padding: 10px 20px;}
+.car_select_show{margin-bottom:10px;}
+.car_select_text{float:left;height:30px;line-height:30px;font-size:16px;}
+.car_select_show span{display:block;padding:0 10px;border:1px solid #cdcdcd;float:left;margin-right:40px;height:30px;line-height:30px;font-size:14px;position:relative;}
+.car_select_show span i{font-style:normal;cursor:pointer;position:absolute;height:30px;width:30px;line-height:30px;text-align:center;font-size:14px;right:-32px;top:-1px;border: 1px solid #cdcdcd;color: #111;}
+.car_select_show span i:hover{color:red;}
+.car_select{border-bottom:2px solid #d10000;height:40px;}
+.car_select li{float:left;height:40px;line-height:40px;padding:0 20px;border:1px solid #CECBCE;cursor:pointer;margin-right:5px;border-bottom:none;font-size:16px;font-weight:700;color:#bbb;}
+.car_select li.current{border:2px solid #d10000; border-bottom:0;background:#fff;color:#d10000;}
+.car_select li i{display:inline-block;background:#bbb;color:#fff;font-style:normal;width:16px;height:16px;line-height:18px;font-size:14px;vertical-align:middle;text-align:center;border-radius:4px;margin-top:-4px;margin-right:5px;}
+.car_select li.current i{color:#fff;background:#d10000;}
+.car_type_cont{padding:10px;display:none;height:300px;}
+.car_type_cont_inner{height:280px;overflow-y:auto;}
+.car_type_cont.current{display: block;}
+.car_type_item div.car_type{display:block;float:left;height:40px;line-height:40px;margin:5px;border:1px solid #ebebeb;padding:0 10px;color:#111;cursor:pointer;}
+.car_type_item div.car_type img{margin:0;vertical-align:middle;}
+.car_type_item div.car_type span{vertical-align:middle;}
+.car_type_cont ul li{float:left;}
+.car_type_item div.car_type:hover{border-color:#d10000;}
+.car_type_index,
+.car_type_item{float:left;}
+.car_type_index{line-height:40px;height:40px;width:5%;font-size:14px;font-weight:700;}
+.letter_box{line-height:40px;font-size:14px;}
+.letter_box span{display:inline-block;width:21px;height:22px;background:#eee;line-height:22px;text-align:center;color:#888;cursor:pointer;margin-right:0px;border:1px solid #eee;}
+.letter_box span.hot{width:40px;margin-left:5px;}
+.letter_box span.current{background:#d10000;color:#fff;border-color:#d10000;}
+.letter_box span:hover{border-color:#d10000;}
+/*---车型选择样式---end---*/

@@ -1,0 +1,371 @@
+/* css 维修详情 */
+
+.d_top {
+    height: 52px;
+    padding-top: 30px;
+}
+
+.d_foot {
+    height: 52px;
+}
+
+.d_foot li,.d_top li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.d_foot li.djzk, .d_top li.djzk {
+    float: right;
+    /*width: 90px;*/
+    background: #8fb027;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.khxx {
+    border: 1px solid #cdcdcd;
+    padding-bottom: 20px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.khxx h2 {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #efefef;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 14px;
+}
+
+.kh_xc li {
+    width: 50%;
+    float: left;
+    line-height: 37px;
+    padding-top: 20px;
+}
+
+.xxqz {
+    display: inline-block;
+    width: 72px;
+    margin-left: 20px;
+}
+
+.xxsel {
+    width: 367px;
+    height: 37px;
+    line-height: 37px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.kh_xc .supplier {
+    width:267px;
+}
+
+.new_supplier {
+    width: 90px;
+    height: 37px;
+    line-height: 37px;
+    border: 1px solid #dadada;
+    background-color: #dadada;
+    border-radius: 5px;
+    color: #666;
+    cursor:default;
+}
+
+.xxtxt {
+    width: 353px;
+    height: 37px;
+    line-height: 37px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+.gdbh {
+    padding: 20px 0 0 20px;
+    color: #a4a4a4;
+}
+
+.morebut {
+    width: 80px;
+    height: 22px;
+    line-height: 21px;
+    color: #c9c9c9;
+    cursor: pointer;
+    padding-left: 18px;
+    border: 1px solid #cdcdcd;
+    border-top: none;
+    background: #f9f9f9 url("../../images/mj.gif") no-repeat 70px;
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.wx_box {
+    background: #f9f9f9;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.wx_tit {
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #cdcdcd;
+    background: #efefef;
+}
+
+.wx_tl {
+    float: left;
+    width: 98px;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.wx_tr {
+    float: right;
+    height: 100%;
+    width: 878px;
+    border-left: 1px solid #cdcdcd;
+    background: url("../../images/xj.gif") no-repeat 850px;
+}
+
+.wx_list {
+    height: 37px;
+    line-height: 37px;
+    padding-left: 18px;
+}
+
+.wx_list li {
+    float: left;
+    height: 100%;
+    text-align: center;
+    margin-right: 3px;
+}
+
+.w98 {
+    width: 98px;
+}
+
+.w287 {
+    width: 235px;
+}
+
+.w83 {
+    width: 83px;
+}
+
+.w68 {
+    width: 68px;
+}
+
+.w108 {
+    width: 108px;
+}
+
+.w563 {
+    width: 563px;
+}
+
+.w129 {
+    width: 110px;
+}
+
+.w109 {
+    width: 77px;
+}
+.w172 {
+    width:162px;
+}
+.w26 {
+    width: 26px;
+}
+
+.m10 {
+    margin-bottom: 10px;
+}
+
+.wx_txt {
+    height: 37px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    line-height: 35px;
+    padding-left: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.wx_sel {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+}
+
+.wx_but {
+    background: url("../../images/sz.png") no-repeat center;
+    width: 29px;
+    height: 37px;
+}
+
+.jian {
+    background-image: url("../../images/sz1.png");
+}
+
+.heji {
+    padding-top: 10px;
+}
+
+.heji li {
+    line-height: 37px;
+    width: 100%;
+    display: block;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.hj_l {
+    width: 66px;
+    padding-left: 19px;
+    float: left;
+}
+
+.hj_r {
+    width: 880px;
+    float: left;
+}
+
+.hj_r span {
+    margin: 0 10px;
+}
+
+.hj_txt {
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #dadada;
+    background: #fff;
+    border-radius: 2px;
+    margin: 0 10px;
+    padding-left: 9px;
+    font-size: 14px;
+}
+
+.hj_duan {
+    width: 828px;
+    height: 71px;
+    line-height: 22px;
+    border: 1px solid #dadada;
+    background: #fff;
+    border-radius: 6px;
+    padding-left: 9px;
+    font-size: 14px;
+    margin: 0 10px;
+    resize: none;
+    overflow: hidden;
+}
+
+.d_bottom {
+    padding-top: 0;
+}
+
+.huide {
+    color: #c1c1c1;
+}
+
+.wx_tit .mark {
+    background-image: url("../../images/xj1.gif");
+}
+
+.sug_b {
+    position: absolute;
+    left: 161px;
+    display: none;
+    z-index: 1111;
+    background: #fcfcfc;
+    border: 1px solid #cecab4;
+}
+
+.sub_li {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px dotted #dadada;
+}
+
+.sug_l {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.mr1 {
+    margin-right: 1px;
+}
+
+.mr2 {
+    margin-right: 2px;
+}
+
+.mr3 {
+    margin-right: 3px;
+}
+
+.noline {
+    border-bottom: none;
+}
+
+.sug_b .current {
+    background: #fff;
+}
+
+input[readonly] {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}
+
+select[disabled] {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}
+li.num {
+    position: relative;
+}
+.num input.goodsCount, .num input.realGoodsCount {
+    padding-right:30px;
+}
+.num .unit {
+    position:absolute;
+    left:46px;
+    top:0;
+    display: block;
+    width:30px;
+    height:38px;
+    text-align: center;
+    font-size:12px;
+}

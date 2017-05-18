@@ -1,0 +1,67 @@
+/**
+ * zmx 2016-05-11
+ * 编辑委托单
+ */
+
+.wt-top-box{
+    background: #f9f9f9;
+    border:1px solid #cdcdcd;
+    padding:10px;
+}
+.wt-infor{
+    border-top:1px solid #d2d2d2;
+    margin-top: 10px;
+}
+.detail-title{
+    width: 105px;
+    line-height: 30px;
+}
+.car-text-width{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.show-grid{
+    margin: 0;
+}
+.wt-bt-box{
+    background: #fff;
+    border:1px solid #cdcdcd;
+    border-top: none;
+    padding: 0 10px;
+}
+.no-wt-title{
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-weight: bold;
+}
+table.yqx-table thead tr th {
+    background: #f9f9f9;
+}
+.total-box{
+    margin-top: 20px;
+    height: 36px;
+    line-height: 36px;
+}
+.total-box span{
+    font-size: 14px;
+    color: #ff7800;
+    margin-right: 30px;
+}
+.btn-box{
+    border-top:1px solid #d2d2d2;
+    padding: 10px 0;
+}
+.yqx-table>tbody>tr.hover{
+    background: #f9f9f9;
+}
+.detail-bz{
+    background: #fff;
+    border:1px solid #eee;
+    height: 25px;
+    width: 680px;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>淘汽二手车</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script src="../../js/adapter.js"></script>
+    <script src="../../../resources/js/common/legend_common.js"></script>
+    <link rel="stylesheet" href="../../js/lib/iSlider/islider.css"/>
+    <style type="text/css">
+        html {font-size: 1em;height:100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight: rgba(0, 0, 0, 0);-webkit-text-size-adjust: none;overflow: -moz-scrollbars-vertical; /*强制firefox出现滑动条*/}
+        body {font-size: 0.75em;height: 100%;position: relative;background-color: #efefef;font-family: "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;}
+        html, body, a, p {margin: 0;padding: 0;}
+        body {font-size: 0.2rem;background: #fff;}
+        a:link, a:visited {text-decoration: none;}
+        /*html5设置*/
+        img {vertical-align: middle;outline: none;}
+        ul, ol {list-style: none;}
+        img {border: 0;}
+        @-webkit-keyframes seesaw {
+            0% {
+                -webkit-transform: translateY(0) translateZ(0);
+            }
+            50% {
+                -webkit-transform: translateY(0.2rem) translateZ(0);
+            }
+            100% {
+                -webkit-transform: translateY(0) translateZ(0);
+            }
+        }
+        @keyframes seesaw {
+            0% {
+                transform: translateY(0) translateZ(0);
+            }
+            50% {
+                transform: translateY(0.2rem) translateZ(0);
+            }
+            100% {
+                transform: translateY(0) translateZ(0);
+            }
+        }
+        .wrapper {position: absolute;width: 100%;height: 100%;overflow: hidden;}
+        .tips-bg {display: none;position: absolute;width: 100%;top: 0;left: 0;background: #000;opacity: .8;z-index:100;}
+        .tips-bg img {width: 100%;}
+        .page {position: relative;width: 100%;height: 100%;background: #fff top center/cover no-repeat;}
+        .page1 {background-image: url(../../images/second_hand_car/1.jpg);}
+        .page2 {background-image: url(../../images/second_hand_car/2.jpg);}
+        .page3 {background-image: url(../../images/second_hand_car/3.jpg);}
+        .page4 {background-image: url(../../images/second_hand_car/4.jpg);}
+        .page5 {background-image: url(../../images/second_hand_car/5.jpg);}
+        .page6 {background-image: url(../../images/second_hand_car/6.jpg);}
+        .qr-code-box{position: absolute;left: 0;bottom: 10%;width: 100%;text-align: center;}
+        .qr-code-box .qr-code{width: 2.09rem;height: 2.09rem;margin-bottom: 0.15rem;}
+        .qr-code-box p{line-height: 1.4;font-size: 0.24rem;}
+        .page i {position: absolute;left: 50%;bottom: 5%;width: 0.37rem;height: 0.22rem;-webkit-transform: translateX(-50%);transform: translateX(-50%);background: url(../../images/second_hand_car/arrow.png) center/contain no-repeat;-webkit-animation: seesaw 2s linear 0s infinite;animation: seesaw 2s linear 0s infinite;}
+        .download_btn{position: absolute;left: 50%;bottom: 15%;width:3.54rem;height: .4rem;padding: 1.09rem 0.15rem 0 0;font-size: 0.24rem;text-align: center;color: #333;-webkit-transform: translateX(-50%);transform: translateX(-50%);background: url(../../images/second_hand_car/down-btn.png) center/3.54rem 1.49rem no-repeat;}
+    </style>
+</head>
+
+<body>
+<div id="wrapper" class="wrapper">
+</div>
+<div class="tips-bg">
+    <img src="../../images/tips.png" />
+</div>
+<script src="../../js/lib/zepto/zepto.min.js"></script>
+<script src="../../js/lib/iSlider/islider.js"></script>
+<script src="../../js/lib/crypto/sha.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../../js/Dao.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?177aadfd52500674827db74ca8f51989";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    (function(){
+        var data = [{
+            content: '<div class="page page1"><a href="javascript:;" class="download_btn"><span>淘汽二手车APP</span></a><i></i></div>'
+        }, {
+            content: '<div class="page page2"><i></i></div>'
+        }, {
+            content: '<div class="page page3"><i></i></div>'
+        }, {
+            content: '<div class="page page4"><i></i></div>'
+        },{
+            content: '<div class="page page5"><i></i></div>'
+        },{
+            content: '<div class="page page6"><div class="qr-code-box"><img class="qr-code" src="../../images/second_hand_car/qr.png"><p>联系客服电话：400-9937-288<br/>淘汽二手车</p></div><i></i></div>'
+        }],
+        //苹果设备跳转到对应的 app store
+        UA = window.navigator.userAgent.toLowerCase(),
+        showTips = function() {
+            if(UA.match(/MicroMessenger/i) == 'micromessenger') {
+                var $tips_bg = $('.tips-bg');
+                if (UA.match(/android/i) == "android") {
+                    $tips_bg.find('img').attr('src', '../../images/tips_android.png');
+                }
+                $tips_bg.css('height', $(document).height()).show();
+                return true;
+            }
+            return false;
+        };
+
+        function view() {
+            var imgUrl = location.protocol + "//" + location.host + "/legend/dandelion/images/second_hand_car/esc.png";
+            // 微信分享
+            this.share("淘汽二手车", "30秒在线实时估价，60秒竞拍卖车，淘汽二手车，帮你火箭的速度卖车", imgUrl, location.href);
+
+            new iSlider({
+                data: data,
+                type: 'dom',
+                dom: document.getElementById("wrapper"),
+                isVertical: true,
+                isOverspread: true,
+                isLooping: true
+            });
+        }
+        $(document).on("tap", ".download_btn", function(e) {
+
+            if ( showTips() ) {return;}
+
+            if(UA.match(/iPad|iOS|iPhone/i)) {
+                window.location.href = 'itms-services://?action=download-manifest&url=https%3A%2F%2Fdownload.fir.im%2Fapps%2F57300896748aac15bd00000b%2Finstall%3Fdownload_token%3D1c803415fcc7a4532b565e5864abdc9d%26release_id%3D5739533f748aac658d000029';
+            }else{
+                window.location.href = 'http://pkg3.fir.im/289eeb3b9622ba3859e8171ea9cdd60465e1270e.apk?attname=CC-1.2.2';
+            }
+        });
+        Zepto(function() {
+            var rarr = [
+                        '../../images/second_hand_car/1.jpg',
+                        '../../images/second_hand_car/2.jpg',
+                        '../../images/second_hand_car/3.jpg',
+                        '../../images/second_hand_car/4.jpg',
+                        '../../images/second_hand_car/5.jpg',
+                        '../../images/second_hand_car/6.jpg'
+                    ],
+                    rl = rarr.length,
+                    rnum = 0;
+            for (var i = 0; i < rl; i++) {
+                var img = new Image();
+                img.src = rarr[i];
+                img.onload = function () {
+                    if (++rnum >= rl) {
+                        App.run(view);
+                    }
+                };
+            }
+        });
+    })();
+</script>
+</body>
+</html>

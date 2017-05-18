@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.subsidy.SubsidyActivityDao">
+
+    <resultMap id="BaseResultMap" type="SubsidyActivity" extends="COMMON.BASE_RESULT_MAP">
+        <result column="start_time" property="startTime"/>
+        <result column="end_time" property="endTime"/>
+        <result column="image_url" property="imageUrl"/>
+        <result column="subsidy_amount" property="subsidyAmount"/>
+        <result column="subsidy_type" property="subsidyType"/>
+        <result column="subsidy_name" property="subsidyName"/>
+        <result column="subsidy_award_name" property="subsidyAwardName"/>
+        <result column="act_id" property="actId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            start_time as startTime,
+            end_time as endTime,
+            image_url as imageUrl,
+            subsidy_amount as subsidyAmount,
+            subsidy_type as subsidyType,
+            subsidy_name as subsidyName,
+            subsidy_award_name as subsidyAwardName,
+            act_id as actId,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="startTime != null">
+                    and start_time = #{startTime}
+                </if>
+                <if test="endTime != null">
+                    and end_time = #{endTime}
+                </if>
+                <if test="imageUrl != null">
+                    and image_url = #{imageUrl}
+                </if>
+                <if test="subsidyAmount != null">
+                    and subsidy_amount = #{subsidyAmount}
+                </if>
+                <if test="subsidyType != null">
+                    and subsidy_type = #{subsidyType}
+                </if>
+                <if test="subsidyName != null">
+                    and subsidy_name = #{subsidyName}
+                </if>
+                <if test="subsidyAwardName != null">
+                    and subsidy_award_name = #{subsidyAwardName}
+                </if>
+                <if test="actId != null">
+                    and act_id = #{actId}
+                </if>
+                <if test="currentTime != null">
+                    <![CDATA[
+                    and start_time <= #{currentTime}
+                    and end_time >= #{currentTime}
+                    ]]>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="startTime != null">
+                    start_time = #{startTime},
+                </if>
+                <if test="endTime != null">
+                    end_time = #{endTime},
+                </if>
+                <if test="imageUrl != null">
+                    image_url = #{imageUrl},
+                </if>
+                <if test="subsidyAmount != null">
+                    subsidy_amount = #{subsidyAmount},
+                </if>
+                <if test="subsidyType != null">
+                    subsidy_type = #{subsidyType},
+                </if>
+                <if test="subsidyName != null">
+                    subsidy_name = #{subsidyName},
+                </if>
+                <if test="subsidyAwardName != null">
+                    subsidy_award_name = #{subsidyAwardName},
+                </if>
+                <if test="actId != null">
+                    act_id = #{actId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_subsidy_activity
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_subsidy_activity
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_subsidy_activity
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_subsidy_activity
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_subsidy_activity
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_subsidy_activity
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_subsidy_activity
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_subsidy_activity (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="startTime != null">
+                start_time,
+            </if>
+            <if test="endTime != null">
+                end_time,
+            </if>
+            <if test="imageUrl != null">
+                image_url,
+            </if>
+            <if test="subsidyAmount != null">
+                subsidy_amount,
+            </if>
+            <if test="subsidyType != null">
+                subsidy_type,
+            </if>
+            <if test="subsidyName != null">
+                subsidy_name,
+            </if>
+            <if test="subsidyAwardName != null">
+                subsidy_award_name,
+            </if>
+            <if test="actId != null">
+                act_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="startTime != null">
+                #{startTime},
+            </if>
+            <if test="endTime != null">
+                #{endTime},
+            </if>
+            <if test="imageUrl != null">
+                #{imageUrl},
+            </if>
+            <if test="subsidyAmount != null">
+                #{subsidyAmount},
+            </if>
+            <if test="subsidyType != null">
+                #{subsidyType},
+            </if>
+            <if test="subsidyName != null">
+                #{subsidyName},
+            </if>
+            <if test="subsidyAwardName != null">
+                #{subsidyAwardName},
+            </if>
+            <if test="actId != null">
+                #{actId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_subsidy_activity
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_subsidy_activity (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            start_time,
+            end_time,
+            image_url,
+            subsidy_amount,
+            subsidy_type,
+            subsidy_name,
+            subsidy_award_name,
+            act_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.startTime != null">
+                    #{item.startTime},
+                </if>
+                <if test="item.startTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.endTime != null">
+                    #{item.endTime},
+                </if>
+                <if test="item.endTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.imageUrl != null">
+                    #{item.imageUrl},
+                </if>
+                <if test="item.imageUrl == null">
+                    '',
+                </if>
+                <if test="item.subsidyAmount != null">
+                    #{item.subsidyAmount},
+                </if>
+                <if test="item.subsidyAmount == null">
+                    0.00,
+                </if>
+                <if test="item.subsidyType != null">
+                    #{item.subsidyType},
+                </if>
+                <if test="item.subsidyType == null">
+                    0 ,
+                </if>
+                <if test="item.subsidyName != null">
+                    #{item.subsidyName},
+                </if>
+                <if test="item.subsidyName == null">
+                    '',
+                </if>
+                <if test="item.subsidyAwardName != null">
+                    #{item.subsidyAwardName},
+                </if>
+                <if test="item.subsidyAwardName == null">
+                    '',
+                </if>
+                <if test="item.actId != null">
+                    #{item.actId},
+                </if>
+                <if test="item.actId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

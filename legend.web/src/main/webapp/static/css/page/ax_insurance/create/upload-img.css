@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    width: 10.8rem;
+    background-color: #f8f8f8;
+    color: #f8f8f8;
+}
+p,input {
+    margin: 0;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+input[type="button"]:focus {
+    outline-color: #8b74d6;
+}
+.head {
+    width: 100%;
+    height: 1.3rem;
+    background-color: #08aae3;
+    text-align: center;
+}
+.head .head-info {
+    line-height: 1.3rem;
+    font-size: 28px;
+}
+.img-list {
+    overflow-y: scroll;
+    overflow-scrolling: touch;
+    margin-bottom: 1.8rem;
+}
+.img-area {
+    background-color: #fff;
+    width: 10.2rem;
+    height: 8.8rem;
+    border-radius: 10px;
+    margin: 0.3rem;
+}
+.img-area>.img-info {
+    background-color: #596367;
+    height: 6.6rem;
+    padding: 0.3rem;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.radio {
+    border-left: 5px solid #08aae3;
+    border-top: 5px solid #08aae3;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 5;
+}
+.radio:nth-of-type(2) {
+    -webkit-transform: rotateZ(270deg);
+    transform: rotateZ(270deg);
+    bottom: 0.3rem;
+}
+.radio:nth-of-type(3) {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    right: 0.3rem;
+}
+.radio:nth-of-type(4) {
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    right: 0.3rem;
+    bottom: 0.3rem;
+}
+.img-des {
+    line-height: 1.6rem;
+    color: #08aae3;
+    padding-left: 0.5rem;
+    font-size: 16px;
+}
+.must-tips:before {
+    content: '*';
+    display: inline;
+    color: red;
+}
+.up-img-hide {
+    display: none;
+}
+.load-img {
+    width: 9.6rem;
+    height: 6.6rem;
+    position: absolute;
+    top: 0.3rem;
+}
+.load-img[src=""]{
+    opacity: 0;
+}
+.up-img-btn {
+    height: 1rem;
+    border-radius: 5px;
+    background-color: #08aae3;
+    font-size: 16px;
+    color: #f8f8f8;
+    float: right;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 1.7rem;
+    border-top: 1px solid #d0d0d0;
+    background-color: #fff;
+    color: #08aae3;
+    font-size: 24px;
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+}

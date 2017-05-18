@@ -1,0 +1,65 @@
+.sidebar {
+	width: 200px;
+	float: left;
+	background-color: #fff;
+	border: 1px solid #e8e8e8;
+}
+
+.sidebar .qxy_vmenu {
+	border: 1px solid #e8e8e8;
+	cursor: pointer;
+}
+
+.sidebar .qxy_vmenu>li>p {
+	padding: 14px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url("../img/common/extend.png") no-repeat 165px center;
+	line-height: 30px;
+}
+
+.sidebar .qxy_vmenu>li>.contract {
+	background: url("../img/common/contract.png") no-repeat 165px center;
+}
+
+.sidebar .qxy_vmenu p {
+	height: 20px;
+	padding-left: 15px;
+	font-size: 13px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	font-weight: bold;
+}
+
+.sidebar .qxy_vmenu>li {
+	border-bottom: 1px solid #e8e8e8;
+	padding: 0 0 15px;
+}
+
+.sidebar .qxy_vmenu a {
+	padding-left: 15px;
+	line-height: 30px;
+	font-size: 12px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	color: #666666;
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.sidebar .qxy_vmenu a:hover {
+	color: #e50206;
+	border-left: 3px solid #333333;
+	background-color: #e0e0e0;
+}
+.sidebar .qxy_vmenu .selected {
+	border-left: 3px solid #333333;
+	background-color: #e0e0e0;
+}
+
+/*.sidebar .qxy_vmenu p+ul {*/
+	/*padding-left: 15px;*/
+/*}*/

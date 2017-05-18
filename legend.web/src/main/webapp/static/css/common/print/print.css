@@ -1,0 +1,925 @@
+/* 去除页眉页脚 start */
+@page {
+    size:  auto;   /* auto is the initial value */
+    margin: 0;  /* this affects the margin in the printer settings */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0;  /* this affects the margin on the html before sending to printer */
+}
+
+/* A4 : 210mm x 197mm */
+.A4 {
+    width: 210mm;
+}
+
+.A4 .a-main {
+    /*width: 190mm;*/
+    margin: 10mm;
+}
+
+/*body {*/
+    /*margin:9mm;!* margin you want for the content *!*/
+/*}*/
+/* 去除页眉页脚 end */
+
+p {
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+}
+#承保公司,
+#车辆型号 {
+    max-width: 187mm;
+}
+
+.settle-box #车牌,
+.settle-box #发动机号 {
+    width: 40mm;
+    max-width: 40mm;
+}
+
+.dispatch-box #车辆颜色,
+.dispatch-box #VIN码,
+.settle-box #车辆颜色,
+.settle-box #VIN码 {
+    width: 60mm;
+    max-width: 60mm;
+}
+
+.settle-box.font-12 #车牌,
+.settle-box.font-12 #发动机号 {
+    width: 57mm;
+    max-width: 57mm;
+}
+
+.font-12 #车牌 {
+    width: 57mm;
+    max-width: 57mm;
+}
+
+.font-12 #车辆颜色,
+.font-12 #VIN码 {
+    width: 71mm;
+    max-width: 71mm;
+}
+
+#VIN码 .key {
+    width: 14mm;
+}
+.font-12 #VIN码 .key {
+    width: 17mm;
+}
+
+#承保公司 .key,
+#车辆型号 .key,
+#单位 .key,
+#发动机号 .key {
+    width: 18mm;
+}
+#行驶里程 .key {
+    width: 21mm;
+}
+
+.font-12 #行驶里程 .key {
+    width: 27mm;
+}
+.font-12 #承保公司 .key,
+.font-12 #车辆型号 .key,
+.font-12 #发动机号 .key {
+    width: 22mm;
+}
+
+#车辆颜色,
+#油表油量 {
+    width: 29mm;
+}
+.font-12 #行驶里程,
+.font-12 #油表油量 {
+    width: 60mm;
+}
+
+#客户描述 {
+    height: 13.7mm;
+}
+
+.print-box .width-57 {
+    width: 57mm;
+}
+.print-box .width-64 {
+    width: 64mm;
+}
+
+#预完工时间 .key {
+    width: 22mm;
+}
+
+#开单时间 .key {
+    width: 18mm;
+}
+#联系人 {
+    width: 67mm;
+}
+
+.print-box .hide {
+    display: none !important;
+}
+
+.print-box .empty-line {
+    height: 7mm;
+}
+
+.print-box table .empty-line td {
+    border: 0 !important;
+}
+
+.print-box table .empty-line + .empty-line {
+    border-top: 0;
+}
+
+.print-box .height-70 {
+    height: 70mm;
+}
+
+.print-box .width-23 {
+    width: 23mm;
+}
+
+.print-box .border-bottom {
+    border-bottom: 1px solid #000;
+}
+
+.print-box i {
+    font-style: normal;
+    display: inline-block;
+}
+
+.print-box i.text {
+    padding-right: 3mm;
+}
+
+.print-box h1 {
+    margin: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+}
+
+.print-box {
+    width: 190mm;
+    font-size: 9.5pt;
+    line-height: 16pt;
+    color: #000;
+    font-family: "Microsoft Yahei", "微软雅黑", SimHei, Tahoma, Simsun, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    margin: 0;
+    word-break: break-all;
+}
+
+.print-box * {
+    font-size: inherit;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.print-box ul, ol {
+    list-style: none;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+}
+
+.print-box th {
+    font-weight: normal;
+}
+
+.print-box h2, h3 {
+    font-weight: normal;
+}
+
+.print-box header {
+    margin-bottom: 2mm;
+}
+
+.print-box header > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.print-box li {
+    min-width: 37mm;
+}
+
+.bill-box li {
+    width: initial !important;
+}
+
+.print-box .checkbox {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    margin-right: 2.7mm;
+}
+
+.print-box .fr {
+    float: right !important;
+}
+.print-box .fl {
+    float: left !important;
+}
+
+.print-box .title-box {
+    position: relative;
+    width: 88mm;
+    margin-left: 3.14mm;
+}
+
+.print-box .title-box h1 {
+    font-size: 15pt;
+    font-weight: 700;
+    height: 10.7mm;
+}
+
+.print-box .title-box {
+    padding-top: 3.2mm;
+}
+
+.print-box .contact-box {
+    width: 66mm;
+    line-height: 12pt;
+    padding-left: 3.14mm;
+    float: right;
+}
+
+.print-box .border-left,
+.service-note-box li:nth-child(2),
+.contact-box {
+    border-left: 1px dashed #000;
+}
+
+.contact-box h3:first-child {
+    margin-top: 3.2mm;
+    margin-bottom: 2.5mm;
+}
+
+.contact-box h3:last-child {
+    margin-top: 2pt;
+}
+
+.title-box h2,
+.contact-box {
+    font-size: 10pt;
+}
+
+.contact-box h3:first-child {
+    line-height: 12pt;
+}
+
+.address {
+    width: 46mm;
+    vertical-align: top;
+}
+
+.print-logo {
+    width: 32.68mm;
+    height: 18.45mm;
+}
+
+/*article 部分 start */
+.time > i {
+    width: 43mm;
+}
+
+.print-box .box {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    padding: 2mm 0 2mm 2mm;
+    line-height: 11pt;
+}
+
+.box:first-child {
+    font-size: 10pt;
+    padding-left: 0;
+}
+
+.car-info ul:after,
+.box:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.box:last-child {
+    border-bottom: 0;
+    padding-left: 0;
+}
+
+.box > li {
+    float: left;
+}
+
+.box li {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.box i {
+    display: table-cell;
+}
+
+.print-box table i {
+    display: inline;
+}
+
+.box.order-info .server {
+    width: initial;
+    min-width: initial;
+}
+
+.customer-box li {
+    min-width: 59mm;
+}
+
+.car-info li {
+    float: none;
+    display: inline-block;
+    line-height: 16pt;
+    margin-bottom: 2mm;
+    max-width: 47mm;
+}
+
+.car-info ul:last-child li:last-child {
+    margin-bottom: 0;
+}
+
+.car-info li i {
+    line-height: 11pt;
+}
+
+.font-12 .car-info li i {
+    line-height: 13pt;
+}
+
+.font-12.print-box .car-info li {
+    max-width: 64mm;
+}
+
+.font-12 .split-vertical input[type="checkbox"] {
+    vertical-align: baseline;
+}
+
+.split-vertical > li {
+    line-height: 20pt;
+    height: 14mm;
+    padding-left: 4mm;
+    margin-left: 1mm;
+}
+
+.split-vertical > li:first-child {
+    border-left: 0;
+    padding-left: 0;
+}
+
+.split-vertical > li > ul > li {
+    display: block;
+    float: none;
+}
+
+.total-box {
+    border-top: 1px solid #000;
+}
+
+.total-box li {
+    width: initial;
+    display: block;
+    min-width: initial;
+    line-height: 14pt;
+}
+
+.total-box li + li {
+    margin-left: 10mm;
+}
+
+.total-box .border-left {
+    padding-left: 4mm;
+    margin-left: 20mm;
+}
+
+#服务总费用 {
+    margin-left: 3mm;
+}
+
+#应收金额 i {
+    display: inline-block;
+}
+
+#应收金额大写 {
+    margin-left: 0;
+}
+
+/*article 部分 end */
+
+/* table start */
+.print-box table.striped tbody tr:first-child {
+    border-top: 0;
+}
+.print-box table.striped tbody tr {
+    border-top: 1px dashed #000;
+}
+
+.print-box table.box {
+    position: relative;
+    padding: 0;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-bottom: 0;
+    text-align: left;
+}
+
+.print-box table thead th {
+    position: relative;
+    padding: 2mm 0;
+}
+
+.print-box table thead th {
+    border-bottom: 1px dashed #000;
+}
+
+.print-box table.box td,
+.print-box table.box th {
+    padding-right: 2mm;
+}
+
+.print-box table.box th:first-child {
+    width: 12mm;
+    text-align: center;
+}
+
+.print-box table td:first-child {
+    text-align: center;
+}
+
+.print-box table .people {
+    width: 27.7mm;
+    text-align: center;
+}
+
+.print-box table + table:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 190mm;
+    border-top: 1px solid #000;
+}
+
+.print-box .merge-table:before {
+    border: 0;
+}
+
+.print-box .merge-fee {
+    margin: 0 20mm;
+}
+
+.print-box.dispatch-box .service-box .name {
+    width: 70mm;
+}
+
+.print-box .unit {
+    width: 17mm;
+}
+
+.print-box .price {
+    width: 18mm;
+}
+
+.goods-box .name {
+    width: 117mm;
+}
+
+.font-12.settle-box.print-box .box .number {
+    width: 15mm;
+}
+
+.goods-box .number {
+    width: 13mm;
+}
+
+.dispatch-box .addon-box .name {
+    width: 147mm;
+}
+.addon-box .name {
+    width: 132mm;
+}
+
+.addon-box .number {
+    width: 13mm;
+}
+
+.addon-box .note {
+    width: 24mm;
+}
+
+.settle-box .goods-box .name,
+.service-box .name {
+    width: 90mm;
+}
+
+.settle-box .addon-box .name {
+    min-width: 84mm;
+    max-width: 90mm;
+}
+
+.print-box .box.merge-table .number {
+    width: 18mm;
+}
+.print-box .box.merge-table .name {
+    width: initial;
+}
+
+.print-box .box.merge-table .measure {
+    width: 20mm;
+    text-align: left;
+}
+
+.font-12.settle-box .addon-box .name {
+    width: 124mm;
+}
+
+.settle-box .addon-box .note {
+    width: 20mm;
+}
+
+/*附加项目 备注居中*/
+.settle-box .addon-box .number,
+.settle-box .goods-box .number,
+.service-box .number {
+    width: 11mm;
+}
+
+.settle-box .addon-box .number.per-hour-price,
+.settle-box .goods-box .number.per-hour-price,
+.service-box .number.per-hour-price {
+    width: 14mm;
+}
+
+.print-box table tbody td {
+    line-height: 11pt;
+    padding: 1.2mm 0 2mm 0;
+}
+.print-box table tbody tr:last-child td {
+    padding-bottom: 1.2mm;
+}
+
+/* table end */
+
+.print-box .service-note-box li {
+    min-height: 12mm;
+    margin: .5mm 0;
+}
+
+.print-box .service-note-box li:last-child {
+    padding-left: 3mm;
+    margin-left: 1mm;
+}
+
+.print-box .service-note-box .text {
+    width: 63mm;
+}
+
+.print-box .check-box li:first-child {
+    width: 30mm;
+}
+
+.print-box .check-box li {
+    width: 42mm;
+    min-width: 27mm;
+}
+
+.print-box .check-box li:last-child {
+    width: 32mm;
+}
+
+.print-box .footer-box .print-time {
+    width: 113mm;
+}
+
+.print-box .footer-box .sign {
+    width: 59mm;
+}
+
+.print-box .sign-text {
+    width: 15mm;
+}
+
+.print-box .space {
+    width: 6mm;
+}
+.print-box .footer-box {
+    border-bottom: 0;
+    padding-left: 0;
+}
+
+.print-box .footer-box .year-space {
+    width: 8mm;
+}
+
+/*派工单免责声明距离*/
+.print-box footer {
+    font-size: 10pt;
+    line-height: 14pt;
+    margin-top: 4mm;
+}
+
+.footer-box {
+    position: relative;
+}
+
+.checkbox-box li i {
+    display: inline-block;
+}
+
+.print-box.bill-box .customer-box {
+    line-height: 16pt;
+}
+
+.font-12 .customer-box {
+    line-height: 18pt;
+    padding: 1mm 0 1mm 2mm;
+}
+
+.customer-company {
+    max-width: 60mm;
+}
+
+.customer-company .key {
+    width: 11mm;
+}
+
+.font-12 #单位 .key {
+    width: 22mm;
+}
+.font-12.print-box.bill-box .customer-box {
+    line-height: 20pt;
+}
+
+/* 大字体 12pt */
+.font-12.print-box {
+    font-size: 12pt;
+}
+
+.font-12.print-box .car-info li {
+    line-height: 18pt;
+}
+
+.print-box.font-12 table th {
+    font-size: 10pt;
+}
+
+.print-box.font-12 table td {
+    line-height: 14pt;
+}
+
+.font-12 .check-box {
+    min-height: 9mm;
+}
+
+.font-12 .split-vertical {
+    line-height: 20pt;
+}
+
+.font-12 .footer-box {
+    font-size: 10pt;
+}
+
+.font-12 .footer-box .four {
+    width: 15mm;
+}
+
+.font-12 .footer-box .five {
+    width: 18mm;
+}
+
+.font-12.print-box .service-note-box .text:first-child {
+    width: 54mm;
+}
+
+.font-12.print-box .service-note-box .text:last-child {
+    width: 62mm;
+}
+
+.font-12 #行驶里程 .text {
+    width: 36mm;
+}
+
+.font-12 .total-box li + li {
+    margin-left: 6mm;
+}
+
+.font-12 .total-box li {
+    line-height: 20pt;
+}
+
+.font-12.settle-box .addon-box .note {
+    width: 25mm;
+}
+
+.font-12.settle-box .addon-box .number:first-child {
+    width: 14mm;
+}
+
+/* 报价单 */
+.bill-box .service-box .name {
+    width: 117mm;
+}
+
+.bill-box .addon-box .number,
+.bill-box .goods-box .number {
+    width: 11mm;
+}
+
+.bill-box #车辆型号 i {
+    display: inline-block;
+}
+
+/* 试车单 */
+.car-test-box h2.title {
+    font-size: 12pt;
+    text-align: center;
+}
+.car-test-box .info-box ul {
+    margin-bottom: 2mm;
+    display: inline-block;
+}
+
+.font-12.car-test-box .info-box ul {
+    margin-bottom: 3mm;
+}
+
+.car-test-box .info-box i {
+    display: inline-block;
+}
+
+.car-test-box .info-box ul>li:first-child {
+    width: 60mm;
+}
+
+.font-12.car-test-box .info-box ul>li:first-child {
+    width: 80mm;
+}
+
+.car-test-box .info-box ul:last-child {
+    margin: 0;
+}
+
+.car-test-box .info-box .left {
+    display: inline-block;
+    width: 158mm;
+    vertical-align: bottom;
+}
+
+.car-test-box .info-box .right {
+    display: inline-block;
+    width: 30mm;
+}
+
+.font-12 .ryb-box {
+    line-height: 16pt;
+}
+
+.ryb-box > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ran_you_biao {
+    position: relative;
+    width: 16mm;
+    height: 16mm;
+    margin-left: 2mm;
+    margin-right: 5mm;
+}
+
+.ran_you_biao span {
+    position: absolute;
+}
+.ran_you_biao .text {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    white-space: nowrap;
+    font-size: 9.5pt;
+    line-height: initial;
+}
+
+.ran_you_biao span.xline {
+    width: 16mm;
+    height: 1px;
+    border-top: 1px solid #000;
+    left: 0;
+    bottom: 0;
+}
+
+.ran_you_biao span.yline {
+    height: 16mm;
+    width: 1px;
+    border-left: 1px solid #000;
+    left: 0;
+    bottom: 0;
+}
+
+.ryb-title {
+    width: 4mm;
+    padding: 0 0 2mm 2mm;
+}
+
+.font-12 .ryb-title {
+    padding-bottom: 0;
+}
+
+.ran_you_biao span.txt1 {
+    left: 1mm;
+    top: -3mm;
+}
+
+.ran_you_biao span.txt2 {
+    left: 4mm;
+    top: 0;
+}
+
+.ran_you_biao span.txt3 {
+    left: 8mm;
+    top: 4mm;
+}
+
+.ran_you_biao span.txt4 {
+    left: 11.4mm;
+    top: 8mm;
+}
+
+.ran_you_biao span.txt5 {
+    left: 17mm;
+    bottom: -1mm;
+}
+
+.car-test-box .detail-box li {
+    display: block;
+    float: none;
+    line-height: 16pt;
+}
+
+.car-test-box .note-box {
+    margin-bottom: 10mm;
+    height: 37mm;
+}
+
+.car-test-box .footer-box {
+    font-size: 10pt;
+}
+
+.mark-box.footer-box {
+    padding-top: 0;
+}
+
+.cash-info li:first-child {
+    width: 70mm;
+    min-width: 70mm;
+    padding-right: 2mm;
+}
+
+.width-125 {
+    width: 125mm !important;
+    max-width: initial !important;
+    min-width: initial !important;
+}
+
+
+/*新修改样式 2017-4-6 zmx*/
+.print-box .title-center{
+    position: relative;
+    width: 190mm;
+    margin-left: 3.14mm;
+    padding-top: 3.2mm;
+    text-align: center;
+}
+
+.print-box .title-center h1 {
+    font-size: 15pt;
+    font-weight: 700;
+    height: 10.7mm;
+}
+
+.footer-address h3{
+    display: inline-block;
+    margin-right: 4mm;
+}
+.address1{
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+}

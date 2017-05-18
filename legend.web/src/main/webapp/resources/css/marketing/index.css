@@ -1,0 +1,630 @@
+em{
+    font-style: normal;
+}
+.Z-right{
+    width: 830px;
+    float: left;
+}
+.Z-right .Z-lost{
+    width: 830px;
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+}
+.Z-right .Z-lost .custom-total{
+    width: 270px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #9fc527;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+.Z-lost .custom-total i{
+    background: url("../../images/marketing/custom-total-icon.png") no-repeat;
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.custom-total-title{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 90px;
+    font-size: 13px;
+    font-family: MicrosoftYahei;
+}
+.custom-total-num{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 90px;
+    font-size: 26px;
+    font-family: Arial;
+}
+.custom-total-num em{
+    font-size: 13px;
+}
+.Z-right .Z-lost .custom-lost{
+    width: 270px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #fea23f;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+.Z-lost .custom-lost i{
+    background: url("../../images/marketing/custom-lost-icon.png") no-repeat;
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.custom-lost-title{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 90px;
+    font-size: 13px;
+    font-family: MicrosoftYahei;
+}
+.custom-lost-num{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 90px;
+    font-size: 26px;
+    font-family: Arial;
+}
+.custom-lost-num em{
+    font-size: 13px;
+}
+.Z-right .Z-lost .custom-lose{
+    width: 270px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #f77c7e;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+.Z-lost .custom-lose i{
+    background: url("../../images/marketing/custom-lose-icon.png") no-repeat;
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.custom-lose-title{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 90px;
+    font-size: 13px;
+    font-family: MicrosoftYahei;
+}
+.custom-lose-num{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 90px;
+    font-size: 26px;
+    font-family: Arial;
+}
+.custom-lose-num em{
+    font-size: 13px;
+}
+.Z-type{
+    width: 828px;
+    height: 204px;
+    border: 1px solid #ddd;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.custom-type{
+    width: 200px;
+    margin: 42px 0 0 30px;
+    float: left;
+}
+.custom-type-title{
+    font-size: 14px;
+    font-family: MicrosoftYahei;
+    color: #6b6b6b;
+}
+.custom-type-status,.custom-type-no-data{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: MicrosoftYahei;
+    color: #fd3235;
+    margin-top: 20px;
+    line-height: 22px;
+}
+.custom-type-detail,.custom-type-bill{
+    width: 73px;
+    height: 25px;
+    border-radius: 8px;
+    background-color: #f77c7e;
+    color: #fff;
+    margin-top: 33px;
+}
+.custom-type-analysis{
+    width: 540px;
+    height: 174px;
+    border: 1px solid #e5e5e5;
+    float: left;
+    margin: 15px 0 15px 33px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+.custom-new-old{
+    float: left;
+    position: relative;
+    width: 265px;
+}
+#custom-percent{
+    width: 20px;
+    height: 144px;
+    background-color: #FFFFFF;
+    margin: 15px 0 15px 30px;
+    float: left;
+}
+#custom-percent-newer{
+    width: 20px;
+    max-height: 144px;
+    background-color: #9fc527;
+    cursor: pointer;
+}
+#custom-percent-older{
+    width: 20px;
+    max-height: 144px;
+    background-color: #6b8d00;
+    cursor: pointer;
+}
+.custom-new{
+    font-family: MicrosoftYahei;
+    position: absolute;
+    top: 32px;
+    left: 75px;
+}
+.custom-new-tag{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #9fc527;
+    vertical-align: top;
+}
+.custom-new-introduce{
+    margin: 10px 0 0 15px;
+}
+.custom-old{
+    font-family: MicrosoftYahei;
+    display: inline-block;
+    top: 96px;
+    left: 75px;
+    position: absolute;
+}
+.custom-old-tag{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #6b8d00;
+    vertical-align: top;
+}
+.custom-old-introduce{
+    margin: 10px 0 0 15px;
+}
+.custom-activity-level{
+    float: left;
+    position: relative;
+    width: 275px;
+}
+#custom-activity-percent{
+    width: 20px;
+    height: 144px;
+    background-color: #FFFFFF;
+    margin: 15px 0 15px 30px;
+    float: left;
+}
+#custom-percent-activity{
+    width: 20px;
+    background-color: #93b624;
+    cursor: pointer;
+    max-height: 144px;
+}
+#custom-percent-dormant{
+    width: 20px;
+    background-color: #ffab27;
+    cursor: pointer;
+    max-height: 144px;
+}
+#custom-percent-loss{
+    width: 20px;
+    background-color: #ff8227;
+    cursor: pointer;
+    max-height: 144px;
+}
+.custom-activity{
+    font-family: MicrosoftYahei;
+    position: absolute;
+    top: 20px;
+    left: 75px;
+}
+.custom-activity-tag{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #93b624;
+    vertical-align: top;
+}
+.custom-activity-introduce{
+    margin: 10px 0 0 15px;
+}
+.custom-dormant{
+    font-family: MicrosoftYahei;
+    display: inline-block;
+    top: 75px;
+    left: 75px;
+    position: absolute;
+}
+.custom-dormant-tag{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ffab27;
+    vertical-align: top;
+}
+.custom-dormant-introduce{
+    margin: 10px 0 0 15px;
+}
+.custom-loss{
+    font-family: MicrosoftYahei;
+    display: inline-block;
+    top: 130px;
+    left: 75px;
+    position: absolute;
+}
+.custom-loss-tag{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ff8227;
+    vertical-align: top;
+}
+.custom-loss-introduce{
+    margin: 10px 0 0 15px;
+}
+.display{
+    color: #333333;
+    font-style: normal;
+    font-family: "Microsoft YaHei";
+}
+.Z-type-tag{
+    position: absolute;
+    width: 8px;
+    height: 25px;
+    background: url("../../images/marketing/tag.png") no-repeat;
+    top: 88px;
+    left: 256px;
+    z-index: 8;
+}
+.Z-lose{
+    width: 828px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    position: relative;
+    float: left;
+}
+.custom-level{
+    width: 200px;
+    margin: 42px 0 0 30px;
+    float: left;
+}
+.custom-level-title{
+    font-size: 14px;
+    font-family: MicrosoftYahei;
+    color: #6b6b6b;
+}
+.custom-level-status,.custom-level-no-data{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: MicrosoftYahei;
+    color: #fd3235;
+    margin-top: 20px;
+    line-height: 22px;
+}
+.custom-level-detail,.custom-level-import{
+    width: 73px;
+    height: 25px;
+    border-radius: 8px;
+    background-color: #f77c7e;
+    color: #fff;
+    margin-top: 25px;
+}
+.Z-level-tag{
+    position: absolute;
+    width: 8px;
+    height: 25px;
+    background: url("../../images/marketing/tag.png") no-repeat;
+    top: 88px;
+    left: 256px;
+    z-index: 8;
+}
+.custom-level-analysis{
+    width: 540px;
+    height: 174px;
+    border: 1px solid #e5e5e5;
+    float: left;
+    margin: 15px 0 15px 33px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+#num-percent{
+    width: 270px;
+    height: 176px;
+    float: left;
+}
+#purchase-percent{
+    width: 270px;
+    height: 176px;
+    float: left;
+}
+.Z-separation-line{
+    height: 1px;
+    width: 774px;
+    background-color: #e0e0e0;
+    clear: both;
+    overflow: hidden;
+    margin-left: 31px;
+}
+.custom-type-notice{
+    margin: 20px 0;
+    list-style: disc;
+    float: left;
+}
+.custom-type-notice li{
+    float: left;
+
+}
+.custom-type-high{
+    margin-left: 115px;
+}
+.custom-type-middle,.custom-type-low{
+    margin-left: 50px;
+}
+.no-data{
+    background: url("../../images/marketing/no-data.png") no-repeat;
+    width: 68px;
+    height: 92px;
+    position: absolute;
+    top: 50%;margin-top: -46px;
+    left: 50%;
+    margin-left: -34px;
+    display: none;
+}
+.custom-type-no-data,.custom-level-no-data,.custom-level-import,.custom-type-bill{
+    display: none;
+}
+
+/* 引导 样式*/
+.yqx-help-back {
+    z-index: 9999999;
+    opacity: .6;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+.yqx-help {
+    position: absolute;
+    z-index: 99999991;
+}
+
+.yqx-help .next {
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+}
+
+.yqx-help-1 .next {
+    left: 275px;
+    bottom: 10px;
+}
+
+.margin-neg-100 {
+    margin-top: -100px;
+}
+/* end */
+
+/*改版 zmx 17/03/21*/
+.m-bot{
+    margin-bottom: 10px;
+}
+.custom-type-high1{
+    margin-left: 45px;
+}
+#num-washed{
+    width: 270px;
+    height: 176px;
+    float: left;
+}
+.num-washed-info{
+    width: 230px;
+    height: 150px;
+    float: left;
+    margin: 25px 0 0 35px;
+}
+.washed-box{
+    width: 205px;
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+.washed-box p{
+    line-height: 22px;
+    color: #666;
+}
+.washed-box p i{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+.washed-box p:nth-child(1) i{
+    background: #9fc527;
+}
+.washed-box p:nth-child(2) i{
+    background: #fea23f;
+}
+.washed-box p:nth-child(3) i{
+    background: #5e9cd3;
+}
+.washed-total p{
+    padding-top: 10px;
+    line-height: 25px;
+    color: #666;
+}
+.washed-box h3{
+    font-size: 20px;
+    color: #666;
+    font-weight: bold;
+}
+.guide{
+    position: absolute;
+    top:90px;
+    left:50%;
+    width: 56px;
+    height: 50px;
+    background: #ffd400;
+    margin-left: 500px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
+.guide i{
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+}
+.guide p{
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+.guide:hover{
+    cursor: pointer;
+}
+.guide-box{
+    display: none;
+    width: 100%;
+    height: 243px;
+    margin-top: 70px;
+    background: url("../../../static/img/page/marketing/guide-box-bg.jpg") no-repeat center;
+}
+.guide-wrap{
+    width: 980px;
+    height: 240px;
+    margin: 0 auto;
+    position: relative;
+}
+.guide-wrap h3{
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+    line-height: 60px;
+}
+.guide-wrap li{
+    width: 100px;
+    float: left;
+    margin:0 135px 0 35px;
+    text-align: center;
+}
+.guide-wrap li:last-child{
+    margin-right:0px;
+}
+.guide-wrap li h4{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    font-family: "Microsoft YaHei", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.guide-wrap li p{
+    width: 150px;
+    line-height: 14px;
+    padding-top: 10px;
+    color: #333;
+    font-size: 12px;
+    margin-left:-20px;
+    font-family: "Microsoft YaHei", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.guide-wrap li p.long-tip{
+    width: 220px;
+    margin-left:-52px;
+}
+.guide-wrap li:hover img{
+    transform: scale(1.1);
+}
+.guide-wrap li:hover p{
+    display: block;
+}
+.pack{
+    position: absolute;
+    bottom: 40px;
+    right: -70px;
+    font-style: normal;
+    border: 1px solid #ddd;
+    color: #666;
+    width: 58px;
+    height: 23px;
+    line-height: 23px;
+    background: #fff;
+    cursor: pointer;
+}
+.pack i{
+    margin:0 7px 0 10px;
+    color: #666;
+}
+.pack:hover{
+    color: #666;
+}
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+    color: #666;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+.wrapper1{
+    width: 980px;
+    min-height: 500px;
+    margin: 90px auto 20px;
+    overflow: hidden;
+}

@@ -1,0 +1,64 @@
+/*
+* create by zmx 2017/1/5
+* 配件资料
+*/
+
+.form-box{
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+    padding-top: 0;
+}
+.yqx-table{
+    border: 1px solid #cacaca;
+}
+.yqx-table .p-20{
+    padding-left: 20px;
+}
+.yqx-table tr td h3{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.w-270{
+    width: 270px;
+}
+
+.form-box .form-item {
+    width: 175px;
+}
+
+.content .manage {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.content .manage + .manage {
+    margin-right: 14px;
+}
+
+.content .manage + .manage:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #ddd;
+    right: -7px;
+    top: 2px;
+    width: 1px;
+    height: 12px;
+}
+
+.manage img {
+    margin-bottom: -3px;
+    margin-right: 6px;
+    width: 15px;
+    height: 15px;
+}
+
+a {
+    color: inherit;
+}

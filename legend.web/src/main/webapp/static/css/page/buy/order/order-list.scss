@@ -1,0 +1,139 @@
+/**
+ * Created by sky on 16/11/25.
+ */
+
+.condition-list {
+  margin-bottom: 8px;
+
+  li {
+    float: left;
+    width: 104px;
+    line-height: 13px;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+
+    &.active {
+      font-weight: bold;
+      color: #159;
+      cursor: default;
+    }
+
+    i {
+      font-style: normal;
+    }
+  }
+
+  li + li {
+    border-left: 1px solid #cacaca;
+  }
+}
+
+.order-item {
+  border: 1px solid #cacaca;
+
+  & + .order-item {
+    margin-top: 10px;
+  }
+
+  tr {
+    th, td {
+      position: relative;
+    }
+
+    .tc-1 {
+      width: 100px;
+    }
+
+    .tc-2 {
+      width: 350px;
+    }
+
+    .tc-3 {
+      width: 130px;
+    }
+  }
+
+  & > thead {
+    & > tr {
+      background: #f1f2f2;
+    }
+
+    th {
+      height: 38px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  & > tbody, & > tfoot {
+    & > tr {
+      background: #fff;
+    }
+  }
+
+  & > tbody {
+    td {
+      vertical-align: top;
+    }
+  }
+
+  .order-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94px;
+    height: 37px;
+  }
+
+  .goods-photo {
+    width: 80px;
+    height: 84px;
+  }
+
+  .info-row + .info-row {
+    margin-top: 20px;
+  }
+
+  .info-highlight {
+    color: #e50206 !important;
+  }
+
+  .money {
+    padding: 0 2px;
+    font-weight: bold;
+    font-style: normal;
+    color: #9fc527;
+  }
+
+  .finished {
+    color: #ffcd00;
+  }
+
+  .act-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    background: #f53b43;
+    border-radius: 3px;
+  }
+}
+
+.dialog-exchange-list-wrap {
+
+  .extc-1 {
+    width: 100px;
+  }
+
+  .extc-3 {
+    width: 80px;
+  }
+
+  .extc-4 {
+    width: 80px;
+  }
+
+  .amount-box {
+    margin-top: 10px;
+  }
+}

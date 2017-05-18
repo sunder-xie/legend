@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.customer.AppointVoDao">
+
+    <resultMap id="BaseResultMap" type="AppointVo" extends="COMMON.BASE_RESULT_MAP">
+        <result column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="modifier" property="modifier"/>
+        <result column="creator" property="creator"/>
+        <result column="appoint_sn" property="appointSn"/>
+        <result column="license" property="license"/>
+        <result column="car_brand_id" property="carBrandId"/>
+        <result column="car_brand_name" property="carBrandName"/>
+        <result column="car_series_id" property="carSeriesId"/>
+        <result column="car_series_name" property="carSeriesName"/>
+        <result column="car_alias" property="carAlias"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="mobile" property="mobile"/>
+        <result column="appoint_time" property="appointTime"/>
+        <result column="appoint_content" property="appointContent"/>
+        <result column="registrant_id" property="registrantId"/>
+        <result column="registrant_name" property="registrantName"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="order_id" property="orderId"/>
+        <result column="status" property="status"/>
+        <result column="cancel_reason" property="cancelReason"/>
+        <result column="push_status" property="pushStatus"/>
+        <result column="car_model" property="carModel"/>
+        <result column="import_info" property="importInfo"/>
+        <result column="channel" property="channel"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            a.id as id,
+            a.is_deleted as isDeleted,
+            a.gmt_create as gmtCreate,
+            a.gmt_modified as gmtModified,
+            a.modifier as modifier,
+            a.creator as creator,
+            a.appoint_sn as appointSn,
+            a.license as license,
+            a.car_brand_id as carBrandId,
+            a.car_brand_name as carBrandName,
+            a.car_series_id as carSeriesId,
+            a.car_series_name as carSeriesName,
+            a.car_alias as carAlias,
+            a.customer_name as customerName,
+            a.mobile as mobile,
+            a.appoint_time as appointTime,
+            a.appoint_content as appointContent,
+            a.registrant_id as registrantId,
+            a.registrant_name as registrantName,
+            a.shop_id as shopId,
+            a.order_id as orderId,
+            a.status as status,
+            a.cancel_reason as cancelReason,
+            a.channel as channel,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <if test="id != null">
+                    and a.id = #{id}
+                </if>
+                <if test="isDeleted != null">
+                    and a.is_deleted = #{isDeleted}
+                </if>
+                <if test="gmtCreate != null">
+                    and a.gmt_create = #{gmtCreate}
+                </if>
+                <if test="gmtModified != null">
+                    and a.gmt_modified = #{gmtModified}
+                </if>
+                <if test="modifier != null">
+                    and a.modifier = #{modifier}
+                </if>
+                <if test="creator != null">
+                    and a.creator = #{creator}
+                </if>
+                <if test="appointSn != null">
+                    and a.appoint_sn = #{appointSn}
+                </if>
+                <if test="license != null">
+                    and a.license = #{license}
+                </if>
+                <if test="licenseLike != null">
+                    and a.license like CONCAT('%', #{licenseLike}, '%')
+                </if>
+                <if test="carBrandId != null">
+                    and a.car_brand_id = #{carBrandId}
+                </if>
+                <if test="carBrandName != null">
+                    and a.car_brand_name = #{carBrandName}
+                </if>
+                <if test="carSeriesId != null">
+                    and a.car_series_id = #{carSeriesId}
+                </if>
+                <if test="carSeriesName != null">
+                    and a.car_series_name = #{carSeriesName}
+                </if>
+                <if test="carAlias != null">
+                    and a.car_alias = #{carAlias}
+                </if>
+                <if test="customerName != null">
+                    and a.customer_name = #{customerName}
+                </if>
+                <if test="mobile != null">
+                    and a.mobile = #{mobile}
+                </if>
+                <if test="mobileLike != null">
+                    and a.mobile like CONCAT('%', #{mobileLike}, '%')
+                </if>
+                <if test="appointTime != null">
+                    and a.appoint_time = #{appointTime}
+                </if>
+                <if test="appointContent != null">
+                    and a.appoint_content = #{appointContent}
+                </if>
+                <if test="registrantId != null">
+                    and a.registrant_id = #{registrantId}
+                </if>
+                <if test="registrantName != null">
+                    and a.registrant_name = #{registrantName}
+                </if>
+                <if test="shopId != null">
+                    and a.shop_id = #{shopId}
+                </if>
+                <if test="orderId != null">
+                    and a.order_id = #{orderId}
+                </if>
+                <if test="status != null">
+                    and a.status = #{status}
+                </if>
+                <if test="pushStatus != null">
+                    and a.push_status = #{pushStatus}
+                </if>
+                <if test="appointTimeGt != null">
+                    <![CDATA[
+                    and a.appoint_time > #{appointTimeGt}
+                    ]]>
+                </if>
+                <if test="appointTimeLt != null">
+                    <![CDATA[
+                    and a.appoint_time < #{appointTimeLt}
+                    ]]>
+                </if>
+                <if test="gmtCreateGt != null">
+                    <![CDATA[
+                    and a.gmt_create > #{gmtCreateGt}
+                    ]]>
+                </if>
+                <if test="gmtCreateLt != null">
+                    <![CDATA[
+                    and a.gmt_create < #{gmtCreateLt}
+                    ]]>
+                </if>
+                <if test = "keyword != null">
+                    and (
+                    a.license like CONCAT('%',#{keyword},'%')
+                    or a.mobile like CONCAT('%',#{keyword},'%')
+                    or a.customer_name like CONCAT('%',#{keyword},'%')
+                    )
+                </if>
+                <if test="channel != null">
+                    and a.channel = #{channel}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <if test="id != null">
+                    a.id = #{id},
+                </if>
+                <if test="isDeleted != null">
+                    a.is_deleted = #{isDeleted},
+                </if>
+                <if test="gmtCreate != null">
+                    a.gmt_create = #{gmtCreate},
+                </if>
+                <if test="gmtModified != null">
+                    a.gmt_modified = #{gmtModified},
+                </if>
+                <if test="modifier != null">
+                    a.modifier = #{modifier},
+                </if>
+                <if test="creator != null">
+                    a.creator = #{creator},
+                </if>
+                <if test="appointSn != null">
+                    a.appoint_sn = #{appointSn},
+                </if>
+                <if test="license != null">
+                    a.license = #{license},
+                </if>
+                <if test="carBrandId != null">
+                    a.car_brand_id = #{carBrandId},
+                </if>
+                <if test="carBrandName != null">
+                    a.car_brand_name = #{carBrandName},
+                </if>
+                <if test="carSeriesId != null">
+                    a.car_series_id = #{carSeriesId},
+                </if>
+                <if test="carSeriesName != null">
+                    a.car_series_name = #{carSeriesName},
+                </if>
+                <if test="carAlias != null">
+                    a.car_alias = #{carAlias},
+                </if>
+                <if test="customerName != null">
+                    a.customer_name = #{customerName},
+                </if>
+                <if test="mobile != null">
+                    a.mobile = #{mobile},
+                </if>
+                <if test="appointTime != null">
+                    a.appoint_time = #{appointTime},
+                </if>
+                <if test="appointContent != null">
+                    a.appoint_content = #{appointContent},
+                </if>
+                <if test="registrantId != null">
+                    a.registrant_id = #{registrantId},
+                </if>
+                <if test="registrantName != null">
+                    a.registrant_name = #{registrantName},
+                </if>
+                <if test="shopId != null">
+                    a.shop_id = #{shopId},
+                </if>
+                <if test="orderId != null">
+                    a.order_id = #{orderId},
+                </if>
+                <if test="status != null">
+                    a.status = #{status},
+                </if>
+                <if test="cancelReason != null">
+                    a.cancel_reason = #{cancelReason},
+                </if>
+                <if test="pushStatus != null">
+                    a.push_status = #{pushStatus},
+                </if>
+                <if test="channel != null">
+                    a.channel = #{channel},
+                </if>
+
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(a.id)
+        from legend_appoint a
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_appoint a
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_appoint a
+        where a.id = #{id} and a.is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_appoint a
+        where a.id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_appoint a
+        set is_deleted='Y'
+        where a.id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_appoint a
+        set a.is_deleted='Y'
+        where a.id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_appoint a
+        set a.is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_appoint (
+        <trim suffix="" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="isDeleted != null">
+                is_deleted,
+            </if>
+            <if test="gmtCreate != null">
+                gmt_create,
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified,
+            </if>
+            <if test="modifier != null">
+                modifier,
+            </if>
+            <if test="creator != null">
+                creator,
+            </if>
+            <if test="appointSn != null">
+                appoint_sn,
+            </if>
+            <if test="license != null">
+                license,
+            </if>
+            <if test="carBrandId != null">
+                car_brand_id,
+            </if>
+            <if test="carBrandName != null">
+                car_brand_name,
+            </if>
+            <if test="carSeriesId != null">
+                car_series_id,
+            </if>
+            <if test="carSeriesName != null">
+                car_series_name,
+            </if>
+            <if test="carAlias != null">
+                car_alias,
+            </if>
+            <if test="customerName != null">
+                customer_name,
+            </if>
+            <if test="mobile != null">
+                mobile,
+            </if>
+            <if test="appointTime != null">
+                appoint_time,
+            </if>
+            <if test="appointContent != null">
+                appoint_content,
+            </if>
+            <if test="registrantId != null">
+                registrant_id,
+            </if>
+            <if test="registrantName != null">
+                registrant_name,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="orderId != null">
+                orderId,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="cancelReason != null">
+                cancel_reason,
+            </if>
+            <if test="pushStatus != null">
+                push_status,
+            </if>
+            <if test="channel != null">
+                channel,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="isDeleted != null">
+                #{isDeleted},
+            </if>
+            <if test="gmtCreate != null">
+                #{gmtCreate},
+            </if>
+            <if test="gmtModified != null">
+                #{gmtModified},
+            </if>
+            <if test="modifier != null">
+                #{modifier},
+            </if>
+            <if test="creator != null">
+                #{creator},
+            </if>
+            <if test="appointSn != null">
+                #{appointSn},
+            </if>
+            <if test="license != null">
+                #{license},
+            </if>
+            <if test="carBrandId != null">
+                #{carBrandId},
+            </if>
+            <if test="carBrandName != null">
+                #{carBrandName},
+            </if>
+            <if test="carSeriesId != null">
+                #{carSeriesId},
+            </if>
+            <if test="carSeriesName != null">
+                #{carSeriesName},
+            </if>
+            <if test="carAlias != null">
+                #{carAlias},
+            </if>
+            <if test="customerName != null">
+                #{customerName},
+            </if>
+            <if test="mobile != null">
+                #{mobile},
+            </if>
+            <if test="appointTime != null">
+                #{appointTime},
+            </if>
+            <if test="appointContent != null">
+                #{appointContent},
+            </if>
+            <if test="registrantId != null">
+                #{registrantId},
+            </if>
+            <if test="registrantName != null">
+                #{registrantName},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="cancelReason != null">
+                #{cancelReason},
+            </if>
+            <if test="pushStatus != null">
+                #{pushStatus},
+            </if>
+            <if test="channel != null">
+                #{channel},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_appoint a
+        <include refid="BaseUpdateSet"/>
+        where a.id = #{id}
+    </update>
+
+    <select id="selectWithStatInfo" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        ,b.precheck_count as precheckCount,
+        b.latest_precheck as latestPrecheck,
+        b.repair_count as repairCount,
+        b.latest_repair as latestRepair,
+        b.appoint_cout as appointCout,
+        b.latest_appoint as latestAppoint,
+        b.car_model as carModel,
+        b.import_info as importInfo
+        from legend_appoint a
+        left join legend_customer_car b
+        on a.license = b.license
+        and a.shop_id = b.shop_id
+        and b.is_deleted = 'N'
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <select id="getAppointCount" resultType="java.lang.Integer">
+        select
+        count(a.id)
+        from legend_appoint a
+        left join legend_customer_car b
+        on a.customer_car_id = b.id
+        and a.shop_id = b.shop_id
+        and b.is_deleted = 'N'
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+    </select>
+
+    <select id="getAppointList" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        ,b.precheck_count as precheckCount,
+        b.latest_precheck as latestPrecheck,
+        b.repair_count as repairCount,
+        b.latest_repair as latestRepair,
+        b.appoint_cout as appointCout,
+        b.latest_appoint as latestAppoint,
+        b.car_model as carModel,
+        b.import_info as importInfo
+        from legend_appoint a
+        left join legend_customer_car b
+        on a.customer_car_id = b.id
+        and a.license = b.license
+        and a.shop_id = b.shop_id
+        and b.is_deleted = 'N'
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+</mapper>

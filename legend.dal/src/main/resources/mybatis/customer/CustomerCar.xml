@@ -1,0 +1,1657 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.customer.CustomerCarDao">
+
+    <resultMap id="BaseResultMap" type="CustomerCar" extends="COMMON.BASE_RESULT_MAP">
+        <result column="license" property="license"/>
+        <result column="vin" property="vin"/>
+        <result column="engine_no" property="engineNo"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="precheck_count" property="precheckCount"/>
+        <result column="latest_precheck" property="latestPrecheck"/>
+        <result column="maintain_count" property="maintainCount"/>
+        <result column="latest_maintain" property="latestMaintain"/>
+        <result column="repair_count" property="repairCount"/>
+        <result column="latest_repair" property="latestRepair"/>
+        <result column="appoint_cout" property="appointCout"/>
+        <result column="latest_appoint" property="latestAppoint"/>
+        <result column="car_brand_id" property="carBrandId"/>
+        <result column="car_brand" property="carBrand"/>
+        <result column="car_series_id" property="carSeriesId"/>
+        <result column="car_series" property="carSeries"/>
+        <result column="car_company" property="carCompany"/>
+        <result column="import_info" property="importInfo"/>
+        <result column="mileage" property="mileage"/>
+        <result column="haode_user_id" property="haodeUserId"/>
+        <result column="by_name" property="byName"/>
+        <result column="insurance_time" property="insuranceTime"/>
+        <result column="remind_insurance_time" property="remindInsuranceTime"/>
+        <result column="buy_time" property="buyTime"/>
+        <result column="car_number" property="carNumber"/>
+        <result column="auditing_time" property="auditingTime"/>
+        <result column="remind_auditing_time" property="remindAuditingTime"/>
+        <result column="insurance_id" property="insuranceId"/>
+        <result column="visit_count" property="visitCount"/>
+        <result column="expense_amount" property="expenseAmount"/>
+        <result column="production_date" property="productionDate"/>
+        <result column="driver" property="driver"/>
+        <result column="driver_mobile1" property="driverMobile1"/>
+        <result column="driver_mobile2" property="driverMobile2"/>
+        <result column="latest_paied" property="latestPaied"/>
+        <result column="receive_license_time" property="receiveLicenseTime"/>
+        <result column="insurance_company" property="insuranceCompany"/>
+        <result column="color" property="color"/>
+        <result column="license_type" property="licenseType"/>
+        <result column="keepup_time" property="keepupTime"/>
+        <result column="car_model_id" property="carModelId"/>
+        <result column="car_model" property="carModel"/>
+        <result column="car_power_id" property="carPowerId"/>
+        <result column="car_power" property="carPower"/>
+        <result column="car_year_id" property="carYearId"/>
+        <result column="car_year" property="carYear"/>
+        <result column="car_gear_box_id" property="carGearBoxId"/>
+        <result column="car_gear_box" property="carGearBox"/>
+        <result column="car_level" property="carLevel"/>
+        <result column="ver" property="ver"/>
+        <result column="refer" property="refer"/>
+        <result column="car_type" property="carType"/>
+        <result column="upkeep_mileage" property="upkeepMileage"/>
+    </resultMap>
+	<resultMap type="com.tqmall.legend.entity.customer.CustomerCarVo" id="CustomerCarVo" extends="COMMON.BASE_RESULT_MAP">
+		<result column="car_brand_id" property="carBrandId"/>
+        <result column="car_brand" property="carBrandName"/>
+        <result column="car_series_id" property="carSeriesId"/>
+        <result column="car_series" property="carSeriesName"/>
+        <result column="car_alias" property="carAlias"/>
+        <result column="shop_id" property="shopId"/>
+        <!-- <result column="car_power_id" property="carPowerId"/>
+        <result column="car_power_name" property="carPowerName"/>
+        <result column="car_year_id" property="carYearId"/>
+        <result column="car_year_name" property="carYearName"/> -->
+	</resultMap>
+    <resultMap id="SearchResultMap" type="com.tqmall.legend.entity.customer.CustomerCar"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="license" property="license"/>
+        <result column="vin" property="vin"/>
+        <result column="engine_no" property="engineNo"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="precheck_count" property="precheckCount"/>
+        <result column="latest_precheck" property="latestPrecheck"/>
+        <result column="maintain_count" property="maintainCount"/>
+        <result column="latest_maintain" property="latestMaintain"/>
+        <result column="repair_count" property="repairCount"/>
+        <result column="latest_repair" property="latestRepair"/>
+        <result column="appoint_cout" property="appointCout"/>
+        <result column="latest_appoint" property="latestAppoint"/>
+        <result column="car_brand_id" property="carBrandId"/>
+        <result column="car_brand" property="carBrand"/>
+        <result column="car_series_id" property="carSeriesId"/>
+        <result column="car_series" property="carSeries"/>
+        <result column="car_company" property="carCompany"/>
+        <result column="import_info" property="importInfo"/>
+        <result column="mileage" property="mileage"/>
+        <result column="haode_user_id" property="haodeUserId"/>
+        <result column="by_name" property="byName"/>
+        <result column="insurance_time" property="insuranceTime"/>
+        <result column="remind_insurance_time" property="remindInsuranceTime"/>
+        <result column="buy_time" property="buyTime"/>
+        <result column="car_number" property="carNumber"/>
+        <result column="auditing_time" property="auditingTime"/>
+        <result column="remind_auditing_time" property="remindAuditingTime"/>
+        <result column="insurance_id" property="insuranceId"/>
+        <result column="visit_count" property="visitCount"/>
+        <result column="expense_amount" property="expenseAmount"/>
+        <result column="production_date" property="productionDate"/>
+        <result column="driver" property="driver"/>
+        <result column="driver_mobile1" property="driverMobile1"/>
+        <result column="driver_mobile2" property="driverMobile2"/>
+        <result column="latest_paied" property="latestPaied"/>
+        <result column="receive_license_time" property="receiveLicenseTime"/>
+        <result column="insurance_company" property="insuranceCompany"/>
+        <result column="color" property="color"/>
+        <result column="license_type" property="licenseType"/>
+        <result column="keepup_time" property="keepupTime"/>
+        <result column="remind_keepup_time" property="remindKeepupTime"/>
+        <result column="car_model_id" property="carModelId"/>
+        <result column="car_model" property="carModel"/>
+        <result column="car_power_id" property="carPowerId"/>
+        <result column="car_power" property="carPower"/>
+        <result column="car_year_id" property="carYearId"/>
+        <result column="car_year" property="carYear"/>
+        <result column="car_gear_box_id" property="carGearBoxId"/>
+        <result column="car_gear_box" property="carGearBox"/>
+        <result column="car_level" property="carLevel"/>
+        <result column="car_type" property="carType"/>
+        <result column="ver" property="ver"/>
+        <result column="refer" property="refer"/>
+    </resultMap>
+    
+    <resultMap id="customerHistoryMap" type="com.tqmall.legend.entity.customer.CustomerCarBo">
+        <result column="id" property="id"/>
+        <result column="license" property="license"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="repair_count" property="repairCount"/>
+        <result column="car_brand" property="carBrand"/>
+        <result column="car_series" property="carSeries"/>
+        <result column="car_company" property="carCompany"/>
+        <result column="import_info" property="importInfo"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="mobile" property="mobile"/>
+    </resultMap>
+
+    <resultMap id="carConcisionMap" type="com.tqmall.legend.entity.customer.CarConcision">
+        <result column="license" property="license"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="mobile" property="mobilePhone"/>
+        <result column="shop_id" property="shopId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            license as license,
+            vin as vin,
+            engine_no as engineNo,
+            shop_id as shopId,
+            customer_id as customerId,
+            precheck_count as precheckCount,
+            latest_precheck as latestPrecheck,
+            maintain_count as maintainCount,
+            latest_maintain as latestMaintain,
+            repair_count as repairCount,
+            latest_repair as latestRepair,
+            appoint_cout as appointCout,
+            latest_appoint as latestAppoint,
+            car_brand_id as carBrandId,
+            car_brand as carBrand,
+            car_series_id as carSeriesId,
+            car_series as carSeries,
+            car_company as carCompany,
+            import_info as importInfo,
+            mileage as mileage,
+            haode_user_id as haodeUserId,
+            by_name as byName,
+            insurance_time as insuranceTime,
+            remind_insurance_time as remindInsuranceTime,
+            buy_time as buyTime,
+            car_number as carNumber,
+            auditing_time as auditingTime,
+            remind_auditing_time as remindAuditingTime,
+            insurance_id as insuranceId,
+            visit_count as visitCount,
+            expense_amount as expenseAmount,
+            production_date as productionDate,
+            driver as driver,
+            driver_mobile1 as driverMobile1,
+            driver_mobile2 as driverMobile2,
+            latest_paied as latestPaied,
+            receive_license_time as receiveLicenseTime,
+            insurance_company as insuranceCompany,
+            color as color,
+            license_type as licenseType,
+            keepup_time as keepupTime,
+            remind_keepup_time as remindKeepupTime,
+            car_model_id as carModelId,
+            car_model as carModel,
+            car_power_id as carPowerId,
+            car_power as carPower,
+            car_year_id as carYearId,
+            car_year as carYear,
+            car_gear_box_id as carGearBoxId,
+            car_gear_box as carGearBox,
+            car_level as carLevel,
+            car_type as carType,
+            ver as ver,
+            refer as refer,
+            upkeep_mileage as upkeepMileage,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="ids != null">
+                    and id in (
+                    <foreach collection="ids" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="license != null">
+                    and license = #{license}
+                </if>
+                <if test="licenseList != null">
+                    and license in (
+                    <foreach collection="licenseList" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="vin != null">
+                    and vin = #{vin}
+                </if>
+                <if test="engineNo != null">
+                    and engine_no = #{engineNo}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test="precheckCount != null">
+                    and precheck_count = #{precheckCount}
+                </if>
+                <if test="latestPrecheck != null">
+                    and latest_precheck = #{latestPrecheck}
+                </if>
+                <if test="maintainCount != null">
+                    and maintain_count = #{maintainCount}
+                </if>
+                <if test="latestMaintain != null">
+                    and latest_maintain = #{latestMaintain}
+                </if>
+                <if test="repairCount != null">
+                    and repair_count = #{repairCount}
+                </if>
+                <if test="latestRepair != null">
+                    and latest_repair = #{latestRepair}
+                </if>
+                <if test="appointCout != null">
+                    and appoint_cout = #{appointCout}
+                </if>
+                <if test="latestAppoint != null">
+                    and latest_appoint = #{latestAppoint}
+                </if>
+                <if test="carBrandId != null">
+                    and car_brand_id = #{carBrandId}
+                </if>
+                <if test="carBrand != null">
+                    and car_brand = #{carBrand}
+                </if>
+                <if test="carSeriesId != null">
+                    and car_series_id = #{carSeriesId}
+                </if>
+                <if test="carSeries != null">
+                    and car_series = #{carSeries}
+                </if>
+                <if test="carCompany != null">
+                    and car_company = #{carCompany}
+                </if>
+                <if test="importInfo != null">
+                    and import_info = #{importInfo}
+                </if>
+                <if test="mileage != null">
+                    and mileage = #{mileage}
+                </if>
+                <if test="haodeUserId != null">
+                    and haode_user_id = #{haodeUserId}
+                </if>
+                <if test = "haodeUserIdThan != null">
+                    <![CDATA[
+                    and haode_user_id > #{haodeUserIdThan}
+                    ]]>
+                </if>
+                <if test="byName != null">
+                    and by_name = #{byName}
+                </if>
+                <if test="insuranceTime != null">
+                    and insurance_time = #{insuranceTime}
+                </if>
+                <if test="buyTime != null">
+                    and buy_time = #{buyTime}
+                </if>
+                <if test="carNumber != null">
+                    and car_number = #{carNumber}
+                </if>
+                <if test="auditingTime != null">
+                    and auditing_time = #{auditingTime}
+                </if>
+                <if test="insuranceId != null">
+                    and insurance_id = #{insuranceId}
+                </if>
+                <if test="visitCount != null">
+                    and visit_count = #{visitCount}
+                </if>
+                <if test="expenseAmount != null">
+                    and expense_amount = #{expenseAmount}
+                </if>
+                <if test="productionDate != null">
+                    and production_date = #{productionDate}
+                </if>
+                <if test="driver != null">
+                    and driver = #{driver}
+                </if>
+                <if test="driverMobile1 != null">
+                    and driver_mobile1 = #{driverMobile1}
+                </if>
+                <if test="driverMobile2 != null">
+                    and driver_mobile2 = #{driverMobile2}
+                </if>
+                <if test="latestPaied != null">
+                    and latest_paied = #{latestPaied}
+                </if>
+                <if test="receiveLicenseTime != null">
+                    and receive_license_time = #{receiveLicenseTime}
+                </if>
+                <if test="insuranceCompany != null">
+                    and insurance_company = #{insuranceCompany}
+                </if>
+                <if test="color != null">
+                    and color = #{color}
+                </if>
+                <if test="licenseType != null">
+                    and license_type = #{licenseType}
+                </if>
+                <if test="insuranceTimeLe != null">
+                    <![CDATA[
+                    and remind_insurance_time <= #{insuranceTimeLe}
+                    ]]>
+                </if>
+                <if test="insuranceTimeGe != null">
+                    <![CDATA[
+                    and remind_insurance_time >= #{insuranceTimeGe}
+                    ]]>
+                </if>
+                <if test="auditingTimeLe != null">
+                    <![CDATA[
+                    and remind_auditing_time <= #{auditingTimeLe}
+                    ]]>
+                </if>
+                <if test="auditingTimeGe != null">
+                    <![CDATA[
+                    and remind_auditing_time >= #{auditingTimeGe}
+                    ]]>
+                </if>
+                <if test="keepupTimeLe != null">
+                    <![CDATA[
+                    and remind_keepup_time <= #{keepupTimeLe}
+                    ]]>
+                </if>
+                <if test="keepupTimeGe != null">
+                    <![CDATA[
+                    and remind_keepup_time >= #{keepupTimeGe}
+                    ]]>
+                </if>
+                <if test="keepupTime != null">
+                    <![CDATA[
+                    and keepup_time >= #{keepupTime}
+                    ]]>
+                </if>
+                <if test="carModelId != null">
+                    and car_model_id = #{carModelId}
+                </if>
+                <if test="carModel != null">
+                    and car_model = #{carModel}
+                </if>
+                <if test="carPowerId != null">
+                    and car_power_id = #{carPowerId}
+                </if>
+                <if test="carPower != null">
+                    and car_power = #{carPower}
+                </if>
+                <if test="carYearId != null">
+                    and car_year_id = #{carYearId}
+                </if>
+                <if test="carYear != null">
+                    and car_year = #{carYear}
+                </if>
+                <if test="carGearBoxId != null">
+                    and car_gear_box_id = #{carGearBoxId}
+                </if>
+                <if test="carGearBox != null">
+                    and car_gear_box = #{carGearBox}
+                </if>
+                <if test="carLevel != null">
+                    and car_level = #{carLevel}
+                </if>
+                <if test="carType != null">
+                    and car_type = #{carType}
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="upkeepMileage != null">
+                    and upkeep_mileage = #{upkeepMileage}
+                </if>
+                <if test="licenseLike != null">
+                    and license like CONCAT('%', #{licenseLike}, '%')
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="license != null">
+                    license = #{license},
+                </if>
+                <if test="vin != null">
+                    vin = #{vin},
+                </if>
+                <if test="engineNo != null">
+                    engine_no = #{engineNo},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test="precheckCount != null">
+                    precheck_count = #{precheckCount},
+                </if>
+                <if test="latestPrecheck != null">
+                    latest_precheck = #{latestPrecheck},
+                </if>
+                <if test="maintainCount != null">
+                    maintain_count = #{maintainCount},
+                </if>
+                <if test="latestMaintain != null">
+                    latest_maintain = #{latestMaintain},
+                </if>
+                <if test="repairCount != null">
+                    repair_count = #{repairCount},
+                </if>
+                <if test="latestRepair != null">
+                    latest_repair = #{latestRepair},
+                </if>
+                <if test="appointCout != null">
+                    appoint_cout = #{appointCout},
+                </if>
+                <if test="latestAppoint != null">
+                    latest_appoint = #{latestAppoint},
+                </if>
+                <if test="carBrandId != null">
+                    car_brand_id = #{carBrandId},
+                </if>
+                <if test="carBrand != null">
+                    car_brand = #{carBrand},
+                </if>
+                <if test="carSeriesId != null">
+                    car_series_id = #{carSeriesId},
+                </if>
+                <if test="carSeries != null">
+                    car_series = #{carSeries},
+                </if>
+                <if test="carCompany != null">
+                    car_company = #{carCompany},
+                </if>
+                <if test="importInfo != null">
+                    import_info = #{importInfo},
+                </if>
+                <if test="mileage != null">
+                    mileage = #{mileage},
+                </if>
+                <if test="haodeUserId != null">
+                    haode_user_id = #{haodeUserId},
+                </if>
+                <if test="byName != null">
+                    by_name = #{byName},
+                </if>
+                <if test="remindInsuranceTime != null">
+                    remind_insurance_time = #{remindInsuranceTime},
+                </if>
+                <if test="insuranceTime != null">
+                    insurance_time = #{insuranceTime},
+                    remind_insurance_time = #{insuranceTime},
+                </if>
+                <if test="buyTime != null">
+                    buy_time = #{buyTime},
+                </if>
+                <if test="carNumber != null">
+                    car_number = #{carNumber},
+                </if>
+                <if test="remindAuditingTime != null">
+                    remind_auditing_time = #{remindAuditingTime},
+                </if>
+                <if test="auditingTime != null">
+                    auditing_time = #{auditingTime},
+                    remind_auditing_time = #{auditingTime},
+                </if>
+                <if test="insuranceId != null">
+                    insurance_id = #{insuranceId},
+                </if>
+                <if test="visitCount != null">
+                    visit_count = #{visitCount},
+                </if>
+                <if test="expenseAmount != null">
+                    expense_amount = #{expenseAmount},
+                </if>
+                <if test="productionDate != null">
+                    production_date = #{productionDate},
+                </if>
+                <if test="driver != null">
+                    driver = #{driver},
+                </if>
+                <if test="driverMobile1 != null">
+                    driver_mobile1 = #{driverMobile1},
+                </if>
+                <if test="driverMobile2 != null">
+                    driver_mobile2 = #{driverMobile2},
+                </if>
+                <if test="latestPaied != null">
+                    latest_paied = #{latestPaied},
+                </if>
+                <if test="receiveLicenseTime != null">
+                    receive_license_time = #{receiveLicenseTime},
+                </if>
+                <if test="insuranceCompany != null">
+                    insurance_company = #{insuranceCompany},
+                </if>
+                <if test="color != null">
+                    color = #{color},
+                </if>
+                <if test="licenseType != null">
+                    license_type = #{licenseType},
+                </if>
+                <if test="remindKeepupTime != null">
+                    remind_keepup_time = #{remindKeepupTime},
+                </if>
+                <if test="keepupTime != null">
+                    keepup_time = #{keepupTime},
+                    remind_keepup_time = #{keepupTime},
+                </if>
+                <if test="carModelId != null">
+                    car_model_id = #{carModelId},
+                </if>
+                <if test="carModel != null">
+                    car_model = #{carModel},
+                </if>
+                <if test="carPowerId != null">
+                    car_power_id = #{carPowerId},
+                </if>
+                <if test="carPower != null">
+                    car_power = #{carPower},
+                </if>
+                <if test="carYearId != null">
+                    car_year_id = #{carYearId},
+                </if>
+                <if test="carYear != null">
+                    car_year = #{carYear},
+                </if>
+                <if test="carGearBoxId != null">
+                    car_gear_box_id = #{carGearBoxId},
+                </if>
+                <if test="carGearBox != null">
+                    car_gear_box = #{carGearBox},
+                </if>
+                <if test="carLevel != null">
+                    car_level = #{carLevel},
+                </if>
+                <if test="carType != null">
+                    car_type = #{carType},
+                </if>
+                <if test="ver != null">
+                    ver = #{ver},
+                </if>
+                <if test="refer != null">
+                    refer = #{refer},
+                </if>
+                <if test="upkeepMileage != null">
+                    upkeep_mileage = #{upkeepMileage},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_customer_car
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_car
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_car
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_car
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <select id="selectByIdss" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_car
+        where id in
+        (
+        <foreach collection="ids"  item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and shop_id = #{shopId}
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_customer_car
+        set is_deleted='Y',gmt_modified = now()
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_customer_car
+        set is_deleted='Y',gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_customer_car
+        set is_deleted='Y',gmt_modified = now()
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_customer_car (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="license != null">
+                license,
+            </if>
+            <if test="vin != null">
+                vin,
+            </if>
+            <if test="engineNo != null">
+                engine_no,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="customerId != null">
+                customer_id,
+            </if>
+            <if test="precheckCount != null">
+                precheck_count,
+            </if>
+            <if test="latestPrecheck != null">
+                latest_precheck,
+            </if>
+            <if test="maintainCount != null">
+                maintain_count,
+            </if>
+            <if test="latestMaintain != null">
+                latest_maintain,
+            </if>
+            <if test="repairCount != null">
+                repair_count,
+            </if>
+            <if test="latestRepair != null">
+                latest_repair,
+            </if>
+            <if test="appointCout != null">
+                appoint_cout,
+            </if>
+            <if test="latestAppoint != null">
+                latest_appoint,
+            </if>
+            <if test="carBrandId != null">
+                car_brand_id,
+            </if>
+            <if test="carBrand != null">
+                car_brand,
+            </if>
+            <if test="carSeriesId != null">
+                car_series_id,
+            </if>
+            <if test="carSeries != null">
+                car_series,
+            </if>
+            <if test="carCompany != null">
+                car_company,
+            </if>
+            <if test="importInfo != null">
+                import_info,
+            </if>
+            <if test="mileage != null">
+                mileage,
+            </if>
+            <if test="haodeUserId != null">
+                haode_user_id,
+            </if>
+            <if test="byName != null">
+                by_name,
+            </if>
+            <if test="insuranceTime != null">
+                insurance_time,
+                remind_insurance_time,
+            </if>
+            <if test="buyTime != null">
+                buy_time,
+            </if>
+            <if test="carNumber != null">
+                car_number,
+            </if>
+            <if test="auditingTime != null">
+                auditing_time,
+                remind_auditing_time,
+            </if>
+            <if test="insuranceId != null">
+                insurance_id,
+            </if>
+            <if test="visitCount != null">
+                visit_count,
+            </if>
+            <if test="expenseAmount != null">
+                expense_amount,
+            </if>
+            <if test="productionDate != null">
+                production_date,
+            </if>
+            <if test="driver != null">
+                driver,
+            </if>
+            <if test="driverMobile1 != null">
+                driver_mobile1,
+            </if>
+            <if test="driverMobile2 != null">
+                driver_mobile2,
+            </if>
+            <if test="latestPaied != null">
+                latest_paied,
+            </if>
+            <if test="receiveLicenseTime != null">
+                receive_license_time,
+            </if>
+            <if test="insuranceCompany != null">
+                insurance_company,
+            </if>
+            <if test="color != null">
+                color,
+            </if>
+            <if test="licenseType != null">
+                license_type,
+            </if>
+            <if test="keepupTime != null">
+                keepup_time,
+                remind_keepup_time,
+            </if>
+            <if test="carModelId != null">
+                car_model_id ,
+            </if>
+            <if test="carModel != null">
+                car_model,
+            </if>
+            <if test="carPowerId != null">
+                car_power_id,
+            </if>
+            <if test="carPower != null">
+                car_power,
+            </if>
+            <if test="carYearId != null">
+                car_year_id,
+            </if>
+            <if test="carYear != null">
+                car_year,
+            </if>
+            <if test="carGearBoxId != null">
+                car_gear_box_id,
+            </if>
+            <if test="carGearBox != null">
+                car_gear_box,
+            </if>
+            <if test="carLevel != null">
+                car_level,
+            </if>
+            <if test="carType != null">
+                car_type,
+            </if>
+            <if test="ver != null">
+                ver,
+            </if>
+            <if test="refer != null">
+                refer,
+            </if>
+            <if test="upkeepMileage != null">
+                upkeep_mileage,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="license != null">
+                #{license},
+            </if>
+            <if test="vin != null">
+                #{vin},
+            </if>
+            <if test="engineNo != null">
+                #{engineNo},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="customerId != null">
+                #{customerId},
+            </if>
+            <if test="precheckCount != null">
+                #{precheckCount},
+            </if>
+            <if test="latestPrecheck != null">
+                #{latestPrecheck},
+            </if>
+            <if test="maintainCount != null">
+                #{maintainCount},
+            </if>
+            <if test="latestMaintain != null">
+                #{latestMaintain},
+            </if>
+            <if test="repairCount != null">
+                #{repairCount},
+            </if>
+            <if test="latestRepair != null">
+                #{latestRepair},
+            </if>
+            <if test="appointCout != null">
+                #{appointCout},
+            </if>
+            <if test="latestAppoint != null">
+                #{latestAppoint},
+            </if>
+            <if test="carBrandId != null">
+                #{carBrandId},
+            </if>
+            <if test="carBrand != null">
+                #{carBrand},
+            </if>
+            <if test="carSeriesId != null">
+                #{carSeriesId},
+            </if>
+            <if test="carSeries != null">
+                #{carSeries},
+            </if>
+            <if test="carCompany != null">
+                #{carCompany},
+            </if>
+            <if test="importInfo != null">
+                #{importInfo},
+            </if>
+            <if test="mileage != null">
+                #{mileage},
+            </if>
+            <if test="haodeUserId != null">
+                #{haodeUserId},
+            </if>
+            <if test="byName != null">
+                #{byName},
+            </if>
+            <if test="insuranceTime != null">
+                #{insuranceTime},
+                #{insuranceTime},
+            </if>
+            <if test="buyTime != null">
+                #{buyTime},
+            </if>
+            <if test="carNumber != null">
+                #{carNumber},
+            </if>
+            <if test="auditingTime != null">
+                #{auditingTime},
+                #{auditingTime},
+            </if>
+            <if test="insuranceId != null">
+                #{insuranceId},
+            </if>
+            <if test="visitCount != null">
+                #{visitCount},
+            </if>
+            <if test="expenseAmount != null">
+                #{expenseAmount},
+            </if>
+            <if test="productionDate != null">
+                #{productionDate},
+            </if>
+            <if test="driver != null">
+                #{driver},
+            </if>
+            <if test="driverMobile1 != null">
+                #{driverMobile1},
+            </if>
+            <if test="driverMobile2 != null">
+                #{driverMobile2},
+            </if>
+            <if test="latestPaied != null">
+                #{latestPaied},
+            </if>
+            <if test="receiveLicenseTime != null">
+                #{receiveLicenseTime},
+            </if>
+            <if test="insuranceCompany != null">
+                #{insuranceCompany},
+            </if>
+            <if test="color != null">
+                #{color},
+            </if>
+            <if test="licenseType != null">
+                #{licenseType},
+            </if>
+            <if test="keepupTime != null">
+                #{keepupTime},
+                #{keepupTime},
+            </if>
+            <if test="carModelId != null">
+                #{carModelId},
+            </if>
+            <if test="carModel != null">
+                #{carModel},
+            </if>
+            <if test="carPowerId != null">
+                #{carPowerId},
+            </if>
+            <if test="carPower != null">
+                #{carPower},
+            </if>
+            <if test="carYearId != null">
+                #{carYearId},
+            </if>
+            <if test="carYear != null">
+                #{carYear},
+            </if>
+            <if test="carGearBoxId != null">
+                #{carGearBoxId},
+            </if>
+            <if test="carGearBox != null">
+                #{carGearBox},
+            </if>
+            <if test="carLevel != null">
+                #{carLevel},
+            </if>
+            <if test="carType != null">
+                #{carType},
+            </if>
+            <if test="ver != null">
+                #{ver},
+            </if>
+            <if test="refer != null">
+                #{refer},
+            </if>
+            <if test="upkeepMileage !=null">
+                #{upkeepMileage},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_customer_car
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <select id="getCustomerCarCount" resultType="java.lang.Integer">
+        select
+        count(t.id)
+        from legend_customer_car t left join legend_customer a on t.customer_id = a.id
+        where t.is_deleted='N' and t.shop_id = #{shopId}
+
+        <if test="license != null">
+            and t.license like CONCAT('%', #{license}, '%')
+        </if>
+        <if test="vin != null">
+            and t.vin like CONCAT('%', #{vin}, '%')
+        </if>
+        <if test="mobile != null">
+            and (a.mobile like CONCAT('%', #{mobile}, '%') or a.contact_mobile like CONCAT('%', #{mobile}, '%'))
+        </if>
+        <if test="customerName != null">
+            and a.customer_name like CONCAT('%', #{customerName}, '%')
+        </if>
+        <if test="contact != null">
+            and a.contact like CONCAT('%', #{contact}, '%')
+        </if>
+        <if test="company != null">
+            and a.company like CONCAT('%', #{company}, '%')
+        </if>
+        <if test="carInfo != null">
+            and (t.car_brand like CONCAT('%', #{carInfo}, '%') or t.car_series like CONCAT('%', #{carInfo}, '%')
+            or t.import_info like CONCAT('%', #{carInfo}, '%'))
+        </if>
+        <if test="insuranceTimeLe != null">
+            <![CDATA[
+                    and t.remind_insurance_time >= #{insuranceTimeLe}
+                    ]]>
+        </if>
+        <if test="insuranceTimeGe != null">
+            <![CDATA[
+                    and t.remind_insurance_time <= #{insuranceTimeGe}
+                    ]]>
+        </if>
+        <if test="auditingTimeLe != null">
+            <![CDATA[
+                    and t.remind_auditing_time >= #{auditingTimeLe}
+                    ]]>
+        </if>
+        <if test="auditingTimeGe != null">
+            <![CDATA[
+                    and t.remind_auditing_time <= #{auditingTimeGe}
+                    ]]>
+        </if>
+        <if test="keepupTimeLe != null">
+            <![CDATA[
+                    and t.remind_keepup_time >= #{keepupTimeLe}
+                    ]]>
+        </if>
+        <if test="keepupTimeGe != null">
+            <![CDATA[
+                    and t.remind_keepup_time <= #{keepupTimeGe}
+                    ]]>
+        </if>
+        order by t.gmt_modified desc
+    </select>
+
+    <select id="getCustomerCarList" resultMap="SearchResultMap">
+        select
+        t.id as id,
+        t.license as license,
+        t.vin as vin,
+        t.engine_no as engineNo,
+        t.car_brand_id as carBrandId,
+        t.car_brand as carBrand,
+        t.car_series_id as carSeriesId,
+        t.car_series as carSeries,
+        t.car_model_id as carModelId,
+        t.car_model as carModel,
+        t.car_power_id as carPowerId,
+        t.car_power as carPower,
+        t.car_year_id as carYearId,
+        t.car_year as carYear,
+        t.car_gear_box_id as carGearBoxId,
+        t.car_gear_box as carGearBox,
+        t.car_company as carCompany,
+        t.import_info as importInfo,
+        t.customer_id as customerId,
+        t.precheck_count as precheckCount,
+        t.latest_precheck as latestPrecheck,
+        t.maintain_count as maintainCount,
+        t.latest_maintain as latestMaintain,
+        t.repair_count as repairCount,
+        t.appoint_cout as appointCout,
+        t.latest_repair as latestRepair,
+        t.auditing_time as auditingTime,
+        t.insurance_time as insuranceTime,
+        t.keepup_time as keepupTime,
+        t.buy_time as buyTime,
+        t.ver as ver,
+        t.refer as refer,
+        a.customer_name as customerName,
+        a.mobile as mobile
+        from legend_customer_car t left join legend_customer a on t.customer_id = a.id
+
+        where t.is_deleted='N' and t.shop_id = #{shopId}
+
+        <if test="license != null">
+            and t.license like CONCAT('%', #{license}, '%')
+        </if>
+        <if test="vin != null">
+            and t.vin like CONCAT('%', #{vin}, '%')
+        </if>
+        <if test="mobile != null">
+            and (a.mobile like CONCAT('%', #{mobile}, '%') or a.contact_mobile like CONCAT('%', #{mobile}, '%'))
+        </if>
+        <if test="customerName != null">
+            and a.customer_name like CONCAT('%', #{customerName}, '%')
+        </if>
+        <if test="contact != null">
+            and a.contact like CONCAT('%', #{contact}, '%')
+        </if>
+        <if test="company != null">
+            and a.company like CONCAT('%', #{company}, '%')
+        </if>
+        <if test="carInfo != null">
+            and (t.car_brand like CONCAT('%', #{carInfo}, '%') or t.car_series like CONCAT('%', #{carInfo}, '%')
+            or t.import_info like CONCAT('%', #{carInfo}, '%'))
+        </if>
+        <if test="searchKey != null">
+            and (t.license like CONCAT('%', #{searchKey}, '%') or a.customer_name like CONCAT('%', #{searchKey}, '%')
+            or a.mobile like CONCAT('%', #{searchKey}, '%') or a.contact_mobile like CONCAT('%', #{searchKey}, '%'))
+        </if>
+        <if test="insuranceTimeLe != null">
+            <![CDATA[
+                    and t.remind_insurance_time >= #{insuranceTimeLe}
+                    ]]>
+        </if>
+        <if test="insuranceTimeGe != null">
+            <![CDATA[
+                    and t.remind_insurance_time <= #{insuranceTimeGe}
+                    ]]>
+        </if>
+        <if test="auditingTimeLe != null">
+            <![CDATA[
+                    and t.remind_auditing_time >= #{auditingTimeLe}
+                    ]]>
+        </if>
+        <if test="auditingTimeGe != null">
+            <![CDATA[
+                    and t.remind_auditing_time <= #{auditingTimeGe}
+                    ]]>
+        </if>
+        <if test="keepupTimeLe != null">
+            <![CDATA[
+                    and t.remind_keepup_time >= #{keepupTimeLe}
+                    ]]>
+        </if>
+        <if test="keepupTimeGe != null">
+            <![CDATA[
+                    and t.remind_keepup_time <= #{keepupTimeGe}
+                    ]]>
+        </if>
+        order by t.gmt_modified desc
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <select id="getCustomerCarInfo" resultMap="SearchResultMap">
+        select
+        t.id as id,
+        t.license as license,
+        t.vin as vin,
+        t.car_brand_id as carBrandId,
+        t.car_brand as carBrand,
+        t.car_series_id as carSeriesId,
+        t.car_series as carSeries,
+        t.car_model_id as carModelId,
+        t.car_model as carModel,
+        t.car_power_id as carPowerId,
+        t.car_power as carPower,
+        t.car_year_id as carYearId,
+        t.car_year as carYear,
+        t.car_gear_box_id as carGearBoxId,
+        t.car_gear_box as carGearBox,
+        t.mileage as mileage,
+        t.car_company as carCompany,
+        t.import_info as importInfo,
+        t.engine_no as engineNo,
+        t.customer_id as customerId,
+        t.by_name as byName,
+        t.buy_time as buyTime,
+        t.car_number as carNumber,
+        t.auditing_time as auditingTime,
+        t.keepup_time as keepupTime,
+        t.insurance_id as insuranceId,
+        t.insurance_company as insuranceCompany,
+        t.color as color,
+        a.customer_name as customerName,
+        a.mobile as mobile,
+        a.driving_license as drivingLicense,
+        a.customer_addr as customerAddr,
+        a.birthday as birthday,
+        a.company as company,
+        a.contact as contact,
+        a.contact_mobile as contactMobile,
+        a.identity_card as identityCard,
+        t.ver as ver,
+        t.refer as refer,
+        t.license_type as licenseType,
+        t.receive_license_time as receiveLicenseTime,
+        t.insurance_time as insuranceTime,
+        t.production_date as productionDate,
+        t.car_level as carLevel
+        from legend_customer_car t left join legend_customer a on t.customer_id = a.id
+        where t.is_deleted='N' and t.shop_id = #{shopId} and t.id = #{id}  and  a.is_deleted = 'N'
+        <include refid="COMMON.ORDER_BY"/>
+    </select>
+
+
+    <!-- 通过ID更新基本信息 -->
+    <update id="updateInfoById">
+        update legend_customer_car t left join legend_customer a on t.customer_id = a.id
+        set t.engine_no = #{engineNo}, t.vin = #{vin}, a.customer_name = #{customerName}, a.mobile = #{mobile},t.gmt_modified = now(),a.gmt_modified = now()
+        where t.is_deleted='N' and t.shop_id = #{shopId} and t.id = #{id}
+    </update>
+
+    <!-- 逻辑删除客户信息 -->
+    <update id="deleteInfo">
+        update legend_customer_car t
+        set t.is_deleted = 'Y',t.gmt_modified = now(),t.modifier = #{userId}
+        where t.is_deleted='N' and t.shop_id = #{shopId} and t.id = #{id}
+    </update>
+
+    <!-- 通过车牌号和门店ID更新 -->
+    <update id="updateByLicenseAndShopId">
+        update legend_customer_car t
+        <include refid="BaseUpdateSet"/>
+        where t.shop_id = #{shopId} and t.license = #{license}
+    </update>
+
+    <select id="selectByLicenseAndShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_car
+        where license = #{license} and shop_id = #{shopId}
+        and is_deleted = 'N'
+        limit 0, 1
+    </select>
+
+    <select id="selectOpenIdByLicense" resultType="java.lang.String">
+        SELECT
+        openid
+        FROM
+        legend_customer_c_wechat
+        WHERE
+        license = #{license}
+    </select>
+
+    <select id="getChainCarList" resultMap="BaseResultMap">
+        select a.* from legend_customer_car a, legend_customer b
+        where a.shop_id = b.shop_id and a.shop_id = #{shopId}
+        <if test="customerName != null">
+        	and b.customer_name like CONCAT('%', #{customerName}, '%')
+        </if>
+        and a.customer_id = b.id and a.is_deleted = "N" and b.is_deleted="N"
+        <if test="license != null">
+            and a.license like CONCAT('%', #{license}, '%')
+        </if>
+        group by a.license
+        <if test = "tag != null">
+            order by ${tag} DESC
+        </if>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <select id="getChainCarByNameLicense" resultMap="BaseResultMap">
+        select a.* from legend_customer_car a, legend_customer b
+        where a.shop_id = b.shop_id and a.shop_id = #{shopId}
+        and b.customer_name = #{customerName}
+        and a.is_deleted = "N" and b.is_deleted="N"
+        and a.customer_id = b.id
+        and a.license = #{license}
+    </select>
+
+    <select id="selectOwnCars" resultMap="CustomerCarVo" parameterType="map">
+    	SELECT id,
+    		   car_brand_id,
+		       car_brand,
+		       car_series_id,
+		       car_series,
+		       by_name AS car_alias,
+		       shop_id
+		FROM `legend_customer_car`
+		<where>
+			<trim prefixOverrides="and">
+				<if test="shopId != null">
+					and shop_id=#{shopId}
+				</if>
+				<if test="ids != null">
+					and id in (
+					<foreach collection="ids" index="index" item="tag" separator=",">
+			            #{tag}
+			        </foreach>
+			        )
+				</if>
+				<if test="id != null">
+					and id=#{id}
+				</if>
+				 AND is_deleted = 'N'
+			</trim>
+		</where>
+		GROUP BY car_brand_id,
+		         car_brand,
+		         car_series_id,
+		         car_series,
+		         by_name
+		ORDER BY car_brand DESC, car_series DESC
+    </select>
+
+    <!--批量插入-->
+    <insert id = "batchInsert" parameterType="java.util.List">
+        insert into legend_customer_car (
+        is_deleted,
+        gmt_create,
+        creator,
+        gmt_modified,
+        modifier,
+        license,
+        vin,
+        engine_no,
+        shop_id,
+        customer_id,
+        precheck_count,
+        latest_precheck,
+        maintain_count,
+        latest_maintain,
+        repair_count,
+        latest_repair,
+        appoint_cout,
+        latest_appoint,
+        car_brand_id,
+        car_brand,
+        car_series_id,
+        car_series,
+        car_company,
+        import_info,
+        mileage,
+        haode_user_id,
+        by_name,
+        insurance_time,
+        buy_time,
+        car_number,
+        auditing_time,
+        insurance_id,
+        visit_count,
+        expense_amount,
+        production_date,
+        driver,
+        driver_mobile1,
+        driver_mobile2,
+        latest_paied,
+        receive_license_time,
+        insurance_company,
+        color,
+        license_type,
+        keepup_time,
+        car_model_id,
+        car_model,
+        car_power_id,
+        car_power,
+        car_year_id,
+        car_year,
+        car_gear_box_id,
+        car_gear_box,
+        car_level,
+        car_type,
+        ver,
+        refer
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+            'N',
+            now(),
+            #{item.creator},
+            now(),
+            #{item.creator},
+            #{item.license},
+            <if test = "item.vin != null">#{item.vin},</if>
+            <if test = "item.vin == null">NULL,</if>
+            <if test = "item.engineNo != null">#{item.engineNo},</if>
+            <if test = "item.engineNo == null">NULL,</if>
+            #{item.shopId},
+            <if test = "item.customerId != null">#{item.customerId},</if>
+            <if test = "item.customerId == null">0,</if>
+            <if test = "item.precheckCount != null">#{item.precheckCount},</if>
+            <if test = "item.precheckCount == null">0,</if>
+            <if test = "item.latestPrecheck != null">#{item.latestPrecheck},</if>
+            <if test = "item.latestPrecheck == null">NULL,</if>
+            <if test = "item.maintainCount != null">#{item.maintainCount},</if>
+            <if test = "item.maintainCount == null">0,</if>
+            <if test = "item.latestMaintain != null">#{item.latestMaintain},</if>
+            <if test = "item.latestMaintain == null">NULL,</if>
+            <if test = "item.repairCount != null">#{item.repairCount},</if>
+            <if test = "item.repairCount == null">0,</if>
+            <if test = "item.latestRepair != null">#{item.latestRepair},</if>
+            <if test = "item.latestRepair == null">NULL,</if>
+            <if test = "item.appointCout != null">#{item.appointCout},</if>
+            <if test = "item.appointCout == null">0,</if>
+            <if test = "item.latestAppoint != null"> #{item.latestAppoint},</if>
+            <if test = "item.latestAppoint == null">NULL,</if>
+            <if test = "item.carBrandId != null">#{item.carBrandId},</if>
+            <if test = "item.carBrandId == null">0,</if>
+            <if test = "item.carBrand != null">#{item.carBrand},</if>
+            <if test = "item.carBrand == null">NULL,</if>
+            <if test = "item.carSeriesId != null">#{item.carSeriesId},</if>
+            <if test = "item.carSeriesId == null">0,</if>
+            <if test = "item.carSeries != null">#{item.carSeries},</if>
+            <if test = "item.carSeries == null">NULL,</if>
+            <if test = "item.carCompany != null">#{item.carCompany},</if>
+            <if test = "item.carCompany == null">NULL,</if>
+            <if test = "item.importInfo != null">#{item.importInfo},</if>
+            <if test = "item.importInfo == null">NULL,</if>
+            <if test = "item.mileage != null">#{item.mileage},</if>
+            <if test = "item.mileage == null">0,</if>
+            <if test = "item.haodeUserId != null">#{item.haodeUserId},</if>
+            <if test = "item.haodeUserId == null">0,</if>
+            <if test = "item.byName != null">#{item.byName},</if>
+            <if test = "item.byName == null">NULL,</if>
+            <if test = "item.insuranceTime != null">#{item.insuranceTime},</if>
+            <if test = "item.insuranceTime == null">NULL,</if>
+            <if test = "item.buyTime != null">#{item.buyTime},</if>
+            <if test = "item.buyTime == null">NULL,</if>
+            <if test = "item.carNumber != null">#{item.carNumber},</if>
+            <if test = "item.carNumber == null">NULL,</if>
+            <if test = "item.auditingTime != null">#{item.auditingTime},</if>
+            <if test = "item.auditingTime == null">NULL,</if>
+            <if test = "item.insuranceId != null">#{item.insuranceId},</if>
+            <if test = "item.insuranceId == null">NULL,</if>
+            <if test = "item.visitCount != null">#{item.visitCount},</if>
+            <if test = "item.visitCount == null">0,</if>
+            <if test = "item.expenseAmount != null">#{item.expenseAmount},</if>
+            <if test = "item.expenseAmount == null">0.00,</if>
+            <if test = "item.productionDate != null">#{item.productionDate},</if>
+            <if test = "item.productionDate == null">NULL,</if>
+            <if test = "item.driver != null">#{item.driver},</if>
+            <if test = "item.driver == null">NULL,</if>
+            <if test = "item.driverMobile1 != null">#{item.driverMobile1},</if>
+            <if test = "item.driverMobile1 == null">NULL,</if>
+            <if test = "item.driverMobile2 != null">#{item.driverMobile2},</if>
+            <if test = "item.driverMobile2 == null">NULL,</if>
+            <if test = "item.latestPaied != null">#{item.latestPaied},</if>
+            <if test = "item.latestPaied == null">NULL,</if>
+            <if test = "item.receiveLicenseTime != null">#{item.receiveLicenseTime},</if>
+            <if test = "item.receiveLicenseTime == null">NULL,</if>
+            <if test = "item.insuranceCompany != null">#{item.insuranceCompany},</if>
+            <if test = "item.insuranceCompany == null">NULL,</if>
+            <if test = "item.color != null">#{item.color},</if>
+            <if test = "item.color == null">NULL,</if>
+            <if test = "item.licenseType != null">#{item.licenseType},</if>
+            <if test = "item.licenseType == null">NULL,</if>
+            <if test = "item.keepupTime != null">#{item.keepupTime},</if>
+            <if test = "item.keepupTime == null">NULL,</if>
+            <if test="item.carModelId != null">#{item.carModelId},</if>
+            <if test="item.carModelId == null">0,</if>
+            <if test="item.carModel != null">#{item.carModel},</if>
+            <if test="item.carModel == null">NULL,</if>
+            <if test="item.carPowerId != null">#{item.carPowerId},</if>
+            <if test="item.carPowerId == null">0,</if>
+            <if test="item.carPower != null">#{item.carPower},</if>
+            <if test="item.carPower == null">NULL,</if>
+            <if test="item.carYearId != null">#{item.carYearId},</if>
+            <if test="item.carYearId == null">0,</if>
+            <if test="item.carYear != null">#{item.carYear},</if>
+            <if test="item.carYear == null">NULL,</if>
+            <if test="item.carGearBoxId != null">#{item.carGearBoxId},</if>
+            <if test="item.carGearBoxId == null">0,</if>
+            <if test="item.carGearBox != null">#{item.carGearBox},</if>
+            <if test="item.carGearBox == null">NULL,</if>
+            <if test="item.carLevel != null">#{item.carLevel},</if>
+            <if test="item.carLevel == null">'未知',</if>
+            <if test="item.carType != null">#{item.carType},</if>
+            <if test="item.carType == null">'未知',</if>
+            <if test="item.ver != null">#{item.ver},</if>
+            <if test="item.ver == null">NULL ,</if>
+            <if test="item.refer != null">#{item.refer},</if>
+            <if test="item.refer == null">0,</if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <!-- 根据CustomerIDS批量查询 -->
+    <select id="selectByCustomerId" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM legend_customer_car
+        WHERE is_deleted = 'N'
+        AND customer_id IN
+        (
+        <foreach collection="customerIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        ORDER BY gmt_create DESC
+    </select>
+
+    <select id="selectCustomerHistoryList" resultMap="customerHistoryMap">
+        SELECT
+            lcc.id as id,
+            lcc.license as license,
+            lcc.shop_id as shopId,
+            lcc.customer_id as customerId,
+            lcc.repair_count as repairCount,
+            lcc.car_brand as carBrand,
+            lcc.car_series as carSeries,
+            lcc.car_company as carCompany,
+            lcc.import_info as importInfo,
+            lc.customer_name as customerName,
+            lc.mobile as mobile
+        from legend_customer_car lcc,legend_customer lc
+        WHERE
+          lcc.customer_id = lc.id
+        AND
+          lcc.shop_id = #{shopId}
+        <if test="keyWord != null">
+            and (lcc.license like CONCAT('%', #{keyWord}, '%') or lc.mobile like CONCAT('%', #{keyWord}, '%'))
+        </if>
+        AND
+          lcc.is_deleted = 'N'
+        AND
+          lc.is_deleted = 'N'
+        order by lcc.id DESC
+        <include refid="COMMON.LIMIT"/>
+    </select>
+    <!--常用车辆品牌-->
+    <select id="queryCustomerCar" resultType="com.tqmall.legend.entity.customer.CustomerCarComm">
+        select car_brand as carBrand,car_brand_id as carBrandId from (
+            select car_brand,car_brand_id ,count(car_brand_id) as id from legend_customer_car
+            where is_deleted='N'
+            and shop_id= #{shopId}
+            group by car_brand_id
+            ) a order by id desc
+        <include refid="COMMON.LIMIT"/>
+    </select>
+    <!--常用车型-->
+    <select id="queryCustomerCarByModel" resultType="com.tqmall.legend.entity.customer.CustomerCarByModel">
+        select
+        car_brand as brand,car_brand_id as brandId,
+        car_series as series,car_series_id as seriesId,
+        car_model as model,car_model_id as modelId,import_info as importInfo
+        from (
+        select a.car_brand,a.car_brand_id,a.car_series,a.car_series_id,a.car_model,a.car_model_id,a.import_info,count(a.car_model) as id
+        from (select car_brand,car_brand_id,car_series,car_series_id,car_model,car_model_id,import_info
+        from legend_customer_car where
+        is_deleted='N'
+        and shop_id= #{shopId}
+        and car_model_id !=0 and car_series_id !=0
+        order by gmt_create desc) a
+        group by a.car_model
+        ) a order by id desc
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+
+    <select id="getCarLevelExistsCars" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_car
+        where car_model_id != 0 AND  is_deleted='N'
+    </select>
+    <select id="selectAllCarConcisions" resultMap="carConcisionMap">
+        SELECT
+            a.license as license,
+            b.customer_name as customerName,
+            b.mobile as mobilePhone,
+            b.shop_id as shopId
+        FROM
+            (
+                SELECT customer_id, license
+                FROM
+                  legend_customer_car
+                WHERE shop_id = #{shopId}
+                and is_deleted = 'N'
+                <include refid="COMMON.LIMIT"/>
+            ) a
+            JOIN
+            legend_customer b
+            ON a.customer_id = b.id
+
+    </select>
+
+    <!-- 填充carLevel的数据 -->
+    <update id="updateCarLevelById">
+        update legend_customer_car
+        set car_level=#{carLevel}
+        where id=#{id}
+    </update>
+    <update id="updateCarTypeById">
+        update legend_customer_car
+        set car_type=#{carType}
+        where id=#{id}
+    </update>
+
+    <select id="getCustomerHasMobileNum" resultType="java.lang.Integer">
+        select count(1) from legend_customer_car cc join legend_customer c on cc.customer_id = c.id
+         where cc.is_deleted = 'N' and c.is_deleted = 'N' and
+         cc.shop_id = #{shopId} and c.shop_id = #{shopId} and c.mobile REGEXP '^[1][35678][0-9]{9}$'
+    </select>
+    <select id="countByShopId" resultType="java.lang.Integer">
+        select count(1) from legend_customer_car where shop_id = #{shopId}
+    </select>
+
+
+
+    <select id="findCustomerCarsByLicense" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        from legend_customer_car
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and license in
+        <foreach collection="licenses" index="index" item="tag" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+    </select>
+
+    <select id="listByCustomerIds" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        from legend_customer_car
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and customer_id in
+        <foreach collection="customerIds" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

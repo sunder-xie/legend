@@ -1,0 +1,25 @@
+body{width: 640px;height: 100%;overflow: hidden;font-family:'Microsoft YaHei'; }
+.page{ width: 100%; height: 100%; position: absolute;text-align: center; }
+.hide{ display: none; }
+.page-1{ background: url(../../images/app_h5_relay2/page1.jpg) no-repeat; background-size: 100% 100%;}
+.page-2{ background: url(../../images/app_h5_relay2/page2.jpg) no-repeat; background-size: 100% 100%; }
+.page-3{ background: url(../../images/app_h5_relay2/page3.jpg) no-repeat; background-size: 100% 100%; }
+.page-4{ background: url(../../images/app_h5_relay2/page4.jpg) no-repeat; background-size: 100% 100%; }
+.page-5{ background: url(../../images/app_h5_relay2/page5.jpg) no-repeat; background-size: 100% 100%; }
+.page-6{ background: url(../../images/app_h5_relay2/page6.jpg) no-repeat; background-size: 100% 100%; }
+/*.wrap img{ display: block; }*/
+.jiantou{position: absolute;width: 25px;top: 95%;left:50%;margin-left: -12px;}
+.current{z-index: 1;}
+
+.page-1 .phone{width: 209px;height:433px;position: absolute;top:50%;margin-top: -100px;left:50%;margin-left: -200px;}
+.page-1 .ewm{width: 225px;height:225px;position: absolute;top:50%;margin-top: -15px;left:50%;margin-left: 5px;}
+
+.page-2 .phone{width: 209px;height:433px;position: absolute;top:50%;margin-top: -200px;left:50%;margin-left: -105px;}
+
+.page-3 .hander{width: 500px;height:560px;position: absolute;top:50%;margin-top: -170px;left:0;}
+
+.page-4 .img4{width: 235px;height:418px;position: absolute;top:50%;margin-top: -70px;left:50%;}
+
+.page-5 .img5{width: 172px;height:490px;position: absolute;top:50%;margin-top: -140px;left:50%;margin-left: -295px;}
+
+.page-6 .img6{width: 254px;height:536px;position: absolute;top:50%;margin-top: -127px;left:50%;margin-left: -25px;}

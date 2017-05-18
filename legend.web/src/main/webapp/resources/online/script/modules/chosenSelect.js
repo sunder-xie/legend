@@ -1,0 +1,2 @@
+/*-- 淘汽云修 2016-03-09 04:48:56 --*/
+define(function(require,exports,module){require("./../libs/chosen/chosen")($),exports.handleChoosenSelect=function(a,b){$(a).each(function(){var a=$(this);a.find("option").length>=1&&(a.show(),a.removeData("chosen"),a.next(".chosen-container").remove(),a.show(),a.chosen({search_contains:!0,display_width:b||a.width(),allow_single_deselect:"1"===$(this).attr("data-with-diselect")?!0:!1,no_results_text:"没有搜索到结果"}))})}});

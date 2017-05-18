@@ -1,0 +1,120 @@
+/*
+ * hyx 2016-05-12
+ * 对账单页面
+ */
+body{
+    color:#333;
+    font-size:12px;
+}
+.yqx-wrapper .yqx-group{
+    background: #fff;
+    margin-bottom:20px;
+}
+.yqx-btn{
+    cursor:pointer;
+}
+/*tab设置*/
+.yqx-group .yqx-group-head{
+    background: #f9f9f9;
+}
+#chooseTable,#tableTag{
+    font-size:0;
+    height: 38px;
+    margin-left:-15px;
+}
+.tab-item{
+    background:#f0f0f0;
+    display:inline-block;
+    line-height:37px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    cursor:pointer;
+    border-top: none;
+}
+.current-item{
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+#chooseTable>div{
+    font-size:12px;
+    width:100px;
+}
+#tableTag>div{
+    font-size:14px;
+    width:150px;
+}
+/*表单信息*/
+
+.formInfo>div>.yqx-select-options{
+    font-size:12px;
+}
+.formInfo .form-label{
+    color:#535353;
+    font-size:12px;
+    line-height:30px;
+    width: 80px;
+}
+.yqx-group-content .show-grid{ padding: 0;}
+.formInfo .form-item{
+    width:138px;
+}
+.formInfo>button.yqx-btn{
+    float:right;
+    width:70px;
+    line-height:30px;
+    height:30px;
+    padding:0;
+    margin-left:5px;
+    font-size:12px;
+}
+#formInfo2{
+    display:none;
+}
+/*表格*/
+#clientInfo>table>thead>tr>th,#serverInfo>table>thead>tr>th{
+    background:#f9f9f9;
+    font-size:12px;
+    color:#333;
+    border-top:none;
+}
+#clientInfo>table>tbody>tr>td,#serverInfo>table>tbody>tr>td{
+    font-size:12px;
+    color:#333;
+}
+#serverInfo>table>tbody>tr>td>button{
+    width:53px;
+    line-height:25px;
+    height:25px;
+    padding:0;
+    margin-right:5px;
+    font-size:12px;
+}
+.comfirm{
+    color: #7fa700;
+}
+.yqx-group-content .yqx-table{
+    font-size: 12px;
+}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{
+    background: #f9f9f9;
+}
+.display-none{
+    display: none;
+}
+
+.tab-item.current-item, .tab-item:hover{
+    background: #fff;
+    border-bottom: 0;
+    margin-bottom: -1px;
+    line-height: 38px;
+    color: #333;
+}
+.yqx-downlist-content li a{ color: #333;}
+.max-text{ max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.yqx-downlist-panel{
+    max-width: 138px !important;
+}
+.m-bottom{
+    margin-bottom: 10px;
+}

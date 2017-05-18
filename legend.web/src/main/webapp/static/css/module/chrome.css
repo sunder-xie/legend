@@ -1,0 +1,19 @@
+/**
+ * ch 2016-03-21
+ * 非chrome浏览器，提示使用chrome浏览器
+ */
+
+/*------ 非chrome浏览器，提示使用chrome浏览器 start -------*/
+.not_chrome_tips{width:100%;background: #5579a0;position: fixed;z-index: 31;top:0;left:0;}
+.not_chrome_tips .tips_inner{width: 980px;margin:0 auto; font-size: 16px;text-shadow: 0 1px 1px #24304a;}
+.not_chrome_tips .tips_left,
+.not_chrome_tips .tips_right{height:50px;}
+.not_chrome_tips .tips_left{float:left;background:url(../../img/common/browser_smile_icon.png) no-repeat 10px center; color: #fff;font-weight: bold;line-height: 50px;padding-left: 50px; }
+.not_chrome_tips .tips_right{float: right;}
+.not_chrome_tips .tips_right a{display: block;float: left;height: 30px;line-height: 30px;border-radius: 4px;color: #fff;font-weight: bolder;margin: 10px 0 0 10px;}
+.not_chrome_tips .tips_right a.tips_btn1{background: #2ed6cc url(../../img/common/browser_chrome_icon.png) no-repeat 90% center;width: 55px;padding:0 10px 0 15px;}
+.not_chrome_tips .tips_right a.tips_btn2{background: #f77c9f;padding:0 20px;}
+.not_chrome_tips_header{top:50px!important;}
+.not_chrome_tips_wrapper{margin-top: 140px!important;}
+.not_chrome_tips_sidebar{top:119px!important;}
+/*------ 非chrome浏览器，提示使用chrome浏览器 end -------*/

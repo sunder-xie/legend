@@ -1,0 +1,238 @@
+.group_space{
+    margin-bottom: 30px;
+}
+.row_btn .field_box{
+    width:286px !important;
+}
+.row_btn2 .field_box{
+    width:250px !important;
+}
+.row_btn .qxy_btn{
+    float: left;
+    display: block;
+    margin-right: 0;
+}
+.row_btn2 .qxy_btn{
+    float: left;
+    display: block;
+    margin-right: 0;
+}
+.apply_title{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.apply_title .form_item{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+.apply_title .field_box{
+    font-weight: bold;
+}
+
+.futit {
+    color: #0909f4;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0px 0px;
+}
+.order_group .group_head a{
+    /*margin-right:35px;*/
+}
+
+._x_green_btn{
+    background:#8fb027;
+    float:right;
+}
+
+.disabled {
+    cursor: not-allowed;
+    background: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#f5f5f5)) !important;
+}
+.qxy_group .group_content {
+    padding: 10px 15px 0 5px;
+}
+.qxy_form .form_item .label_box{
+    width: 90px;
+}
+
+/*-----  新增客户弹出框，私有样式  start ------*/
+#customer_create_dialog .form_row{
+    margin-bottom:0;
+}
+#customer_create_dialog{
+    padding: 0px;
+}
+#customer_create_dialog form{
+    padding: 0 10px;
+    height: 400px;
+    overflow-y: scroll;
+}
+#customer_create_dialog .btn_group{
+    height: 56px;
+    background: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    text-align: center;
+}
+#customer_create_dialog .btn_group a{
+    position: absolute;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#customer_create_dialog .btn_group a.cancel{
+    left: 15px;
+    top: 15px;
+    color: #666666;
+    background: #f8f8f8;
+}
+#customer_create_dialog .btn_group a.save{
+    right: 15px;
+    top: 15px;
+    color: #ffffff;
+    background: #8fb027;
+}
+#customer_create_dialog .btn_group span{
+    line-height: 56px;
+    font-size: 18px;
+    color: #535353;
+    font-weight: bold;
+}
+
+/*----- 配件仓库信息 start-----*/
+.mwhbox {
+    width: 860px;
+    background-color: #f5f2e6;
+    padding: 20px;
+    overflow-y: scroll;
+    max-height:550px;   /*固定弹框的高度，使在弹框内容超出时，自动出现滚动条*/
+}
+.mwtab {
+    width: 100%;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+.mwtab th {
+    border: 1px solid #cdcdcd;
+    font-weight: bold;
+}
+.mwtab td {
+    border: 1px solid #cdcdcd;
+}
+.mhyic {
+    font-weight: bold;
+    color: #e50206;
+    text-align: left;
+    padding-left: 10px;
+}
+/*----- 配件仓库信息 end-----*/
+
+/*-----  表单背景色，私有样式  start ------*/
+.severce_bg{
+    background: #ebe6cd;
+}
+.severce_bg .group_head{
+    background: #e2ddc5;
+}
+.pjwl_bg{
+    background: #e1e6d3;
+}
+.pjwl_bg .group_head{
+    background: #d8dcca;
+}
+.fjfy_bg{
+    background: #d3e2e6;
+}
+.fjfy_bg .group_head{
+    background: #cad9dc;
+}
+
+.severce_bg .group_content,
+.pjwl_bg .group_content,
+.fjfy_bg .group_content{
+    padding: 10px 0px 0 5px;
+}
+/*-----  表单背景色，私有样式  end ------*/
+
+/*-----  弹框样式调整  start ------*/
+/*弹窗样式调整部分开始*/
+.qxy_dialog{padding:0;
+}
+.qxy_dialog form{
+     padding:0 10px 0 0
+}
+.add_bk{
+    width: 100%;
+    background:#f5f2e6;
+    padding: 10px 0;
+    height:35px;
+    line-height:35px;
+    background:#f5f2e6;
+    border-bottom:1px solid #dadada;
+    position:relative;;
+    text-align:center;
+    margin-bottom:10px;
+    /*position: absolute;*/
+    /*left: 0px;*/
+    /*bottom: -10px;*/
+}
+.button_commen_abc{
+    height:24px;
+    font-size:13px;
+    border-radius:2px;
+    cursor:pointer;
+    padding:0 10px;
+    line-height:24px;
+    border:1px solid #c1c1c1;
+}
+.button_ad_qx{
+    position:absolute;
+    left:15px;
+    top:15px;
+    width:50px;
+    color:#666666;
+    background:#f8f8f8;
+
+}
+.dialog_title{
+    line-height:25px;
+    font-size:18px;
+    color:#535353;
+    font-weight:bold;
+}
+.button_ad_bc{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:50px;;
+    color:#f8f8f8;
+    background:#8fb027;
+}
+/*弹窗样式调整部分结束*/
+.add_bk div{
+    text-align: center;
+}
+/*-----  弹框样式调整  end ------*/
+
+/*-----  工单字段单位样式  start ------*/
+.qxy_unit_box .qxy_input{
+    padding-right: 30px;
+}
+.qxy_unit_box .qxy_input_unit{
+    width: 30px;
+    color: #a9a9a9;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+}
+/*-----  工单字段单位样式  end ------*/
+/*---挂帐金额样式 start---*/
+.signAmount .field_box{text-align: right;font-size: 16px;font-weight: bold;color: red;}
+/*---挂帐金额样式 end---*/

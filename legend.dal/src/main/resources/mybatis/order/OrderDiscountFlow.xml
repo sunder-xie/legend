@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.order.OrderDiscountFlowDao">
+
+    <resultMap id = "BaseResultMap" type = "OrderDiscountFlow" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "order_id" property = "orderId" />
+        <result column = "discount_type" property = "discountType" />
+        <result column = "discount_name" property = "discountName" />
+        <result column = "discount_sn" property = "discountSn" />
+        <result column = "discount_rate" property = "discountRate" />
+        <result column = "discount_amount" property = "discountAmount" />
+        <result column = "discount_reason" property = "discountReason" />
+        <result column = "rel_id" property = "relId" />
+        <result column = "valid_status" property = "validStatus" />
+        <result column = "account_id" property = "accountId" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            order_id as orderId,
+            discount_type as discountType,
+            discount_name as discountName,
+            discount_sn as discountSn,
+            discount_rate as discountRate,
+            discount_amount as discountAmount,
+            discount_reason as discountReason,
+            rel_id as relId,
+            valid_status as validStatus,
+            account_id as accountId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test = "discountType != null">
+                    and discount_type = #{discountType}
+                </if>
+                <if test = "discountName != null">
+                    and discount_name = #{discountName}
+                </if>
+                <if test = "discountSn != null">
+                    and discount_sn = #{discountSn}
+                </if>
+                <if test = "discountRate != null">
+                    and discount_rate = #{discountRate}
+                </if>
+                <if test = "discountAmount != null">
+                    and discount_amount = #{discountAmount}
+                </if>
+                <if test = "discountReason != null">
+                    and discount_reason = #{discountReason}
+                </if>
+                <if test = "relId != null">
+                    and rel_id = #{relId}
+                </if>
+                <if test = "validStatus != null">
+                    and valid_status = #{validStatus}
+                </if>
+                <if test = "accountId != null">
+                    and account_id = #{accountId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "orderId != null">
+                    order_id = #{orderId},
+                </if>
+                <if test = "discountType != null">
+                    discount_type = #{discountType},
+                </if>
+                <if test = "discountName != null">
+                    discount_name = #{discountName},
+                </if>
+                <if test = "discountSn != null">
+                    discount_sn = #{discountSn},
+                </if>
+                <if test = "discountRate != null">
+                    discount_rate = #{discountRate},
+                </if>
+                <if test = "discountAmount != null">
+                    discount_amount = #{discountAmount},
+                </if>
+                <if test = "discountReason != null">
+                    discount_reason = #{discountReason},
+                </if>
+                <if test = "relId != null">
+                    rel_id = #{relId},
+                </if>
+                <if test = "validStatus != null">
+                    valid_status = #{validStatus},
+                </if>
+                <if test = "accountId != null">
+                    account_id = #{accountId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_order_discount_flow
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_order_discount_flow
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_order_discount_flow
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_order_discount_flow
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_order_discount_flow
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_order_discount_flow
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_order_discount_flow
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_order_discount_flow (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "orderId != null">
+                order_id,
+            </if>
+            <if test = "discountType != null">
+                discount_type,
+            </if>
+            <if test = "discountName != null">
+                discount_name,
+            </if>
+            <if test = "discountSn != null">
+                discount_sn,
+            </if>
+            <if test = "discountRate != null">
+                discount_rate,
+            </if>
+            <if test = "discountAmount != null">
+                discount_amount,
+            </if>
+            <if test = "discountReason != null">
+                discount_reason,
+            </if>
+            <if test = "relId != null">
+                rel_id,
+            </if>
+            <if test = "validStatus != null">
+                valid_status,
+            </if>
+            <if test = "accountId != null">
+                account_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "orderId != null">
+                #{orderId},
+            </if>
+            <if test = "discountType != null">
+                #{discountType},
+            </if>
+            <if test = "discountName != null">
+                #{discountName},
+            </if>
+            <if test = "discountSn != null">
+                #{discountSn},
+            </if>
+            <if test = "discountRate != null">
+                #{discountRate},
+            </if>
+            <if test = "discountAmount != null">
+                #{discountAmount},
+            </if>
+            <if test = "discountReason != null">
+                #{discountReason},
+            </if>
+            <if test = "relId != null">
+                #{relId},
+            </if>
+            <if test = "validStatus != null">
+                #{validStatus},
+            </if>
+            <if test = "accountId != null">
+                #{accountId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_order_discount_flow
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_order_discount_flow (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            order_id,
+            discount_type,
+            discount_name,
+            discount_sn,
+            discount_rate,
+            discount_amount,
+            discount_reason,
+            rel_id,
+            valid_status,
+            account_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.orderId != null">
+                    #{item.orderId},
+                </if>
+                <if test="item.orderId == null">
+                    0 ,
+                </if>
+                <if test="item.discountType != null">
+                    #{item.discountType},
+                </if>
+                <if test="item.discountType == null">
+                    0 ,
+                </if>
+                <if test="item.discountName != null">
+                    #{item.discountName},
+                </if>
+                <if test="item.discountName == null">
+                    '',
+                </if>
+                <if test="item.discountSn != null">
+                    #{item.discountSn},
+                </if>
+                <if test="item.discountSn == null">
+                    '',
+                </if>
+                <if test="item.discountRate != null">
+                    #{item.discountRate},
+                </if>
+                <if test="item.discountRate == null">
+                    1.00,
+                </if>
+                <if test="item.discountAmount != null">
+                    #{item.discountAmount},
+                </if>
+                <if test="item.discountAmount == null">
+                    0.00,
+                </if>
+                <if test="item.discountReason != null">
+                    #{item.discountReason},
+                </if>
+                <if test="item.discountReason == null">
+                    '',
+                </if>
+                <if test="item.relId != null">
+                    #{item.relId},
+                </if>
+                <if test="item.relId == null">
+                    0,
+                </if>
+                <if test="item.validStatus != null">
+                    #{item.validStatus},
+                </if>
+                <if test="item.validStatus == null">
+                    1,
+                </if>
+                <if test="item.accountId != null">
+                    #{item.accountId},
+                </if>
+                <if test="item.accountId == null">
+                    0,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <update id="batchUpdateAuditStatusByOrderId" parameterType="Integer">
+        UPDATE legend_order_discount_flow
+        <set>
+            valid_status = 0
+        </set>
+        WHERE order_id = #{orderId}
+    </update>
+</mapper>

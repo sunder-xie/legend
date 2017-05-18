@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.article.NewsDao">
+
+    <resultMap id="BaseResultMap" type="News" extends="COMMON.BASE_RESULT_MAP">
+        <result column="news_title" property="newsTitle"/>
+        <result column="img_url" property="imgUrl"/>
+        <result column="news_summary" property="newsSummary"/>
+        <result column="news_content" property="newsContent"/>
+        <result column="news_source" property="newsSource"/>
+        <result column="news_type_id" property="newsTypeId"/>
+        <result column="is_published" property="isPublished"/>
+        <result column="is_top" property="isTop"/>
+        <result column="news_sort" property="newsSort"/>
+        <result column="view_times" property="viewTimes"/>
+        <result column="app_tag" property="appTag"/>
+        <result column="show_style" property="showStyle"/>
+        <result column="img_thumb_url" property="imgThumbUrl"/>
+        <result column="app_upvote_count" property="appUpvoteCount"/>
+        <result column="app_pv" property="appPv"/>
+        <result column="modified_time" property="modifiedTime"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            news_title as newsTitle,
+            img_url as imgUrl,
+            news_summary as newsSummary,
+            news_content as newsContent,
+            news_source as newsSource,
+            news_type_id as newsTypeId,
+            is_published as isPublished,
+            is_top as isTop,
+            news_sort as newsSort,
+            view_times as viewTimes,
+            app_tag as appTag,
+            show_style as showStyle,
+            img_thumb_url as imgThumbUrl,
+            app_upvote_count as appUpvoteCount,
+            app_pv as appPv,
+            modified_time as modifiedTime,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="newsTitle != null">
+                    and news_title = #{newsTitle}
+                </if>
+                <if test="imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test="newsSummary != null">
+                    and news_summary = #{newsSummary}
+                </if>
+                <if test="newsContent != null">
+                    and news_content = #{newsContent}
+                </if>
+                <if test="newsSource != null">
+                    and news_source = #{newsSource}
+                </if>
+                <if test="newsTypeId != null">
+                    and news_type_id = #{newsTypeId}
+                </if>
+
+                <if test="isTop != null">
+                    and is_top = #{isTop}
+                </if>
+                <if test="newsSort != null">
+                    and news_sort = #{newsSort}
+                </if>
+                <if test="viewTimes != null">
+                    and view_times = #{viewTimes}
+                </if>
+                <if test="isPublished != null">
+                    and is_published = #{isPublished}
+                </if>
+                <!-- 一般情况下只允许获取已发布的记录-->
+                <if test="isPublished == null">
+                    and is_published = '1'
+                </if>
+                <if test="appTag != null">
+                    and app_tag = #{appTag}
+                </if>
+                <if test="showStyle != null">
+                    and show_style = #{showStyle}
+                </if>
+                <if test="imgThumbUrl != null">
+                    and img_thumb_url = #{imgThumbUrl}
+                </if>
+                <if test="appUpvoteCount != null">
+                    and app_upvote_count = #{appUpvoteCount}
+                </if>
+                <if test="appPv != null">
+                    and app_pv = #{appPv}
+                </if>
+                <if test="modifiedTime != null">
+                    and modified_time = #{modifiedTime}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="newsTitle != null">
+                    news_title = #{newsTitle},
+                </if>
+                <if test="imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test="newsSummary != null">
+                    news_summary = #{newsSummary},
+                </if>
+                <if test="newsContent != null">
+                    news_content = #{newsContent},
+                </if>
+                <if test="newsSource != null">
+                    news_source = #{newsSource},
+                </if>
+                <if test="newsTypeId != null">
+                    news_type_id = #{newsTypeId},
+                </if>
+                <if test="isPublished != null">
+                    is_published = #{isPublished},
+                </if>
+                <if test="isTop != null">
+                    is_top = #{isTop},
+                </if>
+                <if test="newsSort != null">
+                    news_sort = #{newsSort},
+                </if>
+                <if test="viewTimes != null">
+                    view_times = #{viewTimes},
+                </if>
+                <if test="appTag != null">
+                    app_tag = #{appTag},
+                </if>
+                <if test="showStyle != null">
+                    show_style = #{showStyle},
+                </if>
+                <if test="imgThumbUrl != null">
+                    img_thumb_url = #{imgThumbUrl},
+                </if>
+                <if test="appUpvoteCount != null">
+                    app_upvote_count = #{appUpvoteCount},
+                </if>
+                <if test="appPv != null">
+                    app_pv = #{appPv},
+                </if>
+                <if test="modifiedTime != null">
+                    modified_time = #{modifiedTime},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_news
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_news
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_news
+        where id = #{id} and is_deleted = 'N' AND is_published='1'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_news
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N' AND is_published='1'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_news
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_news
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_news
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_news (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="newsTitle != null">
+                news_title,
+            </if>
+            <if test="imgUrl != null">
+                img_url,
+            </if>
+            <if test="newsSummary != null">
+                news_summary,
+            </if>
+            <if test="newsContent != null">
+                news_content,
+            </if>
+            <if test="newsSource != null">
+                news_source,
+            </if>
+            <if test="newsTypeId != null">
+                news_type_id,
+            </if>
+            <if test="isPublished != null">
+                is_published,
+            </if>
+            <if test="isTop != null">
+                is_top,
+            </if>
+            <if test="newsSort != null">
+                news_sort,
+            </if>
+            <if test="viewTimes != null">
+                view_times,
+            </if>
+            <if test="appTag != null">
+                app_tag,
+            </if>
+            <if test="showStyle != null">
+                show_style,
+            </if>
+            <if test="imgThumbUrl != null">
+                img_thumb_url,
+            </if>
+            <if test="appUpvoteCount != null">
+                app_upvote_count,
+            </if>
+            <if test="appPv != null">
+                app_pv,
+            </if>
+            <if test="modifiedTime != null">
+                modified_time,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="newsTitle != null">
+                #{newsTitle},
+            </if>
+            <if test="imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test="newsSummary != null">
+                #{newsSummary},
+            </if>
+            <if test="newsContent != null">
+                #{newsContent},
+            </if>
+            <if test="newsSource != null">
+                #{newsSource},
+            </if>
+            <if test="newsTypeId != null">
+                #{newsTypeId},
+            </if>
+            <if test="isPublished != null">
+                #{isPublished},
+            </if>
+            <if test="isTop != null">
+                #{isTop},
+            </if>
+            <if test="newsSort != null">
+                #{newsSort},
+            </if>
+            <if test="viewTimes != null">
+                #{viewTimes},
+            </if>
+            <if test="appTag != null">
+                #{appTag},
+            </if>
+            <if test="showStyle != null">
+                #{showStyle},
+            </if>
+            <if test="imgThumbUrl != null">
+                #{imgThumbUrl},
+            </if>
+            <if test="appUpvoteCount != null">
+                #{appUpvoteCount},
+            </if>
+            <if test="appPv != null">
+                #{appPv},
+            </if>
+            <if test="modifiedTime != null">
+                #{modifiedTime},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_news
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!-- 更新浏览次数-->
+    <update id="updateViewTimes">
+        update legend_news
+        SET  view_times=#{viewTimes}
+        where id = #{id}
+    </update>
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_news (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            news_title,
+            img_url,
+            news_summary,
+            news_content,
+            news_source,
+            news_type_id,
+            is_published,
+            is_top,
+            news_sort,
+            view_times,
+            app_tag,
+            show_style,
+            img_thumb_url,
+            app_upvote_count,
+            app_pv,
+            modified_time,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.newsTitle != null">
+                    #{item.newsTitle},
+                </if>
+                <if test="item.newsTitle == null">
+                    '',
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    '',
+                </if>
+                <if test="item.newsSummary != null">
+                    #{item.newsSummary},
+                </if>
+                <if test="item.newsSummary == null">
+                    '',
+                </if>
+                <if test="item.newsContent != null">
+                    #{item.newsContent},
+                </if>
+                <if test="item.newsContent == null">
+                    '',
+                </if>
+                <if test="item.newsSource != null">
+                    #{item.newsSource},
+                </if>
+                <if test="item.newsSource == null">
+                    '',
+                </if>
+                <if test="item.newsTypeId != null">
+                    #{item.newsTypeId},
+                </if>
+                <if test="item.newsTypeId == null">
+                    0 ,
+                </if>
+                <if test="item.isPublished != null">
+                    #{item.isPublished},
+                </if>
+                <if test="item.isPublished == null">
+                    0 ,
+                </if>
+                <if test="item.isTop != null">
+                    #{item.isTop},
+                </if>
+                <if test="item.isTop == null">
+                    0 ,
+                </if>
+                <if test="item.newsSort != null">
+                    #{item.newsSort},
+                </if>
+                <if test="item.newsSort == null">
+                    0 ,
+                </if>
+                <if test="item.viewTimes != null">
+                    #{item.viewTimes},
+                </if>
+                <if test="item.viewTimes == null">
+                    0 ,
+                </if>
+                <if test="item.appTag != null">
+                    #{item.appTag},
+                </if>
+                <if test="item.appTag == null">
+                    '',
+                </if>
+                <if test="item.showStyle != null">
+                    #{item.showStyle},
+                </if>
+                <if test="item.showStyle == null">
+                    0 ,
+                </if>
+                <if test="item.imgThumbUrl != null">
+                    #{item.imgThumbUrl},
+                </if>
+                <if test="item.imgThumbUrl == null">
+                    '',
+                </if>
+                <if test="item.appUpvoteCount != null">
+                    #{item.appUpvoteCount},
+                </if>
+                <if test="item.appUpvoteCount == null">
+                    0 ,
+                </if>
+                <if test="item.appPv != null">
+                    #{item.appPv},
+                </if>
+                <if test="item.appPv == null">
+                    0 ,
+                </if>
+                <if test="item.modifiedTime != null">
+                    #{item.modifiedTime},
+                </if>
+                <if test="item.modifiedTime == null">
+                    now() ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper> 

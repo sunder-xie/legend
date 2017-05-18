@@ -1,0 +1,119 @@
+/* .qxy_service_suite {
+	margin: 15px 0;
+}
+
+.qxy_service_suite .service_suite_title {
+	background-color: rgb(214, 215, 216);
+	height:45px;
+}
+
+.qxy_service_suite .service_suite_title .service_suite_name {
+	float: left;
+	color: #ffffff;
+	width: 140px;
+	height: 49px;
+	line-height:45px;
+	text-align: center;
+	background: url("../img/common/t1.gif") no-repeat;
+}
+.qxy_service_suite .service_suite_title .service_suite_name_right{
+	float:right;
+}
+.qxy_service_suite .service_suite_title .service_suite_name_right li{
+	display: inline;
+	line-height:45px;
+}
+.servcie_item{
+	background-color:#FFF;
+	width:235px;
+	float:left;
+	height:50px;
+	margin:10px 10px 0 0px;
+} */
+/*套餐优惠券*/
+.package {
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}
+
+.package .title {
+	width: 100%;
+	height: 45px;
+	background: #d7d7d7;
+	position: relative;
+}
+
+.package .arrow-down {
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	margin-left: -5px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #5b5d61;
+}
+
+.package .title .title-name {
+	display: inline-block;
+	min-width: 140px;
+	background: #5b5d61;
+	text-align: center;
+	color: #fff;
+	line-height: 45px;
+	font-size: 16px;
+	padding: 0 10px;
+	position: relative;
+}
+
+.package .title .text {
+	float: right;
+	margin-right: 37px;
+	margin-top: 18px;
+}
+
+.package .title a {
+	float: right;
+	width: 75px;
+	height: 33px;
+	border: 1px solid #c1c1c1;
+	background: #fff;
+	margin: 5px 5px auto;
+	text-align: center;
+	line-height: 33px;
+	color: #333;
+}
+
+.package ul {
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	overflow: hidden;
+	margin-bottom:25px;
+}
+
+.package ul li {
+	width: 227px;
+	height: 63px;
+	border: 1px solid #c1c1c1;
+	background: #fff;
+	float: left;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.package ul li .ch_price {
+	width: 166px;
+	height: 38px;
+	display: inline-block;
+	background: url("../img/common/quan.jpg") no-repeat;
+	margin: 12px;
+	color: #ff7926;
+	text-indent: 2em;
+	text-align: center;
+	font-size: 16px;
+	line-height: 37px;
+	border-right: 1px dashed #cacaca;
+}

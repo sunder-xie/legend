@@ -1,0 +1,98 @@
+.order-body {
+    background: transparent;
+    border: 0;
+}
+
+.order-head {
+    position: static;
+}
+
+.order-right {
+    margin: 0;
+}
+
+.yqx-btn i.question {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    vertical-align: sub;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width:  15px;
+}
+
+.qrcode-box {
+    height: 256px;
+    width: 200px;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    margin: 5px 5px 5px 0;
+    display: inline-block;
+    background: #fff;
+    float: left;
+}
+
+.qrcode-box h2 {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    background: transparent;
+    line-height: initial;
+    height: initial;
+}
+
+.qrcode-box .qr-viewer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.qrcode-box .qr-body {
+    position: relative;
+    height: 177px;
+    margin: 0 10px 10px 10px;
+    text-align: center;
+}
+
+.qrcode-box .qr-footer {
+    text-align: center;
+    background: #fafafa;
+    border-top: 1px solid #e3e3e3;
+    height: 30px;
+}
+
+.qr-footer a {
+    line-height: 30px;
+}
+
+.icon {
+    margin-right: 3px;
+    vertical-align: text-bottom;
+}
+
+.qr-footer h3 {
+    font-size: 12px;
+    color: #85af1d;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.help {
+    padding: 0 14px;
+}
+
+.layui-layer-content img, .layui-layer.layui-layer-page{
+    border-radius: 10px;
+}

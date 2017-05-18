@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.AccountCardFlowDetailDao">
+
+    <resultMap id="BaseResultMap" type="AccountCardFlowDetail" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="card_id" property="cardId"/>
+        <result column="change_amount" property="changeAmount"/>
+        <result column="card_balance" property="cardBalance"/>
+        <result column="consume_type" property="consumeType"/>
+        <result column="account_trade_flow_id" property="accountTradeFlowId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            card_id as cardId,
+            change_amount as changeAmount,
+            card_balance as cardBalance,
+            consume_type as consumeType,
+            account_trade_flow_id as accountTradeFlowId,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="cardId != null">
+                    and card_id = #{cardId}
+                </if>
+                <if test="changeAmount != null">
+                    and change_amount = #{changeAmount}
+                </if>
+                <if test="cardBalance != null">
+                    and card_balance = #{cardBalance}
+                </if>
+                <if test="consumeType != null">
+                    and consume_type = #{consumeType}
+                </if>
+                <if test="accountTradeFlowId != null">
+                    and account_trade_flow_id = #{accountTradeFlowId}
+                </if>
+                <if test="accountTradeFlowIds != null">
+                    and account_trade_flow_id in
+                    <foreach collection="accountTradeFlowIds" open="(" close=")" index="index" item="tag" separator="," >
+                        #{tag}
+                    </foreach>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="cardId != null">
+                    card_id = #{cardId},
+                </if>
+                <if test="changeAmount != null">
+                    change_amount = #{changeAmount},
+                </if>
+                <if test="cardBalance != null">
+                    card_balance = #{cardBalance},
+                </if>
+                <if test="consumeType != null">
+                    consume_type = #{consumeType},
+                </if>
+                <if test="accountTradeFlowId != null">
+                    account_trade_flow_id = #{accountTradeFlowId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_account_card_flow_detail
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_card_flow_detail
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_card_flow_detail
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_card_flow_detail
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+    <select id="getRechargeSummaryAmount" resultType="java.math.BigDecimal">
+        SELECT
+        IFNULL(SUM(pay_amount), 0)
+        FROM
+        legend_account_trade_flow
+        WHERE
+        <include refid="rechargeSummaryCondition"/>
+    </select>
+    <select id="getRechargeCustomerCount" resultType="java.lang.Integer">
+        SELECT
+          COUNT(DISTINCT account_id)
+        FROM
+            legend_account_trade_flow
+        WHERE
+        <include refid="rechargeSummaryCondition"/>
+    </select>
+    <sql id="rechargeSummaryCondition">
+        shop_id = #{shopId}
+        AND consume_type = 1
+        AND trade_type = 3
+        AND is_reversed = 0
+        <if test="startTime != null">
+            AND gmt_create &gt;= #{startTime}
+        </if>
+        <if test="endTime != null">
+            AND gmt_create &lt;= #{endTime}
+        </if>
+        AND is_deleted = 'N'
+    </sql>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_account_card_flow_detail
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_account_card_flow_detail
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_account_card_flow_detail
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_account_card_flow_detail (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="cardId != null">
+                card_id,
+            </if>
+            <if test="changeAmount != null">
+                change_amount,
+            </if>
+            <if test="cardBalance != null">
+                card_balance,
+            </if>
+            <if test="consumeType != null">
+                consume_type,
+            </if>
+            <if test="accountTradeFlowId != null">
+                account_trade_flow_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="cardId != null">
+                #{cardId},
+            </if>
+            <if test="changeAmount != null">
+                #{changeAmount},
+            </if>
+            <if test="cardBalance != null">
+                #{cardBalance},
+            </if>
+            <if test="consumeType != null">
+                #{consumeType},
+            </if>
+            <if test="accountTradeFlowId != null">
+                #{accountTradeFlowId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_account_card_flow_detail
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+    <update id="updateCardNumberByFlowId">
+        UPDATE legend_account_card_flow_detail
+        SET card_id = #{cardId}
+        where account_trade_flow_id = #{flowId}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_account_card_flow_detail (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            card_id,
+            change_amount,
+            card_balance,
+            consume_type,
+            account_trade_flow_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.cardId != null">
+                    #{item.cardId},
+                </if>
+                <if test="item.cardId == null">
+                    0 ,
+                </if>
+                <if test="item.changeAmount != null">
+                    #{item.changeAmount},
+                </if>
+                <if test="item.changeAmount == null">
+                    0.00,
+                </if>
+                <if test="item.cardBalance != null">
+                    #{item.cardBalance},
+                </if>
+                <if test="item.cardBalance == null">
+                    0.00,
+                </if>
+                <if test="item.consumeType != null">
+                    #{item.consumeType},
+                </if>
+                <if test="item.consumeType == null">
+                    0 ,
+                </if>
+                <if test="item.accountTradeFlowId != null">
+                    #{item.accountTradeFlowId},
+                </if>
+                <if test="item.accountTradeFlowId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="getCardFlowDetailByFlowIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_account_card_flow_detail
+        where 1 = 1
+        <if test="shopId != null">
+           and shop_id = #{shopId}
+        </if>
+        <if test="flowIds != null">
+           and account_trade_flow_id in
+            (
+            <foreach collection="flowIds" index="index" item="tag" separator=",">
+                #{tag}
+            </foreach>
+            )
+        </if>
+    </select>
+    <select id="sumUsedInfo" resultType="com.tqmall.legend.entity.account.MemberCardUsedSummay">
+        SELECT
+            count(1) AS usedCount,
+            ifnull(sum(change_amount),0) AS usedAmount
+        FROM
+            legend_account_card_flow_detail a,
+            legend_account_trade_flow b
+        WHERE a.account_trade_flow_id = b.id
+            AND a.is_deleted = 'N'
+            AND a.shop_id = #{shopId}
+            AND a.card_id = #{cardId}
+            AND b.is_reversed = 0
+            AND a.consume_type = 3
+    </select>
+    <select id="getRechargeTradeFlowIds" resultType="java.lang.Long">
+        SELECT account_trade_flow_id
+        FROM legend_account_card_flow_detail
+        WHERE shop_id = #{shopId}
+          AND card_id IN
+        <foreach collection="memberCardIdList" index="index" item="tag" separator="," open="(" close=")">
+            #{tag}
+        </foreach>
+          AND consume_type IN (1,5)
+          AND is_deleted = 'N'
+    </select>
+
+    <select id="getCardConsumeNum" resultType="java.lang.Integer">
+        SELECT COUNT(a.id)
+        FROM legend_account_card_flow_detail a
+        JOIN legend_account_trade_flow b ON a.shop_id = b.shop_id AND a.account_trade_flow_id = b.id
+        WHERE a.shop_id = #{shopId}
+        AND a.card_id IN
+        <foreach collection="cardIds" index="index" item="tag" separator="," open="(" close=")">
+            #{tag}
+        </foreach>
+        AND a.consume_type = 3
+        AND b.is_reversed = 0
+        AND a.is_deleted = 'N'
+        AND b.is_deleted = 'N'
+    </select>
+
+    <select id="getFlowIdAndCardIdRel" resultType="com.tqmall.legend.bi.entity.CommonPair">
+        SELECT account_trade_flow_id dataF,
+               card_id dataS
+        FROM legend_account_card_flow_detail
+        WHERE shop_id = #{shopId}
+        AND account_trade_flow_id in
+        (
+        <foreach collection="flowIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        AND is_deleted = 'N'
+    </select>
+
+</mapper>

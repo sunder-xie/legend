@@ -1,0 +1,50 @@
+.allot-btn {
+    margin-right: 10px;
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+.btn-box {
+    margin-top: -10px;
+}
+
+.echarts-box {
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.echarts-container {
+    height: 230px;
+}
+
+.echarts-box h4 {
+    line-height: 45px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    border-bottom: 1px solid #cacaca;
+    text-align: center;
+}
+
+.allot-dialog {
+    width: 400px;
+}
+
+.allot-dialog .dialog-content {
+    height: 70px;
+    padding: 20px 0 0 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.allot-dialog .dialog-footer {
+    border: 0;
+}
+
+.yqx-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

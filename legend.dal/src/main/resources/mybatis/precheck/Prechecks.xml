@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.prechecks.PrechecksDao">
+
+    <resultMap id="BaseResultMap" type="Prechecks"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="customer_car_id" property="customerCarId"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="mobile" property="mobile"/>
+        <result column="next_time" property="nextTime"/>
+        <result column="comments" property="comments"/>
+        <result column="mileage" property="mileage"/>
+        <result column="insurance" property="insurance"/>
+        <result column="insurance_id" property="insuranceId"/>
+        <result column="due_date" property="dueDate"/>
+        <result column="color" property="color"/>
+        <result column="man_hour" property="manHour"/>
+        <result column="exp_fee" property="expFee"/>
+        <result column="upkeep_mileage" property="upkeepMileage"/>
+        <result column="refer" property="refer"/>
+        <result column="ver" property="ver"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        precheck_sn as precheckSn,
+        customer_id as customerId,
+        customer_car_id as customerCarId,
+        customer_name as customerName,
+        mobile as mobile,
+        mileage as mileage,
+        insurance as insurance,
+        insurance_id as insuranceId,
+        next_time as nextTime,
+        due_date as dueDate,
+        color as color,
+        man_hour as manHour,
+        exp_fee as expFee,
+        upkeep_mileage as upkeepMileage,
+        comments as comments,
+        refer as refer,
+        ver as ver
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                and shop_id = #{shopId}
+                <if test="precheckSn!= null">
+                    and precheck_id = #{precheckId}
+                </if>
+                <if test="customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test="customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test="customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test="mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test="mileage != null">
+                    and mileage = #{mileage}
+                </if>
+                <if test="insurance != null">
+                    and insurance = #{insurance}
+                </if>
+                <if test="insuranceId != null">
+                    and insurance_id = #{insuranceId}
+                </if>
+                <if test="nextTime != null">
+                    and next_time = #{nextTime}
+                </if>
+                <if test="comments != null">
+                    and comments = #{comments}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test="gmtCreateGtoe != null">
+                    <![CDATA[
+                    and gmt_create >= #{gmtCreateGtoe}
+                    ]]>
+                </if>
+                <if test="gmtCreateLtoe != null">
+                    <![CDATA[
+                    and gmt_create <= #{gmtCreateLtoe}
+                    ]]>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseRemindClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                and shop_id = #{shopId}
+                <![CDATA[
+                  and next_time >= #{remindStart}
+                  and next_time < #{remindEnd}
+                ]]>
+                <if test="precheckSn!= null">
+                    and precheck_id = #{precheckId}
+                </if>
+                <if test="customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test="customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test="customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test="mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test="mileage != null">
+                    and mileage = #{mileage}
+                </if>
+                <if test="insurance != null">
+                    and insurance = #{insurance}
+                </if>
+                <if test="insuranceId != null">
+                    and insurance_id = #{insuranceId}
+                </if>
+                <if test="comments != null">
+                    and comments = #{comments}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            shop_id = #{shopId},
+            <trim suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="precheckId != null">
+                    precheck_id = #{precheckId},
+                </if>
+                <if test="customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test="customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test="customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test="mobile != null">
+                    mobile = #{mobile},
+                </if>
+                <if test="mileage != null">
+                    mileage = #{mileage},
+                </if>
+                <if test="insurance != null">
+                    and insurance = #{insurance}
+                </if>
+                <if test="insuranceId != null">
+                    and insurance_id = #{insuranceId}
+                </if>
+                <if test="nextTime != null">
+                    next_time = #{nextTime},
+                </if>
+                <if test="comments != null">
+                    comments = #{comments},
+                </if>
+                <if test="dueDate != null">
+                    due_date = #{dueDate},
+                </if>
+                <if test="color != null">
+                    color = #{color},
+                </if>
+                <if test="manHour != null">
+                    man_hour = #{manHour},
+                </if>
+                <if test="expFee != null">
+                    exp_fee = #{expFee},
+                </if>
+                <if test="upkeepMileage != null">
+                    upkeep_mileage = #{upkeepMileage},
+                </if>
+                <if test="refer != null">
+                    refer = #{refer},
+                </if>
+                <if test="ver != null">
+                    ver = #{ver},
+                </if>
+
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_prechecks
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_prechecks
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_prechecks
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_prechecks
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_prechecks
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_prechecks
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_prechecks
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_prechecks (
+        shop_id,
+        precheck_sn,
+        customer_id,
+        customer_car_id,
+        next_time,
+        comments,
+        mileage,
+        insurance,
+        insurance_id,
+        due_date,
+        color,
+        man_hour,
+        exp_fee,
+        customer_name,
+        mobile,
+        creator,
+        upkeep_mileage,
+        gmt_create,
+        gmt_modified,
+        refer,
+        ver
+        )
+        values (
+        #{shopId},
+        #{precheckSn},
+        <if test="customerId != null">
+            #{customerId},
+        </if>
+        <if test="customerId == null">
+            0,
+        </if>
+        <if test="customerCarId != null">
+            #{customerCarId},
+        </if>
+        <if test="customerCarId == null">
+            0,
+        </if>
+        <if test="nextTime != null">
+            #{nextTime},
+        </if>
+        <if test="nextTime == null">
+            null,
+        </if>
+        <if test="comments != null">
+            #{comments},
+        </if>
+        <if test="comments == null">
+            null,
+        </if>
+        <if test="mileage != null">
+            #{mileage},
+        </if>
+        <if test="mileage == null">
+            null,
+        </if>
+        <if test="insurance != null">
+            #{insurance},
+        </if>
+        <if test="insurance == null">
+            null,
+        </if>
+        <if test="insuranceId != null">
+            #{insuranceId},
+        </if>
+        <if test="insuranceId == null">
+            0,
+        </if>
+        <if test="dueDate != null">
+            #{dueDate},
+        </if>
+        <if test="dueDate == null">
+            null,
+        </if>
+        <if test="color != null">
+            #{color},
+        </if>
+        <if test="color == null">
+            null,
+        </if>
+        <if test="manHour != null">
+            #{manHour},
+        </if>
+        <if test="manHour == null">
+            null,
+        </if>
+        <if test="expFee != null">
+            #{expFee},
+        </if>
+        <if test="expFee == null">
+            null,
+        </if>
+        <if test="customerName != null">
+            #{customerName},
+        </if>
+        <if test="customerName == null">
+            null,
+        </if>
+        <if test="mobile != null">
+            #{mobile},
+        </if>
+        <if test="mobile == null">
+            null,
+        </if>
+        <if test="creator != null">
+            #{creator},
+        </if>
+        <if test="creator == null">
+            0,
+        </if>
+        <if test="upkeepMileage != null">
+            #{upkeepMileage},
+        </if>
+        <if test="upkeepMileage == null">
+            0,
+        </if>
+        NOW(),
+        NOW(),
+        <if test="refer != null">
+            #{refer},
+        </if>
+        <if test="refer == null">
+            0,
+        </if>
+        <if test="ver != null">
+            #{ver}
+        </if>
+        <if test="ver == null">
+            null
+        </if>
+
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_prechecks
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <select id="getPrecheckItemValues"
+            resultType="com.tqmall.legend.entity.precheck.PrecheckItemValueVO">
+        select id, value from legend_precheck_value
+    </select>
+
+
+    <select id="getPrecheckOrder" resultType="com.tqmall.legend.entity.precheck.Prechecks">
+        select
+        a.id as id,
+        a.is_deleted as isDeleted,
+        a.gmt_create as gmtCreate,
+        a.creator as creator,
+        a.gmt_modified as gmtModified,
+        a.modifier as modifier,
+        a.shop_id as shopId,
+        a.precheck_sn as precheckSn,
+        a.customer_id as customerId,
+        a.customer_car_id as customerCarId,
+        a.customer_name as customerName,
+        a.mobile as mobile,
+        a.mileage as mileage,
+        a.insurance as insurance,
+        a.insurance_id as insuranceId,
+        a.due_date as dueDate,
+        a.color as color,
+        a.exp_fee as expFee,
+        a.man_hour as manHour,
+        a.next_time as nextTime,
+        a.upkeep_mileage as upkeepMileage,
+        a.comments as comments,
+        a.refer as refer,
+        ver as ver
+        from legend_prechecks a
+        where a.id = #{id} and a.shop_id = #{shopId}
+          and a.is_deleted = 'N'
+    </select>
+
+    <select id="selectPrechecks" resultType="com.tqmall.legend.entity.precheck.Prechecks">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_prechecks
+        <include refid="BaseWhereClause"/>
+        order by precheck_sn desc
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <select id="getRemindPrechecks" resultType="com.tqmall.legend.entity.precheck.Prechecks">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_prechecks
+        <include refid="BaseRemindClause"/>
+        order by precheck_sn desc
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <update id="updatePrecheckComment" useGeneratedKeys="true" keyProperty="id">
+        update legend_prechecks
+        set comments = #{comments}, man_hour=#{manHour}, exp_fee = #{expFee},
+            color = #{color}, insurance_id=#{insuranceId}, insurance = #{insurance},
+        next_time = #{nextTime}, due_date= #{dueDate}, mileage = #{mileage}, upkeep_mileage=#{upkeepMileage},gmt_modified=now()
+        where shop_id = #{shopId} and id = #{id} and is_deleted ='N'
+    </update>
+
+    <!-- 查询车辆总数 -->
+    <select id="countPrecheckCar" resultType="java.lang.Integer">
+        select count(DISTINCT customer_car_id)
+        from legend_prechecks
+        <include refid="BaseWhereClause"/>
+    </select>
+</mapper>

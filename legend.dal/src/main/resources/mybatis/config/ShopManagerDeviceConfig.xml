@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.config.ShopManagerDeviceConfigDao">
+
+    <resultMap id = "BaseResultMap" type = "ShopManagerDeviceConfig" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "manager_id" property = "managerId" />
+        <result column = "device_id" property = "deviceId" />
+        <result column = "phone_brand" property = "phoneBrand" />
+        <result column = "authorize_status" property = "authorizeStatus" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            manager_id as managerId,
+            device_id as deviceId,
+            phone_brand as phoneBrand,
+            authorize_status as authorizeStatus,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "managerId != null">
+                    and manager_id = #{managerId}
+                </if>
+                <if test = "deviceId != null">
+                    and device_id = #{deviceId}
+                </if>
+                <if test = "phoneBrand != null">
+                    and phone_brand = #{phoneBrand}
+                </if>
+                <if test = "authorizeStatus != null">
+                    and authorize_status = #{authorizeStatus}
+                </if>
+                <if test="managerIds != null">
+                    and manager_id in
+                    <foreach collection="managerIds" open="(" close=")" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "managerId != null">
+                    manager_id = #{managerId},
+                </if>
+                <if test = "deviceId != null">
+                    device_id = #{deviceId},
+                </if>
+                <if test = "phoneBrand != null">
+                    phone_brand = #{phoneBrand},
+                </if>
+                <if test = "authorizeStatus != null">
+                    authorize_status = #{authorizeStatus},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_shop_manager_device_config
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_manager_device_config
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_manager_device_config
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_manager_device_config
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_shop_manager_device_config
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_shop_manager_device_config
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_shop_manager_device_config
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_shop_manager_device_config (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "managerId != null">
+                manager_id,
+            </if>
+            <if test = "deviceId != null">
+                device_id,
+            </if>
+            <if test = "phoneBrand != null">
+                phone_brand,
+            </if>
+            <if test = "authorizeStatus != null">
+                authorize_status,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "managerId != null">
+                #{managerId},
+            </if>
+            <if test = "deviceId != null">
+                #{deviceId},
+            </if>
+            <if test = "phoneBrand != null">
+                #{phoneBrand},
+            </if>
+            <if test = "authorizeStatus != null">
+                #{authorizeStatus},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_shop_manager_device_config
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop_manager_device_config (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            manager_id,
+            device_id,
+            phone_brand,
+            authorize_status,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.managerId != null">
+                    #{item.managerId},
+                </if>
+                <if test="item.managerId == null">
+                    0 ,
+                </if>
+                <if test="item.deviceId != null">
+                    #{item.deviceId},
+                </if>
+                <if test="item.deviceId == null">
+                    '',
+                </if>
+                <if test="item.phoneBrand != null">
+                    #{item.phoneBrand},
+                </if>
+                <if test="item.phoneBrand == null">
+                    '',
+                </if>
+                <if test="item.authorizeStatus != null">
+                    #{item.authorizeStatus},
+                </if>
+                <if test="item.authorizeStatus == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="getShopManagerDevices" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        from legend_shop_manager_device_config
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+    </select>
+
+    <select id="getDevicesByShopIdAndManagerId" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        from legend_shop_manager_device_config
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and manager_id = #{managerId}
+        and authorize_status = 1
+    </select>
+
+    <update id = "updateDeviceConfigStatus">
+        update legend_shop_manager_device_config
+        set
+        gmt_modified = now(),
+        modifier = #{userId},
+        authorize_status = #{status}
+        where id = #{id}
+    </update>
+
+
+</mapper>

@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.insurance.InsuranceBillDao">
+
+    <resultMap id = "BaseResultMap" type = "InsuranceBill" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "order_id" property = "orderId" />
+        <result column = "service_id" property = "serviceId" />
+        <result column = "service_name" property = "serviceName" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "postscript" property = "postscript" />
+        <result column = "car_license" property = "carLicense" />
+        <result column = "car_brand_id" property = "carBrandId" />
+        <result column = "car_series_id" property = "carSeriesId" />
+        <result column = "car_models_id" property = "carModelsId" />
+        <result column = "car_brand" property = "carBrand" />
+        <result column = "car_series" property = "carSeries" />
+        <result column = "car_models" property = "carModels" />
+        <result column = "import_info" property = "importInfo" />
+        <result column = "customer_name" property = "customerName" />
+        <result column = "customer_mobile" property = "customerMobile" />
+        <result column = "vin" property = "vin" />
+        <result column = "insured" property = "insured" />
+        <result column = "insured_code" property = "insuredCode" />
+        <result column = "wound_part" property = "woundPart" />
+        <result column = "verification_code" property = "verificationCode" />
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "wound_snapshoot" property = "woundSnapshoot" />
+        <result column = "acceptance_snapshoot" property = "acceptanceSnapshoot" />
+        <result column = "company" property = "company" />
+        <result column = "mileage" property = "mileage" />
+        <result column = "audit_status" property = "auditStatus" />
+        <result column = "shop_act_id" property = "shopActId" />
+        <result column = "shop_confirm_status" property = "shopConfirmStatus" />
+        <result column = "bill_note" property = "billNote" />
+        <result column = "audit_pass_time" property = "auditPassTime" />
+        <result column = "act_tpl_id" property = "actTplId" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            order_id as orderId,
+            service_id as serviceId,
+            service_name as serviceName,
+            customer_id as customerId,
+            customer_car_id as customerCarId,
+            postscript as postscript,
+            car_license as carLicense,
+            car_brand_id as carBrandId,
+            car_series_id as carSeriesId,
+            car_models_id as carModelsId,
+            car_brand as carBrand,
+            car_series as carSeries,
+            car_models as carModels,
+            import_info as importInfo,
+            customer_name as customerName,
+            customer_mobile as customerMobile,
+            vin as vin,
+            insured as insured,
+            insured_code as insuredCode,
+            wound_part as woundPart,
+            verification_code as verificationCode,
+            img_url as imgUrl,
+            wound_snapshoot as woundSnapshoot,
+            acceptance_snapshoot as acceptanceSnapshoot,
+            company as company,
+            mileage as mileage,
+            audit_status as auditStatus,
+            shop_act_id as shopActId,
+            shop_confirm_status as shopConfirmStatus,
+            bill_note as billNote,
+            audit_pass_time as auditPassTime,
+            act_tpl_id as actTplId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test = "serviceId != null">
+                    and service_id = #{serviceId}
+                </if>
+                <if test = "serviceName != null">
+                    and service_name = #{serviceName}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test = "postscript != null">
+                    and postscript = #{postscript}
+                </if>
+                <if test = "carLicense != null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test = "carBrandId != null">
+                    and car_brand_id = #{carBrandId}
+                </if>
+                <if test = "carSeriesId != null">
+                    and car_series_id = #{carSeriesId}
+                </if>
+                <if test = "carModelsId != null">
+                    and car_models_id = #{carModelsId}
+                </if>
+                <if test = "carBrand != null">
+                    and car_brand = #{carBrand}
+                </if>
+                <if test = "carSeries != null">
+                    and car_series = #{carSeries}
+                </if>
+                <if test = "carModels != null">
+                    and car_models = #{carModels}
+                </if>
+                <if test = "importInfo != null">
+                    and import_info = #{importInfo}
+                </if>
+                <if test = "customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test = "customerMobile != null">
+                    and customer_mobile = #{customerMobile}
+                </if>
+                <if test = "vin != null">
+                    and vin = #{vin}
+                </if>
+                <if test = "insured != null">
+                    and insured = #{insured}
+                </if>
+                <if test = "insuredCode != null">
+                    and insured_code = #{insuredCode}
+                </if>
+                <if test = "woundPart != null">
+                    and wound_part = #{woundPart}
+                </if>
+                <if test = "verificationCode != null">
+                    and verification_code = #{verificationCode}
+                </if>
+                <if test = "imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test = "woundSnapshoot != null">
+                    and wound_snapshoot = #{woundSnapshoot}
+                </if>
+                <if test = "acceptanceSnapshoot != null">
+                    and acceptance_snapshoot = #{acceptanceSnapshoot}
+                </if>
+                <if test = "company != null">
+                    and company = #{company}
+                </if>
+                <if test = "mileage != null">
+                    and mileage = #{mileage}
+                </if>
+                <if test = "auditStatus != null">
+                    and audit_status = #{auditStatus}
+                </if>
+                <if test = "shopActId != null">
+                    and shop_act_id = #{shopActId}
+                </if>
+                <if test = "shopConfirmStatus != null">
+                    and shop_confirm_status = #{shopConfirmStatus}
+                </if>
+                <if test = "billNote != null">
+                    and bill_note = #{billNote}
+                </if>
+                <if test = "auditPassTime != null">
+                    and audit_pass_time = #{auditPassTime}
+                </if>
+                <if test = "actTplId != null">
+                    and act_tpl_id = #{actTplId}
+                </if>
+                <if test="auditPassStartTime != null">
+                    <![CDATA[
+                    and audit_pass_time >= #{auditPassStartTime}
+                    ]]>
+                </if>
+                <if test="auditPassEndTime != null">
+                    <![CDATA[
+                    and audit_pass_time <= #{auditPassEndTime}
+                    ]]>
+                </if>
+                <if test = "carLicenseLike != null">
+                    <![CDATA[
+                    and car_license like CONCAT('%',#{carLicenseLike},'%')
+                    ]]>
+                </if>
+                <if test = "customerNameLike != null">
+                    <![CDATA[
+                    and customer_name like CONCAT('%',#{customerNameLike},'%')
+                    ]]>
+                </if>
+                <if test = "customerMobileLike != null">
+                    AND customer_mobile LIKE CONCAT('%',#{customerMobileLike},'%')
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+                    and gmt_create >= #{startTime}
+                     ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+                    and gmt_create <= #{endTime}
+                     ]]>
+                </if>
+                <if test="keywords != null">
+                    and (
+                    car_license like CONCAT('%',#{keywords},'%')
+                    or customer_name like CONCAT('%',#{keywords},'%')
+                    or customer_mobile LIKE CONCAT('%',#{keywords},'%')
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "orderId != null">
+                    order_id = #{orderId},
+                </if>
+                <if test = "serviceId != null">
+                    service_id = #{serviceId},
+                </if>
+                <if test = "serviceName != null">
+                    service_name = #{serviceName},
+                </if>
+                <if test = "customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test = "customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test = "postscript != null">
+                    postscript = #{postscript},
+                </if>
+                <if test = "carLicense != null">
+                    car_license = #{carLicense},
+                </if>
+                <if test = "carBrandId != null">
+                    car_brand_id = #{carBrandId},
+                </if>
+                <if test = "carSeriesId != null">
+                    car_series_id = #{carSeriesId},
+                </if>
+                <if test = "carModelsId != null">
+                    car_models_id = #{carModelsId},
+                </if>
+                <if test = "carBrand != null">
+                    car_brand = #{carBrand},
+                </if>
+                <if test = "carSeries != null">
+                    car_series = #{carSeries},
+                </if>
+                <if test = "carModels != null">
+                    car_models = #{carModels},
+                </if>
+                <if test = "importInfo != null">
+                    import_info = #{importInfo},
+                </if>
+                <if test = "customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test = "customerMobile != null">
+                    customer_mobile = #{customerMobile},
+                </if>
+                <if test = "vin != null">
+                    vin = #{vin},
+                </if>
+                <if test = "insured != null">
+                    insured = #{insured},
+                </if>
+                <if test = "insuredCode != null">
+                    insured_code = #{insuredCode},
+                </if>
+                <if test = "woundPart != null">
+                    wound_part = #{woundPart},
+                </if>
+                <if test = "verificationCode != null">
+                    verification_code = #{verificationCode},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "woundSnapshoot != null">
+                    wound_snapshoot = #{woundSnapshoot},
+                </if>
+                <if test = "acceptanceSnapshoot != null">
+                    acceptance_snapshoot = #{acceptanceSnapshoot},
+                </if>
+                <if test = "company != null">
+                    company = #{company},
+                </if>
+                <if test = "mileage != null">
+                    mileage = #{mileage},
+                </if>
+                <if test = "auditStatus != null">
+                    audit_status = #{auditStatus},
+                </if>
+                <if test = "shopActId != null">
+                    shop_act_id = #{shopActId},
+                </if>
+                <if test = "shopConfirmStatus != null">
+                    shop_confirm_status = #{shopConfirmStatus},
+                </if>
+                <if test = "billNote != null">
+                    bill_note = #{billNote},
+                </if>
+                <if test = "auditPassTime != null">
+                    audit_pass_time = #{auditPassTime},
+                </if>
+                <if test = "actTplId != null">
+                    act_tpl_id = #{actTplId},
+                </if>
+
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_insurance_bill
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_insurance_bill
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_insurance_bill
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_insurance_bill
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_insurance_bill
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_insurance_bill
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_insurance_bill
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_insurance_bill (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "orderId != null">
+                order_id,
+            </if>
+            <if test = "serviceId != null">
+                service_id,
+            </if>
+            <if test = "serviceName != null">
+                service_name,
+            </if>
+            <if test = "customerId != null">
+                customer_id,
+            </if>
+            <if test = "customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test = "postscript != null">
+                postscript,
+            </if>
+            <if test = "carLicense != null">
+                car_license,
+            </if>
+            <if test = "carBrandId != null">
+                car_brand_id,
+            </if>
+            <if test = "carSeriesId != null">
+                car_series_id,
+            </if>
+            <if test = "carModelsId != null">
+                car_models_id,
+            </if>
+            <if test = "carBrand != null">
+                car_brand,
+            </if>
+            <if test = "carSeries != null">
+                car_series,
+            </if>
+            <if test = "carModels != null">
+                car_models,
+            </if>
+            <if test = "importInfo != null">
+                import_info,
+            </if>
+            <if test = "customerName != null">
+                customer_name,
+            </if>
+            <if test = "customerMobile != null">
+                customer_mobile,
+            </if>
+            <if test = "vin != null">
+                vin,
+            </if>
+            <if test = "insured != null">
+                insured,
+            </if>
+            <if test = "insuredCode != null">
+                insured_code,
+            </if>
+            <if test = "woundPart != null">
+                wound_part,
+            </if>
+            <if test = "verificationCode != null">
+                verification_code,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "woundSnapshoot != null">
+                wound_snapshoot,
+            </if>
+            <if test = "acceptanceSnapshoot != null">
+                acceptance_snapshoot,
+            </if>
+            <if test = "company != null">
+                company,
+            </if>
+            <if test = "mileage != null">
+                mileage,
+            </if>
+            <if test = "auditStatus != null">
+                audit_status,
+            </if>
+            <if test = "shopActId != null">
+                shop_act_id,
+            </if>
+            <if test = "shopConfirmStatus != null">
+                shop_confirm_status,
+            </if>
+            <if test = "billNote != null">
+                bill_note,
+            </if>
+            <if test = "auditPassTime != null">
+                audit_pass_time,
+            </if>
+            <if test = "actTplId != null">
+                act_tpl_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "orderId != null">
+                #{orderId},
+            </if>
+            <if test = "serviceId != null">
+                #{serviceId},
+            </if>
+            <if test = "serviceName != null">
+                #{serviceName},
+            </if>
+            <if test = "customerId != null">
+                #{customerId},
+            </if>
+            <if test = "customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test = "postscript != null">
+                #{postscript},
+            </if>
+            <if test = "carLicense != null">
+                #{carLicense},
+            </if>
+            <if test = "carBrandId != null">
+                #{carBrandId},
+            </if>
+            <if test = "carSeriesId != null">
+                #{carSeriesId},
+            </if>
+            <if test = "carModelsId != null">
+                #{carModelsId},
+            </if>
+            <if test = "carBrand != null">
+                #{carBrand},
+            </if>
+            <if test = "carSeries != null">
+                #{carSeries},
+            </if>
+            <if test = "carModels != null">
+                #{carModels},
+            </if>
+            <if test = "importInfo != null">
+                #{importInfo},
+            </if>
+            <if test = "customerName != null">
+                #{customerName},
+            </if>
+            <if test = "customerMobile != null">
+                #{customerMobile},
+            </if>
+            <if test = "vin != null">
+                #{vin},
+            </if>
+            <if test = "insured != null">
+                #{insured},
+            </if>
+            <if test = "insuredCode != null">
+                #{insuredCode},
+            </if>
+            <if test = "woundPart != null">
+                #{woundPart},
+            </if>
+            <if test = "verificationCode != null">
+                #{verificationCode},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "woundSnapshoot != null">
+                #{woundSnapshoot},
+            </if>
+            <if test = "acceptanceSnapshoot != null">
+                #{acceptanceSnapshoot},
+            </if>
+            <if test = "company != null">
+                #{company},
+            </if>
+            <if test = "mileage != null">
+                #{mileage},
+            </if>
+            <if test = "auditStatus != null">
+                #{auditStatus},
+            </if>
+            <if test = "shopActId != null">
+                #{shopActId},
+            </if>
+            <if test = "shopConfirmStatus != null">
+                #{shopConfirmStatus},
+            </if>
+            <if test = "billNote != null">
+                #{billNote},
+            </if>
+            <if test = "auditPassTime != null">
+                #{auditPassTime},
+            </if>
+            <if test = "actTplId != null">
+                #{actTplId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_insurance_bill
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <!-- 通过ID更新 -->
+    <update id="updateBills" parameterType="java.util.Map">
+        update legend_insurance_bill
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <if test = "shopConfirmStatus != null">
+                    shop_confirm_status = #{shopConfirmStatus},
+                </if>
+                <if test = "modifier != null and modifier != ''">
+                    modifier=#{modifier},
+                </if>
+                gmt_modified = now(),
+            </trim>
+        </set>
+        <where>
+            <if test="shopId != null">
+                shop_id = #{shopId}
+            </if>
+            <if test = "updateIds != null">
+                and id in
+                <foreach collection = "updateIds" item="item" index="index" open="(" separator="," close=")">
+                    ${item}
+                </foreach>
+            </if>
+            <if test = "shopActId != null">
+                AND shop_act_id = #{shopActId}
+            </if>
+        </where>
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_insurance_bill (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            order_id,
+            service_id,
+            service_name,
+            customer_id,
+            customer_car_id,
+            postscript,
+            car_license,
+            car_brand_id,
+            car_series_id,
+            car_models_id,
+            car_brand,
+            car_series,
+            car_models,
+            import_info,
+            customer_name,
+            customer_mobile,
+            vin,
+            insured,
+            insured_code,
+            wound_part,
+            verification_code,
+            img_url,
+            wound_snapshoot,
+            acceptance_snapshoot,
+            company,
+            mileage,
+            audit_status,
+            shop_act_id,
+            shop_confirm_status,
+            bill_note,
+            audit_pass_time,
+            act_tpl_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.orderId != null">
+                    #{item.orderId},
+                </if>
+                <if test="item.orderId == null">
+                    0 ,
+                </if>
+                <if test="item.serviceId != null">
+                    #{item.serviceId},
+                </if>
+                <if test="item.serviceId == null">
+                    0 ,
+                </if>
+                <if test="item.serviceName != null">
+                    #{item.serviceName},
+                </if>
+                <if test="item.serviceName == null">
+                    '',
+                </if>
+                <if test="item.customerId != null">
+                    #{item.customerId},
+                </if>
+                <if test="item.customerId == null">
+                    0 ,
+                </if>
+                <if test="item.customerCarId != null">
+                    #{item.customerCarId},
+                </if>
+                <if test="item.customerCarId == null">
+                    0 ,
+                </if>
+                <if test="item.postscript != null">
+                    #{item.postscript},
+                </if>
+                <if test="item.postscript == null">
+                    '',
+                </if>
+                <if test="item.carLicense != null">
+                    #{item.carLicense},
+                </if>
+                <if test="item.carLicense == null">
+                    '',
+                </if>
+                <if test="item.carBrandId != null">
+                    #{item.carBrandId},
+                </if>
+                <if test="item.carBrandId == null">
+                    0 ,
+                </if>
+                <if test="item.carSeriesId != null">
+                    #{item.carSeriesId},
+                </if>
+                <if test="item.carSeriesId == null">
+                    0 ,
+                </if>
+                <if test="item.carModelsId != null">
+                    #{item.carModelsId},
+                </if>
+                <if test="item.carModelsId == null">
+                    0 ,
+                </if>
+                <if test="item.carBrand != null">
+                    #{item.carBrand},
+                </if>
+                <if test="item.carBrand == null">
+                    '',
+                </if>
+                <if test="item.carSeries != null">
+                    #{item.carSeries},
+                </if>
+                <if test="item.carSeries == null">
+                    '',
+                </if>
+                <if test="item.carModels != null">
+                    #{item.carModels},
+                </if>
+                <if test="item.carModels == null">
+                    '',
+                </if>
+                <if test="item.importInfo != null">
+                    #{item.importInfo},
+                </if>
+                <if test="item.importInfo == null">
+                    '',
+                </if>
+                <if test="item.customerName != null">
+                    #{item.customerName},
+                </if>
+                <if test="item.customerName == null">
+                    '',
+                </if>
+                <if test="item.customerMobile != null">
+                    #{item.customerMobile},
+                </if>
+                <if test="item.customerMobile == null">
+                    '',
+                </if>
+                <if test="item.vin != null">
+                    #{item.vin},
+                </if>
+                <if test="item.vin == null">
+                    '',
+                </if>
+                <if test="item.insured != null">
+                    #{item.insured},
+                </if>
+                <if test="item.insured == null">
+                    '',
+                </if>
+                <if test="item.insuredCode != null">
+                    #{item.insuredCode},
+                </if>
+                <if test="item.insuredCode == null">
+                    '',
+                </if>
+                <if test="item.woundPart != null">
+                    #{item.woundPart},
+                </if>
+                <if test="item.woundPart == null">
+                    '',
+                </if>
+                <if test="item.verificationCode != null">
+                    #{item.verificationCode},
+                </if>
+                <if test="item.verificationCode == null">
+                    '',
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    '',
+                </if>
+                <if test="item.woundSnapshoot != null">
+                    #{item.woundSnapshoot},
+                </if>
+                <if test="item.woundSnapshoot == null">
+                    '',
+                </if>
+                <if test="item.acceptanceSnapshoot != null">
+                    #{item.acceptanceSnapshoot},
+                </if>
+                <if test="item.acceptanceSnapshoot == null">
+                    '',
+                </if>
+                <if test="item.company != null">
+                    #{item.company},
+                </if>
+                <if test="item.company == null">
+                    '',
+                </if>
+                <if test="item.mileage != null">
+                    #{item.mileage},
+                </if>
+                <if test="item.mileage == null">
+                    '',
+                </if>
+                <if test="item.auditStatus != null">
+                    #{item.auditStatus},
+                </if>
+                <if test="item.auditStatus == null">
+                    0 ,
+                </if>
+                <if test="item.shopActId != null">
+                    #{item.shopActId},
+                </if>
+                <if test="item.shopActId == null">
+                    0 ,
+                </if>
+                <if test="item.shopConfirmStatus != null">
+                    #{item.shopConfirmStatus},
+                </if>
+                <if test="item.shopConfirmStatus == null">
+                    0 ,
+                </if>
+                <if test="item.billNote != null">
+                    #{item.billNote},
+                </if>
+                <if test="item.billNote == null">
+                    '',
+                </if>
+                <if test="item.auditPassTime != null">
+                    #{item.auditPassTime},
+                </if>
+                <if test="item.auditPassTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.actTplId != null">
+                    #{item.actTplId},
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--安心保险-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcCarModelQueryService"
+                     id="rpcCarModelQueryService"
+                     version="${dubbo.insurance.version}" owner="yanxinyin"/>
+
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceBasicService"
+                     id="rpcInsuranceBasicService"
+                     version="${dubbo.insurance.version}" owner="yanxinyin"/>
+
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceCategoryService"
+                     id="rpcInsuranceCategoryService"
+                     version="${dubbo.insurance.version}" owner="yanxinyin"/>
+
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceFormService"
+                     id="rpcInsuranceFormService"
+                     version="${dubbo.insurance.version}" owner="yanxinyin"/>
+
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceRegionService"
+                     id="rpcInsuranceRegionService"
+                     version="${dubbo.insurance.version}" owner="yanxinyin"/>
+
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcPackageService" id="rpcPackageService"
+                     version="${dubbo.insurance.version}" owner="yanxinyin"/>
+
+    <!--安心保险：服务券相关接口-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceUserService"
+                     id="rpcInsuranceUserService"
+                     version="${dubbo.insurance.version}" owner="shenyang.zhou"/>
+    <!--安心保险：服务券核销相关接口-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcServiceItemService" id="rpcServiceItemService"
+                     version="${dubbo.insurance.version}" owner="shenyang.zhou"/>
+    <!--安心保险：门店选择的模式-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceShopConfigService"
+                     id="rpcInsuranceShopConfigService"
+                     version="${dubbo.insurance.version}" owner="shenyang.zhou"/>
+    <!--安心保险：门店选择的模式-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsurancePackageService"
+                     id="rpcInsurancePackageService"
+                     version="${dubbo.insurance.version}" owner="shenyang.zhou"/>
+    <!-- 安心保险: 虚拟保单相关接口-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceVirtualFormService"
+                     id="rpcInsuranceVirtualFormService"
+                     version="${dubbo.insurance.version}" owner="dehuang.zhang"/>
+    <!-- 安心保险: 虚拟保单相关接口-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.pay.RpcUserServicePackagePayService"
+                     id="rpcUserServicePackagePayService"
+                     version="${dubbo.insurance.version}" owner="dehuang.zhang"/>
+    <!--安心保险：淘汽对账-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceToServiceAccountService"
+                     id="rpcInsuranceToServiceAccountService"
+                     version="${dubbo.insurance.version}" owner="haojiahong"/>
+    <!--安心保险：淘汽对账-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcServiceToInsuranceAccountService"
+                     id="rpcServiceToInsuranceAccountService"
+                     version="${dubbo.insurance.version}" owner="haojiahong"/>
+    <!--安心保险：车牌校验-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcInsuranceLicenseService"
+                     id="rpcInsuranceLicenseService"
+                     version="${dubbo.insurance.version}" owner="shenyang.zhou"/>
+    <!-- 安心保险: 优惠券相关接口-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.coupon.RpcInsuranceCouponService" id="rpcInsuranceCouponService"
+                     version="${dubbo.insurance.version}" owner="dehuang.zhang"/>
+
+    <!-- 安心保险: 车辆信息查询-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.RpcVehicleInformationQueryService" id="rpcVehicleInformationQueryService"
+                     version="${dubbo.insurance.version}" owner="wenbing.zhu"/>
+
+    <!--壁虎车险：充值-->
+    <dubbo:reference interface="com.tqmall.insurance.service.smart.RpcSmartRechargeService" id="rpcSmartRechargeService"
+                     version="${dubbo.insurance.version}" owner="wenbing.zhu"/>
+    <!--壁虎车险：智能投保门店信息-->
+    <dubbo:reference interface="com.tqmall.insurance.service.smart.RpcSmartShopService" id="rpcSmartShopService"
+                     version="${dubbo.insurance.version}" owner="wenbing.zhu"/>
+    <!--壁虎车险：智能投保搜索-->
+    <dubbo:reference interface="com.tqmall.insurance.service.smart.RpcSmartSearchBiHuService" id="rpcSmartSearchBiHuService"
+                     version="${dubbo.insurance.version}" owner="wenbing.zhu"/>
+    <!--壁虎车险: 消费记录-->
+    <dubbo:reference interface="com.tqmall.insurance.service.smart.RpcSmartConsumeRecordService" id="rpcSmartConsumeRecordService"
+                     version="${dubbo.insurance.version}" />
+
+    <!--现金券-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.cashcoupon.RpcInsuranceCashCouponService" id="rpcInsuranceCashCouponService"
+                     version="${dubbo.insurance.version}" />
+
+
+    <!--现金券-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.offline.RpcInsuranceOffLineService" id="rpcInsuranceOffLineService"
+                     version="${dubbo.insurance.version}" />
+
+
+    <!--保单收货地址-->
+    <dubbo:reference interface="com.tqmall.insurance.service.insurance.address.RpcFormReceiveAddrService" id="rpcFormReceiveAddrService"
+                     version="${dubbo.insurance.version}" />
+
+</beans>

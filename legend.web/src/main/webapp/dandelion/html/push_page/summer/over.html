@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>预约超值套餐</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link type="text/css" rel="stylesheet" href="../../../css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../../../css/summer/over.css" />
+</head>
+<body>
+<div id="wrapper" class="wrapper">
+    <div class="updiv"></div>
+    <section class="conty">
+        <p><img src="../../../images/summer/b.gif"></p>
+        <h2>活动已过期</h2>
+        <p>请关注“淘汽云修”公众号<br>查看更多其他服务</p>
+    </section>
+    <div class="downdiv"></div>
+</div>
+<footer>
+    <nav></nav>
+    <section id="mask" class="mask">
+        <div id="around" class="around"></div>
+        <div id="layer" class="layer"></div>
+    </section>
+</footer>
+</body>
+<script src="../../../js/lib/zepto/zepto.min.js"></script>
+<script src="../../../js/lib/crypto/sha.js"></script>
+<script src="../../../js/lib/template.js"></script>
+<script src="../../../js/Dao.js"></script>
+<script>
+    var UA = window.navigator.userAgent.toLowerCase();
+    if(!UA.match(/Android|Mobile|iOS|iPhone/i)) {
+        location.href = "http://www.yunqixiu.com/legend/portal/dandelion/download";
+    }
+    App.init();
+    var height = Math.round(App.height / App.phoneScale);
+    $('#wrapper').height(height);
+    App.loadHide();
+</script>
+</html>

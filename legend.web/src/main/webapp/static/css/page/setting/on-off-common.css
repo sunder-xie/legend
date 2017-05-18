@@ -1,0 +1,97 @@
+/*
+* create by zmx 2016/12/06
+* 消息推送设置页面样式
+* 支付方式页面样式
+*/
+
+.content{
+    background: #fff;
+    border:1px solid #acacac;
+    padding: 0 10px 20px 10px;
+}
+.title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    overflow: hidden;
+    border-bottom: 1px solid #cacaca;
+}
+.title i{
+    display: inline-block;
+    margin-right:10px;
+    vertical-align: middle;
+    width: 2px;
+    height: 14px;
+    background: #999;
+}
+.left-box{
+    width: 392px;
+    padding:20px 10px;
+}
+.right-box{
+    width:404px;
+    padding-top: 55px;
+}
+.p-top{
+    padding-top: 25px;
+}
+.btn-group{
+    width: 300px;
+    height: 50px;
+    padding:8px 10px;
+    background: #eee;
+    border: 1px solid #cacaca;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+.btn-group img{
+    margin: 7px 10px 0 0 ;
+}
+.btn-group p{
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+}
+.on-off{
+    position: relative;
+    display: block;
+    width: 84px;
+    height: 30px;
+    background: #607b0a;
+    border-radius: 2px;
+    margin-left: 70px;
+}
+.on-off span{
+    display: block;
+    width: 42px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.on-off-btn{
+    position: absolute;
+    right: 2px;
+    top:2px;
+    width: 38px;
+    height: 26px;
+    background: #fff;
+    border-radius: 2px;
+}
+.right-box p{
+    line-height: 20px;
+}
+.off-btn{
+    position: absolute;
+    left: 2px;
+    top:2px;
+    width: 38px;
+    height: 26px;
+    background: #fff;
+    border-radius: 2px;
+}
+.red-color{
+    /*background: #607b0a;*/
+    background: #fd461e;
+}

@@ -1,0 +1,154 @@
+/**
+* 工单报价详情
+* zmx 2016-08-26
+*/
+i.fa {
+    font-style: normal;
+}
+
+.detail-box {
+    background: #f7f7f7;
+    border: 1px solid #cacaca;
+    padding: 10px;
+}
+
+.detail-form-box .show-grid {
+    margin: 0;
+}
+
+.detail-form-box {
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0 10px 10px 10px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-form-box .form-label {
+    width: 105px;
+}
+
+.detail-form-box .form-item {
+    width: 150px;
+}
+
+.detail-form-box .max-width {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.max-text {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.detail-form-box .item-width {
+    width: 680px;
+}
+
+.list-box {
+    background: #fff;
+    border: 1px solid #cacaca;
+    margin-top: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.list-box .yqx-table {
+    border-top: 1px solid #cacaca;
+}
+
+.list-title {
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.list-title a {
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+}
+
+.list-title span {
+    padding: 0 5px;
+}
+
+.add-goods {
+    margin: 10px 0;
+}
+
+.remarks {
+    margin-bottom: 10px;
+}
+
+.remarks .form-label {
+    width: 40px;
+}
+
+.remarks .form-item {
+    width: 750px;
+}
+
+.total {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.btn-box {
+    padding: 10px 0;
+    border-top: 1px solid #cacaca;
+}
+
+.order-panel-head {
+    background: #fff;
+    margin: -1px -10px 0 -10px;
+    border-bottom: 1px solid #cacaca;
+    height: 38px;
+}
+
+.tabCon {
+    display: none;
+}
+
+.service-table .tc-1 {
+    width: 100px;
+}
+
+.service-table .tc-2 {
+    width: 210px;
+}
+
+.service-table .tc-3,
+.service-table .tc-6,
+.goods-table .tc-5 {
+    width: 100px;
+}
+
+.service-table .tc-4{
+    width: 60px;
+}
+
+.goods-table .tc-2,
+.service-table .tc-5 {
+    width: 80px;
+}
+
+.goods-table .tc-3 {
+    width: 193px;
+}
+
+.goods-table .tc-8 {
+    width: 50px;
+}
+
+.goods-table .tc-9 {
+    width: 72px;
+}

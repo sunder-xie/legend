@@ -1,0 +1,60 @@
+/**
+ * ch 2016-03-11
+ * 排行榜列表页样式
+ */
+
+/* 此页面公用样式 start */
+.fl{float: left;}
+.fr{float: right;}
+/* 此页面公用样式 end */
+
+/* 列表页综合实力模块样式 start */
+.top-info{height: 247px;padding-left:125px;border:1px solid #cdcdcd;background: #fff;position: relative;padding-right: 20px;margin-bottom: 18px;}
+.top-info .info-1{border-bottom: 1px solid #cdcdcd;}
+.top-info .info-1 .row-1{padding-top: 30px;color:#333;font-weight: 900;font-size: 16px;}
+.top-info .info-1 .row-1 span.ce-num{font-size: 36px;color:#ff4d50;}
+.top-info .info-1 .row-1 span.ce-fuhao{font-size: 19px;color:#ff4d50;}
+.top-info .info-1 .row-2{padding-bottom: 30px;margin-top: 12px;}
+
+.top-info .info-2 {position: relative;}
+.top-info .info-2 .title{color: #333;font-weight: 900;padding-top:20px; }
+.top-info .info-2 .list li{margin-top:12px;}
+.top-info .info-2 .update-data-btn {position: absolute;left:240px;top:40px;border:1px solid #c1c1c1; padding: 6px 10px;border-radius: 3px;color: #666;}
+/* 列表页综合实力模块样式 end */
+
+/**
+ * 圆形进度条样式 start
+ */
+.circle-progress{position: absolute;width: 90px;height:90px;top:20px;left:20px;background: url(../../img/page/top-ranking/jiang-bei.png) no-repeat center;}
+/**
+ * 圆形进度条样式 end
+ */
+
+/**
+ * 硬件实力 && 运营实力公用样式 start
+ */
+.ranking-group{border:1px solid #cdcdcd;width: 483px;}
+.ranking-group .title-box{line-height: 42px;padding: 0 10px;background:#efefef;border-bottom:1px solid #cdcdcd;text-align: right;}
+.ranking-group .title-box .title{color: #333;font-weight: 900;font-size: 14px;float: left;}
+.ranking-group .title-box .right-link{color: #ff585a;text-decoration: underline;}
+.ranking-group .cont-box{min-height: 20px;background: #fff;padding: 20px;}
+
+.cont-box .info .txt-1{font-weight: 900;color: #333;}
+.cont-box .info .txt-2{color: #666;}
+.progress{height:10px;border-radius: 5px;background: #e5e5e5;width: 100%;margin-top: 10px;}
+.progress span{display: block;height:10px;background: #a7cc36;width: 80%;border-radius: 5px;}
+
+.cont-box .info-list li{margin-bottom: 20px;height:32px;}
+.cont-box .info-list li:last-child{margin-bottom: 0;}
+/**
+ * 硬件实力 && 运营实力公用样式 end
+ */
+
+
+/* 硬件实力 start */
+.hardware{margin-right: 10px;width: 483px;}
+/* 硬件实力 end */
+
+/* 硬件实力 start */
+.operate{width: 483px;}
+/* 硬件实力 end */

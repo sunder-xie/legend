@@ -1,0 +1,181 @@
+
+
+/*登录部分*/
+.login-bg{
+    width: 989px;
+    height: 454px;
+    background: url("../../../../static/img/page/sell/login_bg.jpg") no-repeat;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+.yx-title{
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    position: absolute;
+    top: 35px;
+    left: 178px;
+}
+.login-box{
+    width: 290px;
+    height: 350px;
+    position: absolute;
+    top:50px;
+    right:42px;
+    background: #fff;
+    border-radius: 2px;
+}
+.login-title{
+    background: #f6f7fc;
+    height: 44px;
+    line-height: 44px;
+    font-weight: bold;
+    color: #333;
+    padding-left: 23px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: 1px solid #d2d2d2;
+}
+.login-info{
+    width: 250px;
+    height: 273px;
+    margin: 20px 18px;
+}
+.input-wrap{
+    height: 35px;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.mobile-box{
+    width: 248px;
+}
+.code-box{
+    width: 168px;
+    float: left;
+    margin-right: 5px;
+}
+.input-wrap i{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-right: 1px solid #d8d8d8;
+    float: left;
+    background: url("../../../../static/img/page/sell/login-ico_01.png") no-repeat #f6f5f5;
+}
+.input-wrap i.mobile-ico{
+    background-position: 8px 8px;
+}
+.input-wrap i.code-ico1{
+    background-position: -22px 8px;
+}
+.input-wrap i.code-ico2{
+    background-position: -51px 8px;
+}
+.input-wrap input{
+    display:block;
+    height: 35px;
+    float: left;
+    border: none;
+    padding-left: 10px;
+}
+.input-wrap .mobile{
+    width: 200px;
+}
+.input-wrap .code{
+    width: 122px;
+}
+.code-num{
+    width: 72px;
+    height: 33px;
+    border: 1px solid #d8d8d8;
+    float: left;
+    border-radius: 2px;
+}
+.code-btn{
+    width: 72px;
+    height: 35px;
+    border: 1px solid #d9b600;
+    font-size: 12px;
+    float: left;
+    border-radius: 2px;
+    background: #ffd600;
+    text-align: center;
+    line-height: 33px;
+    color: #333;
+}
+.code-btn-disabled{
+    border: 1px solid #d8d8d8;
+    background: #f6f5f5;
+}
+.code-btn:hover{
+    color: #333;
+}
+.login-btn{
+    display: block;
+    width: 248px;
+    height: 40px;
+    background: #009df0;
+    border: 1px solid #0088d0;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.login-btn:hover{
+    color: #fff;
+}
+.login-tips{
+    margin-top: 33px;
+    line-height: 26px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+}
+.login-tips a{
+    display: inline-block;
+    font-weight: bold;
+    color: #009df0;
+    text-decoration: underline;
+}
+.attestation-ico{
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+    background: url("../../../../static/img/page/sell/login-ico_01.png") no-repeat;
+    background-position: -86px -2px;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+.attestation{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 25px auto 0 auto;
+}
+.certification-tip{
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    line-height: 50px;
+}
+.go-certification{
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: #009df0;
+    border:1px solid #0088d0;
+    border-radius: 4px;
+    margin:15px auto;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.go-certification:hover{
+    color: #fff;
+}

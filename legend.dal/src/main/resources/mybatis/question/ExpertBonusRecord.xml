@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.question.ExpertBonusRecordDao">
+
+    <resultMap id = "BaseResultMap" type = "ExpertBonusRecord" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "user_id" property = "userId" />
+        <result column = "question_id" property = "questionId" />
+        <result column = "answer_id" property = "answerId" />
+        <result column = "bonus_name" property = "bonusName" />
+        <result column = "bonus_amount" property = "bonusAmount" />
+        <result column = "action_type" property = "actionType" />
+        <result column = "record_status" property = "recordStatus" />
+        <result column = "withdraw_id" property = "withdrawId" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            user_id as userId,
+            question_id as questionId,
+            answer_id as answerId,
+            bonus_name as bonusName,
+            bonus_amount as bonusAmount,
+            action_type as actionType,
+            record_status as recordStatus,
+            withdraw_id as withdrawId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test = "questionId != null">
+                    and question_id = #{questionId}
+                </if>
+                <if test = "answerId != null">
+                    and answer_id = #{answerId}
+                </if>
+                <if test = "bonusName != null">
+                    and bonus_name = #{bonusName}
+                </if>
+                <if test = "bonusAmount != null">
+                    and bonus_amount = #{bonusAmount}
+                </if>
+                <if test = "actionType != null">
+                    and action_type = #{actionType}
+                </if>
+                <if test = "recordStatus != null">
+                    and record_status = #{recordStatus}
+                </if>
+                <if test = "withdrawId != null">
+                    and withdraw_id = #{withdrawId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "userId != null">
+                    user_id = #{userId},
+                </if>
+                <if test = "questionId != null">
+                    question_id = #{questionId},
+                </if>
+                <if test = "answerId != null">
+                    answer_id = #{answerId},
+                </if>
+                <if test = "bonusName != null">
+                    bonus_name = #{bonusName},
+                </if>
+                <if test = "bonusAmount != null">
+                    bonus_amount = #{bonusAmount},
+                </if>
+                <if test = "actionType != null">
+                    action_type = #{actionType},
+                </if>
+                <if test = "recordStatus != null">
+                    record_status = #{recordStatus},
+                </if>
+                <if test = "withdrawId != null">
+                    withdraw_id = #{withdrawId},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_expert_bonus_record
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_expert_bonus_record
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_expert_bonus_record
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_expert_bonus_record
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_expert_bonus_record
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_expert_bonus_record
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_expert_bonus_record
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_expert_bonus_record (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "userId != null">
+                user_id,
+            </if>
+            <if test = "questionId != null">
+                question_id,
+            </if>
+            <if test = "answerId != null">
+                answer_id,
+            </if>
+            <if test = "bonusName != null">
+                bonus_name,
+            </if>
+            <if test = "bonusAmount != null">
+                bonus_amount,
+            </if>
+            <if test = "actionType != null">
+                action_type,
+            </if>
+            <if test = "recordStatus != null">
+                record_status,
+            </if>
+            <if test = "withdrawId != null">
+                withdraw_id,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "userId != null">
+                #{userId},
+            </if>
+            <if test = "questionId != null">
+                #{questionId},
+            </if>
+            <if test = "answerId != null">
+                #{answerId},
+            </if>
+            <if test = "bonusName != null">
+                #{bonusName},
+            </if>
+            <if test = "bonusAmount != null">
+                #{bonusAmount},
+            </if>
+            <if test = "actionType != null">
+                #{actionType},
+            </if>
+            <if test = "recordStatus != null">
+                #{recordStatus},
+            </if>
+            <if test = "withdrawId != null">
+                #{withdrawId},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_expert_bonus_record
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_expert_bonus_record (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            user_id,
+            question_id,
+            answer_id,
+            bonus_name,
+            bonus_amount,
+            action_type,
+            record_status,
+            withdraw_id,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.userId != null">
+                    #{item.userId},
+                </if>
+                <if test="item.userId == null">
+                    0 ,
+                </if>
+                <if test="item.questionId != null">
+                    #{item.questionId},
+                </if>
+                <if test="item.questionId == null">
+                    0 ,
+                </if>
+                <if test="item.answerId != null">
+                    #{item.answerId},
+                </if>
+                <if test="item.answerId == null">
+                    0 ,
+                </if>
+                <if test="item.bonusName != null">
+                    #{item.bonusName},
+                </if>
+                <if test="item.bonusName == null">
+                    '',
+                </if>
+                <if test="item.bonusAmount != null">
+                    #{item.bonusAmount},
+                </if>
+                <if test="item.bonusAmount == null">
+                    0.00,
+                </if>
+                <if test="item.actionType != null">
+                    #{item.actionType},
+                </if>
+                <if test="item.actionType == null">
+                    0 ,
+                </if>
+                <if test="item.recordStatus != null">
+                    #{item.recordStatus},
+                </if>
+                <if test="item.recordStatus == null">
+                    0 ,
+                </if>
+                <if test="item.withdrawId != null">
+                    #{item.withdrawId},
+                </if>
+                <if test="item.withdrawId == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <!--统计总金额-->
+    <select id="selectSumAmount" resultType="java.math.BigDecimal">
+        select sum(bonus_amount) from legend_expert_bonus_record
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!--批量更新-->
+    <update id="batchUpdateToWithdraw">
+        update legend_expert_bonus_record
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <if test="withdrawId != null">
+                    withdraw_id=#{withdrawId},
+                </if>
+                <if test="recordStatus != null">
+                    record_status = #{recordStatus},
+                </if>
+            </trim>
+        </set>
+        where id in
+        (
+        <foreach collection="ids" item="item" index="index" separator=",">
+            #{item}
+        </foreach>
+        )
+    </update>
+</mapper>

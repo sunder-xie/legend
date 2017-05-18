@@ -1,0 +1,131 @@
+/*
+ * sky 2016-04-07
+ * 公共 下拉列表样式
+ */
+
+/*-----公共 下拉列表 样式 start-------*/
+.yqx-downlist-wrap {
+    display: inline-block;
+}
+
+.yqx-downlist-panel {
+    position: absolute;
++ left: 0;
++ top: 38 px;
+    z-index: 15;
+    width: auto;
+    font-size: 12px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #ccc;
+}
+
+.yqx-downlist-panel .xqy-downlist-tools {
+    margin: -1px -1px 2px;
+}
+
+.yqx-downlist-panel ul.yqx-downlist-title {
+    background: #f9f9f9;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.yqx-downlist-panel ul.yqx-downlist-content {
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.yqx-downlist-panel > ul.yqx-downlist-title > li {
+    height: 35px;
+}
+
+.yqx-downlist-panel > ul.yqx-downlist-content > li {
+    height: 30px;
+    border-bottom: 1px solid #d6d6d6;
+    cursor: pointer;
+}
+
+.yqx-downlist-panel > ul.yqx-downlist-content > li:last-of-type {
+    border-bottom: none;
+}
+
+/*.yqx-downlist-panel ul.yqx-downlist-content li:hover, */
+.yqx-downlist-panel ul.yqx-downlist-content li.current {
+    color: #fff;
+    background: #607b0a;
+}
+
+.yqx-downlist-panel ul li b,
+.yqx-downlist-panel ul li span {
+    display: inline-block;
++ display: inline;
++ zoom: 1;
+    width: 49%;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.yqx-downlist-panel .yqx-downlist-bottom {
+    padding: 5px 6px 0 0;
+    text-align: center;
+    border-top: 1px solid #d6d6d6;
+}
+
+.yqx-downlist-panel .yqx-downlist-bottom .yqx-downlist-btn {
+    display: inline-block;
+    margin-right: 8px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.yqx-downlist-panel .yqx-dl-no-data .yqx-dl-no-data-tips {
+    padding: 10px 5px;
+    line-height: 1.4;
+    text-align: center;
+    color: #fa482c;
+}
+
+.yqx-downlist-panel .yqx-downlist-clear-btn {
+    width: 100%;
+    background: #F5F5F5;
+    padding: 8px 0;
+}
+
+.yqx-downlist-panel .yqx-downlist-clear-btn:hover {
+    color: #607b0a;
+}
+
+/* 滚动条样式 start */
+.yqx-downlist-content::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.yqx-downlist-content::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #ccc;
+}
+
+.yqx-downlist-content::-webkit-scrollbar-track {
+    background: #F5F5F5;
+}
+
+.yqx-downlist-content::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* 滚动条样式 end */
+
+/*------公共 下拉列表 样式 end-------*/

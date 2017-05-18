@@ -1,0 +1,199 @@
+.qxy_btn {
+    margin-right: 6px;
+}
+
+.tongji {
+    padding: 0 0 10px;
+}
+
+.tongji > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+
+.tongji > em {
+    font-size: 18px;
+    color: #999999;
+}
+
+.bx_cont {
+    padding: 5px 0 15px;
+    margin-bottom: 50px;
+    overflow-x: auto;
+}
+
+.bx_cont table {
+    background: #FFFFFF;
+}
+
+.bx_cont table th {
+    font-size: 14px;
+}
+
+.bx_cont table th, .bx_cont table td {
+    padding: 10px 14px;
+    white-space: nowrap;
+    text-align: center;
+    /* color: #333333; */
+    border: 1px solid #cdcdcd;
+}
+
+.stats_list {
+    overflow-x: auto;
+}
+
+.stats_list table {
+    background: #fff;
+}
+
+.stats_list table td,
+.stats_list table th {
+    padding: 10px 14px;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+
+}
+
+.even_backgroud {
+    background: #efefef;
+}
+
+/*打印样式*/
+.print_lable {
+    text-align: -webkit-right;
+}
+
+.print_lable_adr {
+    margin-right: 120px;
+    margin-top: -15px;
+}
+
+.print_lable_adr_right {
+    margin-top: -15px;
+    /*margin-top: -20px;*/
+}
+.print_lable_bottom{
+    text-align: -webkit-right;
+    margin-top: -15px;
+}
+.tq_print_logo {
+    width: 100px;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.tq_print_logo img {
+    width: 100%;
+    height: 100%;
+    border:0;
+}
+.head {
+    width:100%;
+    background-color:#fff;
+}
+.head h1, .head h3 {
+    padding: 0 102px;
+}
+h1, h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+.headInfo span {
+    display:inline-block;
+    margin-right:6px;
+    white-space: nowrap;
+}
+.headInfo .customName {
+    width:315px;
+}
+.headInfo .salesDate {
+    float:right;
+}
+table {
+    width: 100%;
+    border-collapse:collapse;
+    border:1px solid #000;
+}
+td, th {
+    height:20px;
+    line-height:20px;
+    font-size: 14px;
+    border-top:1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.signature {
+    width:100%;
+    padding:10px 0;
+    margin-bottom: 20px;
+    background-color:#fff;
+    overflow: hidden;
+}
+.signature span {
+    display: inline-block;
+    margin-right: 6px;
+}
+.sign_date {
+    float:right;
+}
+
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+/*分车型出入汇总统计报表*/
+.top_text {
+    margin-top: -16px;
+    margin-left: 200px;
+}
+.bottom_text{
+    margin-left: 400px;
+    margin-top: -16px;
+}
+.top_time{
+    margin-left: 100px;
+}
+/* 统计报表左右按钮样式 start */
+.qxy_right .go_left_or_right{
+    visibility: hidden;
+    position:fixed;color:#fff;text-align:center;z-index: 3;opacity: 0.5;
+}
+.qxy_right .go_left{
+    border-left:25px solid transparent;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    border-right:25px solid #999;
+}
+.qxy_right .go_right{
+    border-right:25px solid transparent;
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    border-left:25px solid #999;
+}
+.qxy_right .go_left_or_right:hover{
+    opacity: 1;
+}
+.qxy_right .stats_list:hover .go_left_or_right,
+.qxy_right .table_content:hover .go_left_or_right{
+    visibility: visible;
+}
+/* 统计报表左右按钮样式 end */
+.stats_menu{
+    float:left;
+}
+.top_msg{
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.top_msg span{
+    margin-right: 20px;
+}

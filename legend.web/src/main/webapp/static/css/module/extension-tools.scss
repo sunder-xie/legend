@@ -1,0 +1,72 @@
+/**
+ * Created by sky on 2017/2/22.
+ */
+
+@import "../common/var";
+
+.extension-tools {
+  position: fixed;
+  top: 180px;
+  right: 10px;
+  z-index: 100;
+
+  @at-root {
+    .extension-tool {
+      position: relative;
+      height: 40px;
+    }
+
+    .extension-absolute {
+      position: absolute;
+      right: 0;
+    }
+
+    .extension-box {
+      padding: 9px 4px 4px 9px;
+      line-height: 0;
+      text-align: center;
+      white-space: nowrap;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 1px;
+      cursor: pointer;
+
+      .extension-icon {
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        vertical-align: middle;
+      }
+
+      .extension-text {
+        display: none;
+        margin-left: 7px;
+        vertical-align: middle;
+        color: #fff;
+      }
+
+      .shortcut-icon {
+        background: getUrl('/img/common/shortcut/shortcut.png') no-repeat 0 0;
+      }
+
+      /** hover **/
+
+      &:hover {
+        padding-right: 11px;
+        padding-left: 11px;
+        background: #9fc527;
+        border-color: #7fa700;
+
+        .extension-text {
+          display: inline-block;
+        }
+
+        .shortcut-icon {
+          background-position: 0 -31px;
+        }
+      }
+    }
+  }
+}
+
+

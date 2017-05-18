@@ -1,0 +1,88 @@
+.upload_btn{font-size: 50px;color: #fff;font-weight: bolder;}
+.img_box{float: left;line-height: 38px;padding-left: 5px;}
+.work_time div,
+.upload_img div{text-indent: 10px;position: relative;}
+.work_time div:after{content: "*";position: absolute;color: red;top:0;right:0;font-size: 14px;}
+.qxy_form .tips{color:gray;}
+.qxy_form .p100 .form_item{height:25px;line-height: 25px;}
+.qxy_form .p100{padding-left: 100px;margin-bottom: 0;}
+
+.img_item{float:left;width:120px;margin-right: 20px;position: relative;margin-top:20px;}
+
+.img_item_inner,
+.img_add_btn{width: 100%;height:120px;}
+
+
+.img_item_name{width: 122px;text-align: center;margin-top: 5px;}
+.img_item_name .qxy_input{text-align: center;padding: 0;}
+.img_item_inner{border: 1px solid #dcdcdc;background: #fff;}
+.img_add_btn{border: 1px dashed #dcdcdc;background: #fff url(../../img/page/member/img_add_btn.png) no-repeat center ;cursor: pointer;border-radius: 0;}
+.img_add_btn:hover{background: #fff url(../../img/page/member/img_add_btn.png) no-repeat center ;}
+.img_add_btn input{cursor: pointer;}
+
+.img_del_btn{position: absolute;width: 20px;height: 20px;background: url(../../img/page/member/img_del_btn.png) no-repeat center ;top:-10px;right:-10px;}
+
+.uploadifive-queue{display: none;}
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    display: none;
+    max-width: 276px;
+    padding: 1px;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    white-space: normal
+}
+
+#map{height:600px;}
+
+.img_item_sa{
+    position: relative;
+}
+
+
+/*--- 专修品牌 start --- */
+.majorCarBrand_item{float: left;border: 1px solid #ccc;border-radius: 4px;margin-left:10px;padding: 0 10px;position: relative;height:36px;}
+.majorCarBrand_item i{position: absolute; width: 20px; height: 20px; background: url(../../img/page/member/img_del_btn.png) no-repeat center; top: -10px; right: -10px;cursor: pointer;} /*--- 专修品牌 end --- */
+
+.img_sort {
+    position: relative;
+    top: -135px;
+    left:0;
+    height:120px;
+    background:#7f7f7f;
+    opacity: .8;
+}
+.img_sort span {
+    width:25px;
+    height:25px;
+    display:inline-block;
+    cursor: pointer;
+}
+.img_sort .left_sort {
+    position:relative;
+    top:50px;
+    left:6px;
+    background: url(../../../img/page/member/app_sort_left_1.png) no-repeat center;
+}
+.img_sort .left_sort:hover {
+    background: url(../../../img/page/member/app_sort_left_2.png) no-repeat center;
+}
+.img_sort .right_sort {
+    position:relative;
+    top:50px;
+    left:60px;
+    background: url(../../../img/page/member/img_sort_right_1.png) no-repeat center;
+}
+.img_sort .right_sort:hover {
+    background: url(../../../img/page/member/img_sort_right_2.png) no-repeat center;
+}

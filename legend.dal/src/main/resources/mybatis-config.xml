@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!--maxWait: 超时等待时间以毫秒为单位 此处设置30秒-->
+        <property name="maxWait" value="30000"/>
+        <!--maxActive: 最大连接数量-->
+        <property name="maxActive" value="30"/>
+        <!--minIdle: 最小空闲连接-->
+        <property name="minIdle" value="0"/>
+        <!--initialSize: 初始化连接数量-->
+        <property name="initialSize" value="1"/>
+        <!-- 移除废弃连接时打印废弃连接的回收日志 -->
+        <property name="logAbandoned" value="true"/>
+        <!--removeAbandoned: 是否自动回收废弃连接-->
+        <property name="removeAbandoned"  value="true"/>
+        <!--removeAbandonedTimeout: 自动回收废弃连接的超时时间(以秒数为单位) 这里设置10分钟。removeAbandonedTimeout(链接泄漏)-->
+        <property name="removeAbandonedTimeout" value="600"/>
+        <!-- 空闲连接回收器线程休眠的时间值,以毫秒为单位. 这里设置10分钟-->
+        <property name="timeBetweenEvictionRunsMillis" value="600000"/>
+        <!--连接在池中空闲连接超时时间 毫秒为单位 默认值：半小时(1000 * 60 * 3) 这里设置20分钟。minEvictableIdleTimeMillis(针对空闲链接)-->
+        <property name="minEvictableIdleTimeMillis" value="1200000"/>
+
+        <!-- 检查连接的sql -->
+        <property name="validationQuery" value="SELECT 1"/>
+        <!-- 检查连接sql超时时间 秒为单位-->
+        <property name="validationQueryTimeout" value="5"/>
+    </bean>
+
+    <bean id="dataSourceBI" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${bi.jdbc.driverClassName}"/>
+        <property name="url" value="${bi.jdbc.url}"/>
+        <property name="username" value="${bi.jdbc.username}"/>
+        <property name="password" value="${bi.jdbc.password}"/>
+        <!--maxWait: 超时等待时间以毫秒为单位 此处设置30秒-->
+        <property name="maxWait" value="30000"/>
+        <!--maxActive: 最大连接数量-->
+        <property name="maxActive" value="30"/>
+        <!--minIdle: 最小空闲连接-->
+        <property name="minIdle" value="0"/>
+        <!--initialSize: 初始化连接数量-->
+        <property name="initialSize" value="1"/>
+        <!-- 移除废弃连接时打印废弃连接的回收日志 -->
+        <property name="logAbandoned" value="true"/>
+        <!--removeAbandoned: 是否自动回收废弃连接-->
+        <property name="removeAbandoned"  value="true"/>
+        <!--removeAbandonedTimeout: 自动回收废弃连接的超时时间(以秒数为单位) 这里设置10分钟。removeAbandonedTimeout(链接泄漏)-->
+        <property name="removeAbandonedTimeout" value="600"/>
+        <!-- 空闲连接回收器线程休眠的时间值,以毫秒为单位. 这里设置10分钟-->
+        <property name="timeBetweenEvictionRunsMillis" value="600000"/>
+        <!--连接在池中空闲连接超时时间 毫秒为单位 默认值：半小时(1000 * 60 * 3) 这里设置20分钟。minEvictableIdleTimeMillis(针对空闲链接)-->
+        <property name="minEvictableIdleTimeMillis" value="1200000"/>
+        <!-- 检查连接的sql -->
+        <property name="validationQuery" value="SELECT 1"/>
+        <!-- 检查连接sql超时时间 秒为单位-->
+        <property name="validationQueryTimeout" value="5"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManagerLegend"/>
+
+    <bean id="transactionManagerLegend" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+        <qualifier value="transaction" />
+    </bean>
+
+	<!-- MyBatis配置 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
+		<property name="typeAliasesPackage" value="com.tqmall.legend.entity" />
+		<!-- 显式指定Mapper文件位置 -->
+		<property name="mapperLocations" value="classpath*:/mybatis/**/*.xml" />
+	</bean>
+
+    <!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.tqmall.legend.dao" />
+		<property name="annotationClass" value="com.tqmall.legend.dao.common.MyBatisRepository" />
+	</bean>
+
+    <tx:annotation-driven transaction-manager="transactionManagerBI"/>
+
+    <bean id="transactionManagerBI" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSourceBI"/>
+        <qualifier value="transactionBI"/>
+    </bean>
+
+    <!-- MyBatis配置 -->
+    <bean id="sqlSessionFactoryBI" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceBI"/>
+        <!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
+        <property name="typeAliasesPackage" value="com.tqmall.legend.bi.entity"/>
+        <!-- 显式指定Mapper文件位置 -->
+        <property name="mapperLocations" value="classpath:/bi/mybatis/**/*.xml"/>
+    </bean>
+
+    <!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBI"/>
+        <property name="basePackage" value="com.tqmall.legend.bi.dao"/>
+        <property name="annotationClass" value="com.tqmall.legend.dao.common.MyBatisRepository"/>
+    </bean>
+
+</beans>

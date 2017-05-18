@@ -1,0 +1,296 @@
+.top_right_btn{float: right;
+    margin-top: -54px;}
+.top_left_btn{
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.btn_color_green{
+    background: #8fb027;
+}
+.disabled {
+    cursor: not-allowed;
+    background: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#f5f5f5)) !important;
+}
+
+.wx_box {
+    background: #ebe6cd;
+    border: 1px solid #c1bda9;
+    margin-bottom: 10px;
+}
+.b_green {
+    background: #e1e6d3;
+}
+.b_blue {
+    background: #d3e2e6;
+}
+.wx_tr {
+    float: right;
+    cursor: pointer;
+    height: 100%;
+    width: 878px;
+    border-left: 1px solid #c1bda9;
+    background: url("../../img/page/settlement/xj.gif") no-repeat 850px;
+}
+.gsf{
+    width: 75px !important;
+    text-align: center;
+}
+.gsyh{
+    width: 75px !important;
+    text-align: center;
+}
+.ysgsf{
+    width: 75px !important;
+    text-align: center;
+}
+.clf{
+    width: 75px !important;
+    text-align: center;
+}
+.clyh{
+    width: 75px !important;
+    text-align: center;
+}
+.cbhj{
+    width: 75px !important;
+    text-align: center;
+}
+.fjfy{
+    width: 75px !important;
+    text-align: center;
+}
+.hi{
+    height:1px;
+}
+.gdbh {
+    margin-top: -20px;
+    color: #a4a4a4;
+    height: 12px;
+}
+a.balance_history_btn {
+    float: left;
+    color: #1d38cf;
+    text-decoration: underline;
+    /*margin-left: 18px;*/
+}
+a.balance_sign {
+    float: right;
+    color: #ff0000;
+    /*margin-right: 18px;*/
+}
+/*历史结算展示 start*/
+.hb_cont {
+    overflow: auto;
+    max-height: 500px;
+}
+.hb_tit {
+    width: 850px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    font-size: 20px;
+    background: #f6f2e7;
+    border-bottom: 1px solid #dadada;
+}
+
+.hb_info {
+    margin: 0 30px;
+    border-bottom: 1px solid #dadada;
+    padding: 20px 0;
+    overflow: auto;
+}
+
+.hb_balance {
+    margin-bottom: 5px;
+    font-size:16px;
+}
+
+.hb_balance span {
+    color:#f00;
+}
+
+.hb_sign_info li {
+    width:50%;
+    margin-bottom: 5px;
+    float:left;
+    font-size:16px;
+}
+
+.hb_postscript {
+    margin-bottom: 5px;
+    line-height:20px;
+    width:100%;
+    font-size:16px;
+}
+/*历史结算展示 end*/
+
+/*预付款 start*/
+.jc_x{
+    padding-left: 22px;
+    overflow: auto;
+    max-height: 350px;
+    padding-bottom: 15px;
+}
+.yf_k {
+    width: 100%;
+    background: #fff;
+}
+.yf_k .jian {
+    background-image: url("../../img/page/settlement/abx.gif");
+}
+.js_tit {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #504f4b;
+    text-align: center;
+    vertical-align: bottom;
+    background-color: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+}
+ .tips{
+    font-size:13px!important;
+     font-weight:normal!important;
+}
+.button_commen_abc{
+    height:24px;
+    font-size:13px;
+    border-radius:2px;
+    cursor:pointer;
+    padding:0 10px;
+    line-height:24px;
+    border:1px solid #c1c1c1;
+}
+.button_ad_qx{
+    position:absolute;
+    left:15px;
+    top:15px;
+    width:70px;
+    color:#666666;
+    background:#f8f8f8;
+
+}
+.dialog_title{
+    line-height:25px;
+    font-size:18px;
+    color:#535353;
+    font-weight:bold;
+}
+.button_ad_bc{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:70px;;
+    color:#f8f8f8;
+    background:#8fb027;}
+.js_cont {
+    padding: 15px 25px;
+    max-height:400px;
+    overflow:auto;
+}
+.jc_x span {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px;
+}
+li .chosen-container{margin:0 !important;}
+.wi103 {
+    width: 103px;
+}
+.btnj {
+    width: 20px;
+    height: 37px;
+    cursor: pointer;
+    background: url("../../img/page/settlement/ab.gif") no-repeat right;
+}
+.pre_btnjforJs {
+    width: 20px;
+    height: 37px;
+    cursor: pointer;
+    background: url("../../img/page/settlement/ab.gif") no-repeat right;
+}
+.btnj.jian, .pre_btnjforJs.jian {
+    background-image: url("../../img/page/settlement/abx.gif");
+}
+.jc_xb {
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+}
+.jc_xb .yufu_Je{margin-left: 30px;}
+.jc_ren{margin-left:4px;}
+.jc_select_back{width: 98px !important;height: 35px; color: #535353; font-size: 12px; border: 1px solid #dadada; border-radius: 3px;padding:0 10px;} 
+.jc_txt {
+    padding:0 10px;
+    height: 35px;
+    color: #535353;
+    font-size: 12px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+.jc_select{
+    height: 37px;
+    color: #535353;
+    font-size: 12px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+.jc_xm_for_fangshi {
+    padding-top: 10px;
+}
+.jc_xsp {
+    display: inline-block;
+    line-height: 37px;
+    width: 75px;
+}
+.js_mb button {
+    width: 139px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0 12px;
+}
+.pre_js_ok {
+    margin-right: 20px;
+    background: #8fb027;
+}
+.pre_js_no {
+    /*background: #f77c7e;*/
+}
+.js_mb {
+    padding: 20px 0;
+    text-align: center;
+}
+.yfk_a{
+    width:410px;
+}
+/*预付款 end*/
+
+/*预付款弹框内下拉框样式 start */		
+.jc_tsug {
+    position: absolute;
+    left: 64px;
+    top: 36px;
+    width: 258px;
+    height: 150px;
+    border: 1px solid #dadada;
+    background: #ffffff;
+    display: none;
+    overflow: auto;
+}
+.jc_tsug a {
+    display: block;
+    line-height: 22px;
+    padding-left: 10px;
+}
+.jc_tsug a:hover {
+    color: #ffffff;
+    background: #0a30f1;
+}
+/*预付款弹框内下拉框样式 end */
+/*---结算查看工单详情第一个group下边外距 start---*/
+.group_bottom_space{margin-bottom: 30px;}
+/*---结算查看工单详情第一个group下边外距 end---*/

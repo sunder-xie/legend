@@ -1,0 +1,184 @@
+.wrapper {
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+
+.right {
+    float: right;
+    width: 825px;
+}
+
+.right p.big-title {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dddddd;
+}
+
+.goBack {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+}
+.no-data{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.contain-wrap {
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.rebate-li {
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    position: relative;
+}
+
+.rebate-li span.rebate-li-title {
+    width: 75px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.checkbox-li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.selectBox {
+    min-width: 500px;
+    height: 35px;
+    vertical-align: middle;
+    border: 1px solid #c9c9c9;
+    padding-left: 5px;
+    border-radius: 3px;
+    color: #999999;
+    cursor: pointer;
+}
+
+.select-ul {
+    width: 505px;
+    position: absolute;
+    top: 55px;
+    left: 92px;
+    background-color: #ffffff;
+    z-index: 99;
+    border: 1px solid #c9c9c9;
+    font-size: 13px;
+    border-radius: 0 0 3px 3px;
+}
+
+.select-ul li {
+    height: 35px;
+    padding-left: 10px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.select-ul li:hover {
+    background-color: #80a61e;
+    color: #ffffff;
+}
+
+.rebate-li-div {
+    position: relative;
+}
+
+#customize {
+    margin: 20px 0 0 91px;
+}
+
+.rebate-selectBox {
+    margin: 20px 0 0 92px;
+}
+
+.s_up, .s_down {
+    display: inline-block;
+    width: 32px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 154px;
+    margin-top: -8px;
+    border-left: 1px solid #c9c9c9;
+}
+
+.s_up {
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px;
+}
+
+.s_down {
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px;
+}
+
+.fee-box {
+    width: 145px;
+    height: 35px;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    padding-left: 5px;
+    color: #999999;
+    margin: 0 30px 0 0;
+}
+
+.count-button {
+    width: 88px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #fa7b7c;
+    color: #ffffff;
+    border: 1px solid #f55d5e;
+    border-radius: 2px;
+    margin: 20px 0 20px 88px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.count-result-title {
+    margin: 0 0 10px 88px;
+    color: #666666;
+}
+
+.count-result-box {
+    width: 803px;
+    min-height: 73px;
+    background-color: #f9f9f9;
+    margin: 0 auto 50px auto;
+    padding: 20px 0 0 88px;
+    color: #999999;
+    box-sizing: border-box;
+}
+
+.dis-none {
+    display: none;
+}
+
+p.red_color{
+    color: #f55d5e;
+    font-size: 18px;
+}

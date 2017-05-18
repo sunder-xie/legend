@@ -1,0 +1,118 @@
+.yqx-input {
+    padding: 0;
+}
+
+.input-search .yqx-input {
+    padding-right: 30px;
+    width: 110px;
+}
+
+.input-search .yqx-input {
+    text-indent: 5px;
+}
+
+.icon-search {
+    font-size: 14px;
+}
+
+.feedback-list {
+    padding: 20px;
+}
+
+.list-item {
+    position: relative;
+}
+
+.input-search {
+    margin-bottom: 10px;
+}
+
+.feedback-list .list-item {
+    border: 0;
+    border-bottom: 1px dashed #e8e8e8;
+    padding: 10px 0;
+}
+
+.feedback-list .feedback-view {
+    margin-bottom: 10px;
+    padding: 0 5px;
+    cursor: pointer;
+    background: #9fc526;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    border-radius: 1px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.list-item .history-text {
+    margin: 10px 0;
+    color: #333;
+    word-break: break-all;
+}
+
+.img-icon {
+    height: 14px;
+    width: 14px;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+.feedback-list i {
+    font-style: normal;
+}
+
+.feedback-list .history-reply {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 1px;
+    margin-bottom: 10px;
+    background: #f8f8f8;
+    position: relative;
+}
+
+.feedback-list .feedback-time {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.feedback-list .history-reply p {
+    color: #9fc526;
+}
+
+.feedback-list .continue-feedback {
+    bottom: 20px;
+    right: 0;
+    position: absolute;
+    width: 71px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 1px;
+    background: #52c9f2;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.feedback-list .more-ref {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #666;
+}
+
+.more-ref .fa {
+    margin-left: 5px;
+}
+
+.list-item .green-circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: #9fc526;
+    display: inline-block;
+    vertical-align: 2px;
+    margin: 0 6px 0 1px;
+}

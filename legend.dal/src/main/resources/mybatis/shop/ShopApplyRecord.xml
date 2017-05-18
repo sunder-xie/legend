@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.shop.ShopApplyRecordDao">
+
+    <resultMap id="BaseResultMap" type="ShopApplyRecord" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="user_global_id" property="userGlobalId"/>
+        <result column="shop_name" property="shopName"/>
+        <result column="contact_name" property="contactName"/>
+        <result column="shop_tel" property="shopTel"/>
+        <result column="contact_mobile" property="contactMobile"/>
+        <result column="apply_account" property="applyAccount"/>
+        <result column="apply_status" property="applyStatus"/>
+        <result column="apply_type" property="applyType"/>
+        <result column="apply_wx_mode" property="applyWxMode"/>
+        <result column="fail_reason" property="failReason"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            user_global_id as userGlobalId,
+            shop_name as shopName,
+            contact_name as contactName,
+            shop_tel as shopTel,
+            contact_mobile as contactMobile,
+            apply_account as applyAccount,
+            apply_status as applyStatus,
+            apply_type as applyType,
+            apply_wx_mode as applyWxMode,
+            fail_reason as failReason,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="userGlobalId != null">
+                    and user_global_id = #{userGlobalId}
+                </if>
+                <if test="shopName != null">
+                    and shop_name = #{shopName}
+                </if>
+                <if test="contactName != null">
+                    and contact_name = #{contactName}
+                </if>
+                <if test="shopTel != null">
+                    and shop_tel = #{shopTel}
+                </if>
+                <if test="contactMobile != null">
+                    and contact_mobile = #{contactMobile}
+                </if>
+                <if test="applyAccount != null">
+                    and apply_account = #{applyAccount}
+                </if>
+                <if test="applyStatus != null">
+                    and apply_status = #{applyStatus}
+                </if>
+                <if test="applyType != null">
+                    and apply_type = #{applyType}
+                </if>
+                <if test="applyWxMode != null">
+                    and apply_wx_mode = #{applyWxMode}
+                </if>
+                <if test="failReason != null">
+                    and fail_reason = #{failReason}
+                </if>
+                <if test="shopNameLike != null">
+                    and shop_name LIKE CONCAT('%', #{shopNameLike}, '%')
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="userGlobalId != null">
+                    user_global_id = #{userGlobalId},
+                </if>
+                <if test="shopName != null">
+                    shop_name = #{shopName},
+                </if>
+                <if test="contactName != null">
+                    contact_name = #{contactName},
+                </if>
+                <if test="shopTel != null">
+                    shop_tel = #{shopTel},
+                </if>
+                <if test="contactMobile != null">
+                    contact_mobile = #{contactMobile},
+                </if>
+                <if test="applyAccount != null">
+                    apply_account = #{applyAccount},
+                </if>
+                <if test="applyStatus != null">
+                    apply_status = #{applyStatus},
+                </if>
+                <if test="applyType != null">
+                    apply_type = #{applyType},
+                </if>
+                <if test="applyWxMode != null">
+                    apply_wx_mode = #{applyWxMode},
+                </if>
+                <if test="failReason != null">
+                    fail_reason = #{failReason},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop_apply_record
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_apply_record
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_apply_record
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_apply_record
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_shop_apply_record
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_shop_apply_record
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_shop_apply_record
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_shop_apply_record (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="userGlobalId != null">
+                user_global_id,
+            </if>
+            <if test="shopName != null">
+                shop_name,
+            </if>
+            <if test="contactName != null">
+                contact_name,
+            </if>
+            <if test="shopTel != null">
+                shop_tel,
+            </if>
+            <if test="contactMobile != null">
+                contact_mobile,
+            </if>
+            <if test="applyAccount != null">
+                apply_account,
+            </if>
+            <if test="applyStatus != null">
+                apply_status,
+            </if>
+            <if test="applyType != null">
+                apply_type,
+            </if>
+            <if test="applyWxMode != null">
+                apply_wx_mode,
+            </if>
+            <if test="failReason != null">
+                fail_reason,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="userGlobalId != null">
+                #{userGlobalId},
+            </if>
+            <if test="shopName != null">
+                #{shopName},
+            </if>
+            <if test="contactName != null">
+                #{contactName},
+            </if>
+            <if test="shopTel != null">
+                #{shopTel},
+            </if>
+            <if test="contactMobile != null">
+                #{contactMobile},
+            </if>
+            <if test="applyAccount != null">
+                #{applyAccount},
+            </if>
+            <if test="applyStatus != null">
+                #{applyStatus},
+            </if>
+            <if test="applyType != null">
+                #{applyType},
+            </if>
+            <if test="applyWxMode != null">
+                #{applyWxMode},
+            </if>
+            <if test="failReason != null">
+                #{failReason},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_shop_apply_record
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop_apply_record (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            user_global_id,
+            shop_name,
+            contact_name,
+            shop_tel,
+            contact_mobile,
+            apply_account,
+            apply_status,
+            apply_type,
+            apply_wx_mode,
+            fail_reason,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.userGlobalId != null">
+                    #{item.userGlobalId},
+                </if>
+                <if test="item.userGlobalId == null">
+                    NULL ,
+                </if>
+                <if test="item.shopName != null">
+                    #{item.shopName},
+                </if>
+                <if test="item.shopName == null">
+                    NULL ,
+                </if>
+                <if test="item.contactName != null">
+                    #{item.contactName},
+                </if>
+                <if test="item.contactName == null">
+                    NULL ,
+                </if>
+                <if test="item.shopTel != null">
+                    #{item.shopTel},
+                </if>
+                <if test="item.shopTel == null">
+                    NULL ,
+                </if>
+                <if test="item.contactMobile != null">
+                    #{item.contactMobile},
+                </if>
+                <if test="item.contactMobile == null">
+                    NULL ,
+                </if>
+                <if test="item.applyAccount != null">
+                    #{item.applyAccount},
+                </if>
+                <if test="item.applyAccount == null">
+                    NULL ,
+                </if>
+                <if test="item.applyStatus != null">
+                    #{item.applyStatus},
+                </if>
+                <if test="item.applyStatus == null">
+                    NULL ,
+                </if>
+                <if test="item.applyType != null">
+                    #{item.applyType},
+                </if>
+                <if test="item.applyType == null">
+                    NULL ,
+                </if>
+                <if test="item.applyWxMode != null">
+                    #{item.applyWxMode},
+                </if>
+                <if test="item.applyWxMode == null">
+                    NULL ,
+                </if>
+                <if test="item.failReason != null">
+                    #{item.failReason},
+                </if>
+                <if test="item.failReason == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,50 @@
+
+.tnav {
+    padding: 20px 0;
+}
+.tsear {
+    border-bottom: 1px solid #ebeaef;
+    height: 48px;
+}
+.tsear span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    padding-top: 5px;
+}
+.guanjian {
+    width: 203px;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px 0 5px 5px;
+    border: 1px solid #d2d2d2;
+    background: #ffffff;
+    border-right: none;
+    float: right;
+}
+.gjaniu {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #d2d2d2;
+    background: #FFFFFF url("../../images/join/sq.gif") no-repeat 5px;
+    border-left: none;
+    cursor: pointer;
+    float: right;
+}
+.qtlist {
+    padding-bottom: 50px;
+}
+.qtlist li {
+    padding-top: 30px;
+    line-height: 26px;
+}
+.qtlist li h3 {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 12px;
+}
+.qtlist li p {
+    font-size: 13px;
+    color: #666666;
+}

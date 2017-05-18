@@ -1,0 +1,49 @@
+/**
+* Create by zmx 2016/12/15
+* 分配客户列表页
+*/
+
+.form-box{
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #cacaca;
+}
+
+.width-40 {
+    width: 40px;
+}
+.width-30 {
+    width: 30px;
+}
+.w-110{
+    width: 110px;
+}
+.w-130{
+    width: 130px;
+}
+.w-165{
+    width: 165px;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.btn-box-bot{
+    padding: 10px;
+    border-top: 1px solid #cacaca;
+}
+.table-con{
+
+}
+.table-box{
+    background: #fff;
+    border: 1px solid #cacaca;
+}
+
+th.op {
+    width: 80px;
+}
+
+.yqx-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

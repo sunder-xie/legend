@@ -1,0 +1,54 @@
+.yqx-dialog {
+    background: #fff;
+    border-radius: 2px;
+}
+
+.yqx-dialog .dialog-title {
+    background: #232e49;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 54px;
+}
+
+.yqx-dialog .dialog-content {
+    padding: 20px 20px 0;
+    margin-bottom: 20px;
+}
+
+.yqx-dialog label {
+    margin-right: 15px;
+}
+
+.yqx-dialog .show-grid {
+    margin-bottom: 20px
+}
+
+.yqx-dialog .dialog-footer {
+    text-align: center;
+    border-top: 1px solid #d6d6d6;
+    padding: 20px 0;
+}
+
+/** 新版本弹窗 **/
+.yqx-dialog .yqx-dialog-header {
+    height: 55px;
+    background: #5f636e;
+}
+
+.yqx-dialog .yqx-dialog-headline {
+    font: 700 16px/55px "Microsoft YaHei","Hiragino Sans GB",Helvetica,Arial,sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+.yqx-dialog .yqx-dialog-body {
+    padding: 10px;
+}
+
+.yqx-dialog .yqx-dialog-footer {
+    padding: 10px;
+    border-top: 1px solid #cacaca;
+}
+

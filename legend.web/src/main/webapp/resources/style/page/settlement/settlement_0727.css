@@ -1,0 +1,1473 @@
+﻿/* 结算付款开始 */
+.qxy_tqmall_list {
+}
+
+.qxy_tqmall_list table {
+    width: 100%;
+    font-size: 14px;
+    border: 0;
+}
+.bpay_table table{width: 100%;}
+.bpay_table .table_warp{
+    font-size: 14px;
+    border: 0;
+    margin: 20px 20px 20px 20px;
+    width: 660px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.totalAmount{
+    color: red;
+}
+
+.total_amount_div{
+    margin-right:20px;
+    text-align: right;
+    font-size: 16px;
+}
+
+hr{
+    width: 660px;
+}
+
+.bpay_mb{
+    padding: 20px;
+    text-align: center;
+    text-align: left;
+}
+
+.comment{
+    margin-right: 102px;
+}
+
+.select_all {
+    margin-right: 3px;
+}
+
+.qxy_tqmall_list td {
+    padding: 9px 0px 8px 0px;
+    vertical-align: top;
+    font-size: 14px;
+    background: #FAFAFA;
+    border: 1px #ccc solid;
+    text-align: center;
+}
+
+.bpay_table td {
+    padding: 9px 0px 8px 0px;
+    vertical-align: top;
+    font-size: 14px;
+    background: #FAFAFA;
+    border: 1px #ccc solid;
+    text-align: center;
+}
+
+.qxy_tqmall_blackBorderTd td {
+    background: #FAFAFA;
+    border: none;
+    font-size: 16px;
+    padding: 10px 25px 10px 25px;
+    vertical-align: top;
+}
+
+.title {
+    text-align: center;
+    vertical-align: top;
+    margin-bottom: -1px;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 7px;
+    border: 1px #ccc solid;
+}
+
+.redfont {
+    color: red;
+}
+
+.qxy_tqmall_list a {
+    text-decoration: underline;
+}
+
+.redfont a:link {
+    color: #FF0000;
+}
+
+.redfont a:visited {
+    color: #FF0000
+}
+
+.qxy_tqmall_list th {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 700;
+    background-color: #DDD;
+    border: 1px #ccc solid;
+}
+
+.bpay_table th {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 700;
+    background-color: #DDD;
+    border: 1px #ccc solid;
+}
+
+.qxy_tqmall_list {
+    margin-top: -1px;
+}
+
+.transaction-report {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #f7f7f8;
+}
+
+.transaction-report th, .transaction-report td {
+    width: 25%;
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #dadada;
+}
+
+/* 结算付款结束 */
+
+/* 结算付款弹窗start */
+.pay_pop {
+    width: 410px;
+}
+
+.bpay_pop {
+    width: 700px;
+}
+
+.rebatchpay{
+    width:410px;
+    height: 200px;
+    text-align: center;
+}
+
+.rbpay_text{
+    height:60px;
+    text-size:16px;
+    padding-top: 60px;
+}
+
+.payMethod{
+    color:red;
+}
+
+.totalCount{
+    color:red;
+}
+
+.totalAmount{
+    color:red;
+}
+
+.rbpay_hr{
+    width:390px;
+}
+
+.pay_tit {
+    background: #F5F2E6;
+    border-bottom: 1px solid #DADADA;
+    color: #535353;
+    font-size: 18px;
+    font-weight: bold;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.pay_cont {
+    height: 404px;
+    padding: 0 25px 15px 25px;
+    overflow: auto;
+}
+
+.pay_det, .pay_Actual {
+    line-height: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #DADADA;
+}
+
+.pay_Actual li {
+    margin: 10px 0;
+}
+
+.pay_AmountPayable {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pay_mb {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.pay_mb button {
+    width: 139px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FFF;
+    margin: 0 12px;
+}
+
+
+.bpay_mb button {
+    width: 139px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FFF;
+    margin: 0 12px;
+}
+.rebatchpay button {
+    width: 139px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FFF;
+    margin: 0 12px;
+}
+.rbpay_ok {
+    background-color: #8FB027;
+}
+.rbpay_cancel {
+    background-color: #8FB027;
+}
+
+.pay_ok {
+    background-color: #8FB027;
+}
+
+.bpay_ok {
+    background-color: #8FB027;
+}
+
+.pay_no {
+    background-color: #F77C7E;
+}
+
+.pay_txt {
+    padding: 10px 0 10px 10px;
+    height: 15px;
+    color: #535353;
+    font-size: 12px;
+    border: 1px solid #DADADA;
+    border-radius: 3px;
+}
+
+.pay_method_select {
+    background-color: #fff;
+    border: 1px solid #dadada;
+    cursor: default;
+    left: 111111px;
+    position: absolute;
+    top: 1111111px;
+    width: 259px;
+}
+
+.pay_due, .pay_made {
+    /*padding:5px 0;*/
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pay_made p {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.pay_reckoner {
+    margin: 5px 0;
+}
+
+.pay_price {
+    margin-top: 5px;
+}
+
+.pay_price span {
+    vertical-align: middle;
+}
+
+.paid_method {
+    display: inline-block;
+    width: 100px;
+    margin-right: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.paid_time {
+    display: inline-block;
+    width: 130px;
+    margin-right: 15px;
+}
+
+.pay_Actual label {
+    width: 60px;
+}
+
+.wi124 {
+    width: 120px;
+    margin-right: 5px;
+}
+
+.wi103 {
+    width: 100px;
+}
+
+.addRowBtn {
+    width: 15px;
+    height: 37px;
+    cursor: pointer;
+    background: url("../../img/page/settlement/ab.gif") no-repeat right;
+}
+
+.addRowBtn.jian {
+    background-image: url("../../img/page/settlement/abx.gif");
+}
+
+.mwhbox {
+    width: 860px;
+    background-color: #f5f2e6;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.mwtab {
+    width: 100%;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+
+.mwtab th {
+    border: 1px solid #cdcdcd;
+    font-weight: bold;
+}
+
+.mwtab td {
+    border: 1px solid #cdcdcd;
+}
+
+.mhyic {
+    font-weight: bold;
+    color: #e50206;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.beizhu, .reckoner {
+    width: 245px;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+}
+
+/*结算付款弹窗end*/
+
+/*弹框内下拉框样式 start */
+.jc_tsug {
+    position: absolute;
+    left: 64px;
+    top: 36px;
+    width: 258px;
+    height: 150px;
+    border: 1px solid #dadada;
+    background: #ffffff;
+    display: none;
+    overflow: auto;
+}
+
+.jc_tsug a {
+    display: block;
+    line-height: 22px;
+    padding-left: 10px;
+}
+
+.jc_tsug a:hover {
+    color: #ffffff;
+    background: #0a30f1;
+}
+
+/*弹框内下拉框样式 end */
+
+/*结算中间卡片展示部分结束*/
+.checkser {
+    width: 100%;
+    overflow: hidden;
+    /*margin-top: 20px;*/
+}
+
+.khsear {
+    width: 200px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #dad9d9;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.searchButton {
+    width: 80px;
+    height: 38px;
+    margin-top: 2px;
+    background-color: #32cd32;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.s_box {
+    height: 105px;
+    padding-top: 20px;
+}
+
+.s_left {
+    width: 900px;
+    display: block;
+    float: left;
+}
+
+.checkser .s_left > li {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-bottom: 10px;
+    color: #535353;
+}
+
+.stext {
+    width: 338px;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    padding-left: 10px;
+    margin-left: 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+
+.selcont {
+    width: 155px;
+    height: 38px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+li .chosen-container {
+    margin-left: 10px;
+}
+
+.w_ge {
+    width: 147px;
+    padding-left: 10px;
+    margin: 0 10px;
+}
+
+.cont {
+    display: block;
+    width: 990px;
+    position: relative;
+}
+
+.cont .current {
+    border: 1px solid #fa4837;
+}
+
+.cont li {
+    width: 235px;
+    height: 306px;
+    background: #f9f9f9;
+    float: left;
+    border: 1px solid #cdcdcd;
+    margin: 0 10px 10px 0;
+    position: relative;
+}
+
+.ltop {
+    height: 60px;
+    cursor: pointer;
+    padding: 15px 10px 0;
+    border-bottom: 1px dotted #aebdc7;
+}
+
+.ltop:hover .delete-btn {
+    display: block;
+}
+
+.llet {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+}
+
+.lright {
+    float: right;
+    width: 160px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.urlBtn{cursor: pointer;}
+.midc {
+    padding: 7px 0;
+    border-bottom: 1px dotted #aebdc7;
+    height: 166px;
+    position: relative;
+}
+
+.ptxt {
+    width: 100%;
+    padding: 3px 0;
+    line-height: 20px;
+}
+
+.pleft {
+    float: left;
+    padding-left: 15px;
+}
+
+.pright {
+    float: left;
+    padding-right: 15px;
+}
+
+.ptxt div.light {
+    font-size: 16px;
+    color: #FFA500;
+}
+
+.qing {
+    width: 100%;
+    height: 10px;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px dotted #aebdc7;
+    position: absolute;
+    bottom: 0;
+}
+
+.qing span {
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.bing {
+    padding: 15px;
+    height: 10px;
+}
+
+.bing span {
+    font-weight: bold;
+    margin: 0 5px;
+    color: #fa4837;
+}
+
+.but_left {
+    width: 100px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #c1c1c1;
+    background-color: #f9f9f9;
+    margin-top: 12px;
+    margin-left: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.but_right {
+    width: 100px;
+    height: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    background-color: #f9f9f9;
+    margin-top: 12px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+.but_left:hover, .but_right:hover {
+    background-color: #ececec;
+}
+
+.cont li.jiesuan {
+    background-image: url("../../img/page/settlement/zhang.png?20151127");
+    background-repeat: no-repeat;
+    background-position: 80px 194px;
+}
+
+.cont li.invalid {
+    background-image: url("../../img/page/order/order_invalid.png");
+    background-repeat: no-repeat;
+    background-position: 80px 194px;
+}
+
+.delete-btn {
+    color: #fa4837;
+    display: none;
+    float: right;
+}
+
+.order_item:hover {
+    border: 1px solid #fa4837;
+}
+
+.order_item:hover .delete-btn {
+    display: block;
+}
+
+.order_item .new_settlement_btn {
+    display: none;
+}
+
+.order_item:hover .new_settlement_btn {
+    display: block;
+    color: #3f84ae;
+}
+
+input[readonly], select[disabled], button[disabled] {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}
+
+label {
+    display: inline-block;
+    vertical-align: middle;
+    /*padding-top: 3px;*/
+}
+
+/*结算中间卡片展示部分结束*/
+
+/*已开票*/
+.add_k {
+    width: 290px !important;
+}
+
+.add_c ol {
+    list-style: none;
+}
+
+.add_c li {
+    margin: 0 0 20px 24px;
+    line-height: 37px;
+}
+
+.add_c li span {
+    display: inline-block;
+    width: 72px;
+}
+
+/*开票*/
+.kp_abc{
+    font-size:18px;
+    font-weight:bold;
+    color:#535353;
+}
+#invoiceForm{
+    padding: 0 10px 0 0;
+}
+.add_bk{
+    width: 100%;
+    background:#f5f2e6;
+    padding: 10px 0;
+    height:35px;
+    line-height:35px;
+    background:#f5f2e6;
+    border-bottom:1px solid #dadada;
+    position:relative;;
+    text-align:center;
+    margin-bottom:10px;
+}
+.button_commen_abc{
+    height:24px;
+    font-size:13px;
+    border-radius:2px;
+    cursor:pointer;
+    padding:0 10px;
+    line-height:24px;
+    border:1px solid #c1c1c1;
+}
+.button_ad_qx{
+    position:absolute;
+    left:15px;
+    top:15px;
+    width:70px;
+    color:#666666;
+    background:#f8f8f8;
+}
+.button_ad_bc{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:70px;;
+    color:#f8f8f8;
+    background:#8fb027;}
+.add_tit{
+    line-height: 72px;
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+    text-align: center;
+    /*width:328px;*/
+}
+
+.btn_left {
+    margin-left: 60px !important;
+    background: #f9f9f9;
+}
+
+.btn_right {
+    margin-right: 50px;
+    float: right;
+}
+
+.qxy_form .btn_bg {
+    background: #f5f2e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+}
+
+/*.qxy_form .form_row {*/
+/*padding-right: 10px;*/
+/*}*/
+
+/*.search_btn {*/
+/*margin: 0;*/
+/*background: #86ba4a;*/
+/*color: #ffffff;*/
+/*position: absolute;*/
+/*top: 1px;*/
+/*right: 0;*/
+/*}*/
+
+.rows_p {
+    position: relative;
+}
+
+.exp_btn {
+    position: absolute;
+    top: 7px;
+    right: 0;
+}
+
+/*结算弹框样式开始*/
+.qxy_dialog {
+    padding: 0;
+}
+
+.settlement_box {
+    width: 840px;
+    background: #fff;
+}
+
+.settlement_box .sett_link {
+    text-decoration: underline;
+    color: #00f;
+    font-weight: bold;
+}
+
+.settlement_box .sett_link:hover {
+    color: red;
+}
+
+.settlement_box .sett_label {
+    display: inline-block;
+    width: 104px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.settlement_box .money {
+    font-style: normal;
+    color: red;
+    font-size: 16px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.settlement_box .sett_left,
+.settlement_box .sett_right {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+.settlement_box .qxy_input_unit {
+    text-align: center;
+    text-indent: 0;
+    padding: 0;
+}
+
+.settlement_box .f_l {
+    float: left;
+}
+
+/*结算弹框标题 start*/
+.settlement_top {
+    padding: 10px 20px;
+    background: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+}
+
+.settlement_top .tit {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+.settlement_top .tips {
+    margin-left: 40px;
+    position: relative;
+    font-size: 14px;
+}
+
+.settlement_top .tips:before {
+    content: "";
+    position: absolute;
+    background: url(../../img/page/settlement/gray_warning.png) no-repeat;
+    width: 15px;
+    height: 15px;
+    left: -20px;
+    top: 0px;
+}
+
+/*结算弹框标题 end*/
+
+/*结算弹框中间部分 start*/
+.settlement_middle {
+    padding: 10px 20px;
+    overflow-y: auto;
+    max-height: 380px;
+}
+
+.settlement_middle .sett_left_inner {
+    padding-right: 10px;
+}
+
+.settlement_middle .sett_left p {
+    line-height: 18px;
+}
+
+.settlement_middle .sett_left .qxy_input {
+    height: 35px;
+    width: 260px;
+    line-height: 33px;
+    padding: 5px;
+}
+
+.settlement_middle .sett_left .qxy_input_unit {
+    width: 40px;
+}
+
+.settlement_middle .sett_left .qxy_textarea {
+    height: 80px;
+    width: 260px;
+    line-height: 18px;
+    padding: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    text-indent: 0;
+    padding: 5px;
+}
+.settlement_middle .sett_left .shifu,.member_balance,.text_unit{
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: top;
+}
+.settlement_middle .qxy_unit_box{
+    display: inline-block;
+}
+.settlement_middle .sett_left p {
+    margin-bottom: 20px;
+}
+
+.settlement_middle .sett_left li {
+    margin-bottom: 8px;
+}
+
+.settlement_middle .sett_left .sett_group {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.settlement_middle .sett_left .sett_group .col1 {
+    width: 120px;
+}
+
+.settlement_middle .sett_left .sett_group .col2 {
+    width: 110px;
+    vertical-align: top;
+}
+
+.settlement_middle .sett_left .sett_group .add_btn {
+    display: inline-block;
+    padding: 17px 12px;
+    vertical-align: middle;
+    background: url(../../img/page/settlement/ab.gif) no-repeat center;
+}
+
+.settlement_middle .sett_left .sett_group .cut_btn {
+    display: inline-block;
+    padding: 17px 12px;
+    vertical-align: middle;
+    background: url(../../img/page/settlement/abx.gif) no-repeat center;
+}
+
+.settlement_middle .sett_right .sett_label {
+    width: 65px;
+}
+
+.settlement_middle .sett_right .qxy_input {
+    height: 35px;
+    line-height: 35px;
+}
+
+.settlement_middle .jisuan {
+    position: relative;
+}
+
+.settlement_middle .jisuan .jc_tsug {
+    position: absolute;
+    left: 99px;
+    top: -150px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+/* 左右中间的线 start*/
+.settlement_middle .sett_left_inner {
+    border-right: 1px solid #dadada;
+}
+
+.settlement_middle .sett_right_inner {
+    border-left: 1px solid #dadada;
+    margin-left: -1px;
+}
+
+/* 左右中间的线 end */
+.settlement_middle .sett_right_inner ul {
+    padding-left: 20px;
+}
+
+.settlement_middle .sett_right_inner .tit {
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+}
+
+.settlement_middle .sett_right .sett_group {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.settlement_middle .sett_right .sett_group .col1 {
+    width: 100px;
+}
+.settlement_middle .sett_right .sett_group .col3{
+    width: 60px;
+}
+.settlement_middle .sett_right .card_box *{vertical-align: top;}
+.settlement_middle .sett_right .card_box .text_right{text-align: right;width: 45px;}
+
+.settlement_middle .sett_right .sett_group .col2 {
+    width: 110px;
+}
+
+.settlement_middle .sett_right .sett_group .qxy_unit_box {
+    margin-right: 10px;
+}
+
+.settlement_middle .sett_right .sett_group .qxy_green_btn {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    height: 35px;
+    line-height: 35px;
+    width: 50px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.settlement_middle .sett_right .sett_group .qxy_green_btn_disabled {
+    display: inline-block;
+    background: #eee;
+    text-align: center;
+    padding: 0;
+    height: 33px;
+    color: #333;
+    line-height: 33px;
+    width: 48px;
+    border:1px solid #dadada;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor:not-allowed;
+}
+
+.settlement_middle .sett_right .member_card_tips {
+    margin-top: 8px;
+    padding-left: 20px;
+    line-height: 20px;
+    background: url(../../img/page/settlement/s_warning.png) no-repeat left 2px;
+    color: red;
+}
+
+/*优惠券部分 start*/
+.settlement_middle .coupon_box {
+    /*margin-top: 10px;*/
+    padding-left: 20px
+}
+.settlement_middle .coupon_box li {
+    margin-bottom: 10px;
+}
+
+.settlement_middle .coupon_name {
+    height: 38px;
+    width: 175px;
+    background: url(../../img/page/settlement/quan.jpg) no-repeat left center;
+    padding-left: 40px;
+    padding-right: 10px;
+    border-right: 1px dashed #ccc;
+}
+
+.settlement_middle .coupon_num {
+    width: 90px;
+    padding-left: 10px;
+}
+
+.settlement_middle .coupon_title .coupon_name {
+    height: 20px;
+    line-height: 20px;
+    width: 215px;
+    background: none;
+    border: none;
+    padding-left: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.settlement_middle .coupon_title .coupon_num {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.settlement_middle .coupon_name p.orange {
+    color: #ff7926;
+}
+
+.settlement_middle .coupon_name p {
+    margin-top: 5px;
+}
+
+.settlement_middle .coupon_num .cut {
+    display: block;
+    width: 28px;
+    height: 25px;
+    border-radius: 4px 0 0 4px;
+    background: url(../../img/page/settlement/abx.gif) no-repeat center;
+    border: 1px solid #ccc;
+}
+
+.settlement_middle .coupon_num .add {
+    display: block;
+    width: 28px;
+    height: 25px;
+    border-radius: 0 4px 4px 0;
+    background: url(../../img/page/settlement/ab.gif) no-repeat center;
+    border: 1px solid #ccc;
+}
+
+.settlement_middle .coupon_num .qxy_input {
+    display: block;
+    width: 28px;
+    height: 27px;
+    line-height: 27px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    text-indent: 0;
+}
+
+.settlement_middle .coupon_num .coupon_num_count {
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.card-tab {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px #ccc solid;
+    width: 980px;
+}
+
+.card-tab th {
+    color: #999;
+    padding-bottom: 10px;
+}
+
+.card-tab th.nic {
+    text-align: center;
+}
+.card-tab td{vertical-align: top;}
+.card-tab .ch_used {
+    width: 220px;
+    height: 38px;
+    display: inline-block;
+    background: url("../../img/page/settlement/quan.jpg") no-repeat;
+    /*margin: 6px 0 0 6px;*/
+    text-indent: 3.4em;
+    border-right: 1px dashed #cacaca;
+    color: #999;
+    line-height: 17px;
+    vertical-align: middle;
+}
+
+.card-tab .bigger-used {
+    width: 185px;
+    color: #ff7926;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-tab .choice-number {
+    width: 99px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+
+.card-tab .number-box {
+    text-align: center;
+    color: #999;
+    margin: 5px 0;
+}
+
+.card-tab .number {
+    text-align: center;
+    background: #fff;
+    float: left;
+    border-right: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    width: 40px;
+    height: 30px;
+}
+
+.card-tab .reduce {
+    width: 28px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.card-tab .cut{
+    background: url(../../img/page/settlement/abx.gif) no-repeat center;
+}
+.card-tab .add {
+    background: url(../../img/page/settlement/ab.gif) no-repeat center;
+}
+
+.card-tab .set-green {
+    color: #90af34;
+}
+#mp_card_number,
+#member_pay_amount,
+#mp_card_name{padding-left: 5px;}
+.hide {
+    display: none;
+}
+
+.js_fc {
+    color: #00f;
+    text-decoration: underline;
+}
+
+.js_fc:hover {
+    color: red;
+}
+
+/*优惠券部分 end*/
+
+/*结算弹框中间部分 end*/
+
+/*结算弹框底部 start*/
+.settlement_bottom {
+    height: 135px;
+    background: #fbfbfb;
+    border-top: 1px solid #dadada;
+    /*overflow: auto*/
+}
+
+.settlement_bottom .sett_left {
+    width: 62%
+}
+
+.settlement_bottom .sett_right {
+    width: 38%
+}
+
+.settlement_bottom .sett_left ul {
+    padding: 10px 15px 0 15px;
+}
+
+.settlement_bottom .sett_left ul li {
+    line-height: 23px;
+}
+
+.settlement_bottom .btn_box {
+    margin-top: 60px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.settlement_bottom .btn_box .qxy_btn {
+    margin-left: 15px;
+}
+
+/*结算弹框底部 end*/
+
+/* -输入框- */
+.mp_service_sub {
+    width: 38px;
+    height: 37px;
+    font-size: 25px;
+    color: #f00;
+    text-align: center;
+    border: 1px solid #dadada;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+}
+
+.mp_txt {
+    width: 248px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+
+.mp_half_txt {
+    width: 113px;
+}
+
+.mp_unit_txt {
+    width: 209px;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.mp_half_unit_txt {
+    width: 75px;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.mp_half_middle_txt {
+    width: 38px;
+    border-width: 1px 0;
+    border-radius: 0;
+}
+
+.mp_unit {
+    display: inline-block;
+    width: 38px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #dadada;
+    border-radius: 0 3px 3px 0;
+    vertical-align: middle;
+}
+
+.mp_pay_reckoner {
+    width: 238px;
+    height: 48px;
+    padding: 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+
+.mp_money-container {
+    margin-right: 38px;
+    height: 37px;
+    line-height: 37px;
+    float: right;
+    text-align: right;
+}
+
+.fee_detail-box {
+    margin-top: 10px;
+}
+
+.mp_card_reckoner-item {
+    width: 335px;
+}
+
+.mp_card_reckoner-item span {
+    vertical-align: bottom;
+}
+
+.unit {
+    margin-left: -3px;
+}
+.space{
+    height: 1px;
+}
+
+.qxy_search_form .qxy_btn{margin-right:0}
+/*------- 已开票弹框样式 start -------*/
+#orderInvoice form{
+    padding:20px;
+}
+#orderInvoice .btn_group{
+    height: 56px;
+    background: #f5f2e6;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+    text-align: center;
+}
+#orderInvoice .btn_group a{
+    position: absolute;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#orderInvoice .btn_group a.cancel{
+    left: 15px;
+    top: 15px;
+    color: #666666;
+    background: #f8f8f8;
+}
+#orderInvoice .btn_group a.save{
+    right: 15px;
+    top: 15px;
+    color: #ffffff;
+    background: #8fb027;
+}
+#orderInvoice .btn_group span{
+    line-height: 56px;
+    font-size: 18px;
+    color: #535353;
+    font-weight: bold;
+}
+.tips_show{
+    width: 238px;
+    margin: 3px 0 0 110px;
+    white-space: nowrap;
+    height:20px;
+    /*background: url("../../img/page/settlement/s_warning.png") left center no-repeat;*/
+
+}
+.tips_show p{display: inline-block;overflow: hidden;}
+.tips_show span{display: inline-block;border:1px solid #dadada;background: #f4f4f4;border-radius: 4px;padding: 2px 4px;vertical-align: top;color: #666;}
+.tips_show i{font-weight: bolder;font-style: normal;font-size: 14px;padding-left:4px;display: inline-block;padding: 2px 4px;margin-top:2px;vertical-align: top;color: red;}
+
+/*------- 已开票弹框样式 end -------*/
+
+/* -----结算统计样式 start----- */
+.settlement_count{border-bottom: 1px solid #d2d2d2;margin: 15px 0;}
+.count_item,
+.settlement_line{float: left;height:40px;line-height:40px;}
+.count_item{}
+.count_item span{font-weight: 700;font-size: 16px;padding: 0 5px;}
+.settlement_line{font-size: 14px;font-weight: 200;margin:0 30px;color: #d2d2d2;}
+.count_totalPayAmount span{color: #000;}
+.count_totalPreTotalAmount span{color: #80a501;}
+.count_totalSignAmount span{color: #e72525;}
+/* -----结算统计样式 end----- */
+
+/*快修快保单图标*/
+.order_speedily:before{content:"快修快保";position: absolute;width: 60px;height:28px;background: url(../../img/page/order/speedily.png) no-repeat;right:12px;top:-1px;color: #fff;line-height: 22px;text-align: center;}
+
+.order_act:before{content:"引流活动";position: absolute;width: 60px;height:28px;background: url(../../img/page/order/speedily.png) no-repeat;right:12px;top:-1px;color: #fff;line-height: 22px;text-align: center;}
+/*洗车单图标*/
+.order_carwash:before{content:"洗车单";position: absolute;width: 60px;height:28px;background: url(../../img/page/order/carwash.jpg) no-repeat;right:12px;top:-1px;color: #fff;line-height: 22px;text-align: center;}
+/*综合维修*/
+.order_zonghe:before{content:"综合维修";position: absolute;width: 60px;height:28px;background: url(../../img/page/order/zongheweixiu.jpg) no-repeat;right:12px;top:-1px;color: #fff;line-height: 22px;text-align: center;}
+/*销售单 */
+.order_sale:before {content:"销售单";position: absolute;width: 60px;height:28px;background: url(../../img/page/order/sale.png) no-repeat;right:12px;top:-1px;color: #fff;line-height: 22px;text-align: center;}
+
+
+.right{
+    float: right;
+    width: 870px;
+    margin-right: 20px;
+}
+
+.left{
+    float: left;
+    margin-left: 20px;
+}
+
+.amount{
+    float: right;
+    margin: 8px 5px 0px 0px;
+}
+
+.batchpay{
+    background:limegreen;
+    float:right;
+}
+.display-none{
+    display: none;
+}

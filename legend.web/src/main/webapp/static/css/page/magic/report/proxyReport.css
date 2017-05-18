@@ -1,0 +1,46 @@
+/**
+ * zmx 2016-10-14
+ * 钣喷受托数据统计
+ */
+.search-form-box{
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.export-box{
+    height: 36px;
+    margin-top: 10px;
+    border-top: 1px solid #d2d2d2;
+}
+.export-box a{
+    color: #333;
+    line-height: 36px;
+}
+.export-box a:hover{
+    color: #9fc527;
+}
+.table-list{
+    margin-top: 10px;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+.yqx-table tr>th.text-l, .yqx-table>tbody>tr>td.text-l, .yqx-table>thead>tr>th.text-l, .yqx-table>tr>td.text-l{
+    text-align: left;
+}
+.yqx-table tr>th.text-r, .yqx-table>tbody>tr>td.text-r, .yqx-table>thead>tr>th.text-r, .yqx-table>tr>td.text-r{
+    text-align: right;
+}
+.max-width{
+    max-width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.form-item input{
+    width: 140px;
+}
+.direction i{
+    font-size: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+}

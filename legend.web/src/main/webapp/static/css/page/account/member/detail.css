@@ -1,0 +1,499 @@
+/*
+ * zmx 2016/06/07
+ * 账户充值-账户详情 页面样式
+*/
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.w190 {
+    width: 190px;
+}
+
+.w80 {
+    width: 80px !important;
+}
+
+.headline > small {
+    font-weight: normal;
+}
+
+.customer-panel {
+    margin-top: 10px;
+    padding: 0 15px;
+    background: #fff;
+    border: 1px solid #cacaca;
+}
+
+.box {
+    padding: 10px 0;
+}
+
+.box + .box {
+    border-top: 1px solid #dcdcdc;
+}
+
+.box-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.form-label-minor {
+    color: #666;
+}
+
+/*车辆信息*/
+.detail-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-box .show-grid {
+    margin: 0;
+}
+
+.detail-box .yqx-text {
+    height: 36px;
+}
+
+.customer-info {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* label 6个字 */
+.form-label-w1 {
+    width: 95px;
+    text-align: right;
+}
+
+/* label 6个字 col-4 */
+.form-item-w1 {
+    width: 150px;
+}
+
+/* label 4个字 col-4 */
+.form-item-w2 {
+    width: 180px;
+}
+
+/* label 4个字 col-8 */
+.form-item-w3 {
+    width: 443px;
+}
+
+/* 绑定车牌 */
+.car-box {
+    margin: 20px 0 5px;
+}
+
+.car-item {
+   line-height: 35px;
+}
+
+.car-item .form-item {
+    width: 135px;
+}
+
+.car-item .car-license {
+    display: inline-block;
+    height: 25px;
+    padding-left: 10px;
+    line-height: 25px;
+    text-align: center;
+    color: #333;
+    background: #eff4f5;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+}
+
+.car-item .car-license a {
+    color: inherit;
+    vertical-align: middle;
+}
+
+.car-item .car-license .delete {
+    display: inline-block;
+    width: 25px;
+    height: 22px;
+    margin-right: 3px;
+    font: 20px arial, verdana, sans-serif;
+    text-align: center;
+    vertical-align: sub;
+    color: #666;
+    border-left: 1px solid #dcdcdc;
+}
+
+.add-license {
+    display: inline-block;
+    height: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    background: #eff4f5;
+    margin: 15px 10px 0 0;
+    text-align: center;
+    line-height: 25px;
+    color: #333;
+    padding: 0 10px;
+}
+
+/* 会员卡 */
+.vip-item {
+    position: relative;
+    height: 22px;
+    line-height: 22px;
+    background: #fff;
+}
+
+.vip-item img {
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.vip-text {
+    width: 33.33%;
+    color: #666;
+    float: left;
+    padding-left: 9px;
+}
+
+.vip-text span {
+    color: #f2666a;
+}
+
+.voucher-content .voucher-item.remark-item {
+    width: 647px;
+    height: inherit;
+}
+
+/*tab*/
+.tab-box {
+    background: #fff;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.tab {
+    height: 38px;
+    background: #f9f9f9;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabcon {
+    overflow: hidden;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+/*优惠券*/
+.voucher {
+    margin: 5px 0;
+}
+
+.voucher-title {
+    height: 35px;
+    line-height: 35px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #d6d6d6;
+    border-top: 1px solid #d6d6d6;
+}
+
+.voucher-title div {
+    display: inline-block;
+}
+
+.voucher-discount {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.voucher-discount span {
+    color: #f2666a;
+    padding: 0 3px;
+}
+
+.voucher-time {
+    color: #333;
+    font-size: 12px;
+}
+
+.show-btn {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.voucher-content {
+    padding: 10px 0;
+    display: none;
+    position: relative;
+}
+
+.voucher-content .voucher-label {
+    width: 120px;
+    line-height: 16px;
+    float: left;
+    text-align: right;
+    color: #333;
+}
+
+.voucher-content .voucher-item {
+    float: left;
+    margin-left: 5px;
+    color: #333;
+    line-height: 16px;
+}
+
+.voucher-content .voucher-coupon-item {
+    margin-left: 120px;
+    color: #333;
+}
+
+.voucher-bot {
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #d6d6d6;
+}
+
+.voucher-content .red {
+    color: #f2666a;
+}
+
+.voucher-content .ml120 {
+    margin-left: 120px;
+}
+
+.voucher-content .show-grid .ml-120 {
+    margin-left: -120px
+}
+
+/*使用记录*/
+.use-record {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.record-title {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.yqx-table > thead > tr > th, .yqx-table > tr > th {
+    background: #f9f9f9;
+    text-align: left;
+    padding-left: 15px
+}
+
+.yqx-table > tbody > tr > td, .yqx-table > tr > td {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.w117 {
+    max-width: 117px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.yqx-table > thead > tr > th:last-child, .yqx-table > tr > th:last-child {
+    background: #f9f9f9;
+    text-align: right;
+    padding-right: 15px
+}
+
+.yqx-table > tbody > tr > td:last-child, .yqx-table > tr > td:last-child {
+    text-align: right;
+    padding-right: 15px;
+}
+
+/*弹窗样式 start*/
+.yqx-dialog .dialog-footer {
+    padding: 10px 0;
+    border-top: none;
+}
+
+/*弹窗样式 end*/
+
+.layui-layer-page .layui-layer-content {
+    overflow: inherit;
+}
+
+.car-infor {
+    text-align: center;
+}
+
+.license-tip {
+    visibility: hidden;
+    padding: 10px 0 0;
+    line-height: 15px;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.link-bd, .link-bd:hover {
+    color: #215ced;
+    text-decoration: underline;
+}
+
+.disabled-btn, .disabled-btn:hover {
+    background: #999;
+    border: 1px solid #999;
+    color: #666;
+}
+
+.voucher-coupon-overflow {
+    max-width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.yqx-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.expired {
+    width: 110px;
+    height: 110px;
+    background: url("../../../../img/page/account/expired.png") no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 4px;
+}
+
+.expried-color {
+    color: #fa7b7c;
+    padding: 0 5px;
+}
+
+.w150 {
+    width: 150px;
+    display: inline-block;
+}
+
+.ml79 {
+    margin-left: 79px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.btn-edit {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    z-index: 3;
+}
+
+.yqx-btn-sm {
+    padding: 5px;
+    font-size: 12px;
+    height: 24px;
+    line-height: initial;
+}
+
+.voucher-content .discount-info {
+    display: inline-block;
+    max-width: 380px;
+    vertical-align: top;
+}
+
+.member-info.voucher-item {
+    display: inline-block;
+    width: 540px;
+    height: initial;
+    float: none;
+    word-break: break-all;
+}
+
+.retreat-btn {
+    position: absolute;
+    top: 8px;
+    right: 82px;
+}
+
+.upgrade-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.upgrade-dialog .dialog-content {
+    padding: 30px;
+    margin-bottom: 0;
+}
+
+.upgrade-dialog .dialog-content .member-info .show-grid:first-child {
+    margin-top: 0;
+}
+
+.upgrade-dialog .mark,
+.upgrade-dialog .upgrade-info {
+    border-top: 1px solid #cacaca;
+}
+
+.upgrade-info {
+    padding-top: 20px;
+}
+
+.upgrade-dialog .mark {
+    padding: 10px 0 18px;
+}
+
+.upgrade-dialog .btn-box {
+    text-align: center;
+}
+
+.upgrade-dialog .show-grid label input {
+    margin-right: 5px;
+}
+
+.upgrade-dialog .show-grid li + li {
+    margin-top: 10px;
+}
+
+.upgrade-dialog .btn-box .yqx-btn:first-child {
+    margin-right: 40px;
+}
+
+.member-info-label,
+.voucher-item.member-info {
+    line-height: 1.3;
+}
+
+.member-info > .discount-info {
+    white-space: pre-line;
+}
+.car-item .car-owners{
+    width: auto;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

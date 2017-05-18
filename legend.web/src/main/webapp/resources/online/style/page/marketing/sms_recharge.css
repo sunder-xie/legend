@@ -1,0 +1,35 @@
+
+.orange{color: #f1942f; }
+.red{color:#fe2829; }
+.bold{font-weight: bold; }
+.content_title_box{float: left; }
+.content_title p{font-size:24px; font-family:"黑体";}
+.content_title p.word_en{font-size:9px; color:#aeaeae; font-family:Arial; margin-top: 5px;}
+.content_title .qxy_red_btn{float:right;}
+
+.left_float p{display:inline-block; padding:0 0 5px 0; font-weight:bold; }
+.recharge_account_num .box_right{padding-left: 7px;}
+.recharge_account_num .account_title{height: 80px;}
+.left_float span{color:#fe433d; }
+.recharge_line{margin:10px 0 20px 0; border-top: 1px solid #cdcdcd; border-bottom: 1px solid #fbfbfb; }
+.account_title{height:60px; }
+.progress{width: 480px; height: 10px; border-radius: 5px; background: #d4d4d4; margin-top: 18px; float: left; }
+.progress span{display: block; width: 4%; height: 10px; border-radius: 5px; background: #f1942f; }
+.progress_text{margin-left: 10px; margin-top: 15px; float: left; font-size: 14px; }
+
+.box_left{width:92px; height:112px; float:left; font-size: 14px; text-align: right;}
+.box_right{float:left; width: 850px; margin-left: 10px; }
+.box_right p.count{font-size: 20px;font-weight: 800;}
+
+.middle_box .box_left{padding-top: 8px;}
+
+.recharge_item li{float:left; border:1px solid #ff7926; width:158px; background-image:url(../../img/page/marketing/background.jpg); padding:5px 18px; margin:8px; font-size:12px; position: relative; }
+.recharge_item li.new:before{content:"新"; position: absolute; right: 0; top: 0; color: #fff; width: 20px; height: 20px; line-height: 20px; text-align: center;background: #ff6600; }
+.recharge_item li p{line-height: 20px;}
+.recharge_item li.checked{border: 2px solid #8fb027; width: 156px; height: 38px }
+.recharge_item li.checked:after{content:""; position: absolute; right: 0; bottom:0; width: 23px; height:21px; background: url(../../img/page/marketing/jb.png) no-repeat; }
+
+.history{margin-top: 20px; font-size: 14px; margin-bottom: 10px; }
+.recharge_bottom{text-align: center;}
+.recharge_bottom .qxy_green_btn{position: relative;padding-right: 30px;}
+.recharge_bottom .qxy_green_btn:after{content:"";position:absolute; background: url(../../img/page/marketing/btn_jt.png) no-repeat center; width: 10px;height: 10px;top:50%;right: 15px;margin-top: -5px;}

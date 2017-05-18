@@ -1,0 +1,465 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@charset "utf-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    zoom: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-weight: normal;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+body {
+    overflow-y: scroll;
+    *overflow-y: visible;
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+select:active {
+    outline: none;
+}
+
+input, button, select, textarea {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea, input, select, button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* css common */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: #ffffff;
+    text-align: left;
+    font-family: "黑体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+    font-size: 12px;
+    color: #666666;
+}
+
+label {
+    display:inline-block;
+    vertical-align:middle;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #e50206;
+}
+
+.wrapper {
+    width: 990px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #232e48;
+}
+.topbox {
+    width: 990px;
+    height: 70px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.logo {
+    float: left;
+    width: 121px;
+    height: 70px;
+    vertical-align: baseline;
+}
+.menu {
+    float: left;
+    height: 54px;
+    margin: 16px 0 0 50px;
+}
+.menu li {
+    float: left;
+    height: 54px;
+    width: 70px;
+    margin: 0 21px;
+}
+.menu li a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 54px;
+    height: 54px;
+}
+.menu li a:hover,.menu li a.current {
+    border-bottom: 3px solid #ffd400;
+    height: 51px;
+}
+.login {
+    height: 20px;
+    line-height: 20px;
+    margin-top: 33px;
+    float: right;
+    background: url("../../images/join/ic.png") no-repeat left;
+    padding-left: 16px;
+}
+.login a {
+    font-size: 13px;
+    color: #FFFFFF;
+}
+.login a:hover {
+    color: #e50206;
+}
+
+
+.footer {
+    width: 990px;
+    margin: 0 auto;
+    border-top: 1px solid #ebeaef;
+    padding-top: 20px;
+    height: 60px;
+}
+.ft_right {
+    float: right;
+    padding-top: 4px;
+}
+.ft_right li {
+    float: left;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #ccc;
+}
+.ft_right li.ft_none {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.ft_left {
+    float: left;
+    text-align: right;
+    line-height: 20px;
+}
+
+.ft_left img {
+    vertical-align: middle;
+}
+
+.logbox {
+    padding: 40px;
+    background-color: #09abfd; /*#0e5eb5;*/
+    font-size: 14px;
+    color: #FFFFFF;
+    width: 340px;
+}
+.logbox h2 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.loginfo {
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+.logtxt {
+    line-height: 35px;
+    margin-bottom: 15px;
+}
+.logtxt span {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+    margin-right: 10px;
+}
+.logput {
+    width: 217px;
+    height: 17px;
+    line-height: 17px;
+    padding: 8px 0 8px 5px;
+    background-color:#26b4fb;  /*#0a519f;*/
+    color: #FFFFFF;
+    font-size: 14px;
+    border: 1px solid #059be7; /*#003e84;*/
+}
+.wbju {
+    width: 120px;
+    margin-right: 10px;
+}
+.yanzheng {
+    width: 87px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #008ff0;
+    border-right: 1px solid #025eb5;  /*#053482;*/
+    border-bottom: 2px solid #025eb5; /*#053482;*/
+    border-radius: 2px;
+}
+.dlniu {
+    padding-left: 70px;
+}
+.dlniu p {
+    margin-bottom: 10px;
+}
+.dlniu button {
+    width: 165px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #008ff0;
+    border-radius: 3px;
+    border-right: 1px solid #025bb0; /*#04317f;*/
+    border-bottom: 2px solid #025bb0;/*#04317f;*/
+}
+
+.red {
+    color: #FF0000!important;
+}
+
+.sd_box {
+    width: 390px;
+    padding: 45px 40px 45px 150px;
+    background: #FFFFFF url("../../images/join/biao.gif") no-repeat 40px 45px;
+
+}
+.sd_box h2 {
+    line-height: 30px;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+.sd_box p {
+    padding-top: 15px;
+    line-height: 24px;
+}
+.chengs {
+    color: #fd7000;
+}
+.bucl {
+    padding-top: 30px;
+}
+.bucl button {
+    width: 190px;
+    height: 50px;
+    border-radius: 3px;
+    background: #008ff0;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 20px;
+    vertical-align: bottom;
+}
+.bucl span {
+    font-size: 15px;
+    color: #008ff0;
+    cursor: pointer;
+}
+.argment {
+    width: 990px;
+    background: #FFFFFF;
+}
+.argment h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    line-height: 80px;
+}
+.arg_c {
+    width: 948px;
+    height: 456px;
+    overflow: auto;
+    border: 1px solid #e5e5e5;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0 auto;
+}
+.arg_cc {
+    padding: 10px 15px;
+}
+.arg_cc p {
+    padding: 7px 0;
+}
+.tongyi {
+    padding: 30px;
+    text-align: center;
+}
+.tongyi button {
+    width: 240px;
+    height: 50px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: bold;
+    background: #9a9a9a;
+}
+.tongyi button.tyi {
+    background: #008ff0;
+    margin-right: 10px;
+}
+
+.card-tab{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.card-tab .number-box{
+    text-align: center;
+    color: #999;
+    margin-top: 5px;
+}
+.card-tab th{
+    color: #999;
+    padding-bottom: 10px;
+}
+.card-tab th.nic{
+    text-align: center;
+}
+.input-box {
+    margin: 20px 0 20px 0;
+}
+.card-tab .ch_used{
+    width: 87%;
+    height: 38px;
+    display: inline-block;
+    background: url("../../resources/images/quan.jpg") no-repeat;
+    margin: 6px 0 0 6px;
+    text-indent: 3.4em;
+    border-right: 1px dashed #cacaca;
+    color: #999;
+    line-height: 17px;
+}
+.card-tab .bigger-used{
+    color: #ff7926;
+}
+.card-tab .choice-number{
+    width: 126px;
+    height: 38px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-align: center;
+    margin-left: 10px;
+    line-height: 42px;
+    margin: auto;
+}
+.card-tab .reduce{
+    width: 40px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    border-right: 1px solid #dadada;
+    color: #ccc;
+    font-size: 28px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.card-tab .set-green{
+    color: #90af34;
+}
+.card-tab .add{
+    border-left: 1px solid #dadada;
+    border-right: none;
+    float: right;
+}
+.card-tab .checkbox{
+    margin-top: -15px;
+}
+.card-tab .number{
+    text-align: center;
+    display: inline-block;
+    /* border: 1px solid #333; */
+    width: 40px;
+    height: 36px;
+}
+.active-lottery{
+    position:relative;
+    width: 100%;
+    height: 150px;
+    cursor:pointer;
+    background: url("../../img/common/active-one.jpg") no-repeat center 0;
+}
+.click-hide{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 37px;
+    cursor: pointer;
+    margin-right: -600px;
+}

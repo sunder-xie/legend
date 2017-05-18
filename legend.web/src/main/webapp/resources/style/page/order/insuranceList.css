@@ -1,0 +1,64 @@
+
+.qxy_wrapper{margin-top: 110px;}
+.qxy_tab{margin:0;}
+.qxy_select{margin:0;}
+.tab_content{border: 1px solid #cdcdcd;border-top:none;padding:20px;background: #f9f9f9;}
+a.qxy_link{text-decoration: underline;}
+
+/* --- 搜索框区域样式 start --- */
+.search_box{margin-bottom: 10px;}
+.search_left{width: 620px;}
+.search_left input,
+.search_left select{width: auto;}
+.search_left li{float: left;width: 50%;margin-bottom: 10px;}
+.search_left li.col3{width: 33.33%;}
+
+.search_left .field_name{display: inline-block;width: 70px;height:38px;line-height: 38px;text-indent: 10px;}
+.search_left .space_txt{display: inline-block;width: 34px;height: 38px;line-height: 38px;text-align: center;}
+.search_left li .w1{width: 235px;}
+.search_left li .w2{width: 100px;}
+.search_left li .w3{width: 132px;}
+/* --- 搜索框区域样式 end --- */
+
+
+/* --- 搜索结果样式 start --- */
+.result_list{width: 100%;}
+.result_list th,
+.result_list td{padding:10px 5px;}
+.result_list th{border-bottom: 1px solid #c0c0c0;background: #d7d7d7;}
+.result_list td{border-bottom: 1px solid #ededed;}
+.result_list td span{display:block;width:62px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+.result_list tr:nth-child(n){background: #fcfcfc;}
+.result_list tr:nth-child(2n) {background: #fefefe;}
+.result_list tr:hover{background: #f5f5f5;}
+.result_remarks{margin:10px 0;}
+/*已保存*/
+.color0{color:#8836b2;}
+/*审核中*/
+.color1{color:#ffa800;}
+/*审核成功*/
+.color2{color:#93bd22;}
+/*审核失败*/
+.color3{color:#f77c7e;}
+/*已打款*/
+.color4{color:#36a5b2;}
+/* --- 搜索结果样式 end --- */
+
+
+.fl{float: left; }
+.fr{float: right; }
+.nav{width: 200px; }
+.main{width: 760px; }
+.main_inner{padding:15px 10px;background: #f9f9f9;border: 1px solid #cdcdcd;}
+.title_l{font-size: 18px; font-weight: bold; margin-bottom: 10px; color: #333; }
+.title_l em{font-size: 14px; color: #999; font-family: PT Sans Narrow; margin-left: 5px; }
+.nav_list{padding: 5px 0; background: #fff; border: 1px solid #e8e8e8; }
+.nav_list li{width: 100%; height: 30px; }
+.nav_list li a{width: 195px; height: 30px; display: block; line-height: 30px; text-indent: 12px; border-left: 3px solid #fff; color: #666; }
+.nav_list li a.on,
+.nav_list li a:hover{background: #e0e0e0; border-left: 3px solid #8ab800; color: #333; }
+.title_r{padding-bottom: 10px; font-size: 18px; color: #333; margin-bottom: 15px; border-bottom: 1px solid #cdcdcd; box-shadow: 0 1px 0 #fff;position: relative;}
+.title_r .qxy_btn{margin-top: -25px;margin-right: 0;}
+.insurance_edit{cursor: pointer}
+

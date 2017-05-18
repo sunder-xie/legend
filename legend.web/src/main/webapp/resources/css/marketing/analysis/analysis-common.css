@@ -1,0 +1,150 @@
+.user-tag-box {
+    width: 830px;
+    height: 130px;
+}
+
+.user-tag .info {
+    margin: 5px 0;
+    line-height: 12px;
+    text-align: center;
+}
+
+.user-tag-box .user-tag{
+    width: 268px;
+    height: 118px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+.pre-page {
+    display: inline-block;
+    margin-top: 15px;
+    line-height: initial;
+    margin-right: 10px;
+}
+
+.pre-page li {
+    display: inline-block;
+    padding: 5px 3px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    color: #333;
+    cursor: pointer;
+    line-height: initial;
+    text-align: center;
+}
+
+.pre-page li:hover,
+.pre-page li.selected {
+    background: #eaf8be;
+}
+
+.picked-customer {
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 60px;
+    /*position: absolute;*/
+    /*top:23px;*/
+    /*left: 10px;*/
+    color: #666;
+}
+#selectedNum{
+    color: red;
+    padding: 0 2px;
+}
+.message-btn {
+    display: inline-block;
+}
+
+.yqx-btn {
+    padding: 0 16px;
+    line-height: 33px;
+    color: #333;
+    background: #f9f9f9;
+    border: 1px solid #d2d2d2;
+}
+
+.yqx-btn-2 {
+    background: #fd461e;
+}
+
+.yqx-btn-2:hover {
+    background: #a62f1d;
+}
+
+.yqx-btn-2,
+.yqx-btn-3,
+.yqx-btn-4 {
+    color: #fff;
+}
+
+.yqx-btn-3 {
+    background: #607b0a;
+}
+
+.yqx-btn-3:hover {
+    background: #415011;
+}
+
+.message-content{
+    margin: 10px 0;
+    text-align: center;
+}
+.message-content .sms-content {
+    text-align: left;
+    width: 492px;
+    height: 58px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.Z-type-num{
+    color: #f77c7e;
+}
+
+.num-box {
+    margin-left: 10px;
+}
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+.Z-btn{
+    cursor: pointer;
+    line-height: 35px;
+    font-size: 14px;
+    font-family: MicrosoftYahei;
+    margin: 10px;
+    /*position: absolute;*/
+    /*left: 100px;*/
+    /*top: 7px;*/
+}
+.to-excel {
+    line-height: 60px;
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*top: 0;*/
+    margin: 0 10px;
+    cursor: pointer;
+    color: initial;
+}

@@ -1,0 +1,190 @@
+body{
+    margin:0 !important;
+}
+.order-right {
+    width: 980px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.font-box label:first-child {
+    font-size: 12pt;
+}
+
+.font-box label {
+    font-size: 9.5pt;
+}
+
+.yqx-wrapper>h1 {
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 16px;
+    color: #333;
+}
+
+.yqx-wrapper .tab-box {
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "微软雅黑", "MicrosoftYahei", "黑体", "Helvetica", sans-serif;
+}
+
+.yqx-wrapper .tab-item {
+    cursor: pointer;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.yqx-wrapper .container,
+.option-box {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main .container, .main .option-box {
+    float: left;
+}
+
+.container {
+    width: 704px;
+}
+
+.option-box,
+.main {
+    height: 831px;
+    overflow: hidden;
+}
+
+.option-box {
+    width: 273px;
+    border-left: 1px solid #ddd;
+    background: #fdfcfc;
+    overflow-y: auto;
+}
+
+.option-box label {
+    display: block;
+    min-width: 70px;
+    cursor: pointer;
+}
+
+.option-box input[type="checkbox"],
+.option-box input[type="radio"] {
+    margin-right: 11px;
+    vertical-align: bottom;
+}
+
+.option-box>li {
+    padding: 15px 0 0 8px;
+    margin: 0 20px 19px 15px;
+}
+
+.option-box>li + li {
+    border-top: 1px solid #dcdcdc
+}
+
+.option-box .title {
+    position: relative;
+    margin-bottom: 17px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "微软雅黑", "MicrosoftYahei", "黑体", "Helvetica", sans-serif;
+}
+
+.option-box .title:before {
+    content: "";
+    position: absolute;
+    border-left: 2px solid #999;
+    height: 14px;
+    left: -8px;
+}
+
+.option-box .version-box li {
+    display: inline-block;
+    width: 95px;
+    height: 31px;
+    margin-bottom: 7px;
+    background: #fff;
+    line-height: 31px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+
+.option-box .version-box li + li {
+    margin-left: 10px;
+}
+
+.option-box p {
+    line-height: 16px;
+}
+
+.option-box .radio-box li + li,
+.option-box label + label {
+    margin-top: 7px
+}
+
+.print-box {
+    -webkit-transform: scale(0.9) translateX(-7px);
+    transform: scale(0.9) translateX(-7px);
+}
+
+.option-box .info-show {
+    margin-top: 10px;
+    padding: 5px;
+    width: 215px;
+    height: 110px;
+    line-height: 13px;
+}
+
+.main.hide {
+    display: none;
+}
+
+.btn-group {
+    text-align: center;
+}
+
+.btn-group button + button {
+    margin-left: 10px;
+}
+
+.version-box li.tag-control.selected {
+    border: 2px solid #8eb110;
+}
+
+.version-box li.tag-control.selected {
+    line-height: 29px;
+}
+
+.table-merge i {
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    font-style: normal;
+}
+
+.option-box .table-merge input {
+    vertical-align: top;
+}
+
+/*留空白的*/
+.empty-choose-box {
+    margin-top: 18px;
+}
+
+.empty-choose-box .radio-box {
+    padding: 10px 0;
+    margin-left: 25px;
+}
+
+.print-box {
+    min-height: 190mm;
+}
+
+.option-box .striped-content label {
+    margin-bottom: 10px;
+    font-size: 9.5pt;
+}

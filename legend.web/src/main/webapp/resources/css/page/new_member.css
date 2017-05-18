@@ -1,0 +1,278 @@
+/* css 维修详情 */
+
+.nm_top, .nm_foot {
+    height: 52px;
+    padding-top: 30px;
+}
+
+.nm_top li, .nm_foot li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.wxtxt {
+    width: 340px;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.alias_txt {
+    width: 78px;
+    margin-left: 10px;
+    color: #666;
+}
+
+.red_star {
+    color: #f00;
+}
+
+.khxx {
+    border: 1px solid #cdcdcd;
+    padding-bottom: 20px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.customer_info {
+    border: 1px solid #CDCDCD;
+    padding-bottom: 20px;
+    background: #F9F9F9;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.customer_info h2 {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #efefef;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 14px;
+}
+
+.customer_data {
+    overflow: hidden;
+}
+
+.customer_data li {
+    width: 50%;
+    float: left;
+    padding-top: 20px;
+}
+
+.customer_data .full_row {
+    width: 100%;
+}
+
+.customer_data label {
+    width: 72px;
+    margin: 0 10px 0 20px;
+}
+
+.w-240 {
+    width: 240px;
+}
+
+.nm_btn {
+    height: 37px;
+    line-height: 37px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: #9ac13b;
+    border-radius: 3px;
+}
+
+.new_car_btn {
+    width: 90px;
+}
+.recharge-btn {
+    width: 50px;
+}
+
+.service_name {
+    width: 60px;
+    margin: 0 10px 0 20px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.deep_border {
+    border: 1px solid #a0a0a0;
+}
+
+.unit_txt {
+    width: 302px;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.unit {
+    display: inline-block;
+    width: 38px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-left-color: #f2f2f2;
+    border-radius: 0 3px 3px 0;
+    vertical-align: middle;
+}
+
+.txt_half {
+    width: 90px;
+}
+.w-242 {
+    width: 242px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.deleted {
+    display: none;
+    margin-left: 10px;
+    color: #F00;
+    text-decoration: underline;
+}
+
+.add_service_btn {
+    width: 88px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 102px;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+
+.wx_box {
+    background: #f6f6f6;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 3px;
+    padding-bottom: 10px;
+}
+
+.wx_tit {
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #cdcdcd;
+    background-color: #e5e2d8;
+}
+
+.cyan {
+    background-color: #d8e5e4;
+}
+
+.wx_tit .mark {
+    background-image: url("../../images/xj1.gif");
+}
+
+.wx_tl {
+    width: 85px;
+    text-align: center;
+    float: left;
+    height: 100%;
+    font-size: 14px;
+}
+
+.wx_tr {
+    float: right;
+    height: 100%;
+    width: 890px;
+    border-left: 1px solid #cdcdcd;
+    background: url("../../images/xj.gif") no-repeat 865px center;
+}
+
+.content-box {
+    display: none;
+}
+
+.remark {
+    width: 905px;
+    height: 67px;
+    padding: 10px;
+    margin: 20px 0 10px 20px;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+
+table {
+    width: 925px;
+    margin: 20px 0 10px 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ced6d8;
+}
+
+th {
+    background-color: #eee;
+}
+
+td {
+    background-color: #fff;
+}
+
+.cRed {
+    color: #f00;
+}
+
+.wx_but {
+    background: url("../../images/sz.png") no-repeat center;
+    width: 29px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.jian {
+    background-image: url("../../images/sz1.png");
+}
+
+.sug_cp {
+    position: absolute;
+    width: 268px;
+    display: none;
+    z-index: 1111111;
+    background-color: #FFF;
+    border: 1px solid #DADADA;
+}
+
+.sug_cp span {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+.sug_cp span.current {
+    background: #3875d7;
+    color: #ffffff;
+}

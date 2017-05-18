@@ -1,0 +1,29 @@
+/*
+ * zmx 2016/06/03
+ * 批量收款列表 页面样式
+*/
+
+
+
+/*查询 start*/
+.search-box{background: #fff;border: 1px solid #ddd;border-radius: 3px;-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;padding: 10px;}
+.condition-btn{ display: inline-block; height: 28px; line-height: 28px; padding: 0 12px;
+    background: #f9f9f9; border:1px solid #ddd; color: #333; border-radius: 3px;vertical-align: middle;}
+.condition-active{border: 1px solid #99ba27; background: url("../../../../img/page/settlement/pay/btn-active.png") no-repeat right bottom #eaf9bb;}
+.from-width{ width: 150px;}
+.company-width{ width: 630px;}
+.show-grid:first-child{ margin-top: 0;}
+/*查询 end*/
+
+/*操作按钮 start*/
+.btn-box{ height: 36px; margin: 10px 0;}
+/*操作按钮 end*/
+
+/*表格 start*/
+.tableCon .yqx-table input{ margin-right: 8px;}
+.tableCon a{color: #9fc527;text-decoration: underline;}
+/*表格 end*/
+.td-company-width{ max-width: 100px; overflow: hidden;text-overflow: ellipsis; white-space: nowrap;}
+.yqx-table{table-layout: auto;}
+.red{color: #f25e61;}

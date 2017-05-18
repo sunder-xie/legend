@@ -1,0 +1,166 @@
+.wrapper{
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+.sidebar {
+    position: absolute;
+    top:69px;
+    left: 1px;
+    margin:1px 1px 0 -1px;
+    width: 150px;
+    background-color: #30415A;
+    border: 1px solid #e8e8e8;
+}
+
+.sidebar .qxy_marketing_menu {
+    margin: 1px 1px;
+    padding: 5px 0 0 0;
+}
+.sidebar > .qxy_marketing_menu > li{
+    margin-right: 2px;
+    line-height:30px;
+    text-align: right;
+    border-bottom: 1px solid #797979;
+}
+.qxy_marketing_menu>.qxy_mk_title:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width:10px 10px 10px 0;
+    border-style:solid;
+    border-color:transparent #CCCCCC transparent transparent;
+    line-height:30px;
+}
+
+.sidebar span, .sidebar a {
+    margin-right: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.sidebar li:hover, .sidebar .tabSel {
+    background-color: #fff;
+}
+.sidebar li:hover a, .sidebar .tabSel a{
+    color: #000;
+}
+.sidebar > .qxy_marketing_menu > .qxy_mk_title:hover {
+    background-color:#30415A;
+}
+
+.mk-chart {
+    position: relative;
+    top: 0;
+    left:142px;
+}
+/*----left content----*/
+.left_content {
+    margin-top: 10px;
+    position: relative;
+    left: 162px;
+    overflow-y: scroll;
+}
+
+.mk-sc-box {
+    margin-top: 10px;
+}
+.mk-sc-item {
+    margin: 0 10px 0 10px;
+    float: left;
+}
+
+.mk-sc-item label {
+    font-size: 12px;
+    color: #535353;
+}
+
+.mk-sc-item input[type=text] {
+    width: 108px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 5px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+
+.mk-sc-item button {
+    font-size: 13px;
+    color: #666;
+    padding: 0 15px;
+    height: 36px;
+    line-height: 36px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #c1c1c1;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f5f5f5));
+    text-align: center;
+    margin-left: 10px;
+}
+
+.mk-sc-item .mk-select {
+    width: 70px;
+    height: 32px;
+    background-color: #FFF;
+}
+.mk-btn-sms {
+    height: 36px;
+    width: 70px;
+    margin-left:20px;
+    font-size: 14px;
+    background-color: #00CCFF;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.mk-sc-tab ul li {
+    padding: 5px;
+    line-height:20px;
+    float:left;
+    list-style: none;
+    border:1px solid #CCCCCC;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    min-width: 75px;
+    text-align: center;
+}
+.mk-sc-tab .tab-sel {
+    background-color: #CCCCCC;
+}
+.mk-dataTable {
+    margin-top: 10px;
+    font-size: 14px;
+    max-width: 80%;
+}
+.mk-dataTable table tr{
+    background-color: #FFFFFF;
+}
+.mk-dataTable table tr th{
+    padding: 5px;
+    font-weight:bold;
+    border: 1px solid #A1A1A1;
+}
+
+.mk-dataTable table tr td{
+    padding: 5px;
+    text-align: left;
+    line-height:20px;
+
+    border: 1px solid #D2D2D0;
+}
+
+.mk-dataTable table .mk_dt_odd{
+    background-color: #F3F3F3;
+}
+#ddFill tr:hover {
+    background-color: #f3f3f3;
+}
+
+
+.mk-dataTable table .mk-dt-head {
+    background-color: #CCCCCC;
+}

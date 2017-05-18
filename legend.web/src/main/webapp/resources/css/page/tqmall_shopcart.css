@@ -1,0 +1,53 @@
+.tqmall_top_bar {
+    height: 30px;
+}
+
+.tqmall_top_bar p {
+    float: left;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tqmall_top_bar a {
+    float: right;
+    color: #115599;
+}
+
+.tqmall_block {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.tqmall_deliver_address {
+
+    vertical-align: middle;
+}
+
+.tqmall_deliver_address .p_title {
+    font-weight: bold;
+}
+
+.tqmall_deliver_address .address {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.tqmall_deliver_address .choose {
+    border: 2px solid #8fb027;
+}
+
+.tqmall_deliver_address .address span {
+    display: inline-block;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.tqmall_deliver_address .choose_sp {
+    padding-left: 20px;
+    margin: 0 5px;
+    display: inline;
+    color: #ff7800;
+    min-width: 46px;
+    background: url("../../img/page/buy/address_tip.jpg") no-repeat center left;
+}

@@ -1,0 +1,2 @@
+/*-- 淘汽云修 2015-12-07 03:32:29 --*/
+template.helper("parseJSON",function(a){switch($.type(a)){case"object":case"array":return a;case"string":if($.trim(a))return $.parseJSON(a)}return null}),template.helper("encodeJSON",function(a){return a.replace(/"/g,'\\"')}),template.helper("jsonToString",function(a){switch($.type(a)){case"object":var b=[];for(var c in a)b.push('"'+c+'":"'+a[c]+'"');return"{"+b.join(",")+"}";case"array":var b=[];for(var c in a)b.push('"'+a[c]+'"');return"["+b.join(",")+"]";default:return a}});

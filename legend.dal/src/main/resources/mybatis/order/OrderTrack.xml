@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.order.OrderTrackDao">
+
+    <resultMap id="BaseResultMap" type="OrderTrack" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="order_id" property="orderId"/>
+        <result column="order_status" property="orderStatus"/>
+        <result column="pre_order_status" property="preOrderStatus"/>
+        <result column="pre_manager" property="preManager"/>
+        <result column="log" property="log"/>
+        <result column="attributes" property="attributes"/>
+        <result column="order_sn" property="orderSn"/>
+        <result column="operator_name" property="operatorName"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        order_id as orderId,
+        order_status as orderStatus,
+        pre_order_status as preOrderStatus,
+        pre_manager as preManager,
+        log as log,
+        attributes as attributes,
+        order_sn as orderSn,
+        operator_name as operatorName,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+
+                and shop_id = #{shopId}
+
+                <if test="orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test="orderStatus != null">
+                    and order_status = #{orderStatus}
+                </if>
+                <if test="preOrderStatus != null">
+                    and pre_order_status = #{preOrderStatus}
+                </if>
+                <if test="preManager != null">
+                    and pre_manager = #{preManager}
+                </if>
+                <if test="log != null">
+                    and log = #{log}
+                </if>
+                <if test="attributes != null">
+                    and attributes = #{attributes}
+                </if>
+                <if test="orderSn != null">
+                    and order_sn = #{orderSn}
+                </if>
+                <if test="operatorName != null">
+                    and operator_name = #{operatorName}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="orderId != null">
+                    order_id = #{orderId},
+                </if>
+                <if test="orderStatus != null">
+                    order_status = #{orderStatus},
+                </if>
+                <if test="preOrderStatus != null">
+                    pre_order_status = #{preOrderStatus},
+                </if>
+                <if test="preManager != null">
+                    pre_manager = #{preManager},
+                </if>
+                <if test="log != null">
+                    log = #{log},
+                </if>
+                <if test="attributes != null">
+                    attributes = #{attributes}
+                </if>
+                <if test="orderSn != null">
+                    order_sn = #{orderSn}
+                </if>
+                <if test="operatorName != null">
+                    operator_name = #{operatorName}
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_order_track
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_track
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_track
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_track
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_order_track
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_order_track
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_order_track
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_order_track (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="orderId != null">
+                order_id,
+            </if>
+            <if test="orderStatus != null">
+                order_status,
+            </if>
+            <if test="preOrderStatus != null">
+                pre_order_status,
+            </if>
+            <if test="preManager != null">
+                pre_manager,
+            </if>
+            <if test="log != null">
+                log,
+            </if>
+            <if test="attributes != null">
+                attributes,
+            </if>
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+            <if test="operatorName != null">
+                operator_name,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="orderStatus != null">
+                #{orderStatus},
+            </if>
+            <if test="preOrderStatus != null">
+                #{preOrderStatus},
+            </if>
+            <if test="preManager != null">
+                #{preManager},
+            </if>
+            <if test="log != null">
+                #{log},
+            </if>
+            <if test="attributes != null">
+                #{attributes},
+            </if>
+            <if test="orderSn != null">
+                #{orderSn},
+            </if>
+            <if test="operatorName != null">
+                #{operatorName},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_order_track
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+</mapper>

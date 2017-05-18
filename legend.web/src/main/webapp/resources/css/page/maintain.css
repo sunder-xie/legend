@@ -1,0 +1,29 @@
+body{font-size:14px; background-color:white; color:black;}
+table,footer,header{width:960px; margin:0 auto;}
+#tit{font-size:70px; text-align:center;}
+#company{clear:both; font-size:20px; font-weight:bold;}
+#blankPage,#orderID{clear:both; float:right;margin-right:30px;}
+table{clear:both; border-collapse:collapse;}
+#table_3{z-index:2; position:relative; top:-3px;}
+#table_2,#table_3,#table_4{border:3px solid black;}
+th,td{height:30px; border:1px solid black; line-height:30px; overflow:hidden;}
+th{text-align:center;}
+#p_space{padding-left:75%}
+#t3_tr7{height:50px;}
+#t3_tr8,#t4_tr3{height:80px;}
+#t4_tr4{height:80px;}
+#t4_tr5{height:100px;}
+#fp1,#fp2,#fp3,#fp4,#fb1,#fb2,#fd1{float:left;}
+#fd1,#fb2,#fp3,#fp4{clear:both; margin-left:70px;}
+#fp1,#fp2,#fb2{font-size:20px;}
+#fd1,#fp3,#fp4{font-size:16px;}
+#fb2{font-weight:bold;}
+#fp2{margin-left:20px; margin-top:10px; margin-bottom:10px;}
+#fd1{margin-top:20px;}
+#fb1{margin-left:40px; font-size:24px; font-weight:bold;}
+#fd2{float:right;}
+div{float:left;}
+img{border:1px solid;}
+._block{height:20px; border:1px solid black; padding-left:15px;}
+.ymd{margin-top:40px; text-align:right;}
+

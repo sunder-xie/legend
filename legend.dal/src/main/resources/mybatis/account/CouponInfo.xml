@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.account.CouponInfoDao">
+
+    <resultMap id="BaseResultMap" type="CouponInfo" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="coupon_type" property="couponType"/>
+        <result column="coupon_name" property="couponName"/>
+        <result column="discount" property="discount"/>
+        <result column="use_range" property="useRange"/>
+        <result column="customize_time" property="customizeTime"/>
+        <result column="effective_period_days" property="effectivePeriodDays"/>
+        <result column="effective_date" property="effectiveDate"/>
+        <result column="expire_date" property="expireDate"/>
+        <result column="compatible_with_card" property="compatibleWithCard"/>
+        <result column="compatible_with_other_account" property="compatibleWithOtherAccount"/>
+        <result column="compatible_with_other_coupon" property="compatibleWithOtherCoupon"/>
+        <result column="single_use" property="singleUse"/>
+        <result column="discount_amount" property="discountAmount"/>
+        <result column="amount_limit" property="amountLimit"/>
+        <result column="coupon_status" property="couponStatus"/>
+        <result column="coupon_remark" property="remark"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            coupon_type as couponType,
+            coupon_name as couponName,
+            discount as discount,
+            use_range as useRange,
+            customize_time as customizeTime,
+            effective_period_days as effectivePeriodDays,
+            effective_date as effectiveDate,
+            expire_date as expireDate,
+            compatible_with_card as compatibleWithCard,
+            compatible_with_other_account as compatibleWithOtherAccount,
+            compatible_with_other_coupon as compatibleWithOtherCoupon,
+            single_use as singleUse,
+            discount_amount as discountAmount,
+            amount_limit as amountLimit,
+            coupon_status as couponStatus,
+            coupon_remark as coupon_remark,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="couponType != null">
+                    and coupon_type = #{couponType}
+                </if>
+                <if test="couponName != null">
+                    and coupon_name = #{couponName}
+                </if>
+                <if test="discount != null">
+                    and discount = #{discount}
+                </if>
+                <if test="useRange != null">
+                    and use_range = #{useRange}
+                </if>
+                <if test="customizeTime != null">
+                    and customize_time = #{customizeTime}
+                </if>
+                <if test="effectivePeriodDays != null">
+                    and effective_period_days = #{effectivePeriodDays}
+                </if>
+                <if test="effectiveDate != null">
+                    and effective_date = #{effectiveDate}
+                </if>
+                <if test="expireDate != null">
+                    and expire_date = #{expireDate}
+                </if>
+                <if test="compatibleWithCard != null">
+                    and compatible_with_card = #{compatibleWithCard}
+                </if>
+                <if test="compatibleWithOtherAccount != null">
+                    and compatible_with_other_account = #{compatibleWithOtherAccount}
+                </if>
+                <if test="compatibleWithOtherCoupon != null">
+                    and compatible_with_other_coupon = #{compatibleWithOtherCoupon}
+                </if>
+                <if test="singleUse != null">
+                    and single_use = #{singleUse}
+                </if>
+                <if test="discountAmount != null">
+                    and discount_amount = #{discountAmount}
+                </if>
+                <if test="amountLimit != null">
+                    and amount_limit = #{amountLimit}
+                </if>
+                <if test="couponStatus != null">
+                    and coupon_status = #{couponStatus}
+                </if>
+                <if test="reamrk != null">
+                    and coupon_remark = #{remark}
+                </if>
+                <if test="nameLike != null">
+                    and coupon_name like CONCAT('%', #{nameLike}, '%')
+                </if>
+                <if test="ids !=null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="id" separator=",">
+                        #{id}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="couponType != null">
+                    coupon_type = #{couponType},
+                </if>
+                <if test="couponName != null">
+                    coupon_name = #{couponName},
+                </if>
+                <if test="discount != null">
+                    discount = #{discount},
+                </if>
+                <if test="useRange != null">
+                    use_range = #{useRange},
+                </if>
+                <if test="customizeTime != null">
+                    customize_time = #{customizeTime},
+                </if>
+                <if test="customizeTime == 0">
+                    effective_period_days = #{effectivePeriodDays},
+                </if>
+                <if test="customizeTime == 1">
+                    effective_period_days = 0,
+                </if>
+                <if test="customizeTime == 0">
+                    effective_date = null,
+                </if>
+                <if test="customizeTime == 1">
+                    effective_date = #{effectiveDate},
+                </if>
+                <if test="customizeTime == 0">
+                    expire_date = null,
+                </if>
+                <if test="customizeTime == 1">
+                    expire_date = #{expireDate},
+                </if>
+                <if test="compatibleWithCard != null">
+                    compatible_with_card = #{compatibleWithCard},
+                </if>
+                <if test="compatibleWithOtherAccount != null">
+                    compatible_with_other_account = #{compatibleWithOtherAccount},
+                </if>
+                <if test="compatibleWithOtherCoupon != null">
+                    compatible_with_other_coupon = #{compatibleWithOtherCoupon},
+                </if>
+                <if test="singleUse != null">
+                    single_use = #{singleUse},
+                </if>
+                <if test="discountAmount != null">
+                    discount_amount = #{discountAmount},
+                </if>
+                <if test="amountLimit != null">
+                    amount_limit = #{amountLimit},
+                </if>
+                <if test="couponStatus != null">
+                    coupon_status = #{couponStatus},
+                </if>
+                <if test="remark != null">
+                    coupon_remark = #{remark},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_coupon_info
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon_info
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon_info
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon_info
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_coupon_info
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_coupon_info
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_coupon_info
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_coupon_info (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="couponType != null">
+                coupon_type,
+            </if>
+            <if test="couponName != null">
+                coupon_name,
+            </if>
+            <if test="discount != null">
+                discount,
+            </if>
+            <if test="useRange != null">
+                use_range,
+            </if>
+            <if test="customizeTime != null">
+                customize_time,
+            </if>
+            <if test="effectivePeriodDays != null">
+                effective_period_days,
+            </if>
+            <if test="effectiveDate != null">
+                effective_date,
+            </if>
+            <if test="expireDate != null">
+                expire_date,
+            </if>
+            <if test="compatibleWithCard != null">
+                compatible_with_card,
+            </if>
+            <if test="compatibleWithOtherAccount != null">
+                compatible_with_other_account,
+            </if>
+            <if test="compatibleWithOtherCoupon != null">
+                compatible_with_other_coupon,
+            </if>
+            <if test="singleUse != null">
+                single_use,
+            </if>
+            <if test="discountAmount != null">
+                discount_amount,
+            </if>
+            <if test="amountLimit != null">
+                amount_limit,
+            </if>
+            <if test="couponStatus != null">
+                coupon_status,
+            </if>
+            <if test="remark != null">
+                coupon_remark,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="couponType != null">
+                #{couponType},
+            </if>
+            <if test="couponName != null">
+                #{couponName},
+            </if>
+            <if test="discount != null">
+                #{discount},
+            </if>
+            <if test="useRange != null">
+                #{useRange},
+            </if>
+            <if test="customizeTime != null">
+                #{customizeTime},
+            </if>
+            <if test="effectivePeriodDays != null">
+                #{effectivePeriodDays},
+            </if>
+            <if test="effectiveDate != null">
+                #{effectiveDate},
+            </if>
+            <if test="expireDate != null">
+                #{expireDate},
+            </if>
+            <if test="compatibleWithCard != null">
+                #{compatibleWithCard},
+            </if>
+            <if test="compatibleWithOtherAccount != null">
+                #{compatibleWithOtherAccount},
+            </if>
+            <if test="compatibleWithOtherCoupon != null">
+                #{compatibleWithOtherCoupon},
+            </if>
+            <if test="singleUse != null">
+                #{singleUse},
+            </if>
+            <if test="discountAmount != null">
+                #{discountAmount},
+            </if>
+            <if test="amountLimit != null">
+                #{amountLimit},
+            </if>
+            <if test="couponStatus != null">
+                #{couponStatus},
+            </if>
+            <if test="remark != null">
+                #{remark},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_coupon_info
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_coupon_info (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            coupon_type,
+            coupon_name,
+            discount,
+            use_range,
+            customize_time,
+            effective_period_days,
+            effective_date,
+            expire_date,
+            compatible_with_card,
+            compatible_with_other_account,
+            compatible_with_other_coupon,
+            single_use,
+            discount_amount,
+            amount_limit,
+            coupon_status,
+            coupon_remark,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.couponType != null">
+                    #{item.couponType},
+                </if>
+                <if test="item.couponType == null">
+                    0 ,
+                </if>
+                <if test="item.couponName != null">
+                    #{item.couponName},
+                </if>
+                <if test="item.couponName == null">
+                    '',
+                </if>
+                <if test="item.discount != null">
+                    #{item.discount},
+                </if>
+                <if test="item.discount == null">
+                    0.00,
+                </if>
+                <if test="item.useRange != null">
+                    #{item.useRange},
+                </if>
+                <if test="item.useRange == null">
+                    0 ,
+                </if>
+                <if test="item.customizeTime != null">
+                    #{item.customizeTime},
+                </if>
+                <if test="item.customizeTime == null">
+                    0 ,
+                </if>
+                <if test="item.effectivePeriodDays != null">
+                    #{item.effectivePeriodDays},
+                </if>
+                <if test="item.effectivePeriodDays == null">
+                    0 ,
+                </if>
+                <if test="item.effectiveDate != null">
+                    #{item.effectiveDate},
+                </if>
+                <if test="item.effectiveDate == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.expireDate != null">
+                    #{item.expireDate},
+                </if>
+                <if test="item.expireDate == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.compatibleWithCard != null">
+                    #{item.compatibleWithCard},
+                </if>
+                <if test="item.compatibleWithCard == null">
+                    0 ,
+                </if>
+                <if test="item.compatibleWithOtherAccount != null">
+                    #{item.compatibleWithOtherAccount},
+                </if>
+                <if test="item.compatibleWithOtherAccount == null">
+                    0 ,
+                </if>
+                <if test="item.compatibleWithOtherCoupon != null">
+                    #{item.compatibleWithOtherCoupon},
+                </if>
+                <if test="item.compatibleWithOtherCoupon == null">
+                    0 ,
+                </if>
+                <if test="item.singleUse != null">
+                    #{item.singleUse},
+                </if>
+                <if test="item.singleUse == null">
+                    0 ,
+                </if>
+                <if test="item.discountAmount != null">
+                    #{item.discountAmount},
+                </if>
+                <if test="item.discountAmount == null">
+                    0.00,
+                </if>
+                <if test="item.amountLimit != null">
+                    #{item.amountLimit},
+                </if>
+                <if test="item.amountLimit == null">
+                    0.00,
+                </if>
+                <if test="item.couponStatus != null">
+                    #{item.couponStatus},
+                </if>
+                <if test="item.couponStatus == null">
+                    0 ,
+                </if>
+                <if test="item.remark != null">
+                    #{item.remark},
+                </if>
+                <if test="item.couponStatus == null">
+                    '' ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="findCouponInfoByNames" resultMap="BaseResultMap">
+        select
+        id,
+        shop_id as shopId,
+        coupon_type as couponType,
+        coupon_name as couponName
+        FROM legend_coupon_info
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and coupon_name in
+        <foreach collection="names" index="index" item="tag" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+
+    </select>
+
+</mapper> 

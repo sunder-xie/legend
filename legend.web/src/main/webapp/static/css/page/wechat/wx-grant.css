@@ -1,0 +1,85 @@
+h3{
+    font-family: "Microsoft YaHei", "Hiragino Sans GB",Helvetica,Arial,sans-serif;
+}
+.marR10{
+    margin-right: 10px;
+}
+.marR20{
+    margin-right: 10px;
+}
+.order-body{
+    padding: 50px 50px 50px 260px;
+    min-height: inherit;
+}
+.order-body a{
+    color: #7fa700;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.order-body h3{
+    color: #7fa700;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+.content-box p{
+    line-height: 20px;
+}
+.content-box .yqx-btn{
+    margin-top: 20px;
+}
+.fail-icon, .affirm-icon, .process-icon{
+    width: 40px;
+    height: 40px;
+    left: -60px;
+    top: -12px;
+    position: absolute;
+    background: url('../../../img/page/wechat/apply/wechat_apply_icon.png') no-repeat;
+}
+.fail-icon{
+    background-position: -80px;
+}
+.affirm-icon{
+    background-position: -120px;
+}
+.process-icon{
+    background-position: -160px;
+}
+.fail strong{
+    color: #7fa700;
+}
+.fail h3{
+    color: #ff7f80;
+}
+
+/*弹窗样式 start*/
+.dialog{
+    background: #fff;
+}
+.dialog-title{
+    height:55px;
+    line-height:55px;
+    text-align:center;
+    background:#232e49;
+    font-size: 16px;
+    color: #fff;
+}
+.dialog-con{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.dialog-text{
+    width: 260px;
+    margin: 20px auto;
+    padding-bottom: 14px;
+    line-height: 26px;
+    text-align: left;
+    white-space: pre-line;
+}
+
+/*弹窗样式 end*/
+
+
+

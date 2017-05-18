@@ -1,0 +1,170 @@
+fieldset .fieldset-title {
+    width: 93px;
+}
+
+textarea.yqx-input {
+    width: 450px;
+    height: 90px;
+    word-break: break-all;
+    line-height: 15px;
+}
+
+.yqx-input-mid {
+    width: 208px;
+}
+
+.yqx-btn + .yqx-btn {
+    margin-left: 10px;
+}
+
+.margin-right-36 {
+    margin-right: 36px;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.order-body {
+    min-height: initial;
+}
+
+.question-icon {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    vertical-align: sub;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width:  15px;
+}
+
+.msg-tips {
+    background: rgb(159, 197, 39);
+    top: -20px;
+    max-width: 460px;
+    position: absolute;
+    left: 280px;
+    line-height: 22px;
+    min-width: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    color: #fff;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* 标签部分 start */
+#tagWrapper{
+    display: inline-block;
+}
+.info-tag {
+    display: inline-block;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(123, 160, 4);
+    border-radius: 3px;
+    height: 22px;
+    color:rgb(123, 160, 4);
+    padding: 0 10px;
+}
+
+.info-tags{
+    display: inline-block;
+}
+
+.info-tag + .info-tag {
+    margin-left: 5px;
+}
+.tag-add {
+    background: rgb(251, 251, 251);
+    border-color: rgb(191, 191, 191);
+    color: rgb(191, 191, 191);
+    cursor: pointer;
+    width: 55px;
+    margin-left: 5px;
+}
+
+.tag-add:hover {
+    border-color: rgb(123, 160, 4);
+    color: rgb(123, 160, 4);
+    opacity: .8;
+}
+
+#tag-input {
+    border: 0;
+    height: 100%;
+    line-height: 100%;
+    width: 80px;
+    text-indent: 1px;
+    vertical-align: top;
+}
+
+#input-box {
+    background: none;
+    padding: 0;
+    color: #fff;
+}
+
+i.tag-btn {
+    font-style: normal;
+    background: #9fc527;
+    padding: 0 3px;
+    height: 100%;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+
+i.btn-cancel {
+    background: #f29530;
+}
+
+#comment{
+    display: inline-block;
+    white-space: nowrap;
+    padding: 10px 20px 0 110px;
+}
+/* 标签部分 end */
+
+h2 .warning {
+    color:  #f74a3f;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.yqx-input {
+    width: 124px;
+    height: 30px;
+    line-height: 30px;
+}
+.yqx-input-mid {
+    width: 208px;
+}
+
+.fieldset-title {
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+    margin-right: 14px;
+    color: #666;
+    vertical-align: middle;
+}
+
+.fieldset-title p {
+    line-height: 16px;
+}
+
+fieldset {
+    margin-bottom: 23px;
+}
+

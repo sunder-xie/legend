@@ -1,0 +1,19 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--项目名，唯一编号，不要写成别人的系统名-->
+    <dubbo:application name="legend" organization="yunxiu" owner="xiujin.yang"/>
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="${dubbo.address}"/>
+
+    <!--监控平台，由zk自动寻找-->
+    <dubbo:monitor protocol="registry"/>
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="${dubbo.port}"/>
+
+    <!--消费方端引入自己的服务配置文件-->
+    <import resource="dubbo-service-consume.xml"/>
+</beans>

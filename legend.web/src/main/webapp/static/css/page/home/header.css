@@ -1,0 +1,66 @@
+.yqx-header div.header li.li-user-wrapper {
+    padding-left: 27px;
+    margin-left: 36px;
+    padding-right: 0;
+}
+
+.yqx-header .business-entry {
+    left: 0;
+    border: 0;
+    z-index: 1;
+    box-shadow:1px 1px 3px 1px rgba(0, 0, 0, 0.1),-1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.yqx-header .nav-user-box .user-account {
+    margin-left: 0;
+    padding-left: 6px;
+    font-size: 12px;
+}
+
+.yqx-header .topmenu {
+    float: right;
+}
+
+.yqx-header .home-topnav.topnav .topmenu .header-entry, .yqx-header .home-topnav.topnav .li-user-wrapper {
+    float: left;
+    position: relative;
+    right: auto;
+}
+
+.yqx-header .home-topnav>img {
+    vertical-align: top;
+}
+
+.yqx-header .header-logo {
+    margin-right: 0;
+}
+
+.yqx-header .nav-user-box {
+    margin: 0;
+}
+
+.yqx-header .header .topmenu>li {
+    margin-right: 0;
+}
+
+.yqx-header .header .topmenu>li{
+    padding: 0 25px;
+}
+
+.yqx-header .business-entry .angle-top {
+    left: 9%;
+    right: initial;
+}
+
+.yqx-header .topmenu>li.header-entry>a:hover {
+    height: 70px;
+    border-bottom: 0;
+}
+
+.yqx-header .header-entry:after {
+    display: none;
+}
+
+.tqmall-header-entry .app-wrapper p {
+    width: inherit;
+}

@@ -1,0 +1,72 @@
+.wrapper{
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.content{
+    width: 980px;
+    margin:0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+
+.right{
+    float: right;
+    width: 825px;
+}
+.right p.big-title{
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+    font-family: MircosoftYahei;
+    font-weight: bold;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dddddd;
+}
+.goBack {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+}
+.contain-wrap {
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.rule-box{
+    width: 720px;
+    margin: 0 auto 30px auto;
+    line-height: 20px;
+}
+.paragraph-box{
+    margin-top: 30px;
+    overflow: hidden;
+}
+.paragraph-title{
+    height: 23px;
+    line-height: 23px;
+    font-size: 18px;
+    color: #8eb210;
+    margin-bottom: 10px;
+}
+.how-get{
+    width: 31px;
+    height: 94px;
+    background: url('../../../../img/page/ax_insurance/cashImg.png') -264px -5px no-repeat;
+}
+.float-le{
+    float: left;
+}
+.how-get-p{
+    font-size: 14px;
+    margin-bottom: 22px;
+    margin-top: 3px;
+}
+

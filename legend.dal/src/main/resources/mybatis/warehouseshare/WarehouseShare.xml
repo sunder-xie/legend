@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.warehouseshare.WarehouseShareDao">
+
+    <resultMap id = "BaseResultMap" type = "WarehouseShare" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "goods_id" property = "goodsId" />
+        <result column = "goods_name" property = "goodsName" />
+        <result column = "measure_unit" property = "measureUnit" />
+        <result column = "goods_origin" property = "goodsOrigin" />
+        <result column = "goods_format" property = "goodsFormat" />
+        <result column = "cat_name" property = "catName" />
+        <result column = "brand_name" property = "brandName" />
+        <result column = "goods_price" property = "goodsPrice" />
+        <result column = "goods_stock" property = "goodsStock" />
+        <result column = "sale_number" property = "saleNumber" />
+        <result column = "shop_id" property = "shopId" />
+        <result column = "last_sale_time" property = "lastSaleTime" />
+        <result column = "goods_status" property = "goodsStatus" />
+        <result column = "inventory_price" property = "inventoryPrice" />
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "car_info" property = "carInfo" />
+        <result column = "part_used_to" property = "partUsedTo" />
+        <result column = "goods_remark" property = "goodsRemark" />
+        <result column = "last_in_time" property = "lastInTime" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            goods_id as goodsId,
+            goods_name as goodsName,
+            measure_unit as measureUnit,
+            goods_origin as goodsOrigin,
+            goods_format as goodsFormat,
+            cat_name as catName,
+            brand_name as brandName,
+            goods_price as goodsPrice,
+            goods_stock as goodsStock,
+            sale_number as saleNumber,
+            shop_id as shopId,
+            last_sale_time as lastSaleTime,
+            goods_status as goodsStatus,
+            inventory_price as inventoryPrice,
+            img_url as imgUrl,
+            car_info as carInfo,
+            part_used_to as partUsedTo,
+            goods_remark as goodsRemark,
+            last_in_time as lastInTime,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "goodsId != null">
+                    and goods_id = #{goodsId}
+                </if>
+                <if test = "goodsName != null">
+                    and goods_name = #{goodsName}
+                </if>
+                <if test = "measureUnit != null">
+                    and measure_unit = #{measureUnit}
+                </if>
+                <if test = "goodsOrigin != null">
+                    and goods_origin = #{goodsOrigin}
+                </if>
+                <if test = "goodsFormat != null">
+                    and goods_format = #{goodsFormat}
+                </if>
+                <if test = "catName != null">
+                    and cat_name = #{catName}
+                </if>
+                <if test = "brandName != null">
+                    and brand_name = #{brandName}
+                </if>
+                <if test = "goodsPrice != null">
+                    and goods_price = #{goodsPrice}
+                </if>
+                <if test = "goodsStock != null">
+                    and goods_stock = #{goodsStock}
+                </if>
+                <if test = "saleNumber != null">
+                    and sale_number = #{saleNumber}
+                </if>
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "lastSaleTime != null">
+                    and last_sale_time = #{lastSaleTime}
+                </if>
+                <if test = "goodsStatus != null">
+                    and goods_status = #{goodsStatus}
+                </if>
+                <if test = "inventoryPrice != null">
+                    and inventory_price = #{inventoryPrice}
+                </if>
+                <if test = "imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test = "carInfo != null">
+                    and car_info = #{carInfo}
+                </if>
+                <if test = "partUsedTo != null">
+                    and part_used_to = #{partUsedTo}
+                </if>
+                <if test = "goodsRemark != null">
+                    and goods_remark = #{goodsRemark}
+                </if>
+                <if test = "lastInTime != null">
+                    and last_in_time = #{lastInTime}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "goodsId != null">
+                    goods_id = #{goodsId},
+                </if>
+                <if test = "goodsName != null">
+                    goods_name = #{goodsName},
+                </if>
+                <if test = "measureUnit != null">
+                    measure_unit = #{measureUnit},
+                </if>
+                <if test = "goodsOrigin != null">
+                    goods_origin = #{goodsOrigin},
+                </if>
+                <if test = "goodsFormat != null">
+                    goods_format = #{goodsFormat},
+                </if>
+                <if test = "catName != null">
+                    cat_name = #{catName},
+                </if>
+                <if test = "brandName != null">
+                    brand_name = #{brandName},
+                </if>
+                <if test = "goodsPrice != null">
+                    goods_price = #{goodsPrice},
+                </if>
+                <if test = "goodsStock != null">
+                    goods_stock = #{goodsStock},
+                </if>
+                <if test = "saleNumber != null">
+                    sale_number = #{saleNumber},
+                </if>
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "lastSaleTime != null">
+                    last_sale_time = #{lastSaleTime},
+                </if>
+                <if test = "goodsStatus != null">
+                    goods_status = #{goodsStatus},
+                </if>
+                <if test = "inventoryPrice != null">
+                    inventory_price = #{inventoryPrice},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "carInfo != null">
+                    car_info = #{carInfo},
+                </if>
+                <if test = "partUsedTo != null">
+                    part_used_to = #{partUsedTo},
+                </if>
+                <if test = "goodsRemark != null">
+                    goods_remark = #{goodsRemark},
+                </if>
+                <if test = "lastInTime != null">
+                    last_in_time = #{lastInTime},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_warehouse_share
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_warehouse_share
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_warehouse_share
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_warehouse_share
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_warehouse_share
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_warehouse_share
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_warehouse_share
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_warehouse_share (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "goodsId != null">
+                goods_id,
+            </if>
+            <if test = "goodsName != null">
+                goods_name,
+            </if>
+            <if test = "measureUnit != null">
+                measure_unit,
+            </if>
+            <if test = "goodsOrigin != null">
+                goods_origin,
+            </if>
+            <if test = "goodsFormat != null">
+                goods_format,
+            </if>
+            <if test = "catName != null">
+                cat_name,
+            </if>
+            <if test = "brandName != null">
+                brand_name,
+            </if>
+            <if test = "goodsPrice != null">
+                goods_price,
+            </if>
+            <if test = "goodsStock != null">
+                goods_stock,
+            </if>
+            <if test = "saleNumber != null">
+                sale_number,
+            </if>
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "lastSaleTime != null">
+                last_sale_time,
+            </if>
+            <if test = "goodsStatus != null">
+                goods_status,
+            </if>
+            <if test = "inventoryPrice != null">
+                inventory_price,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "carInfo != null">
+                car_info,
+            </if>
+            <if test = "partUsedTo != null">
+                part_used_to,
+            </if>
+            <if test = "goodsRemark != null">
+                goods_remark,
+            </if>
+            <if test = "lastInTime != null">
+                last_in_time,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "goodsId != null">
+                #{goodsId},
+            </if>
+            <if test = "goodsName != null">
+                #{goodsName},
+            </if>
+            <if test = "measureUnit != null">
+                #{measureUnit},
+            </if>
+            <if test = "goodsOrigin != null">
+                #{goodsOrigin},
+            </if>
+            <if test = "goodsFormat != null">
+                #{goodsFormat},
+            </if>
+            <if test = "catName != null">
+                #{catName},
+            </if>
+            <if test = "brandName != null">
+                #{brandName},
+            </if>
+            <if test = "goodsPrice != null">
+                #{goodsPrice},
+            </if>
+            <if test = "goodsStock != null">
+                #{goodsStock},
+            </if>
+            <if test = "saleNumber != null">
+                #{saleNumber},
+            </if>
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "lastSaleTime != null">
+                #{lastSaleTime},
+            </if>
+            <if test = "goodsStatus != null">
+                #{goodsStatus},
+            </if>
+            <if test = "inventoryPrice != null">
+                #{inventoryPrice},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "carInfo != null">
+                #{carInfo},
+            </if>
+            <if test = "partUsedTo != null">
+                #{partUsedTo},
+            </if>
+            <if test = "goodsRemark != null">
+                #{goodsRemark},
+            </if>
+            <if test = "lastInTime != null">
+                #{lastInTime},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_warehouse_share
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_warehouse_share (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            goods_id,
+            goods_name,
+            measure_unit,
+            goods_origin,
+            goods_format,
+            cat_name,
+            brand_name,
+            goods_price,
+            goods_stock,
+            sale_number,
+            shop_id,
+            last_sale_time,
+            goods_status,
+            inventory_price,
+            img_url,
+            car_info,
+            part_used_to,
+            goods_remark,
+            last_in_time,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.goodsId != null">
+                    #{item.goodsId},
+                </if>
+                <if test="item.goodsId == null">
+                    0 ,
+                </if>
+                <if test="item.goodsName != null">
+                    #{item.goodsName},
+                </if>
+                <if test="item.goodsName == null">
+                    '',
+                </if>
+                <if test="item.measureUnit != null">
+                    #{item.measureUnit},
+                </if>
+                <if test="item.measureUnit == null">
+                    '',
+                </if>
+                <if test="item.goodsOrigin != null">
+                    #{item.goodsOrigin},
+                </if>
+                <if test="item.goodsOrigin == null">
+                    '',
+                </if>
+                <if test="item.goodsFormat != null">
+                    #{item.goodsFormat},
+                </if>
+                <if test="item.goodsFormat == null">
+                    '',
+                </if>
+                <if test="item.catName != null">
+                    #{item.catName},
+                </if>
+                <if test="item.catName == null">
+                    '',
+                </if>
+                <if test="item.brandName != null">
+                    #{item.brandName},
+                </if>
+                <if test="item.brandName == null">
+                    '',
+                </if>
+                <if test="item.goodsPrice != null">
+                    #{item.goodsPrice},
+                </if>
+                <if test="item.goodsPrice == null">
+                    0.00,
+                </if>
+                <if test="item.goodsStock != null">
+                    #{item.goodsStock},
+                </if>
+                <if test="item.goodsStock == null">
+                    0.00,
+                </if>
+                <if test="item.saleNumber != null">
+                    #{item.saleNumber},
+                </if>
+                <if test="item.saleNumber == null">
+                    0.00,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.lastSaleTime != null">
+                    #{item.lastSaleTime},
+                </if>
+                <if test="item.lastSaleTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.goodsStatus != null">
+                    #{item.goodsStatus},
+                </if>
+                <if test="item.goodsStatus == null">
+                    0 ,
+                </if>
+                <if test="item.inventoryPrice != null">
+                    #{item.inventoryPrice},
+                </if>
+                <if test="item.inventoryPrice == null">
+                    0.00,
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    '',
+                </if>
+                <if test="item.carInfo != null">
+                    #{item.carInfo},
+                </if>
+                <if test="item.carInfo == null">
+                    '',
+                </if>
+                <if test="item.partUsedTo != null">
+                    #{item.partUsedTo},
+                </if>
+                <if test="item.partUsedTo == null">
+                    '',
+                </if>
+                <if test="item.goodsRemark != null">
+                    #{item.goodsRemark},
+                </if>
+                <if test="item.goodsRemark == null">
+                    '',
+                </if>
+                <if test="item.lastInTime != null">
+                    #{item.lastInTime},
+                </if>
+                <if test="item.lastInTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <select id="countByCondition" resultType="java.lang.Integer">
+        SELECT COUNT(1)
+        FROM legend_warehouse_share a
+        JOIN legend_shop b
+        ON a.shop_id = b.id
+        AND b.shop_status=1
+        <include refid="whereByCondition"/>
+    </select>
+
+    <select id="getListByCondition" resultType="com.tqmall.legend.pojo.warehouseshare.WarehouseShareVO">
+        select a.id,
+               a.goods_id goodsId,
+               a.goods_name goodsName,
+               a.sale_number saleNumber,
+               a.measure_unit measureUnit,
+               a.goods_price goodsPrice,
+               a.shop_id shopId,
+               b.city_name cityName
+        FROM legend_warehouse_share a
+        JOIN legend_shop b
+        ON a.shop_id = b.id
+        AND b.shop_status=1
+        <include refid="whereByCondition"/>
+        ORDER BY a.gmt_modified DESC, a.id DESC
+        limit #{offset}, #{limit}
+    </select>
+
+    <sql id="whereByCondition">
+        <where>
+            <trim prefixOverrides = "and">
+                goods_status = 1
+                <if test="goodsCate != null">
+                    AND a.cat_name like CONCAT('%',#{goodsCate},'%')
+                </if>
+                <if test="goodsName != null">
+                    AND a.goods_name like CONCAT('%',#{goodsName},'%')
+                </if>
+                <if test="provinceId != null and provinceId > 0">
+                    AND b.province = #{provinceId}
+                </if>
+                <if test="cityId != null and cityId > 0">
+                    AND b.city = #{cityId}
+                </if>
+                AND a.is_deleted = 'N'
+                AND b.is_deleted = 'N'
+            </trim>
+        </where>
+    </sql>
+
+    <select id="getWarehouseShareGoodsDetail" resultType="com.tqmall.legend.pojo.warehouseshare.WarehouseShareGoodsDetail">
+        SELECT a.id as id,
+               a.shop_id AS shopId,
+               a.goods_name AS goodsName,
+               a.goods_format AS goodsFormat,
+               a.car_info AS carInfo,
+               a.sale_number AS saleNumber,
+               a.measure_unit AS measureUnit,
+               a.goods_price AS  goodsPrice,
+               b.contact_name AS contactName,
+               b.contact_mobile AS contactMobile,
+               c.province_name AS provinceName,
+               c.city_name AS cityName,
+               c.street_name AS streetName
+        FROM legend_warehouse_share a
+        JOIN legend_warehouse_share_shop_contact b ON a.shop_id = b.shop_id
+        JOIN legend_shop c ON a.shop_id = c.id
+        WHERE a.id = #{id}
+        AND a.is_deleted = 'N'
+        AND b.is_deleted = 'N'
+        AND c.is_deleted = 'N'
+    </select>
+    <select id="querySaleCount" resultType="com.tqmall.legend.entity.warehouseshare.WarehouseShareCountVO">
+        SELECT
+        -- 全部
+        count(1) as allSaleNum,
+        -- 待出售
+        SUM(CASE WHEN goods_status = 0  THEN 1 ELSE 0 END) AS waitForSaleNum,
+        -- 出售中
+        SUM(CASE WHEN goods_status = 1  THEN 1 ELSE 0 END) AS onsaleNum,
+        -- 审核未通过
+        SUM(CASE WHEN goods_status = 9  THEN 1 ELSE 0 END) AS hasSensitiveWordsNum
+        FROM legend_warehouse_share
+        WHERE is_deleted='N'
+        AND shop_id= #{shopId}
+    </select>
+
+    <select id="queryExistGoodsId" resultType="java.lang.Long">
+        select goods_id
+        from legend_warehouse_share
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+    </select>
+
+    <select id="countByParam" resultType="java.lang.Integer">
+        SELECT COUNT(1)
+        FROM legend_warehouse_share
+        <include refid="whereByParam"/>
+    </select>
+
+    <select id="searchListByParam" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        FROM legend_warehouse_share
+        <include refid="whereByParam"/>
+        ORDER BY gmt_create DESC, id DESC
+        limit #{offset}, #{limit}
+    </select>
+
+    <sql id="whereByParam">
+        <where>
+            <trim prefixOverrides = "and">
+                <if test="goodsCate != null">
+                    AND cat_name like CONCAT('%',#{goodsCate},'%')
+                </if>
+                <if test="goodsName != null">
+                    AND goods_name like CONCAT('%',#{goodsName},'%')
+                </if>
+                <if test="shopId != null">
+                    AND shop_id = #{shopId}
+                </if>
+                <if test="status != null">
+                    AND goods_status = #{status}
+                </if>
+                <if test="status == null">
+                    AND goods_status IN (1, 9)
+                </if>
+                AND is_deleted = 'N'
+            </trim>
+        </where>
+    </sql>
+
+    <update id="checkPass">
+        update legend_warehouse_share
+        SET goods_status = 1,
+        goods_remark = ''
+        where id = #{id}
+    </update>
+
+    <update id="checkNotPass">
+        update legend_warehouse_share
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                goods_status = 9,
+                <if test="remark != null">
+                    goods_remark = #{remark}
+                </if>
+            </trim>
+        </set>
+        where id = #{id}
+    </update>
+</mapper> 

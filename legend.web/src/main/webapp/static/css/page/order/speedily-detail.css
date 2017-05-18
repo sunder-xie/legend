@@ -1,0 +1,217 @@
+.quick-nav {
+    margin-bottom: 10px;
+}
+
+.quick-heading {
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 16px;
+    color: #000;
+}
+
+.car-info {
+    overflow: hidden;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px 10px 10px 10px;
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.info-td {
+    line-height: 14px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.info-text .car-text-width{
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info-text .max-text{
+    width: 630px;
+    height: 12px;
+    vertical-align: text-top;
+    margin: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info-td-2 strong {
+    font-weight: 800;
+    color: #000;
+}
+
+.info-text {
+    display: table-row;
+    font-size: 12px;
+}
+
+.info-text:last-child {
+    margin-bottom: 0;
+}
+/* 表格样式 start */
+.car-consume {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: 0 10px;
+}
+
+table.yqx-table thead tr th {
+    background: #f9f9f9;
+}
+
+.yqx-table caption {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.yqx-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.yqx-td-2 {
+    width: 40px;
+}
+
+.yqx-td-3 {
+    width: 60px;
+}
+
+.yqx-td-4 {
+    width: 80px;
+}
+
+
+/* 表格样式 end */
+
+
+/* 备注及按钮 */
+.input-mark .form-label {
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.input-mark .form-item {
+    width: 708px;
+    height: 48px;
+    overflow: auto;
+}
+
+.input-mark{
+    margin: 10px 0;
+}
+
+.money-sum {
+    color: #ff7800;
+}
+
+p.pay-line {
+    margin-bottom: 20px;
+}
+
+.form-last-btns {
+    padding-bottom: 20px;
+}
+
+.form-last-btns button {
+    margin-right: 10px;
+}
+
+.form-last-btns-left {
+    display: inline-block;
+}
+
+.form-last-btns-right {
+    float:right;
+}
+
+table.yqx-table thead tr th, table.yqx-table tbody tr td {
+    text-align: left;
+}
+table.yqx-table thead tr th.th-right, table.yqx-table tr td.td-right {
+    text-align: right;
+}
+
+table.yqx-table .table-boundary {
+    padding-right: 20px;
+}
+
+i {
+    font-style: normal;
+}
+
+#addNew {
+    float: right;
+}
+/* 备注及按钮 end */
+
+.padding-top20{
+    padding-top: 20px;
+}
+
+.detail-row{
+    clear:both;
+}
+.detail-title{
+    width: 90px;
+    line-height: 30px;
+}
+
+.detail-message{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+}
+.detail-message-width{
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.car-text-width{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.info-td {
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+}
+.info-td-2 {
+    width: 49%;
+}
+
+.info-td-3 {
+    line-height: 14px;
+    width: 32%;
+}
+.box{
+    overflow: hidden;
+    margin-top: 10px;
+}
+.order-bold{
+    font-weight: bold;
+}

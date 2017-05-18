@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <artifactId>legend.client</artifactId>
+    <groupId>com.tqmall.legend</groupId>
+    <version>1.1.39</version>
+    <modelVersion>4.0.0</modelVersion>
+
+    <packaging>jar</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tqmall.core</groupId>
+            <artifactId>tqmall-core-common</artifactId>
+            <version>1.0.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tqmall.zenith</groupId>
+            <artifactId>errorcode</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+          <groupId>org.projectlombok</groupId>
+				  <artifactId>lombok</artifactId>
+				  <version>1.12.6</version>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>tqmall-snapshots</id>
+            <name>tqmall snapshots</name>
+            <url>http://build.tqmall.com/nexus/content/repositories/snapshots
+            </url>
+        </snapshotRepository>
+        <repository>
+            <id>tqmall-releases</id>
+            <name>tqmall releases</name>
+            <url>http://build.tqmall.com/nexus/content/repositories/releases
+            </url>
+        </repository>
+    </distributionManagement>
+
+</project>

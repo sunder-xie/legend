@@ -1,0 +1,49 @@
+.pdf-box {
+    padding: 110px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dad9d9;
+}
+.prev_img-btn, .next_img-btn {
+    width: 30px;
+    height: 48px;
+}
+.prev_img-btn {
+    margin: 0 30px 0 -66px;
+    border: 0;
+    cursor: pointer;
+    background: url("../../images/prev.png") center no-repeat;
+}
+.next_img-btn {
+    margin: 0 -66px 0 30px;
+    border: 0;
+    cursor: pointer;
+    background: url("../../images/next.png") center no-repeat;
+}
+.pdf-content {
+    width: 90%;
+    min-height: 800px;
+    margin: 20px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.pdf-content img {
+    width: 100%;
+}
+.page-box {
+    margin-bottom: 100px;
+    font-size: 14px;
+    color: #333;
+}
+.prev_button, .next_button {
+    width: 220px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #dad9d9;
+}
+.prev_button {
+    float: left;
+}
+.next_button {
+    float: right;
+}

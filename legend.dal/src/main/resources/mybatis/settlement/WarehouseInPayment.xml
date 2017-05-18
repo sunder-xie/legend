@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.settlement.WarehouseInPaymentDao">
+
+    <resultMap id="BaseResultMap" type="WarehouseInPayment" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="payment_id" property="paymentId"/>
+        <result column="payment_name" property="paymentName"/>
+        <result column="warehouse_in_id" property="warehouseInId"/>
+        <result column="pay_amount" property="payAmount"/>
+        <result column="payer" property="payer"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            payment_id as paymentId,
+            payment_name as paymentName,
+            warehouse_in_id as warehouseInId,
+            pay_amount as payAmount,
+            payer as payer,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="paymentId != null">
+                    and payment_id = #{paymentId}
+                </if>
+                <if test="paymentName != null">
+                    and payment_name = #{paymentName}
+                </if>
+                <if test="warehouseInId != null">
+                    and warehouse_in_id = #{warehouseInId}
+                </if>
+                <if test="warehouseInIds != null">
+                    and warehouse_in_id IN
+
+                    (
+                    <foreach collection="warehouseInIds" index="index" item="tag" separator=",">
+                        #{tag.warehouseInIds}
+                    </foreach>
+                    )
+
+                </if>
+                <if test="payAmount != null">
+                    and pay_amount = #{payAmount}
+                </if>
+                <if test="payer != null">
+                    and payer = #{payer}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="paymentId != null">
+                    payment_id = #{paymentId},
+                </if>
+                <if test="paymentName != null">
+                    payment_name = #{paymentName},
+                </if>
+                <if test="warehouseInId != null">
+                    warehouse_in_id = #{warehouseInId},
+                </if>
+                <if test="payAmount != null">
+                    pay_amount = #{payAmount},
+                </if>
+                <if test="payer != null">
+                    payer = #{payer},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_warehouse_in_payment
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_in_payment
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_in_payment
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_warehouse_in_payment
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_warehouse_in_payment
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_warehouse_in_payment
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_warehouse_in_payment
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_warehouse_in_payment (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="paymentId != null">
+                payment_id,
+            </if>
+            <if test="paymentName != null">
+                payment_name,
+            </if>
+            <if test="warehouseInId != null">
+                warehouse_in_id,
+            </if>
+            <if test="payAmount != null">
+                pay_amount,
+            </if>
+            <if test="payer != null">
+                payer,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="paymentId != null">
+                #{paymentId},
+            </if>
+            <if test="paymentName != null">
+                #{paymentName},
+            </if>
+            <if test="warehouseInId != null">
+                #{warehouseInId},
+            </if>
+            <if test="payAmount != null">
+                #{payAmount},
+            </if>
+            <if test="payer != null">
+                #{payer},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_warehouse_in_payment
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_warehouse_in_payment (
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+        shop_id,
+        payment_id,
+        payment_name,
+        warehouse_in_id,
+        pay_amount,
+        payer
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.paymentId != null">
+                    #{item.paymentId},
+                </if>
+                <if test="item.paymentId == null">
+                    0 ,
+                </if>
+                <if test="item.paymentName != null">
+                    #{item.paymentName},
+                </if>
+                <if test="item.paymentName == null">
+                    '' ,
+                </if>
+                #{item.warehouseInId},
+                <if test="item.payAmount != null">
+                    #{item.payAmount},
+                </if>
+                <if test="item.payAmount == null">
+                    0,
+                </if>
+                <if test="item.payer != null">
+                    #{item.payer},
+                </if>
+                <if test="item.payer == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+</mapper>

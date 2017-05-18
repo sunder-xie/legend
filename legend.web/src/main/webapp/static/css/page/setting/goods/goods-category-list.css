@@ -1,0 +1,37 @@
+/*
+* create by zmx 2017/1/22
+* 服务类别管理
+*/
+.form-box{
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+}
+.m-top{
+    margin-top: 8px;
+}
+.form-box .w-220{
+    width: 220px;
+}
+.table-con{
+    border: 1px solid #cacaca;
+    margin-top: 10px;
+    border-bottom: none;
+}
+.table-con .form-item{
+    width: 400px;
+}
+.hide{
+    display: none;
+}
+.yqx-dialog .yqx-dialog-body{
+    padding-top: 30px;
+    text-align: center;
+}
+.yqx-dialog-body .form-item{
+    width: 250px;
+}
+.yqx-dialog-body .btn-box{
+    padding: 10px 0;
+    text-align: center;
+}

@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.sell.SellOrderDao">
+
+    <resultMap id="BaseResultMap" type="SellOrder" extends="COMMON.BASE_RESULT_MAP">
+        <result column="sell_order_sn" property="sellOrderSn"/>
+        <result column="buy_mobile" property="buyMobile"/>
+        <result column="shop_level" property="shopLevel"/>
+        <result column="shop_level_name" property="shopLevelName"/>
+        <result column="sell_amount" property="sellAmount"/>
+        <result column="pay_status" property="payStatus"/>
+        <result column="handle_status" property="handleStatus"/>
+        <result column="cost_amount" property="costAmount"/>
+        <result column="discount" property="discount"/>
+        <result column="user_global_id" property="userGlobalId"/>
+        <result column="salesman_id" property="salesmanId"/>
+        <result column="salesman_name" property="salesmanName"/>
+        <result column="salesman_province" property="salesmanProvince"/>
+        <result column="salesman_province_id" property="salesmanProvinceId"/>
+        <result column="shop_name" property="shopName"/>
+        <result column="shop_city_id" property="shopCityId"/>
+        <result column="shop_province_id" property="shopProvinceId"/>
+        <result column="shop_city" property="shopCity"/>
+        <result column="shop_province" property="shopProvince"/>
+        <result column="shop_open_time" property="shopOpenTime"/>
+        <result column="shop_end_time" property="shopEndTime"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            sell_order_sn as sellOrderSn,
+            buy_mobile as buyMobile,
+            shop_level as shopLevel,
+            shop_level_name as shopLevelName,
+            sell_amount as sellAmount,
+            pay_status as payStatus,
+            handle_status as handleStatus,
+            cost_amount as costAmount,
+            discount as discount,
+            user_global_id as userGlobalId,
+            salesman_id as salesmanId,
+            salesman_name as salesmanName,
+            salesman_province as salesmanProvince,
+            salesman_province_id as salesmanProvinceId,
+            shop_name as shopName,
+            shop_city_id as shopCityId,
+            shop_province_id as shopProvinceId,
+            shop_city as shopCity,
+            shop_province as shopProvince,
+            shop_open_time as shopOpenTime,
+            shop_end_time as shopEndTime,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="sellOrderSn != null">
+                    and sell_order_sn = #{sellOrderSn}
+                </if>
+                <if test="buyMobile != null">
+                    and buy_mobile = #{buyMobile}
+                </if>
+                <if test="shopLevel != null">
+                    and shop_level = #{shopLevel}
+                </if>
+                <if test="shopLevelName != null">
+                    and shop_level_name = #{shopLevelName}
+                </if>
+                <if test="sellAmount != null">
+                    and sell_amount = #{sellAmount}
+                </if>
+                <if test="payStatus != null">
+                    and pay_status = #{payStatus}
+                </if>
+                <if test="handleStatus != null">
+                    and handle_status = #{handleStatus}
+                </if>
+                <if test="costAmount != null">
+                    and cost_amount = #{costAmount}
+                </if>
+                <if test="discount != null">
+                    and discount = #{discount}
+                </if>
+                <if test="userGlobalId != null">
+                    and user_global_id = #{userGlobalId}
+                </if>
+                <if test="salesmanId != null">
+                    and salesman_id = #{salesmanId}
+                </if>
+                <if test="salesmanName != null">
+                    and salesman_name = #{salesmanName}
+                </if>
+                <if test="salesmanProvince != null">
+                    and salesman_province = #{salesmanProvince}
+                </if>
+                <if test="salesmanProvinceId != null">
+                    and salesman_province_id = #{salesmanProvinceId}
+                </if>
+                <if test="shopName != null">
+                    and shop_name = #{shopName}
+                </if>
+                <if test="shopCityId != null">
+                    and shop_city_id = #{shopCityId}
+                </if>
+                <if test="shopProvinceId != null">
+                    and shop_province_id = #{shopProvinceId}
+                </if>
+                <if test="shopCity != null">
+                    and shop_city = #{shopCity}
+                </if>
+                <if test="shopProvince != null">
+                    and shop_province = #{shopProvince}
+                </if>
+                <if test="shopOpenTime != null">
+                    and shop_open_time = #{shopOpenTime}
+                </if>
+                <if test="shopEndTime != null">
+                    and shop_end_time = #{shopEndTime}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="sellOrderSn != null">
+                    sell_order_sn = #{sellOrderSn},
+                </if>
+                <if test="buyMobile != null">
+                    buy_mobile = #{buyMobile},
+                </if>
+                <if test="shopLevel != null">
+                    shop_level = #{shopLevel},
+                </if>
+                <if test="shopLevelName != null">
+                    shop_level_name = #{shopLevelName},
+                </if>
+                <if test="sellAmount != null">
+                    sell_amount = #{sellAmount},
+                </if>
+                <if test="payStatus != null">
+                    pay_status = #{payStatus},
+                </if>
+                <if test="handleStatus != null">
+                    handle_status = #{handleStatus},
+                </if>
+                <if test="costAmount != null">
+                    cost_amount = #{costAmount},
+                </if>
+                <if test="discount != null">
+                    discount = #{discount},
+                </if>
+                <if test="userGlobalId != null">
+                    user_global_id = #{userGlobalId},
+                </if>
+                <if test="salesmanId != null">
+                    salesman_id = #{salesmanId},
+                </if>
+                <if test="salesmanName != null">
+                    salesman_name = #{salesmanName},
+                </if>
+                <if test="salesmanProvince != null">
+                    salesman_province = #{salesmanProvince},
+                </if>
+                <if test="salesmanProvinceId != null">
+                    salesman_province_id = #{salesmanProvinceId},
+                </if>
+                <if test="shopName != null">
+                    shop_name = #{shopName},
+                </if>
+                <if test="shopCityId != null">
+                    shop_city_id = #{shopCityId},
+                </if>
+                <if test="shopProvinceId != null">
+                    shop_province_id = #{shopProvinceId},
+                </if>
+                <if test="shopCity != null">
+                    shop_city = #{shopCity},
+                </if>
+                <if test="shopProvince != null">
+                    shop_province = #{shopProvince},
+                </if>
+                <if test="shopOpenTime != null">
+                    shop_open_time = #{shopOpenTime},
+                </if>
+                <if test="shopEndTime != null">
+                    shop_end_time = #{shopEndTime},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_sell_order
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_sell_order
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_sell_order
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_sell_order
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_sell_order
+        set is_deleted='Y' , gmt_modified = now()
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_sell_order
+        set is_deleted='Y' , gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_sell_order
+        set is_deleted='Y' , gmt_modified = now()
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_sell_order (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="sellOrderSn != null">
+                sell_order_sn,
+            </if>
+            <if test="buyMobile != null">
+                buy_mobile,
+            </if>
+            <if test="shopLevel != null">
+                shop_level,
+            </if>
+            <if test="shopLevelName != null">
+                shop_level_name,
+            </if>
+            <if test="sellAmount != null">
+                sell_amount,
+            </if>
+            <if test="payStatus != null">
+                pay_status,
+            </if>
+            <if test="handleStatus != null">
+                handle_status,
+            </if>
+            <if test="costAmount != null">
+                cost_amount,
+            </if>
+            <if test="discount != null">
+                discount,
+            </if>
+            <if test="userGlobalId != null">
+                user_global_id,
+            </if>
+            <if test="salesmanId != null">
+                salesman_id,
+            </if>
+            <if test="salesmanName != null">
+                salesman_name,
+            </if>
+            <if test="salesmanProvince != null">
+                salesman_province,
+            </if>
+            <if test="salesmanProvinceId != null">
+                salesman_province_id,
+            </if>
+            <if test="shopName != null">
+                shop_name,
+            </if>
+            <if test="shopCityId != null">
+                shop_city_id,
+            </if>
+            <if test="shopProvinceId != null">
+                shop_province_id,
+            </if>
+            <if test="shopCity != null">
+                shop_city,
+            </if>
+            <if test="shopProvince != null">
+                shop_province,
+            </if>
+            <if test="shopOpenTime != null">
+                shop_open_time,
+            </if>
+            <if test="shopEndTime != null">
+                shop_end_time,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="sellOrderSn != null">
+                #{sellOrderSn},
+            </if>
+            <if test="buyMobile != null">
+                #{buyMobile},
+            </if>
+            <if test="shopLevel != null">
+                #{shopLevel},
+            </if>
+            <if test="shopLevelName != null">
+                #{shopLevelName},
+            </if>
+            <if test="sellAmount != null">
+                #{sellAmount},
+            </if>
+            <if test="payStatus != null">
+                #{payStatus},
+            </if>
+            <if test="handleStatus != null">
+                #{handleStatus},
+            </if>
+            <if test="costAmount != null">
+                #{costAmount},
+            </if>
+            <if test="discount != null">
+                #{discount},
+            </if>
+            <if test="userGlobalId != null">
+                #{userGlobalId},
+            </if>
+            <if test="salesmanId != null">
+                #{salesmanId},
+            </if>
+            <if test="salesmanName != null">
+                #{salesmanName},
+            </if>
+            <if test="salesmanProvince != null">
+                #{salesmanProvince},
+            </if>
+            <if test="salesmanProvinceId != null">
+                #{salesmanProvinceId},
+            </if>
+            <if test="shopName != null">
+                #{shopName},
+            </if>
+            <if test="shopCityId != null">
+                #{shopCityId},
+            </if>
+            <if test="shopProvinceId != null">
+                #{shopProvinceId},
+            </if>
+            <if test="shopCity != null">
+                #{shopCity},
+            </if>
+            <if test="shopProvince != null">
+                #{shopProvince},
+            </if>
+            <if test="shopOpenTime != null">
+                #{shopOpenTime},
+            </if>
+            <if test="shopEndTime != null">
+                #{shopEndTime},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_sell_order
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_sell_order (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            sell_order_sn,
+            buy_mobile,
+            shop_level,
+            shop_level_name,
+            sell_amount,
+            pay_status,
+            handle_status,
+            cost_amount,
+            discount,
+            user_global_id,
+            salesman_id,
+            salesman_name,
+            salesman_province,
+            salesman_province_id,
+            shop_name,
+            shop_city_id,
+            shop_province_id,
+            shop_city,
+            shop_province,
+            shop_open_time,
+            shop_end_time,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.sellOrderSn != null">
+                    #{item.sellOrderSn},
+                </if>
+                <if test="item.sellOrderSn == null">
+                    '',
+                </if>
+                <if test="item.buyMobile != null">
+                    #{item.buyMobile},
+                </if>
+                <if test="item.buyMobile == null">
+                    '',
+                </if>
+                <if test="item.shopLevel != null">
+                    #{item.shopLevel},
+                </if>
+                <if test="item.shopLevel == null">
+                    0 ,
+                </if>
+                <if test="item.shopLevelName != null">
+                    #{item.shopLevelName},
+                </if>
+                <if test="item.shopLevelName == null">
+                    '',
+                </if>
+                <if test="item.sellAmount != null">
+                    #{item.sellAmount},
+                </if>
+                <if test="item.sellAmount == null">
+                    0.00,
+                </if>
+                <if test="item.payStatus != null">
+                    #{item.payStatus},
+                </if>
+                <if test="item.payStatus == null">
+                    0 ,
+                </if>
+                <if test="item.handleStatus != null">
+                    #{item.handleStatus},
+                </if>
+                <if test="item.handleStatus == null">
+                    0 ,
+                </if>
+                <if test="item.costAmount != null">
+                    #{item.costAmount},
+                </if>
+                <if test="item.costAmount == null">
+                    0.00,
+                </if>
+                <if test="item.discount != null">
+                    #{item.discount},
+                </if>
+                <if test="item.discount == null">
+                    0.00,
+                </if>
+                <if test="item.userGlobalId != null">
+                    #{item.userGlobalId},
+                </if>
+                <if test="item.userGlobalId == null">
+                    0,
+                </if>
+                <if test="item.salesmanId != null">
+                    #{item.salesmanId},
+                </if>
+                <if test="item.salesmanId == null">
+                    0,
+                </if>
+                <if test="item.salesmanName != null">
+                    #{item.salesmanName},
+                </if>
+                <if test="item.salesmanName == null">
+                    '',
+                </if>
+                <if test="item.salesmanProvince != null">
+                    #{item.salesmanProvince},
+                </if>
+                <if test="item.salesmanProvince == null">
+                    '',
+                </if>
+                <if test="item.salesmanProvinceId != null">
+                    #{item.salesmanProvinceId},
+                </if>
+                <if test="item.salesmanProvinceId == null">
+                    0,
+                </if>
+                <if test="item.shopName != null">
+                    #{item.shopName},
+                </if>
+                <if test="item.shopName == null">
+                    '',
+                </if>
+                <if test="item.shopCityId != null">
+                    #{item.shopCityId},
+                </if>
+                <if test="item.shopCityId == null">
+                    0,
+                </if>
+                <if test="item.shopProvinceId != null">
+                    #{item.shopProvinceId},
+                </if>
+                <if test="item.shopProvinceId == null">
+                    0,
+                </if>
+                <if test="item.shopCity != null">
+                    #{item.shopCity},
+                </if>
+                <if test="item.shopCity == null">
+                    '',
+                </if>
+                <if test="item.shopProvince != null">
+                    #{item.shopProvince},
+                </if>
+                <if test="item.shopProvince == null">
+                    '',
+                </if>
+                <if test="item.shopOpenTime != null">
+                    #{item.shopOpenTime},
+                </if>
+                <if test="item.shopOpenTime == null">
+                    NULL,
+                </if>
+                <if test="item.shopEndTime != null">
+                    #{item.shopEndTime},
+                </if>
+                <if test="item.shopEndTime == null">
+                    NULL,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

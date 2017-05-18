@@ -1,0 +1,52 @@
+.order-head .headline{
+    line-height: 45px;
+    font-size: 16px;
+}
+.font-normal{
+    font-weight: normal;
+}
+
+.order-body{
+    padding: 20px 0;
+    background-color: #fff;
+}
+.radio {
+    vertical-align: baseline;
+}
+.marR20{
+    margin-right: 20px;
+}
+.w100{
+    width: 100px;
+}
+.card-btn,.card-setting,.save{
+    margin-left: 106px;
+}
+.choose-card,.card-explain,.card-setting,.is-send{
+    margin-bottom: 15px;
+}
+.card-btn{
+    margin-top: 5px;
+}
+.card-setting{
+    width: 75%;
+    margin-top: 10px;
+    padding: 20px 13px;
+    background-color: #ddd;
+    border: 1px solid #c6c6c6;
+    border-radius: 1px;
+}
+.explain{
+    text-align: left;
+    color:#999;
+}
+.display-none{
+    display: none;
+}
+.tip{
+    position: absolute;
+    width: 260px;
+    top: 40px;
+    right: -28px;
+    color: #999;
+}

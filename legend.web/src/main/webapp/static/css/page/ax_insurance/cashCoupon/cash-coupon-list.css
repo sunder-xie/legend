@@ -1,0 +1,226 @@
+table {
+    width: 100%;
+}
+.text-l {
+    text-align: left;
+}
+.text-c {
+    text-align: center;
+}
+.text-r {
+    text-align: right;
+}
+input.choice-btn {
+    background-color: red;
+    color: #fff;
+}
+.page-title {
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+    font-family: MircosoftYahei;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.page-title>a {
+    font-size: 12px;
+    color: #ff7800;
+    text-decoration: underline;
+}
+.right {
+    width: 825px;
+    float: right;
+}
+.cash-total {
+    background-color: #fff;
+    border: 1px solid #d2d2d2;
+}
+.cash-total-content {
+    padding: 10px;
+    border-top: 1px solid #d2d2d2;
+}
+.cash-sum {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px 0 0 10px;
+}
+.cash-sum>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.cash-sum-info {
+    width: 70%;
+    padding-left: 3%;
+}
+.case-des-items {
+    font-size: 14px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.des-item {
+    -webkit-flex: 1;
+    flex: 1;
+}
+.coupon-num {
+    padding: 0 10px;
+    color: #ff7800;
+    font-size: 18px;
+
+}
+.cash-des {
+    margin: 15px 0;
+}
+.cash-icon {
+    width: 120px;
+    height: 120px; background: url("../../../../img/page/ax_insurance/cash-coupon.png") no-repeat center bottom;
+}
+.cash-jump-btn {
+    padding: 8px 15px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.purchase {
+    background-color: #ff9130;
+}
+.calc {
+    background-color: #fa7b7c;
+}
+.coupon-state {
+    width: 150px;
+}
+.condition-btn{ display: inline-block; height: 28px; line-height: 28px; padding: 0 12px;
+    background: #f9f9f9; border:1px solid #ddd; color: #333; border-radius: 3px;vertical-align: middle;}
+.condition-active{border: 1px solid #99ba27; background: url("../../../../img/page/settlement/pay/btn-active.png") no-repeat right bottom #eaf9bb;}
+
+.search-form {
+    margin: 10px 0 20px 0;
+}
+.today {
+    background-color: #f9f9f9;
+}
+.ten-day {
+    background-color: #f9f9f9;
+}
+.cash-table {
+    width: 100%;
+    color: #666;
+    font-size: 14px;
+}
+.cash-table thead {
+    background-color: #f3f3f3;
+    line-height: 35px;
+}
+.cash-table tr :first-child {
+    padding-left: 10px;
+}
+.cash-table tbody tr {
+    line-height: 35px;
+    border-top: 1px solid #d6d6d6;
+}
+.cash-table tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6;
+
+}
+.use-cash-coupon {
+    background-color: #9fc527;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.coupon-start-use {
+    width: 600px;
+}
+
+/*弹窗样式*/
+.coupon-start-use {
+
+}
+.order-title {
+    height: 55px;
+    line-height: 55px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background-color: #5f636e;
+}
+.order-list {
+    padding: 0 10px 15px 10px;
+}
+.order-tip {
+    line-height: 50px;
+    color: #ff7800;
+}
+.order-tbody {
+    max-height: 222px;
+    color: #7f7f7f;
+}
+.order-head>thead>tr>th {
+    line-height: 35px;
+    background-color: #f5f1e5;
+}
+.order-tr {
+    line-height: 30px;
+    border-top: 1px solid #eee;
+    cursor: pointer;
+}
+.order-tr:last-child {
+    border-bottom: 1px solid #eee;
+}
+.order-tr:nth-child(2n) {
+    background-color: #fafafa;
+}
+
+.order-foot {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.use-btn {
+    height: 30px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+.choice-close {
+    width: 70px;
+    color: #7f7f7f;
+    border: 1px solid #7f7f7f;
+}
+.choice-use:disabled {
+    background: #fff;
+    color: #7f7f7f;
+    border: 1px solid #7f7f7f;
+}
+.choice-use {
+    width: 90px;
+    background-color: #9fc527;
+    color: #fff;
+    border: 1px solid #7fa700;
+}
+.success-tip {
+    width: 460px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+.msg-info {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.cash-amount {
+    color: red;
+    margin: 0 5px;
+}
+.msg-tip {
+    font-size: 16px;
+    color: #666;
+}
+/*弹窗样式*/

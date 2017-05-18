@@ -1,0 +1,62 @@
+/*查询*/
+.search-info{
+    background-color: white;
+    border: 1px solid #d2d2d2;
+    height: 135px;
+    padding: 10px;
+    border-radius: 2px;
+}
+.search-up,.search-middle{
+    margin-bottom: 10px;
+}
+/*.w188{*/
+    /*width: 188px;*/
+/*}*/
+.w180{
+    width: 180px;
+}
+.w150{
+    width: 150px;
+}
+.form-item{
+    margin-right: 9px;
+}
+.search-up>.form-item,.search-middle>.form-item{
+    width: 255px;
+}
+.search-up>.form-item:last-child,.search-middle>.form-item:last-child{
+    margin-right: 0px;
+}
+.mr0{
+    margin-right: 0px;
+}
+.until{
+    display: inline-block;
+    margin: 0 2px;
+}
+
+/*list*/
+.order-list{
+    padding-bottom: 10px;
+    background-color: white;
+}
+.list-head{
+    margin-top: 35px;
+    height: 38px;
+    background: #F9F9F9;
+    border-bottom: 1px solid #ddd;
+}
+#tableTest{
+    margin-top: 12px;
+}
+
+.excel{
+    margin-top: 10px;
+}
+.excel a{
+    color: #333;
+}
+.yqx-table>tbody>tr:hover {
+    color: #7fa700;
+    cursor: pointer;
+}

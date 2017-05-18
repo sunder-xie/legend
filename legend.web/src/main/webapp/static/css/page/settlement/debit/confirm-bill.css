@@ -1,0 +1,572 @@
+/*
+ * zmx 2016/06/03
+ * 确认账单 页面样式
+*/
+
+/*付款明细表格 start*/
+.pay-box {
+    height: 42px;
+    background: #fff;
+    position: relative;
+    border: 1px solid #d2d2d2;
+    line-height: 42px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.table-btn {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+.table-btn i {
+    font-size: 14px;
+    line-height: 42px;
+}
+
+/*付款明细表格 end*/
+
+/*工单确认账单信息 start*/
+.pay-inforbox {
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    margin-top: 10px;
+}
+
+.pay-title {
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+.pay-con {
+    padding: 0 10px;
+}
+
+.method-title {
+    margin: 15px 0;
+    border-left: 2px solid #999;
+    color: #333;
+    padding-left: 5px;
+}
+
+.remarks {
+    margin: 15px 0;
+    border-top: 1px solid #d2d2d2;
+    padding-top: 15px;
+}
+
+.total-box {
+    position: relative;
+}
+
+.total-box .payee {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    line-height: 30px;
+}
+
+.total-box .payee span {
+    margin-left: 10px;
+}
+
+.total-box .bot-text span {
+    color: #535353;
+    line-height: 20px;
+}
+
+.total-box .bot-text span {
+    color: #fa7b7c;
+}
+
+.total-box .bot-text img {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.btn-box {
+    padding: 15px 10px;
+    margin-top: 10px;
+    border-top: 1px solid #d2d2d2;
+}
+
+/*工单确认账单信息 end*/
+
+/*隐藏表格 start*/
+.box-margin {
+    margin-top: 10px;
+}
+
+.show-table {
+    width: 100%;
+    background: #fff;
+    height: auto;
+    border: 1px solid #d2d2d2;
+    border-top: none;
+    padding: 10px;
+    display: none;
+}
+
+.yqx-table > thead > tr > th, .yqx-table > tr > th {
+    background: #f9f9f9;
+}
+
+.table-margin {
+    margin-top: 20px;
+}
+
+.table-total {
+    height: 44px;
+    margin-top: 20px;
+    line-height: 44px;
+    border-top: 1px solid #d2d2d2;
+}
+
+.table-total span {
+    color: #fa7b7c;
+}
+
+.show-table li {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.show-table li:hover {
+    background: #f9f9f9;
+}
+
+.show-table li div {
+    display: inline-block;
+    line-height: 30px;
+    width: 200px;
+}
+
+/*隐藏表格 end*/
+/*提示 start*/
+.bot-text {
+    line-height: 25px;
+}
+
+.bot-text .total-details-tag {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    width: 18px;
+    height: 18px;
+    background: url("../../../../img/page/settlement/debit/explain.png") no-repeat;
+}
+
+.total-details {
+    display: inline-block;
+    background: #8bb30d;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.total-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #8bb30d;
+    border-bottom: 5px solid transparent;
+}
+
+.total-hide {
+    display: inline-block;
+}
+
+.total-details-tag:hover {
+    background: url("../../../../img/page/settlement/debit/explain-hover.png") no-repeat;
+}
+
+/*提示 end*/
+/*券 start*/
+.voucher-box {
+    border: 1px solid #d2d2d2;
+    background: #f9f9f9;
+    padding: 12px 7px;
+}
+
+.voucher {
+    display: inline-block;
+    margin: 0 3px 10px 3px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.voucher-hide {
+    display: none;
+}
+
+.voucher-tag {
+    width: 23px;
+    height: 23px;
+    background: url("../../../../img/page/settlement/debit/btn-active.png") no-repeat;
+    position: absolute;
+    right: 0;
+    top: 113px;
+    display: none;
+}
+
+/*优惠券*/
+.voucher-t {
+    width: 251px;
+    height: 135px;
+    padding: 10px 5px 10px 0;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    background: url("../../../../img/page/settlement/debit/border.png") repeat-x top #fff;
+}
+
+.voucher-hover {
+    background: url("../../../../img/page/settlement/debit/border-hover.png") repeat-x top #fff;
+    border-left: 1px solid #8bb30d;
+    border-right: 1px solid #8bb30d;
+}
+
+.voucher-hover .voucher-l, .voucher-hover .vocher-title, .voucher-hover .vocher-title span {
+    color: #8bb30d;
+}
+
+.voucher-l {
+    width: 70px;
+    height: 110px;
+    font-family: arial, verdana, sans-serif;
+    text-align: center;
+    line-height: 110px;
+    font-size: 26px;
+    vertical-align: top;
+    color: #ff1d00;
+}
+
+.voucher-l .tag {
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    line-height: 20px;
+}
+
+.voucher-l span {
+    font-size: 14px;
+}
+
+.voucher-r {
+    width: 165px;
+}
+
+.vocher-title {
+    font-size: 12px;
+    color: #ff1d00;
+    line-height: 16px;
+}
+
+.vocher-title span {
+    color: #ff8477;
+}
+
+.vocher-customer-name {
+    font-size: 12px;
+    color: #444;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.vocher-infor {
+    width: 150px;
+    height: 54px;
+    overflow: hidden;
+    line-height: 15px;
+    color: #444;
+    font-size: 12px;
+}
+
+.vocher-infor p {
+    display: block;
+    width: 100%;
+    height: 18px;
+    font-size: 12px;
+    color: #444;
+    line-height: 18px;
+}
+
+.vocher-middle-border {
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #ddd;
+    margin: 3px 0 0 0;
+}
+
+.validity-period {
+    color: #888;
+    line-height: 22px;
+}
+
+.use-times {
+    height: 45px;
+    background: #fff;
+    border: 1px solid #9fbf3a;
+    border-top: none;
+    padding: 6px;
+    display: none;
+}
+
+.use-times .form-item {
+    width: 110px;
+}
+
+/*通用券*/
+.car-tag {
+    background: url("../../../../img/page/settlement/debit/car-tag.png") no-repeat center;
+}
+
+.voucher-hover .car-tag {
+    background: url("../../../../img/page/settlement/debit/car-taghover.png") no-repeat center;
+}
+
+.voucher-more {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    cursor: pointer;
+}
+
+/*计次卡*/
+.combo-tag {
+    background: url("../../../../img/page/settlement/debit/combo-tag.png") no-repeat center;
+}
+
+.voucher-hover .combo-tag {
+    background: url("../../../../img/page/settlement/debit/combo-taghover.png") no-repeat center;
+}
+
+/*转赠券*/
+.donation {
+    line-height: 73px;
+    text-align: center;
+    color: #999;
+    font-size: 36px;
+}
+
+.voucher-hover.donation {
+    color: #8bb30d;
+}
+
+.use-times .donation-form {
+    width: 180px;
+}
+
+.no-coupon {
+    display: inline-block;
+    width: 110px;
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+}
+
+.no-coupon img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.voucher-hover .voucher-l, .voucher-hover .vocher-title, .voucher-hover .vocher-title span {
+    color: #8bb30d;
+}
+
+.other-voucher {
+    margin: 10px;
+}
+
+/*券 end*/
+
+/*会员卡*/
+.membership {
+    width: 110px;
+    height: 28px;
+    display: inline-block;
+    background: url("../../../../img/page/settlement/debit/btn-active.png") no-repeat right bottom #eee;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #8bb30d;
+    line-height: 28px;
+    color: #444;
+    cursor: pointer;
+    text-align: left;
+    margin-right: 25px;
+    vertical-align: middle;
+}
+
+.membership span {
+    padding: 0 10px;
+    color: #8bb30d;
+    float: right;
+    border-left: 1px solid #ddd;
+}
+
+.membership-none {
+    display: inline-block;
+    width: 110px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    text-align: left;
+    margin-right: 25px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.memberamountship {
+    height: 30px;
+    display: inline-block;
+    line-height: 28px;
+    color: #444;
+    text-align: center;
+}
+
+.memberamountship input {
+    background: url("../../../../img/page/settlement/debit/btn-active.png") no-repeat right bottom;
+    border: 1px solid #8bb30d;
+}
+
+.div-disable {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+.div-disable .vocher-title {
+    color: #888;
+}
+
+.div-disable .vocher-infor {
+    color: #888;
+}
+
+.div-disable .voucher-l {
+    color: #888;
+}
+
+.div-disable .car-tag {
+    background: url("../../../../img/page/settlement/debit/diable-car-tag.png") no-repeat center;
+}
+
+.div-disable .combo-tag {
+    background: url("../../../../img/page/settlement/debit/diable-combo-tag.png") no-repeat center;
+}
+
+.money-width {
+    width: 90px;
+}
+
+.div-disable .vocher-title span {
+    color: #888;
+}
+
+.text-area-width {
+    width: 750px;
+}
+
+.order-discount {
+    font-style: normal;
+}
+
+.mess {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 150px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fa7b7c;
+    margin-right: 20px;
+}
+
+.total-box .bot-text span.white {
+    color: #fff;
+}
+
+.delete-color {
+    color: #fa7b7c;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.margin-top20 {
+    margin-top: 20px;
+}
+
+.speedily-confirm .total-box {
+    padding: 12px 0;
+}
+
+.border-tb {
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.input-width {
+    width: 100px;
+}
+
+.method-box {
+    margin-bottom: 10px;
+}
+
+.label-margin {
+    width: 70px;
+    text-align: right;
+}
+
+.discount-amount-vip-card-box {
+    margin-left: 74px;
+}
+
+.sett-member-card-box {
+    margin: 10px 0 0 76px;
+}
+
+.vip-card-tips {
+    margin-left: 5px;
+}
+
+.vip-note em {
+    margin: 0 5px;
+    font-style: normal;
+    color: #f40;
+}
+
+.discount-box.selected input[type=text] {
+    line-height: 28px;
+    background: url("/legend/static/img/common/selected.png") bottom right no-repeat;
+    border: 2px solid #5f7c00;
+}
+
+.discount-box.selected .fa {
+    height: auto;
+    margin: 2px;
+    line-height: 28px;
+}

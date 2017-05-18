@@ -1,0 +1,64 @@
+body {
+    background: #ebebeb;
+}
+.box {
+    background: #ffffff;
+    margin-bottom: 15px;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.duigou {
+    background: url("../../images/summer/dg.gif") no-repeat;
+    width: 114px;
+    height: 111px;
+    margin: 38px auto 27px;
+}
+.yuyue {
+    text-align: center;
+    font-size: 28px;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.shuom {
+    margin-bottom: 38px;
+    font-size: 22px;
+    color: #666666;
+    text-align: center;
+}
+.fuwu {
+    font-size: 24px;
+    color: #333333;
+    line-height: 50px;
+    padding: 15px 20px;
+    display: flex;
+    flex-flow: row;
+}
+.fuwu span {
+    display: block;
+}
+.fuwu span:first-child {
+    width: 138px;
+}
+.yans {
+    font-weight: bold;
+    color: #fd6e4b;
+}
+.fuwu1 {
+    padding: 15px 20px;
+}
+.fuwu1 div {
+    font-size: 24px;
+    color: #333333;
+    line-height: 50px;
+    display: flex;
+    flex-flow: row;
+}
+.fuwu1 span {
+    display: block;
+}
+.fuwu1 div span:first-child {
+    width: 138px;
+}

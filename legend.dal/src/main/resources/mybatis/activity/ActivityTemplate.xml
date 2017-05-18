@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.activity.ActivityTemplateDao">
+
+    <resultMap id = "BaseResultMap" type = "ActivityTemplate" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "act_name" property = "actName" />
+        <result column = "keywords" property = "keywords" />
+        <result column = "summary" property = "summary" />
+        <result column = "remark" property = "remark" />
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "start_time" property = "startTime" />
+        <result column = "end_time" property = "endTime" />
+        <result column = "act_status" property = "actStatus" />
+        <result column = "agreement" property = "agreement" />
+        <result column = "is_need_audit" property = "isNeedAudit" />
+        <result column = "act_type" property = "actType" />
+        <result column = "act_scope" property = "actScope" />
+        <result column = "sort" property = "sort" />
+        <result column = "channel" property = "channel" />
+        <result column = "by_name" property = "byName" />
+        <result column = "is_need_reimbursed" property = "isNeedReimbursed" />
+        <result column = "operator_remark" property = "operatorRemark" />
+        <result column = "page_title" property = "pageTitle" />
+        <result column = "is_show_hms" property = "isShowHms" />
+        <result column = "article_img" property = "articleImg" />
+        <result column = "article_title" property = "articleTitle" />
+        <result column = "article_desc" property = "articleDesc" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            act_name as actName,
+            keywords as keywords,
+            summary as summary,
+            remark as remark,
+            img_url as imgUrl,
+            start_time as startTime,
+            end_time as endTime,
+            act_status as actStatus,
+            agreement as agreement,
+            is_need_audit as isNeedAudit,
+            act_type as actType,
+            act_scope as actScope,
+            sort as sort,
+            channel as channel,
+            by_name as byName,
+            is_need_reimbursed as isNeedReimbursed,
+            operator_remark as operatorRemark,
+            page_title as pageTitle,
+            is_show_hms as isShowHms,
+            article_img as articleImg,
+            article_title as articleTitle,
+            article_desc as articleDesc,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "actName != null">
+                    and act_name = #{actName}
+                </if>
+                <if test = "keywords != null">
+                    and keywords = #{keywords}
+                </if>
+                <if test = "summary != null">
+                    and summary = #{summary}
+                </if>
+                <if test = "remark != null">
+                    and remark = #{remark}
+                </if>
+                <if test = "imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test = "startTime != null">
+                    and start_time = #{startTime}
+                </if>
+                <if test = "endTime != null">
+                    and end_time = #{endTime}
+                </if>
+                <if test = "actStatus != null">
+                    and act_status = #{actStatus}
+                </if>
+                <if test = "agreement != null">
+                    and agreement = #{agreement}
+                </if>
+                <if test = "isNeedAudit != null">
+                    and is_need_audit = #{isNeedAudit}
+                </if>
+                <if test = "actType != null">
+                    and act_type = #{actType}
+                </if>
+                <if test = "actScope != null">
+                    and act_scope = #{actScope}
+                </if>
+                <if test = "sort != null">
+                    and sort = #{sort}
+                </if>
+                <if test = "channel != null">
+                    and channel = #{channel}
+                </if>
+                <if test = "byName != null">
+                    and by_name = #{byName}
+                </if>
+                <if test = "isNeedReimbursed != null">
+                    and is_need_reimbursed = #{isNeedReimbursed}
+                </if>
+                <if test = "actNameLike != null">
+                    and act_name like CONCAT('%',#{actNameLike},'%')
+                </if>
+                <if test = "keywordsLike != null">
+                    and keywords like CONCAT('%',#{keywordsLike},'%')
+                </if>
+                <if test="ids != null">
+                    and id in (
+                    <foreach collection="ids" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="startTimeLt != null">
+                    <![CDATA[
+                    and start_time <= #{startTimeLt}
+                    ]]>
+                </if>
+                <if test="startTimeGt != null">
+                    <![CDATA[
+                    and start_time >= #{startTimeGt}
+                    ]]>
+                </if>
+                <if test="endTimeLt != null">
+                    <![CDATA[
+                    and end_time <= #{endTimeLt}
+                    ]]>
+                </if>
+                <if test="endTimeGt != null">
+                    <![CDATA[
+                    and end_time >= #{endTimeGt}
+                    ]]>
+                </if>
+                <if test="operatorRemark != null">
+                    and operator_remark = #{operatorRemark}
+                </if>
+                <if test="pageTitle != null">
+                    and page_title = #{pageTitle}
+                </if>
+                <if test="isShowHms != null">
+                    and is_show_hms = #{isShowHms}
+                </if>
+                <if test="articleImg != null">
+                    and article_img = #{articleImg}
+                </if>
+                <if test="articleTitle != null">
+                    and article_title = #{articleTitle}
+                </if>
+                <if test="articleDesc != null">
+                    and article_desc = #{articleDesc}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "actName != null">
+                    act_name = #{actName},
+                </if>
+                <if test = "keywords != null">
+                    keywords = #{keywords},
+                </if>
+                <if test = "summary != null">
+                    summary = #{summary},
+                </if>
+                <if test = "remark != null">
+                    remark = #{remark},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "startTime != null">
+                    start_time = #{startTime},
+                </if>
+                <if test = "endTime != null">
+                    end_time = #{endTime},
+                </if>
+                <if test = "actStatus != null">
+                    act_status = #{actStatus},
+                </if>
+                <if test = "agreement != null">
+                    agreement = #{agreement},
+                </if>
+                <if test = "isNeedAudit != null">
+                    is_need_audit = #{isNeedAudit},
+                </if>
+                <if test = "actType != null">
+                    act_type = #{actType},
+                </if>
+                <if test = "actScope != null">
+                    act_scope = #{actScope},
+                </if>
+                <if test = "sort != null">
+                    sort = #{sort},
+                </if>
+                <if test = "channel != null">
+                    channel = #{channel},
+                </if>
+                <if test = "byName != null">
+                    by_name = #{byName},
+                </if>
+                <if test = "isNeedReimbursed != null">
+                    is_need_reimbursed = #{isNeedReimbursed},
+                </if>
+                <if test="operatorRemark != null">
+                    operator_remark = #{operatorRemark},
+                </if>
+                <if test="pageTitle != null">
+                    page_title = #{pageTitle},
+                </if>
+                <if test="isShowHms != null">
+                    is_show_hms = #{isShowHms},
+                </if>
+                <if test="articleImg != null">
+                    article_img = #{articleImg},
+                </if>
+                <if test="articleTitle != null">
+                    article_title = #{articleTitle},
+                </if>
+                <if test="articleDesc != null">
+                    article_desc = #{articleDesc},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_activity_template
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_activity_template
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_activity_template
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_activity_template
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_activity_template
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_activity_template
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_activity_template
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_activity_template (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "actName != null">
+                act_name,
+            </if>
+            <if test = "keywords != null">
+                keywords,
+            </if>
+            <if test = "summary != null">
+                summary,
+            </if>
+            <if test = "remark != null">
+                remark,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "startTime != null">
+                start_time,
+            </if>
+            <if test = "endTime != null">
+                end_time,
+            </if>
+            <if test = "actStatus != null">
+                act_status,
+            </if>
+            <if test = "agreement != null">
+                agreement,
+            </if>
+            <if test = "isNeedAudit != null">
+                is_need_audit,
+            </if>
+            <if test = "actType != null">
+                act_type,
+            </if>
+            <if test = "actScope != null">
+                act_scope,
+            </if>
+            <if test = "sort != null">
+                sort,
+            </if>
+            <if test = "channel != null">
+                channel,
+            </if>
+            <if test = "byName != null">
+                by_name,
+            </if>
+            <if test = "isNeedReimbursed != null">
+                is_need_reimbursed,
+            </if>
+            <if test="operatorRemark != null">
+                operator_remark,
+            </if>
+            <if test="pageTitle != null">
+                page_title,
+            </if>
+            <if test="isShowHms != null">
+                is_show_hms,
+            </if>
+            <if test="articleImg != null">
+                article_img,
+            </if>
+            <if test="articleTitle != null">
+                article_title,
+            </if>
+            <if test="articleDesc != null">
+                article_desc,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "actName != null">
+                #{actName},
+            </if>
+            <if test = "keywords != null">
+                #{keywords},
+            </if>
+            <if test = "summary != null">
+                #{summary},
+            </if>
+            <if test = "remark != null">
+                #{remark},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "startTime != null">
+                #{startTime},
+            </if>
+            <if test = "endTime != null">
+                #{endTime},
+            </if>
+            <if test = "actStatus != null">
+                #{actStatus},
+            </if>
+            <if test = "agreement != null">
+                #{agreement},
+            </if>
+            <if test = "isNeedAudit != null">
+                #{isNeedAudit},
+            </if>
+            <if test = "actType != null">
+                #{actType},
+            </if>
+            <if test = "actScope != null">
+                #{actScope},
+            </if>
+            <if test = "sort != null">
+                #{sort},
+            </if>
+            <if test = "channel != null">
+                #{channel},
+            </if>
+            <if test = "byName != null">
+                #{byName},
+            </if>
+            <if test = "isNeedReimbursed != null">
+                #{isNeedReimbursed},
+            </if>
+            <if test="operatorRemark != null">
+                #{operatorRemark},
+            </if>
+            <if test="pageTitle != null">
+                #{pageTitle},
+            </if>
+            <if test="isShowHms != null">
+                #{isShowHms},
+            </if>
+            <if test="articleImg != null">
+                #{articleImg},
+            </if>
+            <if test="articleTitle != null">
+                #{articleTitle},
+            </if>
+            <if test="articleDesc != null">
+                #{articleDesc},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_activity_template
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_activity_template (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            act_name,
+            keywords,
+            summary,
+            remark,
+            img_url,
+            start_time,
+            end_time,
+            act_status,
+            agreement,
+            is_need_audit,
+            act_type,
+            act_scope,
+            sort,
+            channel,
+            by_name,
+            is_need_reimbursed,
+            operator_remark,
+            page_title,
+            is_show_hms,
+            article_img,
+            article_title,
+            article_desc,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.actName != null">
+                    #{item.actName},
+                </if>
+                <if test="item.actName == null">
+                    '',
+                </if>
+                <if test="item.keywords != null">
+                    #{item.keywords},
+                </if>
+                <if test="item.keywords == null">
+                    '',
+                </if>
+                <if test="item.summary != null">
+                    #{item.summary},
+                </if>
+                <if test="item.summary == null">
+                    '',
+                </if>
+                <if test="item.remark != null">
+                    #{item.remark},
+                </if>
+                <if test="item.remark == null">
+                    '',
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    '',
+                </if>
+                <if test="item.startTime != null">
+                    #{item.startTime},
+                </if>
+                <if test="item.startTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.endTime != null">
+                    #{item.endTime},
+                </if>
+                <if test="item.endTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.actStatus != null">
+                    #{item.actStatus},
+                </if>
+                <if test="item.actStatus == null">
+                    0 ,
+                </if>
+                <if test="item.agreement != null">
+                    #{item.agreement},
+                </if>
+                <if test="item.agreement == null">
+                    '',
+                </if>
+                <if test="item.isNeedAudit != null">
+                    #{item.isNeedAudit},
+                </if>
+                <if test="item.isNeedAudit == null">
+                    0 ,
+                </if>
+                <if test="item.actType != null">
+                    #{item.actType},
+                </if>
+                <if test="item.actType == null">
+                    0 ,
+                </if>
+                <if test="item.actScope != null">
+                    #{item.actScope},
+                </if>
+                <if test="item.actScope == null">
+                    0 ,
+                </if>
+                <if test="item.sort != null">
+                    #{item.sort},
+                </if>
+                <if test="item.sort == null">
+                    0 ,
+                </if>
+                <if test="item.channel != null">
+                    #{item.channel},
+                </if>
+                <if test="item.channel == null">
+                    0 ,
+                </if>
+                <if test="item.byName != null">
+                    #{item.byName},
+                </if>
+                <if test="item.byName == null">
+                    '',
+                </if>
+                <if test="item.isNeedReimbursed != null">
+                    #{item.isNeedReimbursed},
+                </if>
+                <if test="item.isNeedReimbursed == null">
+                    0,
+                </if>
+                <if test="item.operatorRemark != null">
+                    #{item.operatorRemark},
+                </if>
+                <if test="item.operatorRemark == null">
+                    '',
+                </if>
+                <if test="item.pageTitle != null">
+                    #{item.pageTitle},
+                </if>
+                <if test="item.pageTitle == null">
+                    '',
+                </if>
+                <if test="item.isShowHms != null">
+                    #{item.isShowHms},
+                </if>
+                <if test="item.isShowHms == null">
+                    0,
+                </if>
+                <if test="item.articleImg != null">
+                    #{item.articleImg},
+                </if>
+                <if test="item.articleImg == null">
+                    '',
+                </if>
+                <if test="item.articleTitle != null">
+                    #{item.articleTitle},
+                </if>
+                <if test="item.articleTitle == null">
+                    '',
+                </if>
+                <if test="item.articleDesc != null">
+                    #{item.articleDesc},
+                </if>
+                <if test="item.articleDesc == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <!-- 查询当前有效活动 -->
+    <select id="getValidActivityList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM
+        legend_activity_template
+        WHERE
+        <![CDATA[
+          start_time <= SYSDATE()
+          AND
+          end_time >= SYSDATE()
+        ]]>
+        <if test="channel != null">
+        AND channel = #{channel}
+        </if>
+        AND act_status = 2
+        AND act_type = 1
+        AND is_deleted = 'N'
+        ORDER BY sort DESC
+    </select>
+
+</mapper>

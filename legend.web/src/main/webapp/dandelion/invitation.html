@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>云修邀请</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="css/base.css"/>
+    <style type="text/css">
+        body {
+            -moz-user-select: text; /*火狐*/
+            -webkit-user-select: text;  /*webkit浏览器*/
+            -ms-user-select: text;   /*IE10*/
+            -khtml-user-select: text; /*早期浏览器*/
+            user-select: text;
+        }
+        .invite-box {
+            position: relative;
+            height: 437px;
+            background: url("images/invitation/code.jpg") center no-repeat;
+        }
+        .invite-box .invite-code {
+            position: absolute;
+            top: 135px;
+            left: 50%;
+            width: 386px;
+            height: 100px;
+            line-height: 100px;
+            margin-left: -193px;
+            font-size: 88px;
+            color: #fff;
+            text-align: center;
+        }
+        .invite-box .tips {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 640px;
+            line-height: 80px;
+            font-size: 30px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+        }
+        .flow {
+            display: block;
+            width: 100%;
+        }
+        .flow1 {
+            height: 479px;
+        }
+        .flow2 {
+            height: 587px;
+        }
+        .owner-box {
+            line-height: 55px;
+            padding: 26px 0 0 113px;
+            font-size: 28px;
+            color: #fff;
+        }
+        .B-logo {
+            display: block;
+            width: 55px;
+            height: 55px;
+            margin-left: -78px;
+            background: url(images/download/B_logo.png) center no-repeat;
+            float: left;
+        }
+        .B-btn {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            width: 179px;
+            height: 60px;
+            margin-top: -30px;
+            font-size: 23px;
+            color: #119bf6;
+            text-align: center;
+            background: rgba(0, 0, 0, 0);
+            border: 2px solid #119bf6;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+<!--<div class="loading">0%</div>-->
+<div class="jiazai"><img src="images/load.png"></div>
+<div id="wrapper" class="wrapper">
+    <div class="invite-box">
+        <p class="invite-code"></p>
+        <p class="tips">兑换即可获赠30元洗车券</p>
+    </div>
+    <img class="flow flow1" src="images/invitation/flow1.jpg"/>
+    <img class="flow flow2" src="images/invitation/flow2.jpg"/>
+</div>
+
+<div id="sidebar" class="sidebar">
+    <div class="owner-box"><i class="B-logo"></i>淘汽云修 车主App</div>
+    <button class="download-btn B-btn">点击下载</button>
+</div>
+<div class="tips-bg">
+    <img src="images/tips.png" />
+</div>
+</body>
+<script src="js/lib/zepto/zepto.min.js"></script>
+<script src="js/lib/crypto/sha.js"></script>
+<script src="js/lib/template.js"></script>
+<script src="js/Dao.js"></script>
+<!--<script src="tqmall://localJS/Bridge.js"></script>-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?177aadfd52500674827db74ca8f51989";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    ;(function() {
+        var UA = window.navigator.userAgent.toLowerCase();
+        if(!UA.match(/Android|Mobile|iOS|iPhone/i)) {
+            location.href = "http://www.yunqixiu.com/legend/portal/dandelion/download";
+            return false;
+        }
+    })();
+
+    App.init = function() {
+        var code = App.pageParams["code"];
+        $(".invite-code").text(code);
+
+        $(document).on("tap", ".download-btn", function() {
+            App.jump2download();
+        });
+    };
+
+    function view() {
+        var UA = window.navigator.userAgent.toLowerCase();
+        if(UA.match(/MicroMessenger/i) == 'micromessenger') {
+            var $tips_bg = $('.tips-bg');
+            $tips_bg.css("width", $("#wrapper").width());
+            if (UA.match(/android/i)) {
+                $tips_bg.find('img').attr('src', 'images/tips_android.png');
+                $tips_bg.css('height', $(document).height()).show(2000);
+            } else {
+                $tips_bg.css('height', $(document).height()).show(2000);
+            }
+        }
+
+//        if( UA.match(/android/i) ){
+//            $("#sidebar").append('<button class="download-btn B-btn">点击下载</button>');
+//        } else {
+//            $("#sidebar").append('<button class="B-btn">敬请期待</button>');
+//        }
+
+        App.setTitle('云修邀请');
+        this.pageParams = Dao.parseUrl();
+
+        App.init();
+    }
+
+    App.changeSize = function () {
+        var page = $(window);
+        window.orientation;
+        var phoneWidth = parseInt(page.width());
+        var phoneScale = phoneWidth / 640;
+        $('#wrapper')[0].style.cssText = '-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scale(' + phoneScale + ');transform:scale(' + phoneScale + ');';
+        $('#sidebar')[0].style.cssText = '-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scale(' + phoneScale + ');transform:scale(' + phoneScale + ');';
+    };
+
+    $(function () {
+        App.changeSize();
+        window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', App.changeSize);
+        var rarr = [
+                'images/invitation/code.jpg',
+                'images/invitation/flow1.jpg',
+                'images/invitation/flow2.jpg'
+                ],
+                rl = rarr.length,
+                rnum = 0;
+        for (var i = 0; i < rl; i++) {
+            var img = new Image();
+            img.src = rarr[i];
+            img.onload = function () {
+                if (++rnum >= rl) {
+                    App.run(view);
+                }
+            };
+        }
+    });
+</script>
+</html>

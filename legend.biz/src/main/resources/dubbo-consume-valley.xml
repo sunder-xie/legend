@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:reference interface="com.tqmall.legend.client.service.BookServiceRPC"
+                     id="bookServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+    <dubbo:reference interface="com.tqmall.legend.client.service.TopicServiceRPC"
+                     id="topicServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+
+    <dubbo:reference interface="com.tqmall.legend.client.service.BookCatalogueServiceRPC"
+                     id="bookCatalogueServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+    <dubbo:reference interface="com.tqmall.legend.client.service.TopicBookCatalogueServiceRPC"
+                     id="topicBookCatalogueServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+    <dubbo:reference interface="com.tqmall.legend.client.service.BookPageServiceRPC"
+                     id="bookPageServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+    <dubbo:reference interface="com.tqmall.legend.client.service.TopicBookPageServiceRPC"
+                     id="topicBookPageServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+    <dubbo:reference interface="com.tqmall.legend.client.service.BookCarServiceRPC"
+                     id="bookCarServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+    <dubbo:reference interface="com.tqmall.legend.client.service.TopicCatServiceRPC"
+                     id="topicCatServiceRPC" version="${dubbo.valley.version}" owner="dongc"/>
+
+</beans>

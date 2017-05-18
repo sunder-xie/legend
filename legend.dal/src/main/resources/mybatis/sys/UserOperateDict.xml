@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.sys.UserOperateDictDao">
+
+    <resultMap id = "BaseResultMap" type = "UserOperateDict" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "request_url" property = "requestUrl" />
+        <result column = "refer_key" property = "referKey" />
+        <result column = "target_key" property = "targetKey" />
+        <result column = "operate_remark" property = "operateRemark" />
+        <result column = "operate_application" property = "operateApplication" />
+        <result column = "operate_module" property = "operateModule" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            request_url as requestUrl,
+            refer_key as referKey,
+            target_key as targetKey,
+            operate_remark as operateRemark,
+            operate_application as operateApplication,
+            operate_module as operateModule,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "requestUrl != null">
+                    and request_url = #{requestUrl}
+                </if>
+                <if test = "referKey != null">
+                    and refer_key = #{referKey}
+                </if>
+                <if test = "targetKey != null">
+                    and target_key = #{targetKey}
+                </if>
+                <if test = "operateRemark != null">
+                    and operate_remark = #{operateRemark}
+                </if>
+                <if test = "operateApplication != null">
+                    and operate_application = #{operateApplication}
+                </if>
+                <if test = "operateModule != null">
+                    and operate_module = #{operateModule}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "requestUrl != null">
+                    request_url = #{requestUrl},
+                </if>
+                <if test = "referKey != null">
+                    refer_key = #{referKey},
+                </if>
+                <if test = "targetKey != null">
+                    target_key = #{targetKey},
+                </if>
+                <if test = "operateRemark != null">
+                    operate_remark = #{operateRemark},
+                </if>
+                <if test = "operateApplication != null">
+                    operate_application = #{operateApplication},
+                </if>
+                <if test = "operateModule != null">
+                    operate_module = #{operateModule},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_user_operate_dict
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_user_operate_dict
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_user_operate_dict
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_user_operate_dict
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_user_operate_dict
+        set is_deleted='Y' , gmt_modified = now()
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_user_operate_dict
+        set is_deleted='Y' , gmt_modified = now()
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_user_operate_dict
+        set is_deleted='Y' , gmt_modified = now()
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_user_operate_dict (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "requestUrl != null">
+                request_url,
+            </if>
+            <if test = "referKey != null">
+                refer_key,
+            </if>
+            <if test = "targetKey != null">
+                target_key,
+            </if>
+            <if test = "operateRemark != null">
+                operate_remark,
+            </if>
+            <if test = "operateApplication != null">
+                operate_application,
+            </if>
+            <if test = "operateModule != null">
+                operate_module,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "requestUrl != null">
+                #{requestUrl},
+            </if>
+            <if test = "referKey != null">
+                #{referKey},
+            </if>
+            <if test = "targetKey != null">
+                #{targetKey},
+            </if>
+            <if test = "operateRemark != null">
+                #{operateRemark},
+            </if>
+            <if test = "operateApplication != null">
+                #{operateApplication},
+            </if>
+            <if test = "operateModule != null">
+                #{operateModule},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_user_operate_dict
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_user_operate_dict (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            request_url,
+            refer_key,
+            target_key,
+            operate_remark,
+            operate_application,
+            operate_module,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.requestUrl != null">
+                    #{item.requestUrl},
+                </if>
+                <if test="item.requestUrl == null">
+                    '',
+                </if>
+                <if test="item.referKey != null">
+                    #{item.referKey},
+                </if>
+                <if test="item.referKey == null">
+                    '',
+                </if>
+                <if test="item.targetKey != null">
+                    #{item.targetKey},
+                </if>
+                <if test="item.targetKey == null">
+                    '',
+                </if>
+                <if test="item.operateRemark != null">
+                    #{item.operateRemark},
+                </if>
+                <if test="item.operateRemark == null">
+                    '',
+                </if>
+                <if test="item.operateApplication != null">
+                    #{item.operateApplication},
+                </if>
+                <if test="item.operateApplication == null">
+                    0 ,
+                </if>
+                <if test="item.operateModule != null">
+                    #{item.operateModule},
+                </if>
+                <if test="item.operateModule == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper> 

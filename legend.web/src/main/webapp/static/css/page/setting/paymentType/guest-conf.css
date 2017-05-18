@@ -1,0 +1,25 @@
+/*
+* create by zsy 2017/04/10
+* 结算方式：管理卡券优惠使用样式
+*/
+.guest-conf-content {
+    margin-top: 10px;
+}
+
+.guest-conf {
+    padding: 15px 0;
+}
+
+.left-box {
+    width: 300px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.coupon-desc {
+    line-height: 1.4;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

@@ -1,0 +1,152 @@
+/* css common class */
+html {
+    height: 100%;
+}
+
+body {
+    background: #eeeeee;
+    text-align: left;
+    font-family: "黑体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+    font-size: 12px;
+    color: #666666;
+}
+
+label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.red {
+    color: #e50206 !important;
+}
+
+.blue {
+    color: #4bc8f4;
+}
+
+.orange {
+    color: #fea23f;
+}
+
+.green {
+    color: #9fc527;
+}
+
+.gray {
+    color: #cdcdcd;
+}
+
+.lock {
+    background: #eeeeee !important;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+.content_left{text-align: left;}
+.content_center{text-align: center;}
+.content_right{text-align: right;}
+.urlBtn{cursor: pointer;}
+.qxy_hide{display: none !important;}
+.qxy_wrapper {
+    width: 980px;
+    min-height: 500px;
+    margin: 90px auto 120px auto;
+}
+
+/*------公共行间距------*/
+.qxy_row {
+    margin-bottom: 10px;
+}
+
+/*------公共链接样式------*/
+a.qxy_link {
+    color: #666666;
+    text-decoration: none;
+}
+
+a.qxy_link:hover {
+    color: #e50206;
+}
+
+/* //卡片业务类型图标 */
+.qxy_business_1 {
+    background: url(../img/common/business1.png) no-repeat;
+}
+
+.qxy_business_2 {
+    background: url(../img/common/business2.png) no-repeat;
+}
+
+.qxy_business_3 {
+    background: url(../img/common/business3.png) no-repeat;
+}
+
+.qxy_business_4 {
+    background: url(../img/common/business4.png) no-repeat;
+}
+
+.qxy_business_fee {
+    background: url(../img/common/business_fee.png) no-repeat;
+}
+.qxy_business_tq {
+    background: url(../img/common/tqservice.jpg) no-repeat; 
+}
+
+.qxy_supplier {
+    background: url(../img/common/supplier.png) no-repeat;
+}
+
+.qxy_right {
+    margin-left: 222px;
+    overflow: hidden;
+}
+
+/*----- 悬浮窗样式 start------*/
+.sideTips { position: fixed;bottom: 30px;left:50%;margin-left:500px;width: 62px; border: 1px solid #ddd; z-index: 28; height:180px;}
+.sideTips li { position: relative; width: 28px; height: 24px; padding: 18px 17px;cursor: pointer }
+.publish { background: #f9f9f9 url('/legend/resources/images/pen.png') center no-repeat; }
+.publish-btn {display:none;width: 28px; height: 36px;position: absolute;top: -1px;right: -1px; padding: 11px 17px;color: #fff;background-color: #ff7a51; border: 1px solid #ff7a51;text-align:center;}
+.info-tips { position: relative;background: #f9f9f9 url('/legend/resources/images/note.png') center no-repeat; }
+.order-box {display:none; position: absolute;z-index:20;right: -1px;top: -1px;z-index: 999;width: 213px;border: 1px solid #ff7a51;background-color: #f9f9f9;overflow: hidden; }
+.order-box p { float: left; width: 150px;height: 60px; line-height: 60px;color: #666;text-align: center; }
+.order-box .order-logo { float: right;width: 28px; height: 24px; padding: 18px 17px; cursor: pointer;background: #ff7a51 url('/legend/resources/images/note.png') center no-repeat; }
+.count_tips { position: absolute; top: 1px; right: 1px;display: none;width: 21px;height: 17px;line-height: 17px;font-style: normal;color: #fff;text-align: center;background: url('/legend/resources/images/info_tip.png') center no-repeat; }
+.noFixed{position:absolute;left:50%;bottom:180px;}
+.speed_test{background: #f9f9f9 url('/legend/resources/style/img/common/speed_test.png') center no-repeat;}
+a.speed_btn{display:none;width: 28px; height: 10px;position: absolute;top: -1px;right: -1px; padding: 24px 17px;color: #fff;background-color: #ff7a51; border: 1px solid #ff7a51;text-align:center;}
+
+/*----- 悬浮窗样式 end------*/
+
+/* ---- icon tips样式 start----- */
+.icon_tips{padding:7px; background: url(../img/common/txt_tips_icon.png) no-repeat center;}
+.tips_content{display: none;position: absolute;background: #fff;z-index:5;box-shadow: 2px 2px 4px #ccc;} 
+.tips_content_inner{position: relative;padding: 15px 10px;border: 1px solid #dcdcdc;color: #111;max-width:200px;text-align: left;white-space:normal;}
+.tips_content_inner i.before{position: absolute;width: 11px;height:14px;background: url(../img/common/tips_arrow_left.png) no-repeat left center;top: 50%;margin-top: -7px;left:-8px;}
+.tips_content_inner i.after{position: absolute;width: 11px;height:14px;background: url(../img/common/tips_arrow_right.png) no-repeat left center;top: 50%;margin-top: -7px;right:-8px;}
+/* ---- icon tips样式 end----- */
+
+/*------ 非chrome浏览器，提示使用chrome浏览器 start -------*/
+.not_chrome_tips{width:100%;background: #5579a0;position: fixed;z-index: 31;top:0;left:0;}
+.not_chrome_tips .tips_inner{width: 980px;margin:0 auto; font-size: 16px;text-shadow: 0 1px 1px #24304a;}
+.not_chrome_tips .tips_left,
+.not_chrome_tips .tips_right{height:50px;}
+.not_chrome_tips .tips_left{float:left;background:url(../../img/common/browser_smile_icon.png) no-repeat 10px center; color: #fff;font-weight: bold;line-height: 50px;padding-left: 50px; }
+.not_chrome_tips .tips_right{float: right;}
+.not_chrome_tips .tips_right a{display: block;float: left;height: 30px;line-height: 30px;border-radius: 4px;color: #fff;font-weight: bolder;margin: 10px 0 0 10px;}
+.not_chrome_tips .tips_right a.tips_btn1{background: #2ed6cc url(../../img/common/browser_chrome_icon.png) no-repeat 90% center;width: 55px;padding:0 10px 0 15px;}
+.not_chrome_tips .tips_right a.tips_btn2{background: #f77c9f;padding:0 20px;}
+.not_chrome_tips_header{top:50px!important;}
+.not_chrome_tips_wrapper{margin-top: 140px!important;}
+.not_chrome_tips_sidebar{top:119px!important;}
+/*------ 非chrome浏览器，提示使用chrome浏览器 end -------*/
+
+
+
+
+
+

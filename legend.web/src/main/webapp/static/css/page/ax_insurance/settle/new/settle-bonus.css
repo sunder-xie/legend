@@ -1,0 +1,138 @@
+/*保单查询列表页样式开始*/
+.Z-tab .on{
+    background: #eee;
+    color: #333;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #9fc527;
+    line-height: 37px;
+    font-weight: bold;
+}
+/*左侧导航栏开始*/
+.Z-left{
+    width: 135px;
+    float: left;
+    margin-right: 15px;
+}
+.left-nav{
+    width: 138px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+/*左侧导航栏结束*/
+
+/*右侧部分样式开始*/
+.Z-right{
+    width: 830px;
+    float: left;
+    background: #eee;
+    /*font-family: "宋体";*/
+}
+.Z-title{
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+    font-family: MircosoftYahei;
+    font-weight: bold;
+    margin:0 0 10px 0;
+    background-color: #FFFFFF;
+    border: 1px solid #dddddd;
+    padding: 0 10px;
+}
+.Z-title p{
+    display: inline-block;
+    float: right;
+}
+.Z-title span{
+    font-size: 12px;
+    color: #999;
+}
+.Z-title .effected{
+    margin:0 25px;
+}
+.Z-title a{
+    font-size: 12px;
+    color: #999;
+}
+.Z-title .rule{
+    color: #333;
+}
+/*列表tab样式开始*/
+.Z-tab{
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ddd;
+}
+.Z-tab-item{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: sub;
+    background: #ddd;
+    color: #666;
+    font-size: 14px;
+    font-family: 宋体;
+}
+.Z-tab-item:hover{
+    background: #eee;
+    color: #333;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #9fc527;
+    line-height: 37px;
+}
+/*列表tab样式结束*/
+
+/*选择搜索框样式开始*/
+.filter{
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+.Z-select{
+    background: #fff;
+    font-size: 0;
+    padding: 10px 0 10px 25px;
+}
+.Z-select .Z-vin{
+    margin:0 25px;
+}
+.Z-select .Z-status{
+    font-size: 12px;
+}
+.Z-select .Z-search{
+    margin-left: 200px;
+}
+.plate-number{
+    width: 149px;
+}
+.part{
+    margin-bottom: 10px;
+}
+/*选择搜索框样式结束*/
+
+/*表格样式开始*/
+.Z-orderSn{
+    width: 180px;
+}
+tbody tr td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.no-data{
+    display: inline-block;
+    width: 830px;
+    height: 180px;
+    background: #F5F5F5;
+    line-height: 164px;
+    border-bottom: none !important;
+}
+/*表格样式结束*/
+
+/*保单查询列表页样式结束*/
+
+/*右侧部分样式结束*/

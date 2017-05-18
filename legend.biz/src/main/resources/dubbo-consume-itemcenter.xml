@@ -1,0 +1,41 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- itemcenter 供应商设置-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.supplier.RpcSupplierService" id="itemcenter.rpcSupplierService"
+                     version="${dubbo.itemcenter.version}" owner="dehuang.zhang"/>
+    <!-- itemcenter 门店服务资料-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.shopServiceInfo.RpcShopServiceCateService" id="itemcenter.rpcShopServiceCateService"
+                     version="${dubbo.itemcenter.version}" owner="wushuai"/>
+    <dubbo:reference interface="com.tqmall.itemcenter.service.carLevel.RpcCarLevelService" id="itemcenter.rpcCarLevelService"
+                     version="${dubbo.itemcenter.version}" owner="wushuai"/>
+    <dubbo:reference interface="com.tqmall.itemcenter.service.shopServiceInfo.RpcShopServiceInfoService" id="itemcenter.RpcShopServiceInfoService"
+                     version="${dubbo.itemcenter.version}" owner="wushuai"/>
+
+    <!-- itemcenter 配件资料-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.goods.RpcGoodsBrandService" id="itemcenter.RpcGoodsBrandService"
+                     version="${dubbo.itemcenter.version}" owner="dongc"/>
+    <!--itemcenter 配件类别-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.goods.RpcGoodsCategoryService" id="itemcenter.RpcGoodsCategoryService"
+                     version="${dubbo.itemcenter.version}" owner="twg"/>
+    <!--itemcenter 配件属性-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.goods.RpcGoodsAttributeService" id="itemcenter.RpcGoodsAttributeService"
+                     version="${dubbo.itemcenter.version}" owner="dongc"/>
+    <!--itemcenter 配件属性-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.goods.RpcGoodsAttrRelService" id="itemcenter.RpcGoodsAttrRelService"
+                     version="${dubbo.itemcenter.version}" owner="dongc"/>
+    <!--itemcenter 配件单位-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.goods.RpcGoodsUnitService" id="itemcenter.RpcGoodsUnitService"
+                     version="${dubbo.itemcenter.version}" owner="dongc"/>
+    <!--itemcenter 配件关联车型-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.goods.RpcGoodsCarService" id="itemcenter.RpcGoodsCarService"
+                     version="${dubbo.itemcenter.version}" owner="dongc"/>
+    <!--itemcenter 配件热门车型-->
+    <dubbo:reference interface="com.tqmall.itemcenter.service.goods.RpcGoodsHotCategoryService" id="itemcenter.RpcGoodsHotCategoryService"
+                     version="${dubbo.itemcenter.version}" owner="dongc"/>
+
+
+</beans>

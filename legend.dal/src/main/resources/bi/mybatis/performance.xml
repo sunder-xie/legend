@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.bi.dao.PerformanceDao">
+
+    <select id="queryWorkerInfo" resultType="com.tqmall.legend.object.result.statistics.PerformanceDTO">
+		SELECT w.worker_id AS worker,
+			   w.worker_name AS workerName,
+			   w.shop_id AS shopId,
+			   count(DISTINCT w.order_id) AS orderCount,
+			   count(DISTINCT o.car_license) AS carTimes,
+			   concat("维修工") AS workerType
+		FROM legend_order_services_worker w
+		JOIN legend_order_info o ON w.order_id=o.id
+		WHERE w.is_deleted='N'
+		  AND o.is_deleted='N'
+		  AND w.shop_id=#{shopId}
+		  AND o.shop_id=#{shopId}
+		  AND o.order_status='DDYFK'
+		  AND w.worker_id=#{worker}
+		  <if test="startTime!=null and endTime!=null">
+		  	AND o.confirm_time BETWEEN #{startTime} AND #{endTime}
+		  </if>
+	</select>
+
+	<select id="queryWorkerPerformance" resultType="java.math.BigDecimal">
+		SELECT ifnull(sum(c.amount),0) AS amount
+		FROM
+		  (SELECT a.sold_amount/count(b.worker_id) AS amount
+		   FROM
+			 (SELECT os.id AS order_service_id,
+					 sw.shop_id AS shop_id,
+					 os.sold_amount AS sold_amount
+			  FROM legend_order_services_worker sw
+			  JOIN legend_order_services os ON sw.order_services_id = os.id
+			  JOIN legend_order_info o ON sw.order_id=o.id
+			  WHERE sw.is_deleted='N'
+				AND sw.shop_id=#{shopId}
+				AND sw.worker_id=#{worker}
+				AND os.is_deleted='N'
+				AND os.shop_id=#{shopId}
+				AND o.is_deleted='N'
+				AND o.shop_id=#{shopId}
+				AND o.order_status='DDYFK'
+				AND o.confirm_time BETWEEN #{startTime} AND #{endTime}) a
+		   JOIN legend_order_services_worker b ON a.order_service_id = b.order_services_id
+		   AND a.shop_id=b.shop_id
+		   WHERE b.is_deleted='N'
+		   GROUP BY a.order_service_id,
+					a.sold_amount) c
+	</select>
+</mapper>

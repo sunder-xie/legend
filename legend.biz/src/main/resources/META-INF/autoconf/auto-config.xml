@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config description="">
+    <group name="biz">
+        <property name="legend.app.root" default="${user.home}/" description="应用部署根目录"/>
+        <property name="legend.app.context" defaultValue="legend"
+                  description="应用的context name"/>
+
+        <!--搜索服务URL-->
+        <property name="i.search.url" defaultValue="http://"
+                  description="ISearch的服务器地址"/>
+        <property name="new.i.search.url" defaultValue="http://"
+                  description="ISearch的服务器地址"/>
+
+        <!--短信服务URL-->
+        <property name="sms.send" defaultValue="false"
+                  description="是否发送短信"/>
+
+        <!--CRM 服务URL-->
+        <property name="crm.url" defaultValue="http://"
+                  description="crm的服务器地址"/>
+
+        <!--dubbo地址-->
+        <property name="dubbo.address" defaultValue="zookeeper://127.0.0.1:2182" description="dubbo注册中心地址"/>
+        <property name="dubbo.port" defaultValue="20880" description="用dubbo协议在20880端口暴露服务"/>
+        <property name="dubbo.consumer.check" defaultValue="false" description="设置默认启动关闭check，防止循环依赖启动问题"/>
+        <property name="dubbo.legend.version" defaultValue="1.0.0.local" description="legend的dubbo服务版本"/>
+        <property name="dubbo.iservice.version" defaultValue="1.0.0.daily" description="iserver的dubbo服务版本"/>
+        <property name="dubbo.alligator.version" defaultValue="1.0.0.daily" description="alligator的dubbo服务版本"/>
+        <property name="dubbo.athena.version" defaultValue="1.0.0.daily" description="athena的dubbo服务版本"/>
+        <property name="dubbo.ucenter.version" defaultValue="1.0.0.daily" description="ucenter的dubbo服务版本"/>
+        <property name="dubbo.saint.version" defaultValue="1.0.0.daily" description="saint的dubbo服务版本"/>
+        <property name="dubbo.holy.version" defaultValue="1.0.0.daily" description="holy的dubbo服务版本"/>
+        <property name="dubbo.finance.version" defaultValue="1.0.0.daily" description="finance的dubbo服务版本"/>
+        <property name="dubbo.dandelion.version" defaultValue="1.0.0.dev" description="蒲公英的dubbo服务版本"/>
+        <property name="dubbo.cube.version" defaultValue="1.0.0.dev" description="cube的dubbo服务版本"/>
+        <property name="dubbo.venus.version" defaultValue="1.0.0.daily" description="订单中心的dubbo服务版本"/>
+        <property name="dubbo.magic.version" defaultValue="1.0.0.daily" description="magic的dubbo服务版本"/>
+        <property name="dubbo.billcenter.version" defaultValue="1.0.0.daily" description="账单中心的dubbo服务版本"/>
+        <property name="dubbo.wechat.version" defaultValue="1.0.0.daily" description="微信的dubbo服务版本"/>
+        <property name="dubbo.search.version" defaultValue="1.0.0.dev" descrievption="搜索的dubbo服务版本"/>
+        <property name="dubbo.insurance.version" defaultValue="1.0.0.daily" descrievption="安心保险dubbo服务版本"/>
+        <property name="dubbo.mace.version" defaultValue="1.0.0.dev" descrievption="mace的dubbo服务版本"/>
+        <property name="dubbo.valley.version" defaultValue="1.0.0.daily" descrievption="valley的dubbo服务版本"/>
+        <property name="dubbo.itemcenter.version" defaultValue="1.0.0.daily" descrievption="itemcenter的dubbo服务版本"/>
+        <property name="dubbo.mana.version" defaultValue="1.0.0.daily" descrievption="mana的dubbo服务版本"/>
+
+
+        <property name="legend.log.root" defaultValue="${legend.app.root}/logs"
+                  description="log文件目录"/>
+        <property name="legend.log.bak" defaultValue="${legend.app.root}/logs"
+                  description="log备份文件目录"/>
+        <property name="legend.log.level" defaultValue="INFO" description="log级别"/>
+        <property name="legend.log.pattern"
+                  defaultValue="[%d{'yy-MM-dd HH:mm:ss,SSS',GMT+8:00}] %-5p [%.10t][%X{CU}] %logger{36}[%L] - %m%n"
+                  description="log格式"/>
+        <property name="legend.log.charset" defaultValue="UTF-8" description="log文件编码类型"/>
+
+
+        <property name="legend.quartz.run" defaultValue="false" description="quartz后台定时程序是否运行"
+                  required="true"/>
+
+        <property name="legend.slave.jedis.host" defaultValue="" description="读redisIP"/>
+        <property name="legend.slave.jedis.port" defaultValue="6381" description="redis端口"/>
+        <property name="legend.slave.jedis.pwd" defaultValue="" description="redis密码"/>
+        <property name="legend.slave.jedis.idle" defaultValue="50" description="并发数"/>
+        <property name="legend.slave.jedis.timeout" defaultValue="3000" description="超时时间"/>
+        <property name="legend.slave.jedis.maxTotal" defaultValue="100" description="最大连接数"/>
+
+        <property name="legend.master.jedis.host" defaultValue="" description="写redisIP"/>
+        <property name="legend.master.jedis.port" defaultValue="6380" description="redis端口"/>
+        <property name="legend.master.jedis.pwd" defaultValue="" description="redis密码"/>
+        <property name="legend.master.jedis.idle" defaultValue="50" description="并发数"/>
+        <property name="legend.master.jedis.timeout" defaultValue="3000" description="超时时间"/>
+        <property name="legend.master.jedis.maxTotal" defaultValue="100" description="最大连接数"/>
+        <property name="jedis.db.number" defaultValue="11" description="redis db select"/>
+
+        <property name="legend.mq.onOff" defaultValue="off" description="MQ系統开关:正式--on"/>
+        <property name="legend.mq.tradeLog.username" defaultValue="" description="MQ系統交易记录用户名"/>
+        <property name="legend.mq.tradeLog.password" defaultValue="" description="MQ系統交易记录密码"/>
+        <property name="legend.mq.tradeLog.defaultQueue" defaultValue="tqmall_yun_queue" description="MQ系統交易默认queue"/>
+        <property name="legend.mq.tradeLog.routingKey" defaultValue="tqmall_yun_queue" description="MQ系統交易路由key"/>
+        <property name="legend.mq.tradeLog.defaultExchange" defaultValue=""
+                  description="MQ系統交易defaultExchange"/>
+        <property name="legend.mq.host" defaultValue="" description="MQ系統ip"/>
+
+        <property name = "legend.mq.yunxiu.routingKey" defaultValue = "yunxiu_queue_test" description = "MQ系統routingkey" />
+        <property name = "dandelion.url" defaultValue = "http://" description = "蒲公英项目URL" />
+        <property name = "tqmall.url" defaultValue = "http://" description ="云修到电商免登陆URL" />
+        <property name = "epc.url" defaultValue = "http://" description ="云修到汽配管家免登陆URL" />
+
+        <property name = "legend.mq.crm.routingKey" defaultValue = "crm.order_customer" description = "MQ系統routingkey" />
+        <property name = "legend.mq.crm.queue" defaultValue = "crm.order_customerhw150323" description =
+                "MQ系統queue" />
+
+        <property name = "legend.mq.yun.wechat.appoint.routingKey" defaultValue = "yun_wechat_appoint_queue" description = "MQ系統routingkey" />
+        <property name = "legend.mq.yun.wechat.appoint.queue" defaultValue = "yun_wechat_appoint_queue" description =
+                "MQ系統queue" />
+
+        <property name = "legend.mq.yun.ddlwechat.routingKey" defaultValue = "ddlwechat_queue_dev" description = "MQ系統routingkey" />
+        <property name = "legend.mq.dandelion.activity.routingKey" defaultValue =
+                "legend_dandelion_activity_queue_dev" description ="legend到dandelion的活动MQ" />
+        <property name = "legend.mq.dandelion.activity.queue" defaultValue = "legend_dandelion_activity_queue_dev"
+                  description ="legend到dandelion的活动MQ" />
+
+        <property name = "legend.mq.dandelion.recharge.routingKey" defaultValue =
+                "legend_dandelion_recharge_queue_dev" description ="legend到dandelion的充值routingKey" />
+        <property name = "legend.mq.dandelion.recharge.queue" defaultValue = "legend_dandelion_recharge_queue_dev"
+                  description ="legend到dandelion的充值queue" />
+
+        <property name="legend.wechat.domain" defaultValue="http://" description="legend调用微信的域名连接"/>
+        <property name="legend.wechat.jump.domain" defaultValue="http://" description="legend跳转微信的域名链接"/>
+
+        <property name="legend.url" defaultValue="http://" description="云修地址"/>
+        <property name = "legend.cookie.domain" defaultValue = "" description = "legend 共享cookie 的域名范围" />
+        <property name = "bp.socket.url" defaultValue = "ws://127.0.0.1:8080/legend/" description = "钣喷中心看板socket连接地址" />
+        <property name = "legend.socket.url" defaultValue = "ws://127.0.0.1:8080/legend/" description = "legend的socket连接地址" />
+        <property name = "legend.tqmallstall.certification.url" defaultValue = "http://" description = "档口 门店认证url" />
+
+
+
+    </group>
+    <script>
+        <generate template="biz.properties.vm" destfile="biz.properties"
+                  charset="UTF-8"/>
+
+    </script>
+</config>

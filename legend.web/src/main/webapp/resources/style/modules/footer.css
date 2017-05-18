@@ -1,0 +1,296 @@
+/*------- 公共 footer start--------*/
+.qxy_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.qxy_footer .f_mask {
+    width: 100%;
+    height: 20px;
+    background: #000000;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.qxy_footer .f_nav {
+    position: absolute;
+    top: 0;
+    z-index: 1111;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.qxy_footer .f_nav a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    position: relative;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 15px;
+}
+
+.qxy_footer .fcolor1 {
+    background: #0b7bda;
+}
+
+.qxy_footer .fcolor2 {
+    background: #0ba0da;
+}
+
+.qxy_footer .fcolor3 {
+    background: #0bc9da;
+}
+
+.qxy_footer .fcolor4 {
+    background: #8dc832;
+}
+
+.qxy_footer .fcolor5 {
+    background: #f49900;
+}
+
+.qxy_footer .fcolor6 {
+    background: #f15e0e;
+}
+
+.qxy_footer .fcolor7 {
+    background: #ec59e3;
+}
+
+.qxy_footer .fcolor8 {
+    background: #9152d2;
+}
+
+.qxy_footer .fcolor9 {
+    background: #6c52d2;
+}
+
+.qxy_footer .fc_hui {
+    /*filter:alpha(opacity=38);-moz-opacity:0.38;-khtml-opacity:0.38;opacity:0.38;*/
+    background: #CCCCCC;
+}
+
+/*------- 公共 footer end--------*/
+
+/*------- 20150828 样增加页脚 start -------*/
+.qxy_foot {
+    width: 100%;
+    height: 160px;
+    background: #6d7076;
+    font-family: Simsun, Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif
+}
+
+.qxy_foot_inner {
+    width: 980px;
+    margin: 0 auto;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+}
+
+.qxy_foot_col {
+    width: 25%;
+    float: left;
+    height: 100%;
+}
+
+.qxy_foot_col_font20 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.qxy_foot_col_gray {
+    color: #e0e0e0;
+}
+
+.qxy_foot a {
+    color: #fff
+}
+
+.qxy_foot a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*----- 第一小块 start ----*/
+.qxy_foot_col1 {
+    width: 247px;
+    background: url(../img/common/foot-logo.png) no-repeat left 35px;
+    position: relative;
+}
+
+.qxy_foot_col1:after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 1px;
+    background: #9a9c9f;
+    top: 30px;
+    left: 250px;
+}
+
+.qxy_foot_col1 div {
+    padding-left: 70px;
+    padding-top: 47px;
+}
+
+.qxy_foot_col1 .qfc_1_1 {
+    position: relative;
+}
+
+.qxy_foot_col1 .qfc_1_1 span {
+    position: absolute;
+    width: 62px;
+    height: 22px;
+    background: url(../img/common/foot_tips.gif) no-repeat center;
+    color: #666666;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    left: 82px;
+    top: -15px;
+}
+
+.qxy_foot_col1 .qfc_1_2 {
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+/*----- 第一小块 end ----*/
+
+/*----- 第二小块 start ----*/
+.qxy-foot-hotline-box {
+    margin-bottom: 18px;
+}
+
+.qxy_foot_col2 {
+    width: 275px;
+}
+
+.qxy_foot_col2 > div {
+    margin-left: 5px;
+    padding-left: 20px;
+    padding-top: 40px
+}
+
+.qxy_foot_col2 p {
+    margin-bottom: 5px;
+}
+
+.qxy_foot_col2 .qxy-foot-col-gray {
+    float: left;
+}
+
+.qxy_foot_col2 .qxy_foot_col_font20 {
+    font-size: 16px;
+}
+
+.qxy_foot_col2 a:hover {
+    text-decoration: underline;
+}
+
+/*----- 第二小块 end ----*/
+
+/*----- 第三小块 start ----*/
+.qxy-foot .qxy-foot-col-tel {
+    line-height: 1.1;
+    font-size: 14px;
+    font-family: Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    color: #fff;
+}
+
+.qxy-foot .qxy-foot-text {
+    overflow: hidden;
+    color: #fff;
+}
+
+.qxy_foot_col3 {
+    padding-left: 20px;
+    padding-top: 40px;
+    margin-right: 20px;
+    width: initial;
+}
+
+.qxy_foot_col3 p {
+    margin-bottom: 10px;
+}
+
+.qxy_foot_col3 .qfc_3_1 {
+    font-weight: bolder;
+}
+
+.qxy_foot .contact-qq {
+    cursor: pointer;
+    width: 55px;
+    border: 1px solid #c0c1c3;
+    border-radius: 1px;
+}
+
+.qxy_foot .contact-qq i, .qxy_foot .contact-qq a {
+    color: #fff;
+}
+
+.qxy_foot .contact {
+    padding: 0;
+}
+
+.qxy_foot .contact p {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 5px;
+    padding: 3px 0;
+}
+
+.qxy_foot .icon-qq {
+    background: url('../../img/common/foot-icons.png') 0 -8px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+
+/*----- 第三小块 end ----*/
+
+/*----- 第四小块 start ----*/
+.qxy_foot_col4 {
+    width: initial
+}
+
+.qxy_foot_col4 div {
+    width: 230px;
+    height: 100px;
+    background: url(../../img/common/foot-2wm.jpg) no-repeat 95% center;
+    border: 1px dashed #afb0b2;
+    margin-top: 30px;
+}
+
+.qxy_foot_col4 .qfc_4_1 {
+    font-size: 18px;
+    width: 95px;
+    height: 50px;
+    margin-top: 14px;
+    margin-left: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.qxy_foot_col4 .qfc_4_2 {
+    margin-left: 20px;
+}
+
+/*----- 第四小块 end ----*/
+
+/*------- 20150828 样增加页脚 end -------*/

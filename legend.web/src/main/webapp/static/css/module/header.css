@@ -1,0 +1,528 @@
+/**
+ * ch 2016-03-21
+ * 页面公共头样式   
+ */
+/*------- 公共 header start--------*/
+.yqx-header .fr {
+    float: right;
+}
+.yqx-header .header {background: #232e49; left:0; position: fixed; top:0; width: 100%; z-index: 99999;box-sizing: border-box;  }
+
+.yqx-header .topnav {width: 980px; height: 70px; margin: 0 auto; position: relative;}
+.yqx-header .home-topnav {
+    width: 1004px;
+}
+.yqx-header img {vertical-align: middle; display: inline-block;}
+.yqx-header .topmenu {
+    height: 100%;
+    display: inline-block;
+}
+
+.yqx-header .header-logo img{
+    width: 121px;
+    height: 70px;
+    vertical-align: baseline;
+}
+
+.yqx-header .topmenu>li,.yqx-header .header-ul-right>li {
+    height: 100%; text-align: center; position: relative;
+    margin-right: 20px;
+    float: left;
+    display: inline-block;
+}
+
+.yqx-header .topmenu>li:last-child, .yqx-header .header-ul-right>li:last-child {
+    margin: 0;
+}
+
+.topmenu li a>.fa {
+    bottom: 50%;
+    position: absolute;
+    right: -4px;
+    -webkit-transform: translate(100%, 50%);
+    transform: translate(100%, 50%);
+}
+
+.yqx-header .topmenu>li>a, .yqx-header .header-ul-right>li>a {display: block; width: 100%; height: 70px;
+    font-family: "Microsoft YaHei", Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    line-height: 75px; font-size: 14px; color: #ffffff; }
+.yqx-header .topmenu .current>a
+{height: 68px; color: #ffd400; border-bottom: 2px solid #ffd400; }
+
+.yqx-header .topmenu>li>a:hover, .yqx-header .header-ul-right>li>a:hover {
+    color: #ffd400;
+}
+.yqx-header .tophelp {position: relative; }
+.yqx-header .tophelp:hover .topHelpNav {display: block; }
+.yqx-header .tophelp .topHelpNav:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 7px;
+    border: 5px solid transparent;
+    border-bottom-color: rgba(79, 90, 122, 0.95);
+}
+.yqx-header .topHelpNav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1111;
+    display: none;
+    padding: 15px;
+    background: rgba(79, 90, 122, 0.95);
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 2px 1px #4f5a7a;
+}
+.yqx-header .topHelpNav li {
+    width: 105px;
+    height: 32px;
+    line-height: 32px;
+    text-align: left;
+    color: #fff;
+    cursor: pointer;
+}
+
+.yqx-header .topHelpNav li:hover,
+.yqx-header .topHelpNav li:hover a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.yqx-header .topHelpNav li a {
+    display: block;
+}
+.yqx-header .topHelpNav a {
+    color: #fff;
+}
+
+.yqx-header .header-logo {
+    margin-left: -9px;
+    margin-right: 37px;
+}
+
+.yqx-header .topnav .li-form {
+    width: 110px;
+    margin-right: 20px;
+    line-height: 74px;
+    height: 70px;
+}
+
+.yqx-header .header-search {
+    background: #424d68;
+    height: 30px;
+    border-radius: 15px;
+    text-indent: 2.5em;
+    width: 110px;
+    color: #fff;
+}
+
+.yqx-header .header-search-icon {
+    position: absolute;
+    left: 8px;
+    font-size: 14px;
+    top: 54%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #b2bacb;
+    background: url('../../img/common/header/search-icon.png') no-repeat;
+    width: 16px;
+    height: 14px;
+}
+
+/* 二维码 弹框 start */
+.yqx-header .header-qrcode-box .qrcode-back {
+    background: #000;
+    opacity: .7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999999;
+}
+.yqx-header .header-qrcode {
+    background: url('../../img/page/home/qrcode-viewer.png') no-repeat;
+    height: 314px;
+    width: 333px;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 9999999999;
+}
+
+.yqx-header .header-qrcode-box img {
+    width: 157px;
+    position: absolute;
+    height: 156px;
+    left: 57px;
+    top: 19px;
+    border-radius: 5px;
+}
+
+.yqx-header .header-qrcode-box .header-qrcode-text {
+    position: absolute;
+    bottom: 32px;
+    color: #fff;
+    width: 273px;
+    font-size: 14px;
+    text-align: center;
+    padding-right: 60px;
+}
+
+.yqx-header .header-qrcode-box h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.yqx-header .header-qrcode-box h4 {
+    font-size: 12px;
+}
+
+.yqx-header .header-qrcode-box button.qrcode-close {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    right: 0;
+}
+/* 二维码 弹框 end */
+/*------ 入口图标 start ------*/
+.yqx-header .be-circle {
+    height: 40px;
+    width: 40px;
+    background: #9cabb7;
+    border: 1px solid #b2bdc8 ;
+    border-radius: 40px;
+    text-align: center;
+    margin: 0 auto 7px auto;
+    position: relative;
+}
+
+.yqx-header .header-entry:after {
+    border-right: 1px solid #4f586d;
+    height: 8px;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    margin-right: 5px;
+    right: -18px;
+    top: 33px;
+}
+
+.yqx-header .header-entry:hover .business-entry {
+    display: block;
+}
+
+.yqx-header li.header-entry {
+    border: 0;
+    height: 70px;
+}
+
+.yqx-header .business-entry {
+    color: #666;
+    display: none;
+    position: absolute;
+    top: 62px;
+    right: -120px;
+    width: 415px;
+    padding: 15px 25px 0 25px;
+    background: #fff;
+    text-align: left;
+    border: 1px solid #d4d9db;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.05),-1px 1px 3px 1px rgba(0, 0, 0, 0.05);
+}
+
+.yqx-header .business-entry {
+    width: 474px;
+}
+
+.yqx-header .business-entry li {
+    display: inline-block;
+    margin-right: 44px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 13px;
+    position: relative;
+}
+
+.yqx-header .business-entry li a {
+    display: block;
+    color: #666;
+}
+
+.yqx-header .business-entry p {
+    line-height: initial;
+    font-size: 12px;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    white-space: nowrap;
+}
+
+.yqx-header .business-entry ul li {
+    padding-bottom: 13px;
+}
+
+.yqx-header .business-entry ul:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.yqx-header .business-entry ul>li:last-child {
+    margin-right:0;
+}
+
+.yqx-header .be-icon {
+    background: url("../../img/common/header/header-dialog-icons.png") no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 21px;
+}
+
+.be-icon .shop-manage {
+    background-position: -14px 0;
+}
+
+/* 灰色的 start */
+.yqx-header .be-icon.be-insurance {
+    background: url("../../img/common/header/dialog-insurance.png") no-repeat;
+}
+.yqx-header .be-icon.be-home {
+    background-position: 0 0;
+    width: 24px;
+}
+.yqx-header .be-icon.be-shop-manage {
+    background-position: -52px 0;
+    width: 27px;
+}
+
+.yqx-header .be-icon.be-wechat {
+    background-position: -25px 0;
+}
+
+.yqx-header .be-icon.be-epc {
+    height: 25px;
+    background-position: -265px 0;
+}
+
+.yqx-header .be-icon.be-marketing {
+    background-position: -142px 0;
+    width: 23px;
+    height: 18px;
+}
+.yqx-header .be-icon.be-activity {
+    background-position: -190px 0;
+    height: 22px;
+}
+.yqx-header .be-icon.be-app {
+    background-position: -336px 0;
+    height: 23px;
+    width: 19px;
+}
+.yqx-header .be-icon.be-tech {
+    background-position: -166px 0;
+    height: 23px;
+    width: 23px;
+}
+.yqx-header .be-icon.be-service {
+    background-position: -290px 0;
+    height: 21px;
+}
+.yqx-header .be-icon.be-subscription {
+    background-position: -315px 0;
+    width: 22px;
+    height: 20px;
+}
+.yqx-header .be-icon.be-help {
+    background-position: -241px 0;
+    width: 24px;
+}
+.yqx-header .be-icon.be-tqmall {
+    height: 14px;
+    background-position: -79px 0;
+    width: 34px;
+}
+.yqx-header .be-icon.be-report {
+    width: 26px;
+    height: 16px;
+    background-position: -114px 0;
+}
+
+.yqx-header .be-icon.be-setting {
+    background-position: -216px 0;
+    height: 21px;
+}
+/* 灰色 end */
+.yqx-header .business-entry li:hover .be-circle {
+    background: #90af34;
+    border: 0;
+    height: 42px;
+    width: 42px;
+}
+
+.yqx-header .business-entry li:hover>a{
+    color: #90af34;
+}
+
+/* ------- 入口图标 end ------- */
+/*----用户信息----*/
+
+.yqx-header .user-icon {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    vertical-align: sub;
+    background: url('../../img/common/header/common-icon.png');
+    margin-right: 3px;
+}
+
+.yqx-header .user-icon.person-icon {
+    background-position: 16px 0;
+    position: absolute;
+    bottom: 24px;
+    left: -5px
+}
+
+.yqx-header .nav-user-box {
+    height: 70px;
+    position: relative;
+    margin-left: 5px;
+}
+
+.yqx-header .nav-user-box>img {
+    position: absolute;
+    left: -25px;
+    bottom: 17px;
+}
+
+.yqx-header .li-user-wrapper:hover .user-info {
+    display: block;
+}
+
+.yqx-header .nav-user-box .user-account {
+    height: 100%;
+    line-height: 79px;
+    color: #eee;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 10px;
+    max-width: 78px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+}
+
+.yqx-header .user-info {
+    width: 200px;
+    display: none;
+    position: absolute;
+    border-radius: 2px;
+    right: 0;
+    top: 62px;
+    background: #eef1fa;
+    text-align: left;
+    border: 1px solid #e3e8ea;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.05),-1px 1px 3px 1px rgba(0, 0, 0, 0.05);
+}
+
+.yqx-header .info-show {
+    padding: 12px 9px 10px 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.yqx-header .info-show .user-name {
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: "Microsoft YaHei", Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-width: 82px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.color-333 {
+    color: #333;
+}
+
+.yqx-header .tech-icon {
+    background: url("../../img/common/header/v-icons.png") no-repeat;
+    height: 12px;
+    width: 13px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: -2px;
+}
+
+.yqx-header .verified-icon {
+    background-position: 0 0;
+}
+
+.yqx-header .unverified-icon {
+    background-position: -16px 0;
+}
+
+.yqx-header .angle-top{
+    border: 8px solid #eef1fa;
+    position: absolute;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+.yqx-header .business-entry .angle-top {
+    border-bottom-color: #fff;
+}
+
+.yqx-header .business-entry .angle-top {
+    top: -16px;
+    right: 30%;
+}
+
+.yqx-header .user-info .angle-top {
+    right: 44px;
+    top: -16px;
+}
+
+.yqx-header .user-info .links-box {
+    background: #fff;
+}
+.yqx-header .links-box>a:first-child {
+    height: 30px;
+    line-height: 30px;
+}
+
+.yqx-header .links-box>a {
+    padding-left: 9px;
+    height: 25px;
+    line-height: 25px;
+    color: #333;
+    display: block;
+    text-align: left;
+}
+
+.yqx-header .links-box>a:hover {
+    background: #eef1fa;
+}
+/**---搜索框---*/
+.yqx-header .input {
+    width: 139px; height: 30px; line-height: 74px; background: url("../../img/common/base/ll.jpg") no-repeat left 0; border: none; outline: none; margin: 0; padding: 0 0 0 15px; display: block; float: left; }
+
+/* 菜单图标 */
+.yqx-header .tip-new{position: absolute; left: 55px; top: 13px; width: 32px; height: 16px; background: url("../../img/common/base/tip_new.png") no-repeat; }
+/*------- 公共 header end--------*/

@@ -1,0 +1,72 @@
+/* 淘汽缺件配件样式 start */
+	.qxy_tqmall_list{}
+	.qxy_tqmall_list table{width: 100%;font-size: 14px;border: 1px solid #cdcdcd;}
+	.qxy_tqmall_list table tbody{background: #f9f9f9;padding: 0 10px;}
+	.qxy_tqmall_list th{height: 35px;line-height:35px;background: #efefef;border-bottom: 1px solid #cdcdcd;font-weight: bold;text-align:left;}
+	.qxy_tqmall_list th.col2{width:400px;}
+	.qxy_tqmall_list td{padding:10px 0 5px 0;vertical-align: top;font-size: 12px;border-bottom: 1px dotted #cdcdcd;}
+	.qxy_tqmall_list td p{margin-top:10px;line-height:20px;}
+	.qxy_tqmall_list span.red_bag{display: inline-block;height: 24px;line-height: 24px;text-align: center;color: #fff;background: #f53b43;border-radius: 3px;padding: 0 10px;}
+	.qxy_tqmall_list td img{margin: 5px 10px 10px 10px;}
+	.qxy_tqmall_list .buy{display: inline-block;height: 24px;line-height: 24px;text-align: center;color: #fff;background: #d01113;border: 1px solid #b60404;border-radius: 2px;padding: 0 10px;}
+	.qxy_tqmall_list .buy:hover{color: #000;}
+	.qxy_tqmall_list .buy_disabled{display: inline-block;height: 24px;line-height: 24px;text-align: center;background: #b9b9b9;border: 1px solid #999;color: #fff;cursor: not-allowed;padding: 0 10px;border-radius: 2px;}
+	.qxy_tqmall_list tr:last-child td{border-bottom: none;}
+	.qxy_tqmall_list span.delete{text-decoration:line-through;}
+	.qxy_tqmall_list span.finished{color:#FFB90F;}
+	.qxy_tqmall_list .whiteBag{display: inline-block;height: 24px;line-height: 24px;text-align: center;color: #000;background: #ffffff;border: 1px solid #c0c0c0;border-radius: 2px;padding: 0 10px;}
+	.qxy_tqmall_list .whiteBag:hover{color: #ff0000;}
+	.qxy_tqmall_list .whiteBag_disabled{display: inline-block;height: 24px;line-height: 24px;text-align: center;background: #b9b9b9;border: 1px solid #999;color: #fff;cursor: not-allowed;padding: 0 10px;border-radius: 2px;}
+
+/* 淘汽缺件配件样式 end */
+	.order_list_toolbars {margin-bottom:20px;}
+	.order_list_toolbars a,
+	.order_list_toolbars span{display:inline-block; text-align:center; line-height:25px; padding:0px; }
+	.order_list_toolbars a{width:85px;}
+	.order_list_toolbars a b{font-weight:bold;}
+	.order_list_toolbars a.current{color: #4bc8f4;font-weight: bold;}
+	.qxy_tqmall_mb10px {margin-bottom:10px;}
+	.vabottom {vertical-align: bottom;}
+	.m015 {margin:0px 15px;}
+	.search_btn {margin:0;background:#86ba4a;color:#ffffff;}
+	.search_tqmall_btn {margin:0;background:#f89b37;color:#ffffff;}
+
+/* 淘汽采购订单部分样式 start */
+.qxy_tqmall_list td.p_right,
+.qxy_tqmall_list th.p_right{text-align: right;padding-right: 8px;}
+.list_bottom td{padding-bottom: 10px;}
+.list_bottom .list_count {vertical-align: middle;padding-left: 10px;}
+.list_bottom .list_count em{font-weight: 700;font-style: normal;padding:0 8px;color:#9fc527;}
+/* 淘汽采购订单部分样式 end */
+
+
+/* 一键入库弹框的全部样式 start*/
+#batch_in_warehouse{width:700px;}
+#batch_in_warehouse .btn_group{height: 56px; background: #f5f2e6; border-bottom: 1px solid #dadada; position: relative; text-align: center;}
+#batch_in_warehouse .btn_group a{position: absolute; width: 72px; height: 24px; line-height: 24px; font-size: 13px; border: 1px solid #c1c1c1; border-radius: 2px; cursor: pointer; }
+#batch_in_warehouse .btn_group a.cancel{left: 15px; top: 15px; color: #666666; background: #f8f8f8; }
+#batch_in_warehouse .btn_group a:hover{box-shadow: 0 0 8px #ccc;}
+#batch_in_warehouse .btn_group a.save{right: 15px; top: 15px; color: #ffffff; background: #8fb027; border: 1px solid #8fb027; }
+#batch_in_warehouse .btn_group span{line-height: 56px; font-size: 18px; color: #535353; font-weight: bold; }
+
+.batch_list {height:400px;padding: 10px;overflow-y: scroll;margin-bottom: 10px;}
+.batch_list li{border: 1px solid #ddd;margin-bottom: 10px;background: #f4f4f4;}
+.batch_list li:hover{box-shadow: 0 0 4px #ccc;}
+.batch_list .cell{float: left;height:100px;padding: 8px;}
+.batch_list .goods_img{width:84px;text-align: center;line-height: 100px;background: #fff;}
+.batch_list .goods_img img{vertical-align: middle;width: 80px;height:80px;}
+.batch_list .goods_info{width: 350px;background: #fff;}
+.batch_list .goods_info p{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.batch_list .txt1{font-size: 14px;font-weight: 700;margin-bottom: 8px;}
+.batch_list .txt2{line-height: 20px;}
+
+.batch_list .goods_opt{width: 178px;border-left:1px solid #ddd;padding-top: 20px;height:88px;}
+.batch_list .goods_opt label{display: inline-block;height: 32px;line-height: 32px;width: 50px;}
+.batch_list .goods_opt label i{color: red;font-style: normal;margin-left: 6px;}
+.batch_list .goods_opt p{margin-bottom: 10px;}
+.batch_list .goods_opt p input{width:100px;background: #fff;border: 1px solid #ddd;border-radius: 4px;line-height: 30px;padding: 0 8px;}
+.batch_list .goods_opt p input:focus{border:1px solid #aaa;}
+/*.batch_list .txt2 b{margin-right: 8px;}*/
+
+/* 一键入库弹框的全部样式 end*/
+

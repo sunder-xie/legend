@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.inventory.InventoryRecordDao">
+
+    <resultMap id = "BaseResultMap" type = "InventoryRecord" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "record_sn" property = "recordSn" />
+        <result column = "goods_count" property = "goodsCount" />
+        <result column = "operator_name" property = "operatorName" />
+        <result column = "status" property = "status" />
+        <result column = "inventory_checker_name" property = "inventoryCheckerName" />
+        <result column = "inventory_checker_id" property = "inventoryCheckerId" />
+        <result column = "inventory_checker_id" property = "inventoryCheckerId" />
+        <result column="inventory_remark" property="inventoryRemark"/>
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            record_sn as recordSn,
+            goods_count as goodsCount,
+            operator_name as operatorName,
+            status as status,
+            inventory_checker_name as inventoryCheckerName,
+            inventory_checker_id as inventoryCheckerId,
+            inventory_remark as inventoryRemark,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "recordSn != null">
+                    and record_sn = #{recordSn}
+                </if>
+                <if test = "goodsCount != null">
+                    and goods_count = #{goodsCount}
+                </if>
+                <if test = "operatorName != null">
+                    and operator_name = #{operatorName}
+                </if>
+                <if test = "status != null">
+                    and status = #{status}
+                </if>
+                <if test = "inventoryCheckerName != null">
+                    and inventory_checker_name = #{inventoryCheckerName}
+                </if>
+                <if test = "inventoryCheckerId != null">
+                    and inventory_checker_id = #{inventoryCheckerId}
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+                    and gmt_create >= #{startTime}
+                     ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+                    and gmt_create <= #{endTime}
+                ]]>
+                </if>
+                <if test = "recordSnLike != null">
+                    and record_sn like CONCAT('%',#{recordSnLike},'%')
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "recordSn != null">
+                    record_sn = #{recordSn},
+                </if>
+                <if test = "goodsCount != null">
+                    goods_count = #{goodsCount},
+                </if>
+                <if test = "operatorName != null">
+                    operator_name = #{operatorName},
+                </if>
+                <if test = "status != null">
+                    status = #{status},
+                </if>
+                <if test = "inventoryCheckerName != null">
+                    inventory_checker_name = #{inventoryCheckerName},
+                </if>
+                <if test = "inventoryCheckerId != null">
+                    inventory_checker_id = #{inventoryCheckerId},
+                </if>
+                <if test = "inventoryRemark != null">
+                    inventory_remark = #{inventoryRemark},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_inventory_record
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_inventory_record
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_inventory_record
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_inventory_record
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_inventory_record
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_inventory_record
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_inventory_record
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_inventory_record (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "recordSn != null">
+                record_sn,
+            </if>
+            <if test = "goodsCount != null">
+                goods_count,
+            </if>
+            <if test = "operatorName != null">
+                operator_name,
+            </if>
+            <if test = "status != null">
+                status,
+            </if>
+            <if test = "inventoryCheckerName != null">
+                inventory_checker_name,
+            </if>
+            <if test = "inventoryCheckerId != null">
+                inventory_checker_id,
+            </if>
+            <if test = "inventoryRemark != null">
+                inventory_remark,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "recordSn != null">
+                #{recordSn},
+            </if>
+            <if test = "goodsCount != null">
+                #{goodsCount},
+            </if>
+            <if test = "operatorName != null">
+                #{operatorName},
+            </if>
+            <if test = "status != null">
+                #{status},
+            </if>
+            <if test = "inventoryCheckerName != null">
+                #{inventoryCheckerName},
+            </if>
+            <if test = "inventoryCheckerId != null">
+                #{inventoryCheckerId},
+            </if>
+            <if test = "inventoryRemark != null">
+                #{inventoryRemark},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_inventory_record
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <!-- 分页查询库存盘点记录  包含:按照配件名称查询-->
+    <select id="selectInventoryPage" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM
+        legend_inventory_record
+        WHERE
+        is_deleted = 'N'
+        <if test="shopId != null">
+            AND shop_id = #{shopId}
+        </if>
+        <if test="status != null">
+            AND status = #{status}
+        </if>
+        <if test="startTime != null">
+            <![CDATA[
+                AND gmt_create >= #{startTime}
+            ]]>
+        </if>
+        <if test="endTime != null">
+            <![CDATA[
+                AND gmt_create <= #{endTime}
+            ]]>
+        </if>
+        <if test="recordSnLike != null">
+            and record_sn like CONCAT('%',#{recordSnLike},'%')
+        </if>
+        <if test="goodsNameLike != null">
+            <![CDATA[
+                AND id IN (
+                SELECT
+                    DISTINCT record_id
+                FROM
+                    legend_inventory_stock
+                WHERE
+                    goods_name LIKE CONCAT('%',#{goodsNameLike},'%')
+                )
+            ]]>
+        </if>
+
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 分页查询库存盘点记录总数 -->
+    <select id="selectCountInventoryPage" resultType="java.lang.Integer">
+        SELECT
+        COUNT(id)
+        FROM
+        legend_inventory_record
+        WHERE
+        is_deleted = 'N'
+        <if test="shopId != null">
+            AND shop_id = #{shopId}
+        </if>
+        <if test="status != null">
+            AND status = #{status}
+        </if>
+        <if test="startTime != null">
+            <![CDATA[
+                AND gmt_create >= #{startTime}
+            ]]>
+        </if>
+        <if test="endTime != null">
+            <![CDATA[
+                AND gmt_create <= #{endTime}
+            ]]>
+        </if>
+        <if test="recordSnLike != null">
+            and record_sn like CONCAT('%',#{recordSnLike},'%')
+        </if>
+        <if test="goodsNameLike != null">
+            <![CDATA[
+                AND id IN (
+                SELECT
+                    DISTINCT record_id
+                FROM
+                    legend_inventory_stock
+                WHERE
+                    goods_name LIKE CONCAT('%',#{goodsNameLike},'%')
+                )
+            ]]>
+        </if>
+    </select>
+
+
+</mapper> 

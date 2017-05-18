@@ -1,0 +1,24 @@
+/*
+* create by zmx 2017/1/6
+* App授权设置
+*/
+
+.form-box{
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.table-con{
+    margin-top: 10px;
+    border: 1px solid #cacaca;
+    background: #fff;
+}
+.yqx-table tr td.p-left,.yqx-table tr th.p-left{
+    padding-left: 20px;
+}
+.back{
+    margin-top: 10px;
+}

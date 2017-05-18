@@ -1,0 +1,62 @@
+/*
+ * by zmx 2016/08/18
+ * 生产线编辑
+*/
+
+.title{
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Microsoft Yahei", "微软雅黑";
+}
+.title span{
+    font-weight: normal;
+}
+.content{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding:0 10px 10px 10px;
+}
+.content .form-label{
+    width: 60px;
+    text-align: right;
+}
+.content .name-width{
+    width: 435px;
+}
+.content .type-width{
+    width: 163px;
+}
+.content .remarks-width{
+    width: 670px;
+}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{
+    background: #f9f9f9;
+}
+.color-green{
+    color: #a0c338;
+}
+.yqx-table td a{
+    text-decoration: underline;
+}
+.yqx-table td input.time-hour{
+    border: 1px solid #d2d2d2;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    border-radius: 3px;
+}
+.btn-box{
+    padding: 10px 0;
+}
+
+/*查看图片样式*/
+.card-photo{
+    border: 1px solid #dcdcdc;
+    margin: 10px;
+}
+.download-box{
+    text-align: center;
+}

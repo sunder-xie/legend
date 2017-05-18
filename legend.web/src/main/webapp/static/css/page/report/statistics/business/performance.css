@@ -1,0 +1,76 @@
+/**
+* create by zmx 2016/12/13
+* 员工绩效
+**/
+.performance-title{
+    font-size: 14px;
+    position: relative;
+    bottom: initial;
+}
+.performance-title i {
+    display: inline-block;
+    height: 14px;
+    width: 3px;
+    background: #9fc527;
+    margin-right: 10px;
+}
+.performance-table{
+    padding: 0px 10px 10px 10px;
+}
+.performance-table table tr td.line{
+    border-left: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+}
+.performance-table table tr td.line1{
+    border-right: 1px solid #cacaca;
+}
+.yqx-table td.bold{
+    font-weight: bold;
+}
+.red{
+    color: #fd461e;
+}
+.red span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: #fd461e;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.green{
+    color: #5f7b08;
+}
+.green span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: #5f7b08;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.blank{
+    border: none;
+    height: 5px;
+}
+.yqx-table .question-icon{
+    margin-left: 0;
+}
+.content .yqx-table{
+    border: none;
+}
+.yqx-table .bg-color td{
+    background: #e2e7d0;
+}
+.yqx-table tr>td.blank{
+    padding: 4px;
+}
+.m-top{
+    margin-top: 20px;
+}
+.weigth{
+    font-weight: bold;
+}

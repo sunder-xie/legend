@@ -1,0 +1,90 @@
+
+.bx_cont {
+    padding: 5px 0 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.bx_cont table {
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.bx_cont table th, .bx_cont table td {
+    padding: 10px 14px;
+    text-align: center;
+    color: #333333;
+    border: 1px solid #cdcdcd;
+}
+.bx_cont table td.content{
+    width: 390px;
+}
+.bx_cont table td.show_dtl a{
+    text-decoration: underline;
+    color: #f2942e;
+    cursor: pointer;
+}
+.bx_cont table th {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 700;
+    background-color: #DDD;
+    border: 1px #ccc solid;
+}
+.account_msg{
+    float: right;
+    line-height: 54px;
+}
+.account_msg b{
+    color: #f2942e;
+    font-size: 22px;
+    vertical-align: middle;
+}
+.qxy_orange_btn{
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+.content_title_box{float: left; }
+.content_title p{font-size:24px; font-family:"黑体";}
+.content_title p.word_en{font-size:9px; color:#aeaeae; font-family:Arial; margin-top: 5px;}
+.content_title .qxy_red_btn{float:right;}
+
+.field_box a{
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+.field_box .pick_btn{
+    width: 80px;
+    background: #79a000;
+}
+
+.total_amount{
+    padding-right: 20px;
+}
+
+.qxy_search .form_row .pay_all_btn{
+    height: 36px;
+    width: 80px;
+    display: inline-block;
+    background: #f77c7e;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 24px;
+    vertical-align: middle;
+    cursor:pointer;
+    margin-left: 10PX;
+}
+
+.pay_input{
+    width: 157px;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "legend",
+  "version": "1.0.0",
+  "description": "''",
+  "author": "sky",
+  "license": "ISC",
+  "scripts": {
+    "prebuild": "echo '前端编译环境构建中...' && npm install sass -g && npm rebuild node-sass && npm install --registry=https://registry.npm.taobao.org",
+    "build": "node node_modules/gulp/bin/gulp build",
+    "postbuild": "echo '编译完成！'",
+    "dev": "node node_modules/gulp/bin/gulp"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "colors": "^1.1.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.6",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-minify": "0.0.12",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "lazypipe": "^1.0.1",
+    "underscore": "^1.8.3"
+  }
+}

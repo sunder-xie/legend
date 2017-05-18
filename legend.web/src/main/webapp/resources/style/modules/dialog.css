@@ -1,0 +1,46 @@
+.qxy_dialog{
+	padding:25px 10px 10px;
+	display: none;
+}
+.qxy_dialog .qxy_form .form_item .label_box{
+	width:100px;
+}
+/*弹窗的表单样式开始*/
+.qxy_dialog .qxy_form .form_item{
+	margin-bottom: 0px; 
+}
+.qxy_dialog .qxy_form .form_item .label_box{
+	height: 30px;
+	width: 75px;
+	line-height: 30px;
+	text-indent: 5px;
+}
+.qxy_dialog .qxy_form .form_row{
+	margin-bottom: 0;
+}
+.qxy_dialog .qxy_input,
+.qxy_dialog .qxy_select {
+    height: 30px;
+    line-height: 30px;
+}
+.qxy_dialog .qxy_form .form_item .field_box{
+	line-height: 30px;
+	margin-bottom: 5px;
+}
+.qxy_dialog .qxy_add_icon,
+.qxy_dialog .qxy_del_icon{
+	height: 30px;
+	line-height: 30px;
+}
+
+.qxy_dialog .qxy_err_msg .qxy_err_msg_inner{
+	line-height: 26px;
+}
+.diaLogAuto{
+	overflow: auto;
+}
+.qxy_dialog .chosen-single{
+	height:30px;
+	line-height:30px;
+}
+/*弹窗的表单样式结束*/

@@ -1,0 +1,115 @@
+.main {
+    float: right;
+    width: 828px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+
+.mb_40 {
+    margin-bottom: 40px;
+}
+.mr_10 {
+    margin-right: 10px;
+}
+.ml_10 {
+    margin-left: 10px;
+}
+.highlight_y {
+    font-size: 14px;
+    color: #ff7800;
+}
+.highlight_r {
+    font-size: 18px;
+    color: #d71001;
+}
+
+.headline {
+    padding: 0 10px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #535353;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.content {
+    padding: 20px 10px;
+}
+
+.row {
+    line-height: 1.4;
+}
+
+.color1:before, .color2:before, .color3:before, .color4:before,.color13:before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+/* 天猫 */
+.color1:before {
+    background: #ffa330;
+}
+/* 平安保养 */
+.color2:before {
+    background: #9ec702;
+}
+/* 平安补漆 */
+.color3:before {
+    background: #fbd5a9;
+}
+/* 淘汽活动 */
+.color4:before {
+    background: #d7e5ac;
+}
+
+/* 淘汽活动 */
+.color13:before {
+    background: #9ec702;
+}
+
+.input {
+    line-height: 25px;
+    text-indent: 10px;
+    background: #f8f8f8;
+    border: 1px solid #bfbfbf;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.btn {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: 10px;
+    padding: 0 20px;
+    line-height: 27px;
+    font-size: 12px;
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.btn:last-of-type {
+    margin-right: 0;
+}
+.btn_primary {
+    background: #8fb027;
+}
+
+.note {
+    color: #999;
+}
+.note a {
+    color: #159;
+}
+.bx_cont{float: left;}
+.charts {
+    float: right;
+    width: 340px;
+    height: 255px;
+}

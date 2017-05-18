@@ -1,0 +1,117 @@
+/**
+* 出库退货
+* zmx 2016-08-29
+*/
+
+.detail-form-box {
+    border: 1px solid #cacaca;
+    background: #f7f7f7;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.detail-form-box .form-label {
+    width: 105px;
+    line-height: 36px;
+}
+
+.detail-form-box .form-item {
+    width: 150px;
+}
+
+.detail-form-box .item-width {
+    width: 400px;
+}
+
+.detail-form-box .show-grid {
+    margin: 0;
+}
+
+.list-box {
+    border: 1px solid #cacaca;
+    background: #fff;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.list-title {
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.list-box .yqx-table {
+    border-top: 1px solid #cacaca;
+    margin-bottom: 10px;
+}
+
+.remarks {
+    margin-bottom: 10px;
+}
+
+.remarks .form-label {
+    width: 40px;
+}
+
+.remarks .form-item {
+    width: 750px;
+}
+
+.btn-box {
+    padding: 15px 0;
+    border-top: 1px solid #cacaca;
+}
+
+.total {
+    height: 30px;
+    line-height: 30px;
+}
+
+.text-r {
+    text-align: right;
+}
+
+.color-blue {
+    color: #2c8cfa;
+}
+
+.color-red {
+    color: #f55d5e;
+}
+
+.color-grey {
+    color: #333;
+}
+
+.form-max-text {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.td-position {
+    position: relative;
+}
+
+.tc-1 {
+    width: 80px;
+}
+
+.tc-2 {
+    width: 180px;
+}
+
+.tc-3 {
+    width: 110px;
+}
+
+.tc-5, .tc-6 {
+    width: 70px;
+}
+
+.tc-7 {
+    width: 50px;
+}

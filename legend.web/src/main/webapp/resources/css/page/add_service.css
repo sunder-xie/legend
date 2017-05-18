@@ -1,0 +1,138 @@
+.service-set li{
+    width: 50%;
+}
+.data-set{
+    padding: 0 22px;
+}
+.data-set li{
+    float: left;
+}
+.form-control{
+    width: 345px;
+    line-height: 38px;
+    padding-left:10px;
+}
+li.num {
+    position:relative;
+}
+.num .unit {
+    position:absolute;
+    left:79px;
+    top:0;
+    display: block;
+    width:26px;
+    text-align: center;
+    font-size:12px;
+}
+.num .goodsNumber {
+    padding-right:30px;
+}
+.service-fee{
+    width: 245px;
+}
+.service-fee-unit{
+    width: 100px;
+    margin-left: 20px;
+}
+.part-code{
+    width: 98px;
+}
+.part-info{
+    margin-top: 10px;
+}
+.part-name{
+    width: 276px;
+}
+.part-number{
+    width:145px;
+}
+.part-price{
+    width:88px;
+}
+.part-amount{
+    position:relative;
+    width: 92px;
+}
+li.part-amount .unit {
+    position:absolute;
+    left:77px;
+    top:26px;
+    display: block;
+    width:26px;
+    text-align: center;
+}
+.form-group .form-control.goods_num_input {
+    padding-right:30px;
+    width:62px;
+}
+
+.part-money{
+    width: 101px;
+}
+.part-set{
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.part-set li{
+    margin-right: 20px;
+}
+.part-set .form-group label{
+    line-height: 1;
+    height: 20px;
+}
+.part-set .form-group span {
+    font-weight: normal;
+    font-size:12px;
+}
+
+
+.part-set-container{
+    background: #f9f9f9;
+    padding: 10px 0;
+}
+.part-set li button{
+    margin: 5px 0 0 0;
+}
+.price-set {
+    margin-bottom: 20px;
+}
+.price-set li{
+    float: left;
+}
+.price-set li label{
+    width: 89px;
+    display: inline-block;
+    text-align: center;
+}
+.price-service{
+    width: 170px;
+}
+.price-part{
+    width: 170px;
+}
+.price-sum{
+    width: 205px;
+}
+.price-sum-unit{
+    width: 150px;
+}
+.add-icon{
+    background: url('../../images/sz1.png') no-repeat;
+    width: 29px;
+    height: 29px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.delete-icon{
+    background: url('../../images/sz.png') no-repeat;
+    width: 29px;
+    height: 29px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.part-set-container .part-set .mar-r-0{
+    margin-right: 0;
+}
+.part-set-container .part-label li{
+    padding: 0;
+}

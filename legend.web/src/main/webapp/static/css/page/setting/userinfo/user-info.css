@@ -1,0 +1,122 @@
+/*
+* create by zmx 2017/1/4
+* 个人信息
+*/
+
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 10px;
+}
+.company-info{
+    height: 110px;
+    background: #eee;
+}
+.company-pic{
+    width: 110px;
+    height: 110px;
+    background: #607b0a;
+    margin-right: 20px;
+    text-align: center;
+    padding-top: 30px;
+}
+.company-pic p{
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+.company-box{
+    width: 220px;
+    height: 110px;
+    margin-right: 20px;
+    padding-top: 8px;
+}
+.company-box p,.shop-box p,.shop-box1 p{
+    padding-top: 3px;
+    line-height: 28px;
+    color: #666;
+}
+.company-box h3{
+    line-height: 29px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.company-box h3 span{
+    line-height: 29px;
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+}
+.company-box p span{
+    color: #333;
+}
+.shop-box{
+    padding-top: 8px;
+    width: 160px;
+    height: 110px;
+}
+.shop-box1{
+    padding-top: 8px;
+    width: 270px;
+    height: 110px;
+}
+.shop-box h3,.shop-box1 h3{
+    line-height: 29px;
+    color: #333;
+    font-size: 14px;
+}
+.shop-box a,.shop-box1 a{
+    padding-top: 3px;
+    line-height: 28px;
+    color: #607b0a;
+}
+.shop-box a img,.shop-box1 a img{
+    vertical-align: middle;
+}
+
+.form-box1 .show-grid,.form-box2 .show-grid{
+    margin-top:20px;
+}
+.form-box1 .form-label{
+    width: 85px;
+    text-align: right;
+}
+.form-box1 .form-item{
+    width: 140px;
+}
+.form-box1 .w-700{
+    width: 700px;
+}
+.app-roles li{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0 12px;
+    line-height: 30px;
+    background: #eee;
+    border: 1px solid #cacaca;
+    margin-top: 5px;
+}
+
+.btn-box{
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #cacaca;
+}
+.form-box2 a{
+    color: #607b0a;
+}
+.form-box2 a img {
+    vertical-align: middle;
+}
+
+.shop-address{
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.w-290{
+    width: 285px;
+}
+

@@ -1,0 +1,25 @@
+/*
+* create by zmx 2017/1/5
+* 人员管理
+*/
+
+.form-box{
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.w-200{
+    width: 200px;
+}
+.w-150{
+    width: 150px;
+}
+.yqx-table tr td.p-left,.yqx-table tr th.p-left{
+    padding-left: 20px;
+}
+.table-con{
+    border: 1px solid #cacaca;
+}

@@ -1,0 +1,64 @@
+i {
+    font-style: normal;
+}
+
+.measure-unit {
+    display: inline-block;
+    margin-left: 7px;
+    white-space: nowrap;
+}
+.wrapper-main {
+    width: 823px;
+}
+
+.goods-price {
+    text-align: right;
+}
+
+
+h1.title {
+    position: relative;
+    margin: 10px 0 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    font-family: MicrosoftYahei, sans-serif;
+}
+
+.wrapper-main .hide {
+    display: none !important;
+}
+
+.list-box {
+    border: 1px solid #d2d2d2;
+    border-top: 0;
+    background: #fff;
+}
+
+.yqx-table {
+    border-top: 1px solid #cacaca;
+}
+
+.sub-title {
+    margin: 18px 0;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: MicrosoftYahei, sans-serif;
+}
+
+.declare-info {
+    padding: 10px 0 0 10px;
+    line-height: 18px;
+}
+
+.yqx-btn {
+    padding: 0;
+    width: 62px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+}
+
+.yqx-input {
+    border-radius: 2px;
+}

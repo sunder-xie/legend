@@ -1,0 +1,51 @@
+/*
+* create by zmx 2017/1/5
+* 新增费用资料
+*/
+
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 0 10px;
+}
+.title-box{
+    height: 45px;
+}
+.title{
+    width: 300px;
+    line-height: 45px;
+    font-size: 14px;
+}
+.title:before {
+    content:"";
+    display: inline-block;
+    width: 2px;
+    height: 14px;
+    background: #999;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.number{
+    height: 23px;
+    line-height: 23px;
+    margin-top: 10px;
+    padding: 0 10px;
+    background: #f9f9f9;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+}
+.number input{
+    vertical-align: baseline;
+    width:120px;
+}
+.form-box .form-label{
+    width:100px;
+    text-align: right;
+}
+.form-box .form-item{
+    width: 285px;
+}
+.btn-box{
+    border-top: 1px solid #cacaca;
+    padding: 10px;
+}

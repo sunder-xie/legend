@@ -1,0 +1,38 @@
+/**
+ * 设置模块公共样式
+ * zmx 2016-11-29
+ */
+
+/**
+ * 右侧内容区样式 start
+ */
+.order-right{width:823px;}
+/* 右侧内容区样式 end*/
+
+/*
+ * 表单主内容区 start
+ */
+.order-head{margin-bottom: 10px;}
+/* modify by sky 2016-04-24 .headline */
+.order-head .headline{line-height: 45px;}
+.yqx-table > tbody > tr > td.text-r, .yqx-table > thead > tr > th.text-r {
+    text-align: right;
+}
+.yqx-table > tbody > tr > td.text-l, .yqx-table > thead > tr > th.text-l {
+    text-align: left;
+}
+.yqx-table > tbody > tr > td.text-c, .yqx-table > thead > tr > th.text-c {
+    text-align: center;
+}
+.yqx-table td {
+    line-height: 25px;
+}
+.yqx-table .ellipsis-1 {
+    height: auto;
+    line-height: 20px;
+}
+.yqx-table .ellipsis-2 {
+    max-height: 40px;
+    line-height: 20px;
+    white-space: normal;
+}

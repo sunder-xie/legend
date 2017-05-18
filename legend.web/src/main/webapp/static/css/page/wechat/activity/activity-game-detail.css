@@ -1,0 +1,237 @@
+/*全局定义start*/
+.order-right{
+    width:823px;
+}
+.order-body {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fafafa;
+}
+.body-content{
+    width: 90%;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+i{
+    font-style: normal;
+}
+.order-head .headline {
+    line-height: 45px;
+    font-size: 16px;
+}
+.yqx-btn.disable {
+    border: 1px solid #d2d2d2;
+    background: #ddd;
+    color: #666;
+}
+.form-item>.fa{
+    line-height: 28px;
+}
+
+.input-long{
+    width: 360px;
+}
+.input-middle{
+    width: 170px;
+    padding-right: 36px;
+}
+.input-short{
+    width: 100px;
+    padding-right: 36px;
+}
+.time-select{
+    width: 170px;
+}
+.game-detail-icon{
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../../../../img/page/wechat/game-detail.png') no-repeat;
+}
+.marL10{
+    margin-left: 10px;
+}
+/*全局定义start*/
+
+/*顶部标题栏start*/
+.operate{
+    line-height: 45px;
+}
+.operate > a, #view-checking{
+    display: inline-block;
+    line-height: 30px;
+    padding: 0px 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #666;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+#manageCoupon{
+    width: 12px;
+    height: 16px;
+    margin-right: 6px;
+    background-position: -19px center;
+}
+#addNew {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    background-position: -31px center;
+}
+/*顶部标题栏end*/
+aside{
+    padding:15px 10px;
+    width: 10%;
+}
+aside > h2{
+    font-size: 14px;
+    font-family: "Microsoft YaHei","Hiragino Sans GB",Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+}
+/*表单区域 start*/
+.choose-box{
+    display: inline-block;
+    border-right:  1px dashed #ddd;
+    width: 64%;
+    margin: 20px 0 0 10px;
+    vertical-align: middle
+}
+fieldset+fieldset{
+    margin-top: 14px;
+}
+.outer-fieldset-title{
+    display: inline-block;
+    margin-right: 4px;
+    text-align: right;
+    width: 86px;
+}
+#view-checking{
+    background-color: #fafafa;
+    margin-left: 108px;
+    cursor: pointer;
+}
+#setPrize{
+    vertical-align: top;
+    margin-top: 8px;
+    display: inline-block;
+}
+.scroll-wrapper{
+    width: 360px;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+}
+.check-box-text{
+    vertical-align: middle;
+    margin-left: 6px;
+}
+.prize-item{
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+.prize-item:nth-last-of-type(1){
+    border:none;
+}
+.prize-item>h3 {
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+}
+.content-footer{
+    margin:20px 20px 0;
+    padding-top: 16px;
+    line-height: 30px;
+    border-top: 1px solid #ddd;
+}
+.js-publish{
+    margin-left: 88px;
+}
+
+/*表单区域 end*/
+
+/*提示 start*/
+
+.tip-box{
+    display: inline-block;
+    vertical-align: middle
+}
+.tip-img{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: 0 6px;
+    vertical-align: -5px;
+}
+.tip-title{
+    margin-bottom: 8px;
+}
+.tip-item{
+    margin-left: 32px;
+    line-height: 30px;
+}
+.tip-item > strong{
+    font-weight: bold;
+}
+
+/*提示 end*/
+
+/*弹窗样式 start*/
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.bounce-content{
+    padding: 10px 20px;
+}
+.bounce-foot{
+    text-align: center;
+    margin: 10px 0;
+}
+.preview-foot{
+    margin: 0 !important;
+}
+#qrcodeView{
+    text-align: center;
+}
+.bounce-item-content{
+    padding: 16px;
+}
+.table-bounce-content{
+    padding: 20px 28px;
+}
+.bounce-content p {
+    padding: 10px;
+    text-align: center;
+}
+table{
+    border: 1px solid #ddd;
+    display: table;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    line-height: 30px;
+    display: table-cell;
+    vertical-align:middle;
+    padding: 0 30px;
+}
+.td-left {
+    padding: 0 15px;
+    width: 60px;
+    line-height: 20px;
+    white-space: pre-line;
+}
+/*弹窗样式 end*/

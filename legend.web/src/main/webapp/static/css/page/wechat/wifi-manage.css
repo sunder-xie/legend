@@ -1,0 +1,100 @@
+.order-head h1.headline {
+    font-size: 16px;
+    margin-top: 8px;
+    line-height: initial;
+    position: relative;
+}
+
+.order-body {
+    height: 248px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0 7px;
+}
+
+.wifi-icon {
+    height: 42px;
+    width: 42px;
+    border: 1px solid #ddd;
+    border-radius: 21px;
+    margin-right: 8px;
+}
+
+.wifi-icon, .wifi-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wifi-text p {
+    line-height: 24px;
+    color: #333;
+}
+
+.order-body .top {
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #999;
+    vertical-align: middle;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+i.fieldset-title {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+    margin-right: 14px;
+    color: #666;
+    vertical-align: middle;
+    font-style: normal;
+}
+
+.yqx-input {
+    width: 210px;
+    height: 30px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.yqx-btn-3 {
+    border: 1px solid #7fa700;
+    background: #90af34;
+    color: #fff;
+}
+
+.yqx-btn-default {
+    background: #f9f9f9;
+    border-color: #d2d2d2;
+    color: #333;
+    font-size: 14px;
+}
+
+.form {
+    margin-top: 20px;
+}
+.order-head .help {
+    cursor: pointer;
+    float: right;
+    padding: 0 14px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+i {
+    font-style: normal;
+}
+.yqx-btn i.question {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width:  15px;
+    vertical-align: sub;
+}

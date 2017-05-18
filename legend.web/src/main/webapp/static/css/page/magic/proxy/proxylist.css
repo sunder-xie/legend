@@ -1,0 +1,402 @@
+/**
+ * zmx 2016-05-12
+ * 工单列表样式
+ */
+
+/**
+ * 顶部导航按钮组 start
+ */
+
+.order-list-title h3 {
+    font-weight: 900;
+    color: #222;
+    line-height: 36px;
+}
+
+.order-list-title .tools-btn a {
+    color: #fff;
+    margin-left: 10px;
+}
+
+
+.order-list-title .tools-btn a span {
+    margin-right: 6px;
+    font-weight: 900;
+}
+
+.order-list-title .tools-btn a.btn-1 {
+    background: #3fb2de;
+    border: 1px solid #18a1d5;
+}
+
+.order-list-title .tools-btn a.btn-1:hover {
+    background: #18a1d5;
+}
+
+.order-list-title .tools-btn a.btn-2 {
+    background: #f29530;
+    border: 1px solid #de811c;
+}
+
+.order-list-title .tools-btn a.btn-2:hover {
+    background: #de811c;
+}
+
+.order-list-title .tools-btn a.btn-3 {
+    background: #8fb70d;
+    border: 1px solid #7ba004;
+}
+
+.order-list-title .tools-btn a.btn-3:hover {
+    background: #7ba004;
+}
+
+.order-list-title .tools-btn a.btn-4 {
+    background: #c69161;
+    border: 1px solid #bc793c;
+}
+
+.order-list-title .tools-btn a.btn-4:hover {
+    background: #bc793c;
+}
+.tools-bar.select-btns-right {
+    float: right;
+    margin: 10px;
+}
+
+.tools-bar.select-btns {
+    float: left;
+    margin: 10px;
+    font-size: 12px;
+    z-index: 10;
+    position: relative;
+}
+
+.tools-bar.select-btns-right .btn-setting{
+    display: none;
+}
+/**
+ * 顶部导航按钮组 end
+ */
+
+
+/**
+*tab  start
+*/
+.tab{
+    height: 38px;
+    background: #fff;
+    border:1px solid #ddd;
+    border-top:none;
+    margin-top: 10px;
+}
+
+/*tab end*/
+/**
+ * 查询条件 start
+ */
+.condition-box {
+    border: 1px solid #ddd;
+    border-top:none;
+    padding:10px;
+    background: #fff;
+}
+.proxy-text{
+    display: inline-block;
+}
+.form-item-width{
+    width: 190px;
+    margin-right: 10px;
+}
+.condition-box .double-date {
+    width: 200px;
+}
+.search-btns{
+    margin-right: 10px;
+}
+/**
+ * 查询条件 end
+ */
+.tab-box{
+    height: 36px;
+}
+/**
+ * 数据列表表格 start
+ */
+.table-scroll-box {
+    overflow-x: scroll;
+}
+
+.order-list-table-inner .yqx-table {
+    width: auto;
+    min-width: 100%;
+}
+
+.order-list-table-inner {
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #fff;
+}
+
+.order-list-table-inner .tools-bar {
+    height: 35px;
+    position: relative;
+    display: none;
+}
+
+.order-list-table-inner .tools-bar > a {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.order-list-table-inner .tools-bar > a > i {
+    margin-left: 6px;
+}
+
+.order-list-table-inner .setting-box {
+    padding: 0 70px 0 6px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    line-height: 35px;
+}
+
+.order-list-table-inner .setting-box label {
+    float: left;
+    margin-right: 20px;
+}
+
+.order-list-table-inner .setting-box label > input {
+    margin-right: 8px;
+}
+
+/**
+ * 数据列表表格 end
+ */
+
+/**
+ * 数据列表卡片 start
+ */
+.card-check-box .card-status{
+    float: right;
+}
+
+
+.order-list-card .tools-bar {
+    line-height: 35px;
+    padding-left: 8px;
+    height: 10px;
+}
+
+.order-list-card .tools-bar input {
+    margin-right: 6px;
+}
+
+.card-box {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.card-box .card-item {
+    width: 198px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.card-box .card-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.card-box .card-item:hover {
+    border: 1px solid #9fc527;
+    box-shadow: 0 0 2px #9fc527;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.card-box a {
+    color: #000;
+}
+
+.card-info {
+    cursor: pointer
+}
+.card-info i{
+    font-style: normal;
+}
+
+.card-check-box {
+    padding: 8px;
+    height: 52px;
+    background: #f9f9f9;
+}
+
+.card-check-box * {
+    vertical-align: middle;
+}
+
+.card-licence {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-tag {
+    padding: 0 2px;
+    line-height: 17px;
+    height: 17px;
+    display: inline-block;
+    border-radius: 1px;
+}
+
+.order-list-card i {
+    font-style: normal;
+}
+
+.card-tag {
+    border: 1px solid #bfbfbf;
+    border-radius: 7px;
+    color: #666666;
+}
+
+.card-status {
+    color: #7fa700;
+}
+
+.car-check-body {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 12px 10px;
+}
+
+.car-check-body p {
+    margin-bottom: 15px;
+}
+
+.card-car-type {
+    margin: 10px 0 0 0;
+    color: #666;
+}
+
+.card-money {
+    padding: 0 8px;
+    background: #f9f9f9;
+}
+
+.card-price {
+    line-height: 40px;
+}
+
+.card-type {
+    float: right;
+    color: rgba(40, 27, 43, 0.65);
+}
+
+.card-price-1 {
+    color: #f25e61
+}
+.card-price .card-btn:hover {
+    opacity: .8;
+}
+
+.card-price .card-btn {
+    float: right;
+    font-size: 12px;
+    display: inline-block;
+    height: 24px;
+    width: 38px;
+    text-align: center;
+    line-height: 24px;
+    background: #9fc527;
+    color: #fff;
+    border:1px solid #7fa700;
+    margin-top: 8px;
+    border-radius: 1px;
+}
+
+/**
+ * 数据列表卡片 end
+ */
+.condition-box .senior-search{color: #666; vertical-align: bottom;}
+.search-input {
+    width: 649px;
+}
+.tools-bar a.hover {
+    color: #8db117;
+}
+.senior-width{
+    width: 157px;
+}
+
+.senior-width input,.senior-time-width input{
+    width: 100%;
+}
+.condition-box {
+    position: relative;
+}
+.senior-box {
+    margin-bottom: 10px;
+}
+.senior-box:last-child {
+    margin-bottom: 0;
+}
+.senior-box, .search-btns {
+    display: inline-block;
+}
+.senior-width-2 {
+    width: 217px;
+}
+
+.senior-width-3 {
+    width: 255px;
+}
+
+.senior-width-4 {
+    width: 190px;
+}
+.senior-width + .senior-width {
+    margin:0 5px;
+}
+
+.search-absolute-btns {
+    right: 10px;
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+.yqx-table>tbody>tr>td, .yqx-table>thead>tr>th{
+    text-align: left;
+}
+
+.yqx-table .th-right, .yqx-table .td-right {
+    text-align: right;
+}
+
+.yqx-table .padding-10 {
+    padding-right: 10px;
+}
+
+.yqx-table>tbody>tr>td.td-center, .yqx-table>thead>tr>th.td-center{
+    text-align: center;
+}
+.max-text{
+    max-width: 65px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*无效样式*/
+.invalid{ color: #999;}
+

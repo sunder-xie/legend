@@ -1,0 +1,110 @@
+.app_android {
+    background: url("../../img/page/download/app_zhengshi.png");
+    width: 280px;
+    height: 280px;
+}
+.download_btn{
+    text-align: center;
+}
+.app_download {
+    display: inline-block;
+    width:80%;
+    margin-top:10%;
+}
+.download_text{
+   margin-top:12%;
+   font-size:2.5rem;
+   text-align: center;
+   color: #000;
+   font-weight: bold;
+}
+
+body,div{
+    padding:0;
+    margin:0;
+}
+
+body{
+    overflow-y:auto;
+}
+.bg{
+    width:100%;
+    height: 980px;
+    background:url(../../img/page/download/app.jpg) no-repeat;
+    background-position: center 0;
+}
+.wraper{
+    width: 1120px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.top_left{
+    float: left;
+    overflow: hidden;
+    margin-top: 18px;
+}
+.top_left a{
+    display: block;
+    float: left;
+    width: 121px;
+    height: 65px;
+    background:url(../../img/page/download/logo.png) no-repeat;
+}
+.top_left img{
+    vertical-align:middle;
+}
+.change{
+    height: 65px;
+    line-height: 65px;
+    vertical-align:bottom;
+    float: left;
+    font-size:24px;
+    color:white;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+
+body,div,span,img{
+    padding:0;
+    margin:0;
+}
+body{
+    width:100%;
+    height:100%;
+    background:url(../../img/page/download/app-download-phone.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+}
+.box{
+    width:552px;
+    height:138px;
+    background:#008EF0;
+    border-radius:74px;
+    position:absolute;
+    top:700px;
+    left:34%;
+    margin-left: -120px;
+}
+.box span{
+    font-family:arial-black;
+    font-size:62px;
+    color:white;
+    position:absolute;
+    top:22%;
+    left:30%;
+}
+
+.comment{
+    font-family:arial-black;
+    font-size:30px;
+    color:white;
+    width:552px;
+    height:138px;
+    color: white;
+    border-radius:74px;
+    position:absolute;
+    top:900px;
+    left:37%;
+    margin-left: -120px;
+}

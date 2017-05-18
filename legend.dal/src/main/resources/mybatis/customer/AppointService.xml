@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.customer.AppointServiceDao">
+
+    <resultMap id = "BaseResultMap" type = "AppointServiceVo" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "appoint_id" property = "appointId" />
+        <result column = "appoint_sn" property = "appointSn" />
+        <result column = "service_id" property = "serviceId" />
+        <result column = "service_note" property = "serviceNote" />
+        <result column = "service_name" property = "serviceName" />
+        <result column = "parent_service_id" property = "parentServiceId" />
+        <result column = "template_id" property = "templateId" />
+        <result column = "service_price" property = "servicePrice" />
+        <result column = "discount_amount" property = "discountAmount" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            appoint_id as appointId,
+            appoint_sn as appointSn,
+            service_id as serviceId,
+            service_note as serviceNote,
+            service_name as serviceName,
+            parent_service_id as parentServiceId,
+            template_id as templateId,
+            service_price as servicePrice,
+            discount_amount as discountAmount
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "appointId != null">
+                    and appoint_id = #{appointId}
+                </if>
+                <if test = "appointSn != null">
+                    and appoint_sn = #{appointSn}
+                </if>
+                <if test = "serviceId != null">
+                    and service_id = #{serviceId}
+                </if>
+                <if test="serviceIds != null">
+                    and service_id in
+                    (
+                    <foreach collection="serviceIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test = "parentServiceId != null">
+                    and parent_service_id = #{parentServiceId}
+                </if>
+                <if test="parentServiceIds != null">
+                    and parent_service_id in
+                    (
+                    <foreach collection="parentServiceIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test = "serviceNote != null">
+                    and service_note = #{serviceNote}
+                </if>
+                <if test = "serviceName != null">
+                    and service_name = #{serviceName}
+                </if>
+                <if test = "appointIds != null">
+                    and appoint_id in
+                    (
+                    <foreach collection = "appointIds" index = "index" item = "tag" separator = ",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test = "templateId != null">
+                    and template_id = #{templateId}
+                </if>
+                <if test = "servicePrice != null">
+                    and service_price = #{servicePrice}
+                </if>
+                <if test = "discountAmount != null">
+                    and discount_amount = #{discountAmount}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "appointId != null">
+                    appoint_id = #{appointId},
+                </if>
+                <if test = "appointSn != null">
+                    appoint_sn = #{appointSn},
+                </if>
+                <if test = "serviceId != null">
+                    service_id = #{serviceId},
+                </if>
+                <if test = "parentServiceId != null">
+                    parent_service_id = #{parentServiceId},
+                </if>
+                <if test = "serviceNote != null">
+                    service_note = #{serviceNote},
+                </if>
+                <if test = "serviceName != null">
+                    service_name = #{serviceName},
+                </if>
+                <if test = "templateId != null">
+                    template_id = #{templateId},
+                </if>
+                <if test="servicePrice != null">
+                    service_price = #{servicePrice},
+                </if>
+                <if test="discountAmount != null">
+                    discount_amount = #{discountAmount},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_appoint_service
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_appoint_service
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_appoint_service
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_appoint_service
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_appoint_service
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_appoint_service
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_appoint_service
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_appoint_service (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "appointId != null">
+                appoint_id,
+            </if>
+            <if test = "appointSn != null">
+                appoint_sn,
+            </if>
+            <if test = "serviceId != null">
+                service_id,
+            </if>
+            <if test = "parentServiceId != null">
+                parent_service_id,
+            </if>
+            <if test = "serviceNote != null">
+                service_note,
+            </if>
+            <if test = "serviceName != null">
+                service_name,
+            </if>
+            <if test = "templateId != null">
+                template_id,
+            </if>
+            <if test="servicePrice != null">
+                service_price,
+            </if>
+            <if test="discountAmount != null">
+                discount_amount,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "appointId != null">
+                #{appointId},
+            </if>
+            <if test = "appointSn != null">
+                #{appointSn},
+            </if>
+            <if test = "serviceId != null">
+                #{serviceId},
+            </if>
+            <if test = "parentServiceId != null">
+                #{parentServiceId},
+            </if>
+            <if test = "serviceNote != null">
+                #{serviceNote},
+            </if>
+            <if test = "serviceName != null">
+                #{serviceName},
+            </if>
+            <if test = "templateId != null">
+                #{templateId},
+            </if>
+            <if test = "servicePrice != null">
+                #{servicePrice},
+            </if>
+            <if test="discountAmount != null">
+                #{discountAmount},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_appoint_service
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_appoint_service (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            appoint_id,
+            appoint_sn,
+            service_id,
+            service_note,
+            service_name,
+            template_id,
+            service_price,
+            discount_amount,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.appointId != null">
+                    #{item.appointId},
+                </if>
+                <if test="item.appointId == null">
+                    NULL ,
+                </if>
+                <if test="item.appointSn != null">
+                    #{item.appointSn},
+                </if>
+                <if test="item.appointSn == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceId != null">
+                    #{item.serviceId},
+                </if>
+                <if test="item.serviceId == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceNote != null">
+                    #{item.serviceNote},
+                </if>
+                <if test="item.serviceNote == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceName != null">
+                    #{item.serviceName},
+                </if>
+                <if test="item.serviceName == null">
+                    NULL ,
+                </if>
+                <if test = "item.templateId != null">
+                    #{item.templateId},
+                </if>
+                <if test = "item.templateId == null">
+                    0,
+                </if>
+                <if test="item.servicePrice != null">
+                    #{item.servicePrice},
+                </if>
+                <if test="item.servicePrice == null">
+                    0.00 ,
+                </if>
+                <if test="item.discountAmount != null">
+                    #{item.discountAmount},
+                </if>
+                <if test="item.discountAmount == null">
+                    0.00 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

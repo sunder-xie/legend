@@ -1,0 +1,48 @@
+.qxy_data_card .card_box{width:305px;height: 180px;margin: 0;margin-left:10px;margin-bottom: 30px;}
+.qxy_data_card .card_box .card_inner_box{background: #fff;box-shadow: 1px 2px 2px #ccc; }
+.qxy_data_card .card_box .card_inner_box:hover{border: 1px solid #ff5f00;}
+/*大分组 start*/
+.service_group{border: 1px solid #dcdcdc;margin-bottom: 20px;}
+.service_group_head{height: 40px;line-height: 40px;background: #efefef;border-bottom:1px solid #dcdcdc;padding-left: 10px;color: #111;font-weight: 700;font-size: 16px;}
+.service_group_content{background: #f9f9f9;padding: 10px;}
+/*大分组 end*/
+/*小分组 start*/
+.service_group_small_head{height: 40px;line-height:40px;font-size: 14px;padding-left: 10px;color: #111;font-weight: 700;}
+/*小分组 end*/
+
+
+/*----- 发布车主服务 start ----*/
+.qxy_data_card{position: relative;}
+.publish_service{position: absolute;top: 0;right: -94px;}
+.publish_service a{display: block; width: 84px;padding-top: 94px;background: url(../../img/page/appService/service_publish.jpg) no-repeat center top;text-align: center;color: #111;font-weight: 700;}
+.fixed{position: fixed;left: 50%;margin-left: 500px;/*top:30px;*/}
+/*----- 发布车主服务 end -----*/
+
+/*--鼠标划上卡显示操作的样式 start---*/
+.service_operation{position: absolute;width:100%;height: 30px;background: #ff5f00;bottom: -30px;left:-1px;border: 1px solid #ff5f00;box-shadow: 1px 2px 2px #ccc;line-height: 30px;visibility: hidden; }
+.qxy_data_card .card_box:hover .service_operation{visibility: visible;}
+.qxy_data_card .service_operation .data_tuijian{position: absolute;right: 80px;bottom:0px;color: #fff;}
+.qxy_data_card .service_operation .data_quxiao_tuijian{position: absolute;right: 80px;bottom:0px;color: #fff;}
+.qxy_data_card .service_operation .data_quxiao_fabu{position: absolute;right:8px; color: #fff;bottom:0px;}
+.qxy_data_card .service_operation .tq_service_detail{position: absolute;right:8px; color: #fff;bottom:0px;}
+.qxy_data_card .service_operation span{color: #fff;position: absolute;right: 65px;bottom: 0;}
+/*--鼠标划上卡显示操作的样式 end---*/
+
+/*--卡片图片 start---*/
+.qxy_business_1{background: url(../../img/common/business1.png) no-repeat;}
+.qxy_business_2{background: url(../../img/common/business2.png) no-repeat;}
+.qxy_business_3{background: url(../../img/common/business3.png) no-repeat;}
+.qxy_business_4{background: url(../../img/common/business4.png) no-repeat;}
+.qxy_business_5{background: url(../../img/common/business5.png) no-repeat;}
+.qxy_business_6{background: url(../../img/common/business6.png) no-repeat;}
+.qxy_business_7{background: url(../../img/common/business7.png) no-repeat;}
+.qxy_business_8{background: url(../../img/common/business8.png) no-repeat;}
+.qxy_business_9{background: url(../../img/common/business9.png) no-repeat;}
+.qxy_business_10{background: url(../../img/common/business10.png) no-repeat;}
+.qxy_business_11{background: url(../../img/common/business11.png) no-repeat;}
+.qxy_business_12{background: url(../../img/common/business12.png) no-repeat;}
+
+/*--卡片图片 end---*/
+
+#appoint_search{margin-bottom: 20px;}
+.card_item1{cursor: pointer;}

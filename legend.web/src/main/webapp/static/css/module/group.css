@@ -1,0 +1,36 @@
+/**
+ * ch 2016-03-21
+ * 公共group样式
+ */
+
+/**
+ * 公共group样式 start
+ */
+.yqx-group {border: 1px solid #cdcdcd; margin-bottom: 10px; font-size: 14px; background: #f9f9f9; }
+.yqx-group .yqx-group-head {background: #efefef; height: 38px; line-height: 38px;border-bottom: 1px solid #cdcdcd; padding: 0 15px; font-weight: bold;font-size:14px;position: relative;}
+.yqx-group .yqx-group-head i.group-head-line{display: inline-block;height: 38px;width: 1px;background: #cdcdcd;vertical-align: top;margin-left: 15px;}
+.yqx-group .yqx-group-content{padding: 15px;}
+/**
+ * 公共group样式 end
+ */
+
+/**
+ * 可收起的group样式 start
+ */
+.yqx-group .yqx-group-head i.group-arrow{display: block; width:20px; height:20px; margin-top:8px;float: right; }
+.yqx-group .yqx-group-head i.arrow-down{background:url(../../img/common/base/arrow_down.png) no-repeat center; }
+.yqx-group .yqx-group-head i.arrow-up{background:url(../../img/common/base/arrow_up.png) no-repeat center; }
+/**
+ * 可收起的group样式 end
+ */
+
+/**
+ * group按钮样式 start
+ */
+.yqx-group .group-btn {float: right;font-size: 12px;color: #666;padding:0 10px;border:1px solid #ccc;display: block;line-height:30px;margin:3px 10px 0 0;background: #f7f7f7;border-radius: 4px;}
+.yqx-group .group-btn:hover{color: #111;}
+/**
+ * group按钮样式 end
+ */
+
+

@@ -1,0 +1,88 @@
+/* 去除页面页脚 start */
+@page {
+    size: auto; /* auto is the initial value */
+    margin: 0; /* this affects the margin in the printer settings */
+}
+/* 去除页面页脚 end */
+body {
+    margin: 0 auto;
+    padding: 50px;
+    font-size: 16px;
+    width: 980px;
+    height: 842px;
+    background-color: #fff;
+    color: #000;
+    font-family: "Microsoft Yahei", "微软雅黑", SimHei, Tahoma, Simsun, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+}
+.head div {
+    width:100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.company {
+    font-size:28px;
+    font-weight: bold;
+}
+.tit {
+    font-size:20px;
+    font-weight: bold;
+}
+.code {
+    display: block;
+    float:left;
+}
+.date {
+    display: block;
+    float:right;
+}
+table {
+    clear:both;
+}
+th {
+    text-align: center;
+    line-height: 26px;
+    height:26px;
+    border:1px solid black;
+}
+td {
+    padding:5px 10px;
+    height:16px;
+    border:1px solid black;
+}
+.w1 {
+    width:100px;
+}
+.w2 {
+    width:260px;
+}
+.w3 {
+    width:180px;
+}
+.w4 {
+    width:80px;
+}
+.w5 {
+    width:80px;
+}
+.w6 {
+    width:80px;
+}
+.w7 {
+    width:200px;
+}
+
+.foot {
+    width:100%;
+}
+.foot div {
+    line-height:20px;
+    padding-top:3px;
+    width:323px;
+    float:left;
+}
+.foot .sign_date {
+    display: block;
+    float:right;
+    margin-right: 50px;
+}

@@ -1,0 +1,91 @@
+/**
+ * ch 2016-04-06
+ * 新建销售单页面样式
+ */
+
+/**
+ * 表单区域 start
+ */
+.order-form{margin-bottom: 10px;padding: 15px 0;background: #f7f7f7;border: 1px solid #e8e8e8;border-radius: 2px;}
+
+/**
+ * 表单区域 end
+ */
+
+/**
+ * 配件区域 start
+ */
+.part-box{border:1px solid #ddd;padding: 10px;background: #fff;padding-top: 0; border-top: 0;}
+.part-box .tabs-control {margin: 0 -10px; height: 38px; border-bottom: 1px solid #ddd;}
+.tools-bar{text-align: right;line-height: 30px;}
+.tools-bar a{padding:0 10px;color: #7a7a7a;display: inline-block;position: relative;}
+.tools-bar a:before{content:"";position: absolute;width: 1px;background: #d2d2d2;height:20px;top:5px;left:-1px;}
+.tools-bar a:first-child::before{content:none;}
+.tools-bar a>span{font-size: 14px;vertical-align: middle;margin-right:4px;}
+.tools-bar a:hover{color: #000;}
+
+.dynamic-table .form-item>.fa {
+    width: 25px;
+}
+
+.dynamic-table .yqx-input-icon {
+    padding-right: 25px;
+}
+/**
+ * 配件区域 end
+ */
+
+/**
+ * 动态行宽度定义 start
+ */
+.dynamic-col0{width: 30px;}
+.dynamic-col1{width: 90px;}
+.dynamic-col2{width: 175px;}
+.dynamic-col3{width: 125px;}
+.dynamic-col4{width: 60px;}
+.dynamic-col5{width: 40px;}
+.dynamic-col6{width: 60px;}
+.dynamic-col7{width: 50px;}
+.dynamic-col8{width: 50px;}
+.dynamic-col9{width: 60px;}
+.dynamic-col10{width: 38px;}
+/**
+ * 动态行宽度定义 end
+ */
+
+/**
+ * 备注样式 start
+ */
+.commit-box{margin-top: 10px;}
+.commit-box .form-label{vertical-align: middle;width: 50px;text-align: left;text-indent: 6px;}
+.commit-box .form-item{vertical-align: middle;width: 735px;}
+/**
+ * 备注样式 end
+ */
+
+
+/**
+ * 费用样式 start
+ */
+.order-count{margin-top: 10px;padding-bottom: 5px;}
+.order-count p{line-height: 25px;text-indent: 6px;}
+.order-count p > span{color:#ff7800;}
+/**
+ * 费用样式 end
+ */
+
+/**
+ * 确认结算、打印等按钮的样式 start
+ */
+.btn-group{padding-top: 15px;border-top:1px solid #e8e8e8;}
+.btn-group .yqx-btn{margin-right: 10px;}
+/**
+ * 确认结算、打印等按钮的样式 end
+ */
+
+/* hack start */
+.order-form .show-grid {
+    margin-left: -10px;
+    margin-right: 10px;
+}
+/* hack end */

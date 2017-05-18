@@ -1,0 +1,173 @@
+.marR10{
+    margin-right: 10px;
+}
+
+.order-right{
+    width:823px;
+}
+.yqx-btn.disable {
+    border: 1px solid #d2d2d2;
+    background: #eee;
+    color: #666;
+    cursor: default;
+}
+.yqx-input{
+    width: 150px;
+    height: 30px;
+}
+.yqx-btn{
+    line-height: 30px;
+}
+.yqx-table{
+    border: 1px solid #ddd;
+}
+.question-icon {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    vertical-align: text-bottom;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+}
+.order-head .headline {
+    line-height: 45px;
+    font-size: 16px;
+}
+.order-head .help {
+    border-color: #d2d2d2;
+    background: #f9f9f9;
+    cursor: pointer;
+    float: right;
+    padding: 0 14px;
+    line-height: 34px;
+    color: #666;
+}
+
+.form-item>.fa{
+    line-height: 30px;
+}
+.search-box{
+    margin-bottom:10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+i{
+    font-style: normal;
+}
+.form-item{
+    margin-right: 6px;
+}
+
+/*tab样式 start*/
+.list-tab.current-tab, .list-tab:hover{
+    background-color: #fff;
+    color: #333;
+}
+.list-tab{
+    font-weight: bold;
+}
+/*tab样式 end*/
+
+/*表格样式start*/
+#tableList tr{
+    background-color: #fff;
+}
+#tableList tr:nth-child(4n), #tableList tr:nth-child(4n-1){
+    background-color: #f9f9f9;
+}
+#tableList tr:nth-child(odd)>td{
+    border: none;
+}
+#tableList .td-operate{
+    text-align: right;
+    padding-right: 40px;
+}
+#tableList a{
+    color: #7fa700;
+}
+.td-operate a{
+    text-decoration: underline;
+}
+#tableList .apply-detail-box{
+    padding: 0;
+}
+.apply-detail{
+    position: relative;
+    text-align: left;
+    background-color: #eee;
+    padding-left : 10px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    margin: 10px 30px 20px;
+}
+.apply-tag{
+    position: absolute;
+    width: 16px;
+    height: 7px;
+    right: 14px;
+    top: -7px;
+    background: url('../../../img/page/wechat/rescue-tag.png') -7px 0 no-repeat;
+}
+.apply-detail>h3{
+    font-size: 12px;
+    line-height: 36px;
+}
+
+.car-photos{
+    margin-bottom: -8px;
+}
+.car-photo-item, .car-photo-default{
+    width: 98px;
+    height: 98px;
+    float: left;
+    margin: 0 8px 8px 0;
+}
+.car-photo-default{
+    background: url('../../../img/page/wechat/default_bg.png');
+}
+.apply-detail-footer{
+    margin: 16px 0;
+}
+
+/*表格样式end*/
+
+/*弹窗样式start*/
+.bounce-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+}
+.bounce-wrapper{
+    position: absolute;
+    width: 800px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+}
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+}
+#map{
+    height: 430px;
+}
+.layui-layer-setwin .layui-layer-close2{
+    top: -10px;
+    right: -10px;
+}
+/*弹窗样式end*/
+
+
+

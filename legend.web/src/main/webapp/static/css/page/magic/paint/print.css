@@ -1,0 +1,91 @@
+body {
+    font-size:16px;
+    background-color:white;
+    color:black;
+    font-family: "\9ED1\4F53", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.w980{
+    width: 980px;
+    margin:0 auto;
+}
+.bold{
+    font-weight: bold;
+}
+.w980 h2{
+    line-height: 30px;
+}
+.w980 p{
+    line-height: 25px;
+}
+.w-260{
+    width: 260px;
+}
+.w-120{
+    width: 120px;
+}
+.project-box table{
+    width: 100%;
+}
+.project-box th,.project-box td{
+    text-align: center;
+}
+.remark-table table{
+    width: 100%;
+}
+.remark-table table td:first-child{
+    border-left: 0px;
+}
+.remark-table table td:last-child{
+    border-right: 0px;
+}
+.remark-table table td{
+    border: 1px solid #000;
+    padding-top: 5px;
+}
+.h25{
+    height: 25px;
+}
+.h80{
+    height: 80px;
+}
+.remark-table table .bottom-border{
+    border-bottom: 0px;
+}
+.project-box{
+    padding: 0 5px;
+}
+.project-title{
+    margin: 10px 0;
+}
+.cost-box{
+    margin: 5px 0;
+}
+.remarks{
+    line-height: 30px;
+    padding: 10px 0;
+}
+.sign-box{
+    overflow: hidden;
+}
+.sign-box .col-3{
+    width: 33.33%;
+    height: 100px;
+    line-height: 40px;
+    float: left;
+}
+.sign-box .col-3 div{
+    line-height: 40px;
+}
+.sign-text{
+    width: 100%;
+}
+.sign-text span{
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+.sign-text p{
+    display: inline-block;
+    width: 150px;
+
+}

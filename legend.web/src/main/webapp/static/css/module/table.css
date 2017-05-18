@@ -1,0 +1,59 @@
+/**
+ * ch 2016-04-10
+ *  表格基类
+ *  基类：yqx-table yqx-table-border yqx-table-hover yqx-table-link yqx-table-big yqx-table-reverse
+ */
+
+.yqx-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.yqx-table tr > th,
+.yqx-table tr > td {
+    padding: 8px 4px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-bottom: 1px solid #cacaca;
+}
+
+.yqx-table.table-striped-inverse thead tr,
+.yqx-table.table-striped-inverse tbody tr:nth-child(even),
+.yqx-table > tbody > tr:nth-child(odd) {
+    background: #fff;
+}
+
+.yqx-table.table-striped-inverse tbody tr:nth-child(odd),
+.yqx-table > thead > tr,
+.yqx-table > tbody > tr:nth-child(even),
+.yqx-table > tfoot > tr {
+    background: #f1f2f2;
+}
+
+.yqx-table-reverse > tbody > tr:nth-child(odd) {
+    background: #f1f2f2;
+}
+
+.yqx-table-reverse > thead > tr,
+.yqx-table-reverse > tbody > tr:nth-child(even),
+.yqx-table-reverse > tfoot > tr {
+    background: #fff;
+}
+
+.yqx-table-border {
+    border: 1px solid #cacaca;
+}
+
+.yqx-table-hover > tbody > tr:hover {
+    background: #e2e7d1;
+}
+
+.yqx-table-link > tbody > tr {
+    cursor: pointer;
+}
+
+.yqx-table-big tr > th,
+.yqx-table-big tr > td {
+    padding: 10px;
+}

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.insurance.TianInsuranceCodeDao">
+    <!-- Result Map -->
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.insurance.TianInsuranceCode">
+        <result column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="creator" property="creator"/>
+        <result column="modifier" property="modifier"/>
+        <result column="branch_company" property="branchCompany"/>
+        <result column="organization" property="organization"/>
+        <result column="car_license" property="carLicense"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="service_item" property="serviceItem"/>
+        <result column="total_count" property="totalCount"/>
+        <result column="used_count" property="usedCount"/>
+        <result column="insured_start_time" property="insuredStartTime"/>
+        <result column="insured_end_time" property="insuredEndTime"/>
+        <result column="insured_city" property="insuredCity"/>
+        <result column="insured_status" property="insuredStatus"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            branch_company as branchCompany,
+            organization as organization,
+            car_license as carLicense,
+            customer_name as customerName,
+            service_item as serviceItem,
+            total_count as totalCount,
+            used_count as usedCount,
+            insured_start_time as insuredStartTime,
+            insured_end_time as insuredEndTime,
+            insured_city as insuredCity,
+            insured_status as insuredStatus,
+        </trim>
+
+    </sql>
+
+    <!-- 查询条件 -->
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="branchCompany!= null">
+                    and branch_company = #{branchCompany}
+                </if>
+                <if test="organization!= null">
+                    and organization = #{organization}
+                </if>
+                <if test="carLicense!= null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test="customerName!= null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test="serviceItem!= null">
+                    and service_item = #{serviceItem}
+                </if>
+                <if test="totalCount!= null">
+                    and total_count = #{totalCount}
+                </if>
+                <if test="usedCount!= null">
+                    and used_count = #{usedCount}
+                </if>
+                <if test="insuredStartTime!= null">
+                    and insured_start_time = #{insuredStartTime}
+                </if>
+                <if test="insuredEndTime!= null">
+                    and insured_end_time = #{insuredEndTime}
+                </if>
+                <if test="insuredCity!= null">
+                    and insured_city = #{insuredCity}
+                </if>
+                <if test="insuredStatus!= null">
+                    and insured_status = #{insuredStatus}
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+                      and insured_start_time >= #{startTime}
+                    ]]>
+                </if>
+                <if test="endTime != null">
+                    <![CDATA[
+                      and insured_end_time <= #{endTime}
+                    ]]>
+                </if>
+                <if test="nowTime != null">
+                    <![CDATA[
+                      and insured_start_time <= #{nowTime}
+                      and insured_end_time >= #{nowTime}
+                    ]]>
+                </if>
+                </trim>
+        </where>
+
+    </sql>
+
+    <!-- 批量更新条件 -->
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="branchCompany!= null">
+                    branch_company = #{branchCompany},
+                </if>
+                <if test="organization!= null">
+                    organization = #{organization},
+                </if>
+                <if test="carLicense!= null">
+                    car_license = #{carLicense},
+                </if>
+                <if test="customerName!= null">
+                    customer_name = #{customerName},
+                </if>
+                <if test="serviceItem!= null">
+                    service_item = #{serviceItem},
+                </if>
+                <if test="totalCount!= null">
+                    total_count = #{totalCount},
+                </if>
+                <if test="usedCount!= null">
+                    used_count = #{usedCount},
+                </if>
+                <if test="insuredStartTime!= null">
+                    insured_start_time = #{insuredStartTime},
+                </if>
+                <if test="insuredEndTime!= null">
+                    insured_end_time = #{insuredEndTime},
+                </if>
+                <if test="insuredCity!= null">
+                    insured_city = #{insuredCity},
+                </if>
+                <if test="insuredStatus!= null">
+                    insured_status = #{insuredStatus},
+                </if>
+            </trim>
+        </set>
+
+    </sql>
+
+    <!-- 插入记录 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_tian_insurance_code (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="branchCompany!= null">
+                branch_company,
+            </if>
+            <if test="organization!= null">
+                organization,
+            </if>
+            <if test="carLicense!= null">
+                car_license,
+            </if>
+            <if test="customerName!= null">
+                customer_name,
+            </if>
+            <if test="serviceItem!= null">
+                service_item,
+            </if>
+            <if test="totalCount!= null">
+                total_count,
+            </if>
+            <if test="usedCount!= null">
+                used_count,
+            </if>
+            <if test="insuredStartTime!= null">
+                insured_start_time,
+            </if>
+            <if test="insuredEndTime!= null">
+                insured_end_time,
+            </if>
+            <if test="insuredCity!= null">
+                insured_city,
+            </if>
+            <if test="insuredStatus!= null">
+                insured_status,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="branchCompany!= null">
+                #{branchCompany},
+            </if>
+            <if test="organization!= null">
+                #{organization},
+            </if>
+            <if test="carLicense!= null">
+                #{carLicense},
+            </if>
+            <if test="customerName!= null">
+                #{customerName},
+            </if>
+            <if test="serviceItem!= null">
+                #{serviceItem},
+            </if>
+            <if test="totalCount!= null">
+                #{totalCount},
+            </if>
+            <if test="usedCount!= null">
+                #{usedCount},
+            </if>
+            <if test="insuredStartTime!= null">
+                #{insuredStartTime},
+            </if>
+            <if test="insuredEndTime!= null">
+                #{insuredEndTime},
+            </if>
+            <if test="insuredCity!= null">
+                #{insuredCity},
+            </if>
+            <if test="insuredStatus!= null">
+                #{insuredStatus},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_tian_insurance_code (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            branch_company,
+            organization,
+            car_license,
+            customer_name,
+            service_item,
+            total_count,
+            used_count,
+            insured_start_time,
+            insured_end_time,
+            insured_city,
+            insured_status,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.branchCompany != null">
+                    #{item.branchCompany},
+                </if>
+                <if test="item.branchCompany == null">
+                    '',
+                </if>
+                <if test="item.organization != null">
+                    #{item.organization},
+                </if>
+                <if test="item.organization == null">
+                    '',
+                </if>
+                <if test="item.carLicense != null">
+                    #{item.carLicense},
+                </if>
+                <if test="item.carLicense == null">
+                    '',
+                </if>
+                <if test="item.customerName != null">
+                    #{item.customerName},
+                </if>
+                <if test="item.customerName == null">
+                    '',
+                </if>
+                <if test="item.serviceItem != null">
+                    #{item.serviceItem},
+                </if>
+                <if test="item.serviceItem == null">
+                    '',
+                </if>
+                <if test="item.totalCount != null">
+                    #{item.totalCount},
+                </if>
+                <if test="item.totalCount == null">
+                    1,
+                </if>
+                <if test="item.usedCount != null">
+                    #{item.usedCount},
+                </if>
+                <if test="item.usedCount == null">
+                    0,
+                </if>
+                <if test="item.insuredStartTime != null">
+                    #{item.insuredStartTime},
+                </if>
+                <if test="item.insuredStartTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.insuredStartTime != null">
+                    #{item.insuredStartTime},
+                </if>
+                <if test="item.insuredEndTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.insuredCity != null">
+                    #{item.insuredCity},
+                </if>
+                <if test="item.insuredCity == null">
+                    0,
+                </if>
+                <if test="item.insuredStatus != null">
+                    #{item.insuredStatus},
+                </if>
+                <if test="item.insuredStatus == null">
+                    1,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <!-- 获取对象全部结果集 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_tian_insurance_code
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+
+    </select>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_tian_insurance_code
+        <include refid="BaseWhereClause"/>
+    </select>
+
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_tian_insurance_code
+        where id in (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_tian_insurance_code
+        set is_deleted='Y'
+        where id in (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_tian_insurance_code
+	set is_deleted='Y'
+	where id=#{id}
+	
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_tian_insurance_code
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_tian_insurance_code
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+
+    </update>
+
+</mapper>

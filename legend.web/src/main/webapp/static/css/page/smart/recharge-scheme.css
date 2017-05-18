@@ -1,0 +1,210 @@
+/*公用样式 开始*/
+.dis {
+    display: none;
+}
+
+.process-nav-true .nav_process {
+    height: 40px;
+}
+
+.right {
+    float: right;
+    width: 825px;
+}
+
+.right p.big-title {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.enter_info {
+    width: 803px;
+    background-color: #f9f9f9;
+    margin: 10px auto;
+}
+
+/*公用样式 结束*/
+
+/*选择充值方案样式 开始*/
+.enter {
+    width: 823px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #333333;
+}
+
+.remain-box {
+    padding-top: 25px;
+    padding-left: 9px;
+}
+
+.remain-number {
+    color: #ff7800;
+}
+
+.small-title {
+    padding: 15px 0 0 9px;
+}
+
+.fast-recharge {
+    width: 803px;
+    font-size: 0;
+}
+
+.fast-recharge-li {
+    font-family: Tahoma;
+    width: 176px;
+    height: 61px;
+    margin: 10px 10px;
+    border: 1px solid #c9c9c9;
+    float: left;
+    color: #ff7800;
+    text-align: center;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.fast-recharge-money {
+    margin-bottom: 3px;
+    font-size: 24px;
+    margin-top: 11px;
+}
+
+.fast-recharge-remain {
+    font-size: 12px;
+    color: rgba(255, 120, 0, 0.6);
+}
+
+.li-checked {
+    border: #8eb110 2px solid;
+    background: #ffffff url('../../../img/common/order/order-sprite.png') 154px 41px no-repeat;
+}
+
+.minimum {
+    font-size: 12px;
+    color: #ff7800;
+}
+.minimumFee{
+    font-style: normal;
+}
+.input-money {
+    width: 178px;
+    height: 35px;
+    border: #c9c9c9 1px solid;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-left: 9px;
+}
+
+.units {
+    font-size: 12px;
+    color: #666666;
+}
+
+.recharge-rule {
+    padding: 10px 0 20px 9px;
+    font-size: 12px;
+}
+
+.js-search-button, .back-smart-index, .go-pay, .back-recharge {
+    width: 88px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.js-search-button, .go-pay {
+    float: left;
+    margin: 5px 0 15px 10px;
+    background-color: #fa7b7c;
+    color: #ffffff;
+    border: 1px solid #f55d5e;
+}
+
+.js-search-button:hover, .go-pay:hover {
+    background-color: #ff8d8e;
+}
+
+.js-search-button:active, .go-pay:active {
+    background-color: #f35f62;
+}
+
+.back-smart-index, .back-recharge {
+    margin: 5px 10px 15px 0;
+    border: 1px solid #d2d2d2;
+    float: right;
+    background-color: #f9f9f9;
+    color: #666666;
+}
+
+/*选择充值方案样式 结束*/
+
+/*选择支付方式样式  开始*/
+.pay-way {
+    margin-left: 9px;
+    padding-bottom: 20px;
+    font-size: 0;
+}
+
+.pay-way img {
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.payWay-name {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.must-pay {
+    width: 803px;
+    margin: 0 auto 10px auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.must-pay-color {
+    color: #ff7800;
+}
+
+.must-pay-money {
+    font-style: normal;
+}
+.pay-method{
+    margin-bottom: 15px;
+}
+/*选择支付方式样式  结束*/
+
+/*=======优惠图标 开始======*/
+.rechargeType{
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    background-color: rgba(254, 51, 71, 0.8);
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+    vertical-align: middle;
+}
+
+.rechargeFee{
+    vertical-align: middle;
+}
+.change_location{
+    padding-right: 18px;
+}
+
+/*=======优惠图标 结束======*/

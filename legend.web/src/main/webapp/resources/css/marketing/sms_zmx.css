@@ -1,0 +1,271 @@
+.Z-right{
+    width: 826px;
+    height: auto;
+    margin-bottom: 10px;
+    float: left;
+}
+.echarge_title{
+    height: 28px;
+    font-size: 16px;
+    color: #333;
+    line-height: 27px;
+}
+.Recharge_box{
+    width: 826px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.Recharge_title{
+    width: 814px;
+    height:39px;
+    line-height: 39px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #333;
+    padding-left: 12px;
+}
+.RT_right{
+    float:right;
+    margin-right: 12px;
+}
+.Recharge_infor{
+    width: 802px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.surplus{
+    width: 814px;
+    height:52px;
+    line-height: 52px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+.surplus span{
+    font-size: 20px;
+    color: #f0933d;
+    padding-left: 10px;
+}
+.Recharge{
+    width: 814px;
+    overflow: hidden;
+    clear: both;
+    padding-top: 10px;
+}
+.rec_title{
+    display: block;
+    width:80px;
+    height:80px;
+    float: left;
+    font-size: 14px;
+}
+.recharge_list{
+    display: block;
+    width: 734px;
+    overflow: hidden;
+    float: left;
+}
+.recharge_list li{
+    width: 156px;
+    height: 35px;
+    background:url("../../images/marketing/recharge_bg1.png") no-repeat;
+    position: relative;
+    float:left;
+    padding: 8px 10px 8px 30px;
+    margin:0 10px 10px 0;
+}
+.recharge_list li.hover{
+    background:url("../../images/marketing/recharge_bg2.png") no-repeat;
+}
+.money{
+    height: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    font-size: 13px;
+}
+.Discount{
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+}
+.Discount span{
+    color: #fb202a;
+}
+.new_tip{
+    width:20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #fc6621;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    top:1px;
+    right: 0px;
+}
+.pay_btn{
+    height: 60px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+.pay_btn a{
+    display: block;
+    width:90px;
+    height: 30px;
+    line-height: 30px;
+    background: #90af34;
+    color: #fff;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 14px;
+}
+.Record{
+    height: 45px;
+    line-height: 45px;
+    background: #d7d7d7;
+    margin: 16px 0;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #535353;
+}
+.Record span{
+    display: block;
+    width: 125px;
+    height:49px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Record span.hover{
+    background: url("../../img/common/t1.gif") no-repeat;
+    color: #fff;
+}
+.Record_tabcon{
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    clear: both;
+}
+.Record_tabcon .table {
+    width: 100%;
+}
+.Record_tabcon th, .Record_tabcon td {
+    padding-left: 10px;
+    text-align: center;
+}
+.table-content {
+    width: 300px;
+    margin: 0 auto;
+    word-break: break-all;
+    text-align: center;
+}
+.tabcon_title{
+    height: 35px;
+    line-height: 35px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+.tabcon_title span{
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #333;
+    text-align: center;
+}
+.tabcon_list{
+    height:35px;
+    line-height: 1.4;
+    border-bottom: 1px solid #eee;
+}
+.tabcon_list:nth-child(even) {
+    background: #fafafa;
+}
+.tabcon_list span{
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #535353;
+    text-align: center;
+}
+.tabcon_list th, .tabcon_list td {
+    vertical-align: middle;
+}
+
+.paging_box{
+    height: 64px;
+    overflow: hidden;
+}
+.paging{
+    width: 706px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #ddd;
+    margin: 15px auto;
+}
+
+.hide {
+    display: none !important;
+}
+
+.detail_info {
+    padding: 10px 10px 0;
+    background: #fff;
+    color: #333;
+}
+
+.detail_info h3.title:first-child {
+    margin-top: 0;
+}
+
+.detail_info h3.title {
+    font-size: 14px;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.detail_info p {
+    margin-bottom: 10px;
+}
+
+.detail-btn {
+    float: right;
+    margin: 6px 10px 0 0;
+}
+
+.link-detail {
+    text-decoration: underline;
+    color: blue;
+}
+
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color:#617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+.Z-title .yqx-btn-1:hover{
+    color:#666;
+}
+.btn-title{
+    margin-top: 6px;
+    color: #666;
+}

@@ -1,0 +1,96 @@
+/*
+ * create by hyx 2016-04-22
+ * 经营报表--营业页面
+ */
+
+/*搜索头部样式*/
+.w30{width: 30px;}
+.w80{width: 80px;}
+.w100{width: 100px;}
+.w130{width: 130px}
+.w150{width: 150px}
+/*中间数据表格样式*/
+#amount .main-body{
+    padding: 10px;
+    padding-right:0;
+    background:#fff;
+    margin-bottom:20px;
+    color: #666;
+}
+/*三个div的样式*/
+#amount .main-body .rp-panel{
+    width: 261px;
+    float:left;
+    margin-right:10px;
+    padding-bottom:40px;
+}
+/*设置rp-panel-head的三个背景图片*/
+#amount .main-body .rp-panel:nth-child(1) .rp-panel-head{
+    background:#fcfff3 url(../../images/report/amount/01.png) no-repeat 2px center;
+    padding-left:26px;
+}
+#amount .main-body .rp-panel:nth-child(2) .rp-panel-head{
+    background:#fcfff3 url(../../images/report/amount/02.jpg) no-repeat 2px center;
+    padding-left:26px;
+}
+#amount .main-body .rp-panel:nth-child(3) .rp-panel-head{
+    background:#fcfff3 url(../../images/report/amount/03.jpg) no-repeat 2px center;
+    padding-left:26px;
+}
+
+#amount .main-body .rp-panel .rp-panel-head .rp-panel-title{
+    background:#fcfff3;
+    color: #333;
+    font-size: 12px;
+
+
+}
+#amount .main-body .rp-panel .rp-panel-body{
+    padding:0;
+}
+/*main-body中的table样式*/
+#amount .main-body .rp-panel .rp-panel-body .table{
+    margin-bottom:0;
+    border:none;
+}
+
+#amount .main-body .rp-panel .rp-panel-body .table th{
+    padding-left:10px;
+    color: #333;
+    font-weight: bold;
+    border-top:none;
+}
+
+#amount .main-body .rp-panel .rp-panel-body .table td{
+    padding-left:30px;
+}
+#amount .main-body .rp-panel .rp-panel-body .table th:last-child{
+    color:red;
+}
+/*隐藏table的tbody*/
+.amount>tbody{
+    display:none;
+}
+/*图标设置*/
+.icon{
+    position:absolute;
+    right:5px;
+    top:9px;
+}
+/*加号设置*/
+.rp-plus-icon{
+    top:8px;
+    right:-10px;
+}
+/*电机加号之后的下拉列表设置*/
+.dropdown-menu{
+    top:30px;
+}
+/*链接*/
+.amount>tbody>tr:hover{
+    background-color:#d3e3ab;
+    cursor:pointer;
+}
+.amount>tbody>tr>td>a{
+    color:#333;
+}

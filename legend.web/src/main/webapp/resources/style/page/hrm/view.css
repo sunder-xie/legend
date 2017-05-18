@@ -1,0 +1,35 @@
+.hrm_item_box{width: 20%;float: left;}
+
+.hrm_role_box{width: 140px;height:40px;line-height: 40px;text-align: center;background: #fff;color: #333; float: left;margin:0 auto 10px auto;border: 1px solid #d2d2d2;position: relative;cursor: pointer;}
+.hrm_role_blank{width: 140px;height:40px;line-height: 40px;text-align: center;margin-bottom: 10px;background: none;float: left;border: 1px solid transparent;position: relative;}
+
+
+/*.hrm_role_box,
+.hrm_role_blank{width: 150px;height:40px;line-height: 40px;text-align: center;background: #232e49;color: #fff; float:left;margin:0px 10px 10px 32px;position: relative;}
+.hrm_role_blank{background: none;}*/
+.hrm_role_box .shuxian,
+.hrm_role_blank .shuxian{position: absolute;width: 2px;height:0px;background:#c9c9c9;right:-30px;top:54%;}
+.hrm_role_box .left_hengxian,
+.hrm_role_blank .left_hengxian{position: absolute;width: 28px;height:2px;background:#c9c9c9;top:50%;left:-28px;}
+.hrm_role_box .right_hengxian,
+.hrm_role_blank .right_hengxian{position: absolute;width: 30px;height:2px;background:#c9c9c9;top:50%;right:-30px;}
+
+.hrm_role_box:hover{background: #8fb027;color: #fff;}
+
+.level0 .left_hengxian{width:0;}
+/*.level5 .shuxian{height:0;}*/
+
+/*标题 start*/
+.hrm_box_title ul{margin-bottom: 15px;border-bottom: 1px solid #bebebe;}
+.hrm_box_title li{float: left;width: 140px;height:40px;line-height: 40px;text-align: center;font-weight: 700;margin-right:55px;}
+/*标题 end*/
+
+
+
+/*菜单 start*/
+.hrm_menu{position: absolute;width: 140px;background: #fff;display: none;z-index: 6;border: 1px solid #d2d2d2;left:-1px;top:40;box-shadow: 1px 1px 3px #ccc;}
+.hrm_menu li a{display: block;height:35px;padding-left: 20px;color: #333;text-align: left;}
+.hrm_menu li a:hover{color:#192fd3;text-decoration: underline;}
+/*菜单 end*/
+
+.name_input{display: none;border: 1px solid #ddd;background: #fff;width: 120px;height:30px;margin:0 auto;text-align: center;}

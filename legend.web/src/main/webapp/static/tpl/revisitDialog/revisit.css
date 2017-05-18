@@ -1,0 +1,136 @@
+.person-name {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.person-name .name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.person-name span {
+    margin-right: 5px;
+}
+
+.person-name .mobile {
+    color: #fd461e;
+    font-weight: bold;
+}
+
+.left-record {
+    width: 280px;
+}
+
+.title {
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.consume-record {
+    width: 278px;
+    overflow: hidden;
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+}
+
+.consume-record li {
+    border-bottom: 1px solid #cacaca;
+    padding: 0 10px;
+}
+
+.consume-record li:nth-of-type(2n) {
+    background: #f1f2f2;
+}
+
+.consume-record li:last-child {
+    border-bottom: none;
+}
+
+.consume-record li .record-num {
+    color: #09539b;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.consume-record li .record-time {
+    color: #666;
+    line-height: 35px;
+}
+
+.service-pro {
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.service-title {
+    color: #666;
+    line-height: 20px;
+}
+
+.service-pro p {
+    line-height: 20px;
+    color: #333;
+}
+
+.right-record {
+    width: 330px;
+    margin-left: 10px;
+}
+
+.give-ticket {
+    height: 28px;
+    line-height: 28px;
+    color: #535353;
+}
+
+.give-ticket img {
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.dialog-coupon-name {
+    color: #333;
+}
+
+.grid {
+    margin-top: 5px;
+}
+
+.mobile-record {
+    width: 332px;
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.mobile-record li {
+    padding: 5px 10px;
+    background: #f1f2f2;
+    border-bottom: 1px solid #cacaca;
+}
+
+.mobile-record li:last-child {
+    border-bottom: none;
+}
+
+.mobile-record-name {
+    color: #333;
+    line-height: 25px;
+}
+
+.mobile-record-time {
+    color: #666;
+    line-height: 20px;
+}
+
+.return-record-dialog  {
+    width: 660px;
+}
+.record-box {
+    height: 340px;
+    overflow-x: hidden;
+}

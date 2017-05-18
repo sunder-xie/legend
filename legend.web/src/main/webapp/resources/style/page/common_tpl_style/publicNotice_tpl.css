@@ -1,0 +1,69 @@
+#public_notice_dialog {
+    padding: 0;
+    background: url(../../../img/common/index-dg-bg.png) no-repeat;
+    width: 685px;
+    height: 580px;
+}
+#public_notice_dialog .btn_group {
+    position: relative;
+    height:222px;
+}
+#public_notice_dialog .btn_group .notice-close-btn{
+    position: absolute;
+    color: #272636;
+    bottom: 20px;
+    right: 100px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#public_notice_dialog .btn_group .notice-close-btn:hover{
+    color: #000;
+}
+#public_notice_dialog .public_notice_dialog_content {
+    width: 532px;
+    height: 260px;
+    margin: 0 auto auto 74px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#public_notice_dialog .public_notice_title {
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 900;
+}
+#public_notice_dialog .public_notice_dialog_content::-webkit-scrollbar { 
+    width: 8px; 
+}
+#public_notice_dialog .public_notice_dialog_content::-webkit-scrollbar-thumb { 
+    background: #ccc;
+}
+#public_notice_dialog .public_notice_dialog_content::-webkit-scrollbar-track-piece {
+    background: #f5f5f5;
+}
+
+#public_notice_dialog .public_notice_dialog_content_inner {
+    padding: 20px;
+}
+
+#public_notice_dialog .public_notice_dialog_btns{
+    text-align: center;
+    margin-top: 15px;
+}
+#public_notice_dialog .public_notice_dialog_btns a{
+    display: inline-block;
+    width: 188px;
+    height:61px;
+    margin: 0 auto;
+    background: url(../../../img/common/index-dg-btn.png) no-repeat;
+}
+/** layer style rewrite **/
+.layui-layer.layui-layer-page {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.layui-layer .layui-layer-setwin {
+    display: none;
+}

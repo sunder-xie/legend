@@ -1,0 +1,95 @@
+/*
+ * by zqq 2016/07/11
+ * 生产线管理
+*/
+.team-table{ font-size: 12px; margin-top: 20px;}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{ background: #f9f9f9;}
+.yqx-table{background-color: #f9f9f9;}
+/*新增生产线弹窗样式 start*/
+.Z-Dialog{background: #f9f9f9;overflow: auto;height: 100%;}
+.DialogTable{  table-layout: fixed;width: 92%;margin: 10px 20px 0;}
+.DialogTable tr{
+    text-align: center;
+    height: 36px;
+}
+.DialogTable td{vertical-align: middle;}
+.DialogTable td input{text-align: center;}
+.DialogTable .Z-tr{
+    height: 37px;
+    line-height: 37px;
+}
+.DialogTable tbody{border-bottom: 1px solid #ddd;}
+.DialogTable tbody tr{
+    border-top: 1px solid #d2d2d2;
+}
+.Z-dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.Z-Dialog-list{height: 220px;overflow: auto;}
+.Z-Dialog-option{padding-top: 15px;}
+.Z-Dialog-option>div{display: inline-block;width: 169px;margin: 10px 10px 10px 0;}
+.Z-dialog-name,.Z-dialog-remarks{position: relative;}
+.Z-Dialog-option>span{margin-left: 20px;}
+.Z-item{margin-left: -5px;}
+.procedureAdd-action{text-decoration: underline;font-size: 0;}
+.procedureAdd-action span{cursor: pointer;font-size: 12px;}
+/*列表样式*/
+.Z-time{
+    text-align: center;
+}
+.yqx-select-options{height: 78px;overflow-y: auto;}
+/*按钮样式*/
+.Z-Btn{height: 75px;text-align: center;line-height: 75px;}
+.Z-submit{
+    display: inline-block;
+    height: 35px;
+    width: 120px;
+    background-color: #9fc527;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid #7fa700;
+    margin-right: 15px;
+}
+.Z-add-cancel{
+    display: inline-block;
+    height: 35px;
+    width: 120px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    border: 1px solid #d2d2d2;
+}
+/*新增生产线弹窗样式 end*/
+
+/*排班管理弹窗样式开始*/
+.bg-select{background-color:#33a7e9;color:#fff;}
+.Z-schedulingDialog{
+    background-color: #f9f9f9;
+    font-family: MircosoftYahei;
+}
+.Z-schedulingDialog-option{
+    text-align: left;
+    overflow: auto;
+}
+.Z-schedulingDialog-option ul{margin-bottom: 10px;}
+.Z-schedulingDialog-option li{margin-top: 10px;}
+.Z-scheduling-type{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+}
+
+.Z-save{
+    display: inline-block;
+    height: 35px;
+    width: 90px;
+    background-color: #9fc527;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid #7fa700;
+    margin-right: 15px;
+}
+.Z-placeholder{display: inline-block;width: 24px;}
+/*排班管理弹窗样式结束*/
+/*.inquiry{ height: 68px; text-align: center; padding-top: 62px;}*/

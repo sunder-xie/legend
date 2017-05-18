@@ -1,0 +1,185 @@
+/*
+ * create by zmx 2016/11/18
+ * 配件资料
+*/
+.content{
+    background: #fff;
+    border:1px solid #acacac;
+    padding: 0 10px;
+}
+.title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.title i{
+    display: inline-block;
+    margin-right:10px;
+    vertical-align: middle;
+    width: 2px;
+    height: 14px;
+    background: #999;
+}
+.form-box{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cacaca;
+}
+.form-label{
+    width: 110px;
+}
+.small-label-width{
+    width: 75px;
+}
+
+.form-item{
+    width: 260px;
+}
+.form-box .show-grid:first-child{
+    margin-top: 0;
+}
+.small-input-width{
+    width: 87px;
+}
+.stock-input-width{
+    width: 105px;
+}
+.sale-input-width{
+    width: 155px;
+}
+.car-type-box{
+    display: inline-block;
+    width: 530px;
+    vertical-align: top;
+}
+.form-bottom-box{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cacaca;
+    margin-top: -20px;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.accessories-num{
+    line-height: 20px;
+    font-size: 12px;
+    padding:0 10px;
+    border:1px solid #cacaca;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #f9f9f9;
+}
+.show-grid .cartype-width{
+    width: 110px;
+}
+.remove-btn{
+    text-decoration: underline;
+    color: #fc461e;
+}
+.remove-btn:hover{
+    color: #fc461e;
+}
+.dialog .form-label{
+    width: 70px;
+}
+.dialog .form-item{
+    width: 200px;
+}
+.dialog .btn-box{
+    border-top:1px solid #cacaca;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.file-btn{
+    position: absolute;
+    top:0;
+    left: 0;
+    display: block;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+}
+.upload-btn{
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #f4f4f4;
+    border:1px dashed #cacaca;
+    text-align: center;
+}
+.upload-btn p{
+    color: #333;
+    line-height: 30px;
+    padding-top:10px;
+}
+.mode{
+    display: inline-block;
+    vertical-align: bottom;
+}
+.mode p{
+    line-height: 20px;
+}
+.upload{
+    width: 80px;
+}
+.before-upload{
+    display: block;
+}
+.upload-pic,.upload-img{
+    width: 78px;
+    height: 78px;
+}
+.rel-list{
+    margin-left: 115px;
+}
+.rel-list .form-item{
+    width: 249px;
+}
+.show-grid{
+    margin: 20px 0;
+}
+.addCustomBrandCon .val-small-width{
+    width: 75px;
+    margin-left: 30px;
+}
+
+.cartype-content{
+    width: 670px;
+    border: 1px solid #cacaca;
+    background: #f9f9f9;
+    margin-left: 112px;
+    padding: 0 10px 20px 10px;
+}
+.cartype-content h3{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cacaca;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.cartype-content .form-label{
+    line-height: 30px;
+    width: 74px;
+}
+.cartype-content .form-item{
+    width: 185px;
+}
+.cartype-content .show-grid{
+    margin-top: 0;
+}
+.add-box{
+    margin:10px 0 0 116px;
+}
+.add-box1{
+    margin:10px 0 0 30px;
+}
+.cartype-content-box .yqx-downlist-wrap{
+    width: 100%;
+}
+.hide{
+    display: none;
+}
+.cartype-content .w-150{
+    width: 130px;
+}

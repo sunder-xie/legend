@@ -1,0 +1,128 @@
+.service-head {
+    position: relative;
+    margin: 10px 0 20px;
+    padding: 15px 15px 15px 100px;
+    background: #f9f9f9;
+    border: 1px solid #cdcdcd;
+    overflow: hidden;
+}
+.service-head  .ico-head {
+    margin-left: -85px;
+    float: left;
+}
+.service-head .service-head-info {
+    margin-left: 20px;
+    padding: 10px 0;
+    float: left;
+}
+.service-head-info .title-head {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+}
+.service-head-info .note-head {
+    line-height: 16px;
+    font-size: 12px;
+    color: #666;
+}
+.service-head-info .price-service {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    margin-top: -17px;
+    font-size: 22px;
+    color: #e50206;
+}
+.price-service em {
+    font-style: normal;
+    font-size: 34px;
+}
+
+.service-detail {
+    margin-bottom: 20px;
+}
+/* 可删除 START */
+.service-detail .service-detail-box {
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    border: 1px solid #cdcdcd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.service-detail-box h2 {
+    padding: 12px 21px;
+    font-size: 16px;
+    color: #333;
+    background: #efefef;
+    border-bottom: 1px solid #cdcdcd;
+}
+.service-detail-box .list li {
+    line-height: 40px;
+    padding-left: 25px;
+}
+.service-detail-box .list li:nth-child(2n) {
+    background: #f9f9f9;
+}
+.service-detail-box .list li:nth-child(2n+1) {
+    background: #fff;
+}
+
+/*可删除 END*/
+.center{
+	text-align: center;
+}
+.btn1 {
+    margin-right: 20px;
+    color: #fff;
+    background: #fca03d;
+    margin-bottom: 22px;
+}
+.btn2 {
+    color: #333;
+    background: #f5f6f5;
+    margin-bottom: 22px;
+}
+
+/* 弹窗 */
+.pop-box {
+    width: 400px;
+    padding: 20px 30px;
+    background: #fff;
+}
+.pop-box .info-pop {
+    margin-bottom: 35px;
+    white-space: nowrap;
+    font-size: 22px;
+    font-weight: 600;
+    color: #666;
+    text-align: center;
+}
+.pop-box .pop-buttons {
+    text-align: center;
+}
+.pop-buttons .btn1, .pop-buttons .btn2 {
+    width: 139px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.pop-buttons .btn1 {
+    margin-right: 20px;
+    color: #fff;
+    background: #fca03d;
+}
+.pop-buttons .btn2 {
+    color: #333;
+    background: #f5f6f5;
+}
+.service-detail-box img{
+	max-width:980px;
+	height:auto;
+}

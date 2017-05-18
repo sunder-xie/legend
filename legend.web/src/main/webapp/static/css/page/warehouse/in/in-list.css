@@ -1,0 +1,220 @@
+.width-50 {
+    width: 50px !important;
+}
+
+.width-120 {
+    width: 120px !important;
+}
+
+.form-box .show-grid {
+    margin-top: 0;
+}
+
+.form-box {
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px 4px 0 0;
+}
+
+.list-tab-box {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.form-box .form-item {
+    width: 190px;
+}
+
+.op-re {
+    color: #f55d5e;
+}
+
+.tools-bar {
+    line-height: 40px;
+    font-size: 13px;
+}
+
+a.yqx-link.hover {
+    color: #9fc527;
+}
+
+.yqx-table .color-red {
+    text-decoration: underline;
+    color: #f55d5e;
+}
+
+.yqx-table .color-blue {
+    text-decoration: underline;
+    color: #0470f5;
+}
+
+.yqx-table .color-green {
+    color: #9fc527;
+}
+
+.yqx-table tr td {
+    text-overflow: ellipsis;
+}
+
+.draft-icon {
+    margin-right: 2px;
+    vertical-align: -4px;
+}
+
+.yqx-table .max-text {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-r {
+    text-align: right !important;
+}
+
+.text-l {
+    text-align: left !important;
+}
+
+.text-c {
+    text-align: center !important;
+}
+
+.yqx-table > tbody > tr.detail-list > td, .yqx-table > tr.detail-list > td {
+    background: #fff;
+    border-bottom: none;
+}
+
+.yqx-table > tbody > tr > td, .yqx-table > tr > td {
+    background: #fff;
+}
+
+.yqx-table {
+    width: 100%;
+}
+
+.padding-l-12 {
+    padding-left: 12px !important;
+}
+
+.goods-count {
+    display: inline-block;
+    width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.w-300 {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tr-title {
+    border: 1px solid #cacaca;
+    border-bottom: none;
+}
+.yqx-table td{
+    position: relative;
+}
+.detail-list, .tr-head {
+    border-left: 1px solid #cacaca;
+}
+
+.detail-list, .detail-list:hover {
+    background: #fff !important;
+    border-bottom: 1px dashed #cacaca !important;
+}
+
+.detail-list td:last-child, .tr-head td:last-child, .tr-title td:last-child, .tr-head th:last-child {
+    border-right: 1px solid #cacaca;
+}
+
+.blank {
+    border-top: 1px solid #cacaca;
+}
+
+.yqx-table > tbody > tr.tr-title {
+    background: #f1f2f2;
+}
+
+.yqx-table tr > th, .yqx-table > tbody > tr > td, .yqx-table > thead > tr > th, .yqx-table > tr > td {
+    border-bottom: none;
+}
+
+.yqx-table .detail-list > td {
+    background: #fff;
+}
+
+.yqx-table .blank > td {
+    background: #f3f5f7;
+}
+
+.yqx-table-hover > tbody > tr.tr-title:hover td {
+    background: #e2e7d1;
+}
+
+.yqx-table > tbody > tr.tr-title td {
+    background: #f1f2f2;
+}
+
+.yqx-table tr > th, .yqx-table > thead > tr > th {
+    background: #fff;
+}
+
+.yqx-table .detail-list th, .yqx-table .detail-list td {
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.order-list-table .yqx-table {
+    border: 1px solid #cacaca;
+}
+
+.tc-1 {
+    width: 160px;
+}
+
+.tc-2 {
+    width: 320px;
+}
+
+.tc-3 {
+    width: 170px;
+}
+
+.tc-4 {
+    width: 120px;
+}
+
+/*金额统计*/
+.search-result{
+    line-height: 44px;
+    border: 1px solid #cacaca;
+    border-top: 0px;
+    padding-left: 10px;
+    color: #333;
+    background: #fff;
+}
+.search-result span{
+    color: #666;
+    margin-left: 10px;
+}
+.seal-3{
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    background: url("../../../../img/page/warehouse/seal-3.png") no-repeat;
+}
+.seal-3.yzf {
+    background-position: 0px 0;
+}
+.seal-3.yth {
+    background-position: -82px 0;
+}

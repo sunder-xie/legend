@@ -1,0 +1,13 @@
+/**
+ * ch 2016-04-14
+ * 验证提示的样式
+ */
+
+/* 表单验证信息提示样式 start */
+.yqx-err-msg{position: absolute; top: -20px; left: 30px; display: none; z-index:2; min-width:60px; }
+.yqx-err-msg .yqx-err-msg-inner{position: relative; border: 1px solid #f77c7e; background: #fff; padding: 0px 5px; line-height: 30px; border-radius: 4px; }
+.yqx-err-msg .yqx-err-msg-inner p{width: 100%; white-space: nowrap; }
+.yqx-err-msg .yqx-err-msg-inner em{position: absolute; width: 17px; height: 38px; top:3px; left:-30px; background: url(../../img/common/base/tips_icon.png) no-repeat; }
+.yqx-err-msg .yqx-err-msg-inner i{position: absolute; width:9px; height: 9px; background: url(../../img/common/base/tips_jiantou.png) no-repeat; top:10px; left:-7px; }
+
+/* 表单验证信息提示样式 end  */

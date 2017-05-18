@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* 重置样式文件 */
+@import url(modules/reset.css);
+/* 头部样式文件 */
+@import url(../../static/css/module/header.css);
+/* 底部样式文件 */
+@import url(modules/footer.css);
+/* 公共样式文件 */
+@import url(modules/common.css);
+/* tab样式文件 */
+@import url(modules/tab.css);
+/* 表单元素样式文件 */
+@import url(modules/formItem.css);
+/* 分页样式文件 */
+@import url(modules/paging.css);
+/* 卡片或列表样式文件 */
+@import url(modules/list.css);
+/* group样式文件 */
+@import url(modules/group.css);
+/* 表单布局样式文件 */
+@import url(modules/formLayout.css);
+/* chosen下拉列表样式文件 */
+@import url(modules/chosen.css);
+/* 自定义下拉列表样式文件 */
+@import url(modules/downlist.css);
+/*弹框控件样式*/
+@import url(modules/dialog.css);
+/*竖直菜单样式*/
+@import url(modules/vmenu.css);
+
+
+
+

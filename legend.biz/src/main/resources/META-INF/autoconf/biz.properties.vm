@@ -1,0 +1,96 @@
+legend.app.root     = ${legend_app_root}
+legend.app.context  = ${legend_app_context}
+
+i.search.url=${i_search_url}
+new.i.search.url=${new_i_search_url}
+crm.url=${crm_url}
+
+sms.send=${sms_send}
+dubbo.address=${dubbo_address}
+dubbo.port=${dubbo_port}
+dubbo.consumer.check=${dubbo_consumer_check}
+dubbo.legend.version=${dubbo_legend_version}
+dubbo.iserver.version=${dubbo_iservice_version}
+dubbo.alligator.version=${dubbo_alligator_version}
+dubbo.athena.version=${dubbo_athena_version}
+dubbo.ucenter.version=${dubbo_ucenter_version}
+dubbo.saint.version=${dubbo_saint_version}
+dubbo.holy.version=${dubbo_holy_version}
+dubbo.finance.version=${dubbo_finance_version}
+dubbo.dandelion.version =${dubbo_dandelion_version}
+dubbo.cube.version =${dubbo_cube_version}
+dubbo.venus.version=${dubbo_venus_version}
+dubbo.magic.version =${dubbo_magic_version}
+dubbo.billcenter.version=${dubbo_billcenter_version}
+dubbo.wechat.version=${dubbo_wechat_version}
+dubbo.insurance.version=${dubbo_insurance_version}
+dubbo.search.version=${dubbo_search_version}
+dubbo.mace.version=${dubbo_mace_version}
+dubbo.valley.version=${dubbo_valley_version}
+dubbo.itemcenter.version=${dubbo_itemcenter_version}
+dubbo.mana.version=${dubbo_mana_version}
+
+quartz.run=${legend_quartz_run}
+
+legend.log.charset  = ${legend_log_charset}
+legend.log.level    = ${legend_log_level}
+legend.log.pattern  = ${legend_log_pattern}
+legend.log.root     = ${legend_log_root}
+
+legend.slave.jedis.host     = ${legend_slave_jedis_host}
+legend.slave.jedis.port     = ${legend_slave_jedis_port}
+legend.slave.jedis.pwd     = ${legend_slave_jedis_pwd}
+legend.slave.jedis.idle     = ${legend_slave_jedis_idle}
+legend.slave.jedis.timeout     = ${legend_slave_jedis_timeout}
+legend.slave.jedis.maxTotal    = ${legend_slave_jedis_maxTotal}
+
+legend.master.jedis.host     = ${legend_master_jedis_host}
+legend.master.jedis.port     = ${legend_master_jedis_port}
+legend.master.jedis.pwd     = ${legend_master_jedis_pwd}
+legend.master.jedis.idle     = ${legend_master_jedis_idle}
+legend.master.jedis.timeout     = ${legend_master_jedis_timeout}
+legend.master.jedis.maxTotal    = ${legend_master_jedis_maxTotal}
+
+jedis.db.number = ${jedis_db_number}
+
+legend.mq.host=${legend_mq_host}
+legend.mq.tradeLog.username=${legend_mq_tradeLog_username}
+legend.mq.tradeLog.password=${legend_mq_tradeLog_password}
+legend.mq.tradeLog.defaultQueue=${legend_mq_tradeLog_defaultQueue}
+legend.mq.tradeLog.routingKey=${legend_mq_tradeLog_routingKey}
+legend.mq.yun.ddlwechat.routingKey=${legend_mq_yun_ddlwechat_routingKey}
+
+legend.mq.tradeLog.defaultExchange=${legend_mq_tradeLog_defaultExchange}
+legend.mq.onOff=${legend_mq_onOff}
+
+
+legend.mq.yunxiu.routingKey=${legend_mq_yunxiu_routingKey}
+
+legend.mq.crm.routingKey=${legend_mq_crm_routingKey}
+legend.mq.crm.queue=${legend_mq_crm_queue}
+
+legend.mq.yun.wechat.appoint.routingKey=${legend.mq.yun.wechat.appoint.routingKey}
+legend.mq.yun.wechat.appoint.queue=${legend.mq.yun.wechat.appoint.queue}
+
+legend.mq.dandelion.activity.routingKey = ${legend.mq.dandelion.activity.routingKey}
+legend.mq.dandelion.activity.queue = ${legend.mq.dandelion.activity.queue}
+
+legend.mq.dandelion.recharge.routingKey = ${legend.mq.dandelion.recharge.routingKey}
+legend.mq.dandelion.recharge.queue = ${legend.mq.dandelion.recharge.queue}
+
+legend.wechat.domain=${legend_wechat_domain}
+legend.wechat.jump.domain=${legend_wechat_jump_domain}
+
+dandelion.url=${dandelion_url}
+tqmall.url=${tqmall_url}
+epc.url=${epc_url}
+
+legend.cookie.domain=${legend_cookie_domain}
+
+legend.url=${legend_url}
+
+bp.socket.url=${bp_socket_url}
+
+legend.socket.url=${legend_socket_url}
+
+legend.tqmallstall.certification.url=${legend_tqmallstall_certification_url}

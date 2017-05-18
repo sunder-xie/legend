@@ -1,0 +1,752 @@
+/*
+ * sky 2016-04-06
+ * 新建洗车单样式
+ */
+
+.order-content {
+    padding: 0 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.w62 {
+    width: 62px
+}
+
+.w160 {
+    width: 160px
+}
+
+/*
+ * sky 2016-04-07
+ * 仿bootstrap 栅栏式布局 start
+ */
+.show-grid {
+    margin-bottom: 10px;
+    zoom: 1;
+    _height: 1px;
+}
+
+.show-grid:last-child {
+    margin-bottom: 0;
+}
+
+.show-grid:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.show-grid [class^=col-] {
+    float: left;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.3333333%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-8 {
+    width: 66.6666666%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+/* 仿bootstrap 栅栏式布局 end */
+
+/**
+ * sky 2016-04-06
+ * 单选tag样式 start
+ */
+.single-tag {
+    display: inline-block;
+    margin-bottom: -10px;
+}
+
+.single-tag > li {
+    display: inline-block;
+    margin: 0 5px 10px 0;
+    cursor: pointer;
+}
+
+.single-tag .tag-control {
+    line-height: 34px;
+    text-align: center;
+    background: #eee;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.tag-select {
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+}
+
+.single-tag > li:last-of-type {
+    margin-right: 0;
+}
+
+.single-tag .tag-control .tag-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.single-tag .tag-control .hl-r {
+    color: #fd5959;
+}
+
+.single-tag .tag-control.selected {
+    position: relative;
+    line-height: 32px;
+    background: #fff;
+    border: 2px solid #8eb110;
+}
+
+.single-tag .tag-control.selected:after {
+    display: inline;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20px;
+    height: 18px;
+    background: url("../../../img/common/order/order-sprite.png") 0 0 no-repeat;
+}
+
+/* 单选tag样式 end */
+
+/* 栅栏布局特殊定义 start */
+.show-grid [class^=col-] {
+    text-align: center;
+}
+
+.show-grid [class^=col-]:first-child {
+    text-align: left;
+}
+
+.show-grid [class^=col-]:last-child {
+    text-align: right;
+}
+
+/* 栅栏布局特殊定义 end */
+
+.discount-text {
+    max-width: 480px;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 常用布局样式 start  */
+.miw-160 {
+    min-width: 160px;
+}
+
+.miw-135 {
+    min-width: 135px;
+}
+
+.miw-115 {
+    min-width: 115px;
+}
+
+.miw-100 {
+    min-width: 100px;
+}
+
+.w-440 {
+    width: 443px !important;
+}
+
+.w-630 {
+    width: 724px !important;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+/* 常用布局样式 end  */
+
+/**
+ * 会员卡余额样式 start
+ */
+.sett-member-card {
+    vertical-align: middle;
+}
+
+.sett-member-card span {
+    font-size: 14px;
+}
+
+.sett-member-card span.card-level {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.card-amount {
+    color: #ff434a;
+    font-weight: 900;
+    margin-left: 5px;
+}
+
+/**
+ * 会员卡余额样式 end
+ */
+
+/**
+ * 结算方式tab内容外边距样式 start
+ */
+.sett-type-box {
+    margin-left: 65px;
+    margin-top: 10px;
+}
+
+/**
+ * 结算方式tab内容外边距样式 end
+ */
+
+.customize-input {
+    line-height: 36px;
+    border-radius: 3px;
+    padding: 0 5px;
+    background: #fff;
+    width: 100%;
+}
+
+.single-tag .tag-control.selected .customize-input {
+    line-height: 30px;
+}
+
+.single-tag .tag-control.selected .fa {
+    line-height: 30px;
+}
+
+/**
+ * 设置洗车价格弹窗 start
+ */
+
+.setting_carwash {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.setting_carwash .dialog-title {
+    background: #f5f2e6;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 40px;
+    padding-top: 10px;
+}
+
+.setting_carwash .setting_box {
+    margin-top: 20px;
+}
+
+.setting_box li {
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+.setting_box li > label {
+    float: left;
+    display: block;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.setting_box li > p {
+    float: left;
+}
+
+.setting_box li p > input {
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #cecece;
+    padding: 0 5px;
+    border-radius: 3px 0 0 3px;
+    width: 180px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.setting_box li p > span {
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #cecece;
+    border-left: none;
+    vertical-align: top;
+    border-radius: 0 3px 3px 0;
+}
+
+.setting_carwash .dialog-btn {
+    text-align: center;
+}
+
+.setting_carwash .dialog-btn a {
+    margin: 15px;
+}
+
+/**
+ * 设置洗车价格弹窗 end
+ */
+
+/* 优惠卡选择 */
+
+.coupon-parent {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
+.coupon-parent.checked {
+    position: relative;
+    line-height: 32px;
+    background: #fff;
+}
+
+.coupon-parent.checked .coupon {
+    border-color: #8eb110;
+}
+
+.coupon-parent.checked:after {
+    display: inline;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 18px;
+    background: url("../../../img/common/order/order-sprite.png") 0 0 no-repeat;
+
+}
+
+/* 优惠卡选择 end */
+
+.downlist-new-license {
+    display: none !important;
+}
+
+/*券 start*/
+.div-disable {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+.div-disable .vocher-title {
+    color: #888;
+}
+
+.div-disable .vocher-infor {
+    color: #888;
+}
+
+.div-disable .voucher-l {
+    color: #888;
+}
+
+.div-disable .car-tag {
+    background: url("../../../img/page/settlement/debit/diable-car-tag.png") no-repeat center;
+}
+
+.div-disable .combo-tag {
+    background: url("../../../img/page/settlement/debit/diable-combo-tag.png") no-repeat center;
+}
+
+.money-width {
+    width: 90px;
+}
+
+.div-disable .vocher-title span {
+    color: #888;
+}
+
+.voucher-box {
+    border: 1px solid #d2d2d2;
+    background: #f9f9f9;
+    overflow: hidden;
+    padding: 12px 7px;
+}
+
+.voucher {
+    display: inline-block;
+    margin: 0 2px 10px 2px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.voucher-hide {
+    display: none;
+}
+
+.voucher-tag {
+    width: 23px;
+    height: 23px;
+    background: url("../../../img/page/settlement/debit/btn-active.png") no-repeat;
+    position: absolute;
+    right: 0;
+    top: 72px;
+    display: none;
+}
+
+/*优惠券*/
+.voucher-t {
+    width: 222px;
+    height: 93px;
+    padding: 0 5px 0 0;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    background: url("../../../img/page/settlement/debit/border.png") repeat-x top #fff;
+}
+
+.voucher-hover {
+    background: url("../../../img/page/settlement/debit/border-hover.png") repeat-x top #fff;
+    border-left: 1px solid #8bb30d;
+    border-right: 1px solid #8bb30d;
+}
+
+.voucher-hover .voucher-l, .voucher-hover .vocher-title, .voucher-hover .vocher-title span {
+    color: #8bb30d;
+}
+
+.voucher-l {
+    width: 70px;
+    height: 70px;
+    font-family: arial, verdana, sans-serif;
+    text-align: center;
+    line-height: 95px;
+    font-size: 26px;
+    vertical-align: top;
+    color: #ff1d00;
+}
+
+.voucher-l .tag {
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    line-height: 20px;
+}
+
+.voucher-l span {
+    font-size: 14px;
+}
+
+
+
+.vocher-title {
+    font-size: 12px;
+    color: #ff1d00;
+    line-height: 16px;
+}
+
+.vocher-title span {
+    color: #ff8477;
+}
+
+.vocher-infor {
+    width: 150px;
+    overflow: hidden;
+    line-height: 15px;
+    color: #444;
+    font-size: 12px;
+}
+
+.vocher-middle-border {
+    width: 1px;
+    height: 50%;
+    border-left: 1px solid #ddd;
+    margin: 25px 0 0 0;
+}
+
+.validity-period {
+    color: #888;
+    line-height: 22px;
+}
+
+.use-times {
+    height: 45px;
+    background: #fff;
+    border: 1px solid #9fbf3a;
+    border-top: none;
+    display: none;
+}
+
+.use-times .form-item {
+    width: 110px;
+}
+
+/*通用券*/
+.car-tag {
+    background: url("../../../img/page/settlement/debit/car-tag.png") no-repeat center;
+}
+
+.voucher-hover .car-tag {
+    background: url("../../../img/page/settlement/debit/car-taghover.png") no-repeat center;
+}
+
+.voucher-more {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    border-top: none;
+    cursor: pointer;
+}
+
+/*计次卡*/
+.combo-tag {
+    background: url("../../../img/page/settlement/debit/combo-tag.png") no-repeat center;
+}
+
+.voucher-hover .combo-tag {
+    background: url("../../../img/page/settlement/debit/combo-taghover.png") no-repeat center;
+}
+
+/*转赠券*/
+.donation {
+    line-height: 73px;
+    text-align: center;
+    color: #999;
+    font-size: 36px;
+}
+
+.voucher-hover.donation {
+    color: #8bb30d;
+}
+
+.use-times .donation-form {
+    width: 180px;
+}
+
+.no-coupon {
+    display: inline-block;
+    width: 110px;
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.no-coupon img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.w120 {
+    width: 120px;
+}
+
+.w100 {
+    width: 100px !important;
+}
+
+/*券 end*/
+
+.div-disable {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+.div-disable .vocher-title {
+    color: #888;
+}
+
+.div-disable .vocher-infor {
+    color: #888;
+}
+
+.div-disable .car-tag {
+    background: url("../../../img/page/settlement/debit/diable-car-tag.png") no-repeat center;
+}
+
+.div-disable .combo-tag {
+    background: url("../../../img/page/settlement/debit/diable-combo-tag.png") no-repeat center;
+}
+
+.money-width {
+    width: 90px;
+}
+
+.div-disable .vocher-title span {
+    color: #888;
+}
+
+/*会员卡*/
+.membership {
+    width: 110px;
+    height: 28px;
+    display: inline-block;
+    border: 1px solid #8bb30d;
+    line-height: 28px;
+    color: #444;
+    cursor: pointer;
+    text-align: left;
+    margin-right: 25px;
+}
+
+.membership span {
+    padding: 0 10px;
+    color: #8bb30d;
+    float: right;
+    border-left: 1px solid #ddd;
+}
+
+.membership-none {
+    display: inline-block;
+    width: 110px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    text-align: left;
+    margin-right: 25px;
+}
+
+.memberamountship {
+    height: 30px;
+    display: inline-block;
+    line-height: 28px;
+    color: #444;
+    text-align: center;
+}
+
+.memberamountship input {
+    border: 1px solid #8bb30d;
+}
+
+.div-disable {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+.div-disable .vocher-title {
+    color: #888;
+}
+
+.div-disable .vocher-infor {
+    color: #888;
+}
+
+.div-disable .car-tag {
+    background: url("../../../img/page/settlement/debit/diable-car-tag.png") no-repeat center;
+}
+
+.div-disable .combo-tag {
+    background: url("../../../img/page/settlement/debit/diable-combo-tag.png") no-repeat center;
+}
+
+.money-width {
+    width: 90px;
+}
+
+.div-disable .vocher-title span {
+    color: #888;
+}
+
+.max-text {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.voucher-discount-amount-box {
+    margin: 5px;
+}
+
+/*新需求更改  16/9/29 by zmx */
+.border-t {
+    padding-top: 15px;
+    border-top: 1px solid #dcdcdc;
+}
+
+.discount-input {
+    display: none;
+}
+
+.tag-control .yqx-input-icon {
+    height: 32px;
+
+}
+
+.yqx-err-msg .yqx-input-icon {
+    padding-left: 5px;
+}
+
+.discount-money-input {
+    padding-left: 5px;
+}
+
+.carwash-center {
+    text-align: center;
+    padding-right: 35px;
+}
+
+.m-top {
+    margin-top: -4px;
+}
+
+.service-name {
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.service-with {
+    width: 720px;
+    vertical-align: middle;
+}
+
+.discount-amount-vip-card-box {
+    margin: 10px 0 0 68px;
+}
+
+.vip-note em {
+    margin: 0 5px;
+    font-style: normal;
+    color: #f40;
+}
+
+.discount-money-box .selected .discount-money-input {
+    line-height: 32px;
+    background: url("../../../img/common/selected.png") bottom right no-repeat;
+    border: 2px solid #5f7c00;
+}
+
+.discount-money-box .selected .fa {
+    height: auto;
+    margin: 2px;
+    line-height: 32px;
+}
+.coupon-check-box{
+    border: 1px solid #d2d2d2;
+    padding: 10px;
+}
+
+.note {
+    padding: 10px;
+    border: 1px solid #d2d2d2;
+}

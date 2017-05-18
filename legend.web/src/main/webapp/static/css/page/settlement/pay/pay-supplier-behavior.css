@@ -1,0 +1,32 @@
+/*
+ * zmx 2016/06/02
+ * 付款 页面样式
+*/
+
+/*付款明细表格 start*/
+.pay-box{ height: 42px; background: #fff; border: 1px solid #d2d2d2; line-height: 42px; color: #333; font-size: 14px; font-weight: bold; padding: 0 10px;}
+.table-btn{ float: right;font-size: 12px; color: #666; cursor: pointer;}
+.table-btn i{ font-size: 14px; line-height: 42px;}
+/*付款明细表格 end*/
+
+/*付款信息 start*/
+.pay-inforbox{ background: #fff; border: 1px solid #d2d2d2; margin-top: 10px; overflow: hidden;}
+.pay-title{ height: 40px; line-height: 40px; font-weight: bold; font-size: 14px; border-bottom: 1px solid #ddd;padding: 0 10px;}
+.pay-con{ padding: 0 10px;}
+.method-title{margin: 15px 0; border-left: 2px solid #999; color: #333; padding-left: 5px;}
+.method-box{padding-bottom:20px; border-bottom: 1px solid #d2d2d2;}
+.remarks{margin: 15px 0;}
+.total-box p{ color: #535353; line-height: 20px;}
+.total-box p span{color: #fa7b7c; font-size: 14px;}
+.btn-box{padding: 15px 10px; margin-top: 10px; border-top: 1px solid #d2d2d2;}
+/*付款信息 end*/
+
+/*隐藏表格 start*/
+.show-table{ width: 100%; background: #fff; height: auto; border: 1px solid #d2d2d2; border-top: none; padding: 10px; display: none;}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{ background: #f9f9f9;}
+/*隐藏表格 end*/
+
+.text-area-width{ width: 750px;}
+.total-box{ position: relative;}
+.total-box .payee{ position: absolute; right: 10px; bottom: 0; line-height: 30px;}
+.total-box .payee span{ margin-left: 10px;}

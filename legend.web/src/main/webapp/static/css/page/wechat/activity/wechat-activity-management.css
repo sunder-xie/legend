@@ -1,0 +1,231 @@
+.add-coupon,.manage-coupon{
+    margin-left: 5px;
+}
+.order-body{
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-top: 5px;
+}
+.order-body>h2 {
+    position: relative;
+    padding-left: 70px;
+    height: 70px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 70px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    background: url('../../../../img/page/wechat/youhui.png') no-repeat  14px center #f9f9f9;
+}
+.toggle{
+    position: absolute;
+    width: 82px;
+    height: 32px;
+    left: 220px;
+    top: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 1px;
+    color: #fff;
+    font-size: 12px;
+}
+#toggle-true{
+    background: #8fb027;
+    border: 1px solid #7fa700;
+}
+#toggle-false{
+    background: #f2666a;
+    border: 1px solid #d81c1f;
+}
+.toggle > span{
+    width: 35px;
+    height: 28px;
+    background: #fff;
+    border-radius: 2px;
+}
+.toggle > small{
+    line-height: 30px;
+}
+#toggle-false > small{
+    margin-right: 4px;
+}
+#toggle-true > small{
+    margin-left: 4px;
+}
+.setting-content{
+    padding: 25px 10px;
+}
+.w80{
+    width: 80px;
+}
+.period{
+    margin-top: 15px;
+}
+.radio {
+    vertical-align: baseline;
+}
+.radio-width{
+    width: 90px;
+}
+.radio-width > input[type='radio']{
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+.activity-time,.times-setting{
+    margin-bottom: 25px;
+}
+.number-setting{
+    margin-bottom: 15px;
+}
+.table-width{
+    width: 80%;
+}
+.participation-probability{
+    margin: 20px 0;
+}
+.advanced-setup{
+    margin-bottom: 20px;
+}
+.advanced-setup .arrow-up{
+    width: 12px;
+    height: 7px;
+    background: url("../../../../img/common/base/arrow_up.png");
+}
+.advanced-setup .arrow-down{
+    width: 12px;
+    height: 7px;
+    background: url("../../../../img/common/base/arrow_down.png");
+}
+.advanced-setting-box{
+    display: none;
+    width: 540px;
+    padding: 0 10px;
+    margin: 10px 0 0 85px;
+    border:1px solid #ddd;
+}
+.more-times-setting{
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.w32{
+    width: 32.5%;
+}
+.w32 > input[type='checkbox'],.choose-interface > input[type='radio']{
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+.lottery-interface{
+    padding: 15px 0 0 0;
+}
+.vertical-top{
+    vertical-align: top;
+}
+.choose-interface{
+    width: 160px;
+    margin-bottom: 15px;
+}
+.view-style{
+    color: #607b0a;
+    text-decoration: underline;
+}
+.button{
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+/*弹窗样式 start*/
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.bounce-content{
+    padding: 10px 20px;
+}
+.bounce-foot{
+    text-align: center;
+    margin: 10px 0;
+}
+.preview-foot{
+    margin: 0 !important;
+}
+#qrcodeView{
+    text-align: center;
+}
+.bounce-item-content{
+    padding: 16px;
+}
+.table-bounce-content{
+    padding: 20px 28px;
+}
+.bounce-content p {
+    padding: 10px;
+    text-align: center;
+}
+.bounce-body{
+    text-align: center;
+    height: 90px;
+}
+.option{
+    line-height: 45px;
+}
+.option>input{
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+/*弹窗样式 end*/
+
+/*数据统计弹窗 start*/
+.reportCheck h2{
+    background-color: #232f48;
+    color: white;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+}
+.reportCheck h3{
+    padding-left: 10px;
+    border-left: 2px solid #999;
+    margin: 10px 0;
+}
+.reportCheck .yqx-btn{
+    width: auto;
+    padding: 0 25px;
+}
+.js-customer-detail{
+    color: #7fa700;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.report-box{
+    box-sizing: border-box;
+    padding: 0 10px 10px;
+    min-height: 405px;
+}
+.statistics{
+    width: 60%;
+}
+.customerDetail{
+    width: 40%;
+    border-left: 1px solid #ddd;
+}
+.no-count{
+    color: #888;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+.page-btn.disable{
+    cursor: not-allowed;
+}
+.marT10{
+    margin-top: 10px;
+}
+/*数据统计弹窗 end*/

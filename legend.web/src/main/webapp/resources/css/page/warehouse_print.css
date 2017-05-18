@@ -1,0 +1,74 @@
+body {
+    width:980px;
+    font-size:16px;
+    margin:0 auto;
+    padding: 0;
+    background-color:white;
+    color:black;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.head {
+    width:100%;
+}
+.head h1, .head h3 {
+    padding: 0 102px;
+}
+h1, h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+.head div span {
+    display:inline-block;
+    width:320px;
+    margin-right:6px;
+}
+table {
+    width: 100%;
+    /*table-layout: fixed;*/
+    border-collapse:collapse;
+}
+td, th {
+    height:25px;
+    border:1px solid #000;
+    word-break: break-all;
+}
+th {
+    text-align:center;
+}
+.sequence {
+    text-align:center;
+}
+.count {
+    text-align: right;
+}
+.count span {
+    margin-right: 60px;
+}
+.signature {
+    margin-top:5px;
+    margin-bottom: 20px;
+}
+.signature span {
+    display: inline-block;
+    width:190px;
+    margin-right: 6px;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+.tr_3{
+    text-align: center;
+}
+.tr_1 div, .tr_3 div {
+    min-height: 25px;
+    line-height: 20px;
+    float:left;
+}
+.right_boder {
+    border-right:1px solid #000;
+}

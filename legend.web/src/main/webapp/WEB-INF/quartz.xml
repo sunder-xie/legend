@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xmlns = "http://www.springframework.org/schema/beans"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+
+    <bean class = "org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name = "triggers">
+            <list>
+                <ref bean="cacheDailyTrigger"/>
+                <ref bean="marketingVisitCountTrigger"/>
+                <ref bean="customerCarBrandAndModelTrigger"/>
+                <ref bean="newsViewTimesTrigger"/>
+                <ref bean="shopNoteAppointTrigger"/>
+                <ref bean="shopNoteInsuranceTrigger"/>
+                <ref bean="shopNoteAuditingTrigger"/>
+                <ref bean="shopNoteVisitTrigger"/>
+                <ref bean="shopNoteBirthdayTrigger"/>
+                <ref bean="shopNoteLostCustomerTrigger"/>
+                <ref bean="shopNoteMaintainTrigger"/>
+                <ref bean="shopNoteNextVisitTrigger"/>
+                <ref bean="shopNoteInvalidTrigger"/>
+            </list>
+        </property>
+        <property name = "autoStartup" value = "${quartz.run}" />
+        <property name="quartzProperties">
+            <props>
+                <prop key="org.quartz.scheduler.skipUpdateCheck">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--缓存定时刷新-->
+    <bean id="cacheDailyTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="cacheComponent" />
+                <property name="targetMethod" value="reloadAll"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <property name="cronExpression" value="0 0 23 * * ?"/>
+    </bean>
+
+    <!--门店营销活动访问量定时更新-->
+    <bean id="marketingVisitCountTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="marketingVisitCountTimer" />
+                <property name="targetMethod" value="process"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <property name="cronExpression" value="0 0 */5 * * ?"/><!-- 每5小时执行-->
+    </bean>
+
+    <!--定时清除常用车型和车品牌-->
+    <bean id="customerCarBrandAndModelTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="customerCarBrandAndModelTimer" />
+                <property name="targetMethod" value="process"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <property name="cronExpression" value="0 15 1 * * ?"/><!-- 每天凌晨1点15分触发执行-->
+    </bean>
+
+
+    <!--云修资讯浏览次数同步-->
+    <bean id="newsViewTimesTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetObject">
+                    <bean class="com.tqmall.legend.biz.quartz.NewsViewTimesDaily"/>
+                </property>
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <property name="cronExpression" value="0 0 4 * * ?"/><!-- 每天4点触发执行-->
+    </bean>
+
+    <!--预约单提醒-->
+    <bean id="shopNoteAppointTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="appointTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */10 * * * ?"/>-->
+        <property name="cronExpression" value="0 0 8-20/2 * * ?"/><!-- 每天从早8点到晚8点每隔2小时触发执行-->
+    </bean>
+
+    <!--保险提醒-->
+    <bean id="shopNoteInsuranceTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="insuranceTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */10 * * * ?"/>-->
+        <property name="cronExpression" value="0 5 1 * * ?"/><!-- 每天1点5分触发执行-->
+    </bean>
+
+    <!--年检提醒-->
+    <bean id="shopNoteAuditingTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="auditingTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */10 * * * ?"/>-->
+        <property name="cronExpression" value="0 10 1 * * ?"/><!-- 每天1点10分触发执行-->
+    </bean>
+
+    <!--回访提醒-->
+    <bean id="shopNoteVisitTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="visitTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */10 * * * ?"/>-->
+        <property name="cronExpression" value="0 0 8-20/2 * * ?"/><!-- 每天从早8点到晚8点每隔2小时触发执行-->
+    </bean>
+
+    <!--生日提醒-->
+    <bean id="shopNoteBirthdayTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="birthdayTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */10 * * * ?"/>-->
+        <property name="cronExpression" value="0 15 1 * * ?"/><!-- 每天1点15分触发执行-->
+    </bean>
+
+    <!--流失客户提醒-->
+    <bean id="shopNoteLostCustomerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="lostCustomerTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */10 * * * ?"/>-->
+        <property name="cronExpression" value="0 20 1 * * ?"/><!-- 每天1点20分触发执行-->
+    </bean>
+
+    <!--保养提醒-->
+    <bean id="shopNoteMaintainTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="maintainTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */10 * * * ?"/>-->
+        <property name="cronExpression" value="0 25 1 * * ?"/><!-- 每天1点25分触发执行-->
+    </bean>
+
+    <!--下次回访提醒-->
+    <bean id="shopNoteNextVisitTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="nextVisitTimer" />
+                <property name="targetMethod" value="execute"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <!--<property name="cronExpression" value="0 */8 * * * ?"/>-->
+        <property name="cronExpression" value="0 30 1 * * ?"/><!-- 每天1点30分触发执行-->
+    </bean>
+
+    <!--提醒过期-->
+    <bean id="shopNoteInvalidTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+                <property name="targetBeanName" value="shopNoteInvalidTimer" />
+                <property name="targetMethod" value="process"/>
+                <property name="concurrent" value="false"/>
+            </bean>
+        </property>
+        <property name="cronExpression" value="0 0 3 * * ?"/><!-- 每天3点0分触发执行-->
+    </bean>
+</beans>
+

@@ -1,0 +1,209 @@
+.choose-type{
+    padding: 10px 20px 0 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+.info-item{
+    display: inline-block;
+    line-height: 35px;
+    vertical-align: middle;
+    position: relative;
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #d6d6d6;
+    border-top: 1px solid #d6d6d6;
+    overflow: hidden;
+    width: 97%;
+    padding:0 10px;
+    margin-top: 10px;
+}
+.detail{
+    border-bottom: 1px solid #d6d6d6;
+    margin: 0 4px 0 20px;
+    padding: 10px 0;
+    display: none;
+}
+.info-item img{
+    position: absolute;
+    top: 7px;
+}
+.ml35{
+    margin-left: 35px;
+}
+.bold{
+    font-size: 14px;
+    font-weight: bold;
+}
+.red{
+    color: #f2666a;
+}
+.description{
+    margin-left: 60px;
+}
+.unfold,.fold{
+    margin-left: 15px;
+    cursor: pointer;
+}
+.fold{
+    display: none;
+}
+.service-item + .service-item {
+    margin-top: 10px;
+}
+.service-title{
+    vertical-align: top;
+    width: 120px;
+    text-align: right;
+    display: inline-block;
+}
+.service-content{
+    display: inline-block;
+}
+.content-item{
+    margin-bottom: 8px;
+}
+.button{
+    margin: 20px 0 20px 10px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.exit{
+    color: white;
+}
+.bounce-content{
+    margin: 20px;
+}
+.collection-title{
+    font-size: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1d1d1;
+}
+.combo-type,.receivable-amount,.collection{
+    margin-top: 10px;
+}
+.collection{
+    margin-bottom: 10px;
+}
+.receivable-amount{
+    margin-left: 12px;
+}
+.js-submit{
+    margin-left: 215px;
+}
+.downlist-new-car {
+    height:32px;
+    line-height:32px;
+    text-align: center;
+}
+.downlist-new-car a {
+    display: inline-block;
+    background: #9fc527;
+    color: #FFF;
+    height:22px;
+    line-height:22px;
+    width:60px;
+    border-radius: 2px;
+}
+/*618*/
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{text-align: center;padding: 10px;}
+
+.layui-layer-page .layui-layer-content{ overflow:inherit;}
+.license-show{ display: none;}
+.link-bd,.link-bd:hover{ color: #215ced; text-decoration: underline;}
+.disabled-btn,.disabled-btn:hover{ background: #999; border:1px solid #999; color: #666;}
+
+/*账户不存在弹框*/
+.member-card-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.account-no-exist-dg .content {
+    font-size: 12px;
+}
+.account-no-exist-dg .content>p{
+    text-align: center;
+    padding:10px;
+}
+.mgt40{
+    margin-top: 40px;
+}
+.complete_info{
+    background-color: #a0c338;
+    color: #666;
+    display: inline-block;
+    line-height: 32px;
+    margin: 20px auto;
+    padding: 0 20px;
+    border-radius: 8px;
+}
+.license-label{
+    width: 62px;
+    text-align: left;
+}
+.carLicense{
+    display: inline;
+}
+
+.service-name,.service-count{
+    display: inline-block;
+    width: 200px;
+}
+.service-name{
+    margin-right: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+/*没有数据样式*/
+.nodata{ overflow: hidden;}
+.nodata-l{width: 260px; margin-top: 75px;}
+.nodata-l p{ color: #fd3235; font-size: 14px; font-weight: bold; line-height: 25px;}
+.nodata-l a{ margin-top:30px; margin-bottom: 45px;}
+.nodata-r{ position: relative;}
+.triangle-left{
+    position: absolute;
+    top:105px;
+    left: 0;
+    width:8px;
+    height:20px;
+    background: url("../../../../img/page/account/triangle.png") no-repeat;
+}
+.nodata-tips{
+    border: 1px solid #e5e5e5;
+    width: 510px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 7px;
+    background: url("../../../../img/page/account/data-ico.png") no-repeat center 43px #f9f9f9;
+}
+.nodata-tips p{ font-size: 14px; text-align: center; margin-top: 115px;}
+
+.highlight {
+    color: #f00;
+}
+.mb10 {
+    margin-bottom: 10px;
+}

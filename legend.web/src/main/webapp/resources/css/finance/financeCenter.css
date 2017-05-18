@@ -1,0 +1,56 @@
+.finance-center {
+    /*float: left;;*/
+}
+.con-left{
+    width: 200px;
+    float: left;
+}
+.con-right{
+    width: 770px;
+    background-color: white;
+    float: right;
+}
+.con-right .bills-date{
+    width: 750px;
+    height: 43px;
+    line-height: 43px;
+    padding-left: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+.con-right .credit-apply{
+    width: 770px;
+    height: 356px;
+    position: relative;
+}
+.con-right .apply-action{
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -88px;
+}
+.credit-apply .apply-notice{
+    margin-bottom: 10px;
+}
+.credit-apply .go-apply{
+    width: 120px;
+    height: 35px;
+    background-color: #90b127;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+}
+
+.banner {
+    float: left;
+}
+.banner img {
+    width: 1440px;
+}
+
+.history-bills {
+    float: right;
+    margin-right: 80px;
+    color: #4368a2;
+    text-decoration: underline;
+}

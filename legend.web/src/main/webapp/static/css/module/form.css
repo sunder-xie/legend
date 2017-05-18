@@ -1,0 +1,332 @@
+/**
+ * ch 2016-03-23
+ * 表单元素 
+ */
+
+.form-row + .form-row {
+    margin-top: 10px;
+}
+
+.form-label, .form-item {
+    vertical-align: middle;
+}
+
+.form-label {
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    color: #333;
+    padding-right: 8px;
+}
+
+.form-label-must:before {
+    color: red;
+    content: "*";
+    position: absolute;
+    top: -4px;
+    margin-left: -6px;
+    font-size: 12px;
+}
+
+.form-item {
+    position: relative;
+    display: inline-block;
+}
+
+.yqx-input:hover,
+.yqx-textarea:hover {
+    border-color: #9fc527;
+    box-shadow: 0 0 5px #e5e9d7;
+}
+
+.yqx-input:focus,
+.yqx-textarea:focus {
+    background: #fffdf1;
+    box-shadow: inset 0 0 5px #bfbfbf;
+}
+
+/**
+ * 基类的input
+ */
+.yqx-input {
+    line-height: 34px;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    background: #fff;
+    width: 100%;
+}
+
+.yqx-input-icon {
+    padding-right: 36px;
+}
+
+.yqx-input-small {
+    line-height: 28px;
+}
+
+/**
+ * 只读和禁用的input
+ */
+.yqx-input[disabled]:hover,
+.yqx-input[disabled]:focus,
+.yqx-input[readonly]:hover,
+.yqx-input[readonly]:focus {
+    border-color: #bfbfbf;
+    box-shadow: none;
+}
+
+.yqx-input[disabled] {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+.yqx-input[readonly] {
+}
+
+.yqx-input.yqx-input-opacity,
+.yqx-input.yqx-input-opacity:hover,
+.yqx-input.yqx-input-opacity:focus {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    cursor: default;
+}
+
+/**
+ * 块级input
+ */
+.yqx-input-block {
+    display: block;
+    width: 100%;
+}
+
+.form-item > .fa {
+    position: absolute;
+    height: 100%;
+    width: 36px;
+    border-left: 1px solid #dadada;
+    right: 0;
+    top: 0;
+    line-height: 36px;
+    font-style: normal;
+    text-align: center;
+    color: #666;
+}
+
+.form-item > .icon-small {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+/**
+ * 带下拉的input，需继承yqx-input
+ */
+
+.form-item > .icon-angle-down,
+.form-item > .icon-angle-up {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/**
+ * 日历input，需继承yqx-input
+ */
+.form-item > .icon-calendar {
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+/**
+ * 基类 button按钮
+ */
+.yqx-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 17px;
+    line-height: 35px;
+    font-family: inherit;
+    font-size: 14px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.yqx-btn-small {
+    line-height: 30px;
+}
+
+.yqx-btn-small.yqx-btn-1 {
+    line-height: 28px;
+}
+
+.yqx-btn-micro {
+    padding: 0 9px;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+.yqx-btn-micro.yqx-btn-1 {
+    padding: 0 8px;
+    line-height: 23px;
+}
+
+/**
+ * 以下btn需继承 yqx-btn
+ */
+.yqx-btn-1 {
+    padding: 0 16px;
+    line-height: 33px;
+    color: #333;
+    background: #f9f9f9;
+    border: 1px solid #d2d2d2;
+}
+
+.yqx-btn-1:hover {
+    background: #ddd;
+}
+
+.yqx-btn-2,
+.yqx-btn-3,
+.yqx-btn-4 {
+    color: #fff;
+}
+
+.yqx-btn-2 {
+    background: #fd461e;
+}
+
+.yqx-btn-2:hover {
+    background: #a62f1d;
+}
+
+.yqx-btn-3 {
+    background: #607b0a;
+}
+
+.yqx-btn-3:hover {
+    background: #415011;
+}
+
+.yqx-btn-4 {
+    background: #115599;
+}
+
+.yqx-btn-4:hover {
+    background: #232e49;
+}
+
+.yqx-btn[disabled] {
+    color: #666;
+    background: #eee;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+}
+
+/**
+ * 文本域
+ */
+.yqx-textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    line-height: 20px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+
+/**
+ * 表单里的纯文字
+ */
+.yqx-text {
+    width: 100%;
+    padding: 0 5px;
+    line-height: 36px;
+}
+
+.tag-control-n {
+    cursor: pointer;
+}
+
+.tag-control-n.selected {
+    border: 2px solid #607b0a !important;
+}
+.tag-control-n.selected,
+.tag-control.selected {
+    position: relative;
+    line-height: 32px;
+    background: #fff;
+    border: 2px solid #607b0a;
+}
+
+.tag-control.selected:after,
+.tag-control-n.selected:after {
+    display: inline;
+    content: "";
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 20px;
+    height: 18px;
+}
+
+.tag-control-n.selected:after {
+    background: url('../../img/common/order/tag-control.png') 0 0 no-repeat;
+}
+
+.tag-control.selected:after {
+    background: url(../../img/common/order/order-sprite.png) 0 0 no-repeat;
+}
+
+/* 链接样式 */
+.yqx-link {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.yqx-link:hover {
+    color: #415011;
+}
+
+.yqx-link-1, .yqx-link-2, .yqx-link-3 {
+    text-decoration: underline;
+}
+
+.yqx-link-1:hover, .yqx-link-2:hover, .yqx-link-3:hover {
+    text-decoration: none;
+}
+
+.yqx-link-1 {
+    color: #115599;
+}
+
+.yqx-link-1:hover {
+    color: #232e49;
+}
+
+.yqx-link-2 {
+    color: #fd461e;
+}
+
+.yqx-link-2:hover {
+    color: #a62f1d;
+}
+
+.yqx-link-3 {
+    color: #607b0a;
+}
+
+.yqx-link-3:hover {
+    color: #415011;
+}
+
+.yqx-checkbox {
+    margin-right: 5px;
+    vertical-align: baseline;
+}
+
+

@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>淘汽云修商家版 APP2.0</title>
+	<meta name="viewport" content="width=640">
+	<!-- <link rel="stylesheet" type="text/css" href="../../css/app_h5_relay/reset.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../css/app_h5_relay/index.css?1"> -->
+	<link rel="stylesheet" type="text/css" href="../../css/app_h5_relay/animation.css">
+	<style type="text/css">
+	html {
+    -ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+    }
+    body,div,p {margin: 0; padding: 0; }
+    ul {list-style: none; }
+    body {width: 640px; *cursor: default; overflow: hidden; font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial; }
+    #pageContain {overflow: hidden; }
+    .page {display: none; width: 100%; height: 100%; overflow: hidden; position: absolute; top: 0; left: 0; }
+    .contain {width: 100%; height: 100%;display:none; position: relative; z-index: 0; }
+    .slide {display: block; z-index: 2; }
+    .swipe {display: block; z-index: 3; transition-duration: 0ms !important; -webkit-transition-duration: 0ms !important; }
+    .page1{ background: url(../../images/app_h5_relay2/page1.jpg) no-repeat; background-size: 100% 100%;}
+	.page2{ background: url(../../images/app_h5_relay2/page2.jpg) no-repeat; background-size: 100% 100%; }
+	.page3{ background: url(../../images/app_h5_relay2/page3.jpg) no-repeat; background-size: 100% 100%; }
+	.page4{ background: url(../../images/app_h5_relay2/page4.jpg) no-repeat; background-size: 100% 100%; }
+	.page5{ background: url(../../images/app_h5_relay2/page5.jpg) no-repeat; background-size: 100% 100%; }
+	.page6{ background: url(../../images/app_h5_relay2/page6.jpg) no-repeat; background-size: 100% 100%; }
+	.jiantou{position: absolute;width: 25px;top: 95%;left:50%;margin-left: -12px;}
+	.current{z-index: 1;}
+
+	.page1 .phone{width: 209px;height:433px;position: absolute;top:50%;margin-top: -100px;left:50%;margin-left: -200px;}
+	.page1 .ewm{width: 225px;height:225px;position: absolute;top:50%;margin-top: -15px;left:50%;margin-left: 5px;}
+
+	.page2 .phone{width: 209px;height:433px;position: absolute;top:50%;margin-top: -200px;left:50%;margin-left: -105px;}
+
+	.page3 .hander{width: 500px;height:560px;position: absolute;top:50%;margin-top: -170px;left:0;}
+
+	.page4 .img4{width: 235px;height:418px;position: absolute;top:50%;margin-top: -70px;left:50%;}
+
+	.page5 .img5{width: 172px;height:490px;position: absolute;top:50%;margin-top: -140px;left:50%;margin-left: -295px;}
+
+	.page6 .img6{width: 254px;height:536px;position: absolute;top:50%;margin-top: -127px;left:50%;margin-left: -25px;}
+    
+    .current {display: block; z-index: 1; }
+    .current .contain,.slide .contain {display: block; }
+    </style>
+</head>
+<body>
+	<div id="pageContain" class="wraper">
+		<div class="page1 page current">
+			<div class="contain">
+				<img src="../../images/app_h5_relay2/phone.png" class="phone pt-page-moveFromLeftFade" />
+				<img src="../../images/app_h5_relay2/ewm.png" class="ewm pt-page-moveFromRightFade" />
+			</div>
+		</div>
+		<div class="page2 page">
+			<div class="contain">
+				<img src="../../images/app_h5_relay2/phone.png" class="phone pt-page-moveFromRightFade pt-page-delay700" />
+			</div>
+		</div>
+		<div class="page3 page">
+			<div class="contain">
+				<img src="../../images/app_h5_relay2/hander.png" class="hander pt-page-moveFromLeftFade pt-page-delay700" />
+			</div>
+		</div>
+		<div class="page4 page">
+			<div class="contain">
+				<img src="../../images/app_h5_relay2/img4.png" class="img4 pt-page-moveFromRightFade pt-page-delay700" />
+			</div>
+		</div>
+		<div class="page5 page">
+			<div class="contain">
+				<img src="../../images/app_h5_relay2/img5.png" class="img5 pt-page-moveFromLeftFade pt-page-delay700" />
+			</div>
+		</div>
+		<div class="page6 page">
+			<div class="contain">
+				<img src="../../images/app_h5_relay2/img6.png" class="img6 pt-page-moveFromRightFade pt-page-delay700" />
+			</div>
+		</div>
+	</div>
+	<!--<script type="text/javascript" src="../../js/app_h5_relay/zepto.min.js"></script>-->
+	<!--<script type="text/javascript" src="../../js/app_h5_relay/touch.js"></script>-->
+	<!--<script type="text/javascript" src="../../js/app_h5_relay/index.js?!1"></script>-->
+	<script type="text/javascript" src="../../js/app_h5_relay/MetaHandler.js"></script>
+	<script type="text/javascript" src="../../js/app_h5_relay/fullPage.min.js"></script>
+	<script type="text/javascript">
+	var runPage;
+	runPage = new FullPage({
+		//页面所在的父容器传id
+		id : 'pageContain', 
+		//滚动动画执行时间 
+		slideTime : 800, 
+		//是否循环滚动 
+		continuous : false, 
+		//切换动画
+		effect : {                                 
+        	transform : {
+        		translate : 'Y',			   // 'X'|'Y'|'XY'|'none'
+        		scale : [.1, 1],				   // [scalefrom, scaleto]
+        		rotate : [270,0]				       // [rotatefrom, rotateto]
+        	},
+        	opacity : [0, 1]                       // [opacityfrom, opacityto]
+	    	},                           
+		mode : 'wheel,touch',               // mode of fullpage
+		easing : 'ease-in-out'                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1];
+	    //  ,onSwipeStart : function(index, thisPage) {   // callback before pageChange
+	    //    return 'stop';
+	    //  }
+	    //  ,beforeChange : function(index, thisPage) {   // callback before pageChange
+	    //    return 'stop';
+	    //  }
+	    //  ,callback : function(index, thisPage) {       // callback when pageChange
+	    //    alert(index);
+	    //  };
+	});
+	</script>
+</body>
+</html>

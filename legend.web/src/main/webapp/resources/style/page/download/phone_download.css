@@ -1,0 +1,115 @@
+.app_android {
+    background: url("../../img/page/download/app_zhengshi.png");
+    width: 2.80rem;
+    height: 2.80rem;
+}
+.download_btn{
+    text-align: center;
+}
+.app_download {
+    display: inline-block;
+    width:80%;
+    margin-top:10%;
+}
+.download_text{
+    margin-top:12%;
+    font-size:2.5rem;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+body,div{
+    padding:0;
+    margin:0;
+}
+
+/*body{*/
+    /*overflow-y:auto;*/
+/*}*/
+.bg{
+    width:100%;
+    height: 9.80rem;
+    background:url(../../img/page/download/app.jpg) no-repeat;
+    background-position: center 0;
+}
+.wraper{
+    width: 11.20rem;
+    margin:0 auto;
+    overflow: hidden;
+}
+.top_left{
+    float: left;
+    overflow: hidden;
+    margin-top: 0.18rem;
+}
+.top_left a{
+    display: block;
+    float: left;
+    width: 1.21rem;
+    height: 0.65rem;
+    background:url(../../img/page/download/logo.png) no-repeat;
+}
+.top_left img{
+    vertical-align:middle;
+}
+.change{
+    height:0.65rem;
+    line-height:0.65rem;
+    vertical-align:bottom;
+    float: left;
+    font-size:0.24rem;
+    color:white;
+    font-weight: 700;
+    margin-left: 0.10rem;
+}
+
+
+body,div,span,img{
+    padding:0;
+    margin:0;
+}
+body{
+    width:100%;
+    height: 8rem;
+    background:url(../../img/page/download/app-download-phone.jpg) no-repeat top center;
+    background-size: 100%;
+    /*background-size: contain;*/
+    overflow:hidden;
+    /*background-repeat:no-repeat;*/
+}
+.box{
+    width:4.32rem;
+    height:1.1rem;
+    background:#008EF0;
+    border-radius:0.74rem;
+    position:absolute;
+    top:4.20rem;
+    left:35%;
+    margin-left: -1.20rem;
+}
+.box span{
+    font-family:arial-black;
+    font-size:0.52rem;
+    color:white;
+    position:absolute;
+    top:22%;
+    left:26%;
+}
+
+.comment{
+    font-family:arial-black;
+    font-size:0.30rem;
+    width:5.52rem;
+    height:1.38rem;
+    line-height:1.38rem;
+    color: #fff;
+    border-radius:0.74rem;
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    margin-left: -2.76rem;
+    text-align: center;
+}
+#weixin-tip{position: fixed;left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} 
+#weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}

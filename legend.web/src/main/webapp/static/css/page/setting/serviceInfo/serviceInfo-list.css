@@ -1,0 +1,80 @@
+/*
+* create by zmx 2017/1/5
+* 服务资料
+*/
+.form-box{
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 10px;
+}
+.form-box .form-item{
+    width: 135px;
+}
+
+.btn-box{
+    padding: 10px 0;
+}
+.table-con{
+    border: 1px solid #cacaca;
+}
+.pic{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+.text{
+    width: 260px;
+    float: left;
+}
+.text h3{
+    max-width: 260px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+}
+.text p{
+    max-width: 260px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.w-340{
+    width: 340px;
+}
+.yqx-select-options{
+    width: 100%;
+    display: none;
+}
+.m-right{
+    margin-right: 10px;
+}
+
+.content .manage {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.content .manage + .manage {
+    margin-right: 14px;
+}
+
+.content .manage + .manage:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #ddd;
+    right: -7px;
+    top: 2px;
+    width: 1px;
+    height: 12px;
+}
+
+.manage img {
+    margin-bottom: -3px;
+    margin-right: 6px;
+}
+
+a {
+    color: inherit;
+}

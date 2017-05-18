@@ -1,0 +1,118 @@
+/* 配件列表样式 */
+
+.qxy_part_list{
+}
+.qxy_part_list .part_box{
+	border: 1px solid #dadada;
+	margin-bottom: 10px;
+}
+.qxy_part_list .part_box_left,.qxy_part_list .part_box_right{
+	float: left;
+}
+.qxy_part_list .part_box_left{
+	width: 80%;
+}
+.qxy_part_list .part_box_right{
+	width: 20%;
+}
+.qxy_part_list .left_inner{
+	padding : 20px;
+	background: #fff;
+	border-right:1px solid #dadada;
+}
+.qxy_part_list .part_img,.qxy_part_list .part_text{
+	float: left;
+}
+.qxy_part_list .part_img{
+
+}
+.qxy_part_list .part_text{
+	margin-left: 20px;
+}
+.qxy_part_list .part_text dt{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.qxy_part_list .part_text dd{
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.qxy_part_list .part_box_right{
+	/*overflow: hidden;*/
+	height: 132px;
+}
+.qxy_part_list .part_box_right a{
+	display:inline-block;
+  	height: 25px;
+  	line-height:25px;
+ 	width: 70px;
+  	margin: 0 5px;
+  	border: 1px solid #c1c1c1;
+  	text-align:center;
+  	color:#000;
+  	background:#f7f7f7;
+}
+.qxy_part_list .opt_add{
+	text-align:center;
+}
+.qxy_part_list .opt_add a{
+	margin:50px auto;
+	width :120px;
+}
+.qxy_part_list .opt_edit .price{
+	font-size: 16px;
+	margin-top: 30px;
+	text-indent: 20px;
+}
+.qxy_part_list .opt_edit .price span{
+	font-size: 24px;
+	color: #e50206;
+}
+.qxy_part_list .opt_edit .sn{
+	text-indent: 20px;
+	font-size: 12px;
+	margin-top: 10px;
+}
+.qxy_part_list .opt_edit .opt{
+	margin-top: 10px;
+	text-align: center;
+}
+.qxy_part_list .opt_save label{
+	width: 50px;
+	display: inline-block;
+	font-size: 12px;
+	text-align: right;
+	margin-right: 10px;
+}
+.qxy_part_list .opt_save label i{
+	font-style: normal;
+	color: red;
+}
+.qxy_part_list .opt_save input{
+	width: 110px;
+	height:24px;
+	line-height:24px;
+	text-indent:5px;
+	border-radius:5px;
+	border:1px solid #c1c1c1;
+	background:#fff;
+}
+.qxy_part_list .opt_save .price{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.qxy_part_list .opt_save .sn{
+	margin-top: 10px;
+}
+.qxy_part_list .opt_save .opt{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.part_box_right .qxy_err_msg{
+	top:-30px;
+	left:90px;
+	min-width:130px;
+}

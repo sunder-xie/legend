@@ -1,0 +1,55 @@
+/**
+ * 工单报价
+ * zmx 2016-08-25
+ */
+
+.condition-box {
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.condition-input {
+    padding-bottom: 10px;
+}
+
+.list-tab-box {
+    border: none;
+    margin-bottom: 0;
+}
+
+.color-red {
+    color: #f55d5e;
+}
+
+.color-green {
+    color: #7fa700;
+}
+
+.yqx-table a {
+    text-decoration: underline;
+}
+
+.table-scroll-box {
+    overflow-x: auto;
+}
+.tc-datetime{
+    width: 120px;
+}
+
+.tc-3 {
+    width: 110px;
+}
+
+.tc-4 {
+    width: 60px;
+}
+
+.tc-5 {
+    width: 230px;
+}
+
+.tc-6, .tc-7 {
+    width: 80px;
+}

@@ -1,0 +1,419 @@
+button{
+    font-family: "黑体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+a:hover{
+    color:#333;
+}
+.search{
+    width: 100%;
+    height: 75px;
+    background: #000;
+}
+.title{
+    width:100%;
+    height: 50px;
+    line-height: 60px;
+    color:#000;
+}
+.title .title-china{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.title .title-english{
+    color: #999;
+}
+.left{
+    width: 220px;
+    height: auto;
+    float: left;
+}
+
+.choice-car{
+    width: 100%;
+    height: 420px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    margin-top: 10px;
+    color: #333;
+}
+.list-text{
+    margin-left: 15px;
+    margin-top: 12px;
+    color: #333;
+}
+.list-detail{
+    margin-left: 15px;
+    margin-top: 25px;
+}
+.check-type{
+    width: 187px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    margin-top: 10px;
+    font-family: "黑体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.comform{
+    width: 187px;
+    height:35px;
+    background: #8eb110;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+.comform a{
+    color: #fff;
+    line-height: 35px;
+}
+.equipment-advice{
+    width: 100%;
+    height: 290px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    margin-top: 10px;
+}
+.right{
+    width: 740px;
+    float: right;
+}
+.container {
+    width: 100%;
+    height: 152px;
+    background: #e0e0e0;
+    overflow: hidden;
+    background: #fff;
+    padding-top: 0px;
+}
+#slides {
+    display: none;
+    position: relative;
+}
+.scroll-left {
+    width:228px;
+    height: 100%;
+    float: left;
+}
+.slidesjs-pagination {
+    left: 100px;
+    top: 130px;
+    position: absolute;
+    list-style: none;
+}
+
+.slidesjs-pagination li {
+    float: left;
+    margin: 0 3px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: url("../../images/technology_center/pagination.png");
+    background-position: 0 -7px;
+    float: left;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+    background-position: 0 0px;
+}
+
+.container .scroll-right{
+    width:511px;
+    height: 100%;
+    float: left;
+    padding: 23px;
+    box-sizing: border-box;
+}
+.lable{
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.lable .lable-name{
+    background: #e2ecef;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+    margin-right: 5px;
+}
+.lable .lable-clear{
+    display: inline-block;
+    padding: 5px;
+}
+
+h2{
+    height: 18px;
+    overflow: hidden;
+}
+.container .scroll-right p{
+    height: 40px;
+    line-height: 22px;
+    margin-top: 20px;
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.center-box{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.center-box .tabs{
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+    height: auto;
+}
+.center-box .tabs ul.my-tabs{
+    height: 40px;
+    width: 100%;
+    display: block;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e8e8e8;
+}
+.center-box .tabs ul.my-tabs li{
+    width: 105px;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid #e8e8e8;
+    cursor: pointer;
+}
+.center-box .tabs ul li.default{
+    height: 39px;
+    color: #8eb110;
+    background: #fff;
+    border-top: 2px solid #8eb110;
+}
+.center-box .tabs .tab-box{
+    height: 97px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.center-box .tabs .tab-box ul{
+    height: auto;
+    overflow: hidden;
+    padding: 20px 15px 0 15px;
+}
+.center-box .tabs .tab-box li{
+    margin-left: 20px;
+    margin-right: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 2px;
+    padding-right: 18px;
+}
+.center-box .tabs .tab-box li.check{
+    background: url("../../images/technology_center/check.png")right no-repeat;
+    border: 1px solid #ff7800;
+}
+.center-box .tabs .more{
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+.center-box .tabs .more .more-line{
+    width: 645px;
+    border: 1px dashed #efefef;
+    display: inline-block;
+    vertical-align: middle;
+}
+.center-box .tabs .more .arrow-down,.center-box .tabs .more .arrow-up{
+    padding: 0 23px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../images/arrow_down.png")30px no-repeat;
+}
+.center-box .tabs .more .arrow-up{
+    background: url("../../images/arrow_up.png")30px no-repeat;
+}
+.img-box img{
+    width: 233px;
+    height: 150px;
+}
+.center-img{
+    width: 765px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.center-img .content{
+    width: 233px;
+    height: 250px;
+    overflow: hidden;
+    float: left;
+    margin: 0 20px 20px 0;
+    border: 1px solid #f2f2f2;
+    border-bottom: 2px solid #e8e8e8;
+    background: #fff;
+}
+.center-img .content p{
+    border-bottom: 1px solid #f2f2f2;
+    padding: 10px;
+}
+.center-img .content .lable{
+    border-bottom: 1px solid #f2f2f2;
+    padding:0 10px 10px;
+}
+.page-box {
+    width: 570px;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    background: #fbfbfb;
+    border: 1px solid #dddddd;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+.prev_button, .next_button {
+    border-left:1px solid #ddd;
+    height: 40px;
+    vertical-align: top;
+    /*margin-left: 5px;*/
+    /*padding-left: 15px;*/
+}
+.first-btn,.prev_button,.next_button,.btn-number,.last-btn{
+    border-left:1px solid #ddd;
+    height: 40px;
+    vertical-align: top;
+    padding: 0 11px;
+}
+.btn-number{
+    background: #84b100;
+    display: inline-block;
+}
+.last-btn{
+    border-right:1px solid #ddd;
+    padding-right: 15px;
+}
+.page {
+    margin-left: 20px;
+    display: inline-block;
+}
+.pageNum {
+    width: 34px;
+    height: 18px;
+    margin: 0 3px;
+    border: 1px solid #cccccc;
+}
+.green-color{
+    color:#008100;
+}
+.redirect-btn {
+    width: 50px;
+    height: 34px;
+    border-left: 1px solid #dad9d9;
+    height: 40px;
+    vertical-align: top;
+    color:#008100;
+}
+.recommend-box {
+    width: 218px;
+    margin-top: 10px;
+    border: 1px solid #dad9d9;
+    background-color: #fff;
+}
+.recommend_tit {
+    line-height: 35px;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+.recommend_list {
+    margin: 10px 15px;
+}
+.recommend_list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #dad9d9;
+    overflow: hidden;
+}
+.rItem_l {
+    width: 68px;
+    height: 68px;
+    border: 1px solid #dad9d9;
+    float: left;
+}
+.rItem_l img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.rItem_r {
+    width: 103px;
+    margin-left: 15px;
+    float:left;
+}
+.goods_name {
+    height: 40px;
+    line-height: 20px;
+    margin: 15px 0;
+    font-size: 13px;
+    color: #999;
+    overflow: hidden;
+}
+.goods_price {
+}
+.search_tech-box {
+    height: 35px;
+    margin: 5px 0;
+    padding: 20px 28px;
+    background-color: #e0e0e0;
+}
+.search_tech-box label {
+    font-size: 18px;
+    font-weight: 900;
+    color: #454545;
+    vertical-align: middle;
+}
+.txt {
+    padding-left: 10px;
+    background-color: #fff;
+    border: 1px solid #dad9d9;
+    border-radius: 3px;
+}
+.search_tech_keyword {
+    width: 733px;
+    height: 35px;
+}
+.search_tech-btn {
+    width: 40px;
+    height: 28px;
+    margin-left: -41px;
+    background: url("../../images/search_tech.png") center no-repeat;
+}
+
+.wrapper .pagination > li > a, .wrapper .pagination > li > span {
+    float: none;
+}
+.wrapper .pagination > li{
+    float: left;
+}
+.wrapper .pagination li.page {
+    margin: 0;
+}
+.wrapper .pagination li.page.active {
+    width: inherit;
+}
+.wrapper .pagination{
+    width: 758px;
+}

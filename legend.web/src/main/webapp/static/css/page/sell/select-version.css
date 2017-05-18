@@ -1,0 +1,302 @@
+body{
+    background: url("../../../../static/img/page/sell/bg01.png") no-repeat center top #fff;
+    height:100%;
+    width:100%;
+}
+.wrap{
+    width: 990px;
+    overflow: hidden;
+    margin: 15px auto;
+    position: relative;
+}
+.title{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    font-family: "Microsoft Yahei", "微软雅黑", SimHei, Tahoma, Simsun, Arial;
+}
+.title-two{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑", SimHei, Tahoma, Simsun, Arial;
+}
+.version-box{
+    width: 855px;
+    height: 440px;
+    margin: 64px auto 0 auto;
+}
+.version-wrap{
+    width: 268px;
+    height: 440px;
+    float: left;
+    margin-right: 20px;
+}
+.version{
+    width: 268px;
+    height: 328px;
+    border: 1px solid #dde8ed;
+}
+.version-wrap:last-child{
+    margin-right: 0;
+}
+.btn-box{
+    opacity: 0;
+}
+.buy-btn{
+    display: block;
+    width: 190px;
+    height: 40px;
+    margin: 10px auto 14px auto;
+    background: #d0d0d0;
+    border-radius: 2px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-weight: bold;
+    line-height: 40px;
+    box-shadow: 0 0 12px 2px #ddd;
+    border-radius: 2px;
+}
+.buy-hover{
+    background:#009df0;
+    box-shadow: 0 0 15px 4px #d0dcef;
+}
+.agree{
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+}
+.protocol-link{
+    color: #009df0;
+    text-decoration: underline;
+}
+.protocol-link:hover{
+    text-decoration: underline;
+}
+.version-wrap-hover .version{
+    box-shadow: 0 8px 8px 0 #eef5f9;
+    transform: translate(0,-30px);
+    -webkit-transform: translate(0,-30px);
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-transition: transform .5s;
+}
+
+.version-wrap-hover .btn-box{
+    transform: translate(0,-14px);
+    -webkit-transform: translate(0,-14px);
+    opacity: 1;
+    transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+}
+
+.version-pic{
+    width: 268px;
+    height: 160px;
+}
+.version-text{
+    padding: 12px 14px;
+    overflow: hidden;
+}
+.version-text p{
+    font-size: 12px;
+    color: #666;
+    line-height: 25px;
+}
+.version-price{
+    width: 240px;
+    height: 70px;
+    margin: 0 auto;
+}
+.version-price .prime{
+    padding-top: 7px;
+    height: 27px;
+    line-height: 27px;
+    color: #666;
+}
+.version-price .prime em{
+    font-style: normal;
+    text-decoration: line-through;
+    font-family: arial, verdana, sans-serif;
+}
+.present-price .sale{
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Microsoft Yahei", "微软雅黑", SimHei, Tahoma, Simsun, Arial;
+}
+.present-price .year{
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+.present-price .bold{
+    font-weight: bold;
+    font-size: 16px;
+}
+.present-price a{
+    display: block;
+    width: 80px;
+    height: 25px;
+    background: #aaa;
+    line-height: 25px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #fff;
+}
+.present-price a:hover{
+    background: #009df0;
+}
+
+/*弹窗部分*/
+.dialog-box{
+    background: #f6f7fc;
+    width: 810px;
+    height: 470px;
+}
+.dialog-title{
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+.protocol-con{
+    width: 736px;
+    height: 300px;
+    overflow-y: scroll;
+    background: #fff;
+    padding: 15px;
+    margin: 0 auto;
+}
+.agree-protocol{
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: #009df0;
+    border:1px solid #0088d0;
+    border-radius: 4px;
+    margin: 20px auto 0 auto;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.agree-protocol:hover{
+    color: #fff;
+}
+
+.buy-pic{
+    display: block;
+    width: 234px;
+    height: 38px;
+    margin: 20px auto 0 auto;
+}
+.buy-flow{
+    width: 245px;
+    height: 30px;
+    margin: 8px auto 10px auto;
+}
+.buy-flow p{
+    font-size: 12px;
+    color: #666;
+}
+.edition{
+    margin: 10px 15px 25px 15px;
+}
+.edition li{
+    height: 26px;
+    background: url("../../../img/page/sell/buy-list-ico.png") no-repeat left center;
+    line-height: 26px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 14px;
+}
+.edition li .price{
+    font-size: 16px;
+    color: #fd461e;
+    font-family: arial, verdana, sans-serif;
+}
+.go-pay{
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    background: #009df0;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    border-radius:2px;
+}
+.go-pay:hover{
+    color: #fff;
+}
+.protocol-explain{
+    text-align: center;
+    color: #666;
+    line-height: 18px;
+}
+.tq-explain{
+    width: 102px;
+    height: 58px;
+    position: absolute;
+    top:25px;
+    right: 65px;
+    padding-top: 25px;
+}
+.tq-explain p{
+    color: #009df0;
+    font-weight: bold;
+    font-size: 12px;
+}
+.tq-explain img{
+    position: absolute;
+    right: 5px;
+    top:-5px;
+    animation: tqExplain linear 2s infinite alternate;
+    /* Firefox: */
+    -moz-animation: tqExplain linear 2s infinite alternate;
+    /* Safari 和 Chrome: */
+    -webkit-animation: tqExplain linear 2s infinite alternate;
+    /* Opera: */
+    -o-animation: tqExplain linear 2s infinite alternate;
+    -webkit-transform-origin:left bottom;
+    transform-origin:left bottom;
+}
+
+@-webkit-keyframes tqExplain
+{
+    from {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+
+    }
+    to {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes tqExplain
+{
+    from {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+
+    }
+    to {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}

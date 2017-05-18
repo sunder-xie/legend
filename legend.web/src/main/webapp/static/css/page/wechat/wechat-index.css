@@ -1,0 +1,206 @@
+.echart {
+    height: 164px;
+    width: 49%;
+    display: inline-block;
+}
+
+.split-line {
+    border-left: 1px solid #ddd;
+    width: 1px;
+    height: 47px;
+    margin: 53px 0;
+    display: inline-block;
+}
+i {
+    display: inline-block;
+}
+
+.index-icon {
+    background: url('../../../img/page/wechat/index-icons.png') no-repeat;
+}
+
+.order-body {
+    width: 100%;
+    min-height: 207px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.order-body h2 {
+    font-size: 13px;
+    background: #f9f9f9;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    display: block;
+    color: #333;
+    margin-bottom: 10px;
+}
+/** 头部信息 start **/
+.data-box.green {
+    background: #9fc527;
+}
+
+.green .back-text {
+    color: #93b624;
+}
+.green .circle {
+    background: #93b624;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.back-text {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-right: 10px;
+    margin-top: 13px;
+}
+
+.blue .circle {
+    background: #40b5de;
+}
+
+.blue .back-text {
+    color: #40b5de;
+}
+
+.data-box.blue {
+    background: #4bc8f4;
+}
+
+.data-box h2 {
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.data-box h2 small {
+    font-size: 12px;
+    font-family: Simsun,Tahoma,Arial,Helvetica Neue,Hiragino Sans GB,sans-serif;;
+    margin-left: 5px;
+}
+
+.data-box {
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.data-box , .data-box .left, .data-box .right {
+    display: inline-block;
+}
+
+.data-box .right {
+    float: right;
+}
+.data-box {
+    width: 49.34%;
+}
+
+.data-box + .data-box {
+    margin-left: 10px;
+}
+
+.data-box h1 {
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+.people {
+    background-position: -101px -47px;
+    height: 30px;
+    width: 32px;
+}
+
+.person {
+    background-position: -134px -47px;
+    height: 30px;
+    width: 26px;
+}
+
+/** 头部信息 end **/
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/** 菜单link start **/
+.menu-box .index-icon {
+    width: 52px;
+    height: 60px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block;
+}
+.menu-box {
+    width: 128.7px;
+    height: 128px;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-top: 10px;
+}
+
+.menu-box h3 {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #333;
+}
+
+.menu-box + .menu-box {
+    margin-left: 10px;
+}
+
+.index-icon.editor {
+    background-position: 0 -45px;
+    top: 40%;
+}
+
+.index-icon.pages {
+    background-position: -50px -45px ;
+    top: 40%;
+}
+
+.index-icon.comment {
+    background-position: -150px 0;
+    top: 45%;
+}
+.index-icon.wifi {
+    background-position: -99px 0;
+    top: 45%;
+}
+.index-icon.qrcode {
+    background-position: -49px 0;
+    height: 46px;
+    width: 46px;
+    top: 40%;
+}
+
+.index-icon.menu {
+    background-position: 0 0;
+    height: 46px;
+    width: 46px;
+    top: 45%;
+}
+/** 菜单link end **/

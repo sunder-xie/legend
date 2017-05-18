@@ -1,0 +1,43 @@
+{
+  "family": "legend",
+  "version": "1.0.0",
+  "name": "legend",
+  "description": "淘汽云修",
+  "scripts": {
+    "prebuild": "echo '老版前端环境构建中...'&&npm install --registry=https://registry.npm.taobao.org",
+    "build": "grunt chen",
+    "postbuild": "echo '老版编译完成！'"
+  },
+  "spm": {
+    "alias": {}
+  },
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-cmd-concat": "~0.2.8",
+    "grunt-cmd-transport": "~0.2.13",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.12.2",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "~0.6.5",
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "0.4.3",
+    "coffee-script": "1.10.0",
+    "grunt-legacy-log": "1.0.0",
+    "escape-string-regexp": "1.0.5",
+    "ansi-styles": "2.2.1",
+    "strip-ansi": "3.0.1",
+    "has-ansi": "2.0.0",
+    "supports-color": "3.1.2",
+    "js-yaml": "3.6.1",
+    "iconv-lite": "0.4.13",
+    "gzip-size": "3.0.0",
+    "imagemin": "5.2.2",
+    "figures": "1.7.0",
+    "pretty-bytes": "3.0.1",
+    "grunt-legacy-util": "1.0.0"
+  }
+}

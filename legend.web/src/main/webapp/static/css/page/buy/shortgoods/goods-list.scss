@@ -1,0 +1,73 @@
+/**
+ * Created by sky on 16/11/27.
+ */
+
+[class*='col-'] .form-item {
+  display: block;
+  width: 100%;
+}
+
+.search-form, .search-box {
+  margin: 10px 0;
+}
+
+.search-form .btn-half {
+  width: 157px;
+}
+
+.goods-table {
+  .tc-1 {
+    width: 100px;
+  }
+
+  .tc-2 {
+    width: 300px;
+  }
+
+  .tc-3 {
+    width: 140px;
+  }
+
+  .tc-4 {
+    width: 120px;
+  }
+
+  .tc-5 {
+    width: 100px;
+  }
+
+  .tc-6 {
+    width: 100px;
+  }
+
+  tr > td, tr > th {
+    text-align: left;
+  }
+
+  thead {
+    th {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  tbody {
+
+    td {
+      vertical-align: top;
+    }
+
+    .goods-photo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .info-row + .info-row {
+      margin-top: 20px;
+    }
+  }
+
+  .info-highlight {
+    color: #e50206 !important;
+  }
+}

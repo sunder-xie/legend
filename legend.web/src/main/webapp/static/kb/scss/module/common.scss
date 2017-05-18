@@ -1,0 +1,76 @@
+/**
+ * create by sky
+ * 2016-07-13
+ * 公共样式
+ */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font: 14px/1 Simsun, Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+  color: #333;
+  background: #fff;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+/* 浮动 */
+.fl {float: left;}
+.fr {float: right;}
+
+/* 清除浮动 */
+.clearfix {zoom: 1;}
+.clearfix:after {
+  content: "";
+  display: table;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* 页面框架 */
+.fluid-wrapper {
+  position: relative;
+  min-width: 1002px;
+  max-width: 1980px;
+  min-height: 100%;
+}
+
+.fluid-wrapper * {
+  box-sizing: border-box;
+}
+
+/* 左侧栏 */
+.aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 160px;
+  min-height: 100%;
+  background: #4f5f6f;
+}
+/* 主内容区 */
+.main {
+  margin-left: 160px;
+  padding: 10px;
+}
+/* top */
+.top {
+  height: 50px;
+  background: #fff;
+}
+/* logo */
+.logo {
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  background: #384655;
+}
+
+
+

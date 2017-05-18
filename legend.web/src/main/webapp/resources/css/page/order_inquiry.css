@@ -1,0 +1,93 @@
+.s_box {
+    height: 105px;
+    padding-top: 20px;
+}
+.s_ul {
+    width: 890px;
+    display: block;
+    float: left;
+}
+
+.s_right {
+    float: right;
+    width:84px;
+    height:84px;
+    background-image: url("../../images/an.jpg");
+}
+
+.s_right:hover {
+    float: right;
+    width:84px;
+    height:84px;
+    background-image: url("../../images/an_1.jpg");
+}
+
+.s_box .s_ul>li {
+    /*width: 445px;*/
+    height: 37px;
+    line-height: 37px;
+    margin-bottom: 12px;
+    color: #535353;
+    float: left;
+}
+.s_box .s_ul .full_row {
+    width:100%;
+}
+.stext {
+    width: 202px;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    padding-left: 10px;
+    margin:0 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+.selcont {
+    width: 214px;
+    height: 37px;
+    line-height: 37px;
+    background-color: #fff;
+    margin:0 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+li .chosen-container{
+    margin-left:10px;
+}
+.w_ge {
+    width: 202px;
+    padding-left: 10px;
+    margin: 0 10px;
+}
+.content {
+    width:100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    *padding-bottom:20px;
+}
+.box {
+    width:100%;
+}
+.info_detail {
+    width:3150px;
+    padding: 10px 5px;
+    margin-bottom: 3px;
+    background-color: #F4F5F5;
+    overflow: hidden;
+}
+.info {
+    cursor:pointer;
+}
+.info_detail li {
+    width:80px;
+    padding:0 5px;
+    float:left;
+}
+.car_owner, .contactor {
+    width:20px;
+}
+.remark {
+    width:300px;
+}
+

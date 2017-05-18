@@ -1,0 +1,45 @@
+/**
+ * 工单出库
+ * zmx 2016-08-26
+ */
+
+.condition-box {
+    border: 1px solid #cacaca;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.table-scroll-box {
+    overflow-x: auto;
+}
+
+.list-tab-box {
+    border: none;
+    margin-bottom: 0;
+}
+
+.text-grey {
+    color: #666;
+}
+
+.condition-box .show-grid {
+    margin: 10px 0;
+}
+.tc-datetime{
+    width: 120px;
+}
+.tc-3 {
+    width: 105px;
+}
+
+.tc-4, .tc-8 {
+    width: 60px;
+}
+
+.tc-5 {
+    width: 210px;
+}
+
+.tc-6, .tc-7 {
+    width: 80px;
+}

@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/*默认样式  start*/
+*{ margin: 0; padding: 0;}
+a{ text-decoration: none;}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body{
+    background: #eeeeee;
+}
+/*默认样式  end*/
+
+.con-right {
+    width: 768px;
+    float: right;
+}
+.con-right-top{
+    border: 1px solid #e8e8e8;
+    background-color: white;
+}
+.return-btn-box{
+    height: 80px;
+    border-bottom: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+.return-btn{
+    display: block;
+    width: 126px;
+    height: 37px;
+    background: #f53b43;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin:20px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #fff;
+    line-height: 37px;
+}
+.goods-num{
+    padding: 0 20px;
+}
+.goods-title{
+    height: 33px;
+    line-height: 33px;
+    padding-top: 6px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 14px;
+    color: #535353;
+    font-weight: normal;
+}
+.goods-title span{
+    color: #000;
+}
+.goods-title .goods-state{
+    float: right;
+    color: #ff7800;
+    font-size: 12px;
+}
+.goods-text{
+    height: 26px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #535353;
+    line-height: 26px;
+    clear: both;
+}
+
+.shop-name{
+    width: 505px;
+    height: 26px;
+    float: left;
+}
+.shop-tel{
+    width: 255px;
+    height: 26px;
+    float: left;
+}
+.goods-pay{
+    width: 251px;
+    height: 26px;
+    float: left;
+}
+.goods-distribution,.goods-time{
+    width: 200px;
+    line-height: 26px;
+    float: left;
+}
+.change-goods{
+    width: 726px;
+    height: auto;
+    border: 1px solid #e8e8e8;
+    margin-top: 15px;
+}
+.change-goods h3{
+    height: 28px;
+    line-height: 28px;
+    padding-left: 19px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #000;
+    font-weight: normal;
+    border-bottom: 1px solid #e8e8e8;
+}
+.change-goods table{
+    width: 100%;
+}
+.change-goods th{
+    border-bottom: 1px solid #e8e8e8;
+    height: 28px;
+    line-height: 28px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #535353;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.change-goods td{
+    border-bottom: 1px solid #e8e8e8;
+    height: 28px;
+    line-height: 28px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #535353;
+    word-break:break-all;
+    text-align: center;
+}
+.change-goods .goods-name{
+    width: 30%;
+    word-wrap: break-word;
+}
+
+.change-goods .color-black{
+    color: #000;
+}
+.change-goods .color-orange{
+    color:#ff7800;
+}
+.more-box{
+    height: 28px;
+    line-height: 28px;
+    text-align: right;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #535353;
+}
+.more-box a{
+    padding: 0 5px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #115599;
+    text-decoration: underline;
+}
+.purchase{
+    margin-top: 0;
+    border-top: none;
+}
+
+/*总计*/
+.total-box{
+    height: 80px;
+    border-top: 1px solid #e8e8e8;
+    margin-top: 20px;
+    line-height: 80px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #535353;
+    text-align: right;
+}
+.total-box span{
+    color: #ff7800;
+}
+.total-box span.money-total{
+    font-size: 24px;
+}
+
+.apply-btn{
+    display: block;
+    width: 116px;
+    height: 37px;
+    text-align: center;
+    line-height: 37px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #4bc8f4;
+    margin: 20px;
+    float: right;
+    color: #fff;
+
+}
+
+.total-look{
+    width: 768px;
+    height: 80px;
+    border: 1px solid #e8e8e8;
+    margin-top: 50px;
+    line-height: 80px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    font-size: 12px;
+    color: #535353;
+    text-align: right;
+    background: #fff;
+    float: right;
+}
+.total-look span{
+    color: #ff7800;
+}
+.total-look span.money-total{
+    font-size: 24px;
+}
+.see-order-btn{
+    display: block;
+    width: 116px;
+    height: 37px;
+    border:2px solid #e8e8e8;
+    text-align: center;
+    line-height: 37px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin: 20px;
+    float: right;
+    color: #333333;
+}

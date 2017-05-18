@@ -1,0 +1,146 @@
+.wrapper{
+    position: relative;
+    overflow: visible;
+}
+.banner{
+    position:absolute;
+    left: 990px;
+    top: 0;
+    width: 60px;
+    -moz-transition: -moz-transform 0.1s ease-in;
+    -webkit-transition: -webkit-transform 0.1s ease-in;
+    -o-transition: -o-transform 0.1s ease-in;
+    transition: transform 0.1s ease-in;
+}
+.banner a:hover{
+    color: #666;
+}
+.banner-box{
+    padding: 10px 0;
+    width: 60px;
+    height: 40px;
+    display: block;
+    border: 1px solid #dcdcdc;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 2px;
+}
+.search_tech-box {
+    height: 35px;
+    margin: 10px 0 0;
+    padding: 20px 28px;
+    background-color: #e0e0e0;
+}
+.search_tech-box label {
+    font-size: 18px;
+    font-weight: 900;
+    color: #454545;
+    vertical-align: middle;
+}
+.txt {
+    padding-left: 10px;
+    background-color: #fff;
+    border: 1px solid #dad9d9;
+    border-radius: 3px;
+}
+.search_tech_keyword {
+    width: 737px;
+    height: 35px;
+}
+.search_tech-btn {
+    width: 40px;
+    height: 28px;
+    margin-left: -41px;
+    background: url("../../images/search_tech.png") center no-repeat;
+}
+.title{
+    width:100%;
+    height: 40px;
+    line-height: 40px;
+    color:#000;
+}
+.title .title-china{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.title .title-english{
+    color: #999;
+}
+.content {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding:20px 50px;
+    box-sizing: border-box;
+}
+.content .content-detail{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.content h1{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.content .movie{
+    width: 645px;
+    height: 500px;
+    margin: auto;
+    background: #eee;
+    margin-top: 20px;
+}
+.content .text-box{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 35px;
+}
+.content .text-box p{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+.content .text-box .text{
+    margin-top: 10px;
+    color: #999;
+    line-height: 22px;
+}
+.praise-box {
+    margin-bottom: 11px;
+    margin: auto;
+    width: 735px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.like-btn, .unlike-btn {
+    width: 360px;
+    height: 50px;
+    text-align: center;
+}
+.like-btn {
+    margin-right: 11px;
+    background-color: #f69720;
+}
+.unlike-btn {
+    float: right;
+    background-color: #c9c9c9;
+}
+.praise {
+    display: inline-block;
+    height: 100%;
+    line-height: 50px;
+    padding-left: 50px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+.like {
+    color: #fff;
+    background: url("../../images/like.png") left 10px no-repeat;
+}
+.unlike {
+
+    color: #333;
+    background: url("../../images/unlike.png") left 15px no-repeat;
+}
+

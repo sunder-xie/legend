@@ -1,0 +1,284 @@
+/*
+** author: huilin.he@tqmall.com
+** create time: 2015-10-26 16:30
+*/
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    height: 0;
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.banner{
+    width: 100%;
+    height: 400px;
+    background: url("../../../img/page/buy/banner.jpg") no-repeat center center;
+    margin: 70px auto 10px auto;
+}
+.content{
+    width: 1000px;
+    margin: 0 auto;
+}
+.goods_list li{
+    position: relative;
+    margin: 0 10px 15px 10px;
+    float: left;
+    padding: 12px;
+    background: #fff;
+}
+.goods_l{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #ececec;
+}
+.goods_l img{
+    width: 200px;
+    height: 200px;
+}
+.goods_r{
+    width: 243px;
+    height: 200px;
+    float: left;
+}
+.goods_r h2{
+    color: #333;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    height: 36px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.price_box{
+    margin: 5px 0 12px 0;
+    width: 100%;
+}
+.price_tip{
+    float: left;
+    width: 77px;
+    height: 17px;
+    background: url("../../../img/page/buy/tip_price.png") no-repeat;
+    margin-top: 3px;
+}
+.unit{
+    color: #999;
+    margin-bottom: 10px;
+}
+.remain{
+    width: 88px;
+    height: 28px;
+    border: 1px solid #eb433d;
+    color: #333;
+    line-height: 28px;
+    text-align: center;
+}
+.remain b{
+    padding: 0 3px;
+    color: #eb433d;
+}
+p.price{
+    font-size: 12px;
+    float: left;
+    color: #dc2727;
+}
+p.price span{
+    font-size: 24px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+del{
+    color: #999;
+}
+.tip{
+    padding: 0 10px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    background: #dc2727;
+    margin: 10px 0 5px 0;
+    display: inline-block;
+    border-radius: 3px;
+}
+.tqnum{
+    overflow: hidden;
+    /*width: 118px;*/
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    text-align: center;
+    height: 39px;
+    position: absolute;
+    bottom: 17px;
+    left: 222px;
+}
+.tqnum span {
+    border: 1px solid #ededed;
+    display: inline-block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    font-size: 30px;
+    line-height: 36px;
+    color: #666;
+    cursor: pointer;
+    background: #fff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-right: 5px;
+}
+.minus {
+    line-height: 36px;
+}
+.tqnum input {
+    border: 1px solid #ededed;
+    float: left;
+    width: 52px;
+    line-height: 36px;
+    height: 36px;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.tqnum span.add {
+    line-height: 42px;
+}
+.gouwuc {
+    position: fixed;
+    right: 0px;
+    bottom: 153px;
+    background: url("../../../img/page/buy/yb.gif") no-repeat;
+    width: 480px;
+    height: 68px;
+    display: none;
+}
+.tixin {
+    position: absolute;
+    display: none;
+    background: url("../../../img/page/buy/yq.gif") no-repeat;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    line-height: 23px;
+    left: 56px;
+    top: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+.wenb {
+    position: absolute;
+    font-size: 14px;
+    color: #666666;
+    left: 90px;
+    top: 16px;
+    line-height: 20px;
+}
+.red {
+    color: #f04438!important;
+}
+.jiesuan {
+    background: url("../../../img/page/buy/an.gif") no-repeat;
+    width: 136px;
+    height: 40px;
+    position: absolute;
+    left: 200px;
+    top: 14px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.bottom{
+    padding: 40px 0;
+}
+.bottom p{
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+.pop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 9999;
+}
+.popbox{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -180px;
+    margin-top: -100px;
+    width: 260px;
+    height: 140px;
+    padding: 30px 50px;
+    background: #fff;
+    border-radius: 5px;
+}
+.btn_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background: url("../../../img/page/buy/btn_close.png") no-repeat;
+    cursor: pointer;
+}
+.tipTxt{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+.btn_join{
+    width: 130px;
+    height: 36px;
+    border-radius: 5px;
+    background: #1795d2;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    margin: 30px auto 12px auto;
+    cursor: pointer;
+}
+.redTxt{
+    font-size: 18px;
+    color: #ef0913;
+    text-align: center;
+}
+.tqnum span.gray{
+    background: #eee;
+}
+.errorBox{
+    width: 1000px;
+    padding: 100px 0;
+    margin: 0 auto;
+    display: none;
+}
+.ico_laba{
+    width: 115px;
+    height: 111px;
+    background: url("../../../img/page/buy/ico_laba.png") no-repeat;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.errorTxt{
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+    color: #333;
+}
+/*------ 列表顶端的红色文字  start ------*/
+.goods_list_title{color:#dc2727;font-size:16px;font-weight:700;text-align: center;line-height:40px;}
+/*------ 列表顶端的红色文字  end ------*/

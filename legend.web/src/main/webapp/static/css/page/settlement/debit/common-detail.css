@@ -1,0 +1,53 @@
+/*
+ *zmx  2016/06/06
+ * 工单收款 综合维修单详情
+*/
+
+
+/*详情内容*/
+.detail-box{ background: #f9f9f9; overflow: hidden;padding: 0 10px;border: 1px solid #cdcdcd; position: relative;}
+.show-grid{margin: 0;}
+.bold .form-label,.bold .yqx-text { font-weight: bold;}
+.models{ width: 150px; height: 30px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+.company-width{ width: 180px; height: 30px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.table-infor-width{max-width:90px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.detail-table{ background: #fff; overflow: hidden;padding: 0 10px;border: 1px solid #cdcdcd; border-top: none;}
+.table-box{ padding: 10px 0;}
+.table-box h3{color: #333;line-height: 30px; font-size: 12px;}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{ background: #f9f9f9;}
+.table-box p{ text-align: right;line-height: 30px;}
+.table-box p span{color: #fa7b7c;}
+.bot-box{background: #fff; overflow: hidden;padding:10px;border: 1px solid #cdcdcd; border-top: none; margin-top: -1px;}
+.bot-text{line-height: 25px;}
+.bot-text .total-details-tag{ display: inline-block; vertical-align: middle; margin-left: 5px; width: 18px; height: 18px;
+    background: url("../../../../img/page/settlement/debit/explain.png") no-repeat;}
+.total-hide{ display: inline-block;}
+.total-details-tag:hover{background: url("../../../../img/page/settlement/debit/explain-hover.png") no-repeat;}
+.total-arrow{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #8bb30d;
+    border-bottom: 5px solid transparent;
+}
+.total-details{ display: inline-block;  background: #8bb30d; padding: 0 10px; color: #fff; border-radius: 3px;}
+.history-box{ margin-top: 10px; line-height: 30px;}
+.history-box img{ vertical-align: middle; margin-right: 5px;}
+.history-box a{ color: #0470f5; text-decoration: underline; margin-right: 10px;}
+
+/*按钮*/
+.btn-box{ background: #fff; border: 1px solid #cdcdcd; border-top: none; padding: 10px;}
+.btn-margin{ margin-right: 5px;}
+
+.max-text{ max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.detail-box .form-label-width{ width: 100px;}
+.detail-box .form-item-width{ width: 160px; height: 36px;}
+.detail-box .form-item {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.copy-margin{ margin-right: 5px;}
+.license-weight{ font-weight: bold;}
+.layui-layer-page .layui-layer-content{ overflow: inherit;}

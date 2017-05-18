@@ -1,0 +1,64 @@
+
+.person-head{
+    background: #efecdf;
+}
+.base-data .shop-name-container{
+    background: url("../../images/title-bg.jpg");
+    height: 110px;
+}
+.shop-name-container .company-name{
+    padding-top: 25px;
+    color: white;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.shop-name-container .shop-name{
+    padding-top: 10px;
+    color: white;
+    font-size: 30px;
+    padding-left: 20px;
+}
+.shop-data-container{
+    padding: 30px 22px;
+    background: #f9f9f9;
+}
+.shop-data-container p,.person-data-container p{
+    padding: 0 0;
+}
+.person-data-container{
+    background: #f9f6e9;
+    padding: 20px 22px;
+}
+.person-data-container button{
+    /*float:right;*/
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.head>div{
+    float: right;
+    margin: 2px;
+}
+a.btn_gray{
+    margin-left: 30px;
+}
+.bj_house{
+    margin-top:-17px;
+    margin-left: -90px;
+}
+.mdzl,.grzl{
+    background: url("../../images/print/bj_house.gif") no-repeat 1px 5px;
+    padding-right:0;
+    padding-left: 20px;
+    width:110px;
+}
+.grzl{
+    background: url("../../images/bj_man_head.gif") no-repeat 1px 5px;
+}
+.person-data-container .changePwd {
+    background: url("../../images/btn.png") no-repeat center #fff;
+    margin: 0 0 0 40px;
+    height:24px;
+    width:102px;
+}

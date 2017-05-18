@@ -1,0 +1,143 @@
+.left-menu,.right-content{
+    float: left;
+}
+.right-content{
+    width: 823px;
+}
+.content{
+    border: 1px solid #c9c9c9;
+    background-color: #fff;
+    padding: 15px 10px 0;
+    margin-top: 10px;
+}
+.pay-way,.amount,.collection{
+    margin-bottom: 10px;
+}
+.input-info,.remark,.choose-package,.charge-table{
+    border-bottom: 1px solid #dcdcdc;
+}
+.input-info{
+    padding: 15px 0 5px 36px;
+}
+.remark,.button{
+    padding: 15px 0 15px 0 ;
+}
+.fr{
+    float: right;
+}
+.remark{
+    padding-left: 33px;
+}
+.w60{
+    width: 60px;
+}
+.w700{
+    width: 700px;
+}
+.choose-package{
+    padding: 0 0 15px 36px;
+}
+.plan{
+    display: inline-block;
+}
+.frame{
+    min-width: 63px;
+    max-width: 152px;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 3px;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid #dddddd;
+    padding: 0 10px;
+    margin-top: 8px;
+}
+.js-current{
+    background: url("../../../../static/img/page/account/current.png") right bottom no-repeat;
+    border: 2px solid #8fb027;
+}
+.w200{
+    width: 200px;
+}
+th,td{
+    text-align: center;
+}
+.w90{
+    width: 90px;
+}
+.w80{
+    width: 80px;
+}
+.w50{
+    width: 50px;
+}
+.p10{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.w100{
+    width: 100%;
+}
+.table-head{
+    line-height: 35px;
+    background-color: #f9f9f9;
+}
+.delete{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.charge-table,.charge-table1{
+    padding: 15px 0 15px 97px;
+}
+.add{
+    margin-top: 10px;
+}
+.h36{
+    height: 36px;
+}
+.charge-table input{ text-align: center;}
+.account-info i {
+    font-style: normal;
+}
+
+.account-info {
+    padding: 0 10px 20px 35px;
+}
+
+.account-info .col-4 label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.account-info .col-4 i {
+    width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.grid-title h2 {
+    font-size: 15px;
+}
+
+.license-icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.show-grid.inline>div{
+    display: inline-block;
+    margin-right: 70px;
+    vertical-align: top;
+}
+
+.show-grid div.car-license-box {
+    width: 310px;
+    margin-right: 0;
+}

@@ -1,0 +1,101 @@
+/**
+ * sky 2016-04-24
+ * 导入工单查询样式
+ */
+
+/**
+ * 顶部导航按钮组 start
+ */
+.history-list-title h3 {
+    font-weight: 900;
+    color: #222;
+    line-height: 36px;
+}
+/**
+ * 顶部导航按钮组 end
+ */
+
+/**
+ * 查询条件 start
+ */
+.condition-box {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+    margin-top: 10px;
+    border-radius: 4px 4px 0 0;
+}
+
+/**
+ * 查询条件 end
+ */
+
+/**
+ * 数据列表表格 start
+ */
+
+.table-scroll-box {
+    overflow-x: scroll;
+}
+
+.history-list-table {
+    margin-top: 10px;
+}
+
+.history-list-table .yqx-table {
+    width: auto;
+    min-width: 100%;
+}
+
+.history-list-table-inner {
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #fff;
+}
+.senior-width{
+    width: 157px;
+}
+
+.senior-width input{
+    width: 100%;
+}
+.senior-box {
+    margin-bottom: 10px;
+}
+.senior-box:last-child {
+    margin-bottom: 0;
+}
+.senior-box, .search-btns {
+    display: inline-block;
+}
+.senior-width-2 {
+    width: 217px;
+}
+
+.senior-width-3 {
+    width: 177px;
+}
+
+.senior-width + .senior-width {
+    margin:0 5px;
+}
+.hide {
+    display: none;
+}
+.yqx-table>tr>td, .yqx-table>tr>th{
+    text-align: left;
+}
+
+.yqx-table .th-right, .yqx-table .td-right {
+    text-align: right;
+}
+
+.yqx-table .padding-10 {
+    padding-right: 10px;
+}
+
+.yqx-table>tr>td.td-center, .yqx-table>tr>th.td-center{
+    text-align: center;
+}
+

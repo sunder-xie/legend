@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.shop.SmsPayLogDao">
+    <!-- Result Map -->
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.shop.SmsPayLog">
+        <result column="id" property="id"/>
+        <result column="creator" property="creator"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="modifier" property="modifier"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="status" property="status"/>
+        <result column="pay_fee" property="payFee"/>
+        <result column="pay_sn" property="paySn"/>
+        <result column="sms_num" property="smsNum"/>
+        <result column="back_time" property="backTime"/>
+        <result column="order_sn" property="orderSn"/>
+        <result column="pay_way" property="payWay"/>
+        <result column="remark" property="remark"/>
+		<result column="operator" property="operator"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+    <trim suffix="" suffixOverrides=",">
+	<include refid="COMMON.BASE_COLUMN_LIST"/>
+	shop_id as shopId,
+	status as status,
+	pay_fee as payFee,
+	pay_sn as paySn,
+	sms_num as smsNum,
+	back_time as backTime,
+	order_sn as orderSn,
+	pay_way as payWay,
+	remark as remark,
+	operator as operator,
+	</trim>
+	
+    </sql>
+
+    <!-- 查询条件 -->
+    <sql id="BaseWhereClause">
+    <where>
+		<trim prefixOverrides="and">
+	<include refid="COMMON.BASE_WHERE_CLAUSE"/>
+	<if test="shopId!= null">
+		and shop_id = #{shopId}
+	</if>
+		<if test="status!= null">
+		and status = #{status}
+	</if>
+		<if test="payFee!= null">
+		and pay_fee = #{payFee}
+	</if>
+		<if test="paySn!= null">
+		and pay_sn = #{paySn}
+	</if>
+		<if test="smsNum!= null">
+		and sms_num = #{smsNum}
+	</if>
+		<if test="backTime!= null">
+		and back_time = #{backTime}
+	</if>
+		<if test="orderSn!= null">
+		and order_sn = #{orderSn}
+	</if>
+		<if test="payWay!= null">
+		and pay_way = #{payWay}
+	</if>
+		<if test="remark!= null">
+		and remark = #{remark}
+	</if>
+		<if test="operator!= null">
+		and operator = #{operator}
+	</if>
+		</trim>
+	</where>
+	
+    </sql>
+
+    <!-- 批量更新条件 -->
+    <sql id="BaseUpdateSet">
+    <set>
+		<trim suffix="" suffixOverrides=",">
+	<include refid="COMMON.BASE_UPDATE_SET"/>
+	<if test="shopId!= null">
+		shop_id = #{shopId},
+	</if>
+		<if test="status!= null">
+		status = #{status},
+	</if>
+		<if test="payFee!= null">
+		pay_fee = #{payFee},
+	</if>
+		<if test="paySn!= null">
+		pay_sn = #{paySn},
+	</if>
+		<if test="smsNum!= null">
+		sms_num = #{smsNum},
+	</if>
+		<if test="backTime!= null">
+		back_time = #{backTime},
+	</if>
+		<if test="orderSn!= null">
+		order_sn = #{orderSn},
+	</if>
+		<if test="payWay!= null">
+		pay_way = #{payWay},
+	</if>
+		<if test="remark!= null">
+		remark = #{remark},
+	</if>
+		<if test="operator!= null">
+		operator = #{operator},
+	</if>
+		</trim>
+	</set>
+	
+    </sql>
+
+    <!-- 插入记录 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+    insert into legend_sms_pay_log (
+		<trim suffix="" suffixOverrides=",">
+			<include refid="COMMON.BASE_INSERT_COLUMN"/>
+	<if test="shopId!= null">
+		shop_id,
+	</if>
+	<if test="status!= null">
+		status,
+	</if>
+	<if test="payFee!= null">
+		pay_fee,
+	</if>
+	<if test="paySn!= null">
+		pay_sn,
+	</if>
+	<if test="smsNum!= null">
+		sms_num,
+	</if>
+	<if test="backTime!= null">
+		back_time,
+	</if>
+	<if test="orderSn!= null">
+		order_sn,
+	</if>
+	<if test="payWay!= null">
+		pay_way,
+	</if>
+	<if test="remark!= null">
+		remark,
+	</if>
+	<if test="operator!= null">
+		operator,
+	</if>
+	</trim>
+			)
+	 values (
+		<trim suffix="" suffixOverrides=",">
+			<include refid="COMMON.BASE_INSERT_VALUE"/>
+	<if test="shopId!= null">
+		#{shopId},
+	</if>
+	<if test="status!= null">
+		#{status},
+	</if>
+	<if test="payFee!= null">
+		#{payFee},
+	</if>
+	<if test="paySn!= null">
+		#{paySn},
+	</if>
+	<if test="smsNum!= null">
+		#{smsNum},
+	</if>
+	<if test="backTime!= null">
+		#{backTime},
+	</if>
+	<if test="orderSn!= null">
+		#{orderSn},
+	</if>
+	<if test="payWay!= null">
+		#{payWay},
+	</if>
+	<if test="remark!= null">
+		#{remark},
+	</if>
+	<if test="operator!= null">
+		#{operator},
+	</if>
+	</trim>
+	)
+    </insert>
+
+    <!-- 获取对象全部结果集 -->
+    <select id="select" resultMap="BaseResultMap">
+    select 
+	<include refid="BaseColumnList"/>
+	 from legend_sms_pay_log
+	<include refid="BaseWhereClause"/>
+	<include refid="COMMON.ORDER_BY"/>
+	<include refid="COMMON.LIMIT"/>
+	
+    </select>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_sms_pay_log
+        <include refid = "BaseWhereClause" />
+    </select>
+
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select 
+	<include refid="BaseColumnList"/>
+	 from legend_sms_pay_log
+	where id in (
+	<foreach collection = "array" index = "index" item = "tag" separator = ",">
+	#{tag}
+	</foreach>
+	) and is_deleted = 'N'
+	
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_sms_pay_log
+	set is_deleted='Y'
+	where id in (
+	<foreach collection = "array" index = "index" item = "tag" separator = ",">
+	#{tag}
+	</foreach>
+	)
+	
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_sms_pay_log
+	set is_deleted='Y'
+	where id=#{id}
+	
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_sms_pay_log
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+    update legend_sms_pay_log
+	<include refid="BaseUpdateSet"/>
+	where id = #{id}
+	
+    </update>
+
+</mapper>

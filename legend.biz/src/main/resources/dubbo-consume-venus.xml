@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--订单中心 -->
+    <dubbo:reference interface="com.tqmall.venus.service.common.OrderGoodsService" id="OrderGoodsService"
+                     version="${dubbo.venus.version}" owner="cheng.zheng"/>
+    <dubbo:reference interface="com.tqmall.venus.service.lifecycle.OrderLifeCycleService" id="orderLifeCycleService"
+                     version="${dubbo.venus.version}" owner="hao.tang"/>
+</beans>

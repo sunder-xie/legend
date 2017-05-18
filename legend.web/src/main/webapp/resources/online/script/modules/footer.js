@@ -1,0 +1,2 @@
+/*-- 淘汽云修 2016-03-09 04:48:56 --*/
+define(function(require,exports,module){var a=200;exports.init=function(){$(".f_nav").hover(function(){$(this).stop().animate({top:"-62px"},a)},function(){$(this).stop().animate({top:"0px"},a)}),$(".f_nav a").hover(function(){$(this).stop().animate({top:"-10px"},a)},function(){$(this).stop().animate({top:"0px"},a)})}});

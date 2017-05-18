@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.shop.ServiceGoodsSuiteDao">
+
+    <resultMap id="BaseResultMap" type="ServiceGoodsSuite" extends="COMMON.BASE_RESULT_MAP">
+        <result column="suite_name" property="suiteName"/>
+        <result column="service_id" property="serviceId"/>
+        <result column="service_info" property="serviceInfo"/>
+        <result column="goods_info" property="goodsInfo"/>
+        <result column="goods_number" property="goodsNumber"/>
+        <result column="suite_price" property="suitePrice"/>
+        <result column="shop_id" property="shopId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        suite_name as suiteName,
+        service_id as serviceId,
+        service_info as serviceInfo,
+        goods_info as goodsInfo,
+        goods_number as goodsNumber,
+        suite_price as suitePrice,
+        shop_id as shopId
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="suiteName != null">
+                    and suite_name = #{suiteName}
+                </if>
+                <if test="serviceId != null">
+                    and service_id = #{serviceId}
+                </if>
+                <if test="serviceIds != null">
+                    and service_id in (
+                    <foreach collection="serviceIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="serviceInfo != null">
+                    and service_info = #{serviceInfo}
+                </if>
+                <if test="goodsInfo != null">
+                    and goods_info = #{goodsInfo}
+                </if>
+                <if test="goodsNumber != null">
+                    and goods_number = #{goodsNumber}
+                </if>
+                <if test="suitePrice != null">
+                    and suite_price = #{suitePrice}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test="suiteName != null">
+                suite_name = #{suiteName},
+            </if>
+            <if test="serviceId != null">
+                service_id = #{serviceId},
+            </if>
+            <if test="serviceInfo != null">
+                service_info = #{serviceInfo},
+            </if>
+            <if test="goodsInfo != null">
+                goods_info = #{goodsInfo},
+            </if>
+            <if test="goodsNumber != null">
+                goods_number = #{goodsNumber},
+            </if>
+            <if test="suitePrice != null">
+                suite_price = #{suitePrice},
+            </if>
+            <if test="shopId != null">
+                shop_id = #{shopId}
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_service_goods_suite
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_service_goods_suite
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_service_goods_suite
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_service_goods_suite
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_service_goods_suite
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_service_goods_suite
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_service_goods_suite (
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+        suite_name,
+        service_id,
+        service_info,
+        goods_info,
+        goods_number,
+        suite_price,
+        shop_id
+        )
+        values (
+        <include refid="COMMON.BASE_INSERT_VALUE"/>
+        #{suiteName},
+        #{serviceId},
+        #{serviceInfo},
+        #{goodsInfo},
+        #{goodsNumber},
+        #{suitePrice},
+        #{shopId}
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_service_goods_suite
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!-- 根据ServiceId查询 -->
+    <select id="selectByServiceId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_service_goods_suite
+        where service_id = #{serviceId}
+        and is_deleted = 'N'
+        limit 0,1
+    </select>
+
+    <!-- 根据ServiceId和shopId查询 -->
+    <select id="selectByServiceIdAndShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_service_goods_suite
+        where service_id = #{serviceId}
+        and shop_id = #{shopId}
+        and is_deleted = 'N'
+        limit 0,1
+    </select>
+
+    <!-- 根据ServiceIds查询 -->
+    <select id="selectByServiceIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_service_goods_suite
+        where service_id in
+        (
+        <foreach collection="array" index="index" item="serviceIds" separator=",">
+            #{serviceIds}
+        </foreach>
+        )
+        and is_deleted='N'
+    </select>
+
+    <!-- 根据serviceId删除 -->
+    <update id="deleteByServiceId">
+        update legend_service_goods_suite
+        set is_deleted='Y'
+        where service_id=#{serviceId}
+    </update>
+
+    <!-- 根据serviceId和门店ID删除 -->
+    <update id="deleteByServiceIdAndShopId">
+        update legend_service_goods_suite
+        set is_deleted='Y'
+        where service_id=#{serviceId}
+        and shop_id = #{shopId}
+    </update>
+
+</mapper>

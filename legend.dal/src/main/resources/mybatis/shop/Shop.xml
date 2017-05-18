@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.shop.ShopDao">
+    <resultMap id="BaseResultMap" type="Shop" extends="COMMON.BASE_RESULT_MAP">
+        <result column="open_time" property="openTime"/>
+        <result column="close_time" property="closeTime"/>
+        <result column="name" property="name"/>
+        <result column="contact" property="contact"/>
+        <result column="tel" property="tel"/>
+        <result column="mobile" property="mobile"/>
+        <result column="province" property="province"/>
+        <result column="city" property="city"/>
+        <result column="district" property="district"/>
+        <result column="street" property="street"/>
+        <result column="address" property="address"/>
+        <result column="crm_customer_id" property="crmCustomerId"/>
+        <result column="abbr" property="abbr"/>
+        <result column="province_name" property="provinceName"/>
+        <result column="city_name" property="cityName"/>
+        <result column="district_name" property="districtName"/>
+        <result column="street_name" property="streetName"/>
+        <result column="level" property="level"/>
+        <result column="company_name" property="companyName"/>
+        <result column="has_monitor" property="hasMonitor"/>
+        <result column="init_status" property="initStatus"/>
+        <result column="user_global_id" property="userGlobalId"/>
+        <result column="join_audit_id" property="joinAuditId"/>
+        <result column="shop_status" property="shopStatus"/>
+        <result column="change_city_id" property="changeCityId"/>
+        <result column="change_city_name" property="changeCityName"/>
+        <result column="join_status" property="joinStatus"/>
+        <result column="settlement_rate" property="rate"/>
+        <result column="workshop_status" property="workshopStatus"/>
+        <result column="agreement_status" property="agreementStatus"/>
+        <result column="expire_time" property="expireTime"/>
+        <result column="account_num" property="accountNum"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            open_time as openTime,
+            close_time as closeTime,
+            name as name,
+            contact as contact,
+            tel as tel,
+            mobile as mobile,
+            province as province,
+            city as city,
+            district as district,
+            street as street,
+            address as address,
+            crm_customer_id as crmCustomerId,
+            abbr as abbr,
+            province_name as provinceName,
+            city_name as cityName,
+            district_name as districtName,
+            street_name as streetName,
+            level as level,
+            company_name as companyName,
+            has_monitor as hasMonitor,
+            user_global_id as userGlobalId,
+            has_monitor as hasMonitor,
+            init_status as initStatus,
+            join_audit_id as joinAuditId,
+            shop_status as shopStatus,
+            change_city_id as changeCityId,
+            change_city_name as changeCityName,
+            join_status as joinStatus,
+            settlement_rate as rate,
+            workshop_status as workshopStatus,
+            agreement_status as agreementStatus,
+            expire_time as expireTime,
+            account_num as accountNum,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="openTime != null">
+                    and open_time = #{openTime}
+                </if>
+                <if test="closeTime != null">
+                    and close_time = #{closeTime}
+                </if>
+                <if test="name != null">
+                    and name = #{name}
+                </if>
+                <if test="contact != null">
+                    and contact = #{contact}
+                </if>
+                <if test="tel != null">
+                    and tel = #{tel}
+                </if>
+                <if test="mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test="province != null">
+                    and province = #{province}
+                </if>
+                <if test="city != null">
+                    and city = #{city}
+                </if>
+                <if test="district != null">
+                    and district = #{district}
+                </if>
+                <if test="street != null">
+                    and street = #{street}
+                </if>
+                <if test="address != null">
+                    and address = #{address}
+                </if>
+                <if test="crmCustomerId != null">
+                    and crm_customer_id = #{crmCustomerId}
+                </if>
+                <if test="abbr != null">
+                    and abbr = #{abbr}
+                </if>
+                <if test="provinceName != null">
+                    and province_name = #{provinceName}
+                </if>
+                <if test="cityName != null">
+                    and city_name = #{cityName}
+                </if>
+                <if test="districtName != null">
+                    and district_name = #{districtName}
+                </if>
+                <if test="streetName != null">
+                    and street_name = #{streetName}
+                </if>
+                <if test="level != null">
+                    and level = #{level}
+                </if>
+                <if test="companyName != null">
+                    and company_name = #{companyName}
+                </if>
+                <if test="userGlobalId != null">
+                    and user_global_id = #{userGlobalId}
+                </if>
+                <if test="userGlobalIds != null">
+                    and user_global_id in
+                    (
+                    <foreach collection="userGlobalIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="hasMonitor != null">
+                    and has_monitor = #{hasMonitor}
+                </if>
+                <if test="initStatus != null">
+                    and init_status = #{initStatus}
+                </if>
+                <if test="joinAuditId != null">
+                    and join_audit_id = #{joinAuditId}
+                </if>
+                <if test="shopStatus != null">
+                    and shop_status = #{shopStatus}
+                </if>
+                <if test="changeCityId != null">
+                    and change_city_id = #{changeCityId}
+                </if>
+                <if test="changeCityName != null">
+                    and change_city_name = #{changeCityName}
+                </if>
+                <if test="shopIds != null">
+                    and id in
+                    (
+                    <foreach collection="shopIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="joinStatus != null">
+                    and join_status = #{joinStatus}
+                </if>
+                <if test="rate != null">
+                    and settlement_rate = #{rate}
+                </if>
+                <if test="nameLike != null">
+                    and name LIKE CONCAT('%',#{nameLike},'%')
+                </if>
+                <if test="workshopStatus != null">
+                    and workshop_status = #{workshopStatus}
+                </if>
+                <if test="agreementStatus != null">
+                    and agreement_status = #{agreementStatus}
+                </if>
+                <if test="expireTime != null">
+                    and expire_time = #{expireTime}
+                </if>
+                <if test="accountNum != null">
+                    and account_num = #{accountNum}
+                </if>
+                <if test="citys != null">
+                    and city in
+                    (
+                    <foreach collection="citys" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="openTime != null">
+                    open_time = #{openTime},
+                </if>
+                <if test="closeTime != null">
+                    close_time = #{closeTime},
+                </if>
+                <if test="name != null">
+                    name = #{name},
+                </if>
+                <if test="contact != null">
+                    contact = #{contact},
+                </if>
+                <if test="tel != null">
+                    tel = #{tel},
+                </if>
+                <if test="mobile != null">
+                    mobile = #{mobile},
+                </if>
+                <if test="province != null">
+                    province = #{province},
+                </if>
+                <if test="city != null">
+                    city = #{city},
+                </if>
+                <if test="district != null">
+                    district = #{district},
+                </if>
+                <if test="street != null">
+                    street = #{street},
+                </if>
+                <if test="address != null">
+                    address = #{address},
+                </if>
+                <if test="crmCustomerId != null">
+                    crm_customer_id = #{crmCustomerId},
+                </if>
+                <if test="abbr != null">
+                    abbr = #{abbr},
+                </if>
+                <if test="provinceName != null">
+                    province_name = #{provinceName},
+                </if>
+                <if test="cityName != null">
+                    city_name = #{cityName},
+                </if>
+                <if test="districtName != null">
+                    district_name = #{districtName},
+                </if>
+                <if test="streetName != null">
+                    street_name = #{streetName},
+                </if>
+                <if test="level != null">
+                    level = #{level},
+                </if>
+                <if test="companyName != null">
+                    company_name = #{companyName},
+                </if>
+                <if test="userGlobalId != null">
+                    user_global_id = #{userGlobalId},
+                </if>
+                <if test="hasMonitor != null">
+                    has_monitor = #{hasMonitor},
+                </if>
+                <if test="initStatus != null">
+                    init_status = #{initStatus},
+                </if>
+                <if test="joinAuditId != null">
+                    join_audit_id = #{joinAuditId},
+                </if>
+                <if test="shopStatus != null">
+                    shop_status = #{shopStatus},
+                </if>
+                <if test="changeCityId != null">
+                    change_city_id = #{changeCityId},
+                </if>
+                <if test="changeCityName != null">
+                    change_city_name = #{changeCityName},
+                </if>
+                <if test="joinStatus != null">
+                    join_status = #{joinStatus},
+                </if>
+                <if test="rate != null">
+                    settlement_rate = #{rate},
+                </if>
+                <if test="workshopStatus != null">
+                    workshop_status = #{workshopStatus},
+                </if>
+                <if test="agreementStatus != null">
+                    agreement_status = #{agreementStatus},
+                </if>
+                <if test="expireTime != null">
+                    expire_time = #{expireTime},
+                </if>
+                <if test="accountNum != null">
+                    account_num = #{accountNum},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_shop
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_shop
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_shop
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_shop (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="openTime != null">
+                open_time,
+            </if>
+            <if test="closeTime != null">
+                close_time,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="contact != null">
+                contact,
+            </if>
+            <if test="tel != null">
+                tel,
+            </if>
+            <if test="mobile != null">
+                mobile,
+            </if>
+            <if test="province != null">
+                province,
+            </if>
+            <if test="city != null">
+                city,
+            </if>
+            <if test="district != null">
+                district,
+            </if>
+            <if test="street != null">
+                street,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="crmCustomerId != null">
+                crm_customer_id,
+            </if>
+            <if test="abbr != null">
+                abbr,
+            </if>
+            <if test="provinceName != null">
+                province_name,
+            </if>
+            <if test="cityName != null">
+                city_name,
+            </if>
+            <if test="districtName != null">
+                district_name,
+            </if>
+            <if test="streetName != null">
+                street_name,
+            </if>
+            <if test="level != null">
+                level,
+            </if>
+            <if test="companyName != null">
+                company_name,
+            </if>
+            <if test="hasMonitor != null">
+                has_monitor,
+            </if>
+            <if test="initStatus != null">
+                init_status,
+            </if>
+            <if test="joinAuditId != null">
+                join_audit_id,
+            </if>
+            <if test="shopStatus != null">
+                shop_status,
+            </if>
+            <if test="changeCityId != null">
+                change_city_id,
+            </if>
+            <if test="changeCityName != null">
+                change_city_name,
+            </if>
+            <if test="joinStatus != null">
+                join_status,
+            </if>
+            <if test="rate != null">
+                settlement_rate,
+            </if>
+            <if test="workshopStatus != null">
+                workshop_status,
+            </if>
+            <if test="agreementStatus != null">
+                agreement_status,
+            </if>
+            <if test="expireTime != null">
+                expire_time,
+            </if>
+            <if test="accountNum != null">
+                account_num,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="openTime != null">
+                #{openTime},
+            </if>
+            <if test="closeTime != null">
+                #{closeTime},
+            </if>
+            <if test="name != null">
+                #{name},
+            </if>
+            <if test="contact != null">
+                #{contact},
+            </if>
+            <if test="tel != null">
+                #{tel},
+            </if>
+            <if test="mobile != null">
+                #{mobile},
+            </if>
+            <if test="province != null">
+                #{province},
+            </if>
+            <if test="city != null">
+                #{city},
+            </if>
+            <if test="district != null">
+                #{district},
+            </if>
+            <if test="street != null">
+                #{street},
+            </if>
+            <if test="address != null">
+                #{address},
+            </if>
+            <if test="crmCustomerId != null">
+                #{crmCustomerId},
+            </if>
+            <if test="abbr != null">
+                #{abbr},
+            </if>
+            <if test="provinceName != null">
+                #{provinceName},
+            </if>
+            <if test="cityName != null">
+                #{cityName},
+            </if>
+            <if test="districtName != null">
+                #{districtName},
+            </if>
+            <if test="streetName != null">
+                #{streetName},
+            </if>
+            <if test="level != null">
+                #{level},
+            </if>
+            <if test="companyName != null">
+                #{companyName},
+            </if>
+            <if test="hasMonitor != null">
+                #{hasMonitor},
+            </if>
+            <if test="initStatus != null">
+                #{initStatus},
+            </if>
+            <if test="joinAuditId != null">
+                #{joinAuditId},
+            </if>
+            <if test="shopStatus != null">
+                #{shopStatus},
+            </if>
+            <if test="changeCityId != null">
+                #{changeCityId},
+            </if>
+            <if test="changeCityName != null">
+                #{changeCityName},
+            </if>
+            <if test="joinStatus != null">
+                #{joinStatus},
+            </if>
+            <if test="rate != null">
+                #{rate},
+            </if>
+            <if test="workshopStatus != null">
+                #{workshopStatus},
+            </if>
+            <if test="agreementStatus != null">
+                #{agreementStatus},
+            </if>
+            <if test="expireTime != null">
+                #{expireTime},
+            </if>
+            <if test="accountNum != null">
+                #{accountNum},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_shop
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            open_time,
+            close_time,
+            name,
+            contact,
+            tel,
+            mobile,
+            province,
+            city,
+            district,
+            street,
+            address,
+            crm_customer_id,
+            abbr,
+            province_name,
+            city_name,
+            district_name,
+            street_name,
+            level,
+            company_name,
+            has_monitor,
+            init_status,
+            user_global_id,
+            join_audit_id,
+            shop_status,
+            join_status,
+            settlement_rate,
+            workshop_status,
+            agreement_status,
+            expire_time,
+            account_num,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.openTime != null">
+                    #{item.openTime},
+                </if>
+                <if test="item.openTime == null">
+                    NULL ,
+                </if>
+                <if test="item.closeTime != null">
+                    #{item.closeTime},
+                </if>
+                <if test="item.closeTime == null">
+                    NULL ,
+                </if>
+                <if test="item.name != null">
+                    #{item.name},
+                </if>
+                <if test="item.name == null">
+                    NULL ,
+                </if>
+                <if test="item.contact != null">
+                    #{item.contact},
+                </if>
+                <if test="item.contact == null">
+                    NULL ,
+                </if>
+                <if test="item.tel != null">
+                    #{item.tel},
+                </if>
+                <if test="item.tel == null">
+                    NULL ,
+                </if>
+                <if test="item.mobile != null">
+                    #{item.mobile},
+                </if>
+                <if test="item.mobile == null">
+                    NULL ,
+                </if>
+                <if test="item.province != null">
+                    #{item.province},
+                </if>
+                <if test="item.province == null">
+                    NULL ,
+                </if>
+                <if test="item.city != null">
+                    #{item.city},
+                </if>
+                <if test="item.city == null">
+                    NULL ,
+                </if>
+                <if test="item.district != null">
+                    #{item.district},
+                </if>
+                <if test="item.district == null">
+                    NULL ,
+                </if>
+                <if test="item.street != null">
+                    #{item.street},
+                </if>
+                <if test="item.street == null">
+                    NULL ,
+                </if>
+                <if test="item.address != null">
+                    #{item.address},
+                </if>
+                <if test="item.address == null">
+                    NULL ,
+                </if>
+                <if test="item.crmCustomerId != null">
+                    #{item.crmCustomerId},
+                </if>
+                <if test="item.crmCustomerId == null">
+                    NULL ,
+                </if>
+                <if test="item.abbr != null">
+                    #{item.abbr},
+                </if>
+                <if test="item.abbr == null">
+                    NULL ,
+                </if>
+                <if test="item.provinceName != null">
+                    #{item.provinceName},
+                </if>
+                <if test="item.provinceName == null">
+                    NULL ,
+                </if>
+                <if test="item.cityName != null">
+                    #{item.cityName},
+                </if>
+                <if test="item.cityName == null">
+                    NULL ,
+                </if>
+                <if test="item.districtName != null">
+                    #{item.districtName},
+                </if>
+                <if test="item.districtName == null">
+                    NULL ,
+                </if>
+                <if test="item.streetName != null">
+                    #{item.streetName},
+                </if>
+                <if test="item.streetName == null">
+                    NULL ,
+                </if>
+                <if test="item.level != null">
+                    #{item.level},
+                </if>
+                <if test="item.level == null">
+                    NULL ,
+                </if>
+                <if test="item.companyName != null">
+                    #{item.companyName},
+                </if>
+                <if test="item.companyName == null">
+                    NULL ,
+                </if>
+                <if test="item.hasMonitor != null">
+                    #{item.hasMonitor},
+                </if>
+                <if test="item.hasMonitor == null">
+                    NULL ,
+                </if>
+                <if test="item.initStatus != null">
+                    #{item.initStatus},
+                </if>
+                <if test="item.initStatus == null">
+                    NULL ,
+                </if>
+                <if test="item.userGlobalId != null">
+                    #{item.userGlobalId},
+                </if>
+                <if test="item.userGlobalId == null">
+                    NULL ,
+                </if>
+                <if test="item.joinAuditId != null">
+                    #{item.joinAuditId},
+                </if>
+                <if test="item.joinAuditId == null">
+                    NULL ,
+                </if>
+                <if test="item.shopStatus != null">
+                    #{item.shopStatus},
+                </if>
+                <if test="item.shopStatus == null">
+                    NULL ,
+                </if>
+                <if test="joinStatus != null">
+                    #{joinStatus},
+                </if>
+                <if test="joinStatus == null">
+                    0,
+                </if>
+                <if test="rate != null">
+                    #{rate},
+                </if>
+                <if test="rate == null">
+                    1.20,
+                </if>
+                <if test="item.workshopStatus != null">
+                    #{item.workshopStatus},
+                </if>
+                <if test="item.workshopStatus == null">
+                    0 ,
+                </if>
+                <if test="item.agreementStatus != null">
+                    #{item.agreementStatus},
+                </if>
+                <if test="item.agreementStatus == null">
+                    1 ,
+                </if>
+                <if test="item.expireTime != null">
+                    #{item.expireTime},
+                </if>
+                <if test="item.expireTime == null">
+                    1 ,
+                </if>
+                <if test="item.accountNum != null">
+                    #{item.accountNum},
+                </if>
+                <if test="item.accountNum == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

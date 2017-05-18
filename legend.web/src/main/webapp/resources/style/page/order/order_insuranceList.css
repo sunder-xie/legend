@@ -1,0 +1,32 @@
+
+
+.qxy_tab{margin:0;}
+.tab_content{border: 1px solid #cdcdcd;border-top:none;padding:20px;background: #f9f9f9;}
+
+/* --- 搜索框区域样式 start --- */
+.search_box{margin-bottom: 10px;}
+.search_left{width: 835px;}
+.qxy_wrapper_right .search_left{width: 620px;}
+.search_left input,
+.search_left select{width: auto;}
+.search_left li{float: left;width: 50%;margin-bottom: 10px;}
+.search_left li.col3{width: 33.33%;}
+
+.search_left .field_name{display: inline-block;width: 70px;height:38px;line-height: 38px;text-indent: 10px;}
+.search_left .space_txt{display: inline-block;width: 5%;height: 38px;line-height: 38px;text-align: center;}
+.search_left li input.w1{width: 79%;}
+.search_left li input.w2{width: 37%;;}
+/* --- 搜索框区域样式 end --- */
+
+
+/* --- 搜索结果样式 start --- */
+.result_list{width: 100%;}
+.result_list th,
+.result_list td{padding:10px 5px;}
+.result_list th{border-bottom: 1px solid #c0c0c0;background: #d7d7d7;}
+.result_list td{border-bottom: 1px solid #ededed;}
+
+.result_list tr:nth-child(n){background: #fcfcfc;}
+.result_list tr:nth-child(2n) {background: #fefefe;}
+.result_remarks{margin:10px 0;}
+/* --- 搜索结果样式 end --- */

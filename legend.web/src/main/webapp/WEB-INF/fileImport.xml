@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="accountCouponFileImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.AccountCouponValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.AccountCouponImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="memberCardFileImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.MemberCardValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.MemberCardImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="accountComboFileImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.AccountComboValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.AccountComboImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="orderHistoryImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.OrderHistoryImportValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.OrderHistoryImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="customerCarImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.CustomerCarValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CustomerCarImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="goodsImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.GoodsImportValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.GoodsImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="serviceInfoImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.ServiceInfoImportValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.ServiceInfoImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="supplierImport" class="com.tqmall.legend.common.fileImport.DefaultFileImportManager">
+        <property name="fileImportProcesses">
+            <list>
+                <bean class="com.tqmall.legend.web.fileImport.process.SupplierImportValidationProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.SupplierImportProcess"/>
+                <bean class="com.tqmall.legend.web.fileImport.process.CommonCleanImportProcess"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

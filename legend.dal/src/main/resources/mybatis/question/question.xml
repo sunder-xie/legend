@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.question.QuestionDao">
+
+    <resultMap id = "BaseResultMap" type = "Question" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "content" property = "content" />
+        <result column = "content_image" property = "contentImage" />
+        <result column = "content_audio" property = "contentAudio" />
+        <result column = "content_video" property = "contentVideo" />
+        <result column = "user_id" property = "userId" />
+        <result column = "nick_name" property = "nickName" />
+        <result column = "question_status" property = "questionStatus" />
+        <result column = "answer_count" property = "answerCount" />
+        <result column = "read_count" property = "readCount" />
+        <result column = "car_brand_id" property = "carBrandId" />
+        <result column = "car_brand" property = "carBrand" />
+        <result column = "car_series_id" property = "carSeriesId" />
+        <result column = "car_series" property = "carSeries" />
+        <result column = "car_company" property = "carCompany" />
+        <result column = "import_info" property = "importInfo" />
+        <result column = "tag" property = "tag" />
+        <result column = "audio_size" property = "audioSize" />
+        <result column = "shop_name" property = "shopName" />
+        <result column = "refer" property = "refer" />
+        <result column = "ver" property = "ver" />
+        <result column = "sys" property = "sys" />
+        <result column = "device_id" property = "deviceId" />
+        <result column = "phone_brand" property = "phoneBrand" />
+        <result column = "network_type" property = "networkType" />
+        <result column = "unsolved_reason" property = "unsolvedReason" />
+        <result column = "fault_content" property = "faultContent" />
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            shop_id as shopId,
+            content as content,
+            content_image as contentImage,
+            content_audio as contentAudio,
+            content_video as contentVideo,
+            user_id as userId,
+            nick_name as nickName,
+            question_status as questionStatus,
+            answer_count as answerCount,
+            read_count as readCount,
+            car_brand_id as carBrandId,
+            car_brand as carBrand,
+            car_series_id as carSeriesId,
+            car_series as carSeries,
+            car_company as carCompany,
+            import_info as importInfo,
+            tag as tag,
+            audio_size as audioSize,
+            shop_name as shopName,
+            refer as refer,
+            ver as ver,
+            sys as sys,
+            device_id as deviceId,
+            phone_brand as phoneBrand,
+            network_type as networkType,
+            unsolved_reason as unsolvedReason,
+            fault_content as faultContent,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="content != null">
+                    and content = #{content}
+                </if>
+                <if test="contentImage != null">
+                    and content_image = #{contentImage}
+                </if>
+                <if test="contentAudio != null">
+                    and content_audio = #{contentAudio}
+                </if>
+                <if test="contentVideo != null">
+                    and content_video = #{contentVideo}
+                </if>
+                <if test="userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test="nickName != null">
+                    and nick_name = #{nickName}
+                </if>
+                <if test="questionStatus != null">
+                    and question_status = #{questionStatus}
+                </if>
+                <if test="answerCount != null">
+                    and answer_count = #{answerCount}
+                </if>
+                <if test="readCount != null">
+                    and read_count = #{readCount}
+                </if>
+                <if test="carBrandId != null">
+                    and car_brand_id = #{carBrandId}
+                </if>
+                <if test="carBrand != null">
+                    and car_brand = #{carBrand}
+                </if>
+                <if test="carSeriesId != null">
+                    and car_series_id = #{carSeriesId}
+                </if>
+                <if test="carSeries != null">
+                    and car_series = #{carSeries}
+                </if>
+                <if test="carCompany != null">
+                    and car_company = #{carCompany}
+                </if>
+                <if test="importInfo != null">
+                    and import_info = #{importInfo}
+                </if>
+                <if test="tag != null">
+                    and tag = #{tag}
+                </if>
+                <if test="audioSize != null">
+                    and audio_size = #{audioSize}
+                </if>
+                <if test="shopName != null">
+                    and shop_name = #{shopName}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test="keyWord != null">
+                    and (content like CONCAT('%',#{keyWord},'%')
+                    or tag like CONCAT('%',#{keyWord},'%'))
+                </if>
+                <if test = "sys != null">
+                    and sys = #{sys}
+                </if>
+                <if test = "deviceId != null">
+                    and device_id = #{deviceId}
+                </if>
+                <if test = "phoneBrand != null">
+                    and phone_brand = #{phoneBrand}
+                </if>
+                <if test = "networkType != null">
+                    and network_type = #{networkType}
+                </if>
+                <if test = "unsolvedReason != null">
+                    and unsolved_reason = #{unsolvedReason}
+                </if>
+                <if test = "faultContent != null">
+                    and fault_content = #{faultContent}
+                </if>
+                <if test="startTime != null">
+                    <![CDATA[
+                    and gmt_create >= #{startTime}
+                ]]>
+                </if>
+                <if test="stopTime != null">
+                    <![CDATA[
+                    and gmt_create <= #{stopTime}
+                ]]>
+                </if>
+                <if test="answerCountAbove != null">
+                    and answer_count > #{answerCountAbove}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "content != null">
+                    content = #{content},
+                </if>
+                <if test = "contentImage != null">
+                    content_image = #{contentImage},
+                </if>
+                <if test = "contentAudio != null">
+                    content_audio = #{contentAudio},
+                </if>
+                <if test = "contentVideo != null">
+                    content_video = #{contentVideo},
+                </if>
+                <if test = "userId != null">
+                    user_id = #{userId},
+                </if>
+                <if test = "nickName != null">
+                    nick_name = #{nickName},
+                </if>
+                <if test = "questionStatus != null">
+                    question_status = #{questionStatus},
+                </if>
+                <if test = "answerCount != null">
+                    answer_count = #{answerCount},
+                </if>
+                <if test = "readCount != null">
+                    read_count = #{readCount},
+                </if>
+                <if test = "carBrandId != null">
+                    car_brand_id = #{carBrandId},
+                </if>
+                <if test = "carBrand != null">
+                    car_brand = #{carBrand},
+                </if>
+                <if test = "carSeriesId != null">
+                    car_series_id = #{carSeriesId},
+                </if>
+                <if test = "carSeries != null">
+                    car_series = #{carSeries},
+                </if>
+                <if test = "carCompany != null">
+                    car_company = #{carCompany},
+                </if>
+                <if test = "importInfo != null">
+                    import_info = #{importInfo},
+                </if>
+                <if test = "tag != null">
+                    tag = #{tag},
+                </if>
+                <if test = "audioSize != null">
+                    audio_size = #{audioSize},
+                </if>
+                <if test = "shopName != null">
+                    shop_name = #{shopName},
+                </if>
+                <if test = "refer != null">
+                    refer = #{refer},
+                </if>
+                <if test = "ver != null">
+                    ver = #{ver},
+                </if>
+                <if test = "sys != null">
+                    sys = #{sys},
+                </if>
+                <if test = "deviceId != null">
+                    device_id = #{deviceId},
+                </if>
+                <if test = "phoneBrand != null">
+                    phone_brand = #{phoneBrand},
+                </if>
+                <if test = "networkType != null">
+                    network_type = #{networkType},
+                </if>
+                <if test = "unsolvedReason != null">
+                    unsolved_reason = #{unsolvedReason},
+                </if>
+                <if test = "faultContent != null">
+                    fault_content = #{faultContent},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_question
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_question
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_question
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_question
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_question
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_question
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_question
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_question (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "content != null">
+                content,
+            </if>
+            <if test = "contentImage != null">
+                content_image,
+            </if>
+            <if test = "contentAudio != null">
+                content_audio,
+            </if>
+            <if test = "contentVideo != null">
+                content_video,
+            </if>
+            <if test = "userId != null">
+                user_id,
+            </if>
+            <if test = "nickName != null">
+                nick_name,
+            </if>
+            <if test = "questionStatus != null">
+                question_status,
+            </if>
+            <if test = "answerCount != null">
+                answer_count,
+            </if>
+            <if test = "readCount != null">
+                read_count,
+            </if>
+            <if test = "carBrandId != null">
+                car_brand_id,
+            </if>
+            <if test = "carBrand != null">
+                car_brand,
+            </if>
+            <if test = "carSeriesId != null">
+                car_series_id,
+            </if>
+            <if test = "carSeries != null">
+                car_series,
+            </if>
+            <if test = "carCompany != null">
+                car_company,
+            </if>
+            <if test = "importInfo != null">
+                import_info,
+            </if>
+            <if test = "tag != null">
+                tag,
+            </if>
+            <if test = "audioSize != null">
+                audio_size,
+            </if>
+            <if test = "shopName != null">
+                shop_name,
+            </if>
+            <if test = "refer != null">
+                refer,
+            </if>
+            <if test = "ver != null">
+                ver,
+            </if>
+            <if test = "sys != null">
+                sys,
+            </if>
+            <if test = "deviceId != null">
+                device_id,
+            </if>
+            <if test = "phoneBrand != null">
+                phone_brand,
+            </if>
+            <if test = "networkType != null">
+                network_type,
+            </if>
+            <if test = "unsolvedReason != null">
+                unsolved_reason,
+            </if>
+            <if test = "faultContent != null">
+                fault_content,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "content != null">
+                #{content},
+            </if>
+            <if test = "contentImage != null">
+                #{contentImage},
+            </if>
+            <if test = "contentAudio != null">
+                #{contentAudio},
+            </if>
+            <if test = "contentVideo != null">
+                #{contentVideo},
+            </if>
+            <if test = "userId != null">
+                #{userId},
+            </if>
+            <if test = "nickName != null">
+                #{nickName},
+            </if>
+            <if test = "questionStatus != null">
+                #{questionStatus},
+            </if>
+            <if test = "answerCount != null">
+                #{answerCount},
+            </if>
+            <if test = "readCount != null">
+                #{readCount},
+            </if>
+            <if test = "carBrandId != null">
+                #{carBrandId},
+            </if>
+            <if test = "carBrand != null">
+                #{carBrand},
+            </if>
+            <if test = "carSeriesId != null">
+                #{carSeriesId},
+            </if>
+            <if test = "carSeries != null">
+                #{carSeries},
+            </if>
+            <if test = "carCompany != null">
+                #{carCompany},
+            </if>
+            <if test = "importInfo != null">
+                #{importInfo},
+            </if>
+            <if test = "tag != null">
+                #{tag},
+            </if>
+            <if test = "audioSize != null">
+                #{audioSize},
+            </if>
+            <if test = "shopName != null">
+                #{shopName},
+            </if>
+            <if test = "refer != null">
+                #{refer},
+            </if>
+            <if test = "ver != null">
+                #{ver},
+            </if>
+            <if test = "sys != null">
+                #{sys},
+            </if>
+            <if test = "deviceId != null">
+                #{deviceId},
+            </if>
+            <if test = "phoneBrand != null">
+                #{phoneBrand},
+            </if>
+            <if test = "networkType != null">
+                #{networkType},
+            </if>
+            <if test = "unsolvedReason != null">
+                #{unsolvedReason},
+            </if>
+            <if test = "faultContent != null">
+                #{faultContent},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_question
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_question (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            content,
+            content_image,
+            content_audio,
+            content_video,
+            user_id,
+            nick_name,
+            question_status,
+            answer_count,
+            read_count,
+            car_brand_id,
+            car_brand,
+            car_series_id,
+            car_series,
+            car_company,
+            import_info,
+            tag,
+            audio_size,
+            shop_name,
+            refer,
+            ver,
+            sys,
+            device_id,
+            phone_brand,
+            network_type,
+            unsolved_reason,
+            fault_content,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.content != null">
+                    #{item.content},
+                </if>
+                <if test="item.content == null">
+                    NULL ,
+                </if>
+                <if test="item.contentImage != null">
+                    #{item.contentImage},
+                </if>
+                <if test="item.contentImage == null">
+                    NULL ,
+                </if>
+                <if test="item.contentAudio != null">
+                    #{item.contentAudio},
+                </if>
+                <if test="item.contentAudio == null">
+                    NULL ,
+                </if>
+                <if test="item.contentVideo != null">
+                    #{item.contentVideo},
+                </if>
+                <if test="item.contentVideo == null">
+                    NULL ,
+                </if>
+                <if test="item.userId != null">
+                    #{item.userId},
+                </if>
+                <if test="item.userId == null">
+                    NULL ,
+                </if>
+                <if test="item.nickName != null">
+                    #{item.nickName},
+                </if>
+                <if test="item.nickName == null">
+                    NULL ,
+                </if>
+                <if test="item.questionStatus != null">
+                    #{item.questionStatus},
+                </if>
+                <if test="item.questionStatus == null">
+                    NULL ,
+                </if>
+                <if test="item.answerCount != null">
+                    #{item.answerCount},
+                </if>
+                <if test="item.answerCount == null">
+                    NULL ,
+                </if>
+                <if test="item.readCount != null">
+                    #{item.readCount},
+                </if>
+                <if test="item.readCount == null">
+                    NULL ,
+                </if>
+                <if test="item.carBrandId != null">
+                    #{item.carBrandId},
+                </if>
+                <if test="item.carBrandId == null">
+                    NULL ,
+                </if>
+                <if test="item.carBrand != null">
+                    #{item.carBrand},
+                </if>
+                <if test="item.carBrand == null">
+                    NULL ,
+                </if>
+                <if test="item.carSeriesId != null">
+                    #{item.carSeriesId},
+                </if>
+                <if test="item.carSeriesId == null">
+                    NULL ,
+                </if>
+                <if test="item.carSeries != null">
+                    #{item.carSeries},
+                </if>
+                <if test="item.carSeries == null">
+                    NULL ,
+                </if>
+                <if test="item.carCompany != null">
+                    #{item.carCompany},
+                </if>
+                <if test="item.carCompany == null">
+                    NULL ,
+                </if>
+                <if test="item.importInfo != null">
+                    #{item.importInfo},
+                </if>
+                <if test="item.importInfo == null">
+                    NULL ,
+                </if>
+                <if test="item.tag != null">
+                    #{item.tag},
+                </if>
+                <if test="item.tag == null">
+                    NULL ,
+                </if>
+                <if test="item.audioSize != null">
+                    #{item.audioSize},
+                </if>
+                <if test="item.audioSize == null">
+                    0 ,
+                </if>
+                <if test="item.shopName != null">
+                    #{item.shopName},
+                </if>
+                <if test="item.shopName == null">
+                    NULL ,
+                </if>
+                <if test="item.refer != null">
+                    #{item.refer},
+                </if>
+                <if test="item.refer == null">
+                    0 ,
+                </if>
+                <if test="item.ver != null">
+                    #{item.ver},
+                </if>
+                <if test="item.ver == null">
+                    NULL ,
+                </if>
+                <if test="item.sys != null">
+                    #{item.sys},
+                </if>
+                <if test="item.sys == null">
+                    NULL ,
+                </if>
+                <if test="item.deviceId != null">
+                    #{item.deviceId},
+                </if>
+                <if test="item.deviceId == null">
+                    NULL ,
+                </if>
+                <if test="item.phoneBrand != null">
+                    #{item.phoneBrand},
+                </if>
+                <if test="item.phoneBrand == null">
+                    NULL ,
+                </if>
+                <if test="item.networkType != null">
+                    #{item.networkType},
+                </if>
+                <if test="item.networkType == null">
+                    NULL ,
+                </if>
+                <if test="item.unsolvedReason != null">
+                    #{item.unsolvedReason},
+                </if>
+                <if test="item.unsolvedReason == null">
+                    NULL ,
+                </if>
+                <if test="item.faultContent != null">
+                    #{item.faultContent},
+                </if>
+                <if test="item.faultContent == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+    <!--我要回答问题数量查询(不包括自己的)-->
+    <select id="getIWantQuestionCount" resultType="java.lang.Integer">
+        select count(id) from legend_question
+        <where>
+        <if test="keyWord != null">
+            and (content like CONCAT('%',#{keyWord},'%')
+            or tag like CONCAT('%',#{keyWord},'%'))
+        </if>
+        <if test="userId != null">
+            and user_id != #{userId}
+        </if>
+        <if test="questionStatus != null">
+            and question_status = #{questionStatus}
+        </if>
+        <if test="answerCount != null">
+            and answer_count = #{answerCount}
+        </if>
+        <if test = "isDeleted != null">and is_deleted = #{isDeleted}</if>
+        <if test = "isDeleted == null">and is_deleted = 'N'</if>
+        </where>
+    </select>
+    <!--我要回答问题查询(不包括自己的)-->
+    <select id="getIWantQuestions" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_question
+        <where>
+        <if test="keyWord != null">
+            and (content like CONCAT('%',#{keyWord},'%')
+            or tag like CONCAT('%',#{keyWord},'%'))
+        </if>
+        <if test="userId != null">
+            and user_id != #{userId}
+        </if>
+        <if test="questionStatus != null">
+            and question_status = #{questionStatus}
+        </if>
+        <if test="answerCount != null">
+            and answer_count = #{answerCount}
+        </if>
+        <if test = "isDeleted != null">and is_deleted = #{isDeleted}</if>
+        <if test = "isDeleted == null">and is_deleted = 'N'</if>
+        </where>
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+</mapper>

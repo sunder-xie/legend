@@ -1,0 +1,55 @@
+.main-container {
+    padding: 40px 44px;
+    background: #fff;
+}
+
+.display {
+    position: relative;
+    height: 460px;
+}
+
+.img-1 {
+    position: relative;
+    top: 0;
+    left:0;
+}
+
+.img-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.btns {
+    position: absolute;
+    left: 0;
+    margin-top: 30px;
+    top: 80px;
+}
+
+.description-title {
+    line-height: 1.8;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.description-list {
+    line-height: 1.5;
+}
+
+.mark {
+    color: #ff7800;
+}
+
+.sense-info {
+    overflow: hidden;
+}
+
+.condition {
+    font-weight: 700;
+}
+.yqx-btn-smart{
+    background-color: #ff9130;
+    margin-right: 6px;
+}

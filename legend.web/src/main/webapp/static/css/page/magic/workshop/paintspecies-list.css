@@ -1,0 +1,24 @@
+/*
+ * by weilu 2016/07/09
+ * 面漆种类页面
+*/
+
+.table_title{margin-bottom: 10px;}
+.table-paint{border-top: 1px solid #cacaca}
+.title{line-height: 34px; height: 34px; font-weight: bold; font-size: 16px;}
+.add{padding: 0 10px 0 5px;cursor: pointer;}
+.icon-add{color: #666; font-size: 14px; padding: 0 5px; }
+.edit{color: #1db000; text-decoration: underline; margin-right: 10px;}
+.remove{color: #ee3f02; text-decoration: underline;}
+.op:hover{text-decoration: underline;}
+.form-label{width: 60px;}
+.dialog-con li{text-align: left;margin-bottom: 10px;}
+.dialog_op{text-align: center;display: block;border-top: 1px solid #d2d2d2;padding-top: 10px;}
+.require:before {content: '*'; color: red;}
+.w380{width: 380px;}
+td{white-space: nowrap!important;text-overflow: ellipsis;overflow: hidden;}
+/*弹窗样式 start*/
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{text-align: center;padding: 10px;}
+/*弹窗样式 end*/

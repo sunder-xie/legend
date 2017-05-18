@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.settlement.CouponDao">
+
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.settlement.Coupon"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="is_used" property="isUsed"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="customer_car_id" property="customerCarId"/>
+        <result column="car_license" property="carLicense"/>
+        <result column="coupon_sn" property="couponSn"/>
+        <result column="coupon_value" property="couponValue"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        is_used as isUsed,
+        customer_id as customerId,
+        customer_car_id as customerCarId,
+        car_license as carLicense,
+        coupon_sn as couponSn,
+        coupon_value as couponValue
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="isUsed != null">
+                    and is_used = #{isUsed}
+                </if>
+                <if test="customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test="customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test="carLicense != null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test="couponSn != null">
+                    and coupon_sn = #{couponSn}
+                </if>
+                <if test="couponValue != null">
+                    and coupon_value = #{couponValue}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="isUsed != null">
+                    is_used = #{isUsed},
+                </if>
+                <if test="customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test="customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test="carLicense != null">
+                    car_license = #{carLicense},
+                </if>
+                <if test="couponSn != null">
+                    coupon_sn = #{couponSn},
+                </if>
+                <if test="couponValue != null">
+                    coupon_value = #{couponValue},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_coupon
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_coupon
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <!-- 根据门店ID 、代金券编号集合 -->
+    <select id="selectCouponByCouponSn" resultMap="BaseResultMap">
+        SELECT
+          <include refid="BaseColumnList"/>
+        FROM
+          legend_coupon
+        WHERE
+          shop_id =#{shopId}
+        AND
+          coupon_sn in
+            (
+            <foreach collection="couponSnList" index="index" item="item" separator=",">
+                #{item}
+            </foreach>
+            )
+    </select>
+
+
+
+
+
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_coupon
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_coupon
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_coupon
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_coupon (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="isUsed != null">
+                is_used,
+            </if>
+            <if test="customerId != null">
+                customer_id,
+            </if>
+            <if test="customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test="carLicense != null">
+                car_license,
+            </if>
+            <if test="couponSn != null">
+                coupon_sn,
+            </if>
+            <if test="couponValue != null">
+                coupon_value
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="isUsed != null">
+                #{isUsed},
+            </if>
+            <if test="customerId != null">
+                #{customerId},
+            </if>
+            <if test="customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test="carLicense != null">
+                #{carLicense},
+            </if>
+            <if test="couponSn != null">
+                #{couponSn},
+            </if>
+            <if test="couponValue != null">
+                #{couponValue},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_coupon
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!-- 通过ID更新 -->
+    <update id="updateByCouponSn">
+        update legend_coupon
+        <include refid="BaseUpdateSet"/>
+        where coupon_sn = #{couponSn}
+    </update>
+
+    <!-- 通过ID更新 -->
+    <update id="updateCoupons" parameterType="java.util.Map">
+        update legend_coupon
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <if test="isUsed != null">
+                    is_used = #{isUsed},
+                </if>
+                <if test="customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test="customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test="carLicense != null">
+                    car_license = #{carLicense},
+                </if>
+                <if test = "modifier != null and modifier != ''">
+                    modifier=#{modifier},
+                </if>
+                    gmt_modified = now(),
+            </trim>
+        </set>
+        <where>
+            <if test="shopId != null">
+                shop_id = #{shopId}
+            </if>
+            <if test = "updateIds != null">
+                and id in
+                <foreach collection = "updateIds" item="item" index="index" open="(" separator="," close=")">
+                    ${item}
+                </foreach>
+            </if>
+            <if test = "updateSns != null" >
+                and
+                (
+                <trim suffixOverrides="or">
+                    <foreach collection="updateSns" item="item" index="index" open="" separator=""
+                             close="">coupon_sn = '${item}' or
+                    </foreach>
+                </trim>
+                )
+            </if>
+        </where>
+    </update>
+    <insert id="insertCoupons" parameterType="java.util.List">
+        INSERT INTO legend_coupon (
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            is_used,
+            customer_id,
+            customer_car_id,
+            car_license,
+            coupon_sn,
+            coupon_value
+          )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator="," >
+            ("N",
+            now(),
+            #{item.creator},
+            now(),
+            #{item.creator},
+            #{item.shopId},
+            #{item.isUsed},
+            #{item.customerId},
+            #{item.customerCarId},
+            #{item.carLicense},
+            #{item.couponSn},
+            #{item.couponValue}
+            )
+        </foreach>
+    </insert>
+</mapper>

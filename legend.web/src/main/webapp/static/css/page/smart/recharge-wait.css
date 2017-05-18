@@ -1,0 +1,137 @@
+
+/*支付等待页面公共 开始*/
+.dis {
+    display: none;
+}
+
+.process-nav-true .nav_process {
+    height: 40px;
+}
+
+.right {
+    float: right;
+    width: 825px;
+}
+
+.right p.big-title {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.enter{
+    background-color: #FFFFFF;
+}
+/*支付等待页面公共 结束*/
+
+/*支付等待页面 开始*/
+.wait {
+    font-size: 24px;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #666666;
+}
+
+.wait-pic-box {
+    width: 560px;
+    height: 90px;
+    margin: 0 auto 50px auto;
+}
+
+.process-box {
+    margin-bottom: 10px;
+}
+
+.process-box li {
+    float: left;
+    position: relative;
+}
+
+.process-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.process-icon-word{
+    color: #d0d0d0;
+    font-size: 18px;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}
+.process-icon-one {
+    margin-left: 111px;
+}
+
+.process-icon-two {
+    margin-left: 94px;
+}
+
+.process-icon-three {
+    margin-left: 98px;
+}
+
+/*成功状态图标*/
+.process-paying {
+    background: url("../../../../static/img/page/smart/state-Icon.png") 0 0 no-repeat;
+}
+
+/*等待状态图标*/
+.aliPay-receipt {
+    background: url('../../../../static/img/page/smart/state-Icon.png') -68px -2px no-repeat;
+    animation:wait 2s infinite linear;/*匀速 循环*/
+    -webkit-animation:wait 2s infinite linear;/*匀速 循环*/
+}
+
+@keyframes wait {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes wait {
+    0% {
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+    }
+    100% {
+        -webkit-transform:rotate(-360deg); /* Safari 和 Chrome */
+    }
+}
+
+/*未执行到的状态图标*/
+.aliPay-receipt-gray {
+    background: url('../../../../static/img/page/smart/state-Icon.png') -136px -2px no-repeat;
+}
+
+/*支付成功未执行的状态*/
+.payState-unExecute {
+    background: url('../../../../static/img/page/smart/state-Icon.png') -206px -4px no-repeat;
+}
+
+.line {
+    width: 91px;
+    height: 2px;
+    margin: 25px 10px 0 10px;
+}
+
+.line-bgColor-green {
+    background-color: #b7ce67;
+}
+
+.line-bgColor-gray {
+    background-color: #d0d0d0;
+}
+
+/*支付等待页面 结束*/
+

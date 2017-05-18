@@ -1,0 +1,147 @@
+/**
+ * 结算模块公共样式
+ * zmx 2016-06-01
+ */
+.yqx-wrapper *{box-sizing: border-box;}
+
+/**
+ * 右侧内容区样式 start
+ */
+.order-right{width:823px;}
+/**
+ * 右侧内容区样式 end
+ */
+/**
+ * 表格动态行样式 start
+ */
+.dynamic-table{width: 100%;margin-bottom: 20px;}
+.dynamic-table th{height:36px;text-align: center;border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;background: #f9f9f9;vertical-align: middle;}
+.dynamic-table .dynamic-add-btn {width: 45px;}
+.dynamic-table .dynamic-add-btn a{display: inline-block;width: 35px;height:24px;line-height: 24px;text-align: center;color: #fff;border:1px solid #7fa700;background: #9fc527;border-radius: 3px;}
+.dynamic-table .dynamic-add-btn a:hover{background: #a3cd20;}
+.dynamic-table .dynamic-del-btn a{color: #ef5227;}
+.dynamic-table .dynamic-del-btn a:hover{text-decoration: underline;}
+.dynamic-table td{padding:8px 3px 0 3px;}
+.dynamic-table tr > td:first-child{text-align: center;}
+.dynamic-table tr > td:last-child{padding-right:8px;text-align: right;}
+.dynamic-table td > .form-item{width: 100%;}
+/**
+ * 表格动态行样式 end
+ */
+
+/*
+ * 表单主内容区 start
+ */
+.order-head{margin-bottom: 10px;}
+.order-head .headline{line-height: 45px;}
+.order-row{margin: 0 -15px;}
+.order-group{padding: 15px 0;border-bottom: 1px solid #dcdcdc;}
+.order-group:last-child{border-bottom: none;}
+/* 表单主内容区 end */
+
+
+/*
+ * 仿bootstrap 栅栏式布局 start
+ */
+.show-grid{margin: 10px 0;zoom: 1;_height: 1px;}
+.show-grid:after{display: table;content: "";clear: both;}
+.show-grid [class^=col-]{float: left;}
+.col-3{width: 25%;}
+.col-4{width: 33.3333333%;}
+.col-6{width: 50%;}
+.col-8{width: 66.6666666%;}
+.col-9{width: 75%;}
+/* 仿bootstrap 栅栏式布局 end */
+
+
+
+/*印章公共样式 start*/
+.seal{width: 110px;height: 110px;position: absolute;top: -6px;right: -6px;background: url("../../../img/page/settlement/debit/orderSeal.png") no-repeat;}
+/*待报价 orderStatus='CJDD'*/
+.no-quoted{background-position: 0 0;}
+/*已报价 orderStatus='DDBJ'*/
+.quoted{background-position: -121px 0;}
+/*已派工 orderStatus='FPDD ,DDSG'*/
+.dispatching{background-position: 0 -119px;}
+/*已完工 orderStatus='DDWC'*/
+.finished{background-position: -130px -119px;}
+/*待结算 pc和app规则：orderStatus='CJDD,DDWC'*/
+.no-settlement{background-position: 0 -236px;}
+/*已挂帐 orderStatus='DDYFK' pay_status=1*/
+.sign{background-position: -134px -237px;}
+/*已结清 orderStatus='DDYFK' pay_status=2*/
+.settlement{background-position: 0 -348px;}
+/*无效 orderStatus='WXDD'*/
+.invalid{background-position: -140px -348px;}
+/*印章公共样式 end*/
+
+/*冲红按钮样式*/
+.bold .yqx-text .redorder{ padding: 3px 5px; color: #fa7b7c; border: 1px solid #fa7b7c;}
+
+/*弹窗样式 start*/
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{text-align: center;padding: 10px;}
+.link-btn{display: block;width: 150px;height: 30px;line-height: 30px;text-align: center;border: 1px solid #9fc527;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;color: #333;margin: 10px auto;  }
+/*弹窗样式 end*/
+
+
+/*工作进度 start*/
+.order-process{margin-bottom: 12px}
+.order-process .order-step{position: relative;float: left;width: 28px;margin-left: 80px;font-size: 12px;-webkit-transform: translateX(-100%);transform: translateX(-100%);}
+.order-process .order-step:first-of-type{margin-left: 0}
+.order-process .order-step .order-step-circle{width: 28px;line-height: 28px; margin: 0 auto 3px;font-weight: 600;text-align: center;color: #fff;background:#999; border-radius: 50%;}
+.order-process .order-step .order-step-title{position: absolute;left: 50%;margin-top: 8px;white-space: nowrap;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);color: #666;}
+.order-process .order-step:before{display: inline;content: "";position: absolute;top: 14px;left: -75px;width: 70px;height: 2px;margin-bottom: 12px;background: #b3b3b3; border-radius: 5px;}
+.order-process .order-step:first-of-type:before{display: none}
+
+.order-process .order-step-finish .order-step-circle{background: #8bb30d;}
+.order-process .order-step-finish .order-step-title{color: #75960c}
+.order-process .order-step-finish:before{background: #8bb30d}
+
+/*工作进度 end*/
+
+.btn-box .yqx-btn:last-child {
+    margin-right: 5px;
+}
+
+.display-none{
+    display: none;
+}
+.history-order{
+    cursor: pointer;
+}
+/*对齐方式*/
+.yqx-table>tbody>tr>.text-l{ text-align: left;}
+.yqx-table>tbody>tr>.text-r{ text-align: right;}
+.yqx-table>thead>tr>.text-l{ text-align: left;}
+.yqx-table>thead>tr>.text-r{ text-align: right;}
+
+.yqx-text .more-car{ padding: 3px 5px; color: #8eb210; border: 1px solid #8eb210;}
+
+
+/*金额样式*/
+.money-font{ font-size: 14px; font-weight: bold; color: #fa7b7c; font-style: normal;}
+.white{ color: #fff;}
+
+.money-margin{ margin-left: 2px; font-style: normal;}
+.icon-fontsize,.money-fontsize{
+    font-size: 14px;
+}
+.icon-color{
+    color: #999;
+}
+.rmb-font{ font-size: 12px; font-style: normal; font-weight: normal;}
+
+.order-list-table .table-scroll-box{ border-left: 1px solid #ddd;border-right: 1px solid #ddd;}
+.yqx-table>tbody>tr>td, .yqx-table>thead>tr>th, .yqx-table>tr>td, .yqx-table>tr>th{border-bottom: 1px solid #ddd;}
+
+.display-none{ display: none;}
+.total-hide.hide {
+    display: none;
+}
+
+/* 无效按钮 */
+.detail-btn-group .yqx-btn + .invalid-btn {
+    margin-right: 5px;
+}

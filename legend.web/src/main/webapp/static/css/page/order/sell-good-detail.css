@@ -1,0 +1,211 @@
+.quick-nav {
+    margin-bottom: 10px;
+}
+
+.quick-heading {
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 16px;
+    color: #000;
+}
+
+.car-info {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px 10px 10px 10px;
+    display: table;
+    width: 100%;
+}
+table.yqx-table thead tr th, table.yqx-table tbody tr td {
+    text-align: left;
+}
+table.yqx-table thead tr th.th-right, table.yqx-table tr td.td-right {
+    text-align: right;
+}
+
+table.yqx-table .table-boundary {
+    padding-right: 20px;
+}
+
+table.yqx-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.order-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.car-info .margin-left-2 {
+    padding-left: 23px;
+}
+
+.car-info .margin-left-3 {
+    padding-left: 10px;
+}
+.info-text .car-text-width {
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.info-td-2 {
+    width: 50%;
+    display: inline-block;
+}
+
+.info-td-3 {
+    width: 33.3%;
+    display: inline-block;
+}
+
+.info-td strong {
+    font-weight: 800;
+    color: #000;
+}
+
+.info-text {
+    display: table-row;
+    font-size: 12px;
+}
+
+.info-text:last-child {
+    margin-bottom: 0;
+}
+/* 表格样式 start */
+.car-consume {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: 0 10px;
+}
+
+table.yqx-table thead tr th {
+    background: #f9f9f9;
+}
+
+.yqx-table caption {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+/* 表格样式 end */
+
+
+/* 备注及按钮 */
+.input-mark {
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.input-mark .form-label {
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.input-mark .form-item {
+    width: 708px;
+    height: 68px;
+}
+
+.input-mark input {
+    height: 100%;
+}
+
+.money-sum {
+    color: #ff7800;
+}
+
+p.pay-line {
+    margin-bottom: 20px;
+}
+
+.form-last-btns {
+    padding-bottom: 20px;
+}
+
+.form-last-btns button {
+    margin-right: 10px;
+}
+
+i {
+    font-style: normal;
+}
+
+#addNew {
+    float: right;
+}
+.max-text{
+    width: 800px;
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 备注及按钮 end */
+
+
+.order-bold{
+    font-weight: bold;
+    color: #333;
+}
+
+.detail-row{
+    clear:both;
+}
+.detail-title{
+    width: 90px;
+    line-height: 30px;
+}
+
+.detail-message{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.car-text-width{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info-td {
+    line-height: 14px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.info-td-2 {
+    width: 49%;
+}
+
+.info-td-3 {
+    line-height: 14px;
+}
+.detail-message-width{
+    width: 600px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.detail-message{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

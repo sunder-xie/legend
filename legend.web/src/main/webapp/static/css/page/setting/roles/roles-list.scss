@@ -1,0 +1,206 @@
+/**
+ * Created by sky on 2017/1/10.
+ */
+
+@import "../../../scss-widgets/placeholders/ellipsis";
+
+.yqx-table {
+  margin: 5px 0;
+  border-top: 1px solid #cacaca;
+}
+
+.staff-table {
+  tr {
+    cursor: pointer;
+  }
+}
+
+.content {
+  background: #fff;
+  border: 1px solid #cacaca;
+  overflow: hidden;
+}
+
+.right-con, .left-aside {
+  margin-bottom: -3000px;
+  padding-bottom: 3000px;
+
+  @at-root {
+    .left-aside {
+      width: 250px;
+    }
+
+    .right-con {
+      width: 570px;
+      border-left: 1px solid #cacaca;
+    }
+  }
+}
+
+.left-treeview {
+  padding: 10px 5px;
+  color: #333;
+
+  @at-root {
+
+    .treeview-item-box {
+      position: relative;
+      padding: 0 8px;
+      line-height: 24px;
+
+      .treeview-content {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .treeview-setting {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        display: none;
+        color: #fff;
+        cursor: pointer;
+
+        @at-root {
+          .dropdown {
+            position: absolute;
+            left: 0;
+            z-index: 3;
+            width: 80px;
+            margin-top: 10px;
+            padding: 7px 0;
+            color: #333;
+            background: #fff;
+            border-radius: 3px;
+            box-shadow: 0 0 3px #666;
+
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: -10px;
+
+            }
+
+            li {
+              padding: 0 10px;
+              line-height: 25px;
+
+              &:hover {
+                color: #fff;
+                background: #7d828f;
+              }
+            }
+          }
+        }
+      }
+
+      &.current {
+        padding-right: 50px;
+        background: #607b0a;
+        border-radius: 12px;
+
+        .treeview-content {
+          color: #fff;
+          @extend %ellipsis-one-line;
+        }
+
+        .treeview-setting {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.right-con-inner {
+  padding: 0 10px;
+}
+
+.title {
+  padding: 6px 0;
+  overflow: hidden;
+
+  p {
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    vertical-align: middle;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 14px;
+      background: #999;
+      vertical-align: text-bottom;
+      margin-right: 10px;
+    }
+  }
+}
+
+.dialog-content-1 {
+  padding: 20px 50px;
+
+  @at-root {
+    .dialog-form-row {
+      & + & {
+        margin-top: 20px;
+      }
+    }
+
+    .dialog-roles-name {
+      width: 227px;
+    }
+  }
+}
+
+.list-control {
+  cursor: pointer;
+}
+
+.permission {
+  width: 100%;
+  border-top: 1px solid #cacaca;
+
+  & > li {
+    line-height: 40px;
+    border-bottom: 1px solid #cacaca;
+    padding-left: 10px;
+
+    &.all {
+      background: #f1f2f2;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  input[type="checkbox"] {
+    margin-right: 3px;
+    vertical-align: text-bottom;
+  }
+
+  .permission {
+    padding-left: 20px;
+  }
+}
+
+.treeview-edit-control {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+
+  &:focus {
+    background: #fff;
+    box-shadow: inset 1px 1px 3px #cfcfcf;
+  }
+}

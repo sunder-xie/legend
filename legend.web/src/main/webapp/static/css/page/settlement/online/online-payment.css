@@ -1,0 +1,252 @@
+.yqx-wrapper .apply-banner {
+    width: 823px;
+    height: 240px;
+    margin-bottom: 20px;
+    background: url('../../../../img/page/settlement/online/online-payment/banner.jpg');
+}
+
+.yqx-wrapper .wechat-account {
+    color: #fa7977;
+}
+.order-head {
+    margin: 0;
+}
+
+.margin-left-77 {
+    margin-left: 77px;
+}
+/* 进度条 start */
+.yqx-wrapper .process {
+    position: relative;
+    display: inline-block;
+    width: 404px;
+    height: 36px;
+    margin-right: 11px;
+    background: #c3c9d2;
+    font-size: 14px;
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+}
+
+.yqx-wrapper .process.current-process {
+    background: #9fc527;
+}
+
+.yqx-wrapper .process-start.current-process:after {
+    border-left-color: #9fc527;
+}
+
+.yqx-wrapper .process-end.current-process:after {
+    border-top-color: #9fc527;
+    border-bottom-color: #9fc527;
+    border-right-color: #9fc527;
+}
+
+.yqx-wrapper .process-start:after {
+    content: "";
+    position: absolute;
+    right: -29px;
+    border: 18px solid transparent;
+    border-left: 11px solid #c3c9de;
+}
+
+.yqx-wrapper .process-end {
+    margin:0 0 0 3px;
+}
+
+.yqx-wrapper .process-end:after {
+    content: "";
+    position: absolute;
+    left: -11px;
+    border: 18px solid #c3c9de;
+    border-left: 11px solid transparent;
+}
+
+.yqx-wrapper i {
+    font-style: normal;
+}
+
+.yqx-wrapper .circle-num {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px 2px 0;
+    line-height: 13px;
+    font-size: 13px;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    vertical-align: middle;
+}
+/* 进度条 end */
+
+/* 描述 */
+.yqx-wrapper .apply-content {
+    padding: 0 30px;
+    margin-top: 10px;
+    border: 1px solid #e1e6eb;
+    background: #fff;
+}
+
+.apply-content h4 {
+    position: relative;
+    margin-top: 27px;
+    padding: 0 0 18px 14px;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 18px;
+    color: #333;
+}
+
+.apply-content h4:before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    top: -2px;
+    left: 0;
+    border-left: 4px solid #8fcf4b;
+}
+
+.description-box {
+    margin: 30px 0 30px 48px;
+}
+
+.description-note,
+.btn-box {
+    margin: 0 0 22px 48px;
+}
+
+.description-note {
+    font-size: 14px;
+}
+.description-note p + p{
+    margin-top: 12px;
+}
+
+.btn-apply {
+    padding: 0;
+    width: 120px;
+    border-radius: 0;
+}
+
+.in-apply.btn-apply {
+    background: #c3cad2;
+    border-color: #b2b8bf;
+}
+
+.description-box li {
+    display: inline-block;
+}
+
+.description-box.margin-left-65 li + li {
+    margin-left: 65px;
+}
+
+.description-box li p {
+    padding-left: 15px;
+}
+
+.description-box li p + p {
+    margin-top: 10px;
+}
+
+.description-box .apply-description h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.description-box .wechat-icon {
+    margin: -7px 12px 0 0;
+    height: 36px;
+    width: 45px;
+}
+
+.description-box .apply-icon {
+    display: inline-block;
+    height: 64px;
+    width: 64px;
+    margin-right: 15px;
+    border-radius: 64px;
+    background: url('../../../../img/page/settlement/online/online-payment/payment-icon.png');
+    text-align: center;
+    line-height: 64px;
+    vertical-align: bottom;
+}
+
+.clock.apply-icon {
+    background: #88c9fc;
+}
+
+.person.apply-icon {
+    background: #fc7874;
+}
+.apply-icon .icon {
+    display: inline-block;
+    width: 28px;
+    height: 30px;
+    background: url('../../../../img/page/settlement/online/online-payment/payment-icon.png') no-repeat;
+    vertical-align: middle;
+}
+
+.person.apply-icon .icon {
+    background-position: -33px 0;
+}
+
+.clock.apply-icon .icon {
+    background-position: 0 0;
+}
+.description-box .apply-description {
+    display: inline-block;
+}
+
+.yqx-wrapper ul.guide>li {
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.yqx-wrapper ul.guide h6 {
+    font-size: 16px;
+    color: #fc7874;
+    margin-bottom: 10px;
+}
+
+.yqx-wrapper .success-content .description-box {
+    margin-left: 0;
+}
+
+.yqx-wrapper .success-content .guide h6 {
+    font-size: 18px;
+    color: #333;
+}
+
+.yqx-wrapper .success-content .guide p {
+    padding: 0;
+}
+
+ul.detail-guide li {
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* 下载模板按钮 */
+.yqx-btn.download-btn {
+    width: 120px;
+    height: 30px;
+    padding: 0;
+    margin-bottom: 6px;
+    border: 1px solid #24a6c9;
+    border-radius: 0;
+    background: #2dc0e8;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 28px;
+}
+
+.detail-guide a {
+    color: #0166ce;
+}
+
+.yqx-wrapper a:hover {
+    opacity: .8;
+}

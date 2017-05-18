@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>淘汽云修</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-touch-fullscreen" content="YES"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+    <style type="text/css">
+        .a {display: block;width: 100%;}
+        .a1 {height: 337px;}
+        .a2 {height: 429px;}
+        .a3 {height: 445px;}
+        .a4 {height: 429px;}
+        .a5 {height: 445px;}
+        .a6 {height: 429px;}
+        .a7 {height: 415px;}
+        .a8 {height: 784px;}
+        .sidebar {width: 640px;height: 107px;background-color: rgb(0, 0, 0);}
+        .a10 {float: left;height: 55px;width: 54px;background: url("images/index/qcj_button.png");margin: 26px 24px 0 36px;}
+        .a11 {float: left;line-height: 107px;font-size: 26px;color: #fff;}
+        .a12 {float: right;width: 179px;height: 60px;line-height: 60px;margin: 24px;font-size: 23px;color: #119bf6;text-align: center;border: 2px solid #119bf6;border-radius: 6px;  }
+    </style>
+</head>
+
+<body>
+<!--<div class="loading">0%</div>-->
+<div class="jiazai"><img src="images/load.png"></div>
+<div id="wrapper" class="wrapper">
+    <img class="a a1" src="images/index/qcj_a.jpg"/>
+    <img class="a a2" src="images/index/qcj_b.jpg"/>
+    <img class="a a3" src="images/index/qcj_c.jpg"/>
+    <img class="a a4" src="images/index/qcj_d.jpg"/>
+    <img class="a a5" src="images/index/qcj_e.jpg"/>
+    <img class="a a6" src="images/index/qcj_f.jpg"/>
+    <img class="a a7" src="images/index/qcj_g.jpg"/>
+    <img class="a a8" src="images/index/qcj_h.jpg"/>
+</div>
+
+<sidebar>
+    <div class="sidebar">
+        <input type="button" class="a10">
+        <span class="a11">淘汽云修车主App</span>
+
+        <button class="download-btn a12">点击下载</button>
+    </div>
+</sidebar>
+</body>
+<script src="js/lib/zepto/zepto.min.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?177aadfd52500674827db74ca8f51989";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+
+    function view() {
+        $(document).on("tap", ".download-btn", function() {
+            App.jump2download();
+        });
+    }
+
+    changeSize = function () {
+        var page = $(window);
+        window.orientation;
+        var phoneWidth = parseInt(page.width());
+        var phoneScale = phoneWidth / 640;
+        $('#wrapper')[0].style.cssText = '-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scale(' + phoneScale + ');transform:scale(' + phoneScale + ');';
+        $('sidebar')[0].style.cssText = '-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scale(' + phoneScale + ');transform:scale(' + phoneScale + ');';
+    };
+
+    $(function () {
+        changeSize();
+        window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', changeSize);
+        var rarr = [
+            'images/index/qcj_a.jpg',
+            'images/index/qcj_b.jpg',
+            'images/index/qcj_c.jpg',
+            'images/index/qcj_d.jpg',
+            'images/index/qcj_e.jpg',
+            'images/index/qcj_f.jpg',
+            'images/index/qcj_g.jpg',
+            'images/index/qcj_h.jpg'
+        ];
+        var rl = rarr.length, rnum = 0;
+        for (var i = 0; i < rl; i++) {
+            var img = new Image();
+            img.src = rarr[i];
+            img.onload = function () {
+                view();
+            };
+        }
+    });
+
+
+</script>
+</html>

@@ -1,0 +1,247 @@
+.xinxi_title{
+    clear: both;
+    width:993px;
+    height: 45px;
+    margin-top: 20px;
+    background: #d7d7d7;
+}
+.title_dingdan,.title_quejian,.title_huodao,.title_caigouruku{
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: bold;
+}
+.title_dingdan{
+    background: url(../../images/black_dingdan.gif) no-repeat;
+    color: white;
+}
+.xinxi_select{
+    list-style-type: none;
+    margin-top:10px;
+}
+.xinxi_select li{
+    float: left;
+}
+.xs,.xd{
+    width: 286px;
+    height: 38px;
+    margin-right: 10px;
+    padding-left: 10px;
+    border:1px solid #c1c1c1;
+    background-color:white;
+}
+.xd{
+    width: 866px;
+    margin-top: 13px;
+    margin-right:11px;
+    line-height:39px;
+    border-radius: 3px;
+}
+.s_ul li .xsel {
+    width:879px;
+}
+.green_fdj{
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    margin-top:-37px;
+    margin-bottom: 20px;
+    background: url(../../images/green_fdj.gif) no-repeat;
+}
+.tq_req{
+    clear: both;
+    width:978px;
+    margin-bottom:10px;
+    border: 1px solid #a8a8a8;
+}
+.req_head{
+    position: relative;
+    border-bottom: 1px solid #a8a8a8;
+    height:40px;
+    /*line-height:40px;*/
+}
+.mr_img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../../images/imaintain.png) no-repeat center;
+    margin-left: 22px;
+}
+.xc_img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../../images/iwash.png) no-repeat center;
+    margin-left: 22px;
+}
+.wx_img{
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+     background: url(../../images/iservice.png) no-repeat center;
+     margin-left: 22px;
+ }
+
+.green_ck{
+    display: block;
+    float:right;
+    background-color:#8fb027;
+    width:83px;
+    height:32px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align:center;
+    line-height: 32px;
+    color:white;
+    border-radius: 5px;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+.all_xinxi{
+    width: 83%;
+    display:inline-block;
+    padding-top:12px;
+    margin-left:5px;
+    vertical-align:top;
+}
+.carModelId, .license {
+    font-size:14px;
+    font-weight: bold;
+}
+.carModelId {
+    margin-right: 30px;
+    width:425px;
+    display: inline-block;
+    overflow: hidden;
+}
+.xinxi_bianma,.xinxi_date,.bianma,.date{
+    font-size: 14px;
+}
+.jiange{
+    font-size: 14px;
+    font-weight: bold;
+    margin:0 10px;
+}
+.db_img{
+    margin:10px 0 0px 10px;
+}
+.db_req{
+    list-style-type: none;
+}
+.c1{
+    margin:0 auto;
+    border-bottom: 1px dashed #aebdc8;
+    background: #f9f9f9;
+    height: 60px;
+}
+.c2{
+    margin:0 auto;
+    background: #f9f9f9;
+    height:100px;
+}
+.db_req,.db_req_2{
+    list-style-type: none;
+    margin:0;
+}
+.db_req_2{
+    color: #e30e0e;
+}
+.db_req li,.db_req_2 li{
+    display: block;
+    float: left;
+}
+.yn, .ys, .yc, .yj {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.yn{
+    width: 150px;
+}
+.ys{
+    width: 120px;
+}
+.yc{
+    width: 110px;
+}
+.yj{
+    margin-top: 10px;
+}
+.c1 .db_req li p {
+    margin-bottom: 10px;
+}
+.c1 .db_req li .p1 {
+    font-size:14px;
+    font-weight: bold;
+    height: 36px;
+    line-height:20px;
+    overflow: hidden;
+}
+.s_box {
+    height:105px;
+}
+
+.s_ul {
+    width:890px;
+    display:block;
+    float:left;
+}
+.s_ul li {
+    margin-bottom: 10px;
+    float:left;
+}
+.selcont {
+    width:155px;
+    height: 37px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.s_right {
+    float: right;
+    width:84px;
+    height:84px;
+    background-image: url("../../images/an.jpg");
+}
+
+.s_right:hover {
+    float: right;
+    width:84px;
+    height:84px;
+    background-image: url("../../images/an_1.jpg");
+    border-radius: 3px;
+    font-weight:bold;
+}
+
+.selcontT {
+    height: 37px;
+    line-height: 37px;
+    background: #fff;
+    color: #c9c9c9;
+    margin-left: 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+.w_ge {
+    width: 147px;
+    padding-left: 10px;
+    margin: 0 10px;
+    height:35px;
+}
+.txt {
+    height: 35px;
+    line-height: 37px;
+    background: #fff;
+    padding-left: 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+input.findLicense {
+    width:267px;
+}
+input.findCode {
+    width:860px;
+}

@@ -1,0 +1,91 @@
+@charset "utf-8";
+  /*Default style reset start*/
+*{ margin: 0; padding: 0;}
+table{border-collapse: collapse;}
+th{ font-weight: normal;}
+/*Default style reset end*/
+
+/*打卡说明  statr*/
+.staff-box{
+    width: 760px;
+    overflow: hidden;
+    float: right;
+}
+.explain-box{
+    width: 728px;
+    height: 45px;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    padding: 10px 15px;
+    clear: both;
+}
+.explain-left{
+    width: 40px;
+    height: 46px;
+    float: left;
+    border-right: 1px solid #d2d2d2;
+}
+.explain-left p{
+    font-family: "宋体";
+    font-size: 12px;
+    color: #666;
+    padding-top: 7px;
+}
+.explain-right{
+    width: 672px;
+    height: 45px;
+    float: left;
+    padding-left: 15px;
+}
+.explain-right p{
+    font-size: 12px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #333;
+    line-height: 22px;
+}
+.explain-right a{
+    color: #008c00;
+    text-decoration: underline;
+}
+.explain-right img{
+    vertical-align: middle;
+    margin: 0px 6px;
+}
+/*打卡说明  end*/
+/*打卡记录  statr*/
+.record{
+    width: 758px;
+    overflow: hidden;
+    border: 1px solid #d2d2d2;
+    margin-top: 10px;
+}
+.record table{
+    width: 100%;
+}
+.record-title{
+    height: 40px;
+    line-height: 40px;
+    background: #efefef;
+    font-size: 13px;
+    color: #666;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    text-align: center;
+}
+.record-infor{
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #666;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    text-align: center;
+    border-top:1px solid #d2d2d2;
+}
+.record-infor img{
+    vertical-align: middle;
+    margin: 0px 6px;
+}
+.red{
+    color: #ff2d2f;
+}
+/*打卡说明  end*/

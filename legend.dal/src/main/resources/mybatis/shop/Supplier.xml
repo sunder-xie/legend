@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.shop.SupplierDao">
+
+    <resultMap id="BaseResultMap" type="Supplier" extends="COMMON.BASE_RESULT_MAP">
+        <result column="supplier_name" property="supplierName"/>
+        <result column="category" property="category"/>
+        <result column="supplier_sn" property="supplierSn"/>
+        <result column="pay_method" property="payMethod"/>
+        <result column="contact" property="contact"/>
+        <result column="mobile" property="mobile"/>
+        <result column="tel" property="tel"/>
+        <result column="address" property="address"/>
+        <result column="invoice_type" property="invoiceType"/>
+        <result column="company_name" property="companyName"/>
+        <result column="invoice_no" property="invoiceNo"/>
+        <result column="opening_bank" property="openingBank"/>
+        <result column="bank_account" property="bankAccount"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="content" property="content"/>
+        
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        supplier_name as supplierName,
+        category as category,
+        supplier_sn as supplierSn,
+        pay_method as payMethod,
+        contact as contact,
+        mobile as mobile,
+        tel as tel,
+        address as address,
+        invoice_type as invoiceType,
+        company_name as companyName,
+        invoice_no as invoiceNo,
+        opening_bank as openingBank,
+        bank_account as bankAccount,
+        shop_id as shopId,
+        content as content
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="supplierName != null">
+                    and supplier_name = #{supplierName}
+                </if>
+                <if test="ids != null">
+                  AND  id in
+                    (
+                    <foreach collection = "ids" index = "index" item = "tag" separator = ",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="category != null">
+                    and category = #{category}
+                </if>
+                <if test="supplierSn != null">
+                    and supplier_sn = #{supplierSn}
+                </if>
+
+                <if test="payMethod != null">
+                    and pay_method = #{payMethod}
+                </if>
+                <if test="contact != null">
+                    and contact = #{contact}
+                </if>
+                <if test="mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test="tel != null">
+                    and tel = #{tel}
+                </if>
+                <if test="address != null">
+                    and address = #{address}
+                </if>
+                <if test="invoiceType != null">
+                    and invoice_type = #{invoiceType}
+                </if>
+                <if test="companyName != null">
+                    and company_name = #{companyName}
+                </if>
+                <if test="invoiceNo != null">
+                    and invoice_no = #{invoiceNo}
+                </if>
+                <if test="openingBank != null">
+                    and opening_bank = #{openingBank}
+                </if>
+                <if test="bankAccount != null">
+                    and bank_account = #{bankAccount}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="content != null">
+                	and content = #{content}
+                </if>
+                <if test="keyword != null">
+                    and (supplier_sn = #{keyword} or supplier_name like CONCAT("%", #{keyword}, "%")
+                    or mobile like CONCAT("%", #{keyword}, "%"))
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test="supplierName != null">
+                supplier_name = #{supplierName},
+            </if>
+            <if test="category != null">
+                category = #{category},
+            </if>
+            <if test="supplierSn != null">
+                supplier_sn = #{supplierSn},
+            </if>
+            <if test="payMethod != null">
+                pay_method = #{payMethod},
+            </if>
+            <if test="contact != null">
+                contact = #{contact},
+            </if>
+            <if test="mobile != null">
+                mobile = #{mobile},
+            </if>
+            <if test="tel != null">
+                tel = #{tel},
+            </if>
+            <if test="address != null">
+                address = #{address},
+            </if>
+            <if test="invoiceType != null">
+                invoice_type = #{invoiceType},
+            </if>
+            <if test="companyName != null">
+                company_name = #{companyName},
+            </if>
+            <if test="invoiceNo != null">
+                invoice_no = #{invoiceNo},
+            </if>
+            <if test="openingBank != null">
+                opening_bank = #{openingBank},
+            </if>
+            <if test="bankAccount != null">
+                bank_account = #{bankAccount},
+            </if>
+            <if test="shopId != null">
+                shop_id = #{shopId},
+            </if>
+            <if test="content != null">
+                content = #{content}
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_supplier
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_supplier
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_supplier
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_supplier
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_supplier
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_supplier
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_supplier (
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+        supplier_name,
+        category,
+        supplier_sn,
+        pay_method,
+        contact,
+        mobile,
+        tel,
+        address,
+        invoice_type,
+        company_name,
+        invoice_no,
+        opening_bank,
+        bank_account,
+        shop_id,
+        content
+        )
+        values (
+        <include refid="COMMON.BASE_INSERT_VALUE"/>
+        #{supplierName},
+        #{category},
+        #{supplierSn},
+        #{payMethod},
+        #{contact},
+        #{mobile},
+        #{tel},
+        #{address},
+        #{invoiceType},
+        #{companyName},
+        #{invoiceNo},
+        #{openingBank},
+        #{bankAccount},
+        #{shopId},
+        #{content}
+        )
+    </insert>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_supplier (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            supplier_name,
+            category,
+            supplier_sn,
+            pay_method,
+            contact,
+            mobile,
+            tel,
+            address,
+            invoice_type,
+            company_name,
+            invoice_no,
+            opening_bank,
+            bank_account,
+            content,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.supplierName != null">
+                    #{item.supplierName},
+                </if>
+                <if test="item.supplierName == null">
+                    NULL ,
+                </if>
+                <if test="item.category != null">
+                    #{item.category},
+                </if>
+                <if test="item.category == null">
+                    NULL ,
+                </if>
+                <if test="item.supplierSn != null">
+                    #{item.supplierSn},
+                </if>
+                <if test="item.supplierSn == null">
+                    NULL ,
+                </if>
+                <if test="item.payMethod != null">
+                    #{item.payMethod},
+                </if>
+                <if test="item.payMethod == null">
+                    NULL ,
+                </if>
+                <if test="item.contact != null">
+                    #{item.contact},
+                </if>
+                <if test="item.contact == null">
+                    NULL ,
+                </if>
+                <if test="item.mobile != null">
+                    #{item.mobile},
+                </if>
+                <if test="item.mobile == null">
+                    NULL ,
+                </if>
+                <if test="item.tel != null">
+                    #{item.tel},
+                </if>
+                <if test="item.tel == null">
+                    NULL ,
+                </if>
+                <if test="item.address != null">
+                    #{item.address},
+                </if>
+                <if test="item.address == null">
+                    NULL ,
+                </if>
+                <if test="item.invoiceType != null">
+                    #{item.invoiceType},
+                </if>
+                <if test="item.invoiceType == null">
+                    NULL ,
+                </if>
+                <if test="item.companyName != null">
+                    #{item.companyName},
+                </if>
+                <if test="item.companyName == null">
+                    NULL ,
+                </if>
+                <if test="item.invoiceNo != null">
+                    #{item.invoiceNo},
+                </if>
+                <if test="item.invoiceNo == null">
+                    NULL ,
+                </if>
+                <if test="item.openingBank != null">
+                    #{item.openingBank},
+                </if>
+                <if test="item.openingBank == null">
+                    NULL ,
+                </if>
+                <if test="item.bankAccount != null">
+                    #{item.bankAccount},
+                </if>
+                <if test="item.bankAccount == null">
+                    NULL ,
+                </if>
+                <if test="item.content != null">
+                    #{item.content},
+                </if>
+                <if test="item.content == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_supplier
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <select id="findBySupplierSns" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        FROM legend_supplier
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and supplier_sn IN
+        <foreach collection="supplierSns" item="tag" index="index" separator="," open="(" close=")">
+            #{tag}
+        </foreach>
+    </select>
+
+</mapper> 

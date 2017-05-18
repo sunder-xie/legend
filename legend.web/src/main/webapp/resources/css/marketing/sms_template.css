@@ -1,0 +1,165 @@
+.right {
+    width: 830px;
+    float: right;
+}
+
+.w_80 {
+    width: 80px;
+}
+.w_670 {
+    width: 670px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.head {
+    margin-bottom: 10px;
+}
+
+.headline {
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+.row:last-child {
+    margin-bottom: 0;
+}
+
+/* panel样式 START */
+.panel {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.panel-head {
+    line-height: 40px;
+    padding: 0 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e8e8e8;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.panel-body {
+    padding: 15px 10px;
+}
+/* panel样式 END */
+
+/* button样式 START */
+.btn {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    padding: 0 10px;
+    line-height: 30px;
+    font-size: 16px;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.btn-default {
+    color: #fff;
+    background: #f57d80;
+}
+.btn-primary {
+    color: #fff;
+    background: #85af1d;
+}
+.btn-del, .btn-add {
+    width: 27px;
+    height: 27px;
+}
+.btn-del {
+    background: url("../../img/common/sz.png") center no-repeat;
+}
+.btn-add {
+    background: url("../../img/common/sz1.png") center no-repeat;
+}
+/* button样式 END */
+
+/* .label样式 START */
+.label {
+    display: inline-block;
+    width: 96px;
+    font-size: 12px;
+    text-align: right;
+    vertical-align: middle;
+    color: #535353;
+}
+.other-row:first-child .label:before {
+    display: inline;
+    content: attr(content);
+}
+/* .label样式 END */
+
+/* input样式 START */
+.input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    height: 35px;
+    line-height: 35px;
+    text-indent: 10px;
+    font-size: 12px;
+    color: #111;
+    border: 1px solid #a0a0a0;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.input-default {
+    background: #eee;
+}
+.input:focus {
+    background: #fff;
+}
+/* input样式 END */
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+.yqx-btn-1 {
+    border: 1px solid #d2d2d2;
+    background: #607b0a;
+    color: #fff;
+
+}
+.yqx-btn-small.yqx-btn-1{
+    margin-top: 8px;
+    line-height: 28px;
+}

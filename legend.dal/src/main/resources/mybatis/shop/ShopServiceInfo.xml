@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.shop.ShopServiceInfoDao">
+
+    <resultMap id="BaseResultMap" type="ShopServiceInfo" extends="COMMON.BASE_RESULT_MAP">
+        <result column="name" property="name"/>
+        <result column="service_sn" property="serviceSn"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="tqmall_service_item_id" property="tqmallServiceItemId"/>
+        <result column="expect_time" property="expectTime"/>
+        <result column="service_price" property="servicePrice"/>
+        <result column="tqmall_status" property="tqmallStatus"/>
+        <result column="type" property="type"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="app_cate_id" property="appCateId"/>
+        <result column="car_level_id" property="carLevelId"/>
+        <result column="suite_num" property="suiteNum"/>
+        <result column="suite_goods_num" property="suiteGoodsNum"/>
+        <result column="suite_service_num" property="suiteServiceNum"/>
+        <result column="service_unit" property="serviceUnit"/>
+        <result column="flags" property="flags"/>
+        <result column="is_recommend" property="isRecommend"/>
+        <result column="service_note" property="serviceNote"/>
+        <result column="status" property="status"/>
+        <result column="content" property="content"/>
+        <result column="img_url" property="imgUrl"/>
+        <result column="third_img_url" property="thirdImgUrl"/>
+        <result column="third_service_info" property="thirdServiceInfo"/>
+        <result column="suite_price" property="suiteAmount"/>
+        <result column="price_type" property="priceType"/>
+        <result column="service_info" property="serviceInfo"/>
+        <result column="sort" property="sort"/>
+        <result column="cate_tag" property="cateTag"/>
+        <result column="audit_status" property="auditStatus"/>
+        <result column="shop_reason" property="shopReason"/>
+        <result column="audit_pass_time" property="auditPassTime"/>
+        <result column="audit_reason" property="auditReason"/>
+        <result column="edit_status" property="editStatus"/>
+        <result column="share_price" property="sharePrice"/>
+        <result column="surface_num" property="surfaceNum"/>
+        <result column="market_price" property="marketPrice"/>
+        <result column="app_publish_status" property="appPublishStatus"/>
+        <result column="down_payment" property="downPayment"/>
+        <result column="delete_status" property="deleteStatus"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            name as name,
+            service_sn as serviceSn,
+            shop_id as shopId,
+            tqmall_service_item_id as tqmallServiceItemId,
+            expect_time as expectTime,
+            service_price as servicePrice,
+            tqmall_status as tqmallStatus,
+            type as type,
+            parent_id as parentId,
+            category_id as categoryId,
+            app_cate_id as appCateId,
+            car_level_id as carLevelId,
+            suite_num as suiteNum,
+            suite_goods_num as suiteGoodsNum,
+            suite_service_num as suiteServiceNum,
+            service_unit as serviceUnit,
+            flags as flags,
+            is_recommend as isRecommend,
+            service_note as serviceNote,
+            status as status,
+            content as content,
+            img_url as imgUrl,
+            third_img_url as thirdImgUrl,
+            third_service_info as thirdServiceInfo,
+            price_type as priceType,
+            service_info as serviceInfo,
+            sort as sort,
+            cate_tag as cateTag,
+            audit_status as auditStatus,
+            shop_reason as shopReason,
+            audit_pass_time as auditPassTime,
+            audit_reason as auditReason,
+            edit_status as editStatus,
+            share_price as sharePrice,
+            surface_num as surfaceNum,
+            market_price as marketPrice,
+            app_publish_status as appPublishStatus,
+            down_payment as downPayment,
+            delete_status as deleteStatus,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="statuss != null">
+                    and status in (
+                    <foreach collection="statuss" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="status == null">
+                    and status != -1
+                </if>
+                <if test=" status != null ">
+                    and status = #{status}
+                </if>
+                <if test="name != null">
+                    and name = #{name}
+                </if>
+                <if test="names != null">
+                    and name in (
+                    <foreach collection="names" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="serviceSn != null">
+                    and service_sn = #{serviceSn}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="shopIds != null">
+                    and shop_id in
+                    (
+                    <foreach collection="shopIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="appCateIds != null">
+                    and app_cate_id in
+                    (
+                    <foreach collection="appCateIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="tqmallServiceItemId != null">
+                    and tqmall_service_item_id = #{tqmallServiceItemId}
+                </if>
+                <if test="expectTime != null">
+                    and expect_time = #{expectTime}
+                </if>
+                <if test="servicePrice != null">
+                    and service_price = #{servicePrice}
+                </if>
+                <if test="tqmallStatus != null">
+                    and tqmall_status = #{tqmallStatus}
+                </if>
+                <if test="type != null">
+                    and type = #{type}
+                </if>
+                <if test="parentId != null">
+                    and parent_id = #{parentId}
+                </if>
+                <if test="parentIds != null">
+                    and parent_id in
+                    (
+                    <foreach collection="parentIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="categoryId != null">
+                    and category_id = #{categoryId}
+                </if>
+                <if test="appCateId != null">
+                    and app_cate_id = #{appCateId}
+                </if>
+                <if test="carLevelId != null">
+                    and car_level_id = #{carLevelId}
+                </if>
+                <if test="suiteNum != null">
+                    and suite_num = #{suiteNum}
+                </if>
+                <if test="suiteNums!= null">
+                    and suite_num in (
+                    <foreach collection="suiteNums" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="suiteGoodsNum != null">
+                    and suite_goods_num = #{suiteGoodsNum}
+                </if>
+                <if test="suiteServiceNum != null">
+                    and suite_service_num = #{suiteServiceNum}
+                </if>
+                <if test="serviceUnit != null">
+                    and service_unit = #{serviceUnit}
+                </if>
+                <if test="flags != null">
+                    and flags = #{flags}
+                </if>
+                <if test="flagsList != null">
+                    and flags in (
+                    <foreach collection="flagsList" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="keyword != null">
+                    and ( service_sn like CONCAT('%',#{keyword},'%')
+                    or name like CONCAT('%',#{keyword},'%')
+                    )
+                </if>
+                <if test="serviceSnLike != null">
+                    and service_sn like CONCAT('%',#{serviceSnLike},'%')
+                </if>
+                <if test="serviceNameLike != null">
+                    and name like CONCAT('%',#{serviceNameLike},'%')
+                </if>
+                <if test="flagsLike != null">
+                    and flags like CONCAT('%',#{flagsLike},'%')
+                </if>
+                <if test="isRecommend != null">
+                    and is_recommend = #{isRecommend}
+                </if>
+                <if test="serviceNote != null">
+                    and service_note = #{serviceNote}
+                </if>
+                <if test="content != null">
+                    and content = #{content}
+                </if>
+                <if test="searchBZFW != null">
+                    <![CDATA[
+                    and parent_id > #{searchBZFW}
+                     ]]>
+                    and (flags = 'BZFW' or flags = 'CZFW')
+                </if>
+                <if test="imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test="cateTag != null">
+                    and cate_tag = #{cateTag}
+                </if>
+                <if test="auditStatus != null">
+                    and audit_status = #{auditStatus}
+                </if>
+                <if test="shopReason != null">
+                    and shop_reason = #{shopReason}
+                </if>
+                <if test="auditPassTime != null">
+                    and audit_pass_time = #{auditPassTime}
+                </if>
+                <if test="auditReason != null">
+                    and audit_reason = #{auditReason}
+                </if>
+                <if test="editStatus != null">
+                    and edit_status = #{editStatus}
+                </if>
+                <if test="ids != null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="sharePrice != null">
+                    and share_price = #{sharePrice}
+                </if>
+                <if test="surfaceNum != null">
+                    and surface_num = #{surfaceNum}
+                </if>
+                <if test="marketPrice != null">
+                    and market_price = #{marketPrice}
+                </if>
+                <if test="appPublishStatus != null">
+                    and app_publish_status = #{appPublishStatus}
+                </if>
+                <if test="marketPrice != null">
+                    and down_payment = #{downPayment}
+                </if>
+                <if test="deleteStatus != null">
+                    and delete_status = #{deleteStatus}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="name != null">
+                    name = #{name},
+                </if>
+                <if test="serviceSn != null">
+                    service_sn = #{serviceSn},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="tqmallServiceItemId != null">
+                    tqmall_service_item_id = #{tqmallServiceItemId},
+                </if>
+                <if test="expectTime != null">
+                    expect_time = #{expectTime},
+                </if>
+                <if test="servicePrice != null">
+                    service_price = #{servicePrice},
+                </if>
+                <if test="tqmallStatus != null">
+                    tqmall_status = #{tqmallStatus},
+                </if>
+                <if test="type != null">
+                    type = #{type},
+                </if>
+                <if test="parentId != null">
+                    parent_id = #{parentId},
+                </if>
+                <if test="categoryId != null">
+                    category_id = #{categoryId},
+                </if>
+                <if test="appCateId != null">
+                    app_cate_id = #{appCateId},
+                </if>
+                <if test="carLevelId != null">
+                    car_level_id = #{carLevelId},
+                </if>
+                <if test="suiteNum != null">
+                    suite_num = #{suiteNum},
+                </if>
+                <if test="suiteGoodsNum != null">
+                    suite_goods_num = #{suiteGoodsNum},
+                </if>
+                <if test="suiteServiceNum != null">
+                    suite_service_num = #{suiteServiceNum},
+                </if>
+                <if test="serviceUnit != null">
+                    service_unit = #{serviceUnit},
+                </if>
+                <if test="flags != null">
+                    flags = #{flags},
+                </if>
+                <if test="isRecommend != null">
+                    is_recommend = #{isRecommend},
+                </if>
+                <if test="serviceNote != null">
+                    service_note = #{serviceNote},
+                </if>
+                <if test="status != null">
+                    status = #{status},
+                </if>
+                <if test="content != null">
+                    content = #{content},
+                </if>
+                <if test="imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test="thirdImgUrl != null">
+                    third_img_url = #{thirdImgUrl},
+                </if>
+                <if test="thirdServiceInfo != null">
+                    third_service_info = #{thirdServiceInfo},
+                </if>
+                <if test="priceType != null">
+                    price_type = #{priceType},
+                </if>
+                <if test="serviceInfo != null">
+                    service_info = #{serviceInfo},
+                </if>
+                <if test="sort != null">
+                    sort = #{sort},
+                </if>
+                <if test="cateTag != null">
+                    cate_tag = #{cateTag},
+                </if>
+                <if test="auditStatus != null">
+                    audit_status = #{auditStatus},
+                </if>
+                <if test="shopReason != null">
+                    shop_reason = #{shopReason},
+                </if>
+                <if test="auditPassTime != null">
+                    audit_pass_time = #{auditPassTime},
+                </if>
+                <if test="auditReason != null">
+                    audit_reason = #{auditReason},
+                </if>
+                <if test="editStatus != null">
+                    edit_status = #{editStatus},
+                </if>
+                <if test="sharePrice != null">
+                    share_price = #{sharePrice},
+                </if>
+                <if test="surfaceNum != null">
+                    surface_num = #{surfaceNum},
+                </if>
+                <if test="marketPrice != null">
+                    market_price = #{marketPrice},
+                </if>
+                <if test="appPublishStatus != null">
+                    app_publish_status = #{appPublishStatus},
+                </if>
+                <if test="downPayment != null">
+                    down_payment = #{downPayment},
+                </if>
+                <if test="deleteStatus != null">
+                    delete_status = #{deleteStatus},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop_service_info
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        where id = #{id}
+        and status != -1
+        and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and status != -1
+        and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询所有服务 -->
+    <select id="selectAllByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and is_deleted = 'N'
+    </select>
+
+    <!-- 根据ID和shopId查询所有服务 -->
+    <select id="selectByIdAndShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        where id = #{id} and shop_id = #{shopId}
+        and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_shop_service_info
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_shop_service_info
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_shop_service_info
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_shop_service_info (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="serviceSn != null">
+                service_sn,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="tqmallServiceItemId != null">
+                tqmall_service_item_id,
+            </if>
+            <if test="expectTime != null">
+                expect_time,
+            </if>
+            <if test="servicePrice != null">
+                service_price,
+            </if>
+            <if test="tqmallStatus != null">
+                tqmall_status,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="parentId != null">
+                parent_id,
+            </if>
+            <if test="categoryId != null">
+                category_id,
+            </if>
+            <if test="appCateId != null">
+                app_cate_id,
+            </if>
+            <if test="carLevelId != null">
+                car_level_id,
+            </if>
+            <if test="suiteNum != null">
+                suite_num,
+            </if>
+            <if test="suiteGoodsNum != null">
+                suite_goods_num,
+            </if>
+            <if test="suiteServiceNum != null">
+                suite_service_num,
+            </if>
+            <if test="serviceUnit != null">
+                service_unit,
+            </if>
+            <if test="flags != null">
+                flags,
+            </if>
+            <if test="isRecommend != null">
+                is_recommend,
+            </if>
+            <if test="serviceNote != null">
+                service_note,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="imgUrl != null">
+                img_url,
+            </if>
+            <if test="thirdImgUrl != null">
+                third_img_url,
+            </if>
+            <if test="thirdServiceInfo != null">
+                third_service_info,
+            </if>
+            <if test="priceType != null">
+                price_type,
+            </if>
+            <if test="serviceInfo != null">
+                service_info,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="cateTag != null">
+                cate_tag,
+            </if>
+            <if test="auditStatus != null">
+                audit_status,
+            </if>
+            <if test="shopReason != null">
+                shop_reason,
+            </if>
+            <if test="auditPassTime != null">
+                audit_pass_time,
+            </if>
+            <if test="auditReason != null">
+                audit_reason,
+            </if>
+            <if test="editStatus != null">
+                edit_status,
+            </if>
+            <if test="sharePrice != null">
+                share_price,
+            </if>
+            <if test="surfaceNum != null">
+                surface_num,
+            </if>
+            <if test="marketPrice != null">
+                market_price,
+            </if>
+            <if test="appPublishStatus != null">
+                app_publish_status,
+            </if>
+            <if test="downPayment != null">
+                down_payment,
+            </if>
+            <if test="deleteStatus != null">
+                delete_status,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="name != null">
+                #{name},
+            </if>
+            <if test="serviceSn != null">
+                #{serviceSn},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="tqmallServiceItemId != null">
+                #{tqmallServiceItemId},
+            </if>
+            <if test="expectTime != null">
+                #{expectTime},
+            </if>
+            <if test="servicePrice != null">
+                #{servicePrice},
+            </if>
+            <if test="tqmallStatus != null">
+                #{tqmallStatus},
+            </if>
+            <if test="type != null">
+                #{type},
+            </if>
+            <if test="parentId != null">
+                #{parentId},
+            </if>
+            <if test="categoryId != null">
+                #{categoryId},
+            </if>
+            <if test="appCateId != null">
+                #{appCateId},
+            </if>
+            <if test="carLevelId != null">
+                #{carLevelId},
+            </if>
+            <if test="suiteNum != null">
+                #{suiteNum},
+            </if>
+            <if test="suiteGoodsNum != null">
+                #{suiteGoodsNum},
+            </if>
+            <if test="suiteServiceNum != null">
+                #{suiteServiceNum},
+            </if>
+            <if test="serviceUnit != null">
+                #{serviceUnit},
+            </if>
+            <if test="flags != null">
+                #{flags},
+            </if>
+            <if test="isRecommend != null">
+                #{isRecommend},
+            </if>
+            <if test="serviceNote != null">
+                #{serviceNote},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="content != null">
+                #{content},
+            </if>
+            <if test="imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test="thirdImgUrl != null">
+                #{thirdImgUrl},
+            </if>
+            <if test="thirdServiceInfo != null">
+                #{thirdServiceInfo},
+            </if>
+            <if test="priceType != null">
+                #{priceType},
+            </if>
+            <if test="serviceInfo != null">
+                #{serviceInfo},
+            </if>
+            <if test="sort != null">
+                #{sort},
+            </if>
+            <if test="cateTag != null">
+                #{cateTag},
+            </if>
+            <if test="auditStatus != null">
+                #{auditStatus},
+            </if>
+            <if test="shopReason != null">
+                #{shopReason},
+            </if>
+            <if test="auditPassTime != null">
+                #{auditPassTime},
+            </if>
+            <if test="auditReason != null">
+                #{auditReason},
+            </if>
+            <if test="editStatus != null">
+                #{editStatus},
+            </if>
+            <if test="sharePrice != null">
+                #{sharePrice},
+            </if>
+            <if test="surfaceNum != null">
+                #{surfaceNum},
+            </if>
+            <if test="marketPrice != null">
+                #{marketPrice},
+            </if>
+            <if test="appPublishStatus != null">
+                #{appPublishStatus},
+            </if>
+            <if test="downPayment != null">
+                #{downPayment},
+            </if>
+            <if test="deleteStatus != null">
+                #{deleteStatus},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_shop_service_info
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <!--批量插入-->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop_service_info (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            name,
+            service_sn,
+            shop_id,
+            tqmall_service_item_id,
+            expect_time,
+            service_price,
+            tqmall_status,
+            type,
+            parent_id,
+            category_id,
+            car_level_id,
+            suite_num,
+            suite_goods_num,
+            suite_service_num,
+            service_unit,
+            flags,
+            is_recommend,
+            service_note,
+            app_cate_id,
+            status,
+            content,
+            img_url,
+            third_img_url,
+            service_info,
+            third_service_info,
+            sort,
+            price_type,
+            cate_tag,
+            audit_status,
+            audit_reason,
+            shop_reason,
+            audit_pass_time,
+            edit_status,
+            share_price,
+            surface_num,
+            market_price,
+            app_publish_status,
+            down_payment,
+            delete_status,
+        </trim>
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.name != null">
+                    #{item.name},
+                </if>
+                <if test="item.name == null">
+                    '',
+                </if>
+                <if test="item.serviceSn != null">
+                    #{item.serviceSn},
+                </if>
+                <if test="item.serviceSn == null">
+                    '',
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.tqmallServiceItemId != null">
+                    #{item.tqmallServiceItemId},
+                </if>
+                <if test="item.tqmallServiceItemId == null">
+                    0 ,
+                </if>
+                <if test="item.expectTime != null">
+                    #{item.expectTime},
+                </if>
+                <if test="item.expectTime == null">
+                    '',
+                </if>
+                <if test="item.servicePrice != null">
+                    #{item.servicePrice},
+                </if>
+                <if test="item.servicePrice == null">
+                    0.00,
+                </if>
+                <if test="item.tqmallStatus != null">
+                    #{item.tqmallStatus},
+                </if>
+                <if test="item.tqmallStatus == null">
+                    0 ,
+                </if>
+                <if test="item.type != null">
+                    #{item.type},
+                </if>
+                <if test="item.type == null">
+                    0 ,
+                </if>
+                <if test="item.parentId != null">
+                    #{item.parentId},
+                </if>
+                <if test="item.parentId == null">
+                    0 ,
+                </if>
+                <if test="item.categoryId != null">
+                    #{item.categoryId},
+                </if>
+                <if test="item.categoryId == null">
+                    0 ,
+                </if>
+                <if test="item.carLevelId != null">
+                    #{item.carLevelId},
+                </if>
+                <if test="item.carLevelId == null">
+                    0 ,
+                </if>
+                <if test="item.suiteNum != null">
+                    #{item.suiteNum},
+                </if>
+                <if test="item.suiteNum == null">
+                    0 ,
+                </if>
+                <if test="item.suiteGoodsNum != null">
+                    #{item.suiteGoodsNum},
+                </if>
+                <if test="item.suiteGoodsNum == null">
+                    0 ,
+                </if>
+                <if test="item.suiteServiceNum != null">
+                    #{item.suiteServiceNum},
+                </if>
+                <if test="item.suiteServiceNum == null">
+                    0 ,
+                </if>
+                <if test="item.serviceUnit != null">
+                    #{item.serviceUnit},
+                </if>
+                <if test="item.serviceUnit == null">
+                    '工时',
+                </if>
+                <if test="item.flags != null">
+                    #{item.flags},
+                </if>
+                <if test="item.flags == null">
+                    '',
+                </if>
+                <if test="item.isRecommend != null">
+                    #{item.isRecommend},
+                </if>
+                <if test="item.isRecommend == null">
+                    -1 ,
+                </if>
+                <if test="item.serviceNote != null">
+                    #{item.serviceNote},
+                </if>
+                <if test="item.serviceNote == null">
+                    '',
+                </if>
+                <if test="item.appCateId != null">
+                    #{item.appCateId},
+                </if>
+                <if test="item.appCateId == null">
+                    -1 ,
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    0 ,
+                </if>
+                <if test="item.content != null">
+                    #{item.content},
+                </if>
+                <if test="item.content == null">
+                    '',
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    '',
+                </if>
+                <if test="item.thirdImgUrl != null">
+                    #{item.thirdImgUrl},
+                </if>
+                <if test="item.thirdImgUrl == null">
+                    '',
+                </if>
+                <if test="item.serviceInfo != null">
+                    #{item.serviceInfo},
+                </if>
+                <if test="item.serviceInfo == null">
+                    '',
+                </if>
+                <if test="item.thirdServiceInfo != null">
+                    #{item.thirdServiceInfo},
+                </if>
+                <if test="item.thirdServiceInfo == null">
+                    '',
+                </if>
+                <if test="item.sort != null">
+                    #{item.sort},
+                </if>
+                <if test="item.sort == null">
+                    0 ,
+                </if>
+                <if test="item.priceType != null">
+                    #{item.priceType},
+                </if>
+                <if test="item.priceType == null">
+                    1 ,
+                </if>
+                <if test="item.cateTag != null">
+                    #{item.cateTag},
+                </if>
+                <if test="item.cateTag == null">
+                    0 ,
+                </if>
+                <if test="item.auditStatus != null">
+                    #{item.auditStatus},
+                </if>
+                <if test="item.auditStatus == null">
+                    1 ,
+                </if>
+                <if test="item.auditReason != null">
+                    #{item.auditReason},
+                </if>
+                <if test="item.auditReason == null">
+                    '',
+                </if>
+                <if test="item.shopReason != null">
+                    #{item.shopReason},
+                </if>
+                <if test="item.shopReason == null">
+                    '',
+                </if>
+                <if test="item.auditPassTime != null">
+                    #{item.auditPassTime},
+                </if>
+                <if test="item.auditPassTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.editStatus != null">
+                    #{item.editStatus},
+                </if>
+                <if test="item.editStatus == null">
+                    0,
+                </if>
+                <if test="item.sharePrice != null">
+                    #{item.sharePrice},
+                </if>
+                <if test="item.sharePrice == null">
+                    0.00,
+                </if>
+                <if test="item.surfaceNum != null">
+                    #{item.surfaceNum},
+                </if>
+                <if test="item.surfaceNum == null">
+                    0.00,
+                </if>
+                <if test="item.marketPrice != null">
+                    #{item.marketPrice},
+                </if>
+                <if test="item.marketPrice == null">
+                    0.00 ,
+                </if>
+                <if test="item.appPublishStatus != null">
+                    #{item.appPublishStatus},
+                </if>
+                <if test="item.appPublishStatus == null">
+                    0 ,
+                </if>
+                <if test="item.downPayment != null">
+                    #{item.downPayment},
+                </if>
+                <if test="item.downPayment == null">
+                    0.00 ,
+                </if>
+                <if test="item.deleteStatus != null">
+                    #{item.deleteStatus},
+                </if>
+                <if test="item.deleteStatus == null">
+                    0 ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <sql id="AllStatusBaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="statuss != null">
+                    and status in (
+                    <foreach collection="statuss" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test=" status != null ">
+                    and status = #{status}
+                </if>
+                <if test="name != null">
+                    and name = #{name}
+                </if>
+                <if test="names != null">
+                    and name in (
+                    <foreach collection="names" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="serviceSn != null">
+                    and service_sn = #{serviceSn}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="shopIds != null">
+                    and shop_id in
+                    (
+                    <foreach collection="shopIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="appCateIds != null">
+                    and app_cate_id in
+                    (
+                    <foreach collection="appCateIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="tqmallServiceItemId != null">
+                    and tqmall_service_item_id = #{tqmallServiceItemId}
+                </if>
+                <if test="expectTime != null">
+                    and expect_time = #{expectTime}
+                </if>
+                <if test="servicePrice != null">
+                    and service_price = #{servicePrice}
+                </if>
+                <if test="tqmallStatus != null">
+                    and tqmall_status = #{tqmallStatus}
+                </if>
+                <if test="type != null">
+                    and type = #{type}
+                </if>
+                <if test="parentId != null">
+                    and parent_id = #{parentId}
+                </if>
+                <if test="parentIds != null">
+                    and parent_id in
+                    (
+                    <foreach collection="parentIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="categoryId != null">
+                    and category_id = #{categoryId}
+                </if>
+                <if test="appCateId != null">
+                    and app_cate_id = #{appCateId}
+                </if>
+                <if test="carLevelId != null">
+                    and car_level_id = #{carLevelId}
+                </if>
+                <if test="suiteNum != null">
+                    and suite_num = #{suiteNum}
+                </if>
+                <if test="suiteNums!= null">
+                    and suite_num in (
+                    <foreach collection="suiteNums" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="suiteGoodsNum != null">
+                    and suite_goods_num = #{suiteGoodsNum}
+                </if>
+                <if test="suiteServiceNum != null">
+                    and suite_service_num = #{suiteServiceNum}
+                </if>
+                <if test="serviceUnit != null">
+                    and service_unit = #{serviceUnit}
+                </if>
+                <if test="flags != null">
+                    and flags = #{flags}
+                </if>
+                <if test="flagsList != null">
+                    and flags in (
+                    <foreach collection="flagsList" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="flagIsEmpty != null">
+                    and (flags IS NULL or flags='')
+                </if>
+                <if test="keyword != null">
+                    and ( service_sn like CONCAT('%',#{keyword},'%')
+                    or name like CONCAT('%',#{keyword},'%')
+                    )
+                </if>
+                <if test="serviceSnLike != null">
+                    and service_sn like CONCAT('%',#{serviceSnLike},'%')
+                </if>
+                <if test="serviceNameLike != null">
+                    and name like CONCAT('%',#{serviceNameLike},'%')
+                </if>
+                <if test="flagsLike != null">
+                    and flags like CONCAT('%',#{flagsLike},'%')
+                </if>
+                <if test="isRecommend != null">
+                    and is_recommend = #{isRecommend}
+                </if>
+                <if test="serviceNote != null">
+                    and service_note = #{serviceNote}
+                </if>
+                <if test="content != null">
+                    and content = #{content}
+                </if>
+                <if test="searchBZFW != null">
+                    <![CDATA[
+                    and parent_id > #{searchBZFW}
+                     ]]>
+                    and (flags = 'BZFW' or flags = 'CZFW')
+                </if>
+                <if test="imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test="cateTag != null">
+                    and cate_tag = #{cateTag}
+                </if>
+                <if test="auditStatus != null">
+                    and audit_status = #{auditStatus}
+                </if>
+                <if test="shopReason != null">
+                    and shop_reason = #{shopReason}
+                </if>
+                <if test="auditPassTime != null">
+                    and audit_pass_time = #{auditPassTime}
+                </if>
+                <if test="auditReason != null">
+                    and audit_reason = #{auditReason}
+                </if>
+                <if test="editStatus != null">
+                    and edit_status = #{editStatus}
+                </if>
+                <if test="ids != null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="categoryIds != null">
+                    and category_id in
+                    (
+                    <foreach collection="categoryIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="sharePrice != null">
+                    and share_price = #{sharePrice}
+                </if>
+                <if test="surfaceNum != null">
+                    and surface_num = #{surfaceNum}
+                </if>
+                <if test="marketPrice != null">
+                    and market_price = #{marketPrice}
+                </if>
+                <if test="appPublishStatus != null">
+                    and app_publish_status = #{appPublishStatus}
+                </if>
+                <if test="downPayment != null">
+                    and down_payment = #{downPayment}
+                </if>
+                <if test="deleteStatus != null">
+                    and delete_status = #{deleteStatus}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+
+    <!-- 查询 -->
+    <select id="selectAllStatus" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        <include refid="AllStatusBaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+    <!-- 查询总数 -->
+    <select id="selectCountAllStatus" resultType="java.lang.Integer">
+        select count(id)
+        from legend_shop_service_info
+        <include refid="AllStatusBaseWhereClause"/>
+    </select>
+
+    <select id="selectByIdss" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        where id in
+        (
+        <foreach collection="ids" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and status IN (0, -2)
+        and is_deleted = 'N'
+        and (shop_id = #{shopId} or shop_id = 0)
+    </select>
+
+    <select id="selectByCatIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        where app_cate_id in
+        (
+        <foreach collection="catIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and app_publish_status=1
+        and flags='CZFW'
+        and is_deleted = 'N'
+    </select>
+
+    <select id="findServiceInfoByNames" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_shop_service_info
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and name in
+        <foreach collection="names" item="tag" index="index" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+    </select>
+
+</mapper> 

@@ -1,0 +1,195 @@
+/*==tab 页===*/
+.tabbable:before, .tabbable:after {
+    content: " ";
+    display: table;
+}
+.tabbable:after {
+    clear: both;
+}
+
+.tabbable-custom {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0px;
+    background: none !important;
+    overflow: hidden;
+}
+.tabbable-custom > .nav-tabs {
+    display: -webkit-box;
+    border: none;
+    margin: 0px;
+}
+.tabbable-custom > .nav-tabs > li {
+    margin-right: 2px;
+    border-top: 2px solid transparent;
+}
+.tabbable-custom > .nav-tabs > li > a {
+    margin-right: 0;
+    border-radius: 0;
+}
+.tabbable-custom > .nav-tabs > li:hover {
+    border-top: 3px solid #9fc527;
+}
+.tabbable-custom > .nav-tabs > li > a:hover {
+    background: none;
+    border-color: transparent;
+}
+.tabbable-custom > .nav-tabs > li.active {
+    border-top: 3px solid #9fc527;
+    margin-top: 0;
+    position: relative;
+}
+.tabbable-custom > .nav-tabs > li.active > a {
+    border-top: none !important;
+    font-weight: 400;
+    border-radius: 0;
+}
+.tabbable-custom > .nav-tabs > li.active > a:hover {
+    border-radius: 0;
+    border-top: none;
+    background: #fff;
+    border-color: #d4d4d4 #d4d4d4 transparent;
+}
+.tabbable-custom > .tab-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px 10px 10px;
+    border-radius: 0 0 4px 4px;
+}
+.tabbable-custom.nav-justified > .tab-content {
+    margin-top: -1px;
+}
+.tabbable-custom.boxless > .tab-content {
+    padding: 15px 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.tabbable-custom.tabs-below.nav-justified .tab-content {
+    margin-top: 0px;
+    margin-bottom: -2px;
+    border-radius: 4px 4px 0 0;
+}
+.tabbable-custom.tabbable-full-width > .nav-tabs > li > a {
+    color: #424242;
+    font-size: 15px;
+    padding: 9px 15px;
+}
+.tabbable-custom.tabbable-full-width > .tab-content {
+    padding: 15px 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.tabbable-custom.tabs-below .nav-tabs > li > a {
+    border-top: none;
+    border-bottom: 2px solid transparent;
+    margin-top: -1px;
+}
+.tabbable-custom.tabs-below .nav-tabs > li.active {
+    border-top: none;
+    border-bottom: 3px solid #9fc527;
+    margin-bottom: 0;
+    position: relative;
+}
+.tabbable-custom.tabs-below .nav-tabs > li.active > a {
+    border-bottom: none;
+}
+.tabbable-custom.tabs-below .nav-tabs > li.active > a:hover {
+    background: #fff;
+    border-color: #d4d4d4 #d4d4d4 transparent;
+}
+
+.tabbable-custom.tabbable-noborder > .nav-tabs > li > a {
+    border: 0;
+}
+.tabbable-custom.tabbable-noborder .tab-content {
+    border: 0;
+}
+.nav-tabs>li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: -1px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.nav-tabs > li > a, .nav-pills > li > a {
+    font-size: 14px;
+}
+.tab-content>.tab-pane {
+    display: none;
+    visibility: hidden;
+}
+
+.tab-content>.active {
+    display: block;
+    visibility: visible;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    background-color: #ddd;
+    color: #666;
+}
+/*==end tab 页===*/
+
+/*常用*/
+.right{
+    float: right;
+}
+.right-title{
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+    font-family: MircosoftYahei;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.right-content{
+    height: 20px;
+    line-height: 20px;
+    color: #333;
+    font-size: 16px;
+    font-family: MircosoftYahei;
+    margin: 0 0 10px 0;
+}
+
+.red{
+    color:red;
+}
+
+.no-data{
+    text-align: center;
+}
+
+.underline_a{
+    text-decoration: underline;
+}
+
+.clear_line{
+    display: -webkit-box;
+    padding: 10px;
+}
+
+.search_button{
+    color: white;
+    background-color: #8eb210;
+    margin-right: 38px;
+}
+
+.bord_bottom{
+    border-bottom: 1px solid #eee;
+}

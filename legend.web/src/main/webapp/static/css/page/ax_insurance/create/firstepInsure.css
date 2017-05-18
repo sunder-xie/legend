@@ -1,0 +1,133 @@
+/*第一步的样式*/
+.enter_info {
+    width: 803px;
+    background-color: #f9f9f9;
+    margin: 10px auto;
+}
+
+.form {
+    width: 505px;
+    font-size: 0;
+    padding: 20px 0 20px 50px;
+}
+
+.form span.choose_name {
+    width: 60px;
+    display: inline-block;
+    font-size: 12px;
+    height: 37px;
+    line-height: 37px;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+.province, .address {
+    font-size: 0;
+    display: inline-block;
+    height: 37px;
+    box-sizing: border-box;
+    border: solid 1px #c9c9c9;
+    border-radius: 3px;
+    position: relative;
+}
+
+.province:hover, .address:hover {
+    box-shadow: 0 0 1px 1px #d5e1b4;
+    border-radius: 3px;
+}
+
+.choose_prov, .choose_region {
+    font-size: 12px;
+    width: 174px;
+    height: 35px;
+    display: inline-block;
+    background-color: #ffffff;
+    cursor: pointer;
+    line-height: 37px;
+    vertical-align: top;
+    color: #999999;
+    padding-left: 9px;
+    box-sizing: border-box;
+    border-radius: 3px 0 0 3px;
+}
+
+.choose_btn {
+    height: 35px;
+    display: inline-block;
+    width: 30px;
+    border-left: solid 1px #c9c9c9;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.choose_address {
+    margin-left: 10px;
+}
+
+.text_align {
+    text-align: right;
+}
+
+.car_num, .text_align {
+    margin-top: 8px;
+}
+
+.car_num {
+    width: 205px;
+    height: 37px;
+    border: solid 1px #c9c9c9;
+    outline: none;
+    border-radius: 3px;
+    padding-left: 9px;
+    box-sizing: border-box;
+}
+
+.bc {
+    background-color: #FFFFFF;
+}
+
+.checkbox {
+    margin-left: 10px;
+}
+
+.noCar {
+    font-size: 12px;
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.prov, .region {
+    font-size: 12px;
+    position: absolute;
+    border: solid 1px #c9c9c9;
+    max-height: 175px;
+    overflow: auto;
+    top: 34px;
+    background-color: #ffffff;
+    width: 205px;
+    display: none;
+    left: -1px;
+    border-radius: 0 0 3px 3px;
+}
+
+.prov li, .region li {
+    height: 35px;
+    line-height: 35px;
+    color: #666666;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.prov li:hover, .region li:hover {
+    background-color: #80a61e;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.CarName{
+    width: 205px;
+}
+
+.carName-div{
+    margin-top: 8px;
+}

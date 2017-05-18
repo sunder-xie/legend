@@ -1,0 +1,82 @@
+/*会员卡分类展示*/
+.card{
+    width: 315px;
+    border: 1px solid #c1c1c1;
+    /*padding: 10px 10px 10px 5px;*/
+    box-sizing: border-box;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: left;
+}
+.card .card-top{
+    width: 100%;
+    height: 40px;
+    padding: 15px 12px;
+}
+.card .card-top img{
+    float: left;
+    border: 1px solid #fff;
+}
+.card .card-top .textbox{
+    float: left;
+}
+.card .card-top p{
+    margin: 5px 10px;
+}
+.card .card-top .card-number{
+    font-size: 14px;
+    color: #000;
+}
+.card .del-table{
+    width: 100%;
+    border-bottom: 1px dotted #999;
+}
+.card .del-table th{
+    padding:5px 12px;
+}
+.card .del-table td{
+    padding: 12px;
+    font-size: 15px;
+}
+.card .del-table td .green{
+    color: #a6c464;
+}
+.card .del-table td .bigger{
+    font-size: 24px;
+}
+.card .card-bottom{
+    height: 80px;
+    background: #f2f2f2;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 12px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.card .card-bottom .my-infor{
+	width:208px;
+    float: left;
+    line-height: 22px;
+}
+.card .card-bottom .my-infor p{
+	overflow: hidden;
+  /* word-break: break-word; */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card .card-bottom .my-infor h3{
+    color: #000;
+}
+.card .card-bottom .charge{
+    width: 76px;
+    height: 33px;
+    border: 1px solid #c1c1c1;
+    display: block;
+    float: right;
+    background: #f7f7f7;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 15px;
+    margin-top:10px;
+}

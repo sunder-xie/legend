@@ -1,0 +1,124 @@
+.container,
+.form {
+    background: #fff;
+    border: 1px solid #cacaca;
+}
+
+.form {
+    padding: 10px;
+}
+
+.form .form-item {
+    float: left;
+    width: 156px;
+    margin-right: 10px;
+}
+
+.list-tab.current-tab:before,
+.list-tab:hover:before {
+    border-bottom: 1px solid #fff;
+}
+
+.export-box {
+    margin: 18px 0 10px;
+    text-align: right;
+}
+
+
+.has-sort,
+.export-i {
+    cursor: pointer;
+}
+
+.export-i img {
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+.table-result {
+    padding: 14px 12px;
+}
+
+.table-result:first-child {
+    border-bottom: 1px solid #cacaca;
+}
+
+.table-result:last-child {
+    border-top: 1px solid #cacaca;
+}
+
+.table-result li {
+    float: left;
+    margin-right: 18px;
+}
+
+.table-result li:first-child {
+    margin-right: 3px;
+}
+
+.gary {
+    color: #666;
+}
+
+.sort-i {
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: -3px;
+    height: 15px;
+    width: 12px;
+    background: url('../../../img/page/account/sort-icon.png') no-repeat;
+    vertical-align: top;
+}
+
+.sort-i.up {
+    background-position: -12px 0;
+}
+
+.sort-i.down {
+    background-position: -24px 0;
+}
+
+.table-result .money-font {
+    font-size: 12px;
+    color: #fd461e;
+}
+
+.form-item.has-icon .yqx-input {
+    padding-right: 30px
+}
+
+.yqx-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.yqx-table thead th:first-child {
+    width: 30px;
+}
+
+.text-r {
+    text-align: right !important;
+}
+
+.form .yqx-btn.fr + .yqx-btn.fr {
+    margin-right: 5px;
+}
+
+.yqx-btn.yqx-btn-1 {
+    background: #fff;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

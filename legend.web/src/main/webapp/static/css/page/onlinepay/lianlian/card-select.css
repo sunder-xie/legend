@@ -1,0 +1,193 @@
+.yqx-wrapper{
+    padding-top: 20px;
+}
+.headline {
+    line-height: 50px;
+}
+
+.panel {
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+}
+
+.panel-header {
+    margin: 0 -10px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.panel-footer {
+    padding: 10px;
+}
+
+.row + .row {
+    margin-top: 10px;
+}
+
+.link-1 {
+    color: #2c8cfa;
+}
+
+.text-label {
+    font-size: 14px;
+    color: #333;
+}
+
+.mark-1, .mark-2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mark-1 {
+    color: #2c8cfa;
+}
+
+.mark-2 {
+    color: #ff7800;
+}
+
+.divide {
+    margin-right: 20px;
+}
+
+.card-type-tabs {
+    overflow: hidden;
+}
+
+.card-type-tabs li {
+    position: relative;
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card-type-tabs .active {
+    color: #ff7c08;
+}
+
+.card-type-tabs li + li:before {
+    content: "|";
+    position: absolute;
+    left: 0;
+    display: inline;
+    color: #666;
+}
+
+.bank-card-list {
+    margin: 10px -5px;
+    overflow: hidden;
+}
+
+.limit-6-rows {
+    max-height: 288px;
+}
+
+.bank-card-list > li {
+    float: left;
+    width: 227px;
+    height: 38px;
+    margin: 5px;
+}
+
+.bank-item {
+    position: relative;
+    padding: 10px;
+    line-height: 18px;
+    border: 1px solid #d6d6d6;
+    cursor: pointer;
+}
+
+.bank-card-list > .active {
+    position: relative;
+    border-color: #ff7c08;
+}
+
+.bank-card-list > .active:after {
+    content: url("../../../../img/page/ax_insurance/selected.png");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.add-bank-item {
+    background: #f7f7f7;
+    border: 1px dashed #d6d6d6;
+    border-radius: 3px;
+}
+
+.add-bank-btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: #808080;
+}
+
+.bank-icon, .bank-name, .bank-name-1, .card-account {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bank-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.bank-name, .bank-name-1 {
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.bank-name-1 {
+    width: 170px;
+}
+
+.card-account {
+    position: absolute;
+    right: 10px;
+    color: #333;
+}
+
+.box {
+    padding: 10px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.box-title {
+    margin: 10px 0;
+}
+
+.form-horizontal {
+    margin: 10px 0;
+}
+
+.form-group + .form-group {
+    margin-top: 10px;
+}
+
+.label-must:before {
+    content: "*";
+    padding-right: 3px;
+    font-size: 12px;
+    color: #f00;
+}
+
+.form-label {
+    width: 70px;
+}
+
+.form-item {
+    width: 300px;
+}
+
+.show-more-btn {
+    color: #2c8cfa;
+    cursor: pointer;
+}

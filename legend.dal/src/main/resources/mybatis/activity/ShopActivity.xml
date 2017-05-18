@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.activity.ShopActivityDao">
+
+    <resultMap id = "BaseResultMap" type = "ShopActivity" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "act_tpl_id" property = "actTplId" />
+        <result column = "shop_id" property = "shopId" />
+        <result column = "act_name" property = "actName" />
+        <result column = "keywords" property = "keywords" />
+        <result column = "summary" property = "summary" />
+        <result column = "remark" property = "remark" />
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "start_time" property = "startTime" />
+        <result column = "end_time" property = "endTime" />
+        <result column = "act_status" property = "actStatus" />
+        <result column = "act_type" property = "actType" />
+        <result column = "sort" property = "sort" />
+        <result column = "by_name" property = "byName" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            act_tpl_id as actTplId,
+            shop_id as shopId,
+            act_name as actName,
+            keywords as keywords,
+            summary as summary,
+            remark as remark,
+            img_url as imgUrl,
+            start_time as startTime,
+            end_time as endTime,
+            act_status as actStatus,
+            act_type as actType,
+            sort as sort,
+            by_name as byName,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "actTplId != null">
+                    and act_tpl_id = #{actTplId}
+                </if>
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "actName != null">
+                    and act_name = #{actName}
+                </if>
+                <if test = "keywords != null">
+                    and keywords = #{keywords}
+                </if>
+                <if test = "summary != null">
+                    and summary = #{summary}
+                </if>
+                <if test = "remark != null">
+                    and remark = #{remark}
+                </if>
+                <if test = "imgUrl != null">
+                    and img_url = #{imgUrl}
+                </if>
+                <if test = "startTime != null">
+                    and start_time = #{startTime}
+                </if>
+                <if test = "endTime != null">
+                    and end_time = #{endTime}
+                </if>
+                <if test = "actStatus != null">
+                    and act_status = #{actStatus}
+                </if>
+                <if test = "actType != null">
+                    and act_type = #{actType}
+                </if>
+                <if test = "sort != null">
+                    and sort = #{sort}
+                </if>
+                <if test = "byName != null">
+                    and by_name = #{byName}
+                </if>
+                <if test = "actTplIdStart != null">
+                    and
+                    <![CDATA[
+                        act_tpl_id >= #{actTplIdStart}
+                    ]]>
+                </if>
+                <if test="actTplIds != null">
+                    and act_tpl_id in
+                    (
+                    <foreach collection="actTplIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test = "actNameLike != null">
+                    and act_name like CONCAT('%',#{actNameLike},'%')
+                </if>
+                <if test = "keywordsLike != null">
+                    and keywords like CONCAT('%',#{keywordsLike},'%')
+                </if>
+                <if test="startTimeLt != null">
+                    <![CDATA[
+                    and start_time <= #{startTimeLt}
+                    ]]>
+                </if>
+                <if test="startTimeGt != null">
+                    <![CDATA[
+                    and start_time >= #{startTimeGt}
+                    ]]>
+                </if>
+                <if test="endTimeLt != null">
+                    <![CDATA[
+                    and end_time <= #{endTimeLt}
+                    ]]>
+                </if>
+                <if test="endTimeGt != null">
+                    <![CDATA[
+                    and end_time >= #{endTimeGt}
+                    ]]>
+                </if>
+                <if test="ids != null">
+                    and id in
+                    (
+                    <foreach collection="ids" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "actTplId != null">
+                    act_tpl_id = #{actTplId},
+                </if>
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "actName != null">
+                    act_name = #{actName},
+                </if>
+                <if test = "keywords != null">
+                    keywords = #{keywords},
+                </if>
+                <if test = "summary != null">
+                    summary = #{summary},
+                </if>
+                <if test = "remark != null">
+                    remark = #{remark},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "startTime != null">
+                    start_time = #{startTime},
+                </if>
+                <if test = "endTime != null">
+                    end_time = #{endTime},
+                </if>
+                <if test = "actStatus != null">
+                    act_status = #{actStatus},
+                </if>
+                <if test = "actType != null">
+                    act_type = #{actType},
+                </if>
+                <if test = "sort != null">
+                    sort = #{sort},
+                </if>
+                <if test = "byName != null">
+                    by_name = #{byName},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_shop_activity
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_activity
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_activity
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_shop_activity
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_shop_activity
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_shop_activity
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_shop_activity
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_shop_activity (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "actTplId != null">
+                act_tpl_id,
+            </if>
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "actName != null">
+                act_name,
+            </if>
+            <if test = "keywords != null">
+                keywords,
+            </if>
+            <if test = "summary != null">
+                summary,
+            </if>
+            <if test = "remark != null">
+                remark,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "startTime != null">
+                start_time,
+            </if>
+            <if test = "endTime != null">
+                end_time,
+            </if>
+            <if test = "actStatus != null">
+                act_status,
+            </if>
+            <if test = "actType != null">
+                act_type,
+            </if>
+            <if test = "sort != null">
+                sort,
+            </if>
+            <if test = "byName != null">
+                by_name,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "actTplId != null">
+                #{actTplId},
+            </if>
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "actName != null">
+                #{actName},
+            </if>
+            <if test = "keywords != null">
+                #{keywords},
+            </if>
+            <if test = "summary != null">
+                #{summary},
+            </if>
+            <if test = "remark != null">
+                #{remark},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "startTime != null">
+                #{startTime},
+            </if>
+            <if test = "endTime != null">
+                #{endTime},
+            </if>
+            <if test = "actStatus != null">
+                #{actStatus},
+            </if>
+            <if test = "actType != null">
+                #{actType},
+            </if>
+            <if test = "sort != null">
+                #{sort},
+            </if>
+            <if test = "byName != null">
+                #{byName},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_shop_activity
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_shop_activity (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            act_tpl_id,
+            shop_id,
+            act_name,
+            keywords,
+            summary,
+            remark,
+            img_url,
+            start_time,
+            end_time,
+            act_status,
+            act_type,
+            sort,
+            by_name,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.actTplId != null">
+                    #{item.actTplId},
+                </if>
+                <if test="item.actTplId == null">
+                    0 ,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.actName != null">
+                    #{item.actName},
+                </if>
+                <if test="item.actName == null">
+                    '',
+                </if>
+                <if test="item.keywords != null">
+                    #{item.keywords},
+                </if>
+                <if test="item.keywords == null">
+                    '',
+                </if>
+                <if test="item.summary != null">
+                    #{item.summary},
+                </if>
+                <if test="item.summary == null">
+                    '',
+                </if>
+                <if test="item.remark != null">
+                    #{item.remark},
+                </if>
+                <if test="item.remark == null">
+                    '',
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    '',
+                </if>
+                <if test="item.startTime != null">
+                    #{item.startTime},
+                </if>
+                <if test="item.startTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.endTime != null">
+                    #{item.endTime},
+                </if>
+                <if test="item.endTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.actStatus != null">
+                    #{item.actStatus},
+                </if>
+                <if test="item.actStatus == null">
+                    0 ,
+                </if>
+                <if test="item.actType != null">
+                    #{item.actType},
+                </if>
+                <if test="item.actType == null">
+                    0 ,
+                </if>
+                <if test="item.sort != null">
+                    #{item.sort},
+                </if>
+                <if test="item.sort == null">
+                    0 ,
+                </if>
+                <if test="item.byName != null">
+                    #{item.byName},
+                </if>
+                <if test="item.byName == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

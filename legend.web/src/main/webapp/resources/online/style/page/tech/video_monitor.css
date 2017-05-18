@@ -1,0 +1,133 @@
+button{
+    font-family: "黑体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+a:hover{
+    color:#333;
+}
+.search{
+    width: 100%;
+    height: 75px;
+    background: #000;
+}
+.title{
+    width:100%;
+    height: 40px;
+    line-height: 40px;
+    color:#000;
+}
+.title .title-china{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.title .title-english{
+    color: #999;
+}
+.left{
+    width: 220px;
+    height: auto;
+    float: left;
+}
+.left-menu{
+    width: 220px;
+    background: #fff;
+    border: 2px solid #8eb110;
+    overflow: hidden;
+}
+.left-menu a{
+    color: #333;
+}
+.left-menu .active{
+    color: #ff7800;
+}
+.menu-item{
+    width: 200px;
+    margin: auto;
+    line-height: 45px;
+    border-bottom: 1px solid #eeeeee;
+}
+.menu-item span{
+    font-weight:bolder;
+}
+.item-img1{
+    width: 12px;
+    height: 7px;
+    float: right;
+    background: url("../../img/common/arrow_up.png") 0 0 no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 19px;
+}
+.item-img2{
+    width: 13px;
+    height: 9px;
+    float: right;
+    background: url("../../img/page/tech/arrow_yellow.png") 0px 0px no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 19px;
+}
+.list{
+    display: none;
+}
+.list li{
+    line-height: 30px;
+    padding-left: 25px;
+    color: #999;
+}
+.list .has_video{
+    background: url("../../img/page/tech/video_img.jpg") left 8px no-repeat;
+    padding-left: 25px;
+    vertical-align: middle;
+    color: #ff7800;
+}
+
+.right{
+    width: 740px;
+    float: right;
+}
+.nodes{
+    margin-top:-20px;
+    width: 740px;
+    float: right;
+}
+.right h2{
+    padding-bottom: 10px;
+}
+.right h2 .tips{
+    font-size: 14px;
+    color: #ff7800;
+}
+.right .video_content{
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+    padding: 15px;
+    background: #fff;
+}
+.right .video_content .video_box{
+    width: 352px;
+    height: 280px;
+    float: left;
+    background: #000;
+    border: 1px solid #d01113;
+}
+.right .video_content .video_box .no_video{
+    width: 100px;
+    height: 25px;
+    border: 1px solid #ff7800;
+    color: #ff7800;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+    margin: 110px auto;
+}
+
+
+
+
+

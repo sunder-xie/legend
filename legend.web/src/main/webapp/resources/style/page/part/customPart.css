@@ -1,0 +1,44 @@
+.qxy_custom_part_checkbox {
+
+}
+
+.qxy_custom_part_checkbox label {
+	width: 260px;
+}
+
+.qxy_custom_part_checkbox label input {
+	margin: 0 10px 0;
+}
+
+.dlg_overflow {
+	overflow-y: scroll;
+	padding-right: 15px;
+}
+
+.dlg_overflow .btn_right {
+    float: right
+}
+
+#add_custom_cate_form .label_box {
+    width: 85px;
+}
+.qxy_dialog .qxy_form .form_item .label_box {
+	text-indent: 3px;
+	margin-left: 2px;
+}
+._x_green_btn{
+	background:#8fb027;
+}
+.row_center{
+	text-align: center;
+}
+#add_brand_form {
+	margin-top: 20px;
+}
+[dynamic_name] .qxy_input {
+	padding-left: 10px;
+	text-align: left;
+}
+.m-top{
+	margin-top: 30px;
+}

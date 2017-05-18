@@ -1,0 +1,215 @@
+h3, h4 {
+    font-family: "Microsoft YaHei", "Hiragino Sans GB",Helvetica,Arial,sans-serif;
+}
+/** 支付类型选择  start ***/
+.service-pay {
+    width: 330px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    padding: 14px 10px 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #f9f9f9;
+}
+
+.service-pay.pay-selected {
+    border: 2px solid #a0c338;
+}
+
+.pay-head {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.pay-head h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fd5959;
+}
+
+.pay-tag, .info-tag {
+    color: #fff;
+    font-size: 12px;
+    background: #999;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 5px;
+    vertical-align: bottom;
+}
+
+.pay-tag.tag-active {
+    background: #fac066;
+}
+
+.pay-money {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.pay-money .money {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.pay-content {
+    line-height: 18px;
+    color: #666;
+    height: 36px;
+    overflow: hidden;
+}
+
+/** 支付类型选择  end ***/
+input[type=radio].pay {
+    margin-right: 5px;
+}
+
+.radio-box {
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.radio-box + .radio-box {
+    margin-left: 22px;
+}
+
+.check-info {
+    margin-left: 5px;
+    width: 50px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 15px;
+    color: #333;
+}
+
+.radio-box label {
+    vertical-align: bottom;
+}
+
+.info-box {
+    text-align: right;
+    padding: 10px 16px 0 0;
+    margin-right: 7px;
+}
+
+.info-box p, .info, .info-content {
+    display: inline-block;
+}
+
+.info {
+    vertical-align: middle;
+    border: 1px dashed #ddd;
+    padding: 5px 50px 10px 10px;
+    margin-left: 15px;
+}
+
+.type-select {
+    padding: 7px 36px;
+    margin-left: 96px;
+}
+
+.type-radio:nth-child(4) {
+    margin-left: 37px;
+    display: inline-block;
+}
+
+.type-radio {
+    margin-right: 5px;
+}
+
+.alipay-icon {
+    background: url('../../../img/page/wechat/reg-pay.png') -62px 0 no-repeat;
+    width: 30px;
+    height: 27px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.offline {
+    width: 300px;
+}
+
+.type-select.offline {
+    padding: 8px 0;
+}
+
+.offline h4 {
+    text-align: center;
+}
+
+.offline .phone-icon {
+    background: url('../../../img/page/wechat/reg-pay.png') 0 0 no-repeat;
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info .yqx-icon {
+    background: url('../../../img/page/wechat/reg-pay.png') -14px 0 no-repeat;
+    width: 50px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+.info-content p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 4px;
+}
+
+.tag-info {
+    background: #7ebbe3;
+}
+
+.tag-active {
+    background: #fac066;
+    margin-left: 4px;
+}
+
+.agreement-box {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.agreement-box a {
+    text-decoration: underline;
+    color: #666;
+    font-size: 12px;
+}
+
+.file-box {
+    margin-top : 15px;
+    margin-left: 96px;
+    position: relative;
+}
+
+.file-box .title {
+    margin-top: 20px;
+    vertical-align: top;
+}
+
+.file-box label {
+    color: #999;
+    display: inline-block;
+}
+
+.file-box label p {
+    line-height: 16px;
+}
+
+.btn-upload, .file-show {
+    position: relative;
+    border-style: dashed;
+}
+
+.btn-upload input {
+    left: 0;
+}
+

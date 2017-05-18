@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.sms.AppSmsService" id="appSmsService"
+                     version="${dubbo.iserver.version}" owner="dehuang.zhang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.common.AppRegionService" id="appRegionService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.brand.BrandService" id="brandService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.category.CategoryService" id="CategoryService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.OrderRemoteService" id="OrderRemoteService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.legend.LegendService" id="LegendService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.goods.GoodsService" id="GoodsService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.tc.OrderService" id="OrderService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.act.RpcMarketActivityService"
+                     id="RpcMarketActivityOrderService" version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.purchaseamount.RpcPurchaseAmountService"
+                     id="RpcPurchaseAmountService" version="${dubbo.iserver.version}" owner="hui.wang"/>
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.region.RpcRegionService" id="RpcRegionService"
+                     version="${dubbo.iserver.version}" owner="hui.wang"/>
+
+    <!--退换货-->
+    <dubbo:reference interface="com.tqmall.tqmallstall.service.refund.ExchangeOrderService" id="ExchangeOrderService"
+                     version="${dubbo.iserver.version}" owner="changqiang.ke"/>
+
+</beans>

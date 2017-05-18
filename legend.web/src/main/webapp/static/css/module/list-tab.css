@@ -1,0 +1,47 @@
+/** created by wry **/
+/** 工单收款，工单查询的 tab 样式 **/
+
+.list-tab {
+    font-size: 14px;
+    color: #333;
+    font-family: "Microsoft YaHei", Tahoma, Arial, Helvetica Neue, Hiragino Sans GB, sans-serif;
+    width: 82px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    background: #ddd;
+    vertical-align: top;
+    border-radius: 2px 2px 0 0;
+    cursor:  pointer;
+}
+
+.list-tab + .list-tab {
+    margin-left: 2px;
+}
+
+.list-tab.current-tab, .list-tab:hover {
+    position: relative;
+    z-index: 1;
+    line-height: 34px;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    border-top: 3px solid #607b0a;
+    border-bottom: none;
+}
+
+.list-tab.current-tab:before,
+.list-tab:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.list-tab-box {
+    border-bottom: 1px solid #d2d2d2;
+    margin: 10px 0;
+}

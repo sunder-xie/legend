@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.balance.WithdrawCheckLogDao">
+
+    <resultMap id = "BaseResultMap" type = "WithdrawCheckLog" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "balance_log_id" property = "balanceLogId" />
+        <result column = "current_node" property = "currentNode" />
+        <result column = "current_status" property = "currentStatus" />
+        <result column = "user_name" property = "userName" />
+        <result column = "check_comment" property = "checkComment" />
+        <result column = "current_node_name" property = "currentNodeName" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            balance_log_id as balanceLogId,
+            current_node as currentNode,
+            current_status as currentStatus,
+            user_name as userName,
+            check_comment as checkComment,
+            current_node_name as currentNodeName,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "balanceLogId != null">
+                    and balance_log_id = #{balanceLogId}
+                </if>
+                <if test = "currentNode != null">
+                    and current_node = #{currentNode}
+                </if>
+                <if test = "currentStatus != null">
+                    and current_status = #{currentStatus}
+                </if>
+                <if test = "userName != null">
+                    and user_name = #{userName}
+                </if>
+                <if test = "checkComment != null">
+                    and check_comment = #{checkComment}
+                </if>
+                <if test = "currentNodeName != null">
+                    and current_node_name = #{currentNodeName}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "balanceLogId != null">
+                    balance_log_id = #{balanceLogId},
+                </if>
+                <if test = "currentNode != null">
+                    current_node = #{currentNode},
+                </if>
+                <if test = "currentStatus != null">
+                    current_status = #{currentStatus},
+                </if>
+                <if test = "userName != null">
+                    user_name = #{userName},
+                </if>
+                <if test = "checkComment != null">
+                    check_comment = #{checkComment},
+                </if>
+                <if test = "currentNodeName != null">
+                    current_node_name = #{currentNodeName},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_withdraw_check_log
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_withdraw_check_log
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_withdraw_check_log
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_withdraw_check_log
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_withdraw_check_log
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_withdraw_check_log
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_withdraw_check_log
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_withdraw_check_log (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "balanceLogId != null">
+                balance_log_id,
+            </if>
+            <if test = "currentNode != null">
+                current_node,
+            </if>
+            <if test = "currentStatus != null">
+                current_status,
+            </if>
+            <if test = "userName != null">
+                user_name,
+            </if>
+            <if test = "checkComment != null">
+                check_comment,
+            </if>
+            <if test = "currentNodeName != null">
+                current_node_name,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "balanceLogId != null">
+                #{balanceLogId},
+            </if>
+            <if test = "currentNode != null">
+                #{currentNode},
+            </if>
+            <if test = "currentStatus != null">
+                #{currentStatus},
+            </if>
+            <if test = "userName != null">
+                #{userName},
+            </if>
+            <if test = "checkComment != null">
+                #{checkComment},
+            </if>
+            <if test = "currentNodeName != null">
+                #{currentNodeName},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_withdraw_check_log
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_withdraw_check_log (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            balance_log_id,
+            current_node,
+            current_status,
+            user_name,
+            check_comment,
+            current_node_name,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.balanceLogId != null">
+                    #{item.balanceLogId},
+                </if>
+                <if test="item.balanceLogId == null">
+                    0 ,
+                </if>
+                <if test="item.currentNode != null">
+                    #{item.currentNode},
+                </if>
+                <if test="item.currentNode == null">
+                    0 ,
+                </if>
+                <if test="item.currentStatus != null">
+                    #{item.currentStatus},
+                </if>
+                <if test="item.currentStatus == null">
+                    0 ,
+                </if>
+                <if test="item.userName != null">
+                    #{item.userName},
+                </if>
+                <if test="item.userName == null">
+                    '',
+                </if>
+                <if test="item.checkComment != null">
+                    #{item.checkComment},
+                </if>
+                <if test="item.checkComment == null">
+                    '',
+                </if>
+                <if test="item.currentNodeName != null">
+                    #{item.currentNodeName},
+                </if>
+                <if test="item.currentNodeName == null">
+                    '',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper> 

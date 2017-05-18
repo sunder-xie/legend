@@ -1,0 +1,35 @@
+.part-info{
+    background: white;
+    margin-top:10px;
+    padding: 20px 30px;
+    border: 1px solid #dadada;
+    float:left;
+    width:87%;
+}
+.part-info .text-container{
+    float: left;
+    margin-left: 30px;
+    width: 600px;
+}
+.part-info img{
+    float: left;
+}
+
+.item-name{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.item-detail{
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 22px;
+
+}
+
+.img-container{
+    display: inline-block;
+}
+.img-container img{
+    margin: 0 10px 10px 0;
+}

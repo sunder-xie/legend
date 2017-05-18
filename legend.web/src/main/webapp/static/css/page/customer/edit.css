@@ -1,0 +1,160 @@
+i {
+    font-style: normal;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+input:-webkit-autofill{ box-shadow: 0 0 0 1000px white inset;}
+input:-webkit-autofill:focus{ box-shadow: 0 0 0 1000px white inset;}
+.order-right.fl {
+    color: #000;
+    font-size: 16px;
+}
+
+.complete-sec {
+    background: rgb(247, 247, 247);
+    border: 1px solid rgb(232, 232, 232);
+    padding: 20px 12px 10px;
+    padding-right: 0;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.complete-form .form-item .yqx-btn {
+    width: 100%;
+}
+
+.form-label {
+    width: 80px;
+    text-align: right;
+}
+
+.form-item {
+    width: 110px;
+    height: 35px;
+}
+
+.form-line {
+    margin-bottom: 10px;
+}
+
+.input-address {
+    width: 300px;
+}
+
+.close-line {
+    text-align: center;
+    background: rgb(243, 243, 243);
+    height: 16px;
+    border: 1px solid rgb(232, 232, 232);
+    border-top: 0;
+    margin-bottom: 10px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.close-line:hover {
+    background: #fff;
+}
+
+/* tab start */
+
+.orderdetail-nav {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 10px 9px;
+}
+
+.order-title {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    width: 89px;
+    line-height: 24px;
+    height: 24px;
+}
+
+.title-active {
+    background: rgb(142, 178, 16);
+    color: #fff;
+    border-radius: 7px;
+}
+
+/* tab end */
+.car-recom {
+    color: #f53b43;
+}
+
+.part-number {
+    color: #ff7800;
+}
+
+.car-infodetail {
+    padding: 15px 8px;
+    background: #fafafa;
+}
+
+.complete-order .yqx-table th {
+    padding: 10px 0;
+}
+
+.complete-order .yqx-table tbody td {
+    padding-top: 14px;
+    padding-bottom: 8px;
+}
+
+.foot-btns {
+    padding: 15px 0;
+}
+
+.foot-btn + .foot-btn {
+    margin-left: 10px;
+}
+
+.margin-body {
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.order-subtitle {
+    padding: 10px 0;
+    font-weight: 500;
+    color: #535353;
+}
+
+.body-section {
+    border-bottom: 1px solid #d6d6d6;
+    padding: 10px 0;
+}
+
+.complete-content {
+    background: #fff;
+}
+
+.foot-btn:last-child {
+    float: right;
+}
+
+.car-from-item{
+    width: 193px;
+}
+.form-data-width{
+    width: 310px;
+}
+
+.notice {
+    width: 12px;
+    height: 12px;
+    vertical-align: super;
+}
+.notice-label {
+    line-height: 35px;
+}
+
+/* 弹框按钮居中 */
+.layui-layer-btn {
+    text-align: center;
+}
+
+

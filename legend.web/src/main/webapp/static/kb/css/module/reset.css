@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/**
+ * create by sky
+ * 2016-07-13
+ * 重置浏览器样式
+ */
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, footer, header, hgroup, main, menu,
+nav, output, ruby, section, summary, time, mark, audio, video {
+  zoom: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-weight: normal; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+main, menu, nav, section {
+  display: block; }
+
+body {
+  overflow-y: scroll;
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+a:hover, a:active {
+  outline: none;
+  text-decoration: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none; }
+
+select:active {
+  outline: none; }
+
+textarea {
+  resize: none; }
+
+textarea, input, select, button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  outline: none; }
+
+a:link, button {
+  cursor: pointer; }
+
+/*# sourceMappingURL=../maps/reset.css.map */

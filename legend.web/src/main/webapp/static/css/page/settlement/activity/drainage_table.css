@@ -1,0 +1,179 @@
+.main, .aside_main {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+.aside_main {
+    float: right;
+    width: 828px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.w_130 {
+    width: 130px;
+}
+.w_210 {
+    width: 210px;
+}
+.highlight {
+    color: #ff7800;
+}
+
+.head {
+    background: #efefef;
+    border-bottom: 1px solid #e8e8e8;
+}
+.head .headline {
+    padding-left: 20px;
+    line-height: 37px;
+    font-size: 14px;
+    color: #666;
+    float: left;
+}
+.head .handle_box {
+    float: right;
+    margin: 5px;
+}
+
+.btn {
+    box-sizing: border-box;
+    margin-right: 10px;
+    padding: 0 20px;
+    line-height: 27px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 3px;
+}
+.btn:last-of-type {
+    margin-right: 0;
+}
+.btn_primary {
+    background: #8fb027;
+}
+.btn-default {
+    line-height: 25px;
+    color: #333;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+
+.group_row {
+    padding: 15px 20px;
+}
+.row {
+    margin-bottom: 10px;
+}
+.row:last-child {
+    margin-bottom: 0;
+}
+.col {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+.col:last-child {
+    margin-right: 0;
+}
+.label {
+    display: inline-block;
+    padding-right: 10px;
+    line-height: 27px;
+    font-size: 12px;
+    color: #535353;
+}
+.label_required:after {
+    display: inline;
+    content: "*";
+    margin: 0 -7px 0 2px;
+    color: #fa4837;
+}
+
+.select {
+    height: 27px;
+    background: #f8f8f8;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+}
+
+.input {
+    line-height: 25px;
+    text-indent: 10px;
+    background: #f8f8f8;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: solid #e8e8e8;
+    border-width: 1px 0;
+}
+.table th {
+    line-height: 38px;
+    background: #d7d7d7;
+}
+.table td {
+    line-height: 28px;
+    border-top: 1px solid #e8e8e8;
+}
+.table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.link_ok {
+    margin-right: 5px;
+    vertical-align: baseline;
+    color: #159;
+}
+
+.content-foot {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.total {
+    margin-right: 20px;
+    line-height: 38px;
+    float: right;
+}
+
+.foot {
+    padding: 10px;
+}
+a{color: #666666;}
+
+/*
+ *zmx 2016/06/03
+*/
+
+/*标题右侧标签 start*/
+.tag{height: 43px; background: #fff; border:1px dashed #ddd; margin-left: 10px; padding: 5px 10px;}
+.tag .ico{ width: 26px; height: 26px; float: left; margin: 0 12px 0 5px; background: url("../../../../img/page/settlement/pay/tag-ico.png") no-repeat;}
+.tag .ico1{ background-position: 3px 0;}
+.tag .ico2{ background-position: -28px 0;}
+.tag .ico3{ background-position: -60px 0;}
+.tag .tagcon{  height: 43px; overflow: hidden; float: left;}
+.tag .tagcon .tag-title{ color: #333; line-height: 16px;}
+.tag .tagcon .tag-money{ font-family: arial, verdana, sans-serif; font-size: 14px; color: #333; font-weight: bold;}
+/*标题右侧标签 end*/
+
+/*查询 start*/
+.search-box{background: #fff;border: 1px solid #ddd;border-radius: 3px;padding: 10px;}
+/*查询 end*/
+
+/*操作按钮 start*/
+.btn-box{height: 36px;}
+.btn-box a{line-height: 34px;color: #474747;font-size: 12px;padding: 0 10px;}
+.btn-box a:hover{color: #9fc527;}
+.btn-box i{margin-right: 4px;}
+/*操作按钮 end*/
+
+.activity-table{ margin-top: 10px; overflow: hidden;}
+.audit-time{width: 200px;}
+
+.yqx-table{
+    table-layout:inherit;
+}

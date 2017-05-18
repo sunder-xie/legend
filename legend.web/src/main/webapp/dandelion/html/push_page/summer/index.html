@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link type="text/css" rel="stylesheet" href="../../../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../../../css/summer/index.css" />
+    <title>出游防抛锚，免费检测等你约</title>
+</head>
+
+<script type="text/html" id="shopTpl">
+    <%if (success) {%>
+        <div class="conL"><img src="<%=data.imgUrl || '../../../images/summer/logo.jpg'%>"/></div>
+        <div class="conR">
+            <h2><%=data.name%></h2>
+            <p class="mar5"><i class="ico_location"></i><%=data.address%></p>
+            <p><i class="ico_phone"></i><%if(data.tel){%><%= data.tel%><%}else{%><%= data.mobile%><%}%></p>
+        </div>
+        <ul class="stars">
+            <li class="full"></li>
+            <li class="full"></li>
+            <li class="full"></li>
+            <li class="full"></li>
+            <li class="full"></li>
+        </ul>
+    <% } %>
+</script>
+
+<body>
+    <div class="jiazai"><img src="../../../images/load.png"></div>
+    <div id="wrapper" class="wrapper">
+        <div class="con clearfix" id="shop">
+
+        </div>
+        <div class="main">
+            <img src="../../../images/summer/img01.jpg" />
+            <img src="../../../images/summer/img02.jpg" />
+            <img src="../../../images/summer/img03.jpg" />
+            <img src="../../../images/summer/img04.jpg" />
+        </div>
+    </div>
+    <footer>
+        <a class="btn_apply">立即预约</a>
+    </footer>
+</body>
+
+<script type="text/javascript" src="../../../js/lib/zepto/zepto.min.js"></script>
+<script type="text/javascript" src="../../../js/lib/template.js"></script>
+<script type="text/javascript" src="../../../js/lib/crypto/sha.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../../../js/Dao.js"></script>
+<script type="text/javascript" src="../../../js/summer/index.js?201523123"></script>
+</html>

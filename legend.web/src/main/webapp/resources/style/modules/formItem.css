@@ -1,0 +1,105 @@
+/* 只读按钮样式 */
+input[readonly],input[readonly] {cursor: not-allowed; background-color: #eee; opacity: 1; }
+/* 禁用按钮样式 */
+.qxy_form .qxy_btn[disabled],input[disabled],select[disabled] {cursor: not-allowed; background: #eee; color: #c9c9c9; }
+/* 表单添加图标（红色的圆加号） */
+.qxy_add_icon {background: url('../img/common/sz1.png') no-repeat center; width: 38px; height: 38px; display: inline-block; +display: inline; +zoom: 1; vertical-align: middle; }
+/* 表单添加图标（红色的圆减号） */
+.qxy_del_icon {background: url('../img/common/sz.png') no-repeat center; width: 38px; height: 38px; display: inline-block; +display: inline; +zoom: 1; vertical-align: middle; }
+
+/*-----公共 button 样式 start-------*/
+/*保存返回按钮*/
+.qxy_btn {display: inline-block; +display: inline; +zoom: 1; padding:10px 20px; background: #f77c7e; border-radius: 4px; cursor: pointer; text-decoration: none; text-align: center; font-size: 16px; vertical-align: middle; color: #fff; line-height: 24px; margin-right: 8px; }
+.qxy_btn:hover {background-color: #f65d5f; }
+/*添加按钮（三种颜色[橘色orange,绿色green,蓝色blue]）*/
+.qxy_orange_btn {padding: 10px 20px 10px 40px; background: linear-gradient(top, #fea23f, #f2942e); background: -ms-linear-gradient(top, #fea23f, #f2942e); background: -moz-linear-gradient(top, #fea23f, #f2942e); background: -webkit-gradient(linear, left top, left bottom, from(#fea23f), to(#f2942e)); background:#fea23f\0; +background:#fea23f; font-size: 14px; }
+.qxy_orange_btn:hover {background: #f2942e; }
+.qxy_green_btn {background: linear-gradient(top, #8fb027, #789c19); background: -ms-linear-gradient(top, #8fb027, #789c19); background: -moz-linear-gradient(top, #8fb027, #789c19); background: -webkit-gradient(linear, left top, left bottom, from(#8fb027), to(#789c19)); background:#8fb027\0; +background:#8fb027; }
+.qxy_green_btn:hover {background: #789c19; }
+.qxy_blue_btn {background: linear-gradient(top, #4ac8f3, #42b6dd); background: -ms-linear-gradient(top, #4ac8f3, #42b6dd); background: -moz-linear-gradient(top, #4ac8f3, #42b6dd); background: -webkit-gradient(linear, left top, left bottom, from(#4ac8f3), to(#42b6dd)); background:#4ac8f3\0; +background:#4ac8f3; }
+.qxy_blue_btn:hover {background: #42b6dd; }
+.qxy_add_btn{padding: 10px 20px 10px 40px; font-size:14px; }
+.qxy_add_btn:before{content: ""; position: absolute; margin-left: -22px; margin-top: 4px; background: url(../img/common/btn_icon1.png) no-repeat; width: 17px; height: 17px; }
+/*导出按钮*/
+.qxy_exp_btn {font-family: "黑体", sans-serif, Verdana, Arial, Helvetica, Tahoma; font-size: 14px; display: inline-block; +display: inline; +zoom: 1; padding: 0 30px; height: 30px; text-decoration: none; line-height: 30px; color: #666666; text-align: center; border: 1px #c1c1c1 solid; border: 1px solid #c1c1c1; border-radius: 2px; background: #f5f5f5\9; background: linear-gradient(top, #ffffff, #f5f5f5); background: -ms-linear-gradient(top, #ffffff, #f5f5f5); background: -moz-linear-gradient(top, #ffffff, #f5f5f5); background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5)); cursor: pointer; margin-left:8px; }
+
+.qxy_exp_btn:active {background-color: #d8d7d7; background: linear-gradient(top, #e8e6e6, #d5d5d5); background: -ms-linear-gradient(top, #e8e6e6, #d5d5d5); background: -moz-linear-gradient(top, #e8e6e6, #d5d5d5); background: -webkit-gradient(linear, left top, left bottom, from(#e8e6e6), to(#d5d5d5)); background:#d8d7d7\9; +background: #d8d7d7; }
+
+/*表单内的button*/
+.qxy_form .qxy_btn {font-size: 13px; color: #666666; padding :0 15px; height: 36px; line-height: 36px; border-width: 1px; border-style: solid; text-align: center; border-radius: 2px; border-color: #c1c1c1; background: #f7f7f7; background: linear-gradient(top, #ffffff, #f5f5f5); background: -ms-linear-gradient(top, #ffffff, #f5f5f5); background: -moz-linear-gradient(top, #ffffff, #f5f5f5); background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5)); text-align: center; margin-left:10px; }
+.qxy_form .qxy_btn_degreen{font-size:16px; color:#fff; border:none; border-radius:3px; background: linear-gradient(top, #090, #070); background: -ms-linear-gradient(top, #090, #070); background: -moz-linear-gradient(top, #090, #070); background: -webkit-gradient(linear, left top, left bottom, from(#090), to(#070)); background:#090\0; +background:#090; }
+.qxy_form .qxy_btn_green{font-size:16px; color:#fff; border:none; border-radius:3px; margin-left:5px; background: linear-gradient(top, #8fb027, #789c19); background: -ms-linear-gradient(top, #8fb027, #789c19); background: -moz-linear-gradient(top, #8fb027, #789c19); background: -webkit-gradient(linear, left top, left bottom, from(#8fb027), to(#789c19)); background:#8fb027\0; +background:#8fb027; }
+
+.qxy_form .qxy_btn:hover {background-color:#f7f7f7;}
+.qxy_form .qxy_btn_green:hover{background: #789c19;}
+.qxy_form .qxy_btn_degreen:hover{background: #070;}
+.qxy_form .qxy_btn[disabled]:hover{background: #eee;}
+
+.qxy_save_btn:hover, .qxy_return_btn:hover, .qxy_save_btn:active,
+.qxy_return_btn:active {background-color: #f65d5f; }
+/*弹窗表单内的button*/
+.qxy_dialog .qxy_form .qxy_btn {height: 28px;line-height: 28px;margin-right: 0;}
+/*------公共 button 样式 end-------*/
+
+/*-----公共 textarea 样式 start-------*/
+.qxy_textarea {width: 100%; line-height: 20px; border: 1px solid #dadada; border-radius: 5px; background: #fff; margin-right: 10px; padding: 10px; box-sizing: border-box; +padding:10px 0px;vertical-align: top; }
+/*------公共 textarea 样式 end-------*/
+
+/*-----公共 radio 样式 start-------*/
+.qxy_radio {width: 100%; line-height: 36px; text-indent: 10px; }
+.qxy_radio label input {margin-left: 8px; }
+/*------公共 radio 样式 end-------*/
+
+/*-----公共 checkbox 样式 start-------*/
+.qxy_checkbox {width: 100%; line-height: 36px; text-indent: 10px; }
+
+.qxy_checkbox label input {margin-left: 8px; }
+/*------公共 checkbox 样式 end-------*/
+
+/*-----公共 input 样式 start-------*/
+.qxy_input {width: 100%; padding-left: 10px; line-height: 38px; height: 38px; border: 1px solid #dadada; border-radius: 5px; background: #fff; box-sizing: border-box; +padding:0;vertical-align: top; }
+[dynamic_name] .qxy_input{padding-left: 0px; text-align:center; }
+/* input后加载图标的样式 */
+.qxy_input_ajax:after{content:""; position: absolute; width:30px; height:30px; background:url(../img/common/loadding2.gif) no-repeat center; right:5px; top:5px; }
+/*------公共 input 样式 end-------*/
+
+/*-----带单位的 input 样式 start(需和.qxy_input同时使用)-------*/
+.qxy_unit_box{width: 100%; position: relative; }
+.qxy_unit_box .qxy_input{padding-right: 40px; vertical-align: top;}
+.qxy_unit_box .qxy_input_unit{width: 40px; position: absolute; z-index: 1; padding-right: 0px; right: 0; top:0px; /*top:1px\0;*/ margin-right: 0; border-radius:0 5px 5px 0; vertical-align: top;color: #666;}
+/*-----带单位的 input 样式 end-------*/
+
+/*-----公共 select 样式 start-------*/
+.qxy_select {width: 100%; height: 38px; border: 1px solid #dadada; border-radius: 5px; background: #fff; margin-right: 10px; text-indent: 2px ;vertical-align: top;}
+/*------公共 select 样式 end-------*/
+
+/*-----公共操作栏样式 start-------*/
+.qxy_option {width: 100%; }
+.qxy_option .opt_left {height: 45px; line-height: 45px; float: left; }
+.qxy_option .opt_right {height: 45px; line-height: 45px; float: right; }
+/*------公共操作栏样式 end-------*/
+
+/*------文件上传按钮样式 start------*/
+
+.uploadifive-button {background-color: #505050; background-image: linear-gradient(bottom, #505050 0%, #707070 100%); background-image: -o-linear-gradient(bottom, #505050 0%, #707070 100%); background-image: -moz-linear-gradient(bottom, #505050 0%, #707070 100%); background-image: -webkit-linear-gradient(bottom, #505050 0%, #707070 100%); background-image: -ms-linear-gradient(bottom, #505050 0%, #707070 100%); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #505050), color-stop(1, #707070) ); background-position: center top; background-repeat: no-repeat; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; border: 2px solid #808080; color: #FFF; font: bold 12px Arial, Helvetica, sans-serif; text-align: center; text-shadow: 0 -1px 0 rgba(0,0,0,0.25); text-transform: uppercase; width: 100%; }
+.uploadifive-button:hover {background-color: #606060; background-image: linear-gradient(top, #606060 0%, #808080 100%); background-image: -o-linear-gradient(top, #606060 0%, #808080 100%); background-image: -moz-linear-gradient(top, #606060 0%, #808080 100%); background-image: -webkit-linear-gradient(top, #606060 0%, #808080 100%); background-image: -ms-linear-gradient(top, #606060 0%, #808080 100%); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #606060), color-stop(1, #808080) ); background-position: center bottom; }
+.uploadifive-queue-item {background-color: #F5F5F5; border-bottom: 1px dotted #D5D5D5; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; font: 12px Arial, Helvetica, Sans-serif; margin-top: 3px; padding: 15px; }
+.uploadifive-queue-item .close {background: url('../img/common/uploadifive-cancel.png') 0 0 no-repeat; display: block; float: right; height: 16px; text-indent: -9999px; width: 16px; }
+.uploadifive-queue-item .progress {border: 1px solid #D0D0D0; height: 3px; margin-top: 5px; width: 100%; }
+.uploadifive-queue-item .progress-bar {background-color: #0072BC; height: 3px; width: 0; }
+/*------文件上传按钮样式 end------*/
+
+/*--------- 表单验证信息提示样式 start ----------*/
+.qxy_err_msg{position: absolute; top: -20px; left: 30px; display: none; z-index:2; min-width:60px; }
+.qxy_err_msg .qxy_err_msg_inner{position: relative; border: 1px solid #f77c7e; background: #fff; padding: 0px 5px; line-height: 30px; border-radius: 4px; }
+.qxy_err_msg .qxy_err_msg_inner p{width: 100%; white-space: nowrap; }
+.qxy_err_msg .qxy_err_msg_inner span{position: absolute; width: 17px; height: 38px; top:3px; left:-30px; background: url(../img/common/tips_icon.png) no-repeat; }
+.qxy_err_msg .qxy_err_msg_inner i{position: absolute; width:9px; height: 9px; background: url(../img/common/tips_jiantou.png) no-repeat; top:10px; left:-7px; }
+
+/*--------- 表单验证信息提示样式 end ----------*/
+
+/*--------- 动态行序列号样 start ----------*/
+[num]{text-align: center;font-weight: 700;font-size: 12px;}
+/*--------- 动态行序列号样 end ----------*/
+
+

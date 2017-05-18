@@ -1,0 +1,53 @@
+/**
+ * ch 2016-03-12
+ * 排行榜修正数据页面
+ */
+
+
+/* 此页面公用样式 start */
+.fl{float: left;}
+.fr{float: right;}
+/* 此页面公用样式 end */
+
+/**
+ * 修正数据表单样式 start
+ */
+
+.ranking-group{border:1px solid #cdcdcd;}
+.ranking-group .title-box{line-height: 42px;padding: 0 10px;background:#efefef;border-bottom:1px solid #cdcdcd;text-align: right;}
+.ranking-group .title-box .title{color: #333;font-weight: 900;font-size: 14px;}
+.ranking-group .title-box .right-link{color: #ff585a;text-decoration: underline;}
+.ranking-group .cont-box{min-height: 20px;background: #fff;padding: 20px;}
+.ranking-group .text-center{text-align: center;}
+
+.form-label{height: 38px;display:block;line-height: 38px;width: 70px;}
+.form-unit{position:absolute;height:38px;line-height: 38px;right:0;top:0;min-width: 40px;border-left:1px solid #dadada;}
+.form-blank{width: 440px;min-height: 38px;}
+.input-group{position: relative;}
+.qxy_input{width:370px;}
+.qxy_select{width:370px;margin:0;}
+.checkbox-group label{line-height:38px;margin-right:8px;}
+.checkbox-group label>input{margin-right:5px;}
+
+
+.cont-box li{margin-bottom:20px;}
+.cont-box li:nth-child(2n){margin-left: 40px;}
+/**
+ * 修正数据表单样式 end
+ */
+
+/**
+ * 图片上传样式 start
+ */
+.img-box{width: 848px;}
+.img-box > .common{float: left;width: 120px;height:120px;margin-right:20px;position: relative;}
+.img-box .upload-btn{background: #fff url(../../img/page/member/img_add_btn.png) no-repeat center;width: 120px;height:120px;border: 1px dashed #dcdcdc;}
+.img-box .upload-btn:hover{box-shadow: 0 0 8px 1px #dcdcdc;}
+.img-box .file-btn{height:120px;width: 120px;opacity: 0;cursor: pointer;}
+.img-box .img{border:1px solid #dcdcdc;}
+.img-box .img img{width: 120px;height:120px;}
+.img-box .img .del-btn{position: absolute;width: 20px;height:20px;border-radius: 50%;line-height: 20px;border:1px solid #dcdcdc;color: #dcdcdc;right:-10px;top:-10px;font-size: 18px;background: #fff;text-align: center;}
+.img-box .img .del-btn:hover{box-shadow: 0 0 8px 1px #dcdcdc;}
+/**
+ * 图片上传样式 end
+ */

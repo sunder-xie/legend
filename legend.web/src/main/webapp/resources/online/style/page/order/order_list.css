@@ -1,0 +1,203 @@
+
+/* css */
+.menu {
+    height: 110px;
+    padding: 0px 0;
+    /*border-bottom: 1px solid #cdcdcd;*/
+}
+.menu li {
+    width: 188px;
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+}
+.item5 {
+    margin-right: 0px!important;
+}
+.menu li a {
+    display: block;
+    width: 166px;
+    height: 88px;
+    line-height: 88px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: right;
+    padding-right: 22px;
+}
+.item1 a {
+    background: #f77c7e url("../../img/page/order/w1.png") no-repeat 22px;
+}
+.item2 a {
+    background: #4bc8f4 url("../../img/page/order/w6.png") no-repeat 22px;
+}
+.item3 a {
+    background: #fea23f url("../../img/page/order/w3.png") no-repeat 22px;
+}
+.item4 a {
+    background: #9fc527 url("../../img/page/order/w4.png") no-repeat 22px;
+}
+.item5 a {
+    background: #c8976b url("../../img/page/order/w5.png") no-repeat 22px;
+}
+
+.item1 a:hover {
+    background: #e6585b url("../../img/page/order/w1.png") no-repeat 22px;
+}
+.item2 a:hover {
+    background: #1facde url("../../img/page/order/w6.png") no-repeat 22px;
+}
+.item3 a:hover {
+    background: #ea8519 url("../../img/page/order/w3.png") no-repeat 22px;
+}
+.item4 a:hover {
+    background: #85ad06 url("../../img/page/order/w4.png") no-repeat 22px;
+}
+.item5 a:hover {
+    background: #bb7f4a url("../../img/page/order/w5.png") no-repeat 22px;
+}
+
+.cont {
+    display: block;
+    width: 990px;
+    position: relative;
+}
+.cont .current{
+    border:1px solid #fa4837;
+}
+
+.cont li {
+    width: 235px;
+    height: 306px;
+    background: #f9f9f9;
+    float: left;
+    border: 1px solid #cdcdcd;
+    margin: 0 10px 10px 0;
+}
+.ltop {
+    height: 60px;
+    cursor: pointer;
+    padding: 15px 10px 0 10px;
+    border-bottom: 1px dotted #aebdc7;
+}
+
+.llet {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+}
+.lright {
+    float: right;
+    width: 160px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    height: 45px;
+    overflow: hidden;
+}
+.midc {
+    padding: 7px 0;
+    border-bottom: 1px dotted #aebdc7;
+    height:125px;
+}
+.ptxt {
+    width: 100%;
+    padding: 3px 0;
+    line-height: 20px;
+    overflow: hidden;
+}
+.pleft {
+    float: left;
+    padding-left: 15px;
+}
+.pright {
+    float: right;
+    width: 140px;
+    padding-right: 15px;
+}
+.qing {
+    padding: 15px;
+    height:10px;
+}
+.qing span, .appoint_info span {
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+
+.but_left {
+    width: 100px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #c1c1c1;
+    margin-top: 12px;
+    margin-left: 10px;
+    float: left;
+    cursor: pointer;
+}
+.but_right {
+    width: 100px;
+    height: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    margin-top: 12px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+.but_left:hover, .but_right:hover {
+    background-color: #ececec;
+}
+
+.cont li.jiesuan {
+    background: url("../../img/page/order/zhang.png?20151127") no-repeat 80px 194px;
+}
+
+.order_item:hover {
+    border:1px solid #fa4837;
+}
+.order_item:hover .delete-btn{
+    display: block;
+}
+
+/*完工弹窗样式start*/
+.qxy_dialog{
+    background-color: #f5f2e6;
+    padding: 25px;
+}
+.mwhbox {
+    /*height: 450px;*/
+    background-color: #f5f2e6;
+    overflow: auto;
+}
+.mwtab {
+    width: 100%;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+.mwtab th {
+    border: 1px solid #cdcdcd;
+    font-weight: bold;
+}
+.mwtab td {
+    border: 1px solid #cdcdcd;
+}
+.mhyic {
+    font-weight: bold;
+    color: #e50206;
+    text-align: left;
+    padding-left: 10px;
+}
+/*完工弹窗样式end*/

@@ -1,0 +1,55 @@
+---
+  root: true
+  env:
+    # 是否在浏览器运行
+    browser: true
+  extends: 'eslint:recommended'
+  globals:
+    Vue: false
+    wx: false
+    utils: true
+    wxUtils: true
+    dialog: true
+  plugins:
+    - eslint-plugin-html
+  # 错误等级（off/0: 关闭规则，warn/1: 开启警告，error/2: 开启错误）
+  # http://eslint.org/docs/rules/
+  rules:
+    # 禁止使用console
+    no-console:
+      - warn
+      - allow:
+        - warn
+        - error
+    # 禁止空块级语句（正确写法：if (condition) {// empty}/if (condition) {/* empty */}）
+    no-empty:
+      - error
+      - allowEmptyCatch: true
+    # 禁止异常的空白符
+    no-irregular-whitespace:
+      - error
+      - skipComments: true
+    # 缩进格式 4个空格
+#    indent:
+#      - error
+#      - 4
+#      - SwitchCase: 1
+
+    linebreak-style:
+      - error
+      - unix
+    # 字符串引号 单引号
+    quotes:
+      - error
+      - single
+    # 分号 总是添加
+    semi:
+      - error
+      - always
+    # 禁止声明而从未使用的变量
+    no-unused-vars:
+      - error
+      - vars: local
+        varsIgnorePattern: 'ignore'
+
+

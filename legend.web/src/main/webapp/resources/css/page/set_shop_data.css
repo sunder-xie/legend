@@ -1,0 +1,17 @@
+.shop-name{
+    width: 400px;
+}
+.area{
+    width: 150px;
+    margin-right: 10px;
+}
+.address-detail{
+    width: 647px;
+}
+.action-btn a{
+    margin-right: 10px;
+    float: left;
+}
+.action-btn{
+    margin-bottom: 10px;
+}

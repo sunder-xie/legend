@@ -1,0 +1,94 @@
+.box {
+    padding: 10px;
+}
+
+.staff-box.box {
+    padding-top: 0;
+}
+
+.staff-box.box label {
+    display: inline-block;
+    padding-top: 15px;
+    vertical-align: top;
+}
+
+.staff-btn {
+    padding: 5px 10px;
+    border: 1px solid #607b0a;
+    color: #607b0a;
+}
+
+.customer-list {
+    border-top: 0;
+    padding-bottom: 16px;
+}
+
+.box-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+}
+
+.customer-list .box-title {
+    padding-top: 5px;
+    padding-bottom: 19px;
+}
+
+.red {
+    color: #fd461e;
+}
+
+.customer-list .num-list {
+    color: #000;
+}
+.customer-list .num-list .num {
+    margin-right: 7px;
+}
+
+.customer-list .num-list p + p {
+    margin-top: 12px;
+}
+
+.customer-list p {
+    font-weight: 700;
+}
+
+.info-list {
+    padding-left: 10px;
+    border-left: 1px solid #cacaca;
+}
+
+.info-list p {
+    color: #666;
+    line-height: 20px;
+}
+
+.info-list .top-line {
+    line-height: initial;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #cacaca;
+    color: #333;
+}
+
+.table-box {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.table-box .box-title {
+    padding: 16px 0 14px 10px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.allot-btn {
+    padding: 11px 16px;
+    margin-left: 11px;
+    margin-top: -8px;
+    font-size: 12px;
+}
+
+.yqx-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

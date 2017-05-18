@@ -1,0 +1,56 @@
+.yqx-wrapper .gd_tab{
+    margin: 0 0 20px;
+}
+.gd_tab {
+    height: 45px;
+    margin: 20px 0;
+    background-color: #d7d7d7;
+}
+
+.gd_tab li.item {
+    float: left;
+    position: relative;
+    width: 125px;
+    height: 45px;
+    text-align: center;
+}
+
+.gd_tab li.item a {
+    position: absolute;
+    display: block;
+    width: 125px;
+    height: 49px;
+    line-height: 45px;
+    color: #535353;
+    left: 0;
+    top: 0;
+}
+
+.gd_tab li.item a:hover, .gd_tab li.item .current {
+    color: #ffffff;
+    background: url("../../../img/page/magic/t1.gif") no-repeat;
+}
+
+.gd_tab li.statisticsItem {
+    float: left;
+    position: relative;
+    width: 98px;
+    height: 45px;
+    text-align: center;
+}
+
+.gd_tab li.statisticsItem a {
+    position: absolute;
+    display: block;
+    width: 98px;
+    height: 49px;
+    line-height: 45px;
+    color: #535353;
+    left: 0;
+    top: 0;
+}
+
+.gd_tab li.statisticsItem a:hover, .gd_tab li.statisticsItem .current {
+    color: #ffffff;
+    background: url("../../../img/page/magic/t1.gif") no-repeat;
+}

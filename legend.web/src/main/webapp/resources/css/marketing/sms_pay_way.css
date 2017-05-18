@@ -1,0 +1,141 @@
+.Z-right{
+    width: 826px;
+    height: auto;
+    float: left;
+}
+.sms_title{
+    height: 28px;
+    font-size: 16px;
+    color: #333;
+    line-height: 27px;
+}
+.order-info{
+    width: 826px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.order-title{
+    width: 814px;
+    height:39px;
+    line-height: 39px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #333;
+    padding-left: 12px;
+}
+.order-money{
+    width: 800px;
+    height:40px;
+    line-height: 40px;
+    font-size: 12px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #333;
+    padding-left: 12px;
+}
+.order-money span{
+    font-size: 20px;
+    color: #f0933d;
+    padding-left: 10px;
+}
+.order-infor{
+    height:39px;
+    line-height: 39px;
+    font-size: 12px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #333;
+    padding-left: 12px;
+}
+.order-infor span{
+    font-weight: bold;
+}
+.pay-way{
+    width: 826px;
+    overflow: hidden;
+    clear: both;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.pay-way h1{
+    display: block;
+    width: 130px;
+    height: 110px;
+    line-height: 110px;
+    float: left;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    font-family: "微软雅黑", "MicrosoftYahei";
+}
+.pay-mode-box{
+    width: 826px;
+    height: 110px;
+    clear:both;
+}
+
+.pay-mode{
+    width: 151px;
+    height: 35px;
+    line-height: 35px;
+    background:url("../../images/marketing/recharge_bg1.png") no-repeat;
+    position: relative;
+    float:left;
+    padding: 8px 10px 8px 35px;
+    margin:30px 10px 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    font-family: "微软雅黑", "MicrosoftYahei";
+}
+.pay-mode img{
+    vertical-align: middle;
+    margin-right: 9px;
+}
+.mode-box div.hover{
+    background:url("../../images/marketing/recharge_bg2.png") no-repeat;
+}
+.pay-btn-box{
+    width: 804px;
+    height: 60px;
+    border-top: 1px solid #ddd;
+    margin:0 auto;
+}
+.pay-btn-box a:hover{
+    color: #fff;
+}
+.pay-btn{
+    display: block;
+    width:90px;
+    height: 30px;
+    line-height: 30px;
+    background: #90af34;
+    color: #fff;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 14px;
+}
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

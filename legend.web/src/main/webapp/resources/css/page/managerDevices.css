@@ -1,0 +1,70 @@
+.title{
+    height: 34px;
+}
+.title h3{
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    color: #333;
+    line-height: 34px;
+}
+.title span{
+    font-size: 12px;
+    font-family: "宋体";
+    color: #f35f62;
+    padding: 3px 15px;
+    background: url("../../images/tips-ico.png") no-repeat;
+}
+.return-btn{
+    padding: 10px 30px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #666;
+}
+.return-btn:hover{
+    color: #666;
+}
+.table-box{
+    margin-top: 20px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.yqx-table{width: 100%;table-layout: auto;}
+
+.yqx-table > tr > th,
+.yqx-table > thead > tr > th,
+.yqx-table > tr > td,
+.yqx-table > tbody > tr > td{padding:8px 4px;border-bottom: 1px solid #d6d6d6;text-align: left;vertical-align: middle;white-space:nowrap;}
+.yqx-table > tr:hover > td,
+.yqx-table > tbody > tr:hover > td{background: #f5f5f5}
+.yqx-table > tr > th,
+.yqx-table > thead > tr > th{background: #f5f1e5;border-top: 1px solid #d6d6d6;padding:12px 4px;}
+.yqx-table > tbody > tr:nth-child(n){background: #fff}
+.yqx-table > tbody > tr:nth-child(2n){background: #f9f9f9}
+.yqx-table-hover > tbody > tr:hover {color: #7fa700}
+.yqx-table-link > tbody > tr {cursor: pointer}
+
+.yqx-table td a{
+    text-decoration: underline;
+    margin: 0 3px;
+}
+
+.yqx-table td .agree{
+    color: #80a61e;
+}
+.yqx-table td .refuse{
+    color: #f35f62;
+}
+.yqx-table td .delete{
+    color: #666;
+}
+.max-text{
+    max-width:200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.yqx-table > tbody > tr > td.text-c,.yqx-table > thead > tr > th.text-c{
+    text-align: center;
+}

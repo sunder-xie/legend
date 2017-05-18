@@ -1,0 +1,2 @@
+/*-- 淘汽云修 2016-03-09 04:48:56 --*/
+define(function(require,exports,module){require("./eventBind");var a=require("./chosenSelect"),b=require("./select"),c=require("./cascadeSelect");exports.init=function(){b.init(),a.handleChoosenSelect(".chosen"),c.init(".cascadeSelect"),$(".qxy_vmenu").vmenu()}});

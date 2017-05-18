@@ -1,0 +1,794 @@
+.post {
+    width: 320px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+.list-head {
+    height: 38px;
+    background: #efefef;
+    text-align: center;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: bold;
+    border: solid 1px #cdcdcd;
+}
+
+.post-2, .post-1-2, .post-3, .post-1-3, .post-4, .post-1-4, .post-5, .post-1-5, .post-6, .post-1-6, .power-2, .power-3 {
+    height: 38px;
+    line-height: 38px;
+    background: #f9f9f9;
+    border-bottom: solid 1px #cdcdcd;
+    border-left: solid 1px #cdcdcd;
+    border-right: solid 1px #cdcdcd;
+    cursor: pointer;
+    position: relative;
+}
+
+.post-3:hover, .post-4:hover, .post-5:hover, .post-6:hover {
+    border: 2px solid #8fb027;
+}
+
+.post-1-2:hover, .post-1-3:hover, .post-1-4:hover, .post-1-5:hover, .post-1-6:hover {
+    border: 2px solid #8fb027;
+}
+
+li.selected {
+    background: #8fb027;
+    position: relative;
+    height: 37px;
+    line-height: 37px;
+}
+
+.post-2, .post-1-2 {
+    background: #efede1;
+    font-size: 14px;
+    padding-left: 50px;
+}
+
+.post-3, .post-1-3 {
+    font-size: 12px;
+    padding-left: 70px;
+}
+
+.post-4, .post-1-4 {
+    font-size: 12px;
+    padding-left: 90px;
+}
+
+.post-5, .post-1-5 {
+    font-size: 12px;
+    padding-left: 110px;
+}
+
+.post-6, .post-1-6 {
+    font-size: 12px;
+    padding-left: 130px;
+}
+
+.wrapper {
+    overflow: visible;
+}
+
+.post-2 span {
+    margin-left: 20px;
+}
+
+.post-2 img {
+    position: relative;
+    top: -1px;
+}
+
+.btn-container {
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
+    border-bottom: solid 1px #cdcdcd;
+    border-left: solid 1px #cdcdcd;
+    border-right: solid 1px #cdcdcd;
+}
+
+.btn-container button {
+    margin-right: 10px;
+    height: 30px;
+}
+
+.employee-accout {
+    float: left;
+    width: 650px;
+}
+
+.employee-accout a.btn_gray {
+    width: 68px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.employee-accout .head, .employee-power .head {
+    text-align: left;
+}
+
+.employee-data {
+    padding: 0 12px;
+    height: 38px;
+    line-height: 38px;
+    background: #f9f9f9;
+    border-bottom: solid 1px #cdcdcd;
+    border-left: solid 1px #cdcdcd;
+    border-right: solid 1px #cdcdcd;
+    cursor: pointer;
+}
+
+.employee-data label {
+    width: 60px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.employee-data .label-name, .employee-data .label-account {
+    width: 45px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.employee-data span {
+    display: inline-block;
+    height: 38px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.employee-data .account {
+    width: 274px;
+}
+
+.employee-data .name {
+    width: 100px;
+    overflow: hidden;
+}
+
+.employee-data .connect {
+    width: 100px;
+}
+
+.employee-data a {
+    margin-right: 10px;
+    color: #0077ca;
+    letter-spacing: 3px;
+    width: 45px;
+    float: right;
+    text-decoration: underline;
+}
+
+.employee-power {
+    margin-top: 10px;
+    float: right;
+    width: 650px;
+    margin-bottom: 20px;
+}
+
+.employee-power a.btn_gray {
+    height: 30px;
+    line-height: 30px;
+}
+
+.power-2 {
+    background: #f9f9f9;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.power-2-img {
+    display: inline-block;
+    width: 550px;
+}
+
+.power-2 span {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.power-2 img {
+    position: relative;
+    top: -1px;
+}
+
+.power-3 {
+    font-size: 12px;
+    padding-left: 45px;
+    background: #fcfcfc;
+    border-bottom: 1px dashed #cdcdcd;
+}
+
+.employee-power input[type="checkbox"] {
+    float: right;
+    margin: 13px 18px;
+}
+
+.act-container {
+    position: absolute;
+    right: -99px;
+    width: 95px;
+    border: 2px solid #8fb027;
+    top: 0px;
+    display: none;
+    z-index: 1;
+}
+
+.act-container li {
+    background: #f6fae7;
+    text-align: center;
+    color: #8fb027;
+    border-bottom: 1px dashed #8fb027;
+}
+
+.act-container li:last-child {
+    border: none;
+}
+
+.act-container li:hover {
+    color: #f94a39;
+    background: white;
+}
+
+.shezhi {
+    position: absolute;
+    width: 55px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+    background: #f7f8f8;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    right: 20px;
+    top: 6px;
+    display: none;
+}
+
+.post-3:hover .shezhi, .post-4:hover .shezhi, .post-5:hover .shezhi, .post-6:hover .shezhi {
+    display: block;
+}
+
+.change-name {
+    position: absolute;
+    left: 30px;
+    top: 3px;
+    width: 210px;
+    height: 30px;
+    border: 1px solid #c1c1c1;
+}
+
+.change-name input {
+    width: 205px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.change-name a.btn_gray {
+    position: absolute;
+    right: 2px;
+    width: 55px;
+    height: 24px;
+    letter-spacing: 3px;
+    line-height: 24px;
+    top: 2px;
+    border: 1px solid #c1c1c1;
+}
+
+#fancyboxWindow {
+    width: 320px;
+}
+
+.window-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.window-btn-container button {
+    width: 72px;
+    height: 24px;
+    border: 1px solid #c1c1c1;
+    letter-spacing: 3px;
+    margin-left: 20px;
+}
+
+.window-container {
+    max-height: 400px;
+    overflow: scroll;
+}
+
+.add_roles_same, .add_roles_next {
+    font-size: 13px;
+    display: inline-block;
+    color: #666666;
+    height: 25px;
+    width: 100px;
+    line-height: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #c1c1c1;
+    background-color: #f7f7f7;
+    background: linear-gradient(top, #ffffff, #f5f5f5);
+    background: -ms-linear-gradient(top, #ffffff, #f5f5f5);
+    background: -moz-linear-gradient(top, #ffffff, #f5f5f5);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5));
+}
+
+.add-role-name {
+    height: 38px;
+    line-height: 38px;
+    background: #f9f9f9;
+    border-bottom: solid 1px #cdcdcd;
+    border-left: solid 1px #cdcdcd;
+    border-right: solid 1px #cdcdcd;
+    cursor: pointer;
+    position: relative;
+}
+
+.add-role-name input {
+    width: 205px;
+    height: 30px;
+    padding-left: 5px;
+    margin: 3px 11px 0 12px;
+    border: 1px solid #c1c1c1;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.employee-power INPUT[type='checkbox'] {
+    *margin-top: -32px;
+}
+
+/*IE7*/
+.staff_info_box .us_list li{
+    display: inline-block;
+    float: none;
+    width: auto;
+    margin-right: 10px;
+}
+.staff_info_box .us_list span{
+    width: auto;
+}
+.staff_info_box .us_list .list_title{
+    width: 72px;
+}
+.staff_info_box .us_list span.tz_yg{
+    width: auto;
+}
+
+/*---- 密码说明 start -----*/
+.pwd_txt{padding-left: 25px;}
+.pwd_txt p{line-height: 30px;width:400px;color:#f77c7e;}
+/*---- 密码说明 end -----*/
+
+.role-box{ padding-left: 25px;}
+.role-box label{ margin-right: 10px;}
+.role-box label input{ margin-right: 5px;}
+.us_list a.btn_gray{ height: 28px; line-height: 28px;}
+
+
+
+/*安全登录等级  by zmx*/
+.safety-level-box{
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #d2d2d2;
+    overflow: hidden;
+}
+.safety-ico{
+    width: 80px;
+    height: 80px;
+    float: left;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+
+}
+.safety-right{
+    width: 485px;
+    float: left;
+    margin-left: 15px;
+}
+.level-text{
+    height: 26px;
+    font-size: 12px;
+    font-family: "宋体";
+    color: #666;
+    line-height: 26px;
+}
+.level{
+    height: 28px;
+    font-size: 16px;
+    font-family: "宋体";
+    color: #333;
+    line-height: 28px;
+}
+.change-btn{
+    padding: 6px 8px;
+    margin-left: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+}
+.change-btn:hover{
+    color: #666;
+}
+.safety-description{
+    height: 28px;
+    font-size: 12px;
+    font-family: "宋体";
+    color: #666;
+    line-height: 28px;
+}
+.safety-description span{
+    color: #333;
+}
+.level-ico1{
+    background: url("../../images/level-ico.png") no-repeat -7px 0px #fff;
+}
+.level-ico2{
+    background: url("../../images/level-ico.png") no-repeat -6px -90px #fff;
+}
+.level-ico3{
+    background: url("../../images/level-ico.png") no-repeat -6px -183px #fff;
+}
+.mobile-terminal{
+    display: block;
+    width: 98px;
+    height: 33px;
+    margin-top: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    float: right;
+    font-size: 14px;
+    color: #666;
+    line-height: 33px;
+    text-align: center;
+}
+.mobile-terminal:hover{
+    color: #666;
+}
+.network-environment{
+    width: 210px;
+    height: 66px;
+    margin-top: 5px;
+    padding-left: 20px;
+    float: left;
+    border-left: 1px dashed #bfbfbf;
+    overflow: hidden;
+}
+.environment-title{
+    height: 20px;
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+}
+.environment-title a{
+    margin-left: 10px;
+    color: #80a61e;
+    text-decoration: underline;
+}
+.environment-text{
+    height: 22px;
+    line-height: 22px;
+    color: #333;
+}
+.environment-text span:first-child{
+    margin-right: 15px;
+}
+
+/*弹窗内容样式*/
+.dialog-level-box{
+    width:284px;
+    height: 350px;
+    float: left;
+    margin-top: 20px;
+    border-right: 1px solid #d2d2d2;
+}
+.dialog-level-box:last-child{
+    border-right: none;
+}
+.dialog-level-ico{
+    width: 155px;
+    height: 131px;
+    margin: 29px auto 0 auto;
+}
+.dialog-level-num{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+.dialog-text-box{
+    height: 54px;
+}
+.dialog-level-text{
+    height: 18px;
+    line-height: 18px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+}
+.select-btn-box{
+    position: relative;
+    width: 88px;
+    height: 33px;
+    margin:25px auto 0 auto;
+    border: 1px solid #ccc;
+    line-height: 33px;
+    text-align: center;
+}
+.select-btn{
+    display: block;
+    width: 88px;
+    height: 33px;
+    color: #333;
+    font-size: 14px;
+}
+.select-btn:hover{
+    color: #333;
+}
+.select-btn-box:hover .pop-box{
+    display: block;
+}
+.dialog-level1{
+    background: url("../../images/dialog-level-ico.png") no-repeat -33px -25px;
+}
+.dialog-level2{
+    background: url("../../images/dialog-level-ico.png") no-repeat -33px -233px;
+}
+.dialog-level3{
+    background: url("../../images/dialog-level-ico.png") no-repeat -33px -455px;
+}
+.select-ico{
+    background: url("../../images/select-ico.png") no-repeat 6px 10px;
+}
+.show-pop{
+    position: relative;
+}
+
+.pop-box{
+    position: absolute;
+    top:-255px;
+    right: -95px;
+    width: 283px;
+    height: 260px;
+    display: none;
+    text-align: left;
+}
+.pop{
+    width: 263px;
+    height: 223px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 3px 10px 1px #dcddde;
+}
+.triangle-down {
+    width:0;
+    height:0;
+    margin-left: 132px;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:8px solid #fff;
+}
+.pop-title{
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.pop p,.content p{
+    font-size: 12px;
+    color: #666;
+    line-height: 25px;
+}
+.setting-box{
+    height: 37px;
+    padding: 5px;
+    border: 1px dashed #d2d2d2;
+}
+.wiffi-ico{
+    width: 37px;
+    height: 37px;
+    float: left;
+    margin-right: 7px;
+    background: url("../../images/wiffi-ico.png") no-repeat;
+}
+.wiffi-text{
+    float: left;
+}
+.wiffi-text p:first-child{
+    color: #2f81fb;
+    line-height: 20px;
+    font-size: 14px;
+}
+.wiffi-text p:last-child{
+    color: #878787;
+    line-height: 15px;
+    font-size: 12px;
+}
+.setting-btn{
+    margin-top: 3px;
+    float: right;
+    color: #101010;
+}
+.setting-btn1{
+    margin-top: 13px;
+    float: right;
+    color: #101010;
+}
+
+.three-level{
+    width: 270px;
+    height: 290px;
+}
+.three-level-ico{
+    width: 155px;
+    height: 131px;
+    margin: 55px auto;
+    background: url("../../images/dialog-level-ico.png") no-repeat -33px -455px;
+}
+.content{
+    width: 320px;
+}
+.save-level-tips{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+}
+.save-level-box{
+    width: 855px;
+    margin: 0 auto;
+}
+.field_box{
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+/*弹窗样式*/
+.staff_info_box1 {
+    margin: 0 0 20px 0;
+}
+.us_list1 li.time{
+    width: 730px;
+}
+
+.us_list1 li{
+    display: block;
+    float: left;
+    padding-bottom: 10px;
+    width: 360px;
+    height: 30px;
+}
+.person-accounts .us_t{
+    background: #5f636e;
+}
+.person-accounts .us_t span{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.person-accounts .us_list input.dis-inp{
+    width: 80px;
+    background: #eee;
+    padding-right: 5px;
+}
+.person-accounts .us_list input{
+    width: 198px;
+}
+.person-accounts .us_list .tips{
+    display: block;
+    width: 198px;
+    color: #999;
+    line-height: 15px;
+    margin-left: 80px;
+}
+.person-accounts .staff_info_box1{
+    margin-top: 15px;
+}
+.person-accounts .dialog-btn{
+    width: 95%;
+    margin: 15px auto 0 auto;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    text-align: center;
+}
+.person-accounts .lbut{
+    position: inherit;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+}
+.person-accounts .rbut{
+    position: inherit;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+}
+.person-accounts .us_list input.job{
+    width: 30px;
+}
+.person-accounts #userAccount{
+    width: 90px;
+}
+.person-accounts .us_list select{
+    width: 198px;
+}
+.person-accounts .us_list select.team-select{ width: 150px;}
+.person-accounts input.time-ico{
+    background: url("../../../static/img/common/footer/time_03.png") no-repeat right;
+}
+
+.staff-dialog {
+    width: 400px;
+}
+
+.yqx-dialog .dialog-footer {
+    padding-top: 6px;
+    border-top: 0;
+}
+
+.del-btn {
+    width: 88px;
+    line-height: 28px;
+    border: 1px solid #cacaca;
+}
+
+.del-btn,
+.link-btn {
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.link-btn:hover {
+    color: #fff;
+}
+
+.link-btn {
+    width: 70px;
+    line-height: 30px;
+    background: #607b0a;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.staff-dialog .dialog-content {
+    text-align: center;
+}
+
+.staff-dialog strong {
+    color: #000;
+    font-weight: 700;
+}
+
+.staff-dialog p {
+    margin-top: 10px;
+}
+
+.staff-dialog .del-icon {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 23px;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    top: 16px;
+    right: 23px;
+    cursor: pointer;
+}

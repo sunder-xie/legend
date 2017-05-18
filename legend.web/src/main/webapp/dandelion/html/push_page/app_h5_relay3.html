@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>淘汽云修商家版 APP2.0</title>
+	<meta name="viewport" content="width=640">
+	<link rel="stylesheet" type="text/css" href="../../css/app_h5_relay/animation.css">
+	<link rel="stylesheet" type="text/css" href="../../css/app_h5_relay/zepto.fullpage.css">
+	<style type="text/css">
+	html {
+    -ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+    }
+    body,div,p {margin: 0; padding: 0; }
+    ul {list-style: none; }
+    body {width: 640px; *cursor: default; overflow: hidden; font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial; }
+    .wp{  position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;} 
+    .page {width: 100%; height: 100%; overflow: hidden; position: relative; top: 0; left: 0; }
+    .contain {width: 100%; height: 100%;position: relative;}
+
+    .page1{ background: url(../../images/app_h5_relay2/page1.jpg) no-repeat; background-size: 100% 100%;}
+	.page2{ background: url(../../images/app_h5_relay2/page2.jpg) no-repeat; background-size: 100% 100%; }
+	.page3{ background: url(../../images/app_h5_relay2/page3.jpg) no-repeat; background-size: 100% 100%; }
+	.page4{ background: url(../../images/app_h5_relay2/page4.jpg) no-repeat; background-size: 100% 100%; }
+	.page5{ background: url(../../images/app_h5_relay2/page5.jpg) no-repeat; background-size: 100% 100%; }
+	.page6{ background: url(../../images/app_h5_relay2/page6.jpg) no-repeat; background-size: 100% 100%; }
+	.jiantou{position: absolute;width: 25px;top: 95%;left:50%;margin-left: -12px;}
+
+	.page1 .phone{width: 209px;height:433px;position: absolute;top:50%;margin-top: -100px;left:50%;margin-left: -200px;}
+	.page1 .ewm{width: 225px;height:225px;position: absolute;top:50%;margin-top: -15px;left:50%;margin-left: 5px;}
+
+	.page2 .phone{width: 209px;height:433px;position: absolute;top:50%;margin-top: -200px;left:50%;margin-left: -105px;}
+
+	.page3 .hander{width: 500px;height:560px;position: absolute;top:50%;margin-top: -170px;left:0;}
+
+	.page4 .img4{width: 235px;height:418px;position: absolute;top:50%;margin-top: -70px;left:50%;}
+
+	.page5 .img5{width: 172px;height:490px;position: absolute;top:50%;margin-top: -140px;left:50%;margin-left: -295px;}
+
+	.page6 .img6{width: 254px;height:536px;position: absolute;top:50%;margin-top: -127px;left:50%;margin-left: -25px;}
+    
+    </style>
+</head>
+<body>
+	<div class="wp">
+		<div class="wp-inner">
+			<div class="page1 page">
+				<div class="contain">
+					<img src="../../images/app_h5_relay2/phone.png" class="phone pt-page-moveFromLeftFade" />
+					<img src="../../images/app_h5_relay2/ewm.png" class="ewm pt-page-moveFromRightFade" />
+				</div>
+			</div>
+			<div class="page2 page">
+				<div class="contain">
+					<img src="../../images/app_h5_relay2/phone.png" class="phone pt-page-moveFromRightFade" />
+				</div>
+			</div>
+			<div class="page3 page">
+				<div class="contain">
+					<img src="../../images/app_h5_relay2/hander.png" class="hander pt-page-moveFromLeftFade" />
+				</div>
+			</div>
+			<div class="page4 page">
+				<div class="contain">
+					<img src="../../images/app_h5_relay2/img4.png" class="img4 pt-page-moveFromRightFade" />
+				</div>
+			</div>
+			<div class="page5 page">
+				<div class="contain">
+					<img src="../../images/app_h5_relay2/img5.png" class="img5 pt-page-moveFromLeftFade" />
+				</div>
+			</div>
+			<div class="page6 page">
+				<div class="contain">
+					<img src="../../images/app_h5_relay2/img6.png" class="img6 pt-page-moveFromRightFade" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../../js/app_h5_relay/zepto.min.js"></script>
+	<script type="text/javascript" src="../../js/app_h5_relay/MetaHandler.js"></script> 
+	<script type="text/javascript" src="../../js/app_h5_relay/zepto.fullpage.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.wp-inner').fullpage();
+	});
+	</script>
+</body>
+</html>

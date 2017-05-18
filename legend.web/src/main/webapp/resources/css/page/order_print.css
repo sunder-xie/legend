@@ -1,0 +1,149 @@
+body {
+    font-size:16px;
+    background-color:white;
+    color:black;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+table,#ftr,#hdr,#sign {
+    width:960px;
+    margin:0 auto;
+}
+#sign {
+    padding:10px 0;
+}
+table {
+    clear:both;
+    border-collapse:collapse;
+    table-layout: fixed;
+}
+/*
+#t4_tr1 {
+    text-align: right;
+}*/
+#tab #t_tr1 {
+    text-align: right;
+}
+#tab #t_tr2 {
+    text-align: left;
+}
+#tab tr{
+    text-align: center;
+}
+/*div {
+    float:left;
+}*/
+#tit {
+    font-size:42px;
+    text-align:center;
+    margin-bottom: 20px;
+}
+#order_id,#record_date,#print_page {
+    font-size:20px;
+    padding-bottom:10px;
+    margin:0;
+}
+#company {
+    padding:5px 0;
+    font-size:22px;
+    margin:0;
+}
+#print_page,#order_id {
+    clear:both;
+    float:right;
+}
+#record_date {
+    float:left;
+}
+/*#table_3 {
+    z-index:4;
+    position:relative;
+    top:1px;
+}
+#table_4 {
+    z-index:5;
+    position:relative;
+    top:-1px;
+}*/
+
+th,td {
+    padding: 8px 0;
+    /*height:16px;*/
+    border:1px solid black;
+    /*line-height:30px;*/
+    word-wrap: break-word;
+    /*overflow:hidden;*/
+}
+.content {
+    text-align: left;
+    width:243px;
+}
+.parts {
+    width:82px;
+}
+th {
+    text-align:center;
+}
+.test {
+    width:180px;
+}
+#fp1,#fp2,#fp3,#fp4,#fb1,#fb2,#fd1 {
+               float:left;
+           }
+#fd1,#fb2,#fp3,#fp4 {
+    clear:both;
+    margin-left:70px;
+}
+#fp1,#fp2,#fb2 {
+    font-size:22px;
+}
+#fd1,#fp3,#fp4 {
+    font-size:18px;
+}
+#fb2 {
+    font-weight:bold;
+}
+#fp2 {
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#fd1 {
+    margin-top:20px;
+}
+#fb1 {
+    margin-left:40px;
+    font-size:26px;
+    font-weight:bold;
+}
+#fd2 {
+    float:right;
+}
+img {
+    border:1px solid;
+}
+.ymd {
+    margin-top:90px;
+    text-align:right;
+}
+.text_head {
+    width:70%;
+}
+input {
+    height:20px;
+}
+.text_1 {
+    width:65%;
+}
+.text_2,.text_3,.text_4 {
+    width:88%;
+    text-align:center;
+}
+.text_name {
+    font-size:22px;
+    width:170px;
+    text-align:center;
+}
+.text_date {
+    width:30px;
+    text-align:right;
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.privilege.RolesDao">
+
+    <resultMap id="BaseResultMap" type="com.tqmall.legend.entity.privilege.Roles"
+               extends="COMMON.BASE_RESULT_MAP">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="level_id" property="levelId"/>
+        <result column="pvg_role_id" property="pvgRoleId"/>
+    </resultMap>
+    <!--返回不带基本数据的结果-->
+    <resultMap id="BaseResultMapL" type="com.tqmall.legend.entity.privilege.RolesL">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="level_id" property="levelId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        name as name,
+        shop_id as shopId,
+        parent_id as parentId,
+        pvg_role_id as pvgRoleId,
+        level_id as levelId
+    </sql>
+    <sql id="BaseColumnListL">
+        id as id,
+        name as name,
+        shop_id as shopId,
+        parent_id as parentId,
+        level_id as levelId
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="name != null">
+                    and name = #{name}
+                </if>
+
+                and shop_id = #{shopId}
+
+                <if test="parentId != null">
+                    and parent_id = #{parentId}
+                </if>
+                <if test="pvgRoleId != null">
+                    and pvg_role_id = #{pvgRoleId}
+                </if>
+                <if test="levelId != null">
+                    and level_id = #{levelId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <include refid="COMMON.BASE_UPDATE_SET"/>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="shopId != null">
+                shop_id = #{shopId},
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId},
+            </if>
+            <if test="levelId != null">
+                level_id = #{levelId},
+            </if>
+            <if test="pvgRoleId != null">
+                pvg_role_id = #{pvgRoleId}
+            </if>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_roles
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_roles
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_roles
+        where id = #{id}
+    </select>
+
+    <!--根据parent_id,shop_id,roleName查重-->
+    <select id="selectRolesByShopIdAndParentIdAndRoleName" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_roles
+        where shop_id = #{shopId} and parent_id = #{parentId} and name = #{name} and is_deleted='N'
+        limit 1
+    </select>
+    <!-- 根据shop_id,parent_id查询 -->
+    <select id="selectRolesByShopIdAndParentIdL" resultMap="BaseResultMapL">
+        select
+        <include refid="BaseColumnListL"/>
+        from legend_roles
+        where shop_id = #{shopId} and parent_id = #{parentId} and is_deleted='N' order by id
+    </select>
+
+    <!-- 根据shop_id查询所有角色 -->
+    <select id="selectRolesByShopId" resultMap="BaseResultMapL">
+        select DISTINCT
+        <include refid="BaseColumnList"/>
+        from legend_roles
+        where shop_id = #{shop_id} and is_deleted = 'N' order by level_id
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_roles
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_roles
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_roles
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_roles (
+        <include refid="COMMON.BASE_INSERT_COLUMN"/>
+        name,
+        shop_id,
+        parent_id,
+        level_id,
+        pvg_role_id
+        )
+        values (
+        <include refid="COMMON.BASE_INSERT_VALUE"/>
+        #{name},
+        #{shopId},
+        #{parentId},
+        #{levelId},
+        #{pvgRoleId}
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_roles
+        <include refid="BaseUpdateSet"/>
+        where id = #{id} and shop_id = #{shopId} and is_deleted = 'N' limit 1
+    </update>
+
+
+</mapper>

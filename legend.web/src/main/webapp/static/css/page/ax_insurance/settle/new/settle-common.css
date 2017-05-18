@@ -1,0 +1,25 @@
+.box-content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.select2-container .select2-choice{
+    height: 30px;
+}
+
+
+/*箭头*/
+.right_arrows{
+    height: 9px;
+    display: inline-block;
+    width: 17px;
+    background-color: #ffffff;
+    cursor: pointer;
+    background: url(/legend/static/img/page/ax_insurance/arrows_right.png) no-repeat
+}
+
+.settle-rule {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #666;
+}

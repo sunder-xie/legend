@@ -1,0 +1,99 @@
+/**
+* 出库单详情
+* zmx 2016-08-26
+*/
+.detail-box{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding:10px;
+}
+.detail-box .show-grid{
+    margin: 0;
+}
+.detail-box .form-label{
+    width: 105px;
+    height: 36px;
+    line-height: 36px;
+}
+.detail-box .form-item{
+    width: 155px;
+}
+.detail-box .form-item .yqx-text{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.detail-form-box{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding:0 10px 10px 10px;
+    margin-top: 10px;
+}
+.detail-form-box .form-label{
+    width: 100px;
+}
+.detail-form-box .form-item{
+    width: 170px;
+}
+.detail-form-box .form-item .yqx-input {
+    padding-right: 30px;
+}
+
+.list-box{
+    background: #fff;
+    border: 1px solid #cacaca;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.list-title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.list-title span{
+    font-size: 12px;
+    font-weight: normal;
+    color: #fa482c;
+    padding-left: 5px;
+}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{
+    background: #f9f9f9;
+}
+
+.btn-box{
+    padding: 10px 0;
+}
+.text-blue{
+    color: #222d49;
+}
+.max-width{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.td-position{
+    position: relative;
+}
+
+.tc-2 {
+    width: 80px;
+}
+
+.tc-3 {
+    width: 145px;
+}
+
+.tc-4, .tc-5, .tc-6, .tc-9 {
+    width: 60px;
+}
+
+.tc-10 {
+
+}
+
+.tc-11 {
+
+}

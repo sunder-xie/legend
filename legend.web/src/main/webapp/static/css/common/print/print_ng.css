@@ -1,0 +1,61 @@
+body {padding: 0;margin:0;background: #fff;}
+table {border-collapse: collapse;border-spacing: 0;}
+.clearfix {zoom: 1; _height: 1px; }
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.print_ng{width: 980px;margin:15px auto 0 auto;}
+.print_ng table{border-top: 1px solid #000;border-left: 1px solid #000;width:100%;}
+.print_ng table td{border-right: 1px solid #000;border-bottom: 1px solid #000;line-height: 45px;padding:0 5px;}
+.print_ng table td img{vertical-align: middle;text-align: center;border: none;}
+/*单独设置试车协议的行高*/
+.print_ng table .try_car{line-height: 20px;}
+.print_ng .bold{font-weight: bolder;}
+.print_ng .font32{font-size: 32px;}
+.print_ng .fl{float: left;}
+.print_ng .fr{float: right;}
+.print_ng .w1{width:1%;}
+.print_ng .w2{width:2%;}
+.print_ng .w3{width:3%;}
+.print_ng .w4{width:4%;}
+.print_ng .w5{width:5%;}
+.print_ng .w6{width:6%;}
+.print_ng .w8{width:8%;}
+.print_ng .w10{width:10%;}
+.print_ng .w15{width:15%;}
+.print_ng .w20{width:20%;}
+.print_ng .w30{width:30%;}
+.print_ng .w40{width:40%;}
+.print_ng .w50{width:50%;}
+.print_ng .w60{width:60%;}
+.print_ng .w70{width:70%;}
+.print_ng .w80{width:80%;}
+.print_ng .w90{width:90%;}
+.print_ng .center{text-align: center;}
+.print_ng .space_line{display: inline-block;border-bottom: 1px solid #000;width: 160px;line-height: 35px;}
+.border_top_none{border-top:none !important;}
+.border_right_none{border-right:none !important;}
+.border_bottom_none{border-bottom:none !important;}
+.border_left_none{border-left:none !important;}
+.padding_none{padding: 0 !important;}
+.margin_top_10{margin-top: 10px;}
+.margin_top_20{margin-top: 20px;}
+.margin_top_30{margin-top: 30px;}
+.margin_top_40{margin-top: 40px;}
+
+.print_header{position: relative;height: 80px;width: 100%;text-align: center;}
+.print_header .print_logo{position: absolute;left:0;top:0px;}
+.print_header .print_logo img{width: 100px;height:42px;}
+.print_header .date{position: absolute;left:0;bottom:5px;}
+.print_footer{margin-top: 70px;}
+.print_ng table .comment{line-height:60px;}
+
+.ran_you_biao{position: relative;height:120px;}
+.ran_you_biao span{position: absolute;}
+.ran_you_biao span.xline{width: 100px;height:1px;border-top:1px solid #000;left:15px;bottom: 10px;}
+.ran_you_biao span.xline_arrow{border: 5px solid transparent;border-left: 5px solid #000;left:114px;bottom:6px;}
+.ran_you_biao span.yline{height: 100px;width:1px;border-left:1px solid #000;left:15px;bottom:10px; }
+.ran_you_biao span.yline_arrow{border: 5px solid transparent;border-bottom: 5px solid #000;left:11px;bottom:109px;}
+.ran_you_biao span.txt1{left:11px;bottom:105px;}
+.ran_you_biao span.txt2{left:50px;bottom:90px;}
+.ran_you_biao span.txt3{left:85px;bottom:65px;}
+.ran_you_biao span.txt4{left:105px;bottom:25px;}
+.ran_you_biao span.txt5{left:125px;bottom:-10px;}

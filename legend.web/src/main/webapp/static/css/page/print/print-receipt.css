@@ -1,0 +1,119 @@
+@media print {
+    body {
+        height: 140mm;
+        width: 60mm;
+        margin: 0;
+        padding: 9mm;
+    }
+
+    h2 {
+        line-height: 1.1;
+    }
+
+    .print-box header > * {
+        display: block;
+    }
+
+    .print-box.receipt-box {
+        padding: 0 5mm 0 0!important;
+        width: 55mm;
+        height: 130mm;
+        font-size: 10pt;
+    }
+
+    .receipt-box.print-box li {
+        display: block;
+        width: 50mm;
+    }
+
+    .receipt-box.print-box .box {
+        padding-left: 0;
+    }
+
+    .receipt-box.print-box .box > li + li {
+        margin-top: 2mm;
+    }
+
+    .receipt-box.print-box h1 {
+        font-size: 20pt;
+        line-height: 1.2;
+    }
+
+    .receipt-box.print-box h2 {
+        font-size: 18pt;
+        margin-top: 3mm;
+    }
+    .receipt-box.print-box h3 {
+        font-size: 12pt;
+    }
+
+    .receipt-box header {
+        text-align: center;
+    }
+
+    .receipt-box footer {
+        margin-top: 6mm;
+        text-align: center;
+    }
+
+    .coupon-name,
+    .print-box.receipt-box table th.name {
+        width: 25mm;
+        text-align: left;
+    }
+    .print-box table .padding-top td {
+        padding-top: 2.4mm !important;
+    }
+    .print-box table .padding-bottom td {
+        padding-bottom: 2.4mm !important;
+    }
+
+    .print-box .box,
+    .print-box.receipt-box table td {
+        line-height: 1.2 !important;
+    }
+    .print-box.receipt-box table td {
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .print-box.receipt-box table td:first-child {
+        text-align: left;
+    }
+
+    .receipt-box table th:last-child,
+    .receipt-box table td:last-child {
+        text-align: right;
+    }
+
+    .receipt-box .right {
+        float: right;
+    }
+
+    .receipt-box .border-top-dashed {
+        border-top: 1px dashed #000;
+    }
+
+    .border-top {
+        border-top: 1px solid #000;
+    }
+
+    .box.border-top {
+        border-bottom: 0;
+    }
+
+    .code-box {
+        text-align: center;
+        line-height: 9pt;
+    }
+
+    .code-box p {
+        font-size: 9pt;
+        margin: 0;
+    }
+
+    .code-box img {
+        width: 35mm;
+        height: 35mm;
+    }
+}

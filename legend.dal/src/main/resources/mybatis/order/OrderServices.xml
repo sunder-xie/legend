@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.order.OrderServicesDao">
+
+    <resultMap id="BaseResultMap" type="OrderServices" extends="COMMON.BASE_RESULT_MAP">
+        <result column="shop_id" property="shopId"/>
+        <result column="order_id" property="orderId"/>
+        <result column="service_id" property="serviceId"/>
+        <result column="sold_price" property="soldPrice"/>
+        <result column="service_hour" property="serviceHour"/>
+        <result column="order_sn" property="orderSn"/>
+        <result column="service_price" property="servicePrice"/>
+        <result column="service_amount" property="serviceAmount"/>
+        <result column="discount" property="discount"/>
+        <result column="type" property="type"/>
+        <result column="sold_amount" property="soldAmount"/>
+        <result column="service_name" property="serviceName"/>
+        <result column="service_sn" property="serviceSn"/>
+        <result column="service_cat_id" property="serviceCatId"/>
+        <result column="service_cat_name" property="serviceCatName"/>
+        <result column="flags" property="flags"/>
+        <result column="service_note" property="serviceNote"/>
+        <result column="parent_service_id" property="parentServiceId"/>
+        <result column="worker_ids" property="workerIds"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <include refid="COMMON.BASE_COLUMN_LIST"/>
+        shop_id as shopId,
+        order_id as orderId,
+        service_id as serviceId,
+        sold_price as soldPrice,
+        service_hour as serviceHour,
+        order_sn as orderSn,
+        service_price as servicePrice,
+        service_amount as serviceAmount,
+        discount as discount,
+        type as type,
+        sold_amount as soldAmount,
+        service_name as serviceName,
+        service_sn as serviceSn,
+        service_cat_id as serviceCatId,
+        service_cat_name as serviceCatName,
+        flags as flags,
+        service_note as serviceNote,
+        parent_service_id as parentServiceId,
+        worker_ids as workerIds
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test="serviceId != null">
+                    and service_id = #{serviceId}
+                </if>
+                <if test="soldPrice != null">
+                    and sold_price = #{soldPrice}
+                </if>
+                <if test="serviceHour != null">
+                    and service_hour = #{serviceHour}
+                </if>
+                <if test="orderSn != null">
+                    and order_sn = #{orderSn}
+                </if>
+                <if test="servicePrice != null">
+                    and service_price = #{servicePrice}
+                </if>
+                <if test="serviceAmount != null">
+                    and service_amount = #{serviceAmount}
+                </if>
+                <if test="discount != null">
+                    and discount = #{discount}
+                </if>
+                <if test="type != null">
+                    and type = #{type}
+                </if>
+                <if test="soldAmount != null">
+                    and sold_amount = #{soldAmount}
+                </if>
+                <if test="serviceName != null">
+                    and service_name = #{serviceName}
+                </if>
+                <if test="serviceSn != null">
+                    and service_sn = #{serviceSn}
+                </if>
+                <if test="serviceCatId != null">
+                    and service_cat_id = #{serviceCatId}
+                </if>
+                <if test="serviceCatName != null">
+                    and service_cat_name = #{serviceCatName}
+                </if>
+                <if test="flags != null">
+                    and flags = #{flags}
+                </if>
+                <if test="serviceNote != null">
+                    and service_note = #{serviceNote}
+                </if>
+                <if test="flagsLike != null">
+                    and flags like CONCAT('%',#{flagsLike},'%')
+                </if>
+                <if test="parentServiceId != null">
+                    and parent_service_id = #{parentServiceId}
+                </if>
+                <if test="workerIds != null">
+                    and worker_ids = #{workerIds}
+                </if>
+                <if test="orderIds != null">
+                    and order_id in (
+                    <foreach collection="orderIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="orderId != null">
+                    order_id = #{orderId},
+                </if>
+                <if test="serviceId != null">
+                    service_id = #{serviceId},
+                </if>
+                <if test="soldPrice != null">
+                    sold_price = #{soldPrice},
+                </if>
+                <if test="serviceHour != null">
+                    service_hour = #{serviceHour},
+                </if>
+                <if test="orderSn != null">
+                    order_sn = #{orderSn},
+                </if>
+                <if test="servicePrice != null">
+                    service_price = #{servicePrice},
+                </if>
+                <if test="serviceAmount != null">
+                    service_amount = #{serviceAmount},
+                </if>
+                <if test="discount != null">
+                    discount = #{discount},
+                </if>
+                <if test="type != null">
+                    type = #{type},
+                </if>
+                <if test="soldAmount != null">
+                    sold_amount = #{soldAmount},
+                </if>
+                <if test="serviceName != null">
+                    service_name = #{serviceName},
+                </if>
+                <if test="serviceSn != null">
+                    service_sn = #{serviceSn},
+                </if>
+                <if test="serviceCatId != null">
+                    service_cat_id = #{serviceCatId},
+                </if>
+                <if test="serviceCatName != null">
+                    service_cat_name = #{serviceCatName},
+                </if>
+                <if test="flags != null">
+                    flags = #{flags},
+                </if>
+                <if test="serviceNote != null">
+                    service_note = #{serviceNote},
+                </if>
+                <if test="parentServiceId != null">
+                    parent_service_id = #{parentServiceId},
+                </if>
+                <if test="workerIds != null">
+                    worker_ids = #{workerIds},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_order_services
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_services
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_services
+        where id = #{id}
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_services
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </select>
+
+    <select id="selOrderServicesByOrderIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_services
+        where
+        shop_id = #{shopId}
+        AND type = #{serviceType}
+        and order_id in
+        <foreach collection="orderIds" item="item" index="index" open="(" separator=","
+                 close=")">
+            ${item}
+        </foreach>
+    </select>
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_order_services
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_order_services
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_order_services
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_order_services (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="orderId != null">
+                order_id,
+            </if>
+            <if test="serviceId != null">
+                service_id,
+            </if>
+            <if test="soldPrice != null">
+                sold_price,
+            </if>
+            <if test="serviceHour != null">
+                service_hour,
+            </if>
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+            <if test="servicePrice != null">
+                service_price,
+            </if>
+            <if test="serviceAmount != null">
+                service_amount,
+            </if>
+            <if test="discount != null">
+                discount,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="soldAmount != null">
+                sold_amount,
+            </if>
+            <if test="serviceName != null">
+                service_name,
+            </if>
+            <if test="serviceSn != null">
+                service_sn,
+            </if>
+            <if test="serviceCatId != null">
+                service_cat_id,
+            </if>
+            <if test="serviceCatName != null">
+                service_cat_name,
+            </if>
+            <if test="flags != null">
+                flags,
+            </if>
+            <if test="serviceNote != null">
+                service_note,
+            </if>
+            <if test="parentServiceId != null">
+                parent_service_id,
+            </if>
+            <if test="workerIds != null">
+                worker_ids,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="serviceId != null">
+                #{serviceId},
+            </if>
+            <if test="soldPrice != null">
+                #{soldPrice},
+            </if>
+            <if test="serviceHour != null">
+                #{serviceHour},
+            </if>
+            <if test="orderSn != null">
+                #{orderSn},
+            </if>
+            <if test="servicePrice != null">
+                #{servicePrice},
+            </if>
+            <if test="serviceAmount != null">
+                #{serviceAmount},
+            </if>
+            <if test="discount != null">
+                #{discount},
+            </if>
+            <if test="type != null">
+                #{type},
+            </if>
+            <if test="soldAmount != null">
+                #{soldAmount},
+            </if>
+            <if test="serviceName != null">
+                #{serviceName},
+            </if>
+            <if test="serviceSn != null">
+                #{serviceSn},
+            </if>
+            <if test="serviceCatId != null">
+                #{serviceCatId},
+            </if>
+            <if test="serviceCatName != null">
+                #{serviceCatName},
+            </if>
+            <if test="flags != null">
+                #{flags},
+            </if>
+            <if test="serviceNote != null">
+                #{serviceNote},
+            </if>
+            <if test="parentServiceId != null">
+                #{parentServiceId},
+            </if>
+            <if test="workerIds != null">
+                #{workerIds},
+            </if>
+        </trim>
+        )
+    </insert>
+
+
+    <!-- batch insert order's service-->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_order_services (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            order_id,
+            service_id,
+            sold_price,
+            service_hour,
+            order_sn,
+            service_price,
+            service_amount,
+            discount,
+            type,
+            sold_amount,
+            service_name,
+            service_sn,
+            service_cat_name,
+            service_cat_id,
+            flags,
+            service_note,
+            parent_service_id,
+            worker_ids,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.orderId != null">
+                    #{item.orderId},
+                </if>
+                <if test="item.orderId == null">
+                    0 ,
+                </if>
+                <if test="item.serviceId != null">
+                    #{item.serviceId},
+                </if>
+                <if test="item.serviceId == null">
+                    0 ,
+                </if>
+                <if test="item.soldPrice != null">
+                    #{item.soldPrice},
+                </if>
+                <if test="item.soldPrice == null">
+                    0 ,
+                </if>
+                <if test="item.serviceHour != null">
+                    #{item.serviceHour},
+                </if>
+                <if test="item.serviceHour == null">
+                    0 ,
+                </if>
+                <if test="item.orderSn != null">
+                    #{item.orderSn},
+                </if>
+                <if test="item.orderSn == null">
+                    NULL ,
+                </if>
+                <if test="item.servicePrice != null">
+                    #{item.servicePrice},
+                </if>
+                <if test="item.servicePrice == null">
+                    0 ,
+                </if>
+                <if test="item.serviceAmount != null">
+                    #{item.serviceAmount},
+                </if>
+                <if test="item.serviceAmount == null">
+                    0 ,
+                </if>
+                <if test="item.discount != null">
+                    #{item.discount},
+                </if>
+                <if test="item.discount == null">
+                    0 ,
+                </if>
+                <if test="item.type != null">
+                    #{item.type},
+                </if>
+                <if test="item.type == null">
+                    0 ,
+                </if>
+                <if test="item.soldAmount != null">
+                    #{item.soldAmount},
+                </if>
+                <if test="item.soldAmount == null">
+                    0 ,
+                </if>
+                <if test="item.serviceName != null">
+                    #{item.serviceName},
+                </if>
+                <if test="item.serviceName == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceSn != null">
+                    #{item.serviceSn},
+                </if>
+                <if test="item.serviceSn == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceCatName != null">
+                    #{item.serviceCatName},
+                </if>
+                <if test="item.serviceCatName == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceCatId != null">
+                    #{item.serviceCatId},
+                </if>
+                <if test="item.serviceCatId == null">
+                    0 ,
+                </if>
+                <if test="item.flags != null">
+                    #{item.flags},
+                </if>
+                <if test="item.flags == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceNote != null">
+                    #{item.serviceNote},
+                </if>
+                <if test="item.serviceNote == null">
+                    NULL ,
+                </if>
+                <if test="item.parentServiceId != null">
+                    #{item.parentServiceId},
+                </if>
+                <if test="item.parentServiceId == null">
+                    0 ,
+                </if>
+                <if test="item.workerIds != null">
+                    #{item.workerIds},
+                </if>
+                <if test="item.workerIds == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_order_services
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <select id="getServiceNamesByOrderIds" resultMap="BaseResultMap">
+        select order_id, service_name
+        from legend_order_services
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and order_id in
+        <foreach collection="orderIds" index="index" item="tag" separator="," close=")" open="(">
+            #{tag}
+        </foreach>
+    </select>
+
+    <select id="selectByServiceIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_order_services
+        where service_id in
+        (
+        <foreach collection="serviceIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+        and is_deleted = 'N'
+    </select>
+
+</mapper> 

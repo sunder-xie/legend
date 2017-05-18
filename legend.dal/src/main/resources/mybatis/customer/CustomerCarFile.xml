@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.customer.CustomerCarFileDao">
+
+    <resultMap id = "BaseResultMap" type = "CustomerCarFile" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "rel_id" property = "relId" />
+        <result column = "rel_type" property = "relType" />
+        <result column = "file_type" property = "fileType" />
+        <result column = "file_size" property = "fileSize" />
+        <result column = "file_path" property = "filePath" />
+        <result column = "file_name" property = "fileName" />
+        <result column = "file_suffix" property = "fileSuffix" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            rel_id as relId,
+            rel_type as relType,
+            file_type as fileType,
+            file_size as fileSize,
+            file_path as filePath,
+            file_name as fileName,
+            file_suffix as fileSuffix,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "relId != null">
+                    and rel_id = #{relId}
+                </if>
+                <if test = "relType != null">
+                    and rel_type = #{relType}
+                </if>
+                <if test = "fileType != null">
+                    and file_type = #{fileType}
+                </if>
+                <if test = "fileSize != null">
+                    and file_size = #{fileSize}
+                </if>
+                <if test = "filePath != null">
+                    and file_path = #{filePath}
+                </if>
+                <if test = "fileName != null">
+                    and file_name = #{fileName}
+                </if>
+                <if test = "fileSuffix != null">
+                    and file_suffix = #{fileSuffix}
+                </if>
+                <if test = "relIds != null">
+                    and rel_id in
+                    (
+                    <foreach collection="relIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "relId != null">
+                    rel_id = #{relId},
+                </if>
+                <if test = "relType != null">
+                    rel_type = #{relType},
+                </if>
+                <if test = "fileType != null">
+                    file_type = #{fileType},
+                </if>
+                <if test = "fileSize != null">
+                    file_size = #{fileSize},
+                </if>
+                <if test = "filePath != null">
+                    file_path = #{filePath},
+                </if>
+                <if test = "fileName != null">
+                    file_name = #{fileName},
+                </if>
+                <if test = "fileSuffix != null">
+                    file_suffix = #{fileSuffix},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_customer_car_file
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_car_file
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_car_file
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_customer_car_file
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_customer_car_file
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_customer_car_file
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_customer_car_file
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_customer_car_file (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "relId != null">
+                rel_id,
+            </if>
+            <if test = "relType != null">
+                rel_type,
+            </if>
+            <if test = "fileType != null">
+                file_type,
+            </if>
+            <if test = "fileSize != null">
+                file_size,
+            </if>
+            <if test = "filePath != null">
+                file_path,
+            </if>
+            <if test = "fileName != null">
+                file_name,
+            </if>
+            <if test = "fileSuffix != null">
+                file_suffix,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "relId != null">
+                #{relId},
+            </if>
+            <if test = "relType != null">
+                #{relType},
+            </if>
+            <if test = "fileType != null">
+                #{fileType},
+            </if>
+            <if test = "fileSize != null">
+                #{fileSize},
+            </if>
+            <if test = "filePath != null">
+                #{filePath},
+            </if>
+            <if test = "fileName != null">
+                #{fileName},
+            </if>
+            <if test = "fileSuffix != null">
+                #{fileSuffix},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_customer_car_file
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_customer_car_file (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            rel_id,
+            rel_type,
+            file_type,
+            file_size,
+            file_path,
+            file_name,
+            file_suffix,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.relId != null">
+                    #{item.relId},
+                </if>
+                <if test="item.relId == null">
+                    NULL ,
+                </if>
+                <if test="item.relType != null">
+                    #{item.relType},
+                </if>
+                <if test="item.relType == null">
+                    NULL ,
+                </if>
+                <if test="item.fileType != null">
+                    #{item.fileType},
+                </if>
+                <if test="item.fileType == null">
+                    NULL ,
+                </if>
+                <if test="item.fileSize != null">
+                    #{item.fileSize},
+                </if>
+                <if test="item.fileSize == null">
+                    NULL ,
+                </if>
+                <if test="item.filePath != null">
+                    #{item.filePath},
+                </if>
+                <if test="item.filePath == null">
+                    NULL ,
+                </if>
+                <if test="item.fileName != null">
+                    #{item.fileName},
+                </if>
+                <if test="item.fileName == null">
+                    NULL ,
+                </if>
+                <if test="item.fileSuffix != null">
+                    #{item.fileSuffix},
+                </if>
+                <if test="item.fileSuffix == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper> 

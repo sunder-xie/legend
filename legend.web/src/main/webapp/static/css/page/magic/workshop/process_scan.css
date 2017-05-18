@@ -1,0 +1,89 @@
+.scan-area {
+    min-height: 500px;
+    background-color: white;
+    padding: 20px 10px 0px 10px;
+}
+
+.step1-head {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.step1-head p {
+    margin-top: 10px;
+    line-height: 18px;
+}
+
+.scan-area .form-item {
+    width: 74%;
+}
+
+.scan-result, .scan-result1, .scan-result2, .scan-result3 {
+    color: #fc0931;
+    margin: 35px 0;
+}
+
+.form-label {
+    width: 116px;
+    text-align: left;
+}
+
+.scan-result, .scan-result1, .scan-result2, .step2-scan, .step3-scan,.scan-result3,.workerInfo{
+    display: none;
+}
+
+.form-label-large {
+    width: 100%;
+    text-align: left;
+}
+
+.workerInfo {
+    width: 823px;
+    min-height: 300px;
+    background-color: #EEEEEE;
+    margin-left: -10px;
+    padding: 20px 0px;
+}
+
+.workInfo-head {
+    background-color: #d2d2d2;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.margin-r {
+    margin-right: 60px;
+}
+.yqx-table>tbody>tr,.yqx-table>thead>tr {
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+}
+
+.yqx-table > tbody > tr > td, .yqx-table > thead > tr > th, .yqx-table > tr > td, .yqx-table > tr > th {
+    padding: 8px 4px;
+    border-bottom: 1px solid #d6d6d6;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #ffffff;
+}
+
+.yqx-table > tbody > tr:hover > td, .yqx-table > tr:hover > td {
+    background: #ebf2ca
+}
+
+.yqx-table > thead > tr > th, .yqx-table > tr > th {
+    background: #ffffff;
+    border-top: 1px solid #d6d6d6;
+    padding: 12px 4px
+}
+
+.yqx-table > tbody > tr:nth-child(n) {
+    background: #fff
+}
+
+.yqx-table > tbody > tr:nth-child(2n) {
+    background: #f9f9f9;
+}

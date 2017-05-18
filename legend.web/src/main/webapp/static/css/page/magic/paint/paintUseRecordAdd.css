@@ -1,0 +1,84 @@
+/*
+ * create by zmx 2016/11/14
+ * 新增使用记录
+*/
+.content{
+    background: #fff;
+    border:1px solid #acacac;
+    padding: 0 10px;
+}
+.title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.title i{
+    display: inline-block;
+    margin-right:10px;
+    vertical-align: middle;
+    width: 2px;
+    height: 14px;
+    background: #999;
+}
+.form-box{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cacaca;
+}
+.form-box .form-label{
+    width: 70px;
+}
+.form-box .form-item{
+    width: 290px;
+}
+.form-box .show-grid:first-child{
+    margin-top: 0;
+}
+.table-con{
+    margin-bottom: 10px;
+    border-top:1px solid #cacaca;
+}
+.yqx-table {
+    width: 100%;
+    table-layout: auto;
+}
+.max-name-width{
+    max-width: 225px;
+    max-height: 36px;
+    line-height: 18px;
+    white-space: normal;
+}
+.max-num-width{
+    max-width: 225px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    line-height: 18px;
+}
+.delete{
+    color: #f35f62;
+    text-decoration: underline;
+}
+.delete:hover{
+    color: #f35f62;
+    text-decoration: underline;
+}
+.remarks{
+    padding: 10px 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+.remarks textarea{
+    width: 756px;
+}
+.btn-box{
+    padding:10px 0;
+}
+.btn-box p{
+    line-height: 25px;
+}
+.form-item>.sale-unit{
+    width: 60px;
+}
+.show-grid{
+    margin: 20px 0;
+}

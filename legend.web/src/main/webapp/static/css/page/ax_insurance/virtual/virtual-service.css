@@ -1,0 +1,426 @@
+/*
+* 买保险送服务包
+* create by zmx 2016/9/19
+*/
+
+.clearfix :after {
+    clear: both;
+}
+
+.wrapper {
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+
+.left {
+    float: left;
+    width: 138px;
+    height: 135px;
+    border: 1px solid #dddddd;
+}
+
+.right {
+    float: right;
+    width: 825px;
+}
+
+.right p.choose {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.service-pack {
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.pack-title, .pay-title, .coupon-choose-title {
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pay-title {
+    margin-top: -10px;
+}
+
+.pack-title span {
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.pack-list {
+    margin-bottom: 10px;
+}
+
+.pack-check {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.pack-content {
+    width: 752px;
+    padding: 0 10px;
+    background: #f9f9f9;
+}
+
+.pack-tips {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.pack-check:checked + .pack-content {
+    background: #ebf1cc;
+}
+
+.consume-title {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 12px;
+}
+
+.consume-title h3 .recommend {
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    margin-right: 10px;
+    font: bold 16px/25px "Microsoft Yahei", "微软雅黑";
+    text-align: center;
+    background: #9fc527;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.consume-title h3 .pack-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.consume-title h3 .summary {
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.money {
+    font-size: 14px;
+}
+
+.mark {
+    color: #ff7800;
+    background: transparent;
+}
+
+.pack-content table {
+    width: 100%;
+}
+
+.pack-content td {
+    line-height: 30px;
+    color: #333;
+    font-size: 12px;
+    border-bottom: none;
+}
+
+.pack-content th {
+    line-height: 30px;
+    color: #666;
+    font-size: 12px;
+    background: none;
+    border-bottom: none;
+}
+
+.col1 {
+    width: 410px;
+}
+
+.col2 {
+    width: 122px;
+}
+
+.col3 {
+    width: 65px;
+}
+
+.col4 {
+    width: 95px;
+}
+
+.col5 {
+    width: 50px;
+}
+
+/*支付方式样式 start*/
+.pay-way-box, .owner-notice-box, .amount-summary-box, .coupon-choose-box {
+    padding: 10px 0;
+    border-top: 1px solid #d6d6d6;
+}
+
+.pay-way-list {
+    margin: 0 -25px;
+}
+
+.pay-way label, .pay-way input, .pay-way img {
+    vertical-align: middle;
+}
+
+.pay-way {
+    float: left;
+    margin: 0 25px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.pay-way img {
+    margin: 0 15px 0 10px;
+}
+
+/*优惠券选择开始*/
+.coupon-list {
+    width: 783px;
+    font-size: 0;
+    margin: 0 auto;
+}
+
+.coupon-list .coupon-checked{
+    border: #8eb110 2px solid;
+    background: url(../../../../img/common/order/order-sprite.png) 230px 107px no-repeat;
+}
+.coupon-list-li {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    width: 248px;
+    height: 123px;
+    border: #c9c9c9 1px solid;
+    margin: 0 10px 13px 0;
+}
+
+.coupon-list-box {
+    width: 210px;
+    height: 90px;
+    overflow: hidden;
+    margin: 17px auto 0 auto;
+}
+
+.coupon-title {
+    font-size: 24px;
+    color: #ff1d00;
+    float: left;
+}
+
+.question-mark {
+    float: right;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: #e8e8e8;
+    line-height: 18px;
+    text-align: center;
+    color: #c9c9c9;
+    cursor: default;
+    margin-top: 3px;
+}
+
+.coupon-time {
+    margin: 7px 0 15px 0;
+    color: #999999;
+}
+.coupon-describe{
+    width: 200px;
+    line-height: 15px;
+    color: #666666;
+}
+.coupon-use-describe{
+    width: 370px;
+    min-height: 90px;
+    position: absolute;
+    left: 168px;
+    top: 55px;
+    padding: 13px;
+    line-height: 18px;
+    font-size: 13px;
+    background-color: #f9f9f9;
+    border: #dddddd 1px solid;
+    z-index: 999;
+     display: none;
+}
+.coupon-use-describe:after,.coupon-use-describe:before{
+    width: 0;
+    height: 0;
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: -20px;
+    border: 10px solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+}
+.coupon-use-describe:before{
+    top: -21px;
+    border-bottom-color: #dddddd;
+}
+
+.no-coupon{
+    width: 100%;
+    height: 45px;
+    font-size: 12px;
+    line-height: 45px;
+    padding-left: 10px;
+    color: #f55d5e;
+}
+
+.no-coupon .sad-expr{
+    background: url("../../../../img/page/ax_insurance/sad.png") no-repeat 0 center ;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.no-coupon-word{
+    padding-left: 10px;
+}
+.disable-coupon{
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+.dis-coupon{
+    color: #9b9b9b;
+}
+.withStore{
+    font-weight: normal;
+}
+/* 车主须知 */
+
+.notice-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.notice-intro li {
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.formula-box {
+    margin-left: 18px;
+    overflow: hidden;
+}
+
+.formula-title {
+    float: left;
+}
+
+.formula-info {
+    overflow: hidden;
+}
+
+/* 金额计算 */
+
+.amount-detail {
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.amount-item + .amount-item {
+    margin-left: 30px;
+}
+
+.amount-payable {
+    margin: 6px 0 10px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.amount {
+    color: #ff7800;
+}
+
+.amount-payable .amount {
+    font-weight: bold;
+}
+.amount-coupon{
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 47px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+.back-btn {
+    padding-right: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.max-text {
+    max-width: 65px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tip-text {
+    width: 260px;
+    margin: 15px auto;
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+
+.btn-box {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.btn-box a {
+    display: inline-block;
+    margin: 0 8px;
+    width: 118px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    border: 1px solid #bfbfbf;
+    color: #999;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.btn-box a.current {
+    color: #9fc527;
+    border: 1px solid #9fc527;
+
+}
+
+.yqx-dialog-body {
+    text-align: center;
+}
+
+.promt-note {
+    padding: 5px 0;
+    border-top: 1px solid #bfbfbf;
+}
+

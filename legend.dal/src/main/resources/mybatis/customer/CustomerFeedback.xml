@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.customer.CustomerFeedbackDao">
+
+    <resultMap id="BaseResultMap" type="CustomerFeedback" extends="COMMON.BASE_RESULT_MAP">
+        <result column="order_id" property="orderId"/>
+        <result column="car_license" property="carLicense"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="customer_name" property="customerName"/>
+        <result column="customer_car_id" property="customerCarId"/>
+        <result column="car_brand_id" property="carBrandId"/>
+        <result column="car_brand_name" property="carBrandName"/>
+        <result column="car_series_id" property="carSeriesId"/>
+        <result column="car_series_name" property="carSeriesName"/>
+        <result column="car_alias" property="carAlias"/>
+        <result column="mobile" property="mobile"/>
+        <result column="reception_star" property="receptionStar"/>
+        <result column="repair_star" property="repairStar"/>
+        <result column="sendcar_star" property="sendcarStar"/>
+        <result column="total_star" property="totalStar"/>
+        <result column="customer_feedback" property="customerFeedback"/>
+        <result column="visitor_id" property="visitorId"/>
+        <result column="visitor_name" property="visitorName"/>
+        <result column="visit_method" property="visitMethod"/>
+        <result column="visit_time" property="visitTime"/>
+        <result column="finish_time" property="finishTime"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="refer" property="refer"/>
+        <result column="ver" property="ver"/>
+        <result column="next_visit_time" property="nextVisitTime"/>
+        <result column="note_info_id" property="noteInfoId"/>
+        <result column="note_type" property="noteType"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            order_id as orderId,
+            car_license as carLicense,
+            customer_id as customerId,
+            customer_name as customerName,
+            customer_car_id as customerCarId,
+            car_brand_id as carBrandId,
+            car_brand_name as carBrandName,
+            car_series_id as carSeriesId,
+            car_series_name as carSeriesName,
+            car_alias as carAlias,
+            mobile as mobile,
+            reception_star as receptionStar,
+            repair_star as repairStar,
+            sendcar_star as sendcarStar,
+            total_star as totalStar,
+            customer_feedback as customerFeedback,
+            visitor_id as visitorId,
+            visitor_name as visitorName,
+            visit_method as visitMethod,
+            visit_time as visitTime,
+            finish_time as finishTime,
+            shop_id as shopId,
+            refer as refer,
+            ver as ver,
+            next_visit_time as nextVisitTime,
+            note_info_id as noteInfoId,
+            note_type as noteType,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="orderId != null">
+                    and order_id = #{orderId}
+                </if>
+                <if test="carLicense != null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test="customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test="customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test="customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test="carBrandId != null">
+                    and car_brand_id = #{carBrandId}
+                </if>
+                <if test="carBrandName != null">
+                    and car_brand_name = #{carBrandName}
+                </if>
+                <if test="carSeriesId != null">
+                    and car_series_id = #{carSeriesId}
+                </if>
+                <if test="carSeriesName != null">
+                    and car_series_name = #{carSeriesName}
+                </if>
+                <if test="carAlias != null">
+                    and car_alias = #{carAlias}
+                </if>
+                <if test="mobile != null">
+                    and mobile = #{mobile}
+                </if>
+                <if test="receptionStar != null">
+                    and reception_star = #{receptionStar}
+                </if>
+                <if test="repairStar != null">
+                    and repair_star = #{repairStar}
+                </if>
+                <if test="sendcarStar != null">
+                    and sendcar_star = #{sendcarStar}
+                </if>
+                <if test="totalStar != null">
+                    and total_star = #{totalStar}
+                </if>
+                <if test="customerFeedback != null">
+                    and customer_feedback = #{customerFeedback}
+                </if>
+                <if test="visitorId != null">
+                    and visitor_id = #{visitorId}
+                </if>
+                <if test="visitorName != null">
+                    and visitor_name = #{visitorName}
+                </if>
+                <if test="visitMethod != null">
+                    and visit_method = #{visitMethod}
+                </if>
+                <if test="visitTime != null">
+                    and visit_time = #{visitTime}
+                </if>
+                <if test="finishTime != null">
+                    and finish_time = #{finishTime}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="refer != null">
+                    and refer = #{refer}
+                </if>
+                <if test="ver != null">
+                    and ver = #{ver}
+                </if>
+                <if test="finishTimeGt != null">
+                    <![CDATA[
+                    and finish_time > #{finishTimeGt}
+                    ]]>
+                </if>
+                <if test="finishTimeLt != null">
+                    <![CDATA[
+                    and finish_time < #{finishTimeLt}
+                    ]]>
+                </if>
+                <if test="nextVisitTimeGt != null">
+                    <![CDATA[
+                    and next_visit_time >= #{nextVisitTimeGt}
+                    ]]>
+                </if>
+                <if test="nextVisitTimeLt != null">
+                    <![CDATA[
+                    and next_visit_time <= #{nextVisitTimeLt}
+                    ]]>
+                </if>
+                <if test="visitTimeGt != null">
+                    <![CDATA[
+                    and visit_time >= #{visitTimeGt}
+                    ]]>
+                </if>
+                <if test="visitTimeLt != null">
+                    <![CDATA[
+                    and visit_time <= #{visitTimeLt}
+                    ]]>
+                </if>
+                <if test="noteInfoId != null">
+                    and note_info_id = #{noteInfoId}
+                </if>
+                <if test="noteType != null">
+                    and note_type = #{noteType}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="orderId != null">
+                    order_id = #{orderId},
+                </if>
+                <if test="carLicense != null">
+                    car_license = #{carLicense},
+                </if>
+                <if test="customerId != null">
+                    customer_id = #{customerId},
+                </if>
+                <if test="customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test="customerCarId != null">
+                    customer_car_id = #{customerCarId},
+                </if>
+                <if test="carBrandId != null">
+                    car_brand_id = #{carBrandId},
+                </if>
+                <if test="carBrandName != null">
+                    car_brand_name = #{carBrandName},
+                </if>
+                <if test="carSeriesId != null">
+                    car_series_id = #{carSeriesId},
+                </if>
+                <if test="carSeriesName != null">
+                    car_series_name = #{carSeriesName},
+                </if>
+                <if test="carAlias != null">
+                    car_alias = #{carAlias},
+                </if>
+                <if test="mobile != null">
+                    mobile = #{mobile},
+                </if>
+                <if test="receptionStar != null">
+                    reception_star = #{receptionStar},
+                </if>
+                <if test="repairStar != null">
+                    repair_star = #{repairStar},
+                </if>
+                <if test="sendcarStar != null">
+                    sendcar_star = #{sendcarStar},
+                </if>
+                <if test="totalStar != null">
+                    total_star = #{totalStar},
+                </if>
+                <if test="customerFeedback != null">
+                    customer_feedback = #{customerFeedback},
+                </if>
+                <if test="visitorId != null">
+                    visitor_id = #{visitorId},
+                </if>
+                <if test="visitorName != null">
+                    visitor_name = #{visitorName},
+                </if>
+                <if test="visitMethod != null">
+                    visit_method = #{visitMethod},
+                </if>
+                <if test="visitTime != null">
+                    visit_time = #{visitTime},
+                </if>
+                <if test="finishTime != null">
+                    finish_time = #{finishTime},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="refer != null">
+                    refer = #{refer},
+                </if>
+                <if test="ver != null">
+                    ver = #{ver},
+                </if>
+                <if test="nextVisitTime != null">
+                    next_visit_time = #{nextVisitTime},
+                </if>
+                <if test="noteInfoId != null">
+                    note_info_id = #{noteInfoId},
+                </if>
+                <if test="noteType != null">
+                    note_type = #{noteType},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_customer_feedback
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_feedback
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_feedback
+        where id = #{id} and is_deleted ='N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_feedback
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_customer_feedback
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_customer_feedback
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_customer_feedback
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_customer_feedback (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="orderId != null">
+                order_id,
+            </if>
+            <if test="carLicense != null">
+                car_license,
+            </if>
+            <if test="customerId != null">
+                customer_id,
+            </if>
+            <if test="customerName != null">
+                customer_name,
+            </if>
+            <if test="customerCarId != null">
+                customer_car_id,
+            </if>
+            <if test="carBrandId != null">
+                car_brand_id,
+            </if>
+            <if test="carBrandName != null">
+                car_brand_name,
+            </if>
+            <if test="carSeriesId != null">
+                car_series_id,
+            </if>
+            <if test="carSeriesName != null">
+                car_series_name,
+            </if>
+            <if test="carAlias != null">
+                car_alias,
+            </if>
+            <if test="mobile != null">
+                mobile,
+            </if>
+            <if test="receptionStar != null">
+                reception_star,
+            </if>
+            <if test="repairStar != null">
+                repair_star,
+            </if>
+            <if test="sendcarStar != null">
+                sendcar_star,
+            </if>
+            <if test="totalStar != null">
+                total_star,
+            </if>
+            <if test="customerFeedback != null">
+                customer_feedback,
+            </if>
+            <if test="visitorId != null">
+                visitor_id,
+            </if>
+            <if test="visitorName != null">
+                visitor_name,
+            </if>
+            <if test="visitMethod != null">
+                visit_method,
+            </if>
+            <if test="visitTime != null">
+                visit_time,
+            </if>
+            <if test="finishTime != null">
+                finish_time,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="refer != null">
+                refer,
+            </if>
+            <if test="ver != null">
+                ver,
+            </if>
+            <if test="nextVisitTime != null">
+                next_visit_time,
+            </if>
+            <if test="noteInfoId != null">
+                note_info_id,
+            </if>
+            <if test="noteType != null">
+                note_type,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="carLicense != null">
+                #{carLicense},
+            </if>
+            <if test="customerId != null">
+                #{customerId},
+            </if>
+            <if test="customerName != null">
+                #{customerName},
+            </if>
+            <if test="customerCarId != null">
+                #{customerCarId},
+            </if>
+            <if test="carBrandId != null">
+                #{carBrandId},
+            </if>
+            <if test="carBrandName != null">
+                #{carBrandName},
+            </if>
+            <if test="carSeriesId != null">
+                #{carSeriesId},
+            </if>
+            <if test="carSeriesName != null">
+                #{carSeriesName},
+            </if>
+            <if test="carAlias != null">
+                #{carAlias},
+            </if>
+            <if test="mobile != null">
+                #{mobile},
+            </if>
+            <if test="receptionStar != null">
+                #{receptionStar},
+            </if>
+            <if test="repairStar != null">
+                #{repairStar},
+            </if>
+            <if test="sendcarStar != null">
+                #{sendcarStar},
+            </if>
+            <if test="totalStar != null">
+                #{totalStar},
+            </if>
+            <if test="customerFeedback != null">
+                #{customerFeedback},
+            </if>
+            <if test="visitorId != null">
+                #{visitorId},
+            </if>
+            <if test="visitorName != null">
+                #{visitorName},
+            </if>
+            <if test="visitMethod != null">
+                #{visitMethod},
+            </if>
+            <if test="visitTime != null">
+                #{visitTime},
+            </if>
+            <if test="finishTime != null">
+                #{finishTime},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="refer != null">
+                #{refer},
+            </if>
+            <if test="ver != null">
+                #{ver},
+            </if>
+            <if test="nextVisitTime != null">
+                #{nextVisitTime},
+            </if>
+            <if test="noteInfoId != null">
+                #{noteInfoId},
+            </if>
+            <if test="noteType != null">
+                #{noteType},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_customer_feedback
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <select id="selectByOrderIdAndShopId" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_customer_feedback
+        where order_id = #{orderId}
+        and shop_id = #{shopId}
+        and is_deleted ='N'
+        limit 0, 1
+    </select>
+
+    <!--客户下次回访提醒-->
+    <select id="selectLastFeedback" resultType="com.tqmall.legend.entity.customer.CustomerFeedback">
+        select a.id as id,
+            a.order_id as orderId,
+            a.car_license as carLicense,
+            a.customer_id as customerId,
+            a.customer_name as customerName,
+            a.customer_car_id as customerCarId,
+            a.mobile as mobile,
+            a.shop_id as shopId,
+            a.next_visit_time as nextVisitTime
+        from legend_customer_feedback a
+        JOIN (
+          SELECT customer_car_id, MAX(next_visit_time) nextVisitTime
+          FROM legend_customer_feedback
+          WHERE shop_id = #{shopId}
+            <![CDATA[
+            and next_visit_time >= #{nextVisitTimeGt}
+            ]]>
+            <![CDATA[
+            and next_visit_time <= #{nextVisitTimeLt}
+            ]]>
+            AND is_deleted = 'N'
+            AND customer_car_id IS NOT NULL
+            GROUP BY customer_car_id ) b
+        ON a.shop_id = #{shopId} AND a.customer_car_id = b.customer_car_id AND a.next_visit_time = b.nextVisitTime
+    </select>
+
+    <select id="getNextVisitTimeList" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList"/>
+        from legend_customer_feedback
+        where is_deleted='N'
+        and shop_id = #{shopId}
+        and next_visit_time is not null
+        and customer_car_id in
+        <foreach collection="carIds" index="index" item="tag" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+        order by gmt_create desc
+
+    </select>
+</mapper>

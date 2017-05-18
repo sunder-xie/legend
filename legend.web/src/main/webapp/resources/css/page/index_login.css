@@ -1,0 +1,181 @@
+/* css login */
+
+.log_l {
+    float: left;
+    padding: 81px 0 0 40px;
+}
+.log_box {
+    float: right;
+    margin: 124px 30px 0 0;
+    width: 443px;
+    background: #f8f7f8;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+.log_t {
+    height: 62px;
+    border-bottom: 1px solid #d7d7d7;
+}
+.log_t li {
+    width: 221px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    float: left;
+    background: #f2f2f2;
+    font-size: 22px;
+    color: #999;
+    cursor: pointer;
+}
+.log_t li.line {
+    border-right: 1px solid #d7d7d7;
+}
+.log_t li.current {
+    color: #333;
+    background: #f8f7f8;
+    height: 63px;
+}
+.log_c p {
+    padding: 20px 60px 0;
+}
+.log_txt {
+    width: 248px;
+    height: 35px;
+    padding-left: 10px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    margin-left: 12px;
+}
+.wkk {
+    width: 120px;
+}
+.yzm img {
+    width: 72px;
+    height: 35px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    background: #fff;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.yzm a {
+    color: #0076ca;
+    text-decoration: underline;
+}
+.lg_b {
+    height: 40px;
+    line-height: 40px;
+    background: #f1eff1;
+    padding: 0 60px;
+    margin-top: 20px;
+}
+.lg_b span {
+    display: inline-block;
+    color: #ff7a57;
+    width: 194px;
+}
+.lg_b a {
+    color: #0076ca;
+    text-decoration: underline;
+}
+.lg_b input {
+    width: 118px;
+    height: 38px;
+    cursor: pointer;
+    line-height: 38px;
+    text-align: center;
+    background: #ff7a57;
+    border: 1px solid #fe6740;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    font-family: "黑体";
+}
+.log_d {
+    display: none;
+}
+.log_d p {
+    height: 37px;
+    line-height: 37px;
+    padding: 20px 50px 0;
+}
+.log_d input {
+    margin: 0;
+    float: right;
+}
+.but_log {
+    width: 120px;
+    height: 37px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 37px;
+    font-size: 12px;
+    color: #333;
+    background: #ddd;
+    border-radius: 4px;
+}
+.wkk1 {
+    width: 118px;
+    margin-right: 10px!important;
+}
+.log_d .lg_b {
+    padding: 0 50px;
+}
+#username,#password,#validateCode{
+    line-height: 35px;
+}
+.warning {
+    margin-bottom:10px;
+    text-align: center;
+    font-size:16px;
+    color:#f00;
+}
+.identifyBox {
+    width:390px;
+    padding-top:20px;
+    text-align: center;
+    overflow: hidden;
+}
+.identifyContent {
+    margin:20px 0;
+}
+.identifyTxt {
+    width:197px;
+    line-height: 37px;
+    padding-left:10px;
+    margin-right: 10px;
+    border:1px solid #dadada;
+    border-radius: 3px;
+}
+.getCodeBtn {
+    width:140px;
+    line-height: 40px;
+    padding:0 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+    background: #FF7A57;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.identifyBtn {
+    width:50%;
+    line-height: 50px;
+    font-size:18px;
+    font-weight:  900;
+    border-top:1px solid #c4c4c4;
+}
+.submitCode {
+    color:#f00;
+    border-right:1px solid #c4c4c4;
+}
+.cancelIdentify {
+    color:#aeaeae;
+}
+.locks {
+    color: #999;
+    background-color: #ddd;
+}

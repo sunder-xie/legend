@@ -1,0 +1,79 @@
+.detail_box{
+    position: relative;
+    width: 758px;
+    margin: 10px 0;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.mar30{
+    margin-top: 26px;
+}
+
+.pay_img{
+    width: 238px;
+    height: 202px;
+    margin: 50px auto 10px auto;
+}
+
+
+.pay_word{
+    font-size: 18px;
+    text-align: center;
+}
+.pay_word p{
+    line-height: 28px;
+    color: #333;
+}
+.pay_word p span{
+    padding: 0 3px;
+    display: inline-block;
+    border: 1px solid #b5b5b5;
+    border-radius: 3px;
+    margin: 0 2px;
+    height: 26px;
+}
+.pay_word p.reason{
+    font-size: 16px;
+    color: #666;
+}
+
+.btn_pay_box{
+    width: 210px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.btn_green{
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.w110{
+    width: 110px;
+}
+
+.fl{
+    float: left;
+}
+
+.con-left{
+    width: 200px;
+    float: left;
+}
+.con-right{
+    width: 770px;
+    background-color: white;
+    float: right;
+}
+
+.btn_green{
+    border: 1px solid #96c93b;
+    background: linear-gradient(to bottom, #96c93b 0%, #80b550 100%);
+}

@@ -1,0 +1,11 @@
+.pos{
+    position: relative;
+}
+.tip_new{
+    position: absolute;
+    left: 55px;
+    top: 13px;
+    width: 32px;
+    height: 16px;
+    background: url("../../img/common/tip_new.png") no-repeat;
+}

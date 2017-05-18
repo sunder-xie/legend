@@ -1,0 +1,66 @@
+/*
+ *zmx  2016/06/06
+ * 工单收款 洗车单详情
+*/
+.detail-box{
+    overflow: hidden; background: #fff; border: 1px solid #cdcdcd;
+}
+
+/*车辆信息*/
+.car-info{
+    border-bottom: 1px solid #dcdcdc;
+    position:relative;
+    background: #f9f9f9;
+    padding:10px;
+    overflow: hidden;
+}
+.show-grid{ margin: 0;}
+.show-grid .form-label{ line-height: 36px;}
+.bold .form-label,.bold .yqx-text { font-weight: bold;}
+.bold .yqx-text .redorder{ padding: 3px 5px; color: #fa7b7c; border: 1px solid #fa7b7c;}
+
+.car-img{
+    width: 120px;
+    height: 120px;
+    margin:5px 0 15px;
+}
+.history-box{ margin-top: 10px; line-height: 30px; padding: 0 10px;}
+.history-box img{ vertical-align: middle; margin-right: 5px;}
+.history-box a{ color: #0470f5; text-decoration: underline; margin-right: 10px;}
+.models{ width: 150px; height: 30px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+.company-width{ width: 350px; height: 30px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.yqx-table>thead>tr>th, .yqx-table>tr>th {
+    background: #f9f9f9;
+}
+
+/*按钮*/
+.btn-box{ border-top: 1px solid #dcdcdc; padding: 15px 10px;}
+.layui-layer-page .layui-layer-content{ overflow: inherit;}
+
+.max-text{ max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.form-label-width{ width: 90px;}
+.form-item-width{ width: 170px; height: 36px;}
+
+.bot-box{background: #fff; overflow: hidden;padding:10px;border-bottom: 1px solid #cdcdcd; margin-top: -1px;}
+.bot-text{line-height: 25px;}
+
+.bot-text .total-details-tag{ display: inline-block; vertical-align: middle; margin-left: 5px; width: 18px; height: 18px;
+    background: url("../../../../img/page/settlement/debit/explain.png") no-repeat;}
+.total-hide{ display: inline-block;}
+.total-details-tag:hover{background: url("../../../../img/page/settlement/debit/explain-hover.png") no-repeat;}
+.total-arrow{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #8bb30d;
+    border-bottom: 5px solid transparent;
+}
+.total-details{ display: inline-block;  background: #8bb30d; padding: 0 10px; color: #fff; border-radius: 3px;}
+
+.copy-margin{ margin-right: 5px;}
+.license-weight{ font-weight: bold;width: 70px;display: inline-block;}
+
+.yqx-text.ellipsis-1 {
+    height: 36px;
+}

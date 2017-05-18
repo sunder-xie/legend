@@ -1,0 +1,105 @@
+.settle-right {
+    width: 823px;
+    border: 1px solid #dddddd;
+    background-color: #FFFFFF;
+}
+
+/*首页右侧的样式  开始*/
+.big-title {
+    width: 100%;
+    font-size: 16px;
+    color: #535353;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 9px;
+    font-weight: 600;
+}
+
+.settle-item-box {
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid #dddddd;
+}
+
+.settle-item-inner {
+    height: 37px;
+    margin: 22px 0 0 10px;
+}
+
+.item-icon {
+    width: 37px;
+    height: 37px;
+    display: inline-block;
+    margin-right: 9px;
+    vertical-align: middle;
+}
+
+.cash-icon {
+    background: url("../../../../../img/page/ax_insurance/settleIcon.png") no-repeat -1px -1px;
+}
+
+.service-pack-icon {
+    background: url("../../../../../img/page/ax_insurance/settleIcon.png") no-repeat -52px -1px;
+}
+
+.bounty-icon {
+    background: url("../../../../../img/page/ax_insurance/settleIcon.png") no-repeat -100px -4px;
+
+}
+
+.detail-box {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 33px;
+}
+
+.detail-box p {
+    font-size: 16px;
+    color: #535353;
+    padding-bottom: 6px;
+    font-weight: 600;
+}
+
+.detail-box a {
+    font-size: 14px;
+    color: #666666;
+    font-family: Simsun;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.service-pack-detail, .cash-detail, .bounty-detail {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.part {
+    width: 204px;
+    height: 100%;
+    display: inline-block;
+    padding-left: 11px;
+    border-left: 1px solid #dddddd;
+    vertical-align: middle;
+    color: #666666;
+}
+
+.part p {
+    margin-top: 12px;
+}
+
+.part p:first-child {
+    margin: 0;
+}
+
+.color-orange {
+    color: #ff7800;
+    font-weight: bolder;
+}
+
+.color-black{
+    color: #000000;
+    font-weight: bolder;
+}
+
+/*首页右侧的样式  结束*/

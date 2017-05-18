@@ -1,0 +1,314 @@
+.marT10{
+    margin-top: 10px;
+}
+.marB20{
+    margin-bottom: 20px;
+}
+
+.order-right{
+    width:823px;
+}
+.yqx-btn-default {
+    border-color: #d2d2d2;
+    background: #f9f9f9;
+}
+.yqx-btn-disable{
+    border-color: #999;
+    background: #b5b5b5;
+}
+.yqx-btn-disable:hover{
+    border-color: #999;
+    background: #b5b5b5;
+}
+.yqx-table{
+    border: 1px solid #ddd;
+}
+.question-icon {
+    background: url('../../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    vertical-align: text-bottom;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+}
+.row{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+i{
+    font-style: normal;
+}
+
+.yqx-input{
+    width: 170px;
+}
+.form-item{
+    margin-right: 6px;
+}
+#searchForm .yqx-btn{
+    margin-left: 10px;
+}
+#activityName{
+    margin-right: 10px;
+}
+/*头部tab start*/
+.order-head{
+    position: relative;
+    line-height: 34px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.head-tab{
+    display: inline-block;
+    line-height: 32px;
+    vertical-align: bottom;
+    padding: 0 16px;
+    color: #fff;
+    background-color: #999;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.head-tab.current {
+    background-color: #7fa700;
+    cursor: default;
+}
+.order-head .help {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    padding: 0 14px;
+    color: #666;
+}
+
+/*头部tab end*/
+
+/*tab样式 start*/
+.tabs-control{
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+}
+.activity-tab-item {
+    display: inline-block;
+    width: 98px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+
+}
+.activity-tab-item.current{
+    background-color: #fff;
+    color: #7fa700;
+    border: solid #ddd;
+    border-width: 0 1px;
+    font-weight: bold;
+    position: relative;
+}
+.activity-tab-item.current:after{
+    content: "";
+    position: absolute;
+    background-color: #7fa700;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    top: 0 ;
+}
+#tableList .yqx-btn{
+    line-height: 28px;
+    padding: 0;
+    width: 76px;
+}
+.td-ellipsis{
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.display-none{
+    display: none;
+}
+/*tab样式 end*/
+
+/*表格内部样式  start*/
+#tableList p{
+    line-height: 30px;
+    white-space: normal;
+}
+#tableList p.pre{
+    white-space: pre;
+}
+#tableList h3{
+    position: relative;
+    line-height: 20px;
+    font-weight: bold;
+    color: #333;
+    font-family: "Microsoft Yahei", "微软雅黑";
+}
+#tableList a{
+    color: #fff;
+}
+#tableList .pre-row{
+    white-space: pre;
+}
+
+#tableList .multi-row{
+    white-space: normal;
+    text-align: left;
+    padding-left: 20px;
+}
+.preview-qrcode-td{
+    position: relative;
+}
+.preview-qrcode{
+    position: absolute;
+    top: 0;
+    left: -200px;
+    display: none;
+}
+.openTips{
+    position: absolute;
+    bottom: -34px;
+    left: -28px;
+    width: 180px;
+    line-height: 24px;
+    color: #f78383;
+    background-color: #fff9f3;
+    border: 1px solid #f78383;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    text-align: center;
+    box-shadow: 1px 2px 5px #e19a9b;
+    font-size: 12px;
+    font-family: Simsun,Tahoma,Arial,Helvetica Neue,Hiragino Sans GB,sans-serif;
+}
+.openTips:after{
+    position: absolute;
+    content: url('../../../../img/page/wechat/activity/triangle.png');
+    top: -16px;
+    left: 32px;
+}
+
+/*表格内部样式  end*/
+
+/*报表弹窗样式 start*/
+.reportCheck h2{
+    background-color: #232f48;
+    color: white;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 55px;
+}
+.reportCheck h3{
+    padding-left: 10px;
+    border-left: 2px solid #999;
+    margin: 10px 0;
+}
+.reportCheck .yqx-btn{
+    width: auto;
+    padding: 0 25px;
+}
+.js-customer-detail{
+    color: #7fa700;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.report-box{
+    box-sizing: border-box;
+    padding: 0 10px 10px;
+    min-height: 405px;
+}
+.statistics{
+    width: 60%;
+}
+.customerDetail{
+    width: 40%;
+    border-left: 1px solid #ddd;
+}
+.no-count{
+    color: #888;
+    text-decoration: none;
+}
+.page-btn.disable{
+    cursor: not-allowed;
+}
+/*报表弹窗样式 end*/
+
+/*公共弹窗样式 start*/
+.bounce-title{
+    background-color: #232f48;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 16px;
+    font-weight: bold;
+    height: 55px;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.bounce-content{
+    padding: 10px 20px;
+}
+.bounce-row{
+    padding: 10px;
+    text-align: left;
+    width: -webkit-fit-content;
+    width: fit-content;
+    margin: auto;
+    line-height: 1.3;
+    font-size: 14px;
+}
+.bounce-row>p{
+    text-align: left;
+}
+.bounce-foot{
+    text-align: center;
+    margin: 10px 0;
+}
+
+/*公共弹窗样式 end*/
+
+/*分享朋友圈弹窗样式 start*/
+.bounce-content-qrcode{
+    padding: 22px;
+}
+.qrcode-view{
+    display: inline-block;
+    margin-right: 20px;
+}
+.link-box{
+    display: inline-block;
+    vertical-align: top;
+}
+#linkAddress{
+    margin: 16px 0;
+    width: 340px;
+}
+#copyUrl{
+    padding: 0 10px;
+}
+/*分享朋友圈弹窗样式 end*/
+
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+

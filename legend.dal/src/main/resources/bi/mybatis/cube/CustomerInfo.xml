@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.bi.dao.cube.CustomerInfoDao">
+
+    <resultMap id = "BaseResultMap" type = "com.tqmall.legend.bi.entity.cube.CustomerInfo" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "customer_id" property = "customerId" />
+        <result column = "customer_car_id" property = "customerCarId" />
+        <result column = "car_license" property = "carLicense" />
+        <result column = "contact_name" property = "contactName" />
+        <result column = "contact_mobile" property = "contactMobile" />
+        <result column = "car_brand_id" property = "carBrandId" />
+        <result column = "car_brand" property = "carBrand" />
+        <result column = "car_series_id" property = "carSeriesId" />
+        <result column = "car_series" property = "carSeries" />
+        <result column = "car_level" property = "carLevel" />
+        <result column = "last_pay_time" property = "lastPayTime" />
+        <result column = "member_level_id" property = "memberLevelId" />
+        <result column = "member_level" property = "memberLevel" />
+        <result column = "car_model_id" property = "carModelId" />
+        <result column = "car_model" property = "carModel" />
+        <result column = "total_amount" property = "totalAmount" />
+        <result column = "total_number" property = "totalNumber" />
+        <result column = "car_level_tag" property = "carLevelTag" />
+        <result column = "appoint_create_time" property = "appointCreateTime" />
+        <result column = "appoint_time" property = "appointTime" />
+        <result column = "appoint_content" property = "appointContent" />
+        <result column = "mileage" property = "mileage" />
+        <result column = "note_keepup_time" property = "noteKeepupTime" />
+        <result column = "note_insurance_time" property = "noteInsuranceTime" />
+        <result column = "note_auditing_time" property = "noteAuditingTime" />
+        <result column = "note_visit_time" property = "noteVisitTime" />
+        <result column = "birthday" property = "birthday" />
+        <result column = "customer_name" property = "customerName" />
+        <result column = "mobile" property = "mobile" />
+        <result column = "appoint_id" property = "appointId" />
+        <result column = "last_order_id" property = "lastOrderId" />
+        <result column = "last_order_amount" property = "lastOrderAmount" />
+        <result column = "arrive_numbers" property = "arriveNumbers" />
+        <result column = "sign_total_amount" property = "signTotalAmount" />
+        <result column = "sign_total_order_numbers" property = "signTotalOrderNumbers" />
+        <result column = "user_id" property = "userId" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            customer_id as customerId,
+            customer_car_id as customerCarId,
+            car_license as carLicense,
+            contact_name as contactName,
+            contact_mobile as contactMobile,
+            car_brand_id as carBrandId,
+            car_brand as carBrand,
+            car_series_id as carSeriesId,
+            car_series as carSeries,
+            car_level as carLevel,
+            last_pay_time as lastPayTime,
+            member_level_id as memberLevelId,
+            member_level as memberLevel,
+            car_model_id as carModelId,
+            car_model as carModel,
+            total_amount as totalAmount,
+            total_number as totalNumber,
+            car_level_tag as carLevelTag,
+            appoint_create_time as appointCreateTime,
+            appoint_time as appointTime,
+            appoint_content as appointContent,
+            mileage as mileage,
+            note_keepup_time as noteKeepupTime,
+            note_insurance_time as noteInsuranceTime,
+            note_auditing_time as noteAuditingTime,
+            note_visit_time as noteVisitTime,
+            birthday as birthday,
+            customer_name as customerName,
+            mobile as mobile,
+            appoint_id as appointId,
+            last_order_id as lastOrderId,
+            last_order_amount as lastOrderAmount,
+            arrive_numbers as arriveNumbers,
+            sign_total_amount as signTotalAmount,
+            sign_total_order_numbers as signTotalOrderNumbers,
+            user_id as userId,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "customerId != null">
+                    and customer_id = #{customerId}
+                </if>
+                <if test = "customerCarId != null">
+                    and customer_car_id = #{customerCarId}
+                </if>
+                <if test = "carLicense != null">
+                    and car_license like CONCAT('%',#{carLicense},'%')
+                </if>
+                <if test = "contactName != null">
+                    and contact_name = #{contactName}
+                </if>
+                <if test = "contactMobile != null">
+                    and contact_mobile = #{contactMobile}
+                </if>
+                <if test = "carBrandId != null">
+                    and car_brand_id = #{carBrandId}
+                </if>
+                <if test = "carBrand != null">
+                    and car_brand = #{carBrand}
+                </if>
+                <if test = "carSeriesId != null">
+                    and car_series_id = #{carSeriesId}
+                </if>
+                <if test = "carSeries != null">
+                    and car_series = #{carSeries}
+                </if>
+                <if test = "carLevel != null">
+                    and car_level = #{carLevel}
+                </if>
+                <if test = "lastPayTime != null">
+                    and last_pay_time = #{lastPayTime}
+                </if>
+                <if test = "memberLevelId != null">
+                    and member_level_id = #{memberLevelId}
+                </if>
+                <if test = "memberLevel != null">
+                    and member_level = #{memberLevel}
+                </if>
+                <if test = "carModelId != null">
+                    and car_model_id = #{carModelId}
+                </if>
+                <if test = "carModel != null">
+                    and car_model = #{carModel}
+                </if>
+                <if test = "totalAmount != null">
+                    and total_amount = #{totalAmount}
+                </if>
+                <if test = "totalNumber != null">
+                    and total_number = #{totalNumber}
+                </if>
+                <if test = "carLevelTag != null">
+                    and car_level_tag = #{carLevelTag}
+                </if>
+                <if test = "appointCreateTime != null">
+                    and appoint_create_time = #{appointCreateTime}
+                </if>
+                <if test = "appointTime != null">
+                    and appoint_time = #{appointTime}
+                </if>
+                <if test = "appointContent != null">
+                    and appoint_content = #{appointContent}
+                </if>
+                <if test = "mileage != null">
+                    and mileage = #{mileage}
+                </if>
+                <if test = "noteKeepupTime != null">
+                    and note_keepup_time = #{noteKeepupTime}
+                </if>
+                <if test = "noteInsuranceTime != null">
+                    and note_insurance_time = #{noteInsuranceTime}
+                </if>
+                <if test = "noteAuditingTime != null">
+                    and note_auditing_time = #{noteAuditingTime}
+                </if>
+                <if test = "noteVisitTime != null">
+                    and note_visit_time = #{noteVisitTime}
+                </if>
+                <if test = "birthday != null">
+                    and birthday = #{birthday}
+                </if>
+                <if test = "customerName != null">
+                    and customer_name like CONCAT('%',#{customerName},'%')
+                </if>
+                <if test = "mobile != null">
+                    and mobile like CONCAT('%',#{mobile},'%')
+                </if>
+                <if test = "appointId != null">
+                    and appoint_id = #{appointId}
+                </if>
+                <if test = "lastOrderId != null">
+                    and last_order_id = #{lastOrderId}
+                </if>
+                <if test = "lastOrderAmount != null">
+                    and last_order_amount = #{lastOrderAmount}
+                </if>
+                <if test = "arriveNumbers != null">
+                    and arrive_numbers = #{arriveNumbers}
+                </if>
+                <if test = "signTotalAmount != null">
+                    and sign_total_amount = #{signTotalAmount}
+                </if>
+                <if test = "signTotalOrderNumbers != null">
+                    and sign_total_order_numbers = #{signTotalOrderNumbers}
+                </if>
+                <if test = "userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test = "userIds != null">
+                    and user_id in
+                    (
+                    <foreach collection="userIds" index="index" item="tag" separator=",">
+                        #{tag}
+                    </foreach>
+                    )
+                </if>
+                <if test="searchKey != null">
+                    and (
+                    car_license like CONCAT('%',#{searchKey},'%')
+                    or mobile like CONCAT('%',#{searchKey},'%')
+                    or customer_name like CONCAT('%',#{searchKey},'%')
+                    or contact_mobile like CONCAT('%',#{searchKey},'%')
+                    )
+                </if>
+                <if test="isAllot != null and isAllot == 'true'">
+                    <![CDATA[
+                        and user_id > 0
+                    ]]>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from cube_customer_info
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from cube_customer_info
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+</mapper>

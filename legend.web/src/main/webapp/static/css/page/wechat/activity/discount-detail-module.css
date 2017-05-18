@@ -1,0 +1,152 @@
+.discount-choose-title{
+    vertical-align: top;
+    margin-top: 8px;
+    display: inline-block;
+}
+.discount-scroll-wrapper{
+    width: 340px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.discount-item-collection{
+    width: 316px;
+    min-height: 300px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.discount-item{
+    border: 1px solid #ddd;
+}
+.discount-item-content{
+    height: 118px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+.discount-img{
+    width: 68px;
+    height: 68px;
+    margin-right: 10px;
+    background-image: url('../../../../img/page/wechat/default-service-img.jpg');
+    background-size: 68px 68px;
+}
+.discount-img-transparent{
+    background-image: none;
+}
+.discount-item-text{
+    width: 200px;
+}
+.bounce-discount-text{
+    width: 274px;
+}
+.discount-item-text>h3, .bounce-discount-text>h3{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Microsoft YaHei","Hiragino Sans GB",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+.discount-content-title{
+    line-height: 26px;
+    color: #777;
+}
+.discount-content-li{
+    overflow: hidden;
+    white-space: pre-wrap;
+    line-height: 17px;
+}
+.discount-item-content .discount-content-li{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+}
+/*item form start*/
+.discount-item-form{
+    padding: 10px;
+    background-color: #e8ebde;
+}
+.discount-form-row{
+    line-height: 30px;
+}
+.discount-form-row + .discount-form-row{
+    margin-top: 10px;
+}
+.discount-fieldset{
+    color: #666;
+    position: relative;
+}
+.discount-fieldset .long-title{
+    width: 48px;
+    display: inline-block;
+    text-align: right;
+}
+.discount-long-button{
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.discount-fa-item .yqx-input{
+    padding-right: 35px;
+    box-sizing: border-box;
+}
+.discount-fa-item .fa{
+    line-height: 30px;
+    color: #666;
+}
+.discount-form-input{
+    height: 30px;
+    width: 94px;
+}
+/*item form end*/
+
+/*设置车主服务弹窗 start*/
+.discount-bounce-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: 99998;
+}
+.discount-bounce-wrapper{
+    position: fixed;
+    z-index: 99999;
+    width: 480px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -46%);
+}
+.discount-bounce-wrapper .fieldset-title{
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+.discount-bounce-wrapper .yqx-input{
+    width: 150px;
+}
+.discount-bounce-wrapper .input-long{
+    width: 240px;
+}
+.discount-bounce-wrapper .yqx-btn{
+    width: 110px;
+}
+.discount-bounce-wrapper fieldset{
+     margin-bottom: 14px;
+ }
+.discount-bounce-wrapper fieldset:last-of-type{
+    margin-bottom: 0;
+}
+/*设置车主服务弹窗 end*/
+

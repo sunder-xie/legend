@@ -1,0 +1,56 @@
+/**
+* Create by zmx 2016/12/20
+* 集客首页
+*/
+.content{
+    background: #fff;
+    border: 1px solid #cacaca;
+    padding: 20px 102px;
+}
+.title{
+    line-height: 30px;
+    text-align: center;
+}
+.title-big{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.info-box{
+    overflow: hidden;
+    border-bottom: 1px solid #cacaca;
+    padding: 20px 0;
+}
+.info-box:last-child{
+    border-bottom: none;
+}
+.info-text{
+    width: 284px;
+}
+.info-box i{
+    display: block;
+    width: 15px;
+    height: 1px;
+    background: #aaa;
+}
+.caption{
+    line-height: 56px;
+    color: #627c0d;
+    font-weight: bold;
+    font-size: 16px;
+}
+.caption span{
+    padding: 0 6px;
+    font-weight: normal;
+}
+.info-text p{
+    line-height: 20px;
+}
+.info-text p.p-left{
+    padding-left: 60px;
+}
+.p-100{
+    padding-left: 100px;
+}

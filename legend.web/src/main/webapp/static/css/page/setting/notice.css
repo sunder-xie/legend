@@ -1,0 +1,47 @@
+/*
+* create by zmx 2016/12/07
+* 提醒设置页面样式
+*/
+
+.content{
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid #cacaca;
+}
+.content li{
+    padding: 15px 0;
+    border-bottom: 1px dashed #cacaca;
+}
+.content li h3{
+    display: inline-block;
+    width: 112px;
+    border-right: 1px solid #cacaca;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.content li .form-label{
+    width: 160px;
+    text-align: left;
+    margin-left: 45px;
+}
+.content li .form-item{
+    width: 70px;
+}
+.content li:last-child{
+    border-bottom: none;
+}
+.btn-box{
+    height: 64px;
+    padding-top: 14px;
+    border-top: 1px solid #cacaca;
+}
+
+.div_twoline {
+    width: 281px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.content li .m-top{
+    margin-top: 10px;
+}

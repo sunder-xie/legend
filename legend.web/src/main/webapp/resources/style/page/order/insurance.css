@@ -1,0 +1,94 @@
+.qxy_tab{margin-bottom: 0;}
+/*.tab_content{margin-bottom: 20px;}*/
+.cont_box{border:1px solid #cdcdcd;border-top: none;padding: 0 10px 20px 10px;}
+.qxy_form .form_row_margin0{margin-bottom: 0;}
+.tab_content > .current{display: block;}
+.carType_btn:hover{box-shadow: 0 0 8px #ccc;}
+.orderServiceJson .chosen-container{margin-right:0;}
+.orderServiceJson .chosen-container-active .chosen-single{border: none;background: #fff;}
+.orderServiceJson .chosen-single{border: none;}
+
+
+.address_link{padding-left:576px;margin-top:-15px;}
+.address_link a{color: blue;}
+
+/*配件物料按钮组 start*/
+.btn_box{text-align: right;}
+.btn_box a{display: inline-block;height:35px;line-height: 35px;width:108px;text-align: center;color: #333333;border:1px solid #c1c1c1;margin:20px 0px 20px 10px;background: -webkit-gradient(linear,left top,left bottom,from(#fefeff),to(#f5f5f5));border-radius: 3px;}
+.btn_box a:hover{box-shadow: 0 0 6px #ccc;}
+/*配件物料按钮组 end*/
+/*服务项目和配件物料公共样式 end*/
+
+/*合计金额样式 start*/
+.count_money{padding: 20px 0;}
+.count_money p{line-height: 30px;font-weight: 900;}
+.order_count{font-size: 16px;color:#fc464d;}
+.settlemented{background: url("../../img/page/order/zhang.png?20151127") no-repeat 200px -22px;}
+.haveCredit{background: url("../../img/page/order/haveCredit.png") no-repeat 200px -22px;}
+.haveInvalid{background: url("../../img/page/order/order_invalid.png") no-repeat 200px -22px;}
+/*合计金额样式 end*/
+
+
+/*新建服务项目 start*/
+.create_service{width: 500px;height:435px;background: #fff;}
+.create_service ul{padding: 40px 40px 0 40px;}
+.create_service li{margin-bottom: 10px;}
+.create_service li label{display: inline-block;width: 75px;line-height: 35px;}
+.create_service li input.dg_input{height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 330px;padding: 0 5px;}
+.create_service li select.dg_select{height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 342px;}
+.create_service li .service_fee{width:288px;}
+.create_service li .service_time_label{margin-left: 15px;}
+.create_service li .service_time_input{width:55px;}
+.create_service li .unit_input{display: inline-block;float: none;}
+.create_service .unit_input input,
+.create_service .unit_input span{vertical-align: middle;}
+/*新建服务项目 end*/
+
+/*图片添加按钮 start*/
+.qxy_form .img_row {padding-left: 10px;margin-bottom: 40px;}
+.img_row p{margin-bottom: 10px;}
+.file_btn{opacity: 0;}
+.uploadifive-queue{display: none;}
+.img_add_btn{border-radius: 4px;border:1px solid #c1c1c1;color: #333;font: 400 12px "黑体",sans-serif,Verdana,Arial,Helvetica,Tahoma;text-shadow: none;margin-top: 10px;background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f5f5f5));}
+.img_add_btn input{cursor: pointer;}
+.uploadifive-button:hover{background: none;}
+.img_txt{height: 25px;line-height: 25px;text-align: center;}
+/*图片添加按钮 end*/
+
+/*图片盒子样式 start*/
+.img_box .img_item{float: left; width: 120px; margin-right: 20px; position: relative;}
+.img_item_inner{width: 100%;height:120px;border: 1px solid #dcdcdc;background: #fff;}
+.img_item_inner:hover{box-shadow: 0 0 8px #ccc;}
+.img_item_inner img{border: 0;}
+/*图片盒子样式 end*/
+
+/*已保存*/
+.color0{color:#8836b2;}
+/*审核中*/
+.color1{color:#ffa800;}
+/*审核成功*/
+.color2{color:#93bd22;}
+/*审核失败*/
+.color3{color:#f77c7e;}
+/*已打款*/
+.color4{color:#36a5b2;}
+/* --- 搜索结果样式 end --- */
+
+
+/**/
+.submit_dialog{width:500px;background: url(../../img/page/order/dialog_right_icon.png) no-repeat 40px center;padding: 30px 0 ;}
+.submit_dialog .txt1{font-size: 20px;line-height: 40px;margin-left:100px;}
+.submit_dialog .txt2{font-size: 14px;margin-left:100px;}
+.submit_dialog .txt2 .qxy_link{font-weight: 900;text-decoration: underline;color:darkblue;}
+
+.xxtxt {
+    width: 353px;
+    height: 39px;
+    line-height: 39px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+

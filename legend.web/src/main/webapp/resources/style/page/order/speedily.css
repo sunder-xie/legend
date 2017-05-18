@@ -1,0 +1,133 @@
+.qxy_tab{margin-bottom: 0;}
+/*.tab_content{margin-bottom: 20px;}*/
+.cont_box{border:1px solid #cdcdcd;border-top: none;padding: 0 10px 20px 10px;}
+.qxy_form .form_row_margin0{margin-bottom: 0;}
+.tab_content > .current{display: block;}
+.carType_btn:hover{box-shadow: 0 0 8px #ccc;}
+.orderServiceJson .chosen-container{margin-right:0;}
+.orderServiceJson .chosen-container-active .chosen-single{border: none;background: #fff;}
+.orderServiceJson .chosen-single{border: none;}
+/*服务项目 热门服务栏 start*/
+.hot_service{padding: 12px 0;}
+.hot_service .col{float: left}
+.hot_service .col1{margin: 10px 10px 10px 0;line-height: 20px;font-weight: 900;color: #333333;border-right:1px solid #c9c9c9;padding-right: 16px;}
+.hot_service .col2{padding: 10px 0;}
+.hot_service .col2 p{width: 750px;}
+.hot_service .col2 span,
+.hot_service .col2 b{display: inline-block;line-height: 30px;padding: 0 10px;}
+.hot_service .col2 span{border:1px solid #c9c9c9;border-radius: 3px;margin-right: 10px;cursor: pointer;margin-bottom: 10px;box-sizing: border-box;}
+.hot_service .col2 span.checked{border:1px solid #8fb027;color: #8fb027;background: #fff;}
+.hot_service .col2 span:hover{box-shadow: 0 0 8px #ccc;}
+.hot_service .col3 {border-left:1px solid #c9c9c9;padding-left: 18px;margin: 10px 0 0 0;}
+.hot_service .col3 a{margin:0;width: 98px;}
+/*服务项目 热门服务栏 end*/
+
+/*服务项目 服务列表 start*/
+.service_list table{width: 100%;}
+.service_list table th,
+.service_list table td{height:36px;text-align: center;vertical-align: middle;position: relative;}
+.service_list table th{border-bottom:1px solid #cecab4;}
+.service_list table td{border-left:1px solid #cecab4;border-bottom:1px solid #cecab4;background: #fff;}
+.service_list table th.border_right_show,
+.service_list table td.border_right_show{border-right:1px solid #cecab4;}
+.service_list input,
+.service_list select{height:100%;line-height: 35px;width: 100%;text-align: center;}
+/*服务项目 服务列表 end*/
+
+/*配件物料配件列表 start*/
+.part_lsit table{width: 100%;}
+.part_lsit table th,
+.part_lsit table td{text-align: center;vertical-align: middle;position: relative;}
+.part_lsit table th{border-bottom:1px solid #c5c9b8;height: 30px;line-height: 30px;}
+.part_lsit table td{height:36px;border-left:1px solid #c5c9b8;border-bottom:1px solid #c5c9b8;vertical-align: middle; background: #fff;}
+.part_lsit table th.border_right_show,
+.part_lsit table td.border_right_show{border-right:1px solid #c5c9b8;}
+.part_lsit input[type='text']{height:100%;line-height: 35px;width: 100%;text-align: center;}
+/*配件物料配件列表 end*/
+
+/*配件物料按钮组 start*/
+.btn_box{text-align: right;}
+.btn_box a{display: inline-block;height:35px;line-height: 35px;width:108px;text-align: center;color: #333333;border:1px solid #c1c1c1;margin:20px 0px 20px 10px;background: -webkit-gradient(linear,left top,left bottom,from(#fefeff),to(#f5f5f5));border-radius: 3px;}
+.btn_box a:hover{box-shadow: 0 0 6px #ccc;}
+/*配件物料按钮组 end*/
+/*服务项目和配件物料公共样式 end*/
+
+/*合计金额样式 start*/
+.count_money{padding: 20px 0;}
+.count_money p{line-height: 30px;font-weight: 900;}
+.order_count{font-size: 16px;color:#fc464d;}
+.settlemented{background: url("../../img/page/order/zhang.png?20151127") no-repeat 200px -22px;}
+.haveCredit{background: url("../../img/page/order/haveCredit.png") no-repeat 200px -22px;}
+.haveInvalid{background: url("../../img/page/order/order_invalid.png") no-repeat 200px -22px;}
+/*合计金额样式 end*/
+
+/*转入库弹窗 start*/
+.in_warehouse{width: 700px;height:500px;background: #fff;}
+.in_warehouse table{width:100%;}
+.in_warehouse table td,.in_warehouse table th{vertical-align: middle;text-align: left;padding-left: 10px;overflow: hidden;}
+.in_warehouse table th{height:30px;border-bottom:1px solid #d6d6d6;background: #f5f2e6;}
+.in_warehouse table td{height:50px;border-bottom:1px solid #c5c9b8;background: #fff;color: #333;}
+.in_warehouse table td input{height:28px;border:1px solid #c9c9c9;border-radius: 3px;padding:0 5px;width: 80%;background: #fff;}
+.in_warehouse table td select {height:28px;border:1px solid #c9c9c9;border-radius: 3px;width: 80%;background: #fff;}
+.in_warehouse table tr.gray td{background: #f5f5f5;}
+.in_warehouse .tbody{display: block; height:305px;overflow-y: scroll;}
+/*转入库弹窗 end*/
+
+/*新建服务项目 start*/
+.create_service{width: 500px;height:435px;background: #fff;}
+.create_service ul{padding: 40px 40px 0 40px;}
+.create_service li{margin-bottom: 10px;}
+.create_service li label{display: inline-block;width: 75px;line-height: 35px;}
+.create_service li input.dg_input{height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 330px;padding: 0 5px;}
+.create_service li select.dg_select{height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 342px;}
+.create_service li .service_fee{width:288px;}
+.create_service li .service_time_label{margin-left: 15px;}
+.create_service li .service_time_input{width:55px;}
+.create_service li .unit_input{display: inline-block;float: none;}
+.create_service .unit_input input,
+.create_service .unit_input span{vertical-align: middle;}
+/*新建服务项目 end*/
+
+/*新建配件资料 start*/
+.create_part{width: 500px;height:535px;background: #fff;}
+.create_part ul{padding: 20px 40px 0 40px;}
+.create_part li{margin-bottom: 10px;}
+.create_part li label{display: inline-block;width: 75px;line-height: 35px;}
+.create_part li input.dg_input{height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 330px;padding: 0 5px;}
+.create_part li select.dg_select{height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 344px;}
+.create_part li input.price{width: 155px;margin-right: 20px;}
+.create_part li input.measureUnit{width: 65px;}
+.create_part .dialog_btn .qxy_btn{margin-top: 10px;}
+.create_part .chosen-container{margin-right: 0;}
+/*新建配件资料 end*/
+
+/*批量添加配件 start*/
+.batch_add_part{width: 800px;height:550px;}
+.batch_add_part table{width: 100%;}
+.batch_add_part table td,.batch_add_part table th{vertical-align: middle;text-align: left;padding-left: 5px;}
+.batch_add_part .table th{height:25px;border-bottom:1px solid #d6d6d6;background: #fff;}
+.batch_add_part .table td{height:30px;border-bottom:1px solid #c5c9b8;background: #fff;color: #333;}
+.batch_add_part .table tr.hui td{background: #f5f5f5;}
+.batch_add_part .thead{background: #fff;}
+.batch_add_part .tbody{display: block; height:190px;overflow-y: scroll;}
+.batch_add_part .search_box{background: #fff;padding-bottom: 15px;border-bottom: 1px solid #dcdcdc;}
+.batch_add_part .search_box > ul{float: left;width: 690px;margin-left: 20px;}
+.batch_add_part .search_box > ul >li{float: left;width: 230px;margin: 8px 0 0px 0;}
+.batch_add_part .search_box > ul >li label{display: inline-block;width: 60px;height:32px;line-height: 32px;}
+.batch_add_part .batch_search_btn {display: block;float: left;margin-top: 5px; width: 75px;height: 75px;}
+.search_box input,
+.search_box select{height:30px;line-height: 30px;border:1px solid #c9c9c9;border-radius: 3px;}
+.search_box input{width:130px;padding: 0 5px;border-radius: 4px;}
+.search_box select{width:144px;height:30px;line-height: 30px;}
+.search_box .chosen-container-single .chosen-single {height: 30px;line-height: 30px;}
+
+.selected_part{height:100px;border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;overflow-y: scroll;}
+.batch_add_part .dialog_btn .qxy_btn{margin-top: 10px;}
+#selected_part_count{color: red;font-weight: 900;}
+.selected_part_title{height:25px;line-height: 25px;padding-left:20px; border-top:1px solid #d6d6d6;background: #f5f2e6;}
+.selected_part tbody td{height:30px;border-bottom:1px solid #c5c9b8;background: #fff;color: #333;}
+/*批量添加配件 end*/
+
+/* 下次保养里程 */
+.qxy_form .form_item .label_box_1 {width:100px;}
+.qxy_form .form_item .w349{width:349px;}

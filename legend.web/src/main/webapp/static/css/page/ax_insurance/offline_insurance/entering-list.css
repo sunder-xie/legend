@@ -1,0 +1,179 @@
+.wrapper {
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+    padding: 90px 0 200px 0;
+    box-sizing: border-box;
+}
+.contain-wrap {
+    width: 823px;
+    border: #dddddd 1px solid;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+.right {
+    float: right;
+    width: 825px;
+    color: #666666;
+}
+
+.right p.big-title {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dddddd;
+}
+
+.main-wrap{
+    width: 804px;
+    margin: 0 auto;
+}
+.entering-btn{
+    width: 189px;
+    height: 33px;
+    line-height: 33px;
+    background-color: #ff9130;
+    border: 1px solid #ff7800;
+    color: #ffffff;
+    font-size: 14px;
+    margin: 20px 0;
+}
+.search-condition{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+.search-condition .car-input{
+    width: 189px;
+}
+.search-condition .time-choose{
+    width: 88px;
+}
+.state-div{
+    position: relative;
+    display: inline-block;
+}
+.state-div ul.select-ul{
+    /* display: none; */
+    position: absolute;
+    width: 156px;
+    left: 0;
+    top: 34px;
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    min-height: 107px;
+    z-index: 990;
+}
+.state-div ul li{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.select-ul li:hover {
+    background-color: #80a61e;
+    color: #ffffff;
+}
+.search-condition .state-choose{
+    width: 158px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.search-condition .search-btn{
+    width: 88px;
+    height: 34px;
+    background-color: #9fc527;
+    border: 1px solid #7fa700;
+    color: #ffffff;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.entering-list{
+    width: 100%;
+}
+.entering-list>thead>tr{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #f3f3f3;
+}
+
+.entering-list>thead>tr>th,.entering-list>tbody>tr>td{
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.entering-list>tbody>tr>td{
+    height: 30px;
+    vertical-align: middle;
+}
+.entering-list>tbody>tr>td>a{
+    color: #fd3746;
+    text-decoration: underline;
+}
+.org-color{
+    color: #ff7800;
+}
+.pass-green{
+    color: #9fc527;
+}
+.entering-list td .layui-layer-content{
+    min-height: 100px;
+}
+.rejectReason{
+    display: none;
+}
+.rejectReason .reject-head{
+    background-color: #f3f3f3;
+    width: 100%;
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 18px;
+    box-sizing: border-box;
+}
+.rejectReason .reject-content{
+    width: 400px;
+    padding: 20px;
+    font-size: 13px;
+    color: #fd3746;
+}
+.border-bottom{
+    border-bottom: 1px solid #d6d6d6;
+}
+.border-bottom:last-child{
+    border-bottom: none;
+}
+.no-data>td{
+    text-align: center;
+}
+.dis-none{
+    display: none;
+}
+.state-choose-btn{
+    height: 35px;
+    display: inline-block;
+    width: 30px;
+    border-left: solid 1px #c9c9c9;
+    background-color: #ffffff;
+    cursor: pointer;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.s_up{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat 11px 16px;
+}
+.s_down{
+    background: url("../../../../img/page/ax_insurance/up_down.png") no-repeat -14px 16px;
+}

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.marketing.MarketingCaseDao">
+
+    <resultMap id = "BaseResultMap" type = "MarketingCase" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "template_id" property = "templateId" />
+        <result column = "title" property = "title" />
+        <result column = "content" property = "content" />
+        <result column = "status" property = "status" />
+        <result column = "service_num" property = "serviceNum" />
+        <result column = "template_url" property = "templateUrl" />
+        <result column = "img_url" property = "imgUrl" />
+        <result column = "visit_count" property = "visitCount" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            template_id as templateId,
+            title as title,
+            content as content,
+            status as status,
+            service_num as serviceNum,
+            template_url as templateUrl,
+            img_url as imgUrl,
+            visit_count as visitCount,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "templateId != null">
+                    and template_id = #{templateId}
+                </if>
+                <if test = "status != null">
+                    and status = #{status}
+                </if>
+                <if test = "visitCount != null">
+                    and visit_count = #{visitCount}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "templateId != null">
+                    template_id = #{templateId},
+                </if>
+                <if test = "title != null">
+                    title = #{title},
+                </if>
+                <if test = "content != null">
+                    content = #{content},
+                </if>
+                <if test = "status != null">
+                    status = #{status},
+                </if>
+                <if test = "serviceNum != null">
+                    service_num = #{serviceNum},
+                </if>
+                <if test = "templateUrl != null">
+                    template_url = #{templateUrl},
+                </if>
+                <if test = "imgUrl != null">
+                    img_url = #{imgUrl},
+                </if>
+                <if test = "visitCount != null">
+                    visit_count = #{visitCount},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_case
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_marketing_case
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_marketing_case (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "templateId != null">
+                template_id,
+            </if>
+            <if test = "title != null">
+                title,
+            </if>
+            <if test = "content != null">
+                content,
+            </if>
+            <if test = "status != null">
+                status,
+            </if>
+            <if test = "serviceNum != null">
+                service_num,
+            </if>
+            <if test = "templateUrl != null">
+                template_url,
+            </if>
+            <if test = "imgUrl != null">
+                img_url,
+            </if>
+            <if test = "visitCount != null">
+                visit_count,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "templateId != null">
+                #{templateId},
+            </if>
+            <if test = "title != null">
+                #{title},
+            </if>
+            <if test = "content != null">
+                #{content},
+            </if>
+            <if test = "status != null">
+                #{status},
+            </if>
+            <if test = "serviceNum != null">
+                #{serviceNum},
+            </if>
+            <if test = "templateUrl != null">
+                #{templateUrl},
+            </if>
+            <if test = "imgUrl != null">
+                #{imgUrl},
+            </if>
+            <if test = "visitCount != null">
+                #{visitCount},
+            </if>
+        </trim>
+        )
+    </insert>
+
+
+    <!--批量插入-->
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_marketing_case (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            template_id,
+            shop_id,
+            title,
+            content,
+            status,
+            service_num,
+            template_url,
+            img_url,
+            visit_count,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.templateId != null">
+                    #{item.templateId},
+                </if>
+                <if test="item.templateId == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0,
+                </if>
+                <if test="item.title != null">
+                    #{item.title},
+                </if>
+                <if test="item.title == null">
+                    '',
+                </if>
+                <if test="item.content != null">
+                    #{item.content},
+                </if>
+                <if test="item.content == null">
+                    '',
+                </if>
+                <if test="item.status != null">
+                    #{item.status},
+                </if>
+                <if test="item.status == null">
+                    0,
+                </if>
+                <if test="item.serviceNum != null">
+                    #{item.serviceNum},
+                </if>
+                <if test="item.serviceNum == null">
+                    0,
+                </if>
+                <if test="item.templateUrl != null">
+                    #{item.templateUrl},
+                </if>
+                <if test="item.templateUrl == null">
+                    '',
+                </if>
+                <if test="item.imgUrl != null">
+                    #{item.imgUrl},
+                </if>
+                <if test="item.imgUrl == null">
+                    NULL,
+                </if>
+                #{item.visitCount},
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_marketing_case
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+</mapper>

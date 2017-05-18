@@ -1,0 +1,541 @@
+.package {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.package .title {
+	width: 100%;
+	height: 45px;
+	background: #d7d7d7;
+	position: relative;
+}
+
+.package .arrow-down {
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	margin-left: -5px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #5b5d61;
+}
+
+.package .title .title-name {
+	display: inline-block;
+	min-width: 140px;
+	background: #5b5d61;
+	text-align: center;
+	color: #fff;
+	line-height: 45px;
+	font-size: 16px;
+	padding: 0 10px;
+	position: relative;
+}
+
+.package .title .text {
+	float: right;
+	margin-right: 37px;
+	margin-top: 18px;
+}
+
+.package .title button {
+	float: right;
+	width: 75px;
+	height: 33px;
+	border: 1px solid #c1c1c1;
+	background: #fff;
+	margin: 5px 5px auto;
+}
+
+.package ul {
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.package ul li {
+	width: 222px;
+	height: 63px;
+	border: 1px solid #c1c1c1;
+	background: #fff;
+	float: left;
+	margin-right: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+
+.package ul li .uneffictive {
+	position: absolute;
+	top: 9px;
+	right: 27px;
+}
+
+.package ul li .ch_price {
+	width: 158px;
+	height: 38px;
+	display: inline-block;
+	background: url("../img/common/quan.jpg") no-repeat;
+	margin: 12px;
+	margin-right: 5px;
+	color: #ff7926;
+	text-indent: 2em;
+	text-align: center;
+	font-size: 16px;
+	border-right: 1px dashed #cacaca;
+}
+
+.package ul li .ch_price .end_date{
+	width:100%;
+	display:inline-block;
+	font-size:12px;
+	text-align:center;
+	margin-top:12px;
+}
+.package ul li .ch_num{
+	height:38px;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+.package ul li .ch_used {
+	width: 160px;
+	height: 38px;
+	display: inline-block;
+	background: url("../img/common/used.jpg") no-repeat;
+	margin: 12px;
+	margin-right: 7px;
+	text-indent: 3.4em;
+	border-right: 1px dashed #cacaca;
+	color: #999;
+	line-height: 17px;
+}
+
+.package ul li .bigger-used {
+	font-size: 16px;
+	color: #333;
+}
+
+.package ul li .number-used {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -10px;
+	color: #999;
+}
+/*会员卡分类展示*/
+.card {
+	width: 320px;
+	border: 1px solid #c1c1c1;
+	/*padding: 10px 10px 10px 5px;*/
+	box-sizing: border-box;
+	background: #f9f9f9;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+.card .card-top {
+	width: 100%;
+	height: 40px;
+	padding: 15px 12px;
+}
+
+.card .card-top img {
+	float: left;
+	border: 1px solid #fff;
+}
+
+.card .card-top .textbox {
+	float: left;
+}
+
+.card .card-top p {
+	margin: 5px 10px;
+}
+
+.card .card-top .card-number {
+	font-size: 14px;
+	color: #000;
+}
+
+.card .del-table {
+	width: 100%;
+	border-bottom: 1px dotted #999;
+}
+
+.card .del-table th {
+	padding: 5px 12px;
+}
+
+.card .del-table td {
+	padding: 12px;
+	font-size: 15px;
+}
+
+.card .del-table td .green {
+	color: #a6c464;
+}
+
+.card .del-table td .bigger {
+	font-size: 24px;
+}
+
+.card .card-bottom {
+	background: #f2f2f2;
+	width: 100%;
+	overflow: hidden;
+	padding-left: 12px;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+
+.card .card-bottom .my-infor {
+	float: left;
+	line-height: 22px;
+}
+
+.card .card-bottom .my-infor h3 {
+	color: #000;
+}
+
+.card .card-bottom .charge {
+	width: 76px;
+	height: 33px;
+	border: 1px solid #c1c1c1;
+	display: block;
+	float: right;
+	background: #f7f7f7;
+	text-align: center;
+	line-height: 33px;
+	margin-right: 15px;
+}
+/*结算弹出层*/
+.settlement-show {
+	width: 865px;
+	height: auto;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+.settlement-show .title {
+	width: 100%;
+	height: 53px;
+	background: #f5f2e7;
+	border-bottom: 1px solid #ccc;
+}
+
+.settlement-show .title h1 {
+	display: inline-block;
+	margin: 15px 5px 25px 20px;
+	color: #333;
+	font-weight: bolder;
+}
+
+.settlement-show .title .textbox {
+	display: inline-block;
+}
+
+.settlement-show .radius {
+	border: 1px solid #999;
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	text-align: center;
+	line-height: 14px;
+	margin-right: 3px;
+}
+
+.settlement-show .center {
+	width: 100%;
+	height: 410px;
+	padding: 15px 25px 15px 20px;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.settlement-show .center .center-left {
+	width: 385px;
+	float: left;
+	border-right: 1px solid #ccc;
+	padding-right: 20px;
+}
+
+.settlement-show .center .tips {
+	color: #2f00ff;
+	text-decoration: underline;
+	line-height: 22px;
+	margin-bottom: 15px;
+}
+
+.settlement-show .center .myform .label {
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.settlement-show .center .myform .my-input {
+	width: 260px;
+	height: 35px;
+	display: inline-block;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.settlement-show .center .myform .my-input .dazhe {
+	width: 215px;
+	height: 100%;
+	border-right: 1px solid #dadada;
+	padding-left: 5px;
+	margin-right: 14px;
+}
+
+.settlement-show .center .myform .my-input .youhui {
+	width: 250px;
+	height: 100%;
+	padding-left: 5px;
+}
+
+.settlement-show .center .myform .vouchers {
+	width: 122px;
+	height: 35px;
+	padding-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.settlement-show .center .myform .pays-way {
+	width: 126px;
+	height: 35px;
+	padding-left: 5px;
+	margin-right: 2px;
+	margin-left: -3px;
+	display: inline-block;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.settlement-show .center .myform #textarea {
+	width: 255px;
+	height: 67px;
+	padding-left: 5px;
+	margin-left: -3px;
+	display: inline-block;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.settlement-show .center .myform .add-input {
+	color: #90af34;
+	font-size: 24px;
+	font-weight: bolder;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.settlement-show .center .input-box {
+	margin: 10px 0 10px 0;
+}
+
+.settlement-show .center .myform .radius {
+	border: 1px solid #fd5e64;
+	color: #fd5e64;
+	font-weight: bolder;
+}
+
+.settlement-show .center .myform .other {
+	margin-left: 60px;
+}
+
+.settlement-show .bottom {
+	width: 100%;
+	border-top: 1px solid #dadada;
+	background: #fbfbfb;
+	overflow: hidden;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.settlement-show .bottom .bottom-left {
+	float: left;
+	line-height: 22px;
+}
+
+.settlement-show .bottom .bottom-left .red {
+	color: #fd5e64;
+}
+
+.settlement-show .bottom .bottom-right {
+	float: right;
+	margin-top: 12px;
+}
+
+.settlement-show .bottom .bottom-right .bottom-btn {
+	width: 140px;
+	height: 40px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #90af34;
+	color: #fff;
+	text-align: center;
+	margin-right: 15px;
+}
+
+.settlement-show .bottom .bottom-right .cancel-btn {
+	background: #f57d80;
+}
+
+.settlement-show .center-right {
+	width: 397px;
+	float: right;
+	padding: 0 0 10px 10px;
+}
+
+.settlement-show .center-right h3 {
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.settlement-show .center-right .pays-detail {
+	margin-left: 15px;
+}
+
+.settlement-show .center-right .cnumber {
+	width: 250px;
+	height: 35px;
+	display: inline-block;
+	padding-left: 5px;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.settlement-show .center-right .ok-btn {
+	width: 50px;
+	height: 37px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #90af34;
+	color: #fff;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.settlement-show .center-right .bind {
+	width: 70px;
+	height: 37px;
+	display: block;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #90af34;
+	color: #fff;
+	text-align: center;
+	line-height: 37px;
+	margin-top: 10px;
+}
+
+.settlement-show .center-right .card-tab {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.settlement-show .center-right .card-tab .number-box {
+	text-align: center;
+	color: #999;
+	margin-top: 5px;
+}
+
+.settlement-show .center-right .card-tab th {
+	color: #999;
+	padding-bottom: 10px;
+}
+
+.settlement-show .center-right .card-tab th.nic {
+	text-align: center;
+}
+
+.settlement-show .center-right .input-box {
+	margin: 20px 0 20px 0;
+}
+
+.settlement-show .center-right .card-tab .ch_used {
+	width: 87%;
+	height: 38px;
+	display: inline-block;
+	background: url("../img/common/quan.jpg") no-repeat;
+	margin: 6px 0 0 6px;
+	text-indent: 3.4em;
+	border-right: 1px dashed #cacaca;
+	color: #999;
+	line-height: 17px;
+}
+
+.settlement-show .center-right .card-tab .bigger-used {
+	color: #ff7926;
+}
+
+.settlement-show .center-right .card-tab .choice-number {
+	width: 126px;
+	height: 38px;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+	margin-left: 10px;
+	line-height: 42px;
+	margin: auto;
+}
+
+.settlement-show .center-right .card-tab .reduce {
+	width: 40px;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	border-right: 1px solid #dadada;
+	color: #ccc;
+	font-size: 28px;
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.settlement-show .center-right .card-tab .set-green {
+	color: #90af34;
+}
+
+.settlement-show .center-right .card-tab .add {
+	border-left: 1px solid #dadada;
+	border-right: none;
+	float: right;
+}
+
+.settlement-show .center-right .card-tab .checkbox {
+	margin-top: -15px;
+}
+
+.hide {
+	display: none;
+}
+#mgtop-30 {
+	margin-top: -30px;
+}

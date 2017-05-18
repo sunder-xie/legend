@@ -1,0 +1,73 @@
+body {
+    width:980px;
+    font-size:16px;
+    margin:0 auto;
+    padding: 0;
+    background-color:white;
+    color:black;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.head {
+    width:100%;
+}
+.head h2, .head h3 {
+    padding: 0 102px;
+}
+h1, h2,h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+.head div span {
+    display:inline-block;
+    width:320px;
+    margin-right:6px;
+}
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse:collapse;
+    margin-bottom:5px;
+}
+td, th {
+    height:25px;
+    border:1px solid #000;
+}
+th {
+    text-align:center;
+}
+.content {
+    font-weight: bold;
+}
+.long_str {
+    display: inline-block;
+    width:240px;
+}
+.short_str {
+    display: inline-block;
+    width:160px;
+}
+.signature {
+    margin-top:5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.signature span {
+    display: inline-block;
+    margin-right: 6px;
+}
+.sign {
+    width:300px;
+}
+.date {
+    text-align: right;
+    float: right;
+    width:260px;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}

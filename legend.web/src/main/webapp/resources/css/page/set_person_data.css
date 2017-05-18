@@ -1,0 +1,107 @@
+.action-btn a {
+    float: left;
+    margin-right: 10px;
+}
+
+.action-btn {
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    display: block;
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    color: #fff;
+}
+
+.card-btns {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+}
+
+.card-wrapper {
+    position: relative;
+    width: 300px;
+    height: 510px;
+    padding: 10px;
+}
+
+.card-box {
+    position: absolute;
+    width: 300px;
+    height: 464px;
+    background: url("../../../resources/images/badge.png") no-repeat;
+    background-size: contain;
+    border: 1px solid #dcdcdc;
+}
+
+.car-number {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.shape {
+    margin: 14px 50px 0;
+    text-align: center;
+}
+
+.shape img {
+    width: 100%;
+}
+
+.small-car-num {
+    margin-top: 8px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.download-pattern {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -233;
+    opacity: 0;
+    width: 150px;
+    height: 255px;
+}
+.card-tips{
+    position: absolute;
+    bottom:10px;
+    left: 0;
+    padding: 0 15px;
+    line-height: 20px;
+    color: red;
+}
+.delete{
+    color: #f35f62;
+    text-decoration: underline;
+}
+.field_box{
+    position: relative;
+    display: inline-block;
+    width: 175px;
+    height: 40px;
+}
+.field_box input{
+    width: 175px;
+    height: 38px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+.wrapper{
+    height: auto;
+    overflow: visible;!important;
+}

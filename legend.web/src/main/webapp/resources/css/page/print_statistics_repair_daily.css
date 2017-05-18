@@ -1,0 +1,63 @@
+body {
+    font-family: "\9ED1\4F53", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.head {
+    width:100%;
+    background-color:#fff;
+}
+.head h1, .head h3 {
+    padding: 0 102px;
+}
+h1, h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+.headInfo span {
+    display:inline-block;
+    margin-right:6px;
+    white-space: nowrap;
+}
+.headInfo .customName {
+    width:315px;
+}
+.headInfo .salesDate {
+    float:right;
+}
+table {
+    width: 100%;
+    border-collapse:collapse;
+    border:1px solid #000;
+}
+td, th {
+    height:25px;
+    font-size: 14px;
+    border-top:1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.signature {
+    width:100%;
+    padding:10px 0;
+    margin-bottom: 20px;
+    background-color:#fff;
+    overflow: hidden;
+}
+.signature span {
+    display: inline-block;
+    margin-right: 6px;
+}
+.sign_date {
+    float:right;
+}
+
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+.claim{
+    color: #ff0000;
+}

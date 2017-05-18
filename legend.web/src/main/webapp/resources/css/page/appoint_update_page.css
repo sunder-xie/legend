@@ -1,0 +1,130 @@
+/* css 维修详情 */
+.wrapper {
+    overflow: visible;
+}
+
+.d_top {
+    height: 52px;
+    padding-top: 30px;
+}
+.d_top li {
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    background: #f77c7e;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.khxx {
+    border: 1px solid #cdcdcd;
+    padding-bottom: 20px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    position: relative;
+}
+.khxx h2 {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #efefef;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 14px;
+}
+.kh_xc>li, .check_in>li {
+    width: 50%;
+    float: left;
+    line-height: 37px;
+    padding-top: 20px;
+    height: 40px;
+}
+input.car_alias {
+    width:78px;
+    margin-left:10px;
+}
+.kh_xc li.full_row {
+    width:100%;
+}
+input.full_row_input {
+    width:844px;
+}
+.xxqz {
+    display: inline-block;
+    width: 72px;
+    margin-left: 20px;
+}
+.xxsel {
+    width: 367px;
+    height: 39px;
+    line-height: 39px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+select.car_code {
+    width: 268px !important;
+    margin-right: 10px;
+}
+
+.new_customer {
+    width: 90px;
+    height: 37px;
+    line-height: 37px;
+    margin-left: 10px;
+    border: 1px solid #dadada;
+    background:#fff url("../../images/newBtn.png") no-repeat center;
+    border-radius: 5px;
+    color: #666;
+}
+
+.xxtxt {
+    width: 355px;
+    height: 37px;
+    line-height: 37px;
+    background: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 14px;
+    /*color: #666666;*/
+}
+.xxtxb {
+    width: 255px;
+    height: 37px;
+    line-height: 37px;
+    background: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.w268 {
+    width: 268px!important;
+}
+.bottom {
+    margin-bottom: 260px;
+}
+.sug_cp {
+    position: absolute;
+    width: 268px;
+    display: none;
+    z-index: 1111111;
+    background-color: #ffffff;
+    border: 1px solid #dadada;
+}
+.sug_cp span {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+.sug_cp span.current {
+    background: #3875d7;
+    color: #ffffff;
+}

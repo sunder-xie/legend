@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <util:map id = "smsCustomerProcessorMap">
+        <entry key="车牌">
+            <bean class="com.tqmall.legend.facade.sms.newsms.processor.presend.CarPlaceHolderProcessor"/>
+        </entry>
+        <entry key="客户姓名">
+            <bean class="com.tqmall.legend.facade.sms.newsms.processor.presend.CustomerPlaceHolderProcessor"/>
+        </entry>
+    </util:map>
+    <util:map id = "smsPreProcessorMap">
+        <entry key="门店名称">
+            <bean class="com.tqmall.legend.facade.sms.newsms.processor.template.ShopPlaceHolderProcessor"/>
+        </entry>
+        <entry key="门店微信公众号名称">
+            <bean class="com.tqmall.legend.facade.sms.newsms.processor.template.WechatAddressPlaceHolderProcessor"/>
+        </entry>
+        <entry key="领劵链接">
+            <bean class="com.tqmall.legend.facade.sms.newsms.processor.template.CouponUrlPlaceHolderProcessor"/>
+        </entry>
+    </util:map>
+</beans>

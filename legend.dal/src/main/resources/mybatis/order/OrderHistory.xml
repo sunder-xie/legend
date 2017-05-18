@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.order.OrderHistoryDao">
+
+    <resultMap id = "BaseResultMap" type = "OrderHistory" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "shop_id" property = "shopId" />
+        <result column = "order_sn" property = "orderSn" />
+        <result column = "car_license" property = "carLicense" />
+        <result column = "order_create_time" property = "orderCreateTime" />
+        <result column = "receiver" property = "receiver" />
+        <result column = "order_type" property = "orderType" />
+        <result column = "order_status" property = "orderStatus" />
+        <result column = "car_model" property = "carModel" />
+        <result column = "mileage" property = "mileage" />
+        <result column = "vin" property = "vin" />
+        <result column = "engine_no" property = "engineNo" />
+        <result column = "customer_name" property = "customerName" />
+        <result column = "customer_mobile" property = "customerMobile" />
+        <result column = "contact_name" property = "contactName" />
+        <result column = "contact_mobile" property = "contactMobile" />
+        <result column = "service_name" property = "serviceName" />
+        <result column = "goods_name" property = "goodsName" />
+        <result column = "service_amount" property = "serviceAmount" />
+        <result column = "service_discount" property = "serviceDiscount" />
+        <result column = "goods_amount" property = "goodsAmount" />
+        <result column = "goods_discount" property = "goodsDiscount" />
+        <result column = "discount" property = "discount" />
+        <result column = "payable_amount" property = "payableAmount" />
+        <result column = "discount_amount" property = "discountAmount" />
+        <result column = "actual_payable_amount" property = "actualPayableAmount" />
+        <result column = "pay_amount" property = "payAmount" />
+        <result column = "sign_amount" property = "signAmount" />
+        <result column = "operator_name" property = "operatorName" />
+        <result column = "worker" property = "worker" />
+        <result column = "pay_name" property = "payName" />
+        <result column = "pay_time" property = "payTime" />
+        <result column = "finish_time" property = "finishTime" />
+        <result column = "remark" property = "remark" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            shop_id as shopId,
+            order_sn as orderSn,
+            car_license as carLicense,
+            order_create_time as orderCreateTime,
+            receiver as receiver,
+            order_type as orderType,
+            order_status as orderStatus,
+            car_model as carModel,
+            mileage as mileage,
+            vin as vin,
+            engine_no as engineNo,
+            customer_name as customerName,
+            customer_mobile as customerMobile,
+            contact_name as contactName,
+            contact_mobile as contactMobile,
+            service_name as serviceName,
+            goods_name as goodsName,
+            service_amount as serviceAmount,
+            service_discount as serviceDiscount,
+            goods_amount as goodsAmount,
+            goods_discount as goodsDiscount,
+            discount as discount,
+            payable_amount as payableAmount,
+            discount_amount as discountAmount,
+            actual_payable_amount as actualPayableAmount,
+            pay_amount as payAmount,
+            sign_amount as signAmount,
+            operator_name as operatorName,
+            worker as worker,
+            pay_name as payName,
+            pay_time as payTime,
+            finish_time as finishTime,
+            remark as remark,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test = "orderSn != null">
+                    and order_sn = #{orderSn}
+                </if>
+                <if test = "carLicense != null">
+                    and car_license = #{carLicense}
+                </if>
+                <if test = "orderCreateTime != null">
+                    and order_create_time = #{orderCreateTime}
+                </if>
+                <if test = "receiver != null">
+                    and receiver = #{receiver}
+                </if>
+                <if test = "orderType != null">
+                    and order_type = #{orderType}
+                </if>
+                <if test = "orderStatus != null">
+                    and order_status = #{orderStatus}
+                </if>
+                <if test = "carModel != null">
+                    and car_model = #{carModel}
+                </if>
+                <if test = "mileage != null">
+                    and mileage = #{mileage}
+                </if>
+                <if test = "vin != null">
+                    and vin = #{vin}
+                </if>
+                <if test = "engineNo != null">
+                    and engine_no = #{engineNo}
+                </if>
+                <if test = "customerName != null">
+                    and customer_name = #{customerName}
+                </if>
+                <if test = "customerMobile != null">
+                    and customer_mobile = #{customerMobile}
+                </if>
+                <if test = "contactName != null">
+                    and contact_name = #{contactName}
+                </if>
+                <if test = "contactMobile != null">
+                    and contact_mobile = #{contactMobile}
+                </if>
+                <if test = "serviceName != null">
+                    and service_name = #{serviceName}
+                </if>
+                <if test = "goodsName != null">
+                    and goods_name = #{goodsName}
+                </if>
+                <if test = "serviceAmount != null">
+                    and service_amount = #{serviceAmount}
+                </if>
+                <if test = "serviceDiscount != null">
+                    and service_discount = #{serviceDiscount}
+                </if>
+                <if test = "goodsAmount != null">
+                    and goods_amount = #{goodsAmount}
+                </if>
+                <if test = "goodsDiscount != null">
+                    and goods_discount = #{goodsDiscount}
+                </if>
+                <if test = "discount != null">
+                    and discount = #{discount}
+                </if>
+                <if test = "payableAmount != null">
+                    and payable_amount = #{payableAmount}
+                </if>
+                <if test = "discountAmount != null">
+                    and discount_amount = #{discountAmount}
+                </if>
+                <if test = "actualPayableAmount != null">
+                    and actual_payable_amount = #{actualPayableAmount}
+                </if>
+                <if test = "payAmount != null">
+                    and pay_amount = #{payAmount}
+                </if>
+                <if test = "signAmount != null">
+                    and sign_amount = #{signAmount}
+                </if>
+                <if test = "operatorName != null">
+                    and operator_name = #{operatorName}
+                </if>
+                <if test = "worker != null">
+                    and worker = #{worker}
+                </if>
+                <if test = "payName != null">
+                    and pay_name = #{payName}
+                </if>
+                <if test = "payTime != null">
+                    and pay_time = #{payTime}
+                </if>
+                <if test = "finishTime != null">
+                    and finish_time = #{finishTime}
+                </if>
+                <if test = "remark != null">
+                    and remark = #{remark}
+                </if>
+                <if test = "carLicenseLike != null">
+                    AND car_license LIKE concat('%',#{carLicenseLike},'%')
+                </if>
+                <if test = "customerNameLike != null">
+                    AND customer_name LIKE concat('%',#{customerNameLike},'%')
+                </if>
+                <if test = "customerMobileLike">
+                    AND customer_mobile LIKE concat('%',#{customerMobileLike},'%')
+
+                </if>
+                <if test = "startTime != null">
+                    <![CDATA[AND order_create_time >= #{startTime}]]>
+                </if>
+                <if test = "endTime != null">
+                    <![CDATA[AND order_create_time <= #{endTime}]]>
+                </if>
+                <if test = "receiverLike != null">
+                    AND receiver LIKE concat('%',#{receiverLike},'%')
+                </if>
+                <if test = "orderStatusLike != null">
+                    AND order_status LIKE concat('%',#{orderStatusLike},'%')
+                </if>
+
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test = "orderSn != null">
+                    order_sn = #{orderSn},
+                </if>
+                <if test = "carLicense != null">
+                    car_license = #{carLicense},
+                </if>
+                <if test = "orderCreateTime != null">
+                    order_create_time = #{orderCreateTime},
+                </if>
+                <if test = "receiver != null">
+                    receiver = #{receiver},
+                </if>
+                <if test = "orderType != null">
+                    order_type = #{orderType},
+                </if>
+                <if test = "orderStatus != null">
+                    order_status = #{orderStatus},
+                </if>
+                <if test = "carModel != null">
+                    car_model = #{carModel},
+                </if>
+                <if test = "mileage != null">
+                    mileage = #{mileage},
+                </if>
+                <if test = "vin != null">
+                    vin = #{vin},
+                </if>
+                <if test = "engineNo != null">
+                    engine_no = #{engineNo},
+                </if>
+                <if test = "customerName != null">
+                    customer_name = #{customerName},
+                </if>
+                <if test = "customerMobile != null">
+                    customer_mobile = #{customerMobile},
+                </if>
+                <if test = "contactName != null">
+                    contact_name = #{contactName},
+                </if>
+                <if test = "contactMobile != null">
+                    contact_mobile = #{contactMobile},
+                </if>
+                <if test = "serviceName != null">
+                    service_name = #{serviceName},
+                </if>
+                <if test = "goodsName != null">
+                    goods_name = #{goodsName},
+                </if>
+                <if test = "serviceAmount != null">
+                    service_amount = #{serviceAmount},
+                </if>
+                <if test = "serviceDiscount != null">
+                    service_discount = #{serviceDiscount},
+                </if>
+                <if test = "goodsAmount != null">
+                    goods_amount = #{goodsAmount},
+                </if>
+                <if test = "goodsDiscount != null">
+                    goods_discount = #{goodsDiscount},
+                </if>
+                <if test = "discount != null">
+                    discount = #{discount},
+                </if>
+                <if test = "payableAmount != null">
+                    payable_amount = #{payableAmount},
+                </if>
+                <if test = "discountAmount != null">
+                    discount_amount = #{discountAmount},
+                </if>
+                <if test = "actualPayableAmount != null">
+                    actual_payable_amount = #{actualPayableAmount},
+                </if>
+                <if test = "payAmount != null">
+                    pay_amount = #{payAmount},
+                </if>
+                <if test = "signAmount != null">
+                    sign_amount = #{signAmount},
+                </if>
+                <if test = "operatorName != null">
+                    operator_name = #{operatorName},
+                </if>
+                <if test = "worker != null">
+                    worker = #{worker},
+                </if>
+                <if test = "payName != null">
+                    pay_name = #{payName},
+                </if>
+                <if test = "payTime != null">
+                    pay_time = #{payTime},
+                </if>
+                <if test = "finishTime != null">
+                    finish_time = #{finishTime},
+                </if>
+                <if test = "remark != null">
+                    remark = #{remark},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_order_history
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_order_history
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_order_history
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_order_history
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_order_history
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_order_history
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_order_history
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_order_history (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "shopId != null">
+                shop_id,
+            </if>
+            <if test = "orderSn != null">
+                order_sn,
+            </if>
+            <if test = "carLicense != null">
+                car_license,
+            </if>
+            <if test = "orderCreateTime != null">
+                order_create_time,
+            </if>
+            <if test = "receiver != null">
+                receiver,
+            </if>
+            <if test = "orderType != null">
+                order_type,
+            </if>
+            <if test = "orderStatus != null">
+                order_status,
+            </if>
+            <if test = "carModel != null">
+                car_model,
+            </if>
+            <if test = "mileage != null">
+                mileage,
+            </if>
+            <if test = "vin != null">
+                vin,
+            </if>
+            <if test = "engineNo != null">
+                engine_no,
+            </if>
+            <if test = "customerName != null">
+                customer_name,
+            </if>
+            <if test = "customerMobile != null">
+                customer_mobile,
+            </if>
+            <if test = "contactName != null">
+                contact_name,
+            </if>
+            <if test = "contactMobile != null">
+                contact_mobile,
+            </if>
+            <if test = "serviceName != null">
+                service_name,
+            </if>
+            <if test = "goodsName != null">
+                goods_name,
+            </if>
+            <if test = "serviceAmount != null">
+                service_amount,
+            </if>
+            <if test = "serviceDiscount != null">
+                service_discount,
+            </if>
+            <if test = "goodsAmount != null">
+                goods_amount,
+            </if>
+            <if test = "goodsDiscount != null">
+                goods_discount,
+            </if>
+            <if test = "discount != null">
+                discount,
+            </if>
+            <if test = "payableAmount != null">
+                payable_amount,
+            </if>
+            <if test = "discountAmount != null">
+                discount_amount,
+            </if>
+            <if test = "actualPayableAmount != null">
+                actual_payable_amount,
+            </if>
+            <if test = "payAmount != null">
+                pay_amount,
+            </if>
+            <if test = "signAmount != null">
+                sign_amount,
+            </if>
+            <if test = "operatorName != null">
+                operator_name,
+            </if>
+            <if test = "worker != null">
+                worker,
+            </if>
+            <if test = "payName != null">
+                pay_name,
+            </if>
+            <if test = "payTime != null">
+                pay_time,
+            </if>
+            <if test = "finishTime != null">
+                finish_time,
+            </if>
+            <if test = "remark != null">
+                remark,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "shopId != null">
+                #{shopId},
+            </if>
+            <if test = "orderSn != null">
+                #{orderSn},
+            </if>
+            <if test = "carLicense != null">
+                #{carLicense},
+            </if>
+            <if test = "orderCreateTime != null">
+                #{orderCreateTime},
+            </if>
+            <if test = "receiver != null">
+                #{receiver},
+            </if>
+            <if test = "orderType != null">
+                #{orderType},
+            </if>
+            <if test = "orderStatus != null">
+                #{orderStatus},
+            </if>
+            <if test = "carModel != null">
+                #{carModel},
+            </if>
+            <if test = "mileage != null">
+                #{mileage},
+            </if>
+            <if test = "vin != null">
+                #{vin},
+            </if>
+            <if test = "engineNo != null">
+                #{engineNo},
+            </if>
+            <if test = "customerName != null">
+                #{customerName},
+            </if>
+            <if test = "customerMobile != null">
+                #{customerMobile},
+            </if>
+            <if test = "contactName != null">
+                #{contactName},
+            </if>
+            <if test = "contactMobile != null">
+                #{contactMobile},
+            </if>
+            <if test = "serviceName != null">
+                #{serviceName},
+            </if>
+            <if test = "goodsName != null">
+                #{goodsName},
+            </if>
+            <if test = "serviceAmount != null">
+                #{serviceAmount},
+            </if>
+            <if test = "serviceDiscount != null">
+                #{serviceDiscount},
+            </if>
+            <if test = "goodsAmount != null">
+                #{goodsAmount},
+            </if>
+            <if test = "goodsDiscount != null">
+                #{goodsDiscount},
+            </if>
+            <if test = "discount != null">
+                #{discount},
+            </if>
+            <if test = "payableAmount != null">
+                #{payableAmount},
+            </if>
+            <if test = "discountAmount != null">
+                #{discountAmount},
+            </if>
+            <if test = "actualPayableAmount != null">
+                #{actualPayableAmount},
+            </if>
+            <if test = "payAmount != null">
+                #{payAmount},
+            </if>
+            <if test = "signAmount != null">
+                #{signAmount},
+            </if>
+            <if test = "operatorName != null">
+                #{operatorName},
+            </if>
+            <if test = "worker != null">
+                #{worker},
+            </if>
+            <if test = "payName != null">
+                #{payName},
+            </if>
+            <if test = "payTime != null">
+                #{payTime},
+            </if>
+            <if test = "finishTime != null">
+                #{finishTime},
+            </if>
+            <if test = "remark != null">
+                #{remark},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_order_history
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_order_history (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            shop_id,
+            order_sn,
+            car_license,
+            order_create_time,
+            receiver,
+            order_type,
+            order_status,
+            car_model,
+            mileage,
+            vin,
+            engine_no,
+            customer_name,
+            customer_mobile,
+            contact_name,
+            contact_mobile,
+            service_name,
+            goods_name,
+            service_amount,
+            service_discount,
+            goods_amount,
+            goods_discount,
+            discount,
+            payable_amount,
+            discount_amount,
+            actual_payable_amount,
+            pay_amount,
+            sign_amount,
+            operator_name,
+            worker,
+            pay_name,
+            pay_time,
+            finish_time,
+            remark,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    NULL ,
+                </if>
+                <if test="item.orderSn != null">
+                    #{item.orderSn},
+                </if>
+                <if test="item.orderSn == null">
+                    NULL ,
+                </if>
+                <if test="item.carLicense != null">
+                    #{item.carLicense},
+                </if>
+                <if test="item.carLicense == null">
+                    NULL ,
+                </if>
+                <if test="item.orderCreateTime != null">
+                    #{item.orderCreateTime},
+                </if>
+                <if test="item.orderCreateTime == null">
+                    NULL ,
+                </if>
+                <if test="item.receiver != null">
+                    #{item.receiver},
+                </if>
+                <if test="item.receiver == null">
+                    NULL ,
+                </if>
+                <if test="item.orderType != null">
+                    #{item.orderType},
+                </if>
+                <if test="item.orderType == null">
+                    NULL ,
+                </if>
+                <if test="item.orderStatus != null">
+                    #{item.orderStatus},
+                </if>
+                <if test="item.orderStatus == null">
+                    NULL ,
+                </if>
+                <if test="item.carModel != null">
+                    #{item.carModel},
+                </if>
+                <if test="item.carModel == null">
+                    NULL ,
+                </if>
+                <if test="item.mileage != null">
+                    #{item.mileage},
+                </if>
+                <if test="item.mileage == null">
+                    NULL ,
+                </if>
+                <if test="item.vin != null">
+                    #{item.vin},
+                </if>
+                <if test="item.vin == null">
+                    NULL ,
+                </if>
+                <if test="item.engineNo != null">
+                    #{item.engineNo},
+                </if>
+                <if test="item.engineNo == null">
+                    NULL ,
+                </if>
+                <if test="item.customerName != null">
+                    #{item.customerName},
+                </if>
+                <if test="item.customerName == null">
+                    NULL ,
+                </if>
+                <if test="item.customerMobile != null">
+                    #{item.customerMobile},
+                </if>
+                <if test="item.customerMobile == null">
+                    NULL ,
+                </if>
+                <if test="item.contactName != null">
+                    #{item.contactName},
+                </if>
+                <if test="item.contactName == null">
+                    NULL ,
+                </if>
+                <if test="item.contactMobile != null">
+                    #{item.contactMobile},
+                </if>
+                <if test="item.contactMobile == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceName != null">
+                    #{item.serviceName},
+                </if>
+                <if test="item.serviceName == null">
+                    NULL ,
+                </if>
+                <if test="item.goodsName != null">
+                    #{item.goodsName},
+                </if>
+                <if test="item.goodsName == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceAmount != null">
+                    #{item.serviceAmount},
+                </if>
+                <if test="item.serviceAmount == null">
+                    NULL ,
+                </if>
+                <if test="item.serviceDiscount != null">
+                    #{item.serviceDiscount},
+                </if>
+                <if test="item.serviceDiscount == null">
+                    NULL ,
+                </if>
+                <if test="item.goodsAmount != null">
+                    #{item.goodsAmount},
+                </if>
+                <if test="item.goodsAmount == null">
+                    NULL ,
+                </if>
+                <if test="item.goodsDiscount != null">
+                    #{item.goodsDiscount},
+                </if>
+                <if test="item.goodsDiscount == null">
+                    NULL ,
+                </if>
+                <if test="item.discount != null">
+                    #{item.discount},
+                </if>
+                <if test="item.discount == null">
+                    NULL ,
+                </if>
+                <if test="item.payableAmount != null">
+                    #{item.payableAmount},
+                </if>
+                <if test="item.payableAmount == null">
+                    NULL ,
+                </if>
+                <if test="item.discountAmount != null">
+                    #{item.discountAmount},
+                </if>
+                <if test="item.discountAmount == null">
+                    NULL ,
+                </if>
+                <if test="item.actualPayableAmount != null">
+                    #{item.actualPayableAmount},
+                </if>
+                <if test="item.actualPayableAmount == null">
+                    NULL ,
+                </if>
+                <if test="item.payAmount != null">
+                    #{item.payAmount},
+                </if>
+                <if test="item.payAmount == null">
+                    NULL ,
+                </if>
+                <if test="item.signAmount != null">
+                    #{item.signAmount},
+                </if>
+                <if test="item.signAmount == null">
+                    NULL ,
+                </if>
+                <if test="item.operatorName != null">
+                    #{item.operatorName},
+                </if>
+                <if test="item.operatorName == null">
+                    NULL ,
+                </if>
+                <if test="item.worker != null">
+                    #{item.worker},
+                </if>
+                <if test="item.worker == null">
+                    NULL ,
+                </if>
+                <if test="item.payName != null">
+                    #{item.payName},
+                </if>
+                <if test="item.payName == null">
+                    NULL ,
+                </if>
+                <if test="item.payTime != null">
+                    #{item.payTime},
+                </if>
+                <if test="item.payTime == null">
+                    NULL ,
+                </if>
+                <if test="item.finishTime != null">
+                    #{item.finishTime},
+                </if>
+                <if test="item.finishTime == null">
+                    NULL ,
+                </if>
+                <if test="item.remark != null">
+                    #{item.remark},
+                </if>
+                <if test="item.remark == null">
+                    NULL ,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="findOrderHistoryByOrderSn" resultMap="BaseResultMap">
+        select id,order_sn,shop_id
+        from legend_order_history
+        where is_deleted = 'N'
+        and shop_id = #{shopId}
+        and order_sn in
+        <foreach collection="orderSn" index="index" item="tag" open="(" close=")" separator=",">
+            #{tag}
+        </foreach>
+    </select>
+
+</mapper>

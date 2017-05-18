@@ -1,0 +1,94 @@
+.content-head {
+    border-left: 1px solid #ddd;
+}
+
+.content-head .tab-item {
+    border-bottom: 0;
+    cursor: pointer;
+}
+
+.search-form .input-width-155 .yqx-input {
+    width: 155px;
+}
+
+.yqx-input {
+    line-height: 28px;
+}
+
+.search-form .yqx-input-middle{
+    width: 144.5px;
+}
+.show-grid.input-margin-10 .input-group{
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.goods-content .btn-group {
+    position: absolute;
+    right: 10px;
+    top: 90px;
+}
+
+.margin-bt-70 {
+    margin-bottom: 70px;
+}
+
+.btn-group .show-more {
+    text-align: right;
+    margin: 10px 0;
+}
+
+.show-more .absolute{
+    position: absolute;
+    bottom: -17px;
+    right: 0;
+}
+
+.show-more i {
+    cursor: pointer;
+}
+
+.more-options {
+    margin-bottom: 10px;
+}
+
+.services-content .selects-box .form-item {
+    width: 144.5px;
+}
+.selects-box .form-item {
+    width: 138px;
+}
+
+.selects-box .form-item .yqx-input {
+    padding-right: 35px;
+}
+
+.current-item, .tab-item:hover {
+    z-index: 2;
+}
+
+.btn-group {
+    margin-right: 6px;
+}
+
+.btn-group .yqx-btn {
+    padding: 0 20px;
+}
+.table-box{
+    border: 1px solid #ddd;
+    border-bottom: 0;
+}
+.total-box{
+    border: 1px solid #ddd;
+    border-top: 0;
+    line-height: 30px;
+    background: #fff;
+    padding: 0 10px;
+}
+.total-box span{
+    margin-right: 15px;
+}

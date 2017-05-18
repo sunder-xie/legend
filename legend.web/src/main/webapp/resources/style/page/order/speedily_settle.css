@@ -1,0 +1,58 @@
+/*工单价目明细表格 start*/
+.qxy_group .group_head{position: relative;}
+.arrow_down{background: url(../../img/common/arrow_down.png) center no-repeat;display: block; width: 20px; height: 20px; margin-top: 8px; margin-right: 20px; float: right;} 
+.arrow_up{background: url(../../img/common/arrow_up.png) center no-repeat;display: block; width: 20px; height: 20px; margin-top: 8px; margin-right: 20px; float: right;} 
+.group_line{background: #cdcdcd;height:1px;position: absolute;top:50%;width: 780px;left:145px;border-bottom: 1px solid #fbfbfb;}
+table{width: 100%;}
+table td,table th{vertical-align: middle;text-align: center;}
+table th{height:30px;border-bottom:1px solid #c5c9b8;}
+table td{height:36px;border-left:1px solid #c5c9b8;border-bottom:1px solid #c5c9b8;background: #fff;color: #333;}
+table th.border_right_show,
+table td.border_right_show{border-right:1px solid #c5c9b8;}
+.money_number{font-size: 16px;color: #fc464d;}
+
+.list_money_count{margin-top: 20px;}
+/*工单价目明细表格 end**/
+
+/*工单收款信息 start*/
+.order_pay_info{}
+.order_pay_info .row_label{float: left;width: 70px; margin-right: 25px;height:25px;line-height: 25px;}
+.order_money_count{float: left;height:37px;line-height: 37px;}
+.order_pay_info .row_label{height:37px;line-height: 37px;}
+.coupon_box{float: left;line-height: 37px;}
+.coupon_option{float: left;}
+.coupon_option .service_name{float: left;display: block;margin: 12px 20px auto 10px;color: #999999;width: 80px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.coupon_option .unit_input{margin:12px 20px auto auto;}
+.coupon_option .unit_input input{width: 90px;}
+.coupon_option .unit_input span{background: #eee;cursor: not-allowed;color: #999;}
+.row_label.zhekou_box,
+.row_label.card_box,
+.row_label.youhui_box{cursor: pointer;}
+.row_label .checkbox{background: url(../../img/page/order/checkbox1.png) no-repeat left center;display: inline-block;width:17px;height:13px;vertical-align: middle;cursor: pointer;}
+.row_label .checkboxed{background: url(../../img/page/order/checkbox2.png) no-repeat left center;display: inline-block;width:17px;height:13px;vertical-align: middle;cursor: pointer;}
+.card_youhui{padding-bottom: 20px;}
+/*--会员卡 start---*/
+.card_info{line-height: 37px;height: 37px;}
+.card_info span{margin-right: 10px;vertical-align:middle;}
+.card_info label{margin-right: 10px;}
+.card_info .fl{float: left;line-height: 37px;height: 37px;margin-right: 6px;}
+/*.card_info input{height:35px;line-height: 35px;border:1px solid #c9c9c9;border-radius: 3px;width: 80px;padding-left: 0 5px;}*/
+/*--会员卡 end---*/
+/*优惠券选中影响后面数量和金额的样式*/
+.pre_checked .service_name{color: #333;}
+.pre_checked .unit_input span{background: #fff;cursor: default;color: #333;}
+/*实际应收金额*/
+.receive_money{padding-bottom: 10px;}
+.receive_money span{margin-right: 15px;}
+/*付款方式*/
+/*.settle_method .row_label{width: 60px;}*/
+.settle_method{padding-bottom: 20px;}
+.settle_method .method_list{float: left;}
+.settle_method .method_list li{margin-bottom: 10px;}
+.settle_method .method{margin-right: 10px;float: left;}
+.settle_method .method input{ width: 150px;}
+.settle_method .method_option{float: left;}
+/*工单收款信息 end */
+/*隐藏下拉chosen搜索框*/
+.chosen-container-single .chosen-search {display:none;}
+

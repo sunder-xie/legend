@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.tqmall.legend.dao.subsidy.SubsidyGoodsDao">
+
+    <resultMap id = "BaseResultMap" type = "SubsidyGoods" extends = "COMMON.BASE_RESULT_MAP">
+        <result column = "act_id" property = "actId" />
+        <result column = "subsidy_act_id" property = "subsidyActId" />
+        <result column = "cat_id" property = "catId" />
+        <result column = "cat_name" property = "catName" />
+        <result column = "good_brand" property = "goodBrand" />
+        <result column = "good_id" property = "goodId" />
+        <result column = "good_name" property = "goodName" />
+        <result column = "subsidy_amount" property = "subsidyAmount" />
+        <result column = "least_unit" property = "leastUnit" />
+        <result column = "order_start_time" property = "orderStartTime" />
+        <result column = "order_end_time" property = "orderEndTime" />
+    </resultMap>
+
+    <sql id = "BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_COLUMN_LIST" />
+            act_id as actId,
+            subsidy_act_id as subsidyActId,
+            cat_id as catId,
+            cat_name as catName,
+            good_brand as goodBrand,
+            good_id as goodId,
+            good_name as goodName,
+            subsidy_amount as subsidyAmount,
+            least_unit as leastUnit,
+            order_start_time as orderStartTime,
+            order_end_time as orderEndTime,
+        </trim>
+    </sql>
+
+    <sql id = "BaseWhereClause">
+        <where>
+            <trim prefixOverrides = "and">
+                <include refid = "COMMON.BASE_WHERE_CLAUSE" />
+                <if test = "actId != null">
+                    and act_id = #{actId}
+                </if>
+                <if test = "subsidyActId != null">
+                    and subsidy_act_id = #{subsidyActId}
+                </if>
+                <if test = "catId != null">
+                    and cat_id = #{catId}
+                </if>
+                <if test = "catName != null">
+                    and cat_name = #{catName}
+                </if>
+                <if test = "goodBrand != null">
+                    and good_brand = #{goodBrand}
+                </if>
+                <if test = "goodId != null">
+                    and good_id = #{goodId}
+                </if>
+                <if test = "goodName != null">
+                    and good_name = #{goodName}
+                </if>
+                <if test = "subsidyAmount != null">
+                    and subsidy_amount = #{subsidyAmount}
+                </if>
+                <if test = "leastUnit != null">
+                    and least_unit = #{leastUnit}
+                </if>
+                <if test = "orderStartTime != null">
+                    and order_start_time = #{orderStartTime}
+                </if>
+                <if test = "orderEndTime != null">
+                    and order_end_time = #{orderEndTime}
+                </if>
+                <if test = "orderTime != null">
+                    <![CDATA[
+                      and order_start_time <= #{orderTime}
+                    ]]>
+                </if>
+                <if test = "orderTime != null">
+                    <![CDATA[
+                      and order_end_time >= #{orderTime}
+                    ]]>
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id = "BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid = "COMMON.BASE_UPDATE_SET" />
+                <if test = "actId != null">
+                    act_id = #{actId},
+                </if>
+                <if test = "subsidyActId != null">
+                    subsidy_act_id = #{subsidyActId},
+                </if>
+                <if test = "catId != null">
+                    cat_id = #{catId},
+                </if>
+                <if test = "catName != null">
+                    cat_name = #{catName},
+                </if>
+                <if test = "goodBrand != null">
+                    good_brand = #{goodBrand},
+                </if>
+                <if test = "goodId != null">
+                    good_id = #{goodId},
+                </if>
+                <if test = "goodName != null">
+                    good_name = #{goodName},
+                </if>
+                <if test = "subsidyAmount != null">
+                    subsidy_amount = #{subsidyAmount},
+                </if>
+                <if test = "leastUnit != null">
+                    least_unit = #{leastUnit},
+                </if>
+                <if test = "orderStartTime != null">
+                    order_start_time = #{orderStartTime},
+                </if>
+                <if test = "orderEndTime != null">
+                    order_end_time = #{orderEndTime},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id = "selectCount" resultType = "java.lang.Integer">
+        select count(id)
+        from legend_subsidy_goods
+        <include refid = "BaseWhereClause" />
+    </select>
+
+    <!-- 查询 -->
+    <select id = "select" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_subsidy_goods
+        <include refid = "BaseWhereClause" />
+        <include refid = "COMMON.ORDER_BY" />
+        <include refid = "COMMON.LIMIT" />
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id = "selectById" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_subsidy_goods
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id = "selectByIds" resultMap = "BaseResultMap">
+        select
+        <include refid = "BaseColumnList" />
+        from legend_subsidy_goods
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id = "deleteByIds">
+        update legend_subsidy_goods
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection = "array" index = "index" item = "tag" separator = ",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id = "deleteById">
+        update legend_subsidy_goods
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id = "delete">
+        update legend_subsidy_goods
+        set is_deleted='Y'
+        <include refid = "BaseWhereClause" />
+    </delete>
+
+    <!-- 添加   -->
+    <insert id = "insert" useGeneratedKeys = "true" keyProperty = "id">
+        insert into legend_subsidy_goods (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_COLUMN" />
+            <if test = "actId != null">
+                act_id,
+            </if>
+            <if test = "subsidyActId != null">
+                subsidy_act_id,
+            </if>
+            <if test = "catId != null">
+                cat_id,
+            </if>
+            <if test = "catName != null">
+                cat_name,
+            </if>
+            <if test = "goodBrand != null">
+                good_brand,
+            </if>
+            <if test = "goodId != null">
+                good_id,
+            </if>
+            <if test = "goodName != null">
+                good_name,
+            </if>
+            <if test = "subsidyAmount != null">
+                subsidy_amount,
+            </if>
+            <if test = "leastUnit != null">
+                least_unit,
+            </if>
+            <if test = "orderStartTime != null">
+                order_start_time,
+            </if>
+            <if test = "orderEndTime != null">
+                order_end_time,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid = "COMMON.BASE_INSERT_VALUE" />
+            <if test = "actId != null">
+                #{actId},
+            </if>
+            <if test = "subsidyActId != null">
+                #{subsidyActId},
+            </if>
+            <if test = "catId != null">
+                #{catId},
+            </if>
+            <if test = "catName != null">
+                #{catName},
+            </if>
+            <if test = "goodBrand != null">
+                #{goodBrand},
+            </if>
+            <if test = "goodId != null">
+                #{goodId},
+            </if>
+            <if test = "goodName != null">
+                #{goodName},
+            </if>
+            <if test = "subsidyAmount != null">
+                #{subsidyAmount},
+            </if>
+            <if test = "leastUnit != null">
+                #{leastUnit},
+            </if>
+            <if test = "orderStartTime != null">
+                #{orderStartTime},
+            </if>
+            <if test = "orderEndTime != null">
+                #{orderEndTime},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id = "updateById">
+        update legend_subsidy_goods
+        <include refid = "BaseUpdateSet" />
+        where id = #{id}
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_subsidy_goods (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            act_id,
+            subsidy_act_id,
+            cat_id,
+            cat_name,
+            good_brand,
+            good_id,
+            good_name,
+            subsidy_amount,
+            least_unit,
+            order_start_time,
+            order_end_time,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.actId != null">
+                    #{item.actId},
+                </if>
+                <if test="item.actId == null">
+                    0 ,
+                </if>
+                <if test="item.subsidyActId != null">
+                    #{item.subsidyActId},
+                </if>
+                <if test="item.subsidyActId == null">
+                    0 ,
+                </if>
+                <if test="item.catId != null">
+                    #{item.catId},
+                </if>
+                <if test="item.catId == null">
+                    0 ,
+                </if>
+                <if test="item.catName != null">
+                    #{item.catName},
+                </if>
+                <if test="item.catName == null">
+                    '',
+                </if>
+                <if test="item.goodBrand != null">
+                    #{item.goodBrand},
+                </if>
+                <if test="item.goodBrand == null">
+                    '',
+                </if>
+                <if test="item.goodId != null">
+                    #{item.goodId},
+                </if>
+                <if test="item.goodId == null">
+                    0 ,
+                </if>
+                <if test="item.goodName != null">
+                    #{item.goodName},
+                </if>
+                <if test="item.goodName == null">
+                    '',
+                </if>
+                <if test="item.subsidyAmount != null">
+                    #{item.subsidyAmount},
+                </if>
+                <if test="item.subsidyAmount == null">
+                    0.00,
+                </if>
+                <if test="item.leastUnit != null">
+                    #{item.leastUnit},
+                </if>
+                <if test="item.leastUnit == null">
+                    0 ,
+                </if>
+                <if test="item.orderStartTime != null">
+                    #{item.orderStartTime},
+                </if>
+                <if test="item.orderStartTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+                <if test="item.orderEndTime != null">
+                    #{item.orderEndTime},
+                </if>
+                <if test="item.orderEndTime == null">
+                    '1970-01-01 12:00:00',
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+
+</mapper>

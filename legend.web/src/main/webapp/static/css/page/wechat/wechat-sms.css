@@ -1,0 +1,46 @@
+.row {
+    position: relative;
+    margin-bottom: 10px;
+}
+.sms-info {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: bottom;
+}
+.sms-info .link-sms {
+    color: #9fc527;
+    text-decoration: underline;
+}
+.sms-info .link-sms:hover {
+    text-decoration: none;
+}
+.link-export {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    cursor: pointer;
+}
+.table-box {
+    border: 1px solid #ddd;
+}
+.yqx-table th:first-child, .yqx-table td:first-child {
+    width: 50px;
+}
+.yqx-table th:nth-child(2), .yqx-table td:nth-child(2) {
+    width: 100px;
+}
+.yqx-table th:nth-child(3), .yqx-table td:nth-child(3) {
+    width: 150px;
+}
+.text-danger {
+    color: #f77c7e;
+}
+.send-sms-dialog {
+    width: 700px;
+}
+.rest-sms-box {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    font-size: 14px;
+}

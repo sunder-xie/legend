@@ -1,0 +1,240 @@
+.Z-right{
+    width: 826px;
+    height: auto;
+    margin-bottom: 10px;
+    float: left;
+}
+.detail_text{
+    height: 32px;
+    font-size: 16px;
+    color: #333;
+}
+.DetailTab{
+    height: 40px;
+    line-height: 40px;
+    font-family: Simsun, SimHei, sans-serif;
+    font-size: 12px;
+    color: #535353;
+}
+.DetailTab span{
+    display: block;
+    width: 110px;
+    height:40px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    background: #ddd;
+    margin-right: 2px;
+}
+
+.DetailTab span.hover{
+    border-top:2px solid #617a19;
+    height: 38px;
+    line-height: 38px;
+    color: #333;
+    font-weight: bold;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background: #fff;
+}
+.Detail_tabcon{
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    clear: both;
+}
+.Detail_datebox{
+    height: 49px;
+    line-height: 49px;
+    border-bottom: 1px solid #ddd;
+    clear:both;
+}
+
+.Detail_datebox .date{
+    height: 24px;
+    border-radius: 3px;
+    float:left;
+    margin-left:12px;
+}
+
+.date_btn{
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #617a19;
+    float:left;
+    color: #fff;
+    margin: 15px 0;
+    cursor: pointer;
+}
+.date_sel a:hover,
+.date_sel a.hover{
+    color: blue;
+}
+.date_sel a{
+    text-decoration: underline;
+}
+
+.date_sel{
+    width: 155px;
+    height: 49px;
+    line-height: 49px;
+    padding-left: 10px;
+    float: left;
+}
+.number{
+    width: 100px;
+    height: 49px;
+    line-height: 49px;
+    text-align: right;
+    float: right;
+    padding-right: 15px;
+}
+.number span {
+    color: #f57d80;
+    padding: 0 5px;
+}
+.tableContent{
+    width: 826px;
+    overflow: hidden;
+}
+.tableContent table{
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+.tableContent th,.tableContent td{
+    text-align: left;
+    padding-left: 10px;
+}
+.tabcon_title{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+.tabcon_title span{
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+.tabcon_list{
+    height:35px;
+    line-height: 35px;
+    border-bottom: 1px solid #ddd;
+}
+.tabcon_list:nth-child(even) {
+    background: #fafafa;
+}
+.tabcon_list span{
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-family: "微软雅黑", "MicrosoftYahei";
+    color: #535353;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/*提醒类别分析*/
+.analysis_box{
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    clear: both;
+}
+.total span{
+    font-weight: bold;
+}
+
+
+/*日期*/
+.mb-10 .param{
+    width: 128px;
+    height: 23px;
+    background: #f8f8f8;
+    border:1px solid #bfbfbf;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.to-excel {
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.to-excel:hover {
+    color: #F40;
+}
+.to-excel:after {
+    clear: both;
+}
+
+
+/* table */
+.th-126 {
+    width: 126px;
+}
+.tableContent {
+    width: 826px;
+}
+.tableContent tr td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+
+}
+
+.tips {
+    position: absolute;
+    line-height: 22px;
+    min-width: 12px;
+    max-width: 230px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    background-color: rgb(159, 197, 39);
+    color: #fff;
+}
+
+
+.yqx-btn-1 {
+    border: 1px solid #d2d2d2;
+    background: #f9f9f9;
+    color: #666
+}
+
+.yqx-btn-2 {
+    border: 1px solid #f55d5e;
+    background: #fa7b7c;
+    color: #fff
+}
+
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title a:hover{
+    color: #617a19;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}

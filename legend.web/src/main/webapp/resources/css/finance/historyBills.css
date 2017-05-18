@@ -1,0 +1,160 @@
+.con-left{
+    width: 200px;
+    float: left;
+}
+.con-right{
+    width: 770px;
+    background-color: white;
+    float: right;
+}
+
+.empty {
+    height: 444px;
+}
+.con-right .bills-date{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+}
+.con-right .bills-detail{
+    border-bottom: 1px solid #eaeaea;
+}
+.con-right .bills-money{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    width: 100%;
+    font-family: initial;
+}
+.bills-money .should-pay{
+    font-size: 14px;
+}
+.bills-money .money{
+    color: #ffac7d;
+    margin-left: 10px;
+}
+.bills-money .history-bills{
+    color: #4a74a9;
+    text-decoration: underline;
+    margin-left: 100px;
+}
+.bills-money .credit-line{
+    font-size: 14px;
+    margin-left: 360px;
+}
+.bills-money .credit-money{
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    margin-left: 10px;
+    width: 45px;
+    display: inline-block;
+}
+.bills-money .price-unit{
+    font-size: 12px;
+}
+.bills-money .credit-edit{
+    font-size: 12px;
+    color: #3265a1;
+    margin-left: 18px;
+}
+.con-right .transaction-info{
+    width: 95%;
+    margin: 10px auto 15px;
+    border: 1px solid #eaeaea;
+}
+.bills-info .bills-title{
+    margin: 15px 0px 15px 20px;
+}
+.bills-info .bills-title .over{
+    float: right;
+    margin-right: 20px;
+    color: #a1bc55;
+}
+.bills-info .bills-action{
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.bills-info .credit-info{
+    float: left;
+    width: 32%;
+    border-right: 1px solid #eaeaea;
+    margin-left: 20px;
+}
+.bills-info .credit-info .canUsed-credit{
+    margin-top: 4px;
+}
+.bills-info .credit-info .should-pay-money{
+    margin-top: 15px;
+}
+.bills-info .credit-info .expire-interest{
+    margin: 17px 0px;
+}
+.bills-info .credit-info .calculate-time{
+    margin-top: 7px;
+}
+.bills-info .credit-info .canUsed-edit-balance,.should-pay-money-total,.expire-interest-money{
+    float: right;
+    margin-right: 20px;
+}
+.bills-info .should-pay-info .should-pay-info-money{
+    margin-bottom: 27px;
+    font-size: 24px;
+}
+.bills-info .should-pay-info{
+    width: 28%;
+    float: left;
+    border-right: 1px solid #eaeaea;
+    margin-left: 20px;
+}
+.bills-info .should-pay-info .should-pay-info-title{
+    margin:4px 0px 22px;
+}
+.bills-info .pay-notice{
+    margin-left: 20px;
+    float: left;
+}
+.bills-info .pay-notice p{
+    margin-top: 3px;
+}
+.bills-info .pay-notice .card-num{
+    margin-top: 15px;
+}
+.pay-notice .pay-date,.last-num{
+    float: right;
+    margin-left: 115px;
+    line-height: 15px;
+}
+.con-right .transaction{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+.con-right .transaction-title{
+    padding:15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #f7f7f7;
+}
+.con-right .order-date,.receiving-date{
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+}
+.con-right .transaction-title .order-money1{
+    width: 26%;
+    display: inline-block;
+    text-align: right;
+}
+.con-right .tq-order{
+    width: 25%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.con-right .transaction-detail{
+    padding:15px 20px;
+}
+.con-right .transaction-detail .order-money2{
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+}

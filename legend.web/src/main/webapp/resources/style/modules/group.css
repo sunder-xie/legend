@@ -1,0 +1,84 @@
+/*------公共group样式 start------*/
+.qxy_group {border: 1px solid #cdcdcd; margin-bottom: 20px; background: #f9f9f9; } 
+.group_space{margin-bottom: 30px;}
+.qxy_group_bottom{margin-bottom:35px; }
+.qxy_group .group_head {background: #efefef; height: 38px; border-bottom: 1px solid #cdcdcd; }
+
+.qxy_group .group_head h3 {float: left; height: 38px; line-height: 38px; text-align: center; padding: 0 15px; font-weight: bold; border-right: 1px solid #cdcdcd; margin: 0px; }
+
+/* group标题在中间的样式 */
+.qxy_group .group_head h3.group_title_center{border-right:none; float:none; text-align:center; }
+
+/* 可伸缩group箭头触发样式 */
+.qxy_group_slider .group_head{position: relative; cursor:pointer; }
+.qxy_group_slider .group_head i{display: block; width:20px; height:20px; margin-top:8px; margin-right:10px;float: right; }
+.qxy_group_slider .group_head i.arrow_down{background:url(../img/common/arrow_down.png) no-repeat center; }
+.qxy_group_slider .group_head i.arrow_up{background:url(../img/common/arrow_up.png) no-repeat center; }
+
+/* group标题栏的按钮 */
+.qxy_group .group_head a {float: right; border: 1px solid #CCC; height: 28px; line-height:28px;padding: 0 10px; margin: 5px 10px 0px 0px; font-size: 11px; display: inline-block; color: #666666; cursor: pointer; background: #f7f7f7; border-radius: 3px;/*box-shadow: 0px 0px 2px #ccc;*/}
+.qxy_group .group_head a:hover{color: #000;/*box-shadow: 0px 0px 2px #ccc inset;*/}
+
+.qxy_group .group_head .btn_house {padding-left: 25px; background: #f7f7f7 url("../img/common/bj_house.gif") no-repeat 1px 5px; }
+
+.qxy_group .group_head .btn_man {padding-left: 25px; background: #f7f7f7 url("../img/common/bj_man.gif") no-repeat 1px 5px; }
+
+.qxy_group .group_content {padding: 20px 20px 0 20px; position: relative; }
+.qxy_group .group_content .group_slide_btn{position: absolute; left: 50%; bottom: -25px; margin-left: -50px; width: 100px; height: 23px; line-height: 23px; text-align: center; border: 1px solid #cdcdcd; border-top-color: #f9f9f9; background: #f9f9f9; color: #cdcdcd; border-radius: 0 0 5px 5px; }
+.qxy_group .group_content .group_slide_btn i{padding: 4px 5px; }
+.qxy_group .group_content .downward i{background: url(../img/common/mj.gif) no-repeat center; }
+.qxy_group .group_content .upward i{background: url(../img/common/mj1.gif) no-repeat center; }
+.qxy_group .group_content_inner{width:100%; }
+/*------公共group样式 end------*/
+
+
+/*批量添加配件样式 start*/
+#batch_add_goods{padding:0;}
+
+.qxy_dialog_title{background: #f5f2e6;height: 56px;line-height:56px;position: relative;text-align: center;font-size: 18px;color: #535353;font-weight: 700;border-bottom: 1px solid #ddd;}
+.qxy_dialog_title a{position: absolute; width: 72px; height: 24px; line-height: 24px; font-size: 13px; border: 1px solid #c1c1c1; border-radius: 2px; cursor: pointer;} 
+.qxy_group .group_head a.batch_add_goods{background: #8fb027;color: #fff;border: 1px solid #8fb027;}
+.qxy_group .group_head a.batch_add_goods:hover{background:#789c19;color: #fff;border:1px solid #789c19;}
+.qxy_dialog_title .dialog_cancel{left: 15px; top: 15px; color: #666666; background: #f8f8f8;}
+.qxy_dialog_title .dialog_cancel:hover{background: #fff;color: #000;}
+.qxy_dialog_title .dialog_confirm{right: 15px; top: 15px; color: #ffffff; background: #8fb027; border: 1px solid #8fb027;} 
+.qxy_dialog_title .dialog_confirm:hover{background: #79a30c;border: 1px solid #79a30c;}
+/*--搜索表单样式start--*/
+.batch_add_goods_inner{padding:15px;}
+.batch_search_box{}
+.batch_search_left{float: left;width:760px;}
+.batch_search_right{float: left;width:65px;}
+.batch_search_left .qxy_input,
+.batch_search_left .qxy_select{width:182px;margin-right:0;margin-right: 5px;display: inline-block;}
+.qxy_dialog .batch_search_left .qxy_input,
+.qxy_dialog .batch_search_left .qxy_select{height: 32px;line-height: 32px;}
+.batch_search_left li{margin-bottom: 5px;}
+.batch_search_left li span.batch_search_label{display: inline-block;width: 62px;line-height: 32px;}
+.batch_search_btn{background: url(../img/common/an.jpg) no-repeat center; width: 68px;height:68px;border-radius: 4px;cursor: pointer;padding-left: 3px;}
+.batch_search_btn:hover{background: url(../img/common/an_1.jpg) no-repeat center;}
+/*--搜索表单样式 end--*/
+
+/*--搜索结果样式start--*/
+.batch_box{margin-bottom: 10px;}
+.batch_title{line-height: 30px;font-size: 16px;font-weight: 700;}
+.batch_title a{display: block;color: #999;float:right;font-size: 12px;}
+.batch_title a:hover{color: #000;}
+.batch_content{border: 1px solid #ddd;height:160px;overflow-y: scroll;box-shadow: 0 0 3px #ccc inset;}
+#batch_search_result .batch_content{height:220px;}
+.goods_data_item{border-bottom:1px solid #eee;height: 30px;line-height: 30px;}
+.goods_data_item:hover{background: #e1e6d3;cursor: pointer;color: #111;}
+.goods_data_item span{display: inline-block;text-indent: 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right: 5px;}
+.goods_data_item span.col1{width:360px;}
+.goods_data_item span.col2{width:160px;}
+.goods_data_item span.col3{width:130px;}
+.goods_data_item span.col4{width:95px;}
+.goods_data_item a{display: block;line-height: 25px;color: #999;text-align: center;float: right;margin-top: 2px;margin-right: 8px;}
+.goods_data_item a:hover{color: #111;}
+/*--搜索结果样式end--*/
+
+/*--已选择配件 start--*/
+#batch_chosen_result .batch_content{height:100px;}
+#batch_chosen_result .batch_title span{color: red;}
+/*--已选择配件 end--*/
+
+/*批量添加配件样式 end*/

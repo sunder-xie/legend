@@ -1,0 +1,122 @@
+/**
+ * zmx 2016-05-11
+ * 委托单详情
+ */
+
+.wt-top-box{
+    background: #f9f9f9;
+    border:1px solid #cdcdcd;
+    padding:10px;
+    position: relative;
+    overflow: hidden;
+}
+.seal-box{
+    width: 112px;
+    height: 112px;
+    background: url("../../../../../static/img/page/magic/wt-seal.png") no-repeat;
+    position: absolute;
+    top:-5px;
+    right:-5px;
+}
+/*已挂帐*/
+.hasbeen-posted{
+    background-position: 0 0;
+}
+/*已结算*/
+.settled{
+    background-position: -125px 0;
+}
+/*已作废*/
+.already-cancelled{
+    background-position: 0 -120px;
+}
+/*已删除*/
+.hasbeen-deleted{
+    background-position: -125px -120px;
+}
+/*已委托*/
+.already-commissioned{
+    background-position: 0 -240px;
+}
+/*已接单*/
+.connected-list{
+    background-position: -125px -240px;
+}
+/*已验车*/
+.inspection{
+    background-position: 0 -365px;
+}
+/*已交车*/
+.Delivered{
+    background-position: -125px -365px;
+}
+/*已派工*/
+.already-workers{
+    background-position: 0 -470px;
+}
+/*已完工*/
+.already-completed{
+    background-position: -125px -470px;
+}
+.font-bold{
+    font-weight: bold;
+    color: #333;
+}
+.detail-title{
+    width: 105px;
+    line-height: 30px;
+}
+.car-text-width{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.show-grid{
+    margin: 0;
+}
+.wt-bt-box{
+    background: #fff;
+    border:1px solid #cdcdcd;
+    border-top: none;
+    padding: 0 10px;
+}
+.no-wt-title{
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-weight: bold;
+}
+table.yqx-table thead tr th {
+    background: #f9f9f9;
+}
+.total-box{
+    margin-top: 20px;
+    line-height: 30px;
+}
+.total-box span{
+    font-size: 14px;
+    color: #ff7800;
+}
+.btn-box{
+    border-top:1px solid #d2d2d2;
+    padding: 10px 0;
+    overflow: hidden;
+
+}
+.yqx-btn-1{
+    margin-right: 5px;
+}
+.address-width{
+    width: 610px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.hide{ display: none;}
+.max-width{ max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.long-width{ max-width:600px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}

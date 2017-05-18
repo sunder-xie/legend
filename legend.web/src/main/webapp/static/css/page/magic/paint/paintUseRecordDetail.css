@@ -1,0 +1,82 @@
+/*
+ * create by zmx 2016/11/14
+ * 油漆盘点单详情
+*/
+.content{
+    background: #fff;
+    border:1px solid #acacac;
+}
+.title{
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.title i{
+    display: inline-block;
+    margin-right:10px;
+    vertical-align: middle;
+    width: 2px;
+    height: 14px;
+    background: #999;
+}
+.wrap-one{
+    padding: 0 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #cacaca;
+}
+.form-box{
+    padding-bottom: 10px;
+    margin-top: -20px;
+}
+.form-box .form-label{
+    width: 70px;
+}
+.form-box .form-item{
+    width: 180px;
+}
+.remarks-list{
+    width: 150px;
+    margin-left: 20px;
+}
+.wrap-two{
+    padding: 0 10px;
+}
+.table-con{
+    margin-bottom: 10px;
+    border-top:1px solid #cacaca;
+}
+.yqx-table {
+    width: 100%;
+    table-layout: auto;
+}
+.max-name-width{
+    max-width: 225px;
+    max-height: 36px;
+    line-height: 18px;
+    white-space: normal;
+}
+.max-num-width{
+    max-width: 225px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    line-height: 18px;
+}
+
+.remarks{
+    padding: 10px 0;
+    border-bottom: 1px solid #cacaca;
+}
+.btn-box{
+    padding: 10px 0;
+}
+.show-grid{
+    margin: 20px 0;
+}
+.money-box .money-font{
+   font-size: 14px;
+}
+.money-box,.remarks{
+    line-height: 20px;
+}

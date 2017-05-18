@@ -1,0 +1,198 @@
+/*预约单信息 start*/
+.order-form{
+    margin-bottom: 10px;
+    padding: 15px 0;
+    background: #f7f7f7;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+}
+
+
+/*预约单信息 end*/
+
+.reservationform-box{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 0;
+    margin-top: 10px;
+    clear: both;
+}
+/*tab start*/
+.res-tab{
+    height: 38px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.res-tab .tip{
+    font-size: 12px;
+    border-radius: 1px;
+    color: #fff;
+    background: #fa7b7c;
+    position: absolute;
+    top: -13px;
+    right: -80px;
+    line-height: 20px;
+    height: 20px;
+    padding: 0 20px;
+    font-weight: 100;
+    font-style: normal;
+    width: 100px;
+    display: none;
+}
+.tip-angl {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border-right: 10px solid #fa7b7c;
+    border-top: 5px solid transparent;
+    position: absolute;
+    left: -5px;
+    top: 15px;
+    display: inline-block;
+    border-bottom: 5px solid transparent;
+}
+
+.separate{
+    width: 5px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    margin: 10px 0;
+    color: #e8e8e8;
+}
+.right-tab a{
+    display: block;
+    float: left;
+    line-height: 25px;
+    font-size: 12px;
+    color: #808080;
+    padding: 0 12px;
+    margin: 0 12px;
+}
+.right-tab a:hover{
+    background: #8eb210;
+    border-radius: 8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    color: #fff;
+}
+.right-tab a.hover{
+    background: #8eb210;
+    border-radius: 8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    color: #fff;
+}
+.tabcon{
+    display: none;
+}
+/*tab end*/
+
+/*列表 start*/
+.res-list{
+    padding: 0 10px;
+    margin-top: 15px;
+}
+.res-list table{
+    width: 100%;
+}
+.res-list th{
+    height: 35px;
+    line-height: 35px;
+    line-height: 35px;
+    background: #f9f9f9;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    text-align: center;
+
+    color: #333;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.addlist-btn{
+    padding: 0 4px;
+    height: 22px;
+    line-height: 22px;
+    margin:0 auto;
+    font-size: 12px;
+}
+.res-list td{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.serves-name{width: 217px;}
+.serves-type{width: 125px;}
+.work-money{width: 48px;text-align: center;}
+.work-hour{width: 37px;text-align: center;}
+.money{width: 50px;text-align: center;}
+
+.seres-remarks{width: 200px;}
+.part-number{width: 165px;}
+.goods-name{width: 315px;}
+.goods-models{width: 100px;}
+.goods-sale{width: 36px;text-align: center;}
+.number{width: 110px;text-align: center;}
+.price{width: 36px;text-align: center;}
+.favorable-price{width: 36px;text-align: center;}
+.stock{width: 36px;text-align: center;}
+.salesperson{width: 58px;}
+.form-item>.unittop{top:7px;}
+
+.dellist-btn{
+    font-size: 12px;
+    color: #ee3f02;
+
+    text-decoration: underline;
+}
+.dellist-btn:hover{
+    text-decoration: underline;
+}
+.remarks{
+    margin-top: 10px;
+    clear: both;
+    padding: 0 10px 0 20px;
+}
+.remarks-text{
+    width:735px;
+    height:33px;
+    font-size: 12px;
+}
+.add-server-btn{
+    padding-top: 15px;
+}
+.add-server{
+    padding: 0 16px;
+}
+.total{
+    height: 74px;
+    margin-top: 12px;
+    padding: 0 20px;
+}
+.total p{
+    line-height: 34px;
+
+    font-size: 12px;
+    color: #535353;
+}
+.total p span{
+    color: #ff7800;
+}
+
+.btn-box{
+    height: 66px;
+    border-top: 1px solid #dcdcdc;
+    padding: 15px 20px 0 20px;
+}
+
+/*列表 end*/
+
+/* hack start */
+.order-form .show-grid {
+    margin-left: -10px;
+    margin-right: 10px;
+}
+/* hack end */
+
+
+

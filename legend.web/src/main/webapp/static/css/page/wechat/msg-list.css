@@ -1,0 +1,138 @@
+a {cursor: pointer}
+.right-btn {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.search-form .yqx-input {
+    width: 208px;
+    height: 28px;
+    border-color: #bfbfbf;
+}
+
+.search-form {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    padding: 10px;
+}
+
+.search-btn {
+    width: 68px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0;
+}
+
+.form-item>.fa {
+    line-height: 28px;
+    height: 28px;
+}
+
+.right-btn .yqx-btn{
+    width: 88px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #333;
+    padding: 0;
+}
+
+.fa {
+    color: #999;
+    margin-right: 5px;
+}
+
+.order-head .help {
+    cursor: pointer;
+    float: right;
+    padding: 0 14px;
+}
+
+.yqx-btn i.question {
+    background: url('../../../img/page/wechat/article-list-icons.png') no-repeat -14px 0;
+    vertical-align: sub;
+    margin-right: 3px;
+    display: inline-block;
+    height: 15px;
+    width:  15px;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.edit {
+    color: #76951f;
+}
+
+.del {
+    color: #666;
+}
+
+.more-detail {
+    color: #76951f;
+}
+
+#msgFill tr{
+    height: 100px;
+}
+
+.yqx-table>tbody>tr>td {
+    white-space: normal;
+}
+
+.detail-box {
+    background: #fff;
+}
+
+.detail-box .detail-title {
+    background: #232e49;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 54px;
+}
+
+.detail-box .detail-body {
+    padding: 20px;
+}
+
+.detail-body p {
+    white-space: pre-line;
+}
+
+.detail-body p {
+    line-height: 25px;
+}
+
+.detail-img {
+    text-align: left;
+}
+.detail-img img{
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+}
+
+.no-data {
+    font-size: 16px;
+    font-weight: 600;
+    color: #a94442;
+    text-align: center;
+    margin: 10px;
+}
+
+.width-33 {
+    width: 34%;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.yqx-table td {
+    word-break: break-all;
+}

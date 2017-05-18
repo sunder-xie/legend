@@ -1,0 +1,228 @@
+<!DOCTYPE project [
+		<!ELEMENT project (modelVersion|parent|artifactId|packaging|build|dependencies)*>
+		<!ATTLIST project
+				xmlns CDATA #REQUIRED
+				xmlns:xsi CDATA #REQUIRED
+				xsi:schemaLocation CDATA #REQUIRED>
+		<!ELEMENT modelVersion (#PCDATA)>
+		<!ELEMENT parent (artifactId|groupId|version|relativePath)*>
+		<!ELEMENT artifactId (#PCDATA)>
+		<!ELEMENT groupId (#PCDATA)>
+		<!ELEMENT version (#PCDATA)>
+		<!ELEMENT relativePath (#PCDATA)>
+		<!ELEMENT packaging (#PCDATA)>
+		<!ELEMENT build (finalName|plugins)*>
+		<!ELEMENT finalName (#PCDATA)>
+		<!ELEMENT plugins (plugin)*>
+		<!ELEMENT plugin (groupId|artifactId|version|configuration|executions)*>
+		<!ELEMENT configuration (path|server|uriEncoding|port|exploding)*>
+		<!ELEMENT path (#PCDATA)>
+		<!ELEMENT server (#PCDATA)>
+		<!ELEMENT uriEncoding (#PCDATA)>
+		<!ELEMENT port (#PCDATA)>
+		<!ELEMENT exploding (#PCDATA)>
+		<!ELEMENT executions (execution)*>
+		<!ELEMENT execution (phase|goals)*>
+		<!ELEMENT phase (#PCDATA)>
+		<!ELEMENT goals (goal)*>
+		<!ELEMENT goal (#PCDATA)>
+		<!ELEMENT dependencies (dependency)*>
+		<!ELEMENT dependency (groupId|artifactId|scope)*>
+		<!ELEMENT scope (#PCDATA)>
+		]>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>legend</artifactId>
+		<groupId>com.tqmall.zenith</groupId>
+		<version>1.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>legend.web</artifactId>
+	<packaging>war</packaging>
+	<build>
+		<finalName>legend</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<path>/legend</path>
+					<server>localhost</server>
+					<uriEncoding>UTF-8</uriEncoding>
+					<port>8080</port>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.alibaba.citrus.tool</groupId>
+				<artifactId>autoconfig-maven-plugin</artifactId>
+				<version>1.2</version>
+				<configuration>
+					<!-- 要进行AutoConfig的目标文件，默认为${project.artifact.file}。 <dest>${project.artifact.file}</dest> -->
+					<!-- 配置后，是否展开目标文件，默认为false，不展开。 <exploding>true</exploding> -->
+					<!-- 展开到指定目录，默认为${project.build.directory}/${project.build.finalName}。
+						<explodedDirectory> ${project.build.directory}/${project.build.finalName}
+						</explodedDirectory> -->
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>autoconfig</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tqmall.zenith</groupId>
+			<artifactId>valley.oss</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.tqmall.zenith</groupId>
+			<artifactId>legend.server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.tqmall.zenith</groupId>
+			<artifactId>legend.biz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+		</dependency>
+
+		<!-- Jetty -->
+		<dependency>
+			<groupId>org.eclipse.jetty.aggregate</groupId>
+			<artifactId>jetty-all</artifactId>
+		</dependency>
+		<!-- Jetty Webapp -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.tqmall.cube</groupId>
+            <artifactId>cube.client</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>com.tqmall.zenith</groupId>
+			<artifactId>mace.client</artifactId>
+		</dependency>
+		<!-- websocket -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-websocket-api</artifactId>
+			<version>7.0.47</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+        <dependency>
+            <groupId>com.tqmall.search</groupId>
+            <artifactId>fix-spring-data-common</artifactId>
+            <version>1.1</version>
+        </dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+    </dependencies>
+</project>

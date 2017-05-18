@@ -1,0 +1,144 @@
+/*支付成功页面公共 开始*/
+.dis {
+    display: none;
+}
+
+.process-nav-true .nav_process {
+    height: 40px;
+}
+
+.right {
+    float: right;
+    width: 825px;
+}
+
+.right p.big-title {
+    color: #535353;
+    font-size: 16px;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.enter{
+    background-color: #FFFFFF;
+}
+/*支付等待页面公共 结束*/
+/*支付成功页面样式  开始*/
+.left-box{
+    width: 260px;
+    height: 190px;
+    margin: 28px;
+    float: left;
+}
+.right-box{
+    width: 180px;
+    height: 175px;
+    margin: 30px;
+    float: right;
+}
+.success-icon{
+    display: inline-block;
+    width: 35px;
+    height: 36px;
+    vertical-align: middle;
+    background: url('../../../../../static/img/page/smart/state-Icon.png') -319px -12px no-repeat;
+}
+.congratulate-word{
+    color: #8eb210;
+    font-size: 24px;
+    vertical-align: middle;
+}
+.left-box p{
+    font-size: 14px;
+    color: #333333;
+    margin-top: 16px;
+    padding-left: 44px;
+}
+.display-color{
+    color: #ff7800;
+    font-weight: bold;
+}
+.display-color i{
+    font-style: normal;
+}
+.success-img{
+    width: 112px;
+    height: 112px;
+    background: url('../../../../../resources/images/portal/home/car_owner.png') 0 0 no-repeat;
+    margin: 10px auto;
+}
+.success_tips{
+    font-size: 14px;
+    width: 112px;
+    text-align: center;
+    color: #8eb210;
+    margin: auto;
+}
+.go-record,.go-insure{
+    width: 108px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 24px 10px 15px 0;
+    border: 1px solid #d2d2d2;
+    background-color: #f9f9f9;
+    color: #666666;
+}
+.go-record{
+    margin-left: 44px;
+}
+/*支付成功页面样式  结束*/
+
+/*支付失败页面样式  开始*/
+.left-box{
+    width: 360px;
+    height: 190px;
+    margin: 28px;
+    float: left;
+}
+.right-box{
+    width: 180px;
+    height: 175px;
+    margin: 30px;
+    float: right;
+}
+.fail-icon{
+    display: inline-block;
+    width: 35px;
+    height: 36px;
+    vertical-align: middle;
+    background: url('../../../../../static/img/page/smart/state-Icon.png') -272px -12px no-repeat;
+}
+.fail-word{
+    color: #f55d5e;
+    font-size: 24px;
+    vertical-align: middle;
+}
+.go-record,.go-recharge{
+    width: 108px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 24px 10px 15px 0;
+    border: 1px solid #d2d2d2;
+    background-color: #f9f9f9;
+    color: #666666;
+}
+.display-color{
+    color: #ff7800;
+    font-weight: bold;
+}
+.mg-left{
+    margin-left: 45px;
+}
+/*支付失败页面样式  结束*/

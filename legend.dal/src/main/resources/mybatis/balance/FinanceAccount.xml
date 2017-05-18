@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.balance.FinanceAccountDao">
+
+    <resultMap id="BaseResultMap" type="FinanceAccount" extends="COMMON.BASE_RESULT_MAP">
+        <result column="user_id" property="userId"/>
+        <result column="shop_id" property="shopId"/>
+        <result column="account_user" property="accountUser"/>
+        <result column="account" property="account"/>
+        <result column="account_tag" property="accountTag"/>
+        <result column="account_type" property="accountType"/>
+        <result column="account_bank" property="accountBank"/>
+        <result column="is_default" property="isDefault"/>
+        <result column="bank" property="bank"/>
+        <result column="bank_province" property="bankProvince"/>
+        <result column="bank_city" property="bankCity"/>
+        <result column="bank_district" property="bankDistrict"/>
+        <result column="bank_province_id" property="bankProvinceId"/>
+        <result column="bank_city_id" property="bankCityId"/>
+        <result column="bank_district_id" property="bankDistrictId"/>
+        <result column="check_status" property="checkStatus"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_COLUMN_LIST"/>
+            user_id as userId,
+            shop_id as shopId,
+            account_user as accountUser,
+            account as account,
+            account_tag as accountTag,
+            account_type as accountType,
+            account_bank as accountBank,
+            is_default as isDefault,
+            bank as bank,
+            bank_province as bankProvince,
+            bank_city as bankCity,
+            bank_district as bankDistrict,
+            bank_province_id as bankProvinceId,
+            bank_city_id as bankCityId,
+            bank_district_id as bankDistrictId,
+            check_status as checkStatus,
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="userId != null">
+                    and user_id = #{userId}
+                </if>
+                <if test="shopId != null">
+                    and shop_id = #{shopId}
+                </if>
+                <if test="accountUser != null">
+                    and account_user = #{accountUser}
+                </if>
+                <if test="account != null">
+                    and account = #{account}
+                </if>
+                <if test="accountTag != null">
+                    and account_tag = #{accountTag}
+                </if>
+                <if test="accountType != null">
+                    and account_type = #{accountType}
+                </if>
+                <if test="accountBank != null">
+                    and account_bank = #{accountBank}
+                </if>
+                <if test="isDefault != null">
+                    and is_default = #{isDefault}
+                </if>
+                <if test="bank != null">
+                    and bank = #{bank}
+                </if>
+                <if test="bankProvince != null">
+                    and bank_province = #{bankProvince}
+                </if>
+                <if test="bankCity != null">
+                    and bank_city = #{bankCity}
+                </if>
+                <if test="bankDistrict != null">
+                    and bank_district = #{bankDistrict}
+                </if>
+                <if test="bankProvinceId != null">
+                    and bank_province_id = #{bankProvinceId}
+                </if>
+                <if test="bankCityId != null">
+                    and bank_city_id = #{bankCityId}
+                </if>
+                <if test="bankDistrictId != null">
+                    and bank_district_id = #{bankDistrictId}
+                </if>
+                <if test="checkStatus != null">
+                    and check_status = #{checkStatus}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+    <sql id="BaseUpdateSet">
+        <set>
+            <trim suffix="" suffixOverrides=",">
+                <include refid="COMMON.BASE_UPDATE_SET"/>
+                <if test="userId != null">
+                    user_id = #{userId},
+                </if>
+                <if test="shopId != null">
+                    shop_id = #{shopId},
+                </if>
+                <if test="accountUser != null">
+                    account_user = #{accountUser},
+                </if>
+                <if test="account != null">
+                    account = #{account},
+                </if>
+                <if test="accountTag != null">
+                    account_tag = #{accountTag},
+                </if>
+                <if test="accountType != null">
+                    account_type = #{accountType},
+                </if>
+                <if test="accountBank != null">
+                    account_bank = #{accountBank},
+                </if>
+                <if test="isDefault != null">
+                    is_default = #{isDefault},
+                </if>
+                <if test="bank != null">
+                    bank = #{bank},
+                </if>
+                <if test="bankProvince != null">
+                    bank_province = #{bankProvince},
+                </if>
+                <if test="bankCity != null">
+                    bank_city = #{bankCity},
+                </if>
+                <if test="bankDistrict != null">
+                    bank_district = #{bankDistrict},
+                </if>
+                <if test="bankProvinceId != null">
+                    bank_province_id = #{bankProvinceId},
+                </if>
+                <if test="bankCityId != null">
+                    bank_city_id = #{bankCityId},
+                </if>
+                <if test="bankDistrictId != null">
+                    bank_district_id = #{bankDistrictId},
+                </if>
+                <if test="checkStatus != null">
+                    check_status = #{checkStatus},
+                </if>
+            </trim>
+        </set>
+    </sql>
+
+    <!-- 查询总数 -->
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(id)
+        from legend_finance_account
+        <include refid="BaseWhereClause"/>
+    </select>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_finance_account
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_finance_account
+        where id = #{id} and is_deleted = 'N'
+    </select>
+
+    <!-- 根据IDS批量查询 -->
+    <select id="selectByIds" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_finance_account
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) and is_deleted = 'N'
+    </select>
+
+
+    <!-- 根据IDS批量删除 -->
+    <update id="deleteByIds">
+        update legend_finance_account
+        set is_deleted='Y'
+        where id in
+        (
+        <foreach collection="array" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        )
+    </update>
+
+    <!-- 根据ID删除 -->
+    <update id="deleteById">
+        update legend_finance_account
+        set is_deleted='Y'
+        where id=#{id}
+    </update>
+
+    <!-- 删除 -->
+    <delete id="delete">
+        update legend_finance_account
+        set is_deleted='Y'
+        <include refid="BaseWhereClause"/>
+    </delete>
+
+    <!-- 添加   -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into legend_finance_account (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_COLUMN"/>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="accountUser != null">
+                account_user,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="accountTag != null">
+                account_tag,
+            </if>
+            <if test="accountType != null">
+                account_type,
+            </if>
+            <if test="accountBank != null">
+                account_bank,
+            </if>
+            <if test="isDefault != null">
+                is_default,
+            </if>
+            <if test="bank != null">
+                bank,
+            </if>
+            <if test="bankProvince != null">
+                bank_province,
+            </if>
+            <if test="bankCity != null">
+                bank_city,
+            </if>
+            <if test="bankDistrict != null">
+                bank_district,
+            </if>
+            <if test="bankProvinceId != null">
+                bank_province_id,
+            </if>
+            <if test="bankCityId != null">
+                bank_city_id,
+            </if>
+            <if test="bankDistrictId != null">
+                bank_district_id,
+            </if>
+            <if test="checkStatus != null">
+                check_status,
+            </if>
+        </trim>
+        )
+        values (
+        <trim suffix="" suffixOverrides=",">
+            <include refid="COMMON.BASE_INSERT_VALUE"/>
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="shopId != null">
+                #{shopId},
+            </if>
+            <if test="accountUser != null">
+                #{accountUser},
+            </if>
+            <if test="account != null">
+                #{account},
+            </if>
+            <if test="accountTag != null">
+                #{accountTag},
+            </if>
+            <if test="accountType != null">
+                #{accountType},
+            </if>
+            <if test="accountBank != null">
+                #{accountBank},
+            </if>
+            <if test="isDefault != null">
+                #{isDefault},
+            </if>
+            <if test="bank != null">
+                #{bank},
+            </if>
+            <if test="bankProvince != null">
+                #{bankProvince},
+            </if>
+            <if test="bankCity != null">
+                #{bankCity},
+            </if>
+            <if test="bankDistrict != null">
+                #{bankDistrict},
+            </if>
+            <if test="bankProvinceId != null">
+                #{bankProvinceId},
+            </if>
+            <if test="bankCityId != null">
+                #{bankCityId},
+            </if>
+            <if test="bankDistrictId != null">
+                #{bankDistrictId},
+            </if>
+            <if test="checkStatus != null">
+                #{checkStatus},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        update legend_finance_account
+        <include refid="BaseUpdateSet"/>
+        where id = #{id}
+    </update>
+
+    <update id="updateByShopIdAndUserId">
+        update legend_finance_account
+        set
+        is_default = 0
+        where shop_id = #{shopId} and user_id = #{userId} and account_type = 1
+    </update>
+
+    <update id="updateByShopIdAndUserIdAndAccountType">
+        update legend_finance_account
+        set
+        is_default = 0
+        where
+        shop_id = #{shopId}
+        and user_id = #{userId}
+        and account_type = #{accountType}
+        and id != #{id}
+        and is_default= "1"
+    </update>
+
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into legend_finance_account (
+        <trim suffix="" suffixOverrides=",">
+            is_deleted,
+            gmt_create,
+            creator,
+            gmt_modified,
+            modifier,
+            user_id,
+            shop_id,
+            account_user,
+            account,
+            account_tag,
+            account_type,
+            account_bank,
+            is_default,
+            bank,
+            bank_province,
+            bank_city,
+            bank_district,
+            bank_province_id,
+            bank_city_id,
+            bank_district_id,
+            check_status,
+        </trim>
+        )
+        values
+
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            <trim suffix="" suffixOverrides=",">
+                'N',
+                <if test="item.gmtCreate != null">
+                    #{item.gmtCreate},
+                </if>
+                <if test="item.gmtCreate == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.gmtModified != null">
+                    #{item.gmtModified},
+                </if>
+                <if test="item.gmtModified == null">
+                    now(),
+                </if>
+                <if test="item.creator != null">
+                    #{item.creator},
+                </if>
+                <if test="item.creator == null">
+                    0,
+                </if>
+                <if test="item.userId != null">
+                    #{item.userId},
+                </if>
+                <if test="item.userId == null">
+                    0 ,
+                </if>
+                <if test="item.shopId != null">
+                    #{item.shopId},
+                </if>
+                <if test="item.shopId == null">
+                    0 ,
+                </if>
+                <if test="item.accountUser != null">
+                    #{item.accountUser},
+                </if>
+                <if test="item.accountUser == null">
+                    '',
+                </if>
+                <if test="item.account != null">
+                    #{item.account},
+                </if>
+                <if test="item.account == null">
+                    '',
+                </if>
+                <if test="item.accountTag != null">
+                    #{item.accountTag},
+                </if>
+                <if test="item.accountTag == null">
+                    '',
+                </if>
+                <if test="item.accountType != null">
+                    #{item.accountType},
+                </if>
+                <if test="item.accountType == null">
+                    0,
+                </if>
+                <if test="item.accountBank != null">
+                    #{item.accountBank},
+                </if>
+                <if test="item.accountBank == null">
+                    NULL,
+                </if>
+                <if test="item.isDefault != null">
+                    #{item.isDefault},
+                </if>
+                <if test="item.isDefault == null">
+                    '0',
+                </if>
+                <if test="item.bank != null">
+                    #{item.bank},
+                </if>
+                <if test="item.bank == null">
+                    NULL,
+                </if>
+                <if test="item.bankProvince != null">
+                    #{item.bankProvince},
+                </if>
+                <if test="item.bankProvince == null">
+                    NULL,
+                </if>
+                <if test="item.bankCity != null">
+                    #{item.bankCity},
+                </if>
+                <if test="item.bankCity == null">
+                    NULL,
+                </if>
+                <if test="item.bankDistrict != null">
+                    #{item.bankDistrict},
+                </if>
+                <if test="item.bankDistrict == null">
+                    NULL,
+                </if>
+                <if test="item.bankProvinceId != null">
+                    #{item.bankProvinceId},
+                </if>
+                <if test="item.bankProvinceId == null">
+                    0,
+                </if>
+                <if test="item.bankCityId != null">
+                    #{item.bankCityId},
+                </if>
+                <if test="item.bankCityId == null">
+                    0,
+                </if>
+                <if test="item.bankDistrictId != null">
+                    #{item.bankDistrictId},
+                </if>
+                <if test="item.bankDistrictId == null">
+                    0,
+                </if>
+                <if test="item.checkStatus != null">
+                    #{item.checkStatus},
+                </if>
+                <if test="item.checkStatus == null">
+                    0,
+                </if>
+            </trim>
+            )
+        </foreach>
+    </insert>
+    <select id="selectShopFinanceAccount" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_finance_account
+        where shop_id in
+        (
+        <foreach collection="shopIds" index="index" item="tag" separator=",">
+            #{tag}
+        </foreach>
+        ) AND user_id=#{userId} and is_deleted = 'N'
+
+    </select>
+
+</mapper> 

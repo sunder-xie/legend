@@ -1,0 +1,202 @@
+.tab-item{
+    width:auto;
+    padding: 0 10px;
+}
+.right-content{
+    width: 823px;
+}
+
+
+/*标题右侧按钮*/
+.tools-btn a {
+    color: #fff;
+    margin-left: 5px;
+}
+.tools-btn a span {
+    font-weight: 900;
+}
+.tools-btn a.btn-1 {
+    background: #3fb2de;
+}
+.tools-btn a.btn-1:hover {
+    background: #18a1d5;
+}
+
+.tools-btn a.btn-2 {
+    background: #f29530;
+}
+.tools-btn a.btn-2:hover {
+    background: #de811c;
+}
+.tools-btn a.btn-3 {
+    background: #8fb70d;
+}
+.tools-btn a.btn-3:hover {
+    background: #7ba004;
+}
+.tools-btn a.btn-4 {
+    background: #c69161;
+}
+.tools-btn a.btn-4:hover {
+    background: #bc793c;
+}
+.order-list-title .yqx-btn{
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+
+
+
+
+/*车辆信息*/
+.detail-box{overflow: hidden;background: #f9f9f9;border: 1px solid #dcdcdc;margin-top: 10px;padding: 10px 20px;}
+.detail-box .show-grid{ margin: 0;}
+
+/*绑定车牌*/
+.binding-box {background: #fff;border: 1px solid #dcdcdc;border-top: none;padding: 0 10px;}
+.license-title{width: 110px;float: left;font-weight: bold;color: #333;line-height: 55px;  }
+.license-title img{ vertical-align: middle; margin-right: 5px;}
+.license-box{float: left;display: inline-block;max-width:545px;height: auto;  }
+.license-box li{display: inline-block;height: 25px;border: 1px solid #dcdcdc;border-radius: 20px;background: #eff4f5;
+    margin: 15px 10px 0 0;text-align: center;line-height: 25px;color: #333;padding-left: 10px;}
+.license-text{ display: inline-block;}
+.license-box li .delete{display: inline-block;width: 25px;height: 22px;border-left: 1px solid #dcdcdc;text-align: center;
+    vertical-align: middle; margin-right: 3px;}
+.add-license{ display: inline-block; height: 25px; border: 1px solid #dcdcdc; border-radius: 20px; background: #eff4f5;
+    margin: 15px 10px 0 0; text-align: center; line-height: 25px; color: #333; padding:0 10px; }
+.vip-box{height: 44px;line-height: 44px;background: #fff;border-top: 1px solid #dcdcdc;}
+.vip-box img{ vertical-align: middle; margin-right: 5px;}
+.vip-text{ width: 33.33%; color: #666; float: left;}
+.vip-text span{ color: #f2666a;}
+
+/*tab*/
+.tab-box{overflow: hidden; margin-top: 10px;}
+.tab{ height: 38px; background: #f9f9f9; border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+.tabcon{ overflow: hidden;}
+.voucher-con{background: #fff; padding: 10px 20px;border: 1px solid #ddd; border-top: none;}
+/*优惠券*/
+.voucher{margin: 4px 0;}
+.voucher-title{height: 35px; line-height: 35px; background: #f9f9f9; border-bottom: 1px solid #d6d6d6;border-top: 1px solid #d6d6d6;}
+.voucher-title div{ display: inline-block;}
+.voucher-title .voucher-discount:nth-child(2) {
+    max-width: 286px;
+    padding-right: 0;
+    margin-right: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.voucher-discount{padding:0 15px;font-size: 14px; color: #333;}
+.voucher-discount span{color: #f2666a; padding: 0 3px;}
+.voucher-time{ color: #333; font-size: 12px;}
+.show-btn{ display: inline-block; padding: 0 10px; font-size: 12px; color: #666;}
+.voucher-content{ padding: 10px 0; display: none;}
+.voucher-content .voucher-label{ width: 120px; line-height: 30px; float: left; text-align: right; color: #333;}
+.voucher-content .voucher-item{ float: left; margin-left: 5px; color: #333; line-height: 30px;width: 390px }
+.voucher-bot{line-height: 40px; border-top: 1px solid #d6d6d6;}
+.red{ color: #f2666a;}
+.green{color: #90af34;}
+.voucher-title .yqx-btn{padding: 0 8px; line-height: 25px; font-size: 12px; margin: 3px;}
+.disable-btn{ background: #eee; color: #999; border: 1px solid #eee;}
+.disable-btn:hover{ background: #eee;}
+.voucher-content strong{ font-weight: bold;}
+.use-situation{  text-align: right;float: right;
+    margin-right: 10px;
+    line-height: 30px;
+}
+.use-situation span{ color: #f2666a; padding: 0 2px; }
+.service-project{ overflow: hidden;}
+.service-project p{ line-height: 30px;}
+.item-width{
+    width: 300px;
+    float: left;
+}
+
+
+/*使用记录*/
+.use-record{ background: #fff; border: 1px solid #ddd; margin-top: 10px; overflow: hidden;}
+.record-title{ height: 50px; line-height: 50px; padding-left: 10px; font-size: 14px; color: #333;}
+.yqx-table>thead>tr>th, .yqx-table>tr>th{ background: #f9f9f9;text-align: left;padding-left: 10px;}
+.yqx-table>tbody>tr>td, .yqx-table>tr>td{ text-align: left;padding-left: 10px;}
+
+
+/*弹窗样式 start*/
+.dialog{background: #fff;}
+.dialog-title{height:55px;line-height:55px;text-align:center;background:#232e49;font-size: 16px;color: #fff;}
+.dialog-con{text-align: center;padding: 10px;}
+/*弹窗样式 end*/
+
+.text-overflow { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.layui-layer-btn{ text-align: center;}
+
+
+
+/*没有数据样式*/
+.nodata{ overflow: hidden;}
+.nodata-l{width: 260px; margin-top: 75px;}
+.nodata-l p{ color: #fd3235; font-size: 14px; font-weight: bold; line-height: 25px;}
+.nodata-l a{ margin-top:30px; margin-bottom: 45px;}
+.nodata-r{ position: relative;}
+.triangle-left{
+    position: absolute;
+    top:105px;
+    left: 0;
+    width:8px;
+    height:20px;
+    background: url("../../../img/page/account/triangle.png") no-repeat;
+}
+.nodata-tips{
+    border: 1px solid #e5e5e5;
+    width: 510px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 7px;
+    background: url("../../../img/page/account/data-ico.png") no-repeat center 43px #f9f9f9;
+}
+.nodata-tips p{ font-size: 14px; text-align: center; margin-top: 115px;}
+
+.yqx-table>thead>tr>.text-r, .yqx-table>tr>.text-r{ text-align: right;padding-right: 50px}
+.yqx-table>tbody>tr>.text-r, .yqx-table>tr>.text-r{ text-align:right;padding-right: 50px}
+.text-right {
+    text-align: right !important;
+}
+
+.voucher-content .discount-info {
+    display: inline-block;
+    max-width: 380px;
+    vertical-align: top;
+}
+
+.voucher-item.member-info .discount-info {
+    margin-top: 8px;
+    line-height: 1.3;
+    white-space: pre-line;
+}
+.Z-title{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+}
+.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+.Z-title,.Z-title a{
+    line-height: 45px;
+    font-size: 14px;
+    color: #666;
+    font-family: "宋体", sans-serif, Verdana, Arial, Helvetica, Tahoma;
+}
+.Z-title i{
+    color: #617a19;
+    font-weight: bold;
+    font-style: normal;
+}
+

@@ -1,0 +1,19 @@
+.w150{width: 150px}
+
+
+/* flexbox样式 start */
+.flexbox{display: -webkit-flex;display: flex;height: 235px;margin: -10px 0;}
+.flexbox .flex{flex: 1;text-align: center;border-right: 1px solid #ddd;}
+.flexbox .flex:last-child{border-right: none;}
+.flexbox .flex-2{flex: 2;}
+/* flexbox样式 end */
+
+.statistics-ico{width: 50px;height: 50px;margin: 50px auto 20px;}
+.money-ico{background: url('../../images/report/rp-sprite.png') -35px 0 no-repeat;}
+.customer-ico{background: url('../../images/report/rp-sprite.png') -119px 2px no-repeat;}
+.vip-ico{background: url('../../images/report/rp-sprite.png') -212px 2px no-repeat;}
+.car-ico{background: url('../../images/report/rp-sprite.png') -298px 4px no-repeat;}
+.sum{width: 130px; height: 130px;margin: 30px auto 20px;line-height: 130px;font-size: 40px;font-weight: 900;color: #9fc527;border: 5px solid #9fc527;border-radius: 50%;}
+.statistics-info{line-height: 1.3;font-size: 14px;color: #666;}
+.statistics-info strong{font-size: 36px;font-weight: 900;color: #333;}
+.car-statistic-icon{display: inline-block;width: 24px;height: 22px;margin-right: 3px;vertical-align: middle;background: url('../../images/report/rp-sprite.png') 1px -114px no-repeat;}

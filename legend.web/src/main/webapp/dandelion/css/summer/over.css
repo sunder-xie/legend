@@ -1,0 +1,81 @@
+body {
+    background: #ebebeb;
+}
+.wrapper {
+    display: flex;
+    flex-flow: column;
+}
+.updiv {
+    flex: 1;
+}
+.downdiv {
+    flex: 1;
+}
+.conty {
+    text-align: center;
+}
+.conty h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333;
+    padding: 15px;
+}
+.conty p {
+    line-height: 30px;
+    color: #666666;
+    font-size: 22px;
+}
+.upbox {
+    height: 320px;
+}
+.mdbo {
+    height: 100px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border-bottom: 1px solid #bfbfbf;
+}
+.mgleft {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.mgleft img {
+    width: 100%;
+}
+.mgright {
+    width: 440px;
+    float: right;
+}
+.mgright h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.mgright p {
+    padding-left: 25px;
+    line-height: 36px;
+    font-size: 22px;
+    color: #666666;
+}
+.icon1 {
+     background: url("../../images/summer/wz.gif") no-repeat left;
+ }
+.icon2 {
+    background: url("../../images/summer/dh.gif") no-repeat left;
+}
+.starbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 22;
+}
+.starbox span {
+    display: inline-block;
+    background: url("../../images/summer/star.gif") no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}

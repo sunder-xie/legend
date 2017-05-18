@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqmall.legend.dao.customer.LicenseCityDao">
+
+    <resultMap id="BaseResultMap" type="LicenseCity">
+        <result column="license" property="license"/>
+        <result column="first_letter" property="firstLetter"/>
+        <result column="province" property="province"/>
+        <result column="city_name" property="cityName"/>
+        <result column="city_id" property="cityId"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        <trim suffix="" suffixOverrides=",">
+            license as license,
+            first_letter as firstLetter,
+            province as province,
+            city_name as cityName,
+            city_id  as cityId
+        </trim>
+    </sql>
+
+    <sql id="BaseWhereClause">
+        <where>
+            <trim prefixOverrides="and">
+                <include refid="COMMON.BASE_WHERE_CLAUSE"/>
+                <if test="license != null">
+                    and license = #{license}
+                </if>
+                <if test="firstLetter != null">
+                    and first_letter = #{firstLetter}
+                </if>
+                <if test="province != null">
+                    and province = #{province}
+                </if>
+                <if test="cityName != null">
+                    and city_name = #{cityName}
+                </if>
+                <if test="cityId != null">
+                    and city_id = #{cityId}
+                </if>
+            </trim>
+        </where>
+    </sql>
+
+
+    <!-- 查询 -->
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_license_match_city
+        <include refid="BaseWhereClause"/>
+        <include refid="COMMON.ORDER_BY"/>
+        <include refid="COMMON.LIMIT"/>
+    </select>
+
+
+    <!-- 查询 -->
+    <select id="getLicenseByProvince" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_license_match_city
+        where parent_id = #{parentId}
+        and is_deleted = 'N'
+    </select>
+    <!-- 查询 -->
+    <select id="getByProvince" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumnList"/>
+        from legend_license_match_city
+        where parent_id = 0
+        and is_deleted = 'N'
+        order by first_letter
+    </select>
+
+</mapper> 

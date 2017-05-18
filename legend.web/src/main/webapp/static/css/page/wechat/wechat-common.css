@@ -1,0 +1,21 @@
+.order-right {
+    width: 823px;
+}
+.yqx-table .th-left, .yqx-table .td-left{
+    text-align: left;
+}
+.yqx-table .th-center, .yqx-table .td-center{
+    text-align: center;
+}
+.yqx-table .th-right, .yqx-table .td-right{
+    text-align: right;
+}
+.inline-block{
+    display: inline-block;
+}
+.money-font {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fa7b7c;
+    font-style: normal;
+}
